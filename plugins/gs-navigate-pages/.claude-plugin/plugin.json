@@ -1,0 +1,14 @@
+{
+  "name": "gs-navigate-pages",
+  "description": "Navigate Google Scholar result pages",
+  "version": "1.0.0",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic",
+    "research",
+    "gs"
+  ]
+}

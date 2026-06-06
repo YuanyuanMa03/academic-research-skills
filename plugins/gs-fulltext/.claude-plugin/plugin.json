@@ -1,0 +1,14 @@
+{
+  "name": "gs-fulltext",
+  "description": "Access full text via Google Scholar",
+  "version": "1.0.0",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic",
+    "research",
+    "gs"
+  ]
+}

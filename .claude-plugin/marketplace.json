@@ -1,0 +1,665 @@
+{
+  "name": "academic-research-skills-marketplace",
+  "description": "Claude Code plugin marketplace for academic research skills — CNKI, Google Scholar, ScienceDirect, Web of Science, Nature",
+  "owner": {
+    "name": "YuanyuanMa03"
+  },
+  "plugins": [
+    {
+      "name": "cnki-advanced-search",
+      "source": "./plugins/cnki-advanced-search",
+      "description": "Advanced search on CNKI (China National Knowledge Infrastructure)",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "cnki"
+      ],
+      "category": "cnki"
+    },
+    {
+      "name": "cnki-download",
+      "source": "./plugins/cnki-download",
+      "description": "Download papers from CNKI",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "cnki"
+      ],
+      "category": "cnki"
+    },
+    {
+      "name": "cnki-export",
+      "source": "./plugins/cnki-export",
+      "description": "Export search results from CNKI",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "cnki"
+      ],
+      "category": "cnki"
+    },
+    {
+      "name": "cnki-journal-index",
+      "source": "./plugins/cnki-journal-index",
+      "description": "Browse CNKI journal index",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "cnki"
+      ],
+      "category": "cnki"
+    },
+    {
+      "name": "cnki-journal-search",
+      "source": "./plugins/cnki-journal-search",
+      "description": "Search journals on CNKI",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "cnki"
+      ],
+      "category": "cnki"
+    },
+    {
+      "name": "cnki-journal-toc",
+      "source": "./plugins/cnki-journal-toc",
+      "description": "View CNKI journal table of contents",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "cnki"
+      ],
+      "category": "cnki"
+    },
+    {
+      "name": "cnki-navigate-pages",
+      "source": "./plugins/cnki-navigate-pages",
+      "description": "Navigate CNKI search result pages",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "cnki"
+      ],
+      "category": "cnki"
+    },
+    {
+      "name": "cnki-paper-detail",
+      "source": "./plugins/cnki-paper-detail",
+      "description": "View paper details on CNKI",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "cnki"
+      ],
+      "category": "cnki"
+    },
+    {
+      "name": "cnki-parse-results",
+      "source": "./plugins/cnki-parse-results",
+      "description": "Parse CNKI search results",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "cnki"
+      ],
+      "category": "cnki"
+    },
+    {
+      "name": "cnki-search",
+      "source": "./plugins/cnki-search",
+      "description": "Search papers on CNKI",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "cnki"
+      ],
+      "category": "cnki"
+    },
+    {
+      "name": "gs-advanced-search",
+      "source": "./plugins/gs-advanced-search",
+      "description": "Advanced search on Google Scholar",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "google-scholar"
+      ],
+      "category": "google-scholar"
+    },
+    {
+      "name": "gs-cited-by",
+      "source": "./plugins/gs-cited-by",
+      "description": "Find citing papers on Google Scholar",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "google-scholar"
+      ],
+      "category": "google-scholar"
+    },
+    {
+      "name": "gs-export",
+      "source": "./plugins/gs-export",
+      "description": "Export search results from Google Scholar",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "google-scholar"
+      ],
+      "category": "google-scholar"
+    },
+    {
+      "name": "gs-fulltext",
+      "source": "./plugins/gs-fulltext",
+      "description": "Access full text via Google Scholar",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "google-scholar"
+      ],
+      "category": "google-scholar"
+    },
+    {
+      "name": "gs-navigate-pages",
+      "source": "./plugins/gs-navigate-pages",
+      "description": "Navigate Google Scholar result pages",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "google-scholar"
+      ],
+      "category": "google-scholar"
+    },
+    {
+      "name": "gs-search",
+      "source": "./plugins/gs-search",
+      "description": "Search papers on Google Scholar",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "google-scholar"
+      ],
+      "category": "google-scholar"
+    },
+    {
+      "name": "nature-academic-search",
+      "source": "./plugins/nature-academic-search",
+      "description": "Academic search on Nature",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "nature"
+      ],
+      "category": "nature"
+    },
+    {
+      "name": "nature-citation",
+      "source": "./plugins/nature-citation",
+      "description": "Manage Nature citations",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "nature"
+      ],
+      "category": "nature"
+    },
+    {
+      "name": "nature-crop-simple",
+      "source": "./plugins/nature-crop-simple",
+      "description": "Simple figure cropping for Nature papers",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "nature"
+      ],
+      "category": "nature"
+    },
+    {
+      "name": "nature-data",
+      "source": "./plugins/nature-data",
+      "description": "Access Nature paper data",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "nature"
+      ],
+      "category": "nature"
+    },
+    {
+      "name": "nature-figure",
+      "source": "./plugins/nature-figure",
+      "description": "Generate and format Nature figures",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "nature"
+      ],
+      "category": "nature"
+    },
+    {
+      "name": "nature-paper2ppt",
+      "source": "./plugins/nature-paper2ppt",
+      "description": "Convert Nature papers to presentations",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "nature"
+      ],
+      "category": "nature"
+    },
+    {
+      "name": "nature-polishing",
+      "source": "./plugins/nature-polishing",
+      "description": "Polish writing for Nature style",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "nature"
+      ],
+      "category": "nature"
+    },
+    {
+      "name": "nature-reader",
+      "source": "./plugins/nature-reader",
+      "description": "Read and analyze Nature papers",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "nature"
+      ],
+      "category": "nature"
+    },
+    {
+      "name": "nature-response",
+      "source": "./plugins/nature-response",
+      "description": "Draft responses for Nature reviews",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "nature"
+      ],
+      "category": "nature"
+    },
+    {
+      "name": "nature-writing",
+      "source": "./plugins/nature-writing",
+      "description": "Write in Nature paper style",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "nature"
+      ],
+      "category": "nature"
+    },
+    {
+      "name": "sd-advanced-search",
+      "source": "./plugins/sd-advanced-search",
+      "description": "Advanced search on ScienceDirect",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "sciencedirect"
+      ],
+      "category": "sciencedirect"
+    },
+    {
+      "name": "sd-download",
+      "source": "./plugins/sd-download",
+      "description": "Download papers from ScienceDirect",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "sciencedirect"
+      ],
+      "category": "sciencedirect"
+    },
+    {
+      "name": "sd-export",
+      "source": "./plugins/sd-export",
+      "description": "Export search results from ScienceDirect",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "sciencedirect"
+      ],
+      "category": "sciencedirect"
+    },
+    {
+      "name": "sd-journal-browse",
+      "source": "./plugins/sd-journal-browse",
+      "description": "Browse ScienceDirect journals",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "sciencedirect"
+      ],
+      "category": "sciencedirect"
+    },
+    {
+      "name": "sd-navigate-pages",
+      "source": "./plugins/sd-navigate-pages",
+      "description": "Navigate ScienceDirect result pages",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "sciencedirect"
+      ],
+      "category": "sciencedirect"
+    },
+    {
+      "name": "sd-paper-detail",
+      "source": "./plugins/sd-paper-detail",
+      "description": "View paper details on ScienceDirect",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "sciencedirect"
+      ],
+      "category": "sciencedirect"
+    },
+    {
+      "name": "sd-parse-results",
+      "source": "./plugins/sd-parse-results",
+      "description": "Parse ScienceDirect search results",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "sciencedirect"
+      ],
+      "category": "sciencedirect"
+    },
+    {
+      "name": "sd-search",
+      "source": "./plugins/sd-search",
+      "description": "Search papers on ScienceDirect",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "sciencedirect"
+      ],
+      "category": "sciencedirect"
+    },
+    {
+      "name": "wos-dom",
+      "source": "./plugins/wos-dom",
+      "description": "Web of Science DOM structure reference",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "web-of-science"
+      ],
+      "category": "web-of-science"
+    },
+    {
+      "name": "wos-download",
+      "source": "./plugins/wos-download",
+      "description": "Download papers from Web of Science",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "web-of-science"
+      ],
+      "category": "web-of-science"
+    },
+    {
+      "name": "wos-export",
+      "source": "./plugins/wos-export",
+      "description": "Export search results from Web of Science",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "web-of-science"
+      ],
+      "category": "web-of-science"
+    },
+    {
+      "name": "wos-navigate-pages",
+      "source": "./plugins/wos-navigate-pages",
+      "description": "Navigate Web of Science result pages",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "web-of-science"
+      ],
+      "category": "web-of-science"
+    },
+    {
+      "name": "wos-paper-detail",
+      "source": "./plugins/wos-paper-detail",
+      "description": "View paper details on Web of Science",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "web-of-science"
+      ],
+      "category": "web-of-science"
+    },
+    {
+      "name": "wos-parse-results",
+      "source": "./plugins/wos-parse-results",
+      "description": "Parse Web of Science search results",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "web-of-science"
+      ],
+      "category": "web-of-science"
+    },
+    {
+      "name": "wos-search",
+      "source": "./plugins/wos-search",
+      "description": "Search papers on Web of Science",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "research",
+        "web-of-science"
+      ],
+      "category": "web-of-science"
+    }
+  ]
+}

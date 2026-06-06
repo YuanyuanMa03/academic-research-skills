@@ -1,0 +1,14 @@
+{
+  "name": "wos-dom",
+  "description": "Web of Science DOM structure reference",
+  "version": "1.0.0",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic",
+    "research",
+    "wos"
+  ]
+}

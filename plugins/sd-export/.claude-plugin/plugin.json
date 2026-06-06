@@ -1,0 +1,14 @@
+{
+  "name": "sd-export",
+  "description": "Export search results from ScienceDirect",
+  "version": "1.0.0",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic",
+    "research",
+    "sd"
+  ]
+}

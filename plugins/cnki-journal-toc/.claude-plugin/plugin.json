@@ -1,0 +1,14 @@
+{
+  "name": "cnki-journal-toc",
+  "description": "View CNKI journal table of contents",
+  "version": "1.0.0",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic",
+    "research",
+    "cnki"
+  ]
+}
