@@ -322,7 +322,7 @@
     {
       "name": "nature-academic-search",
       "source": "./plugins/nature-academic-search",
-      "description": ">-",
+      "description": "Multi-source literature search, citation verification, MeSH search strategy, citation file management (.nbib/.ris/.bib conversion), and reference management via MCP tools (PubMed, CrossRef, arXiv)",
       "version": "1.0.0",
       "author": {
         "name": "YuanyuanMa03"
@@ -341,7 +341,7 @@
     {
       "name": "nature-citation",
       "source": "./plugins/nature-citation",
-      "description": ">-",
+      "description": "Add strict Nature/CNS citations to manuscript text by splitting long passages into citable segments, searching accepted flagship and subjournal titles from Nature Portfolio, AAAS Science family, and Cell Press",
       "version": "1.0.0",
       "author": {
         "name": "YuanyuanMa03"
@@ -360,7 +360,7 @@
     {
       "name": "nature-data",
       "source": "./plugins/nature-data",
-      "description": ">-",
+      "description": "Prepare, audit, or revise Nature-ready Data Availability statements, data repository plans, dataset citations, and FAIR metadata checklists for manuscripts",
       "version": "1.0.0",
       "author": {
         "name": "YuanyuanMa03"
@@ -379,7 +379,7 @@
     {
       "name": "nature-figure",
       "source": "./plugins/nature-figure",
-      "description": ">-",
+      "description": "Submission-grade Nature/high-impact journal figure workflow for Python or R — create, revise, audit, or polish manuscript figures, multi-panel scientific plots, journal-ready SVG/PDF/TIFF outputs",
       "version": "1.0.0",
       "author": {
         "name": "YuanyuanMa03"
@@ -454,7 +454,7 @@
     {
       "name": "nature-response",
       "source": "./plugins/nature-response",
-      "description": ">-",
+      "description": "Draft, audit, or revise point-by-point reviewer response letters for Nature-family manuscript revisions — handles major/minor revision requests, rebuttal letters, peer-review reports",
       "version": "1.0.0",
       "author": {
         "name": "YuanyuanMa03"
