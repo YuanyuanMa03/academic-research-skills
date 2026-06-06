@@ -1,5 +1,7 @@
 # Academic Research Skills Marketplace
 
+[中文介绍](./README_zh.md)
+
 Claude Code plugin marketplace for academic research workflows.
 
 ## Platforms
