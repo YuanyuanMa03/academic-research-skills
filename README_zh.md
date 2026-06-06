@@ -4,6 +4,17 @@
 
 Claude Code 插件市场，提供学术研究工作流相关技能。
 
+## 快速开始（任意 Agent）
+
+直接发送给你的 agent：
+
+```
+从这个仓库安装所有学术研究技能：
+https://github.com/YuanyuanMa03/academic-research-skills
+```
+
+适用于 Claude Code、Copilot CLI、Codex、Gemini CLI、ChatGPT、通义千问、DeepSeek，或任何能读取 GitHub 仓库的 LLM agent。
+
 ## 支持平台
 
 | 平台 | 前缀 | 技能 |

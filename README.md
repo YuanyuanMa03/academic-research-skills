@@ -4,6 +4,17 @@
 
 Claude Code plugin marketplace for academic research workflows.
 
+## Quick Start (Any Agent)
+
+Just send this to your agent:
+
+```
+Install all academic research skills from this repo:
+https://github.com/YuanyuanMa03/academic-research-skills
+```
+
+Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek, or any LLM agent that can read GitHub repos.
+
 ## Platforms
 
 | Platform | Prefix | Skills |
