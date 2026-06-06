@@ -147,6 +147,32 @@ cp -R academic-research-skills-marketplace/plugins/cnki-search/skills/cnki-searc
 2. Reference `SKILL.md` in your agent's system prompt or context
 3. The agent follows the instructions in SKILL.md when the topic is triggered
 
+### Don't Know Your Agent? Just Paste It
+
+If you're not sure how your agent handles skills, the simplest approach: **paste the SKILL.md content directly into the chat.**
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/YuanyuanMa03/academic-research-skills-marketplace.git
+
+# 2. Read the skill you want
+cat academic-research-skills-marketplace/plugins/cnki-search/skills/cnki-search/SKILL.md
+
+# 3. Copy the entire content and paste it into your agent's chat
+# 4. Then ask your question — the agent will follow the instructions
+```
+
+**Example prompt to your agent:**
+```
+I'm going to paste a skill document. Please follow its instructions when I ask about academic search.
+
+[PASTE SKILL.md CONTENT HERE]
+
+Now search CNKI for papers on neural rendering.
+```
+
+This works with **any** LLM-based agent — ChatGPT, Gemini, Claude, Qwen, DeepSeek, etc. The SKILL.md is just a Markdown instruction file that any model can understand and follow.
+
 ## Usage
 
 Once installed, skills activate automatically:
