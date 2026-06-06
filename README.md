@@ -52,7 +52,6 @@ Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek,
 /plugin install gs-search@academic-research-skills
 /plugin install nature-academic-search@academic-research-skills
 /plugin install nature-citation@academic-research-skills
-/plugin install nature-crop-simple@academic-research-skills
 /plugin install nature-data@academic-research-skills
 /plugin install nature-figure@academic-research-skills
 /plugin install nature-paper2ppt@academic-research-skills
@@ -128,7 +127,6 @@ cp -R academic-research-skills/plugins/gs-search/skills/gs-search ~/.codex/skill
 # Nature
 cp -R academic-research-skills/plugins/nature-academic-search/skills/nature-academic-search ~/.codex/skills/
 cp -R academic-research-skills/plugins/nature-citation/skills/nature-citation ~/.codex/skills/
-cp -R academic-research-skills/plugins/nature-crop-simple/skills/nature-crop-simple ~/.codex/skills/
 cp -R academic-research-skills/plugins/nature-data/skills/nature-data ~/.codex/skills/
 cp -R academic-research-skills/plugins/nature-figure/skills/nature-figure ~/.codex/skills/
 cp -R academic-research-skills/plugins/nature-paper2ppt/skills/nature-paper2ppt ~/.codex/skills/
