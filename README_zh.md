@@ -1,8 +1,8 @@
-# 学术研究技能市场
-
-Claude Code 插件市场，提供学术研究工作流相关技能。
+# 学术研究技能
 
 [English](./README.md)
+
+Claude Code 插件市场，提供学术研究工作流相关技能。
 
 ## 支持平台
 
@@ -20,30 +20,59 @@ Claude Code 插件市场，提供学术研究工作流相关技能。
 
 ```bash
 # 添加市场
-/plugin marketplace add YuanyuanMa03/academic-research-skills-marketplace
+/plugin marketplace add YuanyuanMa03/academic-research-skills
 
-# 安装技能
-/plugin install cnki-search@academic-research-skills-marketplace
-/plugin install gs-search@academic-research-skills-marketplace
-/plugin install nature-writing@academic-research-skills-marketplace
+# 安装全部技能
+/plugin install cnki-advanced-search@academic-research-skills
+/plugin install cnki-download@academic-research-skills
+/plugin install cnki-export@academic-research-skills
+/plugin install cnki-journal-index@academic-research-skills
+/plugin install cnki-journal-search@academic-research-skills
+/plugin install cnki-journal-toc@academic-research-skills
+/plugin install cnki-navigate-pages@academic-research-skills
+/plugin install cnki-paper-detail@academic-research-skills
+/plugin install cnki-parse-results@academic-research-skills
+/plugin install cnki-search@academic-research-skills
+/plugin install gs-advanced-search@academic-research-skills
+/plugin install gs-cited-by@academic-research-skills
+/plugin install gs-export@academic-research-skills
+/plugin install gs-fulltext@academic-research-skills
+/plugin install gs-navigate-pages@academic-research-skills
+/plugin install gs-search@academic-research-skills
+/plugin install nature-academic-search@academic-research-skills
+/plugin install nature-citation@academic-research-skills
+/plugin install nature-crop-simple@academic-research-skills
+/plugin install nature-data@academic-research-skills
+/plugin install nature-figure@academic-research-skills
+/plugin install nature-paper2ppt@academic-research-skills
+/plugin install nature-polishing@academic-research-skills
+/plugin install nature-reader@academic-research-skills
+/plugin install nature-response@academic-research-skills
+/plugin install nature-writing@academic-research-skills
+/plugin install sd-advanced-search@academic-research-skills
+/plugin install sd-download@academic-research-skills
+/plugin install sd-export@academic-research-skills
+/plugin install sd-journal-browse@academic-research-skills
+/plugin install sd-navigate-pages@academic-research-skills
+/plugin install sd-paper-detail@academic-research-skills
+/plugin install sd-parse-results@academic-research-skills
+/plugin install sd-search@academic-research-skills
+/plugin install wos-dom@academic-research-skills
+/plugin install wos-download@academic-research-skills
+/plugin install wos-export@academic-research-skills
+/plugin install wos-navigate-pages@academic-research-skills
+/plugin install wos-paper-detail@academic-research-skills
+/plugin install wos-parse-results@academic-research-skills
+/plugin install wos-search@academic-research-skills
 ```
 
 ### Copilot CLI
 
 ```bash
-# 克隆仓库
-git clone https://github.com/YuanyuanMa03/academic-research-skills-marketplace.git
-
-# 复制技能到 Copilot CLI 技能目录
+git clone https://github.com/YuanyuanMa03/academic-research-skills.git
 mkdir -p ~/.copilot/skills
-cp -R academic-research-skills-marketplace/plugins/*/skills/* ~/.copilot/skills/
-
-# 或安装特定技能
-cp -R academic-research-skills-marketplace/plugins/cnki-search/skills/cnki-search ~/.copilot/skills/
-cp -R academic-research-skills-marketplace/plugins/gs-search/skills/gs-search ~/.copilot/skills/
+cp -R academic-research-skills/plugins/*/skills/* ~/.copilot/skills/
 ```
-
-技能通过 `/skill` 命令激活，或在你询问研究任务时自动激活。
 
 | 技能工具 | Copilot CLI 等价工具 |
 |----------|---------------------|
@@ -57,16 +86,64 @@ cp -R academic-research-skills-marketplace/plugins/gs-search/skills/gs-search ~/
 ### Codex
 
 ```bash
-# 克隆仓库
-git clone https://github.com/YuanyuanMa03/academic-research-skills-marketplace.git
-
-# 复制技能到 Codex 技能目录
+git clone https://github.com/YuanyuanMa03/academic-research-skills.git
 mkdir -p ~/.codex/skills
-cp -R academic-research-skills-marketplace/plugins/*/skills/* ~/.codex/skills/
+cp -R academic-research-skills/plugins/*/skills/* ~/.codex/skills/
+```
 
-# 或安装特定技能
-cp -R academic-research-skills-marketplace/plugins/cnki-search/skills/cnki-search ~/.codex/skills/
-cp -R academic-research-skills-marketplace/plugins/gs-search/skills/gs-search ~/.codex/skills/
+或安装特定技能：
+
+```bash
+# 知网 (CNKI)
+cp -R academic-research-skills/plugins/cnki-advanced-search/skills/cnki-advanced-search ~/.codex/skills/
+cp -R academic-research-skills/plugins/cnki-download/skills/cnki-download ~/.codex/skills/
+cp -R academic-research-skills/plugins/cnki-export/skills/cnki-export ~/.codex/skills/
+cp -R academic-research-skills/plugins/cnki-journal-index/skills/cnki-journal-index ~/.codex/skills/
+cp -R academic-research-skills/plugins/cnki-journal-search/skills/cnki-journal-search ~/.codex/skills/
+cp -R academic-research-skills/plugins/cnki-journal-toc/skills/cnki-journal-toc ~/.codex/skills/
+cp -R academic-research-skills/plugins/cnki-navigate-pages/skills/cnki-navigate-pages ~/.codex/skills/
+cp -R academic-research-skills/plugins/cnki-paper-detail/skills/cnki-paper-detail ~/.codex/skills/
+cp -R academic-research-skills/plugins/cnki-parse-results/skills/cnki-parse-results ~/.codex/skills/
+cp -R academic-research-skills/plugins/cnki-search/skills/cnki-search ~/.codex/skills/
+
+# 谷歌学术 (Google Scholar)
+cp -R academic-research-skills/plugins/gs-advanced-search/skills/gs-advanced-search ~/.codex/skills/
+cp -R academic-research-skills/plugins/gs-cited-by/skills/gs-cited-by ~/.codex/skills/
+cp -R academic-research-skills/plugins/gs-export/skills/gs-export ~/.codex/skills/
+cp -R academic-research-skills/plugins/gs-fulltext/skills/gs-fulltext ~/.codex/skills/
+cp -R academic-research-skills/plugins/gs-navigate-pages/skills/gs-navigate-pages ~/.codex/skills/
+cp -R academic-research-skills/plugins/gs-search/skills/gs-search ~/.codex/skills/
+
+# Nature
+cp -R academic-research-skills/plugins/nature-academic-search/skills/nature-academic-search ~/.codex/skills/
+cp -R academic-research-skills/plugins/nature-citation/skills/nature-citation ~/.codex/skills/
+cp -R academic-research-skills/plugins/nature-crop-simple/skills/nature-crop-simple ~/.codex/skills/
+cp -R academic-research-skills/plugins/nature-data/skills/nature-data ~/.codex/skills/
+cp -R academic-research-skills/plugins/nature-figure/skills/nature-figure ~/.codex/skills/
+cp -R academic-research-skills/plugins/nature-paper2ppt/skills/nature-paper2ppt ~/.codex/skills/
+cp -R academic-research-skills/plugins/nature-polishing/skills/nature-polishing ~/.codex/skills/
+cp -R academic-research-skills/plugins/nature-reader/skills/nature-reader ~/.codex/skills/
+cp -R academic-research-skills/plugins/nature-response/skills/nature-response ~/.codex/skills/
+cp -R academic-research-skills/plugins/nature-writing/skills/nature-writing ~/.codex/skills/
+
+# ScienceDirect
+cp -R academic-research-skills/plugins/sd-advanced-search/skills/sd-advanced-search ~/.codex/skills/
+cp -R academic-research-skills/plugins/sd-download/skills/sd-download ~/.codex/skills/
+cp -R academic-research-skills/plugins/sd-export/skills/sd-export ~/.codex/skills/
+cp -R academic-research-skills/plugins/sd-journal-browse/skills/sd-journal-browse ~/.codex/skills/
+cp -R academic-research-skills/plugins/sd-navigate-pages/skills/sd-navigate-pages ~/.codex/skills/
+cp -R academic-research-skills/plugins/sd-paper-detail/skills/sd-paper-detail ~/.codex/skills/
+cp -R academic-research-skills/plugins/sd-parse-results/skills/sd-parse-results ~/.codex/skills/
+cp -R academic-research-skills/plugins/sd-search/skills/sd-search ~/.codex/skills/
+
+# Web of Science
+cp -R academic-research-skills/plugins/wos-dom/skills/wos-dom ~/.codex/skills/
+cp -R academic-research-skills/plugins/wos-download/skills/wos-download ~/.codex/skills/
+cp -R academic-research-skills/plugins/wos-export/skills/wos-export ~/.codex/skills/
+cp -R academic-research-skills/plugins/wos-navigate-pages/skills/wos-navigate-pages ~/.codex/skills/
+cp -R academic-research-skills/plugins/wos-paper-detail/skills/wos-paper-detail ~/.codex/skills/
+cp -R academic-research-skills/plugins/wos-parse-results/skills/wos-parse-results ~/.codex/skills/
+cp -R academic-research-skills/plugins/wos-search/skills/wos-search ~/.codex/skills/
 ```
 
 技能在 Codex 中原生加载 — 只需按照 SKILL.md 中的说明操作。
@@ -80,19 +157,10 @@ cp -R academic-research-skills-marketplace/plugins/gs-search/skills/gs-search ~/
 ### Gemini CLI
 
 ```bash
-# 克隆仓库
-git clone https://github.com/YuanyuanMa03/academic-research-skills-marketplace.git
-
-# 复制技能到 Gemini CLI 技能目录
+git clone https://github.com/YuanyuanMa03/academic-research-skills.git
 mkdir -p ~/.gemini/skills
-cp -R academic-research-skills-marketplace/plugins/*/skills/* ~/.gemini/skills/
-
-# 或安装特定技能
-cp -R academic-research-skills-marketplace/plugins/cnki-search/skills/cnki-search ~/.gemini/skills/
-cp -R academic-research-skills-marketplace/plugins/gs-search/skills/gs-search ~/.gemini/skills/
+cp -R academic-research-skills/plugins/*/skills/* ~/.gemini/skills/
 ```
-
-通过 `activate_skill` 工具激活技能，或在提示词中引用它们。
 
 | 技能工具 | Gemini CLI 等价工具 |
 |----------|---------------------|
@@ -108,76 +176,37 @@ cp -R academic-research-skills-marketplace/plugins/gs-search/skills/gs-search ~/
 ### OpenClaw
 
 ```bash
-# 克隆仓库
-git clone https://github.com/YuanyuanMa03/academic-research-skills-marketplace.git
-
-# 复制技能到 OpenClaw 技能目录
+git clone https://github.com/YuanyuanMa03/academic-research-skills.git
 mkdir -p ~/.openclaw/skills
-cp -R academic-research-skills-marketplace/plugins/*/skills/* ~/.openclaw/skills/
-
-# 或安装特定技能
-cp -R academic-research-skills-marketplace/plugins/cnki-search/skills/cnki-search ~/.openclaw/skills/
-cp -R academic-research-skills-marketplace/plugins/gs-search/skills/gs-search ~/.openclaw/skills/
+cp -R academic-research-skills/plugins/*/skills/* ~/.openclaw/skills/
 ```
-
-技能作为上下文文件加载。在你的 agent 配置中引用它们，或直接包含在提示词中。
 
 ### 其他 Agent（通用）
 
-对于任何支持技能/上下文文件的 AI 编程 agent：
-
 ```bash
-# 克隆仓库
-git clone https://github.com/YuanyuanMa03/academic-research-skills-marketplace.git
-
-# 技能是纯 Markdown 文件 — 可以复制到任何位置
-# 每个技能都是自包含的目录
-cp -R academic-research-skills-marketplace/plugins/cnki-search/skills/cnki-search /path/to/your/agent/skills/
+git clone https://github.com/YuanyuanMa03/academic-research-skills.git
+cp -R academic-research-skills/plugins/cnki-search/skills/cnki-search /path/to/your/agent/skills/
 ```
 
 **技能结构（通用）：**
 ```
 <技能名>/
-├── SKILL.md              # 主要说明（始终存在）
+├── SKILL.md              # 主要说明
 ├── references/           # 辅助指南（可选）
 ├── examples/             # 标注示例（可选）
 └── scripts/              # 辅助脚本（可选）
 ```
 
-**在任何 agent 中使用：**
-1. 将技能目录复制到你的 agent 的技能/上下文位置
-2. 在你的 agent 系统提示词或上下文中引用 `SKILL.md`
-3. 当触发相关主题时，agent 会按照 SKILL.md 中的说明操作
-
 ### 不知道怎么用？直接粘贴给 Agent
 
-如果你不确定你的 agent 如何处理技能，最简单的方法：**直接把 SKILL.md 内容粘贴到聊天中。**
+把 SKILL.md 内容直接粘贴到任何 LLM 聊天中：
 
 ```bash
-# 1. 克隆仓库
-git clone https://github.com/YuanyuanMa03/academic-research-skills-marketplace.git
-
-# 2. 读取你想要的技能
-cat academic-research-skills-marketplace/plugins/cnki-search/skills/cnki-search/SKILL.md
-
-# 3. 复制全部内容，粘贴到你的 agent 聊天中
-# 4. 然后提问 — agent 会按照说明操作
+cat academic-research-skills/plugins/cnki-search/skills/cnki-search/SKILL.md
+# 复制并粘贴到 ChatGPT、Gemini、Claude、通义千问、DeepSeek 等
 ```
-
-**给你的 agent 的示例提示词：**
-```
-我要粘贴一个技能文档。当我在2026年6月6日询问学术搜索相关问题时，请按照它的说明操作。
-
-[在这里粘贴 SKILL.md 的内容]
-
-现在帮我在知网上搜索关于 neural rendering 的论文。
-```
-
-这种方法适用于**任何**基于 LLM 的 agent — ChatGPT、Gemini、Claude、通义千问、DeepSeek 等。SKILL.md 就是一个 Markdown 说明文件，任何模型都能理解并遵循。
 
 ## 使用方式
-
-安装后，技能会自动激活：
 
 - "帮我在知网上搜索关于 neural rendering 的论文"
 - "在谷歌学术上找引用这篇论文的文献"
@@ -185,8 +214,6 @@ cat academic-research-skills-marketplace/plugins/cnki-search/skills/cnki-search/
 - "帮我用 Nature 风格写一个 Introduction"
 
 ## 添加插件
-
-贡献新技能：
 
 1. 创建 `plugins/your-skill-name/skills/your-skill-name/SKILL.md`
 2. 添加 `plugins/your-skill-name/.claude-plugin/plugin.json`
