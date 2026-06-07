@@ -1,6 +1,15 @@
+---
+name: wos-dom
+description: "WoS DOM and URL reference. Internal reference used by wos-search, wos-navigate-pages, wos-paper-detail."
+user-invocable: false
+disable-model-invocation: false
+---
+
 # WoS (Web of Science) DOM & URL Reference
 
-## Base URL
+## Usage
+
+This reference is loaded as context by other WoS skills. No standalone workflow step needed — DOM selectors and URL patterns are consumed directly by `wos-search`, `wos-navigate-pages`, `wos-paper-detail`.
 
 - Direct: `https://www.webofscience.com`
 - Path pattern: `/wos/{db}/` where `{db}` is the database code

@@ -1,0 +1,55 @@
+name: Lint & Validate
+
+on:
+  push:
+    branches: [main, "feature/**"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-skills:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate SKILL.md files
+        run: python scripts/validate_skills.py
+
+      - name: Check for hardcoded paths
+        run: |
+          if grep -rnP '(?<![:\w])[a-zA-Z]:[/\\][^\s"'"'"']+' plugins/ --include="*.md" --include="*.json" --include="*.py" --exclude-dir=references --exclude-dir=assets | grep -v 'http' | grep -v 'API'; then
+            echo "::error::Hardcoded Windows paths found in plugin files"
+            exit 1
+          fi
+          if grep -rn '/Users/' plugins/ --include="*.md" --include="*.json" --include="*.py"; then
+            echo "::error::Hardcoded macOS paths found in plugin files"
+            exit 1
+          fi
+          echo "No hardcoded paths found."
+
+      - name: Validate plugin.json files
+        run: python scripts/validate_plugin_json.py
+
+  lint-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ruff
+        run: pip install ruff
+
+      - name: Lint Python files
+        run: ruff check shared/ scripts/ plugins/
+
+      - name: Format check
+        run: ruff format --check shared/ scripts/
