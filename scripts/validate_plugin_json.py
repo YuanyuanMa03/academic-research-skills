@@ -82,8 +82,8 @@ def main():
         else:
             passed += 1
 
-    print(f"plugin.json Validation Report")
-    print(f"=" * 50)
+    print("plugin.json Validation Report")
+    print("=" * 50)
     print(f"Total: {total} | Passed: {passed} | Failed: {failed}")
     print()
 

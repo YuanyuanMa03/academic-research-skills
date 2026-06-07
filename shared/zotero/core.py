@@ -19,9 +19,15 @@ import urllib.error
 import urllib.request
 from typing import Any, Optional
 
-# Ensure UTF-8 output on all platforms
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
-sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8")
+# Ensure UTF-8 output on all platforms (skip under pytest to avoid capture conflict)
+import os as _os
+
+if not _os.environ.get("PYTEST_RUNNING"):
+    try:
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8")
+    except (AttributeError, OSError):
+        pass  # buffer not available (e.g., in tests or non-TTY environments)
 
 ZOTERO_API = "http://127.0.0.1:23119/connector"
 HTTP_TIMEOUT = 15  # seconds

@@ -10,9 +10,9 @@ disable-model-invocation: false
 
 Load a specific page of results from the current WoS search.
 
-## Two Approaches
+## Steps
 
-### Approach A: URL-based (when browser is on a results page)
+### Step A: URL-based navigation (when browser is on a results page)
 
 The results URL follows the pattern:
 ```
@@ -21,7 +21,7 @@ The results URL follows the pattern:
 
 Modify the page number in the URL and navigate. Then extract via `evaluate_script` with DOM selectors. Uses **2 tool calls**.
 
-### Approach B: API-based (preferred, 1 tool call)
+### Step B: API-based navigation (preferred, 1 tool call)
 
 Re-run the search API with `retrieve.first` offset:
 

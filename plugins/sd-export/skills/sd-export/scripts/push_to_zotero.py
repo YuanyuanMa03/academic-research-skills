@@ -16,7 +16,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "..", "..
 
 from shared.zotero.core import ZoteroClient
 from shared.zotero.pdf import PdfHandler
-from shared.zotero.adapters.sd import build_zotero_item, extract_uri
+from shared.zotero.adapters.sd import build_zotero_item
 
 
 def main():

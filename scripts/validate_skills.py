@@ -153,8 +153,8 @@ def main():
             else:
                 passed += 1
 
-    print(f"SKILL.md Validation Report")
-    print(f"=" * 50)
+    print("SKILL.md Validation Report")
+    print("=" * 50)
     print(f"Total: {total} | Passed: {passed} | Failed: {failed} | Warnings: {warnings}")
     print()
 

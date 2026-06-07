@@ -6,8 +6,6 @@ from __future__ import annotations
 import sys
 import os
 
-import pytest
-
 # Add repo root to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 

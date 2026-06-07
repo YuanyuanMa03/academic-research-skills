@@ -6,10 +6,9 @@ Uses unittest.mock to avoid requiring a running Zotero instance.
 
 from __future__ import annotations
 
-import json
 import sys
 import os
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 
 import pytest
 
