@@ -42,7 +42,7 @@ def main():
         return
 
     # Mode 1: RIS import (backward compatible)
-    if args.ris_file or args.ris_data:
+    if args.ris_file is not None or args.ris_data is not None:
         if not client.ping():
             print("Error: Zotero is not running. Please start Zotero desktop.")
             sys.exit(1)

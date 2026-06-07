@@ -20,7 +20,12 @@ def build_zotero_item(paper: dict) -> dict:
 
     creators = []
     for name in authors_raw:
-        name = name.strip()
+        if isinstance(name, dict):
+            # Pre-formatted Zotero creator — use as-is
+            name.setdefault("creatorType", "author")
+            creators.append(name)
+            continue
+        name = str(name).strip()
         if not name:
             continue
         # WoS standard format: "LastName, FirstInitials" e.g. "Gronroos, C"
@@ -42,27 +47,33 @@ def build_zotero_item(paper: dict) -> dict:
         year = paper.get("year", "")
         date = str(year) if year is not None and year != "" else ""
 
-    # Handle keywords — normalize string→list
+    # Handle keywords — normalize string→list, with generic fallback
     kw_field = paper.get("authorKeywords") or []
     if isinstance(kw_field, str):
         kw_field = [k.strip() for k in kw_field.split(";") if k.strip()]
     kw_plus = paper.get("keywordsPlus") or []
     if isinstance(kw_plus, str):
         kw_plus = [k.strip() for k in kw_plus.split(";") if k.strip()]
+    # Generic "keywords" fallback if both WoS-specific fields are empty
+    if not kw_field and not kw_plus:
+        kw_generic = paper.get("keywords") or []
+        if isinstance(kw_generic, str):
+            kw_generic = [k.strip() for k in kw_generic.split(";") if k.strip()]
+        kw_field = kw_generic
 
     item = {
         "itemType": "journalArticle",
-        "title": paper.get("title", ""),
-        "abstractNote": paper.get("abstract", ""),
+        "title": paper.get("title") or "",
+        "abstractNote": paper.get("abstract") or "",
         "date": date,
-        "language": paper.get("language", "en"),
+        "language": paper.get("language") or "en",
         "libraryCatalog": "Web of Science",
-        "publicationTitle": paper.get("source", ""),
-        "volume": str(paper.get("volume", "") or ""),
-        "issue": str(paper.get("issue", "") or ""),
-        "pages": str(paper.get("pages", "") or ""),
-        "DOI": paper.get("doi", ""),
-        "ISSN": paper.get("issn", ""),
+        "publicationTitle": paper.get("source") or "",
+        "volume": str(paper.get("volume") or ""),
+        "issue": str(paper.get("issue") or ""),
+        "pages": str(paper.get("pages") or ""),
+        "DOI": paper.get("doi") or "",
+        "ISSN": paper.get("issn") or "",
         "creators": creators,
         "tags": [],
         "attachments": [],
@@ -87,7 +98,7 @@ def build_zotero_item(paper: dict) -> dict:
     cited = paper.get("citedCount")
     if cited is None or cited == "":
         cited = paper.get("citations", "")
-    if cited:
+    if cited is not None and cited != "":
         alldb = paper.get("alldbCited")
         if alldb is None or alldb == "":
             alldb = paper.get("citationsAll", "")
@@ -116,7 +127,7 @@ def build_zotero_item(paper: dict) -> dict:
 
 def extract_uri(paper: dict) -> str:
     """Extract source URI from WoS paper data."""
-    wos_id = paper.get("accessionNumber", "") or paper.get("wosId", "")
+    wos_id = paper.get("accessionNumber") or paper.get("wosId") or ""
     if wos_id:
         return f"https://www.webofscience.com/wos/woscc/full-record/{wos_id}"
-    return paper.get("url", "")
+    return paper.get("url") or ""
