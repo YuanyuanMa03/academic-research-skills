@@ -33,9 +33,7 @@ def parse_elearning(text: str) -> dict:
         "journal": get("Source-刊名"),
         "year": get("Year-年"),
         "pubTime": get("PubTime-出版时间"),
-        "keywords": [
-            k.strip() for k in get("Keyword-关键词").split(";") if k.strip()
-        ],
+        "keywords": [k.strip() for k in get("Keyword-关键词").split(";") if k.strip()],
         "abstract": get("Summary-摘要"),
         "volume": get("Roll-卷"),
         "issue": get("Period-期"),
@@ -89,15 +87,15 @@ def build_zotero_item(paper: dict) -> dict:
     # Extra field - CNKI-specific metadata
     extra_parts = []
     if paper.get("journalEN"):
-        extra_parts.append(f'original-container-title: {paper["journalEN"]}')
+        extra_parts.append(f"original-container-title: {paper['journalEN']}")
     if paper.get("foundation"):
-        extra_parts.append(f'foundation: {paper["foundation"]}')
+        extra_parts.append(f"foundation: {paper['foundation']}")
     if paper.get("downloadCount"):
-        extra_parts.append(f'download: {paper["downloadCount"]}')
+        extra_parts.append(f"download: {paper['downloadCount']}")
     if paper.get("album"):
-        extra_parts.append(f'album: {paper["album"]}')
+        extra_parts.append(f"album: {paper['album']}")
     if paper.get("clcCode"):
-        extra_parts.append(f'CLC: {paper["clcCode"]}')
+        extra_parts.append(f"CLC: {paper['clcCode']}")
     if dbcode:
         extra_parts.append(f"dbcode: {dbcode}")
     if dbname:
@@ -105,11 +103,11 @@ def build_zotero_item(paper: dict) -> dict:
     if filename:
         extra_parts.append(f"filename: {filename}")
     if paper.get("publicationTag"):
-        extra_parts.append(f'publicationTag: {paper["publicationTag"]}')
+        extra_parts.append(f"publicationTag: {paper['publicationTag']}")
     if paper.get("cif"):
-        extra_parts.append(f'CIF: {paper["cif"]}')
+        extra_parts.append(f"CIF: {paper['cif']}")
     if paper.get("aif"):
-        extra_parts.append(f'AIF: {paper["aif"]}')
+        extra_parts.append(f"AIF: {paper['aif']}")
     if extra_parts:
         item["extra"] = "\n".join(extra_parts)
 
@@ -129,9 +127,19 @@ def build_item_from_elearning(paper: dict) -> dict:
     parsed = parse_elearning(paper["ELEARNING"])
     # Merge page-level fields into parsed data
     merge_fields = [
-        "issn", "dbcode", "dbname", "filename", "clcCode",
-        "journalEN", "foundation", "downloadCount", "album",
-        "publicationTag", "cif", "aif", "pageUrl",
+        "issn",
+        "dbcode",
+        "dbname",
+        "filename",
+        "clcCode",
+        "journalEN",
+        "foundation",
+        "downloadCount",
+        "album",
+        "publicationTag",
+        "cif",
+        "aif",
+        "pageUrl",
     ]
     for k in merge_fields:
         if k in paper and paper[k]:

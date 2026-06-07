@@ -80,18 +80,18 @@ def build_zotero_item(paper: dict) -> dict:
         else:
             extra_parts.append(f"Cited: {cited}")
     if paper.get("jif"):
-        jif_str = f'JIF: {paper["jif"]}'
+        jif_str = f"JIF: {paper['jif']}"
         if paper.get("jifYear"):
-            jif_str += f' ({paper["jifYear"]})'
+            jif_str += f" ({paper['jifYear']})"
         extra_parts.append(jif_str)
     if paper.get("jcrQuartile"):
-        extra_parts.append(f'JCR: {paper["jcrQuartile"]}')
+        extra_parts.append(f"JCR: {paper['jcrQuartile']}")
     if paper.get("researchAreas"):
-        extra_parts.append(f'Research Areas: {paper["researchAreas"]}')
+        extra_parts.append(f"Research Areas: {paper['researchAreas']}")
     if paper.get("wosCategories"):
-        extra_parts.append(f'WoS Categories: {paper["wosCategories"]}')
+        extra_parts.append(f"WoS Categories: {paper['wosCategories']}")
     if paper.get("docType"):
-        extra_parts.append(f'Document Type: {paper["docType"]}')
+        extra_parts.append(f"Document Type: {paper['docType']}")
     if extra_parts:
         item["extra"] = "\n".join(extra_parts)
 

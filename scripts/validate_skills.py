@@ -93,13 +93,17 @@ def validate_skill(skill_dir: Path) -> tuple[list[str], bool]:
                 has_errors = True
         for field in RECOMMENDED_FRONTMATTER_FIELDS:
             if field not in fm:
-                issues.append(f"  [WARN] Missing recommended frontmatter field: {field}")
+                issues.append(
+                    f"  [WARN] Missing recommended frontmatter field: {field}"
+                )
 
     # Check for hardcoded paths
     has_errors = False
     for i, line in enumerate(content.split("\n"), 1):
         if HARDCODED_PATH_PATTERN.search(line) and not line.strip().startswith("#"):
-            issues.append(f"  [ERROR] Line {i}: Hardcoded path detected: {line.strip()[:80]}")
+            issues.append(
+                f"  [ERROR] Line {i}: Hardcoded path detected: {line.strip()[:80]}"
+            )
             has_errors = True
 
     # Check for required sections
@@ -155,7 +159,9 @@ def main():
 
     print("SKILL.md Validation Report")
     print("=" * 50)
-    print(f"Total: {total} | Passed: {passed} | Failed: {failed} | Warnings: {warnings}")
+    print(
+        f"Total: {total} | Passed: {passed} | Failed: {failed} | Warnings: {warnings}"
+    )
     print()
 
     if all_issues:

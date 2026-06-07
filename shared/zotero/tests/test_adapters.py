@@ -51,7 +51,9 @@ class TestWoSAdapter:
     def test_extract_uri(self):
         from shared.zotero.adapters.wos import extract_uri
 
-        assert "WOS:000123456789" in extract_uri({"accessionNumber": "WOS:000123456789"})
+        assert "WOS:000123456789" in extract_uri(
+            {"accessionNumber": "WOS:000123456789"}
+        )
         assert extract_uri({}) == ""
 
 

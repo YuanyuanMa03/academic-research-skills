@@ -125,7 +125,9 @@ class PdfHandler:
         col = zotero_client.get_selected_collection()
         files_editable = col.get("filesEditable", True) if col else True
         if not files_editable:
-            print("  (Target collection does not support file attachments, skipping PDF)")
+            print(
+                "  (Target collection does not support file attachments, skipping PDF)"
+            )
             return 0, 0
 
         for i, (paper, item) in enumerate(zip(papers, items)):
@@ -146,7 +148,9 @@ class PdfHandler:
             )
             if att_status in (200, 201):
                 size_mb = len(pdf_bytes) / 1024 / 1024
-                print(f"  PDF attached ({size_mb:.1f} MB): {item.get('title', '?')[:60]}")
+                print(
+                    f"  PDF attached ({size_mb:.1f} MB): {item.get('title', '?')[:60]}"
+                )
                 ok += 1
             else:
                 print(f"  PDF attach failed ({att_status}): {att_msg or ''}")

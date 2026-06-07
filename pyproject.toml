@@ -1,3 +1,9 @@
+[tool.pytest.ini_options]
+testpaths = ["shared"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
 [tool.ruff]
 # Exclude pre-existing scripts that are not part of this PR's changes.
 # These files have pre-existing lint issues that will be addressed

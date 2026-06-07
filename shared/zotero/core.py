@@ -105,9 +105,9 @@ class ZoteroClient:
         - Repeat call → 409 (already saved, treat as success)
         """
         key = "|".join(sorted(item.get("title", "") for item in items))
-        return hashlib.md5(
-            key.encode("utf-8", errors="surrogateescape")
-        ).hexdigest()[:12]
+        return hashlib.md5(key.encode("utf-8", errors="surrogateescape")).hexdigest()[
+            :12
+        ]
 
     # ------------------------------------------------------------------
     # Collections
@@ -124,9 +124,13 @@ class ZoteroClient:
         """Print all available Zotero collections to stdout."""
         data = self.get_selected_collection()
         if not data:
-            print("Error: Cannot connect to Zotero. Please ensure Zotero desktop is running.")
+            print(
+                "Error: Cannot connect to Zotero. Please ensure Zotero desktop is running."
+            )
             return
-        print(f"Current collection: {data.get('name', '?')} (ID: {data.get('id', '?')})")
+        print(
+            f"Current collection: {data.get('name', '?')} (ID: {data.get('id', '?')})"
+        )
         print(f"Library: {data.get('libraryName', '?')}")
         print()
         print("Available collections:")

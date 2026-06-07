@@ -56,7 +56,9 @@ def validate_plugin_json(plugin_dir: Path) -> list[str]:
     expected_name = plugin_dir.name
     actual_name = data.get("name", "")
     if actual_name and actual_name != expected_name:
-        issues.append(f"  Name mismatch: '{actual_name}' vs directory '{expected_name}'")
+        issues.append(
+            f"  Name mismatch: '{actual_name}' vs directory '{expected_name}'"
+        )
 
     return issues
 

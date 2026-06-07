@@ -92,7 +92,7 @@ def build_zotero_item(paper: dict) -> dict:
         "issue": paper.get("issue", ""),
         "DOI": paper.get("doi", ""),
         "url": (
-            f'https://pubmed.ncbi.nlm.nih.gov/{paper["pmid"]}/'
+            f"https://pubmed.ncbi.nlm.nih.gov/{paper['pmid']}/"
             if paper.get("pmid")
             else ""
         ),
@@ -108,9 +108,9 @@ def build_zotero_item(paper: dict) -> dict:
     # Extra field with PubMed metadata
     extra_parts = []
     if paper.get("pmid"):
-        extra_parts.append(f'PMID: {paper["pmid"]}')
+        extra_parts.append(f"PMID: {paper['pmid']}")
     if paper.get("pmcid"):
-        extra_parts.append(f'PMCID: {paper["pmcid"]}')
+        extra_parts.append(f"PMCID: {paper['pmcid']}")
     if paper.get("pubtype"):
         pub_types = (
             paper["pubtype"]
@@ -127,7 +127,7 @@ def build_zotero_item(paper: dict) -> dict:
 def extract_uri(paper: dict) -> str:
     """Extract source URI from Google Scholar / PubMed paper data."""
     if paper.get("pmid"):
-        return f'https://pubmed.ncbi.nlm.nih.gov/{paper["pmid"]}/'
+        return f"https://pubmed.ncbi.nlm.nih.gov/{paper['pmid']}/"
     return ""
 
 

@@ -40,7 +40,7 @@ def build_zotero_item(paper: dict) -> dict:
     if paper.get("issn"):
         item["ISSN"] = paper["issn"]
     if paper.get("articleType"):
-        item["extra"] = f'articleType: {paper["articleType"]}'
+        item["extra"] = f"articleType: {paper['articleType']}"
 
     return item
 

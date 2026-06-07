@@ -131,6 +131,4 @@ def run_push(
     if pdf_handler and attachment_extractor:
         attachments, cookies = attachment_extractor(papers)
         if attachments:
-            pdf_handler.attach_pdfs(
-                client, session_id, items, papers, cookies=cookies
-            )
+            pdf_handler.attach_pdfs(client, session_id, items, papers, cookies=cookies)

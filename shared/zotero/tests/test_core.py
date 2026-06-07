@@ -123,9 +123,9 @@ class TestImportRis:
     @patch.object(ZoteroClient, "request")
     def test_ris_duplicate(self, mock_request, client):
         mock_request.side_effect = Exception()
-        mock_request.side_effect = __import__("urllib.error", fromlist=["HTTPError"]).HTTPError(
-            url="http://test", code=409, msg="", hdrs={}, fp=None
-        )
+        mock_request.side_effect = __import__(
+            "urllib.error", fromlist=["HTTPError"]
+        ).HTTPError(url="http://test", code=409, msg="", hdrs={}, fp=None)
         # Can't easily mock HTTPError, so just test the empty case
         result = client.import_ris("   ")
         assert result["success"] is False
