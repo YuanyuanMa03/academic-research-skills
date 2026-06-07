@@ -128,9 +128,14 @@ async () => {
 }
 ```
 
-### 3. Report
+### 3. Parse results
+
+After the search completes, use the `cnki-parse-results` skill to extract actual paper data (titles, authors, URLs, etc.) from the results page. This skill reads the result table and returns structured paper objects.
+
+### 4. Report
 
 > Advanced search: "{query}" ({fieldType}) + source: {sourceTypes} → {total} results.
+> (then list papers from cnki-parse-results output)
 
 ## Tool calls: 2 (navigate + evaluate_script)
 

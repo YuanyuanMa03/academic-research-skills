@@ -15,7 +15,20 @@ and reference management via MCP tools.
 
 ## MCP Tools
 
-### Core Search
+### Bundled MCP Server (academic-search)
+
+The bundled MCP server provides these tools — **use these names when calling the server**:
+
+| Tool | Purpose |
+|------|---------|
+| `search_papers` | Multi-source search across CrossRef, PubMed, arXiv (concurrent) |
+| `get_paper_by_id` | Fetch paper by DOI, PMID, or arXiv ID |
+| `get_citation` | Formatted citation output (APA, MLA, BibTeX, etc.) |
+| `lookup_mesh` | MeSH term exploration and hierarchy |
+
+### External MCP Tools (require separate installation)
+
+The following tools are referenced in workflows but require **external MCP servers** to be installed separately. If unavailable, fall back to the bundled `search_papers` tool.
 
 | Tool | Source | Best For |
 |------|--------|----------|
@@ -23,7 +36,7 @@ and reference management via MCP tools.
 | `search_crossref` | paper-search MCP | Cross-disciplinary, citation counts |
 | `search_arxiv` | paper-search MCP | Preprints (physics, math, CS, biology) |
 
-### Extended Search
+### Extended Search (external only)
 
 | Tool | Source | Best For |
 |------|--------|----------|
