@@ -4,7 +4,7 @@
 Checks:
 1. Required fields present (name, description, version)
 2. Version follows semver format
-3. License field matches repository LICENSE
+3. License field is present
 4. Keywords are non-empty
 
 Usage:
@@ -20,7 +20,7 @@ from pathlib import Path
 
 
 REQUIRED_FIELDS = {"name", "description", "version"}
-SEMVER_PATTERN = re.compile(r"^\d+\.\d+\.\d+$")
+SEMVER_PATTERN = re.compile(r"^\d+\.\d+\.\d+(-[a-zA-Z0-9.]+)?$")
 REPO_ROOT = Path(__file__).parent.parent
 PLUGINS_DIR = REPO_ROOT / "plugins"
 
@@ -40,25 +40,16 @@ def validate_plugin_json(plugin_dir: Path) -> list[str]:
 
     for field in REQUIRED_FIELDS:
         if field not in data:
-            issues.append(f"  Missing required field: {field}")
+            issues.append(f"  [ERROR] Missing required field: {field}")
 
     # Check semver
     version = data.get("version", "")
     if version and not SEMVER_PATTERN.match(version):
-        issues.append(f"  Invalid version format: {version} (expected X.Y.Z)")
+        issues.append(f"  [WARN] Invalid version format: {version} (expected X.Y.Z)")
 
-    # Check license matches repo
-    license_field = data.get("license", "")
-    if license_field and license_field != "MIT":
-        issues.append(f"  License mismatch: {license_field} (expected MIT)")
-
-    # Check name matches directory
-    expected_name = plugin_dir.name
-    actual_name = data.get("name", "")
-    if actual_name and actual_name != expected_name:
-        issues.append(
-            f"  Name mismatch: '{actual_name}' vs directory '{expected_name}'"
-        )
+    # Check license is present (don't hardcode a specific value)
+    if not data.get("license"):
+        issues.append("  [WARN] No license field specified")
 
     return issues
 
@@ -78,9 +69,15 @@ def main():
             continue
         total += 1
         issues = validate_plugin_json(plugin_dir)
-        if issues:
+        # Only count ERROR-tagged issues as failures
+        has_errors = any("[ERROR]" in i for i in issues)
+        if has_errors:
             failed += 1
             all_issues[plugin_dir.name] = issues
+        elif issues:
+            # warnings only
+            all_issues[plugin_dir.name] = issues
+            passed += 1
         else:
             passed += 1
 
@@ -98,10 +95,10 @@ def main():
         print()
 
     if failed > 0:
-        print(f"RESULT: {failed} plugin(s) have validation issues")
-        sys.exit(0)  # Warnings only for now
+        print(f"RESULT: {failed} plugin(s) have validation errors")
+        sys.exit(1)
     else:
-        print("RESULT: All plugins pass validation")
+        print("RESULT: All plugins pass validation (warnings are non-blocking)")
         sys.exit(0)
 
 

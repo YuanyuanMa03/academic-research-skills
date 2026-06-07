@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main]
 
+concurrency:
+  group: lint-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate-skills:
     runs-on: ubuntu-latest
@@ -22,12 +26,27 @@ jobs:
 
       - name: Check for hardcoded paths
         run: |
-          if grep -rnP '(?<![:\w])[a-zA-Z]:[/\\][^\s"'"'"']+' plugins/ --include="*.md" --include="*.json" --include="*.py" --exclude-dir=references --exclude-dir=assets | grep -v 'http' | grep -v 'API'; then
+          set -o pipefail
+          HARDcoded=0
+
+          # Windows drive-letter paths (e.g. C:\, D:/)
+          if grep -rnP '(?<![:\w])[a-zA-Z]:[/\\][^\s"'"'"']+' plugins/ \
+              --include="*.md" --include="*.json" --include="*.py" \
+              --exclude-dir=references --exclude-dir=assets \
+              | grep -v 'http' | grep -v 'API'; then
             echo "::error::Hardcoded Windows paths found in plugin files"
-            exit 1
+            HARDCODED=1
           fi
-          if grep -rn '/Users/' plugins/ --include="*.md" --include="*.json" --include="*.py"; then
+
+          # macOS user-home paths
+          if grep -rn '/Users/' plugins/ \
+              --include="*.md" --include="*.json" --include="*.py" \
+              --exclude-dir=references --exclude-dir=assets; then
             echo "::error::Hardcoded macOS paths found in plugin files"
+            HARDCODED=1
+          fi
+
+          if [ "$HARDCODED" -eq 1 ]; then
             exit 1
           fi
           echo "No hardcoded paths found."
@@ -44,9 +63,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
 
       - name: Install ruff
-        run: pip install ruff
+        run: pip install ruff==0.8.0
 
       - name: Lint Python files
         run: ruff check shared/ scripts/ plugins/

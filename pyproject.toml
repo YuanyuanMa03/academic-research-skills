@@ -13,11 +13,15 @@ exclude = [
     "plugins/nature-academic-search/skills/nature-academic-search/scripts/",
     "plugins/nature-citation/skills/nature-citation/scripts/",
     "plugins/nature-figure/skills/nature-figure/assets/",
+    "references/",
+    "assets/",
 ]
 
 [tool.ruff.lint]
 select = ["E", "F", "W"]
 ignore = [
     "E501",   # line too long (many scripts have long URLs/strings)
-    "E722",   # bare except (common in existing scripts)
 ]
+
+[tool.ruff.lint.per-file-ignores]
+"plugins/**" = ["E722"]   # bare except (common in existing plugin scripts)

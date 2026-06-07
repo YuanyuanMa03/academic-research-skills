@@ -21,8 +21,12 @@ from pathlib import Path
 
 REQUIRED_FRONTMATTER_FIELDS = {"name", "description"}
 RECOMMENDED_FRONTMATTER_FIELDS = {"argument-hint", "version"}
+# Multiline YAML indicators: |, >, |-, >-, |+, >+
+MULTILINE_INDICATORS = {"|", ">", "|-", ">-", "|+", ">+"}
 HARDCODED_PATH_PATTERN = re.compile(
-    r"(?<![:\w])(?:[a-zA-Z]:[/\\][^\s\"']*[/\\]|(?<![/\w])/Users/[^\s\"']+|(?<![/\w])/home/[a-z][^\s\"']*)",
+    r"(?<![:\w])(?:[a-zA-Z]:[/\\][^\s\"']*[/\\]"
+    r"|(?<![/\w])/Users/[^\s\"']+"
+    r"|(?<![/\w])/home/[a-z][^\s\"']*)",
     re.IGNORECASE,
 )
 
@@ -33,7 +37,10 @@ def parse_frontmatter(content: str) -> dict | None:
     """Extract YAML frontmatter from SKILL.md content."""
     if not content.startswith("---"):
         return None
-    end = content.index("---", 3)
+    try:
+        end = content.index("---", 3)
+    except ValueError:
+        return None  # no closing ---
     fm_text = content[3:end].strip()
 
     # Simple YAML key parsing (avoiding PyYAML dependency)
@@ -55,9 +62,14 @@ def parse_frontmatter(content: str) -> dict | None:
             key = key.strip()
             value = value.strip()
 
-            if value == "|" or value == ">":
+            if value in MULTILINE_INDICATORS:
                 current_key = key
             elif value:
+                # Strip inline comments: only if " #" appears outside quotes
+                if " #" in value and not (
+                    value.startswith('"') or value.startswith("'")
+                ):
+                    value = value[: value.index(" #")].rstrip()
                 result[key] = value.strip('"').strip("'")
                 current_key = None
             else:
@@ -85,7 +97,8 @@ def validate_skill(skill_dir: Path) -> tuple[list[str], bool]:
     # Check frontmatter
     fm = parse_frontmatter(content)
     if fm is None:
-        issues.append("  No YAML frontmatter found")
+        issues.append("  [ERROR] No valid YAML frontmatter found")
+        has_errors = True
     else:
         for field in REQUIRED_FRONTMATTER_FIELDS:
             if field not in fm:
@@ -98,7 +111,6 @@ def validate_skill(skill_dir: Path) -> tuple[list[str], bool]:
                 )
 
     # Check for hardcoded paths
-    has_errors = False
     for i, line in enumerate(content.split("\n"), 1):
         if HARDCODED_PATH_PATTERN.search(line) and not line.strip().startswith("#"):
             issues.append(

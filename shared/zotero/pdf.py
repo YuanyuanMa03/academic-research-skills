@@ -13,6 +13,8 @@ from typing import Optional
 
 
 PDF_DOWNLOAD_TIMEOUT = 60
+PDF_MIN_SIZE = 256  # bytes — anything smaller is likely a redirect page
+PDF_CHUNK_SIZE = 8192  # read first chunk before downloading entire file
 DEFAULT_USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -62,13 +64,17 @@ class PdfHandler:
         req = urllib.request.Request(pdf_url, headers=headers)
         try:
             resp = urllib.request.urlopen(req, timeout=self.download_timeout)
-            data = resp.read()
-            content_type = resp.headers.get("Content-Type", "")
+            # Read first chunk to validate before downloading entire file
+            first_chunk = resp.read(PDF_CHUNK_SIZE)
+            if not first_chunk.startswith(b"%PDF-"):
+                return None, "Not a PDF (missing %PDF- magic bytes)"
 
-            if len(data) < 1024:
+            # Read the rest
+            remaining = resp.read()
+            data = first_chunk + remaining
+
+            if len(data) < PDF_MIN_SIZE:
                 return None, f"Too small ({len(data)} bytes), likely a redirect page"
-            if data[:5] != b"%PDF-" and "application/pdf" not in content_type:
-                return None, f"Not a PDF (Content-Type: {content_type})"
 
             return data, ""
         except urllib.error.HTTPError as e:
@@ -113,7 +119,7 @@ class PdfHandler:
             zotero_client: ZoteroClient instance
             session_id: Session ID from save_items
             items: Built Zotero items (with 'id' assigned)
-            papers: Original paper data dicts
+            papers: Original paper data dicts (must align with items)
             cookies: Optional cookies for PDF download
 
         Returns:
@@ -121,6 +127,13 @@ class PdfHandler:
         """
         ok = 0
         fail = 0
+        skip = 0
+
+        if len(papers) != len(items):
+            print(
+                f"  Warning: papers ({len(papers)}) and items ({len(items)}) "
+                f"count mismatch, using shorter list"
+            )
 
         col = zotero_client.get_selected_collection()
         files_editable = col.get("filesEditable", True) if col else True
@@ -133,6 +146,7 @@ class PdfHandler:
         for i, (paper, item) in enumerate(zip(papers, items)):
             pdf_url = self.resolve_pdf_url(paper)
             if not pdf_url:
+                skip += 1
                 continue
 
             item_id = item.get("id", f"item_{session_id}_{i}")
@@ -157,6 +171,11 @@ class PdfHandler:
                 fail += 1
 
         if ok > 0 or fail > 0:
-            print(f"PDFs: {ok} attached, {fail} failed")
+            summary = f"PDFs: {ok} attached"
+            if fail > 0:
+                summary += f", {fail} failed"
+            if skip > 0:
+                summary += f", {skip} skipped (no PDF URL)"
+            print(summary)
 
         return ok, fail

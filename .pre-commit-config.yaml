@@ -31,6 +31,6 @@ repos:
 
       - id: no-hardcoded-paths
         name: Check for hardcoded paths
-        entry: bash -c 'grep -rniE "(e:/|e:\\\\|E:/|/Users/|/home/[a-z])" plugins/ --include="*.md" --include="*.json" --include="*.py" && exit 1 || exit 0'
+        entry: bash -c 'grep -rniE "([a-zA-Z]:[/\\]|/Users/|/home/[a-z])" plugins/ --include="*.md" --include="*.json" --include="*.py" --exclude-dir=references --exclude-dir=assets && exit 1 || exit 0'
         language: system
         pass_filenames: false

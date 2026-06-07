@@ -24,8 +24,10 @@ import os as _os
 
 if not _os.environ.get("PYTEST_RUNNING"):
     try:
-        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
-        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8")
+        if hasattr(sys.stdout, "encoding") and sys.stdout.encoding != "utf-8":
+            sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+        if hasattr(sys.stderr, "encoding") and sys.stderr.encoding != "utf-8":
+            sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8")
     except (AttributeError, OSError):
         pass  # buffer not available (e.g., in tests or non-TTY environments)
 
@@ -63,7 +65,9 @@ class ZoteroClient:
             status 0 = connection refused, -1 = timeout
         """
         url = f"{self.api_base}/{endpoint}"
-        body = json.dumps(data or {}, ensure_ascii=False).encode("utf-8")
+        body = json.dumps(data if data is not None else {}, ensure_ascii=False).encode(
+            "utf-8"
+        )
         req = urllib.request.Request(
             url,
             data=body,
@@ -91,7 +95,7 @@ class ZoteroClient:
     def ping(self) -> bool:
         """Check if Zotero is running."""
         status, _ = self.request("ping")
-        return status != 0
+        return status == 200
 
     # ------------------------------------------------------------------
     # Session management
@@ -137,7 +141,9 @@ class ZoteroClient:
         for t in data.get("targets", []):
             indent = "  " * t.get("level", 0)
             recent = " *" if t.get("recent") else ""
-            print(f"  {indent}{t['name']} (ID: {t['id']}){recent}")
+            name = t.get("name", "?")
+            tid = t.get("id", "?")
+            print(f"  {indent}{name} (ID: {tid}){recent}")
 
     # ------------------------------------------------------------------
     # Save items
@@ -226,7 +232,7 @@ class ZoteroClient:
         )
 
         try:
-            resp = urllib.request.urlopen(req, timeout=60)
+            resp = urllib.request.urlopen(req, timeout=max(60, self.timeout))
             return resp.status, None
         except urllib.error.HTTPError as e:
             return e.code, e.read().decode("utf-8", errors="replace")
@@ -242,6 +248,9 @@ class ZoteroClient:
     def import_ris(self, ris_data: str) -> dict:
         """Push RIS data to Zotero via /connector/import.
 
+        Uses direct HTTP (not self.request) because RIS is plain text,
+        not JSON — self.request would JSON-encode the payload.
+
         Returns:
             dict with 'success' (bool) and 'message' (str).
         """
@@ -249,30 +258,36 @@ class ZoteroClient:
             return {"success": False, "message": "Empty RIS data."}
 
         session_id = self.make_session_id([{"title": ris_data.strip()[:200]}])
-        status, resp = self.request("import?session=" + session_id, ris_data)
+        url = f"{self.api_base}/import?session={session_id}"
+        payload = ris_data.encode("utf-8")
+        req = urllib.request.Request(
+            url,
+            data=payload,
+            headers={
+                "Content-Type": "text/plain; charset=utf-8",
+                "X-Zotero-Connector-API-Version": "3",
+            },
+        )
 
-        if status == 200:
+        try:
+            resp = urllib.request.urlopen(req, timeout=self.timeout)
+            body = resp.read().decode("utf-8", errors="replace")
             return {
                 "success": True,
-                "message": f"Saved to Zotero (session: {session_id}).",
+                "message": f"Saved to Zotero (session: {session_id}). Response: {body}",
             }
-        elif status == 409:
-            return {
-                "success": True,
-                "message": f"Already saved (session: {session_id})",
-            }
-        elif status == 0:
-            return {
-                "success": False,
-                "message": "Cannot connect to Zotero.",
-            }
-        elif status == -1:
+        except urllib.error.HTTPError as e:
+            if e.code == 409:
+                return {
+                    "success": True,
+                    "message": f"Already saved (session: {session_id})",
+                }
+            resp_body = e.read().decode("utf-8", errors="replace")
+            return {"success": False, "message": f"HTTP {e.code}: {resp_body}"}
+        except urllib.error.URLError:
+            return {"success": False, "message": "Cannot connect to Zotero."}
+        except TimeoutError:
             return {
                 "success": False,
                 "message": f"Request timed out ({self.timeout}s)",
             }
-        else:
-            detail = (
-                resp.get("error", str(resp)) if isinstance(resp, dict) else str(resp)
-            )
-            return {"success": False, "message": f"HTTP {status}: {detail}"}
