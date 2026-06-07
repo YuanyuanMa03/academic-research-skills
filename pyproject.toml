@@ -19,5 +19,7 @@ exclude = [
 select = ["E", "F", "W"]
 ignore = [
     "E501",   # line too long (many scripts have long URLs/strings)
-    "E722",   # bare except (common in existing scripts)
 ]
+
+[tool.ruff.lint.per-file-ignores]
+"plugins/**" = ["E722"]   # bare except allowed in legacy plugin scripts

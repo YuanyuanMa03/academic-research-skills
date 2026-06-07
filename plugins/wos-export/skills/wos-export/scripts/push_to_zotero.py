@@ -8,7 +8,7 @@ import sys
 import os
 
 # Add repo root to path for shared module imports
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "..", ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "..", "..", ".."))
 
 from shared.zotero.core import ZoteroClient
 from shared.zotero.cli import create_parser, read_input, run_push

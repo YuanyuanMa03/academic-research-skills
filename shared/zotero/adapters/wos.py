@@ -14,7 +14,7 @@ from __future__ import annotations
 def build_zotero_item(paper: dict) -> dict:
     """Build Zotero journalArticle item from WoS paper data."""
     # Handle authors - accept both string ("A; B; C") and list formats
-    authors_raw = paper.get("authors", [])
+    authors_raw = paper.get("authors") or []
     if isinstance(authors_raw, str):
         authors_raw = [a.strip() for a in authors_raw.split(";") if a.strip()]
 
@@ -62,17 +62,21 @@ def build_zotero_item(paper: dict) -> dict:
     if wos_id:
         item["url"] = f"https://www.webofscience.com/wos/woscc/full-record/{wos_id}"
 
-    # Keywords as tags
-    for kw in paper.get("authorKeywords", []):
-        item["tags"].append({"tag": kw, "type": 1})
-    for kw in paper.get("keywordsPlus", []):
-        item["tags"].append({"tag": kw, "type": 1})
+    # Keywords as tags — normalize string/list/None
+    for kw_field in ("authorKeywords", "keywordsPlus"):
+        kw_list = paper.get(kw_field) or []
+        if isinstance(kw_list, str):
+            kw_list = [k.strip() for k in kw_list.split(";") if k.strip()]
+        for kw in kw_list:
+            item["tags"].append({"tag": str(kw), "type": 1})
 
     # Extra field - WoS-specific metadata
     extra_parts = []
     if wos_id:
         extra_parts.append(f"WoS ID: {wos_id}")
-    cited = paper.get("citedCount", "") or paper.get("citations", "")
+    cited = paper.get("citedCount")
+    if cited is None or cited == "":
+        cited = paper.get("citations", "")
     if cited:
         alldb = paper.get("alldbCited", "") or paper.get("citationsAll", "")
         if alldb:

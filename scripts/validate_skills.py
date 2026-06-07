@@ -55,7 +55,7 @@ def parse_frontmatter(content: str) -> dict | None:
             key = key.strip()
             value = value.strip()
 
-            if value == "|" or value == ">":
+            if value in ("|", ">", "|-", ">-", "|+", ">+"):
                 current_key = key
             elif value:
                 result[key] = value.strip('"').strip("'")
@@ -98,7 +98,6 @@ def validate_skill(skill_dir: Path) -> tuple[list[str], bool]:
                 )
 
     # Check for hardcoded paths
-    has_errors = False
     for i, line in enumerate(content.split("\n"), 1):
         if HARDCODED_PATH_PATTERN.search(line) and not line.strip().startswith("#"):
             issues.append(

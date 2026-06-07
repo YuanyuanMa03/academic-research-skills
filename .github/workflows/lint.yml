@@ -46,7 +46,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install ruff
-        run: pip install ruff
+        run: pip install ruff==0.8.0
 
       - name: Lint Python files
         run: ruff check shared/ scripts/ plugins/

@@ -9,7 +9,7 @@ import sys
 import os
 
 # Add repo root to path for shared module imports
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "..", ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "..", "..", ".."))
 
 from shared.zotero.core import ZoteroClient
 from shared.zotero.pdf import PdfHandler
@@ -37,10 +37,15 @@ def main():
     paper_data = read_input(args)
 
     def attachment_extractor(papers):
-        """Extract attachment info and cookies from GS paper data."""
+        """Extract attachment info and cookies from GS paper data.
+
+        Pre-resolves PMC fallback URLs so PdfHandler can find them.
+        """
         attachments = []
         for p in papers:
-            if resolve_pdf_url(p):
+            url = resolve_pdf_url(p)
+            if url:
+                p.setdefault("pdfUrl", url)  # inject for PdfHandler.attach_pdfs
                 attachments.append(p)
         return attachments, ""
 

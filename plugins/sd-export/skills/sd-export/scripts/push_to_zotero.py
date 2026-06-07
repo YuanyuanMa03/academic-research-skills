@@ -12,7 +12,7 @@ import sys
 import os
 
 # Add repo root to path for shared module imports
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "..", ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "..", "..", ".."))
 
 from shared.zotero.core import ZoteroClient
 from shared.zotero.pdf import PdfHandler
@@ -81,22 +81,25 @@ def main():
         # Normalize to list
         papers = paper_data if isinstance(paper_data, list) else [paper_data]
 
-        # Build Zotero items
+        # Build Zotero items (track matched papers to keep items/papers aligned)
         items = []
+        matched_papers = []
         for p in papers:
             if "itemType" in p:
                 items.append(p)
+                matched_papers.append(p)
             elif "title" in p:
                 items.append(build_zotero_item(p))
+                matched_papers.append(p)
 
         if not items:
             print("Error: No valid paper data found.")
             sys.exit(1)
 
-        # Collect attachment info and cookies
+        # Collect attachment info and cookies (from matched papers only)
         attachments = []
         cookies = ""
-        for i, p in enumerate(papers):
+        for i, p in enumerate(matched_papers):
             if p.get("pdfUrl"):
                 attachments.append({
                     "itemIndex": i,
@@ -106,7 +109,7 @@ def main():
             if p.get("cookies") and not cookies:
                 cookies = p["cookies"]
 
-        uri = papers[0].get("url", "")
+        uri = matched_papers[0].get("url", "")
         status, msg, session_id = client.save_items(items, uri)
         if status != 201:
             print(f"Failed: {msg}")
@@ -119,7 +122,7 @@ def main():
         # Handle PDF attachments
         if attachments:
             pdf = PdfHandler(default_referer="https://www.sciencedirect.com")
-            pdf.attach_pdfs(client, session_id, items, papers, cookies=cookies)
+            pdf.attach_pdfs(client, session_id, items, matched_papers, cookies=cookies)
 
 
 if __name__ == "__main__":

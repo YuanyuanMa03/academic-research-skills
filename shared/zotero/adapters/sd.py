@@ -31,7 +31,16 @@ def build_zotero_item(paper: dict) -> dict:
         "libraryCatalog": "ScienceDirect",
         "accessDate": now,
         "creators": [
-            {"name": a, "creatorType": "author"} for a in paper.get("authors", [])
+            (
+                {"name": a, "creatorType": "author"}
+                if isinstance(a, str)
+                else {
+                    "lastName": a.get("surname", ""),
+                    "firstName": a.get("given-name", ""),
+                    "creatorType": "author",
+                }
+            )
+            for a in (paper.get("authors") or [])
         ],
         "tags": [{"tag": k, "type": 1} for k in paper.get("keywords", [])],
         "attachments": [],

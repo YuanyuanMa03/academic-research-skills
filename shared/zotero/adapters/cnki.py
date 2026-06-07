@@ -11,6 +11,7 @@ CNKI-specific logic:
 from __future__ import annotations
 
 import re
+import urllib.parse
 from datetime import datetime, timezone
 
 
@@ -24,7 +25,7 @@ def parse_elearning(text: str) -> dict:
     text = re.sub(r"<[^>]+>", "", text)  # strip HTML tags
 
     def get(key: str) -> str:
-        m = re.search(rf"{re.escape(key)}:\s*(.+?)(?=\n|$)", text)
+        m = re.search(rf"{re.escape(key)}:[ \t]*(.+?)(?=\n|$)", text)
         return m.group(1).strip() if m else ""
 
     return {
@@ -75,7 +76,9 @@ def build_zotero_item(paper: dict) -> dict:
     if dbcode and dbname and filename:
         item["url"] = (
             f"https://kns.cnki.net/KCMS/detail/detail.aspx"
-            f"?dbcode={dbcode}&dbname={dbname}&filename={filename}"
+            f"?dbcode={urllib.parse.quote(dbcode)}"
+            f"&dbname={urllib.parse.quote(dbname)}"
+            f"&filename={urllib.parse.quote(filename)}"
         )
     elif paper.get("link"):
         item["url"] = paper["link"]

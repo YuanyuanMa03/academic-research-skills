@@ -10,7 +10,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from typing import Callable, Optional
+from typing import Any, Callable, Optional
 
 from shared.zotero.core import ZoteroClient
 from shared.zotero.pdf import PdfHandler
@@ -23,9 +23,8 @@ def create_parser(
     """Create a standard argument parser for Zotero push scripts.
 
     Standard arguments:
-        FILE        JSON input file (positional, optional)
+        FILE        JSON input file (positional, optional; reads from stdin if omitted)
         --list      List Zotero collections
-        --stdin     Read JSON from stdin
 
     Platform-specific arguments can be added by the adapter after
     calling this function.
@@ -48,20 +47,31 @@ def create_parser(
     return parser
 
 
-def read_input(args: argparse.Namespace) -> any:
+def read_input(args: argparse.Namespace) -> Any:
     """Read JSON input from file argument or stdin."""
     if args.file:
-        with open(args.file, "r", encoding="utf-8") as f:
-            return json.load(f)
+        try:
+            with open(args.file, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except FileNotFoundError:
+            print(f"Error: File not found: {args.file}", file=sys.stderr)
+            sys.exit(1)
+        except json.JSONDecodeError as e:
+            print(f"Error: Invalid JSON in {args.file}: {e}", file=sys.stderr)
+            sys.exit(1)
     else:
-        return json.load(sys.stdin)
+        try:
+            return json.load(sys.stdin)
+        except json.JSONDecodeError as e:
+            print(f"Error: Invalid JSON from stdin: {e}", file=sys.stderr)
+            sys.exit(1)
 
 
 def run_push(
     client: ZoteroClient,
     pdf_handler: Optional[PdfHandler],
     build_item: Callable[[dict], dict],
-    paper_data: any,
+    paper_data: Any,
     uri_extractor: Optional[Callable[[dict], str]] = None,
     attachment_extractor: Optional[Callable[[list], tuple[list, str]]] = None,
 ) -> None:
@@ -102,11 +112,16 @@ def run_push(
 
     # Build Zotero items
     items = []
+    matched_papers = []
     for p in papers:
         if "itemType" in p:
             items.append(p)
+            matched_papers.append(p)
         else:
-            items.append(build_item(p))
+            item = build_item(p)
+            if item is not None:
+                items.append(item)
+                matched_papers.append(p)
 
     if not items:
         print("Error: No valid paper data.")
@@ -127,8 +142,10 @@ def run_push(
     for item in items:
         print(f"  - {item.get('title', '?')}")
 
-    # Handle PDF attachments
+    # Handle PDF attachments (use matched_papers to keep items/papers aligned)
     if pdf_handler and attachment_extractor:
-        attachments, cookies = attachment_extractor(papers)
+        attachments, cookies = attachment_extractor(matched_papers)
         if attachments:
-            pdf_handler.attach_pdfs(client, session_id, items, papers, cookies=cookies)
+            pdf_handler.attach_pdfs(
+                client, session_id, items, matched_papers, cookies=cookies
+            )

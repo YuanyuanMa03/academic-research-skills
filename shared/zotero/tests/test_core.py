@@ -108,24 +108,32 @@ class TestPing:
 class TestImportRis:
     """Test RIS import functionality."""
 
-    @patch.object(ZoteroClient, "request")
-    def test_empty_ris(self, mock_request, client):
+    def test_empty_ris(self, client):
         result = client.import_ris("")
         assert result["success"] is False
         assert "Empty" in result["message"]
 
-    @patch.object(ZoteroClient, "request")
-    def test_ris_success(self, mock_request, client):
-        mock_request.return_value = (200, {"imported": 1})
+    def test_whitespace_ris(self, client):
+        result = client.import_ris("   \n  \t  ")
+        assert result["success"] is False
+        assert "Empty" in result["message"]
+
+    @patch("urllib.request.urlopen")
+    def test_ris_success(self, mock_urlopen, client):
+        mock_resp = mock_urlopen.return_value
+        mock_resp.read.return_value = b'{"imported": 1}'
+        mock_resp.status = 200
         result = client.import_ris("TY  - JOUR\nTI  - Test\nER  -")
         assert result["success"] is True
+        assert "Saved" in result["message"]
 
-    @patch.object(ZoteroClient, "request")
-    def test_ris_duplicate(self, mock_request, client):
-        mock_request.side_effect = Exception()
-        mock_request.side_effect = __import__(
-            "urllib.error", fromlist=["HTTPError"]
-        ).HTTPError(url="http://test", code=409, msg="", hdrs={}, fp=None)
-        # Can't easily mock HTTPError, so just test the empty case
-        result = client.import_ris("   ")
-        assert result["success"] is False
+    @patch("urllib.request.urlopen")
+    def test_ris_duplicate(self, mock_urlopen, client):
+        from urllib.error import HTTPError
+
+        mock_urlopen.side_effect = HTTPError(
+            url="http://test", code=409, msg="Conflict", hdrs={}, fp=None
+        )
+        result = client.import_ris("TY  - JOUR\nTI  - Test\nER  -")
+        assert result["success"] is True
+        assert "Already saved" in result["message"]

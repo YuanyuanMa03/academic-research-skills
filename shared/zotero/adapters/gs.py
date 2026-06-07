@@ -115,7 +115,7 @@ def build_zotero_item(paper: dict) -> dict:
         pub_types = (
             paper["pubtype"]
             if isinstance(paper["pubtype"], str)
-            else ", ".join(paper["pubtype"])
+            else ", ".join(str(t) for t in paper["pubtype"])
         )
         extra_parts.append(f"Publication Type: {pub_types}")
     if extra_parts:

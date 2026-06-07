@@ -62,13 +62,18 @@ class PdfHandler:
         req = urllib.request.Request(pdf_url, headers=headers)
         try:
             resp = urllib.request.urlopen(req, timeout=self.download_timeout)
-            data = resp.read()
-            content_type = resp.headers.get("Content-Type", "")
+            # Read first chunk to validate before downloading entire file
+            first_chunk = resp.read(8192)
+            if first_chunk[:5] != b"%PDF-":
+                content_type = resp.headers.get("Content-Type", "")
+                return (
+                    None,
+                    f"Not a PDF (magic bytes mismatch, Content-Type: {content_type})",
+                )
+            data = first_chunk + resp.read()
 
-            if len(data) < 1024:
-                return None, f"Too small ({len(data)} bytes), likely a redirect page"
-            if data[:5] != b"%PDF-" and "application/pdf" not in content_type:
-                return None, f"Not a PDF (Content-Type: {content_type})"
+            if len(data) < 256:
+                return None, f"Too small ({len(data)} bytes), likely incomplete"
 
             return data, ""
         except urllib.error.HTTPError as e:
@@ -121,6 +126,13 @@ class PdfHandler:
         """
         ok = 0
         fail = 0
+        skip = 0
+
+        if len(papers) != len(items):
+            print(
+                f"  Warning: papers ({len(papers)}) and items ({len(items)}) "
+                f"count mismatch, some PDFs may be skipped or misaligned."
+            )
 
         col = zotero_client.get_selected_collection()
         files_editable = col.get("filesEditable", True) if col else True
@@ -133,6 +145,7 @@ class PdfHandler:
         for i, (paper, item) in enumerate(zip(papers, items)):
             pdf_url = self.resolve_pdf_url(paper)
             if not pdf_url:
+                skip += 1
                 continue
 
             item_id = item.get("id", f"item_{session_id}_{i}")
@@ -156,7 +169,14 @@ class PdfHandler:
                 print(f"  PDF attach failed ({att_status}): {att_msg or ''}")
                 fail += 1
 
-        if ok > 0 or fail > 0:
-            print(f"PDFs: {ok} attached, {fail} failed")
+        if ok > 0 or fail > 0 or skip > 0:
+            parts = []
+            if ok:
+                parts.append(f"{ok} attached")
+            if fail:
+                parts.append(f"{fail} failed")
+            if skip:
+                parts.append(f"{skip} skipped (no PDF URL)")
+            print(f"PDFs: {', '.join(parts)}")
 
         return ok, fail

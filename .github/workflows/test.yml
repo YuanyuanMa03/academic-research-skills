@@ -28,12 +28,4 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest shared/ --cov=shared --cov-report=term-missing -v
-
-      - name: Check coverage threshold
-        run: |
-          COVERAGE=$(pytest shared/ --cov=shared --cov-report=term -q | tail -1 | grep -oP '\d+%' | head -1 | tr -d '%')
-          echo "Coverage: ${COVERAGE}%"
-          if [ "${COVERAGE:-0}" -lt 60 ]; then
-            echo "::warning::Coverage ${COVERAGE}% is below 60% threshold"
-          fi
+          pytest shared/ --cov=shared --cov-report=term-missing --cov-fail-under=60 -v

@@ -99,7 +99,7 @@ def main():
 
     if failed > 0:
         print(f"RESULT: {failed} plugin(s) have validation issues")
-        sys.exit(0)  # Warnings only for now
+        sys.exit(1)
     else:
         print("RESULT: All plugins pass validation")
         sys.exit(0)
