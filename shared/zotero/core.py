@@ -249,42 +249,30 @@ class ZoteroClient:
             return {"success": False, "message": "Empty RIS data."}
 
         session_id = self.make_session_id([{"title": ris_data.strip()[:200]}])
-        url = f"{self.api_base}/import?session={session_id}"
-        payload = json.dumps(ris_data).encode("utf-8")
+        status, resp = self.request("import?session=" + session_id, ris_data)
 
-        req = urllib.request.Request(
-            url,
-            data=payload,
-            headers={
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-            },
-        )
-
-        try:
-            resp = urllib.request.urlopen(req, timeout=self.timeout)
-            body = resp.read().decode("utf-8", errors="replace")
+        if status == 200:
             return {
                 "success": True,
-                "message": f"Saved to Zotero (session: {session_id}). Response: {body}",
+                "message": f"Saved to Zotero (session: {session_id}).",
             }
-        except urllib.error.HTTPError as e:
-            resp_body = e.read().decode("utf-8", errors="replace")
-            if e.code == 409:
-                return {
-                    "success": True,
-                    "message": f"Already saved (session: {session_id})",
-                }
-            return {"success": False, "message": f"HTTP {e.code}: {resp_body}"}
-        except urllib.error.URLError as e:
+        elif status == 409:
+            return {
+                "success": True,
+                "message": f"Already saved (session: {session_id})",
+            }
+        elif status == 0:
             return {
                 "success": False,
-                "message": f"Cannot connect to Zotero: {e.reason}",
+                "message": "Cannot connect to Zotero.",
             }
-        except TimeoutError:
+        elif status == -1:
             return {
                 "success": False,
                 "message": f"Request timed out ({self.timeout}s)",
             }
-        except Exception as e:
-            return {"success": False, "message": f"Unexpected error: {e}"}
+        else:
+            detail = (
+                resp.get("error", str(resp)) if isinstance(resp, dict) else str(resp)
+            )
+            return {"success": False, "message": f"HTTP {status}: {detail}"}

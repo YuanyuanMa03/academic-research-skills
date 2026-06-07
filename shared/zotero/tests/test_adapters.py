@@ -86,7 +86,10 @@ class TestGSAdapter:
 
         url = resolve_pdf_url({"pmcid": "PMC12345"})
         assert "PMC12345" in url
-        assert url == ""  # pmcid_base not provided
+        assert "ncbi.nlm.nih.gov/pmc/articles" in url
+
+        # No pmcid and no pdfUrl → empty string
+        assert resolve_pdf_url({}) == ""
 
     def test_resolve_pdf_url_direct(self):
         from shared.zotero.adapters.gs import resolve_pdf_url

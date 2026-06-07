@@ -22,7 +22,7 @@ from pathlib import Path
 REQUIRED_FRONTMATTER_FIELDS = {"name", "description"}
 RECOMMENDED_FRONTMATTER_FIELDS = {"argument-hint", "version"}
 HARDCODED_PATH_PATTERN = re.compile(
-    r"(?<![:\w])(?:[a-zA-Z]:[/\\][^\s\"']+|(?<![/\w])/Users/[^\s\"']+|(?<![/\w])/home/[a-z][^\s\"']*)",
+    r"(?<![:\w])(?:[a-zA-Z]:[/\\][^\s\"']*[/\\]|(?<![/\w])/Users/[^\s\"']+|(?<![/\w])/home/[a-z][^\s\"']*)",
     re.IGNORECASE,
 )
 
