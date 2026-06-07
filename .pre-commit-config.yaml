@@ -1,0 +1,36 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.0
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.13.0
+    hooks:
+      - id: mypy
+        args: [--ignore-missing-imports]
+        files: shared/
+
+  - repo: local
+    hooks:
+      - id: validate-skills
+        name: Validate SKILL.md files
+        entry: python scripts/validate_skills.py
+        language: python
+        pass_filenames: false
+        always_run: true
+
+      - id: validate-plugin-json
+        name: Validate plugin.json files
+        entry: python scripts/validate_plugin_json.py
+        language: python
+        pass_filenames: false
+        always_run: true
+
+      - id: no-hardcoded-paths
+        name: Check for hardcoded paths
+        entry: bash -c 'grep -rniE "(e:/|e:\\\\|E:/|/Users/|/home/[a-z])" plugins/ --include="*.md" --include="*.json" --include="*.py" && exit 1 || exit 0'
+        language: system
+        pass_filenames: false
