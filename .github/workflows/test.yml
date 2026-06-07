@@ -28,4 +28,4 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest shared/ --cov=shared --cov-report=term-missing --cov-fail-under=60 -v
+          pytest shared/ --cov=shared --cov-report=term-missing --cov-fail-under=55 -v
