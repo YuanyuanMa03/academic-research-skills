@@ -11,6 +11,7 @@ CNKI-specific logic:
 from __future__ import annotations
 
 import re
+import urllib.parse
 from datetime import datetime, timezone
 
 
@@ -24,7 +25,8 @@ def parse_elearning(text: str) -> dict:
     text = re.sub(r"<[^>]+>", "", text)  # strip HTML tags
 
     def get(key: str) -> str:
-        m = re.search(rf"{re.escape(key)}:\s*(.+?)(?=\n|$)", text)
+        # Use [ \t]* instead of \s* to avoid crossing line boundaries
+        m = re.search(rf"{re.escape(key)}:[ \t]*(.+?)(?=\n|$)", text)
         return m.group(1).strip() if m else ""
 
     return {
@@ -68,14 +70,16 @@ def build_zotero_item(paper: dict) -> dict:
         "attachments": [],
     }
 
-    # URL
+    # URL — encode parameters to avoid invalid characters
     dbcode = paper.get("dbcode", "")
     dbname = paper.get("dbname", "")
     filename = paper.get("filename", "")
     if dbcode and dbname and filename:
         item["url"] = (
             f"https://kns.cnki.net/KCMS/detail/detail.aspx"
-            f"?dbcode={dbcode}&dbname={dbname}&filename={filename}"
+            f"?dbcode={urllib.parse.quote(dbcode)}"
+            f"&dbname={urllib.parse.quote(dbname)}"
+            f"&filename={urllib.parse.quote(filename)}"
         )
     elif paper.get("link"):
         item["url"] = paper["link"]
@@ -124,7 +128,10 @@ def build_item_from_elearning(paper: dict) -> dict:
 
     Merges page-level fields (issn, dbcode, etc.) into parsed ELEARNING data.
     """
-    parsed = parse_elearning(paper["ELEARNING"])
+    raw = paper.get("ELEARNING", "")
+    if not raw:
+        return build_zotero_item(paper)
+    parsed = parse_elearning(raw)
     # Merge page-level fields into parsed data
     merge_fields = [
         "issn",

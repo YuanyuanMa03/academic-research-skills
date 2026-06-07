@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main]
 
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -20,20 +24,17 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
+          cache: pip
 
       - name: Install dependencies
         run: |
-          pip install pytest pytest-cov
+          pip install "pytest>=8.0,<9" "pytest-cov>=5.0,<6"
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Run tests
+      - name: Run tests with coverage
         run: |
-          pytest shared/ --cov=shared --cov-report=term-missing -v
-
-      - name: Check coverage threshold
-        run: |
-          COVERAGE=$(pytest shared/ --cov=shared --cov-report=term -q | tail -1 | grep -oP '\d+%' | head -1 | tr -d '%')
-          echo "Coverage: ${COVERAGE}%"
-          if [ "${COVERAGE:-0}" -lt 60 ]; then
-            echo "::warning::Coverage ${COVERAGE}% is below 60% threshold"
-          fi
+          pytest shared/ \
+            --cov=shared \
+            --cov-report=term-missing \
+            --cov-fail-under=55 \
+            -v

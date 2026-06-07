@@ -71,7 +71,7 @@ def build_zotero_item(paper: dict) -> dict:
                     else:
                         creators.append({"name": a["name"], "creatorType": "author"})
         else:
-            creators = parse_pubmed_authors(", ".join(paper["authors"]))
+            creators = parse_pubmed_authors(", ".join(str(a) for a in paper["authors"]))
     elif isinstance(paper.get("authors"), str):
         creators = parse_pubmed_authors(paper["authors"])
     else:
@@ -112,11 +112,11 @@ def build_zotero_item(paper: dict) -> dict:
     if paper.get("pmcid"):
         extra_parts.append(f"PMCID: {paper['pmcid']}")
     if paper.get("pubtype"):
-        pub_types = (
-            paper["pubtype"]
-            if isinstance(paper["pubtype"], str)
-            else ", ".join(paper["pubtype"])
-        )
+        pub_type_raw = paper["pubtype"]
+        if isinstance(pub_type_raw, str):
+            pub_types = pub_type_raw
+        else:
+            pub_types = ", ".join(str(t) for t in pub_type_raw)
         extra_parts.append(f"Publication Type: {pub_types}")
     if extra_parts:
         item["extra"] = "\n".join(extra_parts)
@@ -128,7 +128,11 @@ def extract_uri(paper: dict) -> str:
     """Extract source URI from Google Scholar / PubMed paper data."""
     if paper.get("pmid"):
         return f"https://pubmed.ncbi.nlm.nih.gov/{paper['pmid']}/"
-    return ""
+    if paper.get("doi"):
+        return f"https://doi.org/{paper['doi']}"
+    if paper.get("arxiv_id"):
+        return f"https://arxiv.org/abs/{paper['arxiv_id']}"
+    return paper.get("url", "")
 
 
 def resolve_pdf_url(paper: dict) -> str:

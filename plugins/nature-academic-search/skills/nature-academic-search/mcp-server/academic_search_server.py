@@ -22,6 +22,15 @@ from utils import AcademicSearchError, DataSourceError, setup_logging
 mcp = FastMCP("academic-search")
 logger = setup_logging()
 
+# Warn if PubMed email is not configured
+from utils.config import Config
+_cfg = Config()
+if not _cfg.pubmed_email:
+    logger.warning(
+        "PUBMED_EMAIL not set — PubMed searches will fail. "
+        "Set via env var PUBMED_EMAIL or config.toml [pubmed] email."
+    )
+
 # Singleton source instances (shared across tool calls)
 _crossref = CrossRefSource()
 _pubmed = PubMedSource()

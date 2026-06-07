@@ -14,7 +14,7 @@ from __future__ import annotations
 def build_zotero_item(paper: dict) -> dict:
     """Build Zotero journalArticle item from WoS paper data."""
     # Handle authors - accept both string ("A; B; C") and list formats
-    authors_raw = paper.get("authors", [])
+    authors_raw = paper.get("authors") or []
     if isinstance(authors_raw, str):
         authors_raw = [a.strip() for a in authors_raw.split(";") if a.strip()]
 
@@ -36,8 +36,19 @@ def build_zotero_item(paper: dict) -> dict:
         else:
             creators.append({"name": name, "creatorType": "author"})
 
-    # Build date
-    date = paper.get("published", "") or str(paper.get("year", ""))
+    # Build date — avoid str(None) producing literal "None"
+    date = paper.get("published", "") or ""
+    if not date:
+        year = paper.get("year", "")
+        date = str(year) if year is not None and year != "" else ""
+
+    # Handle keywords — normalize string→list
+    kw_field = paper.get("authorKeywords") or []
+    if isinstance(kw_field, str):
+        kw_field = [k.strip() for k in kw_field.split(";") if k.strip()]
+    kw_plus = paper.get("keywordsPlus") or []
+    if isinstance(kw_plus, str):
+        kw_plus = [k.strip() for k in kw_plus.split(";") if k.strip()]
 
     item = {
         "itemType": "journalArticle",
@@ -63,18 +74,23 @@ def build_zotero_item(paper: dict) -> dict:
         item["url"] = f"https://www.webofscience.com/wos/woscc/full-record/{wos_id}"
 
     # Keywords as tags
-    for kw in paper.get("authorKeywords", []):
+    for kw in kw_field:
         item["tags"].append({"tag": kw, "type": 1})
-    for kw in paper.get("keywordsPlus", []):
+    for kw in kw_plus:
         item["tags"].append({"tag": kw, "type": 1})
 
     # Extra field - WoS-specific metadata
     extra_parts = []
     if wos_id:
         extra_parts.append(f"WoS ID: {wos_id}")
-    cited = paper.get("citedCount", "") or paper.get("citations", "")
+    # citedCount: use None-check instead of `or` to preserve 0
+    cited = paper.get("citedCount")
+    if cited is None or cited == "":
+        cited = paper.get("citations", "")
     if cited:
-        alldb = paper.get("alldbCited", "") or paper.get("citationsAll", "")
+        alldb = paper.get("alldbCited")
+        if alldb is None or alldb == "":
+            alldb = paper.get("citationsAll", "")
         if alldb:
             extra_parts.append(f"Cited: {cited} (WOSCC) / {alldb} (All DB)")
         else:

@@ -32,3 +32,7 @@ Thumbs.db
 # Node (if any MCP servers)
 node_modules/
 package-lock.json
+.coverage
+__pycache__/
+.venv/
+*.pyc

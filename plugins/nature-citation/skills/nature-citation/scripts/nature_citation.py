@@ -1973,8 +1973,8 @@ def main(argv: list[str]) -> int:
     segments, skipped_segments = limit_segments(segments, args.max_segments or 0)
     mapping, references, errors = process_segment_batches(segments, args, outdir, output_path)
     doi_candidates, doi_errors = fetch_doi_candidates(dois, args)
-    all_errors.extend(doi_errors)
-    references = dedupe([*all_references, *doi_candidates])[: args.max_candidates]
+    errors.extend(doi_errors)
+    references = dedupe([*references, *doi_candidates])[: args.max_candidates]
 
     # 最终导出
     if args.format == "enw":

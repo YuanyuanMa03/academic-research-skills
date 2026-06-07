@@ -9,7 +9,9 @@ import sys
 import os
 
 # Add repo root to path for shared module imports
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "..", ".."))
+sys.path.insert(
+    0, os.path.join(os.path.dirname(__file__), "..", "..", "..", "..", "..")
+)
 
 from shared.zotero.core import ZoteroClient
 from shared.zotero.pdf import PdfHandler
@@ -54,11 +56,13 @@ def main():
         cookies = ""
         for i, p in enumerate(papers):
             if p.get("pdfUrl"):
-                attachments.append({
-                    "itemIndex": i,
-                    "pdfUrl": p["pdfUrl"],
-                    "title": p.get("pdfTitle", "Full Text PDF"),
-                })
+                attachments.append(
+                    {
+                        "itemIndex": i,
+                        "pdfUrl": p["pdfUrl"],
+                        "title": p.get("pdfTitle", "Full Text PDF"),
+                    }
+                )
             if p.get("cookies") and not cookies:
                 cookies = p["cookies"]
         return attachments, cookies

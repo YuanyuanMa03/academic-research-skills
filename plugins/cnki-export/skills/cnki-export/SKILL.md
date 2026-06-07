@@ -127,7 +127,7 @@ for (let i = 0; i < checkboxes.length; i++) {
 Save the export data (single object or JSON array) to a temp file, then run the Python script:
 
 ```bash
-python "scripts/push_to_zotero.py" /tmp/papers.json
+cd plugins/cnki-export/skills/cnki-export && python "scripts/push_to_zotero.py" /tmp/papers.json
 ```
 
 The Python script handles both single paper `{}` and batch `[{}, {}, ...]` JSON input.

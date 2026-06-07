@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import sys
 import os
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 
 import pytest
 
@@ -72,14 +72,16 @@ class TestSaveItems:
         status, msg, session_id = client.save_items(items)
         assert status == 201  # 409 treated as success
         assert "Already saved" in msg
+        assert len(session_id) == 12
 
     @patch.object(ZoteroClient, "request")
     def test_save_zotero_not_running(self, mock_request, client):
         mock_request.return_value = (0, None)
         items = [{"title": "Test"}]
-        status, msg, _ = client.save_items(items)
+        status, msg, session_id = client.save_items(items)
         assert status == 0
         assert "not running" in msg.lower()
+        assert len(session_id) == 12
 
     @patch.object(ZoteroClient, "request")
     def test_save_assigns_ids(self, mock_request, client):
@@ -104,28 +106,111 @@ class TestPing:
         mock_request.return_value = (0, None)
         assert client.ping() is False
 
+    @patch.object(ZoteroClient, "request")
+    def test_ping_timeout(self, mock_request, client):
+        mock_request.return_value = (-1, None)
+        assert client.ping() is False
+
 
 class TestImportRis:
-    """Test RIS import functionality."""
+    """Test RIS import functionality.
 
-    @patch.object(ZoteroClient, "request")
-    def test_empty_ris(self, mock_request, client):
+    import_ris uses urllib.request.urlopen directly (not self.request)
+    because RIS is plain text, not JSON.
+    """
+
+    def test_empty_ris(self, client):
         result = client.import_ris("")
         assert result["success"] is False
         assert "Empty" in result["message"]
 
-    @patch.object(ZoteroClient, "request")
-    def test_ris_success(self, mock_request, client):
-        mock_request.return_value = (200, {"imported": 1})
+    def test_whitespace_ris(self, client):
+        result = client.import_ris("   \n  ")
+        assert result["success"] is False
+        assert "Empty" in result["message"]
+
+    @patch("urllib.request.urlopen")
+    def test_ris_success(self, mock_urlopen, client):
+        mock_resp = MagicMock()
+        mock_resp.read.return_value = b"OK"
+        mock_urlopen.return_value = mock_resp
         result = client.import_ris("TY  - JOUR\nTI  - Test\nER  -")
         assert result["success"] is True
+        assert "Saved" in result["message"]
+
+    @patch("urllib.request.urlopen")
+    def test_ris_duplicate(self, mock_urlopen, client):
+        """Test that HTTP 409 (Conflict) is treated as success."""
+        from urllib.error import HTTPError
+        import io
+
+        mock_urlopen.side_effect = HTTPError(
+            url="http://test",
+            code=409,
+            msg="Conflict",
+            hdrs={},
+            fp=io.BytesIO(b"Already exists"),
+        )
+        result = client.import_ris("TY  - JOUR\nTI  - Test\nER  -")
+        assert result["success"] is True
+        assert "Already saved" in result["message"]
+
+    @patch("urllib.request.urlopen")
+    def test_ris_connection_refused(self, mock_urlopen, client):
+        from urllib.error import URLError
+
+        mock_urlopen.side_effect = URLError("Connection refused")
+        result = client.import_ris("TY  - JOUR\nTI  - Test\nER  -")
+        assert result["success"] is False
+        assert "Cannot connect" in result["message"]
+
+    @patch("urllib.request.urlopen")
+    def test_ris_http_error(self, mock_urlopen, client):
+        from urllib.error import HTTPError
+        import io
+
+        mock_urlopen.side_effect = HTTPError(
+            url="http://test",
+            code=500,
+            msg="Server Error",
+            hdrs={},
+            fp=io.BytesIO(b"Internal error"),
+        )
+        result = client.import_ris("TY  - JOUR\nTI  - Test\nER  -")
+        assert result["success"] is False
+        assert "HTTP 500" in result["message"]
+
+
+class TestRequest:
+    """Test the low-level request method."""
 
     @patch.object(ZoteroClient, "request")
-    def test_ris_duplicate(self, mock_request, client):
-        mock_request.side_effect = Exception()
-        mock_request.side_effect = __import__(
-            "urllib.error", fromlist=["HTTPError"]
-        ).HTTPError(url="http://test", code=409, msg="", hdrs={}, fp=None)
-        # Can't easily mock HTTPError, so just test the empty case
-        result = client.import_ris("   ")
-        assert result["success"] is False
+    def test_request_with_empty_list(self, mock_request, client):
+        """Ensure empty list [] is not converted to {}."""
+        mock_request.return_value = (200, None)
+        client.request("test", [])
+        # Verify the mock was called with [] not {}
+        mock_request.assert_called_once_with("test", [])
+
+
+class TestListCollections:
+    """Test collection listing."""
+
+    @patch.object(ZoteroClient, "request")
+    def test_list_collections_missing_keys(self, mock_request, client, capsys):
+        """list_collections should not crash on missing name/id keys."""
+        mock_request.return_value = (
+            200,
+            {
+                "name": "Test",
+                "id": "1",
+                "targets": [
+                    {"level": 0},  # missing name and id
+                    {"name": "Sub", "id": "2", "level": 1},
+                ],
+            },
+        )
+        client.list_collections()
+        captured = capsys.readouterr()
+        assert "Test" in captured.out
+        assert "?" in captured.out  # missing name shows as ?
