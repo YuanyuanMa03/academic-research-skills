@@ -53,7 +53,50 @@ Use `navigate_page` to the new URL. **Always include `initScript`** to prevent b
 initScript: "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
 ```
 
-Then extract results using `evaluate_script` with built-in waiting (same as `sd-search`). Do NOT use `wait_for` — it returns oversized snapshots.
+Then extract results using `evaluate_script` with built-in waiting. Do NOT use `wait_for` — it returns oversized snapshots.
+
+```javascript
+async () => {
+  // Wait for results to load (up to 10s)
+  for (let i = 0; i < 20; i++) {
+    if (document.querySelector('li.ResultItem') || document.querySelector('.search-body-results-text')) break;
+    await new Promise(r => setTimeout(r, 500));
+  }
+
+  const items = document.querySelectorAll('li.ResultItem');
+  const papers = [];
+
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    const titleLink = item.querySelector('a.result-list-title-link');
+    const journal = item.querySelector('a.subtype-srctitle-link');
+    const dateSpans = item.querySelectorAll('.srctitle-date-fields > span');
+    const date = dateSpans.length > 1 ? dateSpans[dateSpans.length - 1].textContent.trim() : '';
+    const authors = [...item.querySelectorAll('.Authors .author')].map(a => a.textContent.trim());
+    const doi = item.getAttribute('data-doi');
+    const pii = titleLink?.href?.match(/pii\/(\w+)/)?.[1] || '';
+    const articleType = item.querySelector('.article-type')?.textContent?.trim() || '';
+    const isOpenAccess = !!item.querySelector('.access-label');
+
+    papers.push({
+      rank: i + 1,
+      title: titleLink?.textContent?.trim() || '',
+      pii,
+      doi: doi || '',
+      journal: journal?.textContent?.trim() || '',
+      date,
+      authors,
+      articleType,
+      openAccess: isOpenAccess,
+    });
+  }
+
+  const totalText = document.querySelector('.search-body-results-text')?.textContent?.trim() || '';
+  const pageInfo = document.querySelector('.Pagination li:first-child')?.textContent?.trim() || '';
+
+  return { papers, totalResults: totalText, pageInfo };
+}
+```
 
 ## Notes
 

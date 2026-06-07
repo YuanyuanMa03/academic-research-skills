@@ -128,7 +128,11 @@ def extract_uri(paper: dict) -> str:
     """Extract source URI from Google Scholar / PubMed paper data."""
     if paper.get("pmid"):
         return f"https://pubmed.ncbi.nlm.nih.gov/{paper['pmid']}/"
-    return ""
+    if paper.get("doi"):
+        return f"https://doi.org/{paper['doi']}"
+    if paper.get("arxiv_id"):
+        return f"https://arxiv.org/abs/{paper['arxiv_id']}"
+    return paper.get("url", "")
 
 
 def resolve_pdf_url(paper: dict) -> str:

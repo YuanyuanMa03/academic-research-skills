@@ -50,12 +50,12 @@ For multiple papers, wrap in an array or `{"items": [...]}`.
 ### Step 2: Push via Script
 
 ```bash
-echo '{JSON_DATA}' | python "scripts/push_to_zotero.py"
+cd plugins/wos-export/skills/wos-export && echo '{JSON_DATA}' | python "scripts/push_to_zotero.py"
 ```
 
 Or save to temp file first (recommended for large data or Chinese characters):
 ```bash
-python "scripts/push_to_zotero.py" /tmp/wos_export.json
+cd plugins/wos-export/skills/wos-export && python "scripts/push_to_zotero.py" /tmp/wos_export.json
 ```
 
 ### Step 3: Report Result
