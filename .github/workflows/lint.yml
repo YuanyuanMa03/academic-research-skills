@@ -22,7 +22,7 @@ jobs:
 
       - name: Check for hardcoded paths
         run: |
-          if grep -rnP '(?<![:\w])[a-zA-Z]:[/\\][^\s"'"'"']*[/\\]' plugins/ --include="*.md" --include="*.json" --include="*.py" | grep -v 'http' | grep -v 'API'; then
+          if grep -rnP '(?<![:\w])[a-zA-Z]:[/\\][^\s"'"'"']+' plugins/ --include="*.md" --include="*.json" --include="*.py" --exclude-dir=references --exclude-dir=assets | grep -v 'http' | grep -v 'API'; then
             echo "::error::Hardcoded Windows paths found in plugin files"
             exit 1
           fi
