@@ -11,7 +11,7 @@
       "description": "Perform advanced search on CNKI with field filters like author, title, journal, date range, source category (SCI/EI/CSSCI/北大核心). Use when user needs precise filtered search beyond simple keywords.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -31,7 +31,7 @@
       "description": "Download a paper PDF/CAJ from CNKI. Requires user to be logged in. Use when user wants to download a specific paper.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -51,7 +51,7 @@
       "description": "Export paper from CNKI and push to Zotero, or save as RIS file. Use when user wants to save a paper to Zotero or export citation data.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -71,7 +71,7 @@
       "description": "Query journal indexing/inclusion status on CNKI - check which databases include a journal (北大核心, CSSCI, CSCD, SCI, EI, etc.), get impact factors and evaluation data. Use when user asks about a journal's level, indexing, or ranking.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -91,7 +91,7 @@
       "description": "Search for journals/publications on CNKI by name, ISSN, CN, or sponsor. Use when the user wants to find a specific journal or browse publications.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -112,7 +112,7 @@
       "description": "Browse journal issues, view table of contents, and download original TOC PDF from CNKI. Use when user wants to see papers in a specific journal issue or download the original cover/TOC pages.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -132,7 +132,7 @@
       "description": "Navigate CNKI search result pages (next/previous/specific page) or change sort order. Use when user wants to see more results or change sorting.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -152,7 +152,7 @@
       "description": "Extract full paper details from a CNKI paper page including title, authors, affiliations, abstract, keywords, fund, classification. Use when the user needs detailed information about a specific paper.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -172,7 +172,7 @@
       "description": "Parse current CNKI search results page into structured paper data (title, authors, journal, date, citations). Use after a search has been performed and you need to extract the results.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -192,7 +192,7 @@
       "description": "Search CNKI (中国知网) for papers by keyword. Use when the user wants to find academic papers on a topic.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -212,7 +212,7 @@
       "description": "Perform advanced Google Scholar search with filters - author, journal, date range, exact phrase, title-only. Constructs proper URL parameters from natural language. Use for precise filtered searches.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -231,7 +231,7 @@
       "description": "Find papers that cite a given Google Scholar paper. Tracks citation chains using data-cid (cluster ID). Use when user wants to see who cited a specific paper.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -249,7 +249,7 @@
       "description": "Export Google Scholar paper(s) to Zotero via BibTeX. Gets citation data from Google Scholar's cite dialog, then pushes to Zotero desktop. Supports single or batch export.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -268,7 +268,7 @@
       "description": "Get full-text access links for a Google Scholar paper - PDF, DOI, Sci-Hub, and publisher links. Use when user wants to read or download a paper's full text.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -287,7 +287,7 @@
       "description": "Navigate Google Scholar search result pages. Use when user wants to see more results or go to a specific page.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -306,7 +306,7 @@
       "description": "Search Google Scholar for academic papers by keywords. Returns results with title, authors, journal, year, citation count, and full-text links. Use when the user wants to search Google Scholar.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -325,7 +325,7 @@
       "description": "Advanced search on ScienceDirect with filters like author, journal, year, title, keywords. Use when the user wants filtered academic paper search.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -343,7 +343,7 @@
       "description": "Download PDF from ScienceDirect articles. Requires institutional or subscriber access.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -361,7 +361,7 @@
       "description": "Export citations from ScienceDirect in RIS, BibTeX, or plain text format. Supports pushing to Zotero.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -379,7 +379,7 @@
       "description": "Browse a journal on ScienceDirect — view info, impact factor, latest articles, and specific issues. Use when the user asks about a journal or wants to browse its contents.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -397,7 +397,7 @@
       "description": "Navigate pages, change sort order, or adjust results per page on ScienceDirect search results.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -415,7 +415,7 @@
       "description": "Extract full metadata from a ScienceDirect article page (abstract, authors, keywords, DOI, references, PDF link). Use when the user wants details about a specific paper.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -433,7 +433,7 @@
       "description": "Re-parse the currently open ScienceDirect search results page. Internal skill used by other skills.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -451,7 +451,7 @@
       "description": "Search for academic papers on ScienceDirect. Use when the user wants to find papers by keyword on ScienceDirect/Elsevier.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -469,7 +469,7 @@
       "description": "Web of Science DOM structure reference for browser automation",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -487,7 +487,7 @@
       "description": "Download PDF full text for a WoS paper via publisher links.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -505,7 +505,7 @@
       "description": "Export WoS records to Zotero, RIS, BibTeX, or Excel.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -523,7 +523,7 @@
       "description": "Navigate to a specific page of WoS search results, or load more results from the last search.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -541,7 +541,7 @@
       "description": "Get detailed information for a paper by WoS ID (e.g., WOS:000779183600001).",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -559,7 +559,7 @@
       "description": "Parse search results from the current WoS results page or API response. Internal skill used by other skills.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -577,7 +577,7 @@
       "description": "Search Web of Science by topic, author, title, DOI, or advanced query. Supports edition/database filtering and sort.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -595,7 +595,7 @@
       "description": "Perform advanced PubMed search with field qualifiers - author, title, journal, MeSH, date range, article type.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -614,7 +614,7 @@
       "description": "Export PubMed paper(s) to Zotero or save as RIS file. Supports single paper by PMID or batch export from search results.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -632,7 +632,7 @@
       "description": "Find full-text download links for a PubMed paper by PMID - DOI, PMC open access, Sci-Hub, and publisher links.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -649,7 +649,7 @@
       "description": "Navigate PubMed search result pages or change sort order.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -666,7 +666,7 @@
       "description": "Get full paper details for a PubMed article by PMID - title, authors, abstract, MeSH terms, keywords, DOI.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -683,7 +683,7 @@
       "description": "Search PubMed for biomedical literature by keywords. Returns structured results with PMID, title, authors, journal, date, DOI.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -703,7 +703,7 @@
       "description": "Advanced search on IEEE Xplore with filters - author, title, publication, year, DOI.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -721,7 +721,7 @@
       "description": "Download PDF from IEEE Xplore articles. Requires institutional or subscriber access.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -739,7 +739,7 @@
       "description": "Export citations from IEEE Xplore in RIS, BibTeX, or plain text. Supports pushing to Zotero.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -757,7 +757,7 @@
       "description": "Browse a journal or conference on IEEE Xplore — view info, impact factor, latest articles, and issues.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -775,7 +775,7 @@
       "description": "Navigate pages, change sort order, or adjust results per page on IEEE Xplore search results.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -792,7 +792,7 @@
       "description": "Extract full metadata from an IEEE Xplore article page.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -809,7 +809,7 @@
       "description": "Re-parse the currently open IEEE Xplore search results page. Internal skill.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -826,7 +826,7 @@
       "description": "Search for academic papers on IEEE Xplore by keyword.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -844,7 +844,7 @@
       "description": "Search IEEE SA for IEEE/ANSI standards and find IEC/ISO counterparts.",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
@@ -861,7 +861,7 @@
       "description": "Generate Zotero-compatible CSL citation style files from natural language descriptions",
       "version": "1.0.0",
       "author": {
-        "name": "cookjohn"
+        "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
