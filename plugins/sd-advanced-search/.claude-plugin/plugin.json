@@ -16,5 +16,6 @@
         "--chromeArg=--disable-blink-features=AutomationControlled"
       ]
     }
-  }
+  },
+  "description": "Advanced search on ScienceDirect with filters like author, journal, year, title, keywords. Use when the user wants filtered academic paper search."
 }

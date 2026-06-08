@@ -16,5 +16,6 @@
         "--chromeArg=--disable-blink-features=AutomationControlled"
       ]
     }
-  }
+  },
+  "description": "Download PDF from ScienceDirect articles. Requires institutional or subscriber access."
 }

@@ -16,5 +16,6 @@
         "--chromeArg=--disable-blink-features=AutomationControlled"
       ]
     }
-  }
+  },
+  "description": "Navigate Google Scholar search result pages. Use when user wants to see more results or go to a specific page."
 }

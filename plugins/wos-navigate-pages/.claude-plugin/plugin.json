@@ -16,5 +16,6 @@
         "--chromeArg=--disable-blink-features=AutomationControlled"
       ]
     }
-  }
+  },
+  "description": "Navigate to a specific page of WoS search results, or load more results from the last search."
 }

@@ -16,5 +16,6 @@
         "--chromeArg=--disable-blink-features=AutomationControlled"
       ]
     }
-  }
+  },
+  "description": "Search PubMed for biomedical literature by keywords. Returns structured results with PMID, title, authors, journal, date, DOI."
 }

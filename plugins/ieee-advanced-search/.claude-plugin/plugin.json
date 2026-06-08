@@ -16,5 +16,6 @@
         "--chromeArg=--disable-blink-features=AutomationControlled"
       ]
     }
-  }
+  },
+  "description": "Advanced search on IEEE Xplore with filters - author, title, publication, year, DOI."
 }

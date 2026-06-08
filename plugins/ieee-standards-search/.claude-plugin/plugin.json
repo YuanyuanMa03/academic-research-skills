@@ -16,5 +16,6 @@
         "--chromeArg=--disable-blink-features=AutomationControlled"
       ]
     }
-  }
+  },
+  "description": "Search IEEE SA for IEEE/ANSI standards and find IEC/ISO counterparts."
 }

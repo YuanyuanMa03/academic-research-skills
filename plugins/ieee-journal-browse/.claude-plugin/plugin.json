@@ -16,5 +16,6 @@
         "--chromeArg=--disable-blink-features=AutomationControlled"
       ]
     }
-  }
+  },
+  "description": "Browse a journal or conference on IEEE Xplore — view info, impact factor, latest articles, and issues."
 }

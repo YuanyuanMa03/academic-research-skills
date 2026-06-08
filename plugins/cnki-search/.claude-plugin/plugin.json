@@ -16,5 +16,6 @@
         "--chromeArg=--disable-blink-features=AutomationControlled"
       ]
     }
-  }
+  },
+  "description": "Search CNKI (中国知网) for papers by keyword. Use when the user wants to find academic papers on a topic."
 }

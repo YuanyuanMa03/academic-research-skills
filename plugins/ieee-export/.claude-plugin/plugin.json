@@ -16,5 +16,6 @@
         "--chromeArg=--disable-blink-features=AutomationControlled"
       ]
     }
-  }
+  },
+  "description": "Export citations from IEEE Xplore in RIS, BibTeX, or plain text. Supports pushing to Zotero."
 }

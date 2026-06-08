@@ -1,0 +1,9 @@
+{
+  "name": "wos-parse-results",
+  "description": "Parse search results from the current WoS results page or API response. Internal skill used by other skills.",
+  "version": "1.0.0",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT"
+}

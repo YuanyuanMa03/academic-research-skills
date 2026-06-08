@@ -16,5 +16,6 @@
         "--chromeArg=--disable-blink-features=AutomationControlled"
       ]
     }
-  }
+  },
+  "description": "Navigate pages, change sort order, or adjust results per page on IEEE Xplore search results."
 }

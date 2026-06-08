@@ -16,5 +16,6 @@
         "--chromeArg=--disable-blink-features=AutomationControlled"
       ]
     }
-  }
+  },
+  "description": "Export citations from ScienceDirect in RIS, BibTeX, or plain text format. Supports pushing to Zotero."
 }
