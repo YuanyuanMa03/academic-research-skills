@@ -127,7 +127,8 @@ for (let i = 0; i < checkboxes.length; i++) {
 Save the export data (single object or JSON array) to a temp file, then run the Python script:
 
 ```bash
-cd plugins/cnki-export/skills/cnki-export && python "scripts/push_to_zotero.py" /tmp/papers.json
+
+python {SKILL_DIR}/scripts/push_to_zotero.py /tmp/papers.json
 ```
 
 The Python script handles both single paper `{}` and batch `[{}, {}, ...]` JSON input.
@@ -189,7 +190,8 @@ X-Zotero-Connector-API-Version: 3
 
 Query collections:
 ```bash
-python "scripts/push_to_zotero.py" --list
+
+python {SKILL_DIR}/scripts/push_to_zotero.py --list
 ```
 
 ## Important Notes

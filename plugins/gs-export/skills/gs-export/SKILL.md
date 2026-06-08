@@ -72,7 +72,8 @@ async () => {
 Save the BibTeX data as JSON, then call the push script:
 
 ```bash
-cd plugins/gs-export/skills/gs-export && python "scripts/push_to_zotero.py" /tmp/gs_papers.json
+
+python {SKILL_DIR}/scripts/push_to_zotero.py /tmp/gs_papers.json
 ```
 
 Before calling the script, construct a JSON file at `/tmp/gs_papers.json` containing paper data parsed from BibTeX. Parse the BibTeX yourself and create the JSON array:
