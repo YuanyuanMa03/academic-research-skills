@@ -10,9 +10,7 @@ disable-model-invocation: false
 
 Internal skill for extracting structured data from WoS. Two modes: API response parsing (preferred) or DOM scraping (fallback).
 
-## Steps
-
-### Step A: API Response Parsing (preferred)
+## Mode A: API Response Parsing (preferred)
 
 When using the `runQuerySearch` API, the response is NDJSON. Parse records from the `records` payload:
 
@@ -42,7 +40,7 @@ const records = Object.entries(recordsData).map(([idx, rec]) => ({
 }));
 ```
 
-### Step B: DOM Scraping (fallback)
+## Mode B: DOM Scraping (fallback)
 
 When the browser is on a results page and API is not available:
 

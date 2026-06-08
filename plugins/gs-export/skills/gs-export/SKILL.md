@@ -72,7 +72,6 @@ async () => {
 Save the BibTeX data as JSON, then call the push script:
 
 ```bash
-
 python {SKILL_DIR}/scripts/push_to_zotero.py /tmp/gs_papers.json
 ```
 

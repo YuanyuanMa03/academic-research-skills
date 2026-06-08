@@ -18,24 +18,18 @@ Extract structured data from an already-open ScienceDirect search results page w
 
 ### Step 1: Extract results from current page
 
-Use `evaluate_script` with built-in waiting (no navigation needed):
+Use `evaluate_script` (no navigation needed):
 
 ```javascript
-async () => {
+() => {
   // Verify we are on a search results page
   if (!window.location.pathname.includes('/search')) {
     return { error: 'Not on a ScienceDirect search results page.' };
   }
 
-  // Wait for results to load (up to 10s)
-  for (let i = 0; i < 20; i++) {
-    if (document.querySelector('li.ResultItem') || document.querySelector('.search-body-results-text')) break;
-    await new Promise(r => setTimeout(r, 500));
-  }
-
   const items = document.querySelectorAll('li.ResultItem');
   if (items.length === 0) {
-    return { error: 'No results found on the current page.' };
+    return { error: 'No results found on the current page. The page may still be loading.' };
   }
 
   const papers = [];

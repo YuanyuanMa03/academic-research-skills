@@ -1,0 +1,128 @@
+namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
+
+
+## Variables
+div {
+  
+  ## All variables
+  variables = variables.dates | variables.names | variables.standard
+  
+  ## Standard variables
+  variables.standard =
+    variables.numbers | variables.strings | variables.titles
+  
+  ## Date variables
+  variables.dates =
+    "accessed"
+    | "available-date"
+    | "event-date"
+    | "issued"
+    | "original-date"
+    | "submitted"
+  
+  ## Name variables
+  variables.names =
+    "author"
+    | "chair"
+    | "collection-editor"
+    | "compiler"
+    | "composer"
+    | "container-author"
+    | "contributor"
+    | "curator"
+    | "director"
+    | "editor"
+    | "editor-translator"
+    | "editorial-director"
+    | "executive-producer"
+    | "guest"
+    | "host"
+    | "illustrator"
+    | "interviewer"
+    | "narrator"
+    | "organizer"
+    | "original-author"
+    | "performer"
+    | "producer"
+    | "recipient"
+    | "reviewed-author"
+    | "script-writer"
+    | "series-creator"
+    | "translator"
+  
+  ## Number variables
+  variables.numbers =
+    "chapter-number"
+    | "citation-number"
+    | "collection-number"
+    | "edition"
+    | "first-reference-note-number"
+    | "issue"
+    | "locator"
+    | "number"
+    | "number-of-pages"
+    | "number-of-volumes"
+    | "page"
+    | "page-first"
+    | "part-number"
+    | "printing-number"
+    | "section"
+    | "supplement-number"
+    | "version"
+    | "volume"
+  
+  ## Title variables
+  variables.titles =
+    "collection-title"
+    | "container-title"
+    | "original-title"
+    | "part-title"
+    | "reviewed-title"
+    | "title"
+    | "volume-title"
+    | # Short title forms. Will be removed in CSL 1.1
+      "title-short"
+    | "container-title-short"
+  
+  ## String variables
+  variables.strings =
+    "abstract"
+    | "annote"
+    | "archive"
+    | "archive_collection"
+    | "archive_location"
+    | "archive-place"
+    | "authority"
+    | "call-number"
+    | "citation-key"
+    | "citation-label"
+    | "dimensions"
+    | "division"
+    | "DOI"
+    | # Alias for 'event-title'. Deprecated. Will be removed in CSL 1.1.
+      "event"
+    | "event-title"
+    | "event-place"
+    | "genre"
+    | "ISBN"
+    | "ISSN"
+    | "jurisdiction"
+    | "keyword"
+    | "language"
+    | "license"
+    | "medium"
+    | "note"
+    | "original-publisher"
+    | "original-publisher-place"
+    | "PMCID"
+    | "PMID"
+    | "publisher"
+    | "publisher-place"
+    | "references"
+    | "reviewed-genre"
+    | "scale"
+    | "source"
+    | "status"
+    | "URL"
+    | "year-suffix"
+}

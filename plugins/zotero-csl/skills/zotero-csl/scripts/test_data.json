@@ -1,0 +1,129 @@
+[
+  {
+    "id": "zhang2024novel",
+    "type": "article-journal",
+    "title": "A novel approach to deep reinforcement learning for autonomous systems",
+    "author": [
+      {"family": "Zhang", "given": "Wei"},
+      {"family": "Li", "given": "Ming"},
+      {"family": "Wang", "given": "Fang"},
+      {"family": "Chen", "given": "Xiaohui"}
+    ],
+    "container-title": "IEEE Transactions on Neural Networks and Learning Systems",
+    "volume": "15",
+    "issue": "3",
+    "page": "245-260",
+    "issued": {"date-parts": [[2024]]},
+    "DOI": "10.1109/TNNLS.2024.0012345"
+  },
+  {
+    "id": "smith2023intro",
+    "type": "book",
+    "title": "Introduction to Machine Learning: Theory and Applications",
+    "author": [
+      {"family": "Smith", "given": "John"}
+    ],
+    "edition": "3",
+    "publisher": "Academic Press",
+    "publisher-place": "New York",
+    "issued": {"date-parts": [[2023]]},
+    "ISBN": "978-0-12-345678-9"
+  },
+  {
+    "id": "johnson2024transfer",
+    "type": "paper-conference",
+    "title": "Transfer learning with large-scale pre-trained models",
+    "author": [
+      {"family": "Johnson", "given": "Alice"}
+    ],
+    "container-title": "Proceedings of the 41st International Conference on Machine Learning (ICML 2024)",
+    "publisher-place": "Vienna, Austria",
+    "page": "112-120",
+    "issued": {"date-parts": [[2024]]}
+  },
+  {
+    "id": "brown2023ethical",
+    "type": "chapter",
+    "title": "Ethical considerations in artificial intelligence deployment",
+    "author": [
+      {"family": "Brown", "given": "David"}
+    ],
+    "container-title": "Handbook of Artificial Intelligence",
+    "publisher": "Springer",
+    "publisher-place": "Berlin",
+    "page": "45-78",
+    "issued": {"date-parts": [[2023]]}
+  },
+  {
+    "id": "who2024global",
+    "type": "webpage",
+    "title": "Global health report 2024",
+    "author": [
+      {"literal": "World Health Organization"}
+    ],
+    "URL": "https://www.who.int/report2024",
+    "issued": {"date-parts": [[2024]]},
+    "accessed": {"date-parts": [[2024, 6, 15]]}
+  },
+  {
+    "id": "lee2023ml",
+    "type": "thesis",
+    "title": "Machine Learning in Healthcare: Predictive Models for Clinical Decision Support",
+    "author": [
+      {"family": "Lee", "given": "Sarah"}
+    ],
+    "publisher": "Massachusetts Institute of Technology",
+    "issued": {"date-parts": [[2023]]},
+    "genre": "Ph.D. Dissertation"
+  },
+  {
+    "id": "garcia2024ai",
+    "type": "article-newspaper",
+    "title": "AI Breakthrough Announced: New Model Surpasses Human Performance",
+    "author": [
+      {"family": "Garcia", "given": "Maria"}
+    ],
+    "container-title": "The New York Times",
+    "issued": {"date-parts": [[2024, 3, 15]]}
+  },
+  {
+    "id": "noaa2024climate",
+    "type": "report",
+    "title": "Annual Climate Assessment 2024",
+    "author": [
+      {"literal": "National Oceanic and Atmospheric Administration"}
+    ],
+    "publisher": "NOAA",
+    "publisher-place": "Washington, DC",
+    "issued": {"date-parts": [[2024]]}
+  },
+  {
+    "id": "zhang2024zhongyao",
+    "type": "article-journal",
+    "title": "基于深度学习的中文文本情感分析研究",
+    "author": [
+      {"family": "张", "given": "伟"},
+      {"family": "李", "given": "娜"},
+      {"family": "王", "given": "强"}
+    ],
+    "container-title": "计算机学报",
+    "volume": "47",
+    "issue": "5",
+    "page": "1023-1035",
+    "issued": {"date-parts": [[2024]]},
+    "language": "zh-CN"
+  },
+  {
+    "id": "liu2023rengong",
+    "type": "book",
+    "title": "人工智能导论",
+    "author": [
+      {"family": "刘", "given": "明"},
+      {"family": "陈", "given": "静"}
+    ],
+    "publisher": "清华大学出版社",
+    "publisher-place": "北京",
+    "issued": {"date-parts": [[2023]]},
+    "language": "zh-CN"
+  }
+]

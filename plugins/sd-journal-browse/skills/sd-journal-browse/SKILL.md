@@ -32,7 +32,6 @@ navigate_page({
   url: "{BASE_URL}/journal/{slug}",
   initScript: "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
 })
-```
 
 ### Step 2: Extract journal info
 

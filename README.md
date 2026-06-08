@@ -17,13 +17,20 @@ Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek,
 
 ## Platforms
 
-| Platform | Prefix | Skills |
-|----------|--------|--------|
-| CNKI | `cnki-*` | search, download, export, journal browse, paper detail |
-| Google Scholar | `gs-*` | search, advanced search, cited-by, fulltext, export |
-| ScienceDirect | `sd-*` | search, download, export, journal browse, paper detail |
-| Web of Science | `wos-*` | search, download, export, paper detail |
-| Nature | `nature-*` | academic search, writing, polishing, figures, reader |
+| Platform | Prefix | Skills | Count |
+|----------|--------|--------|-------|
+| CNKI | `cnki-*` | search, download, export, journal browse, paper detail | 10 |
+| Google Scholar | `gs-*` | search, advanced search, cited-by, fulltext, export | 6 |
+| ScienceDirect | `sd-*` | search, download, export, journal browse, paper detail | 8 |
+| Web of Science | `wos-*` | search, download, export, paper detail | 7 |
+| PubMed | `pm-*` | search, advanced search, export, fulltext, paper detail | 6 |
+| IEEE Xplore | `ieee-*` | search, download, export, journal browse, standards | 9 |
+| Zotero CSL | `zotero-*` | citation style generation | 1 |
+| Nature | `nature-*` | academic search, writing, polishing, figures, reader | 9 |
+
+**56 skills total** — 8 academic platforms covered.
+
+> Browser skills (CNKI, GS, SD, WoS, PubMed, IEEE) require [Chrome DevTools MCP](https://github.com/nicekid1/chrome-devtools-mcp). Nature skills are pure prompt-based and work with any LLM.
 
 ## Installation
 
@@ -50,6 +57,15 @@ Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek,
 /plugin install gs-fulltext@academic-research-skills
 /plugin install gs-navigate-pages@academic-research-skills
 /plugin install gs-search@academic-research-skills
+/plugin install ieee-advanced-search@academic-research-skills
+/plugin install ieee-download@academic-research-skills
+/plugin install ieee-export@academic-research-skills
+/plugin install ieee-journal-browse@academic-research-skills
+/plugin install ieee-navigate-pages@academic-research-skills
+/plugin install ieee-paper-detail@academic-research-skills
+/plugin install ieee-parse-results@academic-research-skills
+/plugin install ieee-search@academic-research-skills
+/plugin install ieee-standards-search@academic-research-skills
 /plugin install nature-academic-search@academic-research-skills
 /plugin install nature-citation@academic-research-skills
 /plugin install nature-data@academic-research-skills
@@ -59,6 +75,12 @@ Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek,
 /plugin install nature-reader@academic-research-skills
 /plugin install nature-response@academic-research-skills
 /plugin install nature-writing@academic-research-skills
+/plugin install pm-advanced-search@academic-research-skills
+/plugin install pm-export@academic-research-skills
+/plugin install pm-fulltext@academic-research-skills
+/plugin install pm-navigate-pages@academic-research-skills
+/plugin install pm-paper-detail@academic-research-skills
+/plugin install pm-search@academic-research-skills
 /plugin install sd-advanced-search@academic-research-skills
 /plugin install sd-download@academic-research-skills
 /plugin install sd-export@academic-research-skills
@@ -74,6 +96,7 @@ Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek,
 /plugin install wos-paper-detail@academic-research-skills
 /plugin install wos-parse-results@academic-research-skills
 /plugin install wos-search@academic-research-skills
+/plugin install zotero-csl@academic-research-skills
 ```
 
 ### Copilot CLI

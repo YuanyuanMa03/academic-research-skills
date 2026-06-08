@@ -127,7 +127,6 @@ for (let i = 0; i < checkboxes.length; i++) {
 Save the export data (single object or JSON array) to a temp file, then run the Python script:
 
 ```bash
-
 python {SKILL_DIR}/scripts/push_to_zotero.py /tmp/papers.json
 ```
 
@@ -190,7 +189,6 @@ X-Zotero-Connector-API-Version: 3
 
 Query collections:
 ```bash
-
 python {SKILL_DIR}/scripts/push_to_zotero.py --list
 ```
 
