@@ -93,7 +93,7 @@ async () => {
 Save the returned JSON array to a temp file, then run the Python script:
 
 ```bash
-python {SKILL_DIR}/scripts/push_to_zotero.py /tmp/pm_papers.json
+python scripts/push_to_zotero.py /tmp/pm_papers.json
 ```
 
 The Python script runs a 3-step flow:
@@ -154,5 +154,5 @@ Save the returned text as a `.nbib` file. This can be imported into Zotero, EndN
 
 - This skill uses 2 tool calls: `evaluate_script` + `bash python`
 - Batch export works for any number of PMIDs in a single call
-- The Python script is at `{SKILL_DIR}/scripts/push_to_zotero.py`
+- The Python script is at `scripts/push_to_zotero.py`
 - Zotero must be running with the Connector API on localhost:23119

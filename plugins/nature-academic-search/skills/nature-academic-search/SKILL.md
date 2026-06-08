@@ -114,14 +114,14 @@ export https_proxy=http://127.0.0.1:7890
 ### Pre-flight Check
 
 ```bash
-python {SKILL_DIR}/scripts/preflight.py
+python scripts/preflight.py
 ```
 
 Run before batch operations to verify API endpoints are reachable.
 
 ### Format Converter Dependencies
 
-The format converter (`scripts/format-converter.py`) uses Python stdlib only — no extra dependencies. Run `python {SKILL_DIR}/scripts/format-converter.py --test` to verify the conversion pipeline.
+The format converter (`scripts/format-converter.py`) uses Python stdlib only — no extra dependencies. Run `python scripts/format-converter.py --test` to verify the conversion pipeline.
 
 ## Error Handling
 

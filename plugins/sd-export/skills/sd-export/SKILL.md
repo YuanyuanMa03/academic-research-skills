@@ -134,13 +134,13 @@ To push citations to a locally running Zotero instance. Two modes are supported:
 Use when you have RIS data from the export API or constructed from metadata.
 
 ```bash
-python {SKILL_DIR}/scripts/push_to_zotero.py --ris-file "{RIS_FILE_PATH}"
+python scripts/push_to_zotero.py --ris-file "{RIS_FILE_PATH}"
 ```
 
 Or push RIS content directly:
 
 ```bash
-python {SKILL_DIR}/scripts/push_to_zotero.py --ris-data "{RIS_CONTENT}"
+python scripts/push_to_zotero.py --ris-data "{RIS_CONTENT}"
 ```
 
 The script uses a **deterministic session ID** (MD5 hash of content) so:
@@ -156,7 +156,7 @@ Use when you have structured paper data (e.g., from `sd-paper-detail`) and want 
 Save paper data as a JSON file, then run:
 
 ```bash
-python {SKILL_DIR}/scripts/push_to_zotero.py --json "{JSON_FILE_PATH}"
+python scripts/push_to_zotero.py --json "{JSON_FILE_PATH}"
 ```
 
 **JSON format** (single paper or array):
@@ -187,7 +187,7 @@ When `pdfUrl` and `cookies` are provided, the script will:
 ### Listing Zotero collections
 
 ```bash
-python {SKILL_DIR}/scripts/push_to_zotero.py --list
+python scripts/push_to_zotero.py --list
 ```
 
 ## Export Format Buttons on Page

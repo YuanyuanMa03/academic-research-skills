@@ -129,7 +129,7 @@ If the claim is too broad, split it into citable subclaims rather than searching
 Start with `scripts/nature_citation.py` when internet access is available:
 
 ```bash
-python {SKILL_DIR}/scripts/nature_citation.py \
+python scripts/nature_citation.py \
   --text "PASTE MANUSCRIPT TEXT HERE" \
   --scope cns \
   --outdir /tmp/nature-citation \

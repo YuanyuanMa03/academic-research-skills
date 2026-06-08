@@ -189,13 +189,13 @@ To push citations to a locally running Zotero instance. Two modes are supported:
 After extracting RIS citation text from the Cite This modal:
 
 ```bash
-python {SKILL_DIR}/scripts/push_to_zotero.py --ris-data "{RIS_CONTENT}"
+python scripts/push_to_zotero.py --ris-data "{RIS_CONTENT}"
 ```
 
 Or save to a file first and import:
 
 ```bash
-python {SKILL_DIR}/scripts/push_to_zotero.py --ris-file "{RIS_FILE_PATH}"
+python scripts/push_to_zotero.py --ris-file "{RIS_FILE_PATH}"
 ```
 
 ### Mode 2: JSON import (structured data with optional PDF attachment)
@@ -203,7 +203,7 @@ python {SKILL_DIR}/scripts/push_to_zotero.py --ris-file "{RIS_FILE_PATH}"
 Save paper data as a JSON file, then run:
 
 ```bash
-python {SKILL_DIR}/scripts/push_to_zotero.py --json "{JSON_FILE_PATH}"
+python scripts/push_to_zotero.py --json "{JSON_FILE_PATH}"
 ```
 
 **JSON format** (single paper or array):
@@ -229,7 +229,7 @@ python {SKILL_DIR}/scripts/push_to_zotero.py --json "{JSON_FILE_PATH}"
 ### Listing Zotero collections
 
 ```bash
-python {SKILL_DIR}/scripts/push_to_zotero.py --list
+python scripts/push_to_zotero.py --list
 ```
 
 ## Export Format Reference

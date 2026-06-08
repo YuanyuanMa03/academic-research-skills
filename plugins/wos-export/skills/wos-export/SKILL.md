@@ -50,12 +50,12 @@ For multiple papers, wrap in an array or `{"items": [...]}`.
 ### Step 2: Push via Script
 
 ```bash
-echo '{JSON_DATA}' | python {SKILL_DIR}/scripts/push_to_zotero.py
+echo '{JSON_DATA}' | python scripts/push_to_zotero.py
 ```
 
 Or save to temp file first (recommended for large data or Chinese characters):
 ```bash
-python {SKILL_DIR}/scripts/push_to_zotero.py /tmp/wos_export.json
+python scripts/push_to_zotero.py /tmp/wos_export.json
 ```
 
 ### Step 3: Report Result
@@ -110,5 +110,5 @@ Browser must be on a WoS results page (`/summary/...`) or full record page (`/fu
 
 - Mode A (Zotero push) requires no browser interaction — uses data from prior API calls
 - Mode A works even when browser is not on a WoS page
-- Script path: `{SKILL_DIR}/scripts/push_to_zotero.py`
+- Script path: `scripts/push_to_zotero.py`
 - Zotero must be running on localhost:23119

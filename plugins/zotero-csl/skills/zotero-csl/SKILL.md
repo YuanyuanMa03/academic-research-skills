@@ -7,18 +7,18 @@ user-invocable: true
 
 # CSL 样式生成器
 
-所有模板、参数、规则均位于 `{SKILL_DIR}` 目录下。
+所有模板、参数、规则均位于 `.` 目录下。
 
 以下路径常量贯穿全流程：
 
 | 常量 | 路径 |
 |------|------|
-| 预设目录 | `{SKILL_DIR}/presets/` |
-| 组件目录 | `{SKILL_DIR}/components/` |
-| 校验脚本 | `{SKILL_DIR}/scripts/validate_csl.py` |
-| 预览脚本 | `{SKILL_DIR}/scripts/preview_csl.py` |
-| 校验规则 | `{SKILL_DIR}/validate/rules.md` |
-| 输出目录 | `{SKILL_DIR}/output/` |
+| 预设目录 | `presets/` |
+| 组件目录 | `components/` |
+| 校验脚本 | `scripts/validate_csl.py` |
+| 预览脚本 | `scripts/preview_csl.py` |
+| 校验规则 | `validate/rules.md` |
+| 输出目录 | `output/` |
 
 ## Step 0: 收集信息
 
@@ -54,9 +54,9 @@ user-invocable: true
 
 ## Step 2: 读取配方
 
-**2a 预设路径：** 读取 `{SKILL_DIR}/presets/{preset}.md`，获取全部参数。
+**2a 预设路径：** 读取 `presets/{preset}.md`，获取全部参数。
 
-**2b 自定义路径：** 按需读取 `{SKILL_DIR}/components/` 下的组件模板：
+**2b 自定义路径：** 按需读取 `components/` 下的组件模板：
 
 | 组件 | 文件 | 职责 |
 |------|------|------|
@@ -88,22 +88,22 @@ style (xmlns, class, version, default-locale)
 ```
 
 - 各宏的 XML 实现从组件模板中获取，按预设参数调整属性值
-- 输出到 `{SKILL_DIR}/output/{style-name}.csl`
+- 输出到 `output/{style-name}.csl`
 
 ## Step 4: 校验
 
 ```bash
-python {SKILL_DIR}/scripts/validate_csl.py <file>
+python scripts/validate_csl.py <file>
 ```
 
 - 脚本输出 JSON 格式结果
 - 如 `"status": "FAIL"`，根据 errors 修复后重新校验，直到 PASS
-- 读取 `{SKILL_DIR}/validate/rules.md` 做补充审核（常见陷阱检查）
+- 读取 `validate/rules.md` 做补充审核（常见陷阱检查）
 
 ## Step 5: 预览
 
 ```bash
-python {SKILL_DIR}/scripts/preview_csl.py <file>
+python scripts/preview_csl.py <file>
 ```
 
 - 展示真实渲染结果给用户
