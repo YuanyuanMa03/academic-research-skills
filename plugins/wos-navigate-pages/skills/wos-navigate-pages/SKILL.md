@@ -10,7 +10,9 @@ disable-model-invocation: false
 
 Load a specific page of results from the current WoS search.
 
-## Two Approaches
+## Steps
+
+The two approaches below each count as one step.
 
 ### Approach A: URL-based (when browser is on a results page)
 

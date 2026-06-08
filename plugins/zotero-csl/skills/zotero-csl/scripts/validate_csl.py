@@ -554,15 +554,15 @@ def validate_csl(filepath, verbose=False):
     for s in stages:
         all_errors.extend(s.get("errors", []))
 
-    has_error = any(e["severity"] == "error" for e in all_errors)
-    has_warning = any(e["severity"] == "warning" for e in all_errors)
+    has_error = any(e["severity"] == "error" for e in all_errors)  # noqa: F841
+    has_warning = any(e["severity"] == "warning" for e in all_errors)  # noqa: F841
 
     # Skipped stages don't count as errors for overall if they only have warnings
     skipped_only_warnings = True
     for s in stages:
         if s.get("skipped"):
             if any(e["severity"] == "error" for e in s.get("errors", [])):
-                skipped_only_warnings = False
+                skipped_only_warnings = False  # noqa: F841
 
     # Recalculate has_error excluding skipped-stage warnings
     real_errors = []

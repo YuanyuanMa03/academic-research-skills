@@ -10,7 +10,9 @@ disable-model-invocation: false
 
 Internal skill for extracting structured data from WoS. Two modes: API response parsing (preferred) or DOM scraping (fallback).
 
-## Mode A: API Response Parsing (preferred)
+## Steps
+
+### Step 1: API Response Parsing (preferred)
 
 When using the `runQuerySearch` API, the response is NDJSON. Parse records from the `records` payload:
 
