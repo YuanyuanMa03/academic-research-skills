@@ -1,0 +1,20 @@
+{
+  "name": "cnki-parse-results",
+  "version": "1.0.0",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "mcpServers": {
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--ignoreDefaultChromeArg=--enable-automation",
+        "--ignoreDefaultChromeArg=--disable-infobars",
+        "--chromeArg=--disable-blink-features=AutomationControlled"
+      ]
+    }
+  }
+}
