@@ -111,6 +111,12 @@ codex
 **Install plugin**。安装完成后新开一个 Codex 线程使用。你可以用 `@`
 显式调用某个插件或 skill，也可以直接描述任务，让 Codex 根据描述自动选择。
 
+Codex plugin 安装包已经包含所需 MCP 配置：
+
+- 浏览器类研究技能会通过 `npx` 启动 `chrome-devtools-mcp`。
+- `nature-academic-search` 会启动内置 `academic-search` MCP server，并把
+  Python 依赖自动安装到 `~/.cache/academic-search-mcp`。
+
 也可以直接用 CLI 安装某个插件：
 
 ```bash

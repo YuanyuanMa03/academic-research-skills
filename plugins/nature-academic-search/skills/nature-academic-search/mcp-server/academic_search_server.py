@@ -27,8 +27,8 @@ from utils.config import Config
 _cfg = Config()
 if not _cfg.pubmed_email:
     logger.warning(
-        "PUBMED_EMAIL not set — PubMed searches will fail. "
-        "Set via env var PUBMED_EMAIL or config.toml [pubmed] email."
+        "PUBMED_EMAIL not set — PubMed requests will run without contact metadata. "
+        "Set PUBMED_EMAIL or config.toml [pubmed] email for NCBI best practice."
     )
 
 # Singleton source instances (shared across tool calls)
@@ -151,7 +151,7 @@ async def _search_all(
 # ---------------------------------------------------------------------------
 
 @mcp.tool()
-def search_papers(
+async def search_papers(
     query: str,
     sources: list[str] | None = None,
     rows: int = 5,
@@ -190,7 +190,7 @@ def search_papers(
     })
 
     try:
-        result = asyncio.run(_search_all(query, sources, rows, type))
+        result = await _search_all(query, sources, rows, type)
     except Exception as exc:
         logger.exception("search_papers failed")
         return _json_error(f"Search failed: {exc}")

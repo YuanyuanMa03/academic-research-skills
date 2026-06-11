@@ -136,6 +136,12 @@ need, and select **Install plugin**. Start a new Codex thread after installing.
 You can invoke a skill explicitly with `@` or let Codex choose it from the task
 description.
 
+Codex plugin installs include the required MCP configuration:
+
+- Browser-based research skills start `chrome-devtools-mcp` through `npx`.
+- `nature-academic-search` starts its bundled `academic-search` MCP server and
+  bootstraps its Python dependencies into `~/.cache/academic-search-mcp`.
+
 You can also install a plugin directly from the CLI:
 
 ```bash

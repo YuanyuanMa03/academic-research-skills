@@ -180,12 +180,6 @@ class PubMedSource:
             raise DataSourceError(SOURCE_NAME, "Empty search query")
 
         cfg = get_config()
-        if not cfg.pubmed_email:
-            raise DataSourceError(
-                SOURCE_NAME,
-                "PubMed email not configured. Set PUBMED_EMAIL env var or [pubmed].email in config.toml",
-            )
-
         rows = min(rows, cfg.max_rows)
         sort_param = "relevance" if sort == "relevance" else "pub_date"
 
@@ -251,13 +245,6 @@ class PubMedSource:
         if not pmid or not pmid.strip().isdigit():
             raise DataSourceError(SOURCE_NAME, f"Invalid PMID: {pmid}")
 
-        cfg = get_config()
-        if not cfg.pubmed_email:
-            raise DataSourceError(
-                SOURCE_NAME,
-                "PubMed email not configured. Set PUBMED_EMAIL env var or [pubmed].email in config.toml",
-            )
-
         fetch_params: dict[str, Any] = {
             "db": "pubmed",
             "id": pmid.strip(),
@@ -287,13 +274,6 @@ class PubMedSource:
         """
         if not term or not term.strip():
             raise DataSourceError(SOURCE_NAME, "Empty MeSH lookup term")
-
-        cfg = get_config()
-        if not cfg.pubmed_email:
-            raise DataSourceError(
-                SOURCE_NAME,
-                "PubMed email not configured. Set PUBMED_EMAIL env var or [pubmed].email in config.toml",
-            )
 
         # Use esearch on MeSH database
         search_params: dict[str, Any] = {
