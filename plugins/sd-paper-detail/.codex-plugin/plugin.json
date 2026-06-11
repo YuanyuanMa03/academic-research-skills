@@ -1,0 +1,27 @@
+{
+  "name": "sd-paper-detail",
+  "version": "1.0.0",
+  "description": "Extract full metadata from a ScienceDirect article page (abstract, authors, keywords, DOI, references, PDF link). Use when the user wants details about a specific paper.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "sd-paper-detail",
+    "shortDescription": "Extract full metadata from a ScienceDirect article page (abstract, authors, keywords, DOI, references, PDF link). Use when the user wants details about a specific paper.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use sd-paper-detail for an academic research task."
+    ],
+    "longDescription": "Extract full metadata from a ScienceDirect article page (abstract, authors, keywords, DOI, references, PDF link). Use when the user wants details about a specific paper."
+  }
+}

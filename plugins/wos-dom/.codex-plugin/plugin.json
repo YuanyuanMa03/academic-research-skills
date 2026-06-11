@@ -1,0 +1,31 @@
+{
+  "name": "wos-dom",
+  "version": "1.0.0",
+  "description": "Web of Science DOM structure reference",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic",
+    "research",
+    "wos"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "wos-dom",
+    "shortDescription": "Web of Science DOM structure reference",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use wos-dom for an academic research task."
+    ],
+    "longDescription": "Web of Science DOM structure reference"
+  }
+}

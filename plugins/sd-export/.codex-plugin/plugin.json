@@ -1,0 +1,27 @@
+{
+  "name": "sd-export",
+  "version": "1.0.0",
+  "description": "Export citations from ScienceDirect in RIS, BibTeX, or plain text format. Supports pushing to Zotero.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "sd-export",
+    "shortDescription": "Export citations from ScienceDirect in RIS, BibTeX, or plain text format. Supports pushing to Zotero.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use sd-export for an academic research task."
+    ],
+    "longDescription": "Export citations from ScienceDirect in RIS, BibTeX, or plain text format. Supports pushing to Zotero."
+  }
+}

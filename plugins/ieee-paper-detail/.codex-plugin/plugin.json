@@ -1,0 +1,27 @@
+{
+  "name": "ieee-paper-detail",
+  "version": "1.0.0",
+  "description": "Extract full metadata from an IEEE Xplore article page.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ieee-paper-detail",
+    "shortDescription": "Extract full metadata from an IEEE Xplore article page.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use ieee-paper-detail for an academic research task."
+    ],
+    "longDescription": "Extract full metadata from an IEEE Xplore article page."
+  }
+}

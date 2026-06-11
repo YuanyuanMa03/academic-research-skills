@@ -1,0 +1,27 @@
+{
+  "name": "pm-fulltext",
+  "version": "1.0.0",
+  "description": "Find full-text download links for a PubMed paper by PMID - DOI, PMC open access, Sci-Hub, and publisher links.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "pm-fulltext",
+    "shortDescription": "Find full-text download links for a PubMed paper by PMID - DOI, PMC open access, Sci-Hub, and publisher links.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use pm-fulltext for an academic research task."
+    ],
+    "longDescription": "Find full-text download links for a PubMed paper by PMID - DOI, PMC open access, Sci-Hub, and publisher links."
+  }
+}

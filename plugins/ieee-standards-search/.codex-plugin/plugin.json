@@ -1,0 +1,27 @@
+{
+  "name": "ieee-standards-search",
+  "version": "1.0.0",
+  "description": "Search IEEE SA for IEEE/ANSI standards and find IEC/ISO counterparts.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ieee-standards-search",
+    "shortDescription": "Search IEEE SA for IEEE/ANSI standards and find IEC/ISO counterparts.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use ieee-standards-search for an academic research task."
+    ],
+    "longDescription": "Search IEEE SA for IEEE/ANSI standards and find IEC/ISO counterparts."
+  }
+}

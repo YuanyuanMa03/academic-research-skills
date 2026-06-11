@@ -1,0 +1,27 @@
+{
+  "name": "pm-advanced-search",
+  "version": "1.0.0",
+  "description": "Perform advanced PubMed search with field qualifiers - author, title, journal, MeSH, date range, article type.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "pm-advanced-search",
+    "shortDescription": "Perform advanced PubMed search with field qualifiers - author, title, journal, MeSH, date range, article type.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use pm-advanced-search for an academic research task."
+    ],
+    "longDescription": "Perform advanced PubMed search with field qualifiers - author, title, journal, MeSH, date range, article type."
+  }
+}

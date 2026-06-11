@@ -1,0 +1,27 @@
+{
+  "name": "wos-paper-detail",
+  "version": "1.0.0",
+  "description": "Get detailed information for a paper by WoS ID (e.g., WOS:000779183600001).",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "wos-paper-detail",
+    "shortDescription": "Get detailed information for a paper by WoS ID (e.g., WOS:000779183600001).",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use wos-paper-detail for an academic research task."
+    ],
+    "longDescription": "Get detailed information for a paper by WoS ID (e.g., WOS:000779183600001)."
+  }
+}

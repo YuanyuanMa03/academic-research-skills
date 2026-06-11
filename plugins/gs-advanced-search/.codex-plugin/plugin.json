@@ -1,0 +1,27 @@
+{
+  "name": "gs-advanced-search",
+  "version": "1.0.0",
+  "description": "Perform advanced Google Scholar search with filters - author, journal, date range, exact phrase, title-only. Constructs proper URL parameters from natural language. Use for precise filtered searches.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "gs-advanced-search",
+    "shortDescription": "Perform advanced Google Scholar search with filters - author, journal, date range, exact phrase, title-only. Constructs proper URL parameters from natural language. Use for precise filtered searches.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use gs-advanced-search for an academic research task."
+    ],
+    "longDescription": "Perform advanced Google Scholar search with filters - author, journal, date range, exact phrase, title-only. Constructs proper URL parameters from natural language. Use for precise filtered searches."
+  }
+}

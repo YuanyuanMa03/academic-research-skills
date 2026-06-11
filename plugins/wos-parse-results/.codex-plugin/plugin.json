@@ -1,0 +1,27 @@
+{
+  "name": "wos-parse-results",
+  "version": "1.0.0",
+  "description": "Parse search results from the current WoS results page or API response. Internal skill used by other skills.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "wos-parse-results",
+    "shortDescription": "Parse search results from the current WoS results page or API response. Internal skill used by other skills.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use wos-parse-results for an academic research task."
+    ],
+    "longDescription": "Parse search results from the current WoS results page or API response. Internal skill used by other skills."
+  }
+}

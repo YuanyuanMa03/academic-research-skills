@@ -1,0 +1,27 @@
+{
+  "name": "ieee-journal-browse",
+  "version": "1.0.0",
+  "description": "Browse a journal or conference on IEEE Xplore — view info, impact factor, latest articles, and issues.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ieee-journal-browse",
+    "shortDescription": "Browse a journal or conference on IEEE Xplore — view info, impact factor, latest articles, and issues.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use ieee-journal-browse for an academic research task."
+    ],
+    "longDescription": "Browse a journal or conference on IEEE Xplore — view info, impact factor, latest articles, and issues."
+  }
+}

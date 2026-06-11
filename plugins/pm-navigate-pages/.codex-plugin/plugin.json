@@ -1,0 +1,27 @@
+{
+  "name": "pm-navigate-pages",
+  "version": "1.0.0",
+  "description": "Navigate PubMed search result pages or change sort order.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "pm-navigate-pages",
+    "shortDescription": "Navigate PubMed search result pages or change sort order.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use pm-navigate-pages for an academic research task."
+    ],
+    "longDescription": "Navigate PubMed search result pages or change sort order."
+  }
+}

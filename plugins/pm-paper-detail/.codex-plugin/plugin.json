@@ -1,0 +1,27 @@
+{
+  "name": "pm-paper-detail",
+  "version": "1.0.0",
+  "description": "Get full paper details for a PubMed article by PMID - title, authors, abstract, MeSH terms, keywords, DOI.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "pm-paper-detail",
+    "shortDescription": "Get full paper details for a PubMed article by PMID - title, authors, abstract, MeSH terms, keywords, DOI.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use pm-paper-detail for an academic research task."
+    ],
+    "longDescription": "Get full paper details for a PubMed article by PMID - title, authors, abstract, MeSH terms, keywords, DOI."
+  }
+}

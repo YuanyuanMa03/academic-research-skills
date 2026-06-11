@@ -1,0 +1,27 @@
+{
+  "name": "wos-download",
+  "version": "1.0.0",
+  "description": "Download PDF full text for a WoS paper via publisher links.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "wos-download",
+    "shortDescription": "Download PDF full text for a WoS paper via publisher links.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use wos-download for an academic research task."
+    ],
+    "longDescription": "Download PDF full text for a WoS paper via publisher links."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "nature-polishing",
+  "version": "1.0.0",
+  "description": "Polish writing for Nature style",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic",
+    "research",
+    "nature"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "nature-polishing",
+    "shortDescription": "Polish writing for Nature style",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use nature-polishing for an academic research task."
+    ],
+    "longDescription": "Polish writing for Nature style"
+  }
+}

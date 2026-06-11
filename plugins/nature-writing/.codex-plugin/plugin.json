@@ -1,0 +1,31 @@
+{
+  "name": "nature-writing",
+  "version": "1.0.0",
+  "description": "Write in Nature paper style",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic",
+    "research",
+    "nature"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "nature-writing",
+    "shortDescription": "Write in Nature paper style",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use nature-writing for an academic research task."
+    ],
+    "longDescription": "Write in Nature paper style"
+  }
+}

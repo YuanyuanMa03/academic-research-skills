@@ -1,0 +1,27 @@
+{
+  "name": "cnki-navigate-pages",
+  "version": "1.0.0",
+  "description": "Navigate CNKI search result pages (next/previous/specific page) or change sort order. Use when user wants to see more results or change sorting.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "cnki-navigate-pages",
+    "shortDescription": "Navigate CNKI search result pages (next/previous/specific page) or change sort order. Use when user wants to see more results or change sorting.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use cnki-navigate-pages for an academic research task."
+    ],
+    "longDescription": "Navigate CNKI search result pages (next/previous/specific page) or change sort order. Use when user wants to see more results or change sorting."
+  }
+}

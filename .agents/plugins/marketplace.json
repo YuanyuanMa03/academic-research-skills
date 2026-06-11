@@ -1,0 +1,736 @@
+{
+  "name": "academic-research-skills",
+  "interface": {
+    "displayName": "Academic Research Skills"
+  },
+  "plugins": [
+    {
+      "name": "cnki-advanced-search",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cnki-advanced-search"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Perform advanced search on CNKI with field filters like author, title, journal, date range, source category (SCI/EI/CSSCI/北大核心). Use when user needs precise filtered search beyond simple keywords."
+    },
+    {
+      "name": "cnki-download",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cnki-download"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Download a paper PDF/CAJ from CNKI. Requires user to be logged in. Use when user wants to download a specific paper."
+    },
+    {
+      "name": "cnki-export",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cnki-export"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Export paper from CNKI and push to Zotero, or save as RIS file. Use when user wants to save a paper to Zotero or export citation data."
+    },
+    {
+      "name": "cnki-journal-index",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cnki-journal-index"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Query journal indexing/inclusion status on CNKI - check which databases include a journal (北大核心, CSSCI, CSCD, SCI, EI, etc.), get impact factors and evaluation data. Use when user asks about a journal's level, indexing, or ranking."
+    },
+    {
+      "name": "cnki-journal-search",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cnki-journal-search"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Search for journals/publications on CNKI by name, ISSN, CN, or sponsor. Use when the user wants to find a specific journal or browse publications."
+    },
+    {
+      "name": "cnki-journal-toc",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cnki-journal-toc"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Browse journal issues, view table of contents, and download original TOC PDF from CNKI. Use when user wants to see papers in a specific journal issue or download the original cover/TOC pages."
+    },
+    {
+      "name": "cnki-navigate-pages",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cnki-navigate-pages"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Navigate CNKI search result pages (next/previous/specific page) or change sort order. Use when user wants to see more results or change sorting."
+    },
+    {
+      "name": "cnki-paper-detail",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cnki-paper-detail"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Extract full paper details from a CNKI paper page including title, authors, affiliations, abstract, keywords, fund, classification. Use when the user needs detailed information about a specific paper."
+    },
+    {
+      "name": "cnki-parse-results",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cnki-parse-results"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Parse current CNKI search results page into structured paper data (title, authors, journal, date, citations). Use after a search has been performed and you need to extract the results."
+    },
+    {
+      "name": "cnki-search",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cnki-search"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Search CNKI (中国知网) for papers by keyword. Use when the user wants to find academic papers on a topic."
+    },
+    {
+      "name": "gs-advanced-search",
+      "source": {
+        "source": "local",
+        "path": "./plugins/gs-advanced-search"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Perform advanced Google Scholar search with filters - author, journal, date range, exact phrase, title-only. Constructs proper URL parameters from natural language. Use for precise filtered searches."
+    },
+    {
+      "name": "gs-cited-by",
+      "source": {
+        "source": "local",
+        "path": "./plugins/gs-cited-by"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Find papers that cite a given Google Scholar paper. Tracks citation chains using data-cid (cluster ID). Use when user wants to see who cited a specific paper."
+    },
+    {
+      "name": "gs-export",
+      "source": {
+        "source": "local",
+        "path": "./plugins/gs-export"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Export Google Scholar paper(s) to Zotero via BibTeX. Gets citation data from Google Scholar's cite dialog, then pushes to Zotero desktop. Supports single or batch export."
+    },
+    {
+      "name": "gs-fulltext",
+      "source": {
+        "source": "local",
+        "path": "./plugins/gs-fulltext"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Get full-text access links for a Google Scholar paper - PDF, DOI, Sci-Hub, and publisher links. Use when user wants to read or download a paper's full text."
+    },
+    {
+      "name": "gs-navigate-pages",
+      "source": {
+        "source": "local",
+        "path": "./plugins/gs-navigate-pages"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Navigate Google Scholar search result pages. Use when user wants to see more results or go to a specific page."
+    },
+    {
+      "name": "gs-search",
+      "source": {
+        "source": "local",
+        "path": "./plugins/gs-search"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Search Google Scholar for academic papers by keywords. Returns results with title, authors, journal, year, citation count, and full-text links. Use when the user wants to search Google Scholar."
+    },
+    {
+      "name": "ieee-advanced-search",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ieee-advanced-search"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Advanced search on IEEE Xplore with filters - author, title, publication, year, DOI."
+    },
+    {
+      "name": "ieee-download",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ieee-download"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Download PDF from IEEE Xplore articles. Requires institutional or subscriber access."
+    },
+    {
+      "name": "ieee-export",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ieee-export"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Export citations from IEEE Xplore in RIS, BibTeX, or plain text. Supports pushing to Zotero."
+    },
+    {
+      "name": "ieee-journal-browse",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ieee-journal-browse"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Browse a journal or conference on IEEE Xplore — view info, impact factor, latest articles, and issues."
+    },
+    {
+      "name": "ieee-navigate-pages",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ieee-navigate-pages"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Navigate pages, change sort order, or adjust results per page on IEEE Xplore search results."
+    },
+    {
+      "name": "ieee-paper-detail",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ieee-paper-detail"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Extract full metadata from an IEEE Xplore article page."
+    },
+    {
+      "name": "ieee-parse-results",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ieee-parse-results"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Re-parse the currently open IEEE Xplore search results page. Internal skill."
+    },
+    {
+      "name": "ieee-search",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ieee-search"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Search for academic papers on IEEE Xplore by keyword."
+    },
+    {
+      "name": "ieee-standards-search",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ieee-standards-search"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Search IEEE SA for IEEE/ANSI standards and find IEC/ISO counterparts."
+    },
+    {
+      "name": "nature-academic-search",
+      "source": {
+        "source": "local",
+        "path": "./plugins/nature-academic-search"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Academic search on Nature"
+    },
+    {
+      "name": "nature-citation",
+      "source": {
+        "source": "local",
+        "path": "./plugins/nature-citation"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Manage Nature citations"
+    },
+    {
+      "name": "nature-data",
+      "source": {
+        "source": "local",
+        "path": "./plugins/nature-data"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Access Nature paper data"
+    },
+    {
+      "name": "nature-figure",
+      "source": {
+        "source": "local",
+        "path": "./plugins/nature-figure"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Generate and format Nature figures"
+    },
+    {
+      "name": "nature-paper2ppt",
+      "source": {
+        "source": "local",
+        "path": "./plugins/nature-paper2ppt"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Convert Nature papers to presentations"
+    },
+    {
+      "name": "nature-polishing",
+      "source": {
+        "source": "local",
+        "path": "./plugins/nature-polishing"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Polish writing for Nature style"
+    },
+    {
+      "name": "nature-reader",
+      "source": {
+        "source": "local",
+        "path": "./plugins/nature-reader"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Read and analyze Nature papers"
+    },
+    {
+      "name": "nature-response",
+      "source": {
+        "source": "local",
+        "path": "./plugins/nature-response"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Draft responses for Nature reviews"
+    },
+    {
+      "name": "nature-writing",
+      "source": {
+        "source": "local",
+        "path": "./plugins/nature-writing"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Write in Nature paper style"
+    },
+    {
+      "name": "pm-advanced-search",
+      "source": {
+        "source": "local",
+        "path": "./plugins/pm-advanced-search"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Perform advanced PubMed search with field qualifiers - author, title, journal, MeSH, date range, article type."
+    },
+    {
+      "name": "pm-export",
+      "source": {
+        "source": "local",
+        "path": "./plugins/pm-export"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Export PubMed paper(s) to Zotero or save as RIS file. Supports single paper by PMID or batch export from search results."
+    },
+    {
+      "name": "pm-fulltext",
+      "source": {
+        "source": "local",
+        "path": "./plugins/pm-fulltext"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Find full-text download links for a PubMed paper by PMID - DOI, PMC open access, Sci-Hub, and publisher links."
+    },
+    {
+      "name": "pm-navigate-pages",
+      "source": {
+        "source": "local",
+        "path": "./plugins/pm-navigate-pages"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Navigate PubMed search result pages or change sort order."
+    },
+    {
+      "name": "pm-paper-detail",
+      "source": {
+        "source": "local",
+        "path": "./plugins/pm-paper-detail"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Get full paper details for a PubMed article by PMID - title, authors, abstract, MeSH terms, keywords, DOI."
+    },
+    {
+      "name": "pm-search",
+      "source": {
+        "source": "local",
+        "path": "./plugins/pm-search"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Search PubMed for biomedical literature by keywords. Returns structured results with PMID, title, authors, journal, date, DOI."
+    },
+    {
+      "name": "sd-advanced-search",
+      "source": {
+        "source": "local",
+        "path": "./plugins/sd-advanced-search"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Advanced search on ScienceDirect with filters like author, journal, year, title, keywords. Use when the user wants filtered academic paper search."
+    },
+    {
+      "name": "sd-download",
+      "source": {
+        "source": "local",
+        "path": "./plugins/sd-download"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Download PDF from ScienceDirect articles. Requires institutional or subscriber access."
+    },
+    {
+      "name": "sd-export",
+      "source": {
+        "source": "local",
+        "path": "./plugins/sd-export"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Export citations from ScienceDirect in RIS, BibTeX, or plain text format. Supports pushing to Zotero."
+    },
+    {
+      "name": "sd-journal-browse",
+      "source": {
+        "source": "local",
+        "path": "./plugins/sd-journal-browse"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Browse a journal on ScienceDirect — view info, impact factor, latest articles, and specific issues. Use when the user asks about a journal or wants to browse its contents."
+    },
+    {
+      "name": "sd-navigate-pages",
+      "source": {
+        "source": "local",
+        "path": "./plugins/sd-navigate-pages"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Navigate pages, change sort order, or adjust results per page on ScienceDirect search results."
+    },
+    {
+      "name": "sd-paper-detail",
+      "source": {
+        "source": "local",
+        "path": "./plugins/sd-paper-detail"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Extract full metadata from a ScienceDirect article page (abstract, authors, keywords, DOI, references, PDF link). Use when the user wants details about a specific paper."
+    },
+    {
+      "name": "sd-parse-results",
+      "source": {
+        "source": "local",
+        "path": "./plugins/sd-parse-results"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Re-parse the currently open ScienceDirect search results page. Internal skill used by other skills."
+    },
+    {
+      "name": "sd-search",
+      "source": {
+        "source": "local",
+        "path": "./plugins/sd-search"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Search for academic papers on ScienceDirect. Use when the user wants to find papers by keyword on ScienceDirect/Elsevier."
+    },
+    {
+      "name": "wos-dom",
+      "source": {
+        "source": "local",
+        "path": "./plugins/wos-dom"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Web of Science DOM structure reference"
+    },
+    {
+      "name": "wos-download",
+      "source": {
+        "source": "local",
+        "path": "./plugins/wos-download"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Download PDF full text for a WoS paper via publisher links."
+    },
+    {
+      "name": "wos-export",
+      "source": {
+        "source": "local",
+        "path": "./plugins/wos-export"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Export WoS records to Zotero, RIS, BibTeX, or Excel."
+    },
+    {
+      "name": "wos-navigate-pages",
+      "source": {
+        "source": "local",
+        "path": "./plugins/wos-navigate-pages"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Navigate to a specific page of WoS search results, or load more results from the last search."
+    },
+    {
+      "name": "wos-paper-detail",
+      "source": {
+        "source": "local",
+        "path": "./plugins/wos-paper-detail"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Get detailed information for a paper by WoS ID (e.g., WOS:000779183600001)."
+    },
+    {
+      "name": "wos-parse-results",
+      "source": {
+        "source": "local",
+        "path": "./plugins/wos-parse-results"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Parse search results from the current WoS results page or API response. Internal skill used by other skills."
+    },
+    {
+      "name": "wos-search",
+      "source": {
+        "source": "local",
+        "path": "./plugins/wos-search"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Search Web of Science by topic, author, title, DOI, or advanced query. Supports edition/database filtering and sort."
+    },
+    {
+      "name": "zotero-csl",
+      "source": {
+        "source": "local",
+        "path": "./plugins/zotero-csl"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Generate Zotero-compatible CSL citation style files from natural language descriptions"
+    }
+  ]
+}

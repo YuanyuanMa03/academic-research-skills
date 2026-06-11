@@ -1,0 +1,27 @@
+{
+  "name": "ieee-search",
+  "version": "1.0.0",
+  "description": "Search for academic papers on IEEE Xplore by keyword.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ieee-search",
+    "shortDescription": "Search for academic papers on IEEE Xplore by keyword.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use ieee-search for an academic research task."
+    ],
+    "longDescription": "Search for academic papers on IEEE Xplore by keyword."
+  }
+}

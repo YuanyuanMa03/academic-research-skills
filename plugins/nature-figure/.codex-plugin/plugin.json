@@ -1,0 +1,31 @@
+{
+  "name": "nature-figure",
+  "version": "1.0.0",
+  "description": "Generate and format Nature figures",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic",
+    "research",
+    "nature"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "nature-figure",
+    "shortDescription": "Generate and format Nature figures",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use nature-figure for an academic research task."
+    ],
+    "longDescription": "Generate and format Nature figures"
+  }
+}
