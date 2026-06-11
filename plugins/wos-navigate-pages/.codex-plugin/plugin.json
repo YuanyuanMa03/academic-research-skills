@@ -1,6 +1,6 @@
 {
   "name": "wos-navigate-pages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Navigate to a specific page of WoS search results, or load more results from the last search.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use wos-navigate-pages for an academic research task."
     ],
     "longDescription": "Navigate to a specific page of WoS search results, or load more results from the last search."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

@@ -1,6 +1,6 @@
 {
   "name": "pm-fulltext",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find full-text download links for a PubMed paper by PMID - DOI, PMC open access, Sci-Hub, and publisher links.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use pm-fulltext for an academic research task."
     ],
     "longDescription": "Find full-text download links for a PubMed paper by PMID - DOI, PMC open access, Sci-Hub, and publisher links."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

@@ -1,6 +1,6 @@
 {
   "name": "sd-journal-browse",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Browse a journal on ScienceDirect — view info, impact factor, latest articles, and specific issues. Use when the user asks about a journal or wants to browse its contents.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use sd-journal-browse for an academic research task."
     ],
     "longDescription": "Browse a journal on ScienceDirect — view info, impact factor, latest articles, and specific issues. Use when the user asks about a journal or wants to browse its contents."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

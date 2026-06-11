@@ -1,6 +1,6 @@
 {
   "name": "gs-cited-by",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find papers that cite a given Google Scholar paper. Tracks citation chains using data-cid (cluster ID). Use when user wants to see who cited a specific paper.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use gs-cited-by for an academic research task."
     ],
     "longDescription": "Find papers that cite a given Google Scholar paper. Tracks citation chains using data-cid (cluster ID). Use when user wants to see who cited a specific paper."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

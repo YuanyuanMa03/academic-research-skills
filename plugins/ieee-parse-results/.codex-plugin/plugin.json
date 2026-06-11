@@ -1,6 +1,6 @@
 {
   "name": "ieee-parse-results",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Re-parse the currently open IEEE Xplore search results page. Internal skill.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use ieee-parse-results for an academic research task."
     ],
     "longDescription": "Re-parse the currently open IEEE Xplore search results page. Internal skill."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

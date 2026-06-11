@@ -1,6 +1,6 @@
 {
   "name": "sd-advanced-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Advanced search on ScienceDirect with filters like author, journal, year, title, keywords. Use when the user wants filtered academic paper search.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use sd-advanced-search for an academic research task."
     ],
     "longDescription": "Advanced search on ScienceDirect with filters like author, journal, year, title, keywords. Use when the user wants filtered academic paper search."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

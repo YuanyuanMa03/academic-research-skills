@@ -1,6 +1,6 @@
 {
   "name": "ieee-paper-detail",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extract full metadata from an IEEE Xplore article page.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use ieee-paper-detail for an academic research task."
     ],
     "longDescription": "Extract full metadata from an IEEE Xplore article page."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

@@ -1,6 +1,6 @@
 {
   "name": "sd-export",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Export citations from ScienceDirect in RIS, BibTeX, or plain text format. Supports pushing to Zotero.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use sd-export for an academic research task."
     ],
     "longDescription": "Export citations from ScienceDirect in RIS, BibTeX, or plain text format. Supports pushing to Zotero."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

@@ -1,6 +1,6 @@
 {
   "name": "sd-parse-results",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Re-parse the currently open ScienceDirect search results page. Internal skill used by other skills.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use sd-parse-results for an academic research task."
     ],
     "longDescription": "Re-parse the currently open ScienceDirect search results page. Internal skill used by other skills."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

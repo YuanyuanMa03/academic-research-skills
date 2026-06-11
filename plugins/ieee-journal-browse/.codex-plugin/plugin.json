@@ -1,6 +1,6 @@
 {
   "name": "ieee-journal-browse",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Browse a journal or conference on IEEE Xplore — view info, impact factor, latest articles, and issues.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use ieee-journal-browse for an academic research task."
     ],
     "longDescription": "Browse a journal or conference on IEEE Xplore — view info, impact factor, latest articles, and issues."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

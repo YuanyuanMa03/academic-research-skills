@@ -1,6 +1,6 @@
 {
   "name": "gs-advanced-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Perform advanced Google Scholar search with filters - author, journal, date range, exact phrase, title-only. Constructs proper URL parameters from natural language. Use for precise filtered searches.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use gs-advanced-search for an academic research task."
     ],
     "longDescription": "Perform advanced Google Scholar search with filters - author, journal, date range, exact phrase, title-only. Constructs proper URL parameters from natural language. Use for precise filtered searches."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

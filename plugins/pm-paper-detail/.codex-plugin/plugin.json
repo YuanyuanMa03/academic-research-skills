@@ -1,6 +1,6 @@
 {
   "name": "pm-paper-detail",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get full paper details for a PubMed article by PMID - title, authors, abstract, MeSH terms, keywords, DOI.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use pm-paper-detail for an academic research task."
     ],
     "longDescription": "Get full paper details for a PubMed article by PMID - title, authors, abstract, MeSH terms, keywords, DOI."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

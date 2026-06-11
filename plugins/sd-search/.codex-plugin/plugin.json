@@ -1,6 +1,6 @@
 {
   "name": "sd-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Search for academic papers on ScienceDirect. Use when the user wants to find papers by keyword on ScienceDirect/Elsevier.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use sd-search for an academic research task."
     ],
     "longDescription": "Search for academic papers on ScienceDirect. Use when the user wants to find papers by keyword on ScienceDirect/Elsevier."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

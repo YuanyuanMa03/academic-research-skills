@@ -1,6 +1,6 @@
 {
   "name": "pm-navigate-pages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Navigate PubMed search result pages or change sort order.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use pm-navigate-pages for an academic research task."
     ],
     "longDescription": "Navigate PubMed search result pages or change sort order."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

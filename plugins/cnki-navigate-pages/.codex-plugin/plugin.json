@@ -1,6 +1,6 @@
 {
   "name": "cnki-navigate-pages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Navigate CNKI search result pages (next/previous/specific page) or change sort order. Use when user wants to see more results or change sorting.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use cnki-navigate-pages for an academic research task."
     ],
     "longDescription": "Navigate CNKI search result pages (next/previous/specific page) or change sort order. Use when user wants to see more results or change sorting."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

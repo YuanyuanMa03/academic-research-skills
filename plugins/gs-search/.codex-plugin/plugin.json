@@ -1,6 +1,6 @@
 {
   "name": "gs-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Search Google Scholar for academic papers by keywords. Returns results with title, authors, journal, year, citation count, and full-text links. Use when the user wants to search Google Scholar.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use gs-search for an academic research task."
     ],
     "longDescription": "Search Google Scholar for academic papers by keywords. Returns results with title, authors, journal, year, citation count, and full-text links. Use when the user wants to search Google Scholar."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

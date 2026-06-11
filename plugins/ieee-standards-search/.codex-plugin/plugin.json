@@ -1,6 +1,6 @@
 {
   "name": "ieee-standards-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Search IEEE SA for IEEE/ANSI standards and find IEC/ISO counterparts.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use ieee-standards-search for an academic research task."
     ],
     "longDescription": "Search IEEE SA for IEEE/ANSI standards and find IEC/ISO counterparts."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

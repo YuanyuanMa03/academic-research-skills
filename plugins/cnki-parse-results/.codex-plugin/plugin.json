@@ -1,6 +1,6 @@
 {
   "name": "cnki-parse-results",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parse current CNKI search results page into structured paper data (title, authors, journal, date, citations). Use after a search has been performed and you need to extract the results.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use cnki-parse-results for an academic research task."
     ],
     "longDescription": "Parse current CNKI search results page into structured paper data (title, authors, journal, date, citations). Use after a search has been performed and you need to extract the results."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

@@ -1,6 +1,6 @@
 {
   "name": "cnki-paper-detail",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extract full paper details from a CNKI paper page including title, authors, affiliations, abstract, keywords, fund, classification. Use when the user needs detailed information about a specific paper.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use cnki-paper-detail for an academic research task."
     ],
     "longDescription": "Extract full paper details from a CNKI paper page including title, authors, affiliations, abstract, keywords, fund, classification. Use when the user needs detailed information about a specific paper."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

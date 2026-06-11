@@ -1,6 +1,6 @@
 {
   "name": "cnki-advanced-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Perform advanced search on CNKI with field filters like author, title, journal, date range, source category (SCI/EI/CSSCI/北大核心). Use when user needs precise filtered search beyond simple keywords.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use cnki-advanced-search for an academic research task."
     ],
     "longDescription": "Perform advanced search on CNKI with field filters like author, title, journal, date range, source category (SCI/EI/CSSCI/北大核心). Use when user needs precise filtered search beyond simple keywords."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

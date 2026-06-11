@@ -1,6 +1,6 @@
 {
   "name": "cnki-export",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Export paper from CNKI and push to Zotero, or save as RIS file. Use when user wants to save a paper to Zotero or export citation data.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use cnki-export for an academic research task."
     ],
     "longDescription": "Export paper from CNKI and push to Zotero, or save as RIS file. Use when user wants to save a paper to Zotero or export citation data."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }

@@ -1,6 +1,6 @@
 {
   "name": "pm-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Search PubMed for biomedical literature by keywords. Returns structured results with PMID, title, authors, journal, date, DOI.",
   "author": {
     "name": "YuanyuanMa03"
@@ -16,12 +16,14 @@
     "capabilities": [
       "Read",
       "Write",
-      "Shell"
+      "Shell",
+      "MCP"
     ],
     "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
     "defaultPrompt": [
       "Use pm-search for an academic research task."
     ],
     "longDescription": "Search PubMed for biomedical literature by keywords. Returns structured results with PMID, title, authors, journal, date, DOI."
-  }
+  },
+  "mcpServers": "./.mcp.json"
 }
