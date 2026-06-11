@@ -111,6 +111,14 @@ codex
 **Install plugin**。安装完成后新开一个 Codex 线程使用。你可以用 `@`
 显式调用某个插件或 skill，也可以直接描述任务，让 Codex 根据描述自动选择。
 
+也可以直接用 CLI 安装某个插件：
+
+```bash
+codex plugin add nature-academic-search@academic-research-skills
+codex plugin add cnki-search@academic-research-skills
+codex plugin add gs-search@academic-research-skills
+```
+
 常用 marketplace 管理命令：
 
 ```bash

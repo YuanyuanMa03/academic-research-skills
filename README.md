@@ -136,6 +136,14 @@ need, and select **Install plugin**. Start a new Codex thread after installing.
 You can invoke a skill explicitly with `@` or let Codex choose it from the task
 description.
 
+You can also install a plugin directly from the CLI:
+
+```bash
+codex plugin add nature-academic-search@academic-research-skills
+codex plugin add cnki-search@academic-research-skills
+codex plugin add gs-search@academic-research-skills
+```
+
 Useful marketplace maintenance commands:
 
 ```bash
