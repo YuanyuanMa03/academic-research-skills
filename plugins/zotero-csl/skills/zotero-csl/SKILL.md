@@ -2,6 +2,7 @@
 name: csl
 description: 根据用户描述的引用格式，生成 Zotero 可用的 CSL 样式文件
 argument-hint: "[引用格式描述，如：GB/T 7714、APA、自定义格式说明]"
+version: 0.1.0
 user-invocable: true
 ---
 

@@ -2,6 +2,7 @@
 name: ieee-navigate-pages
 description: Navigates pages, changes sort order, or adjusts results per page on IEEE Xplore search results. Use when the user wants to go to the next page, sort by date or citations, or change results per page.
 argument-hint: "[next|prev|page N|sort by date|show 50]"
+version: 0.1.0
 ---
 
 # IEEE Xplore Pagination & Sorting

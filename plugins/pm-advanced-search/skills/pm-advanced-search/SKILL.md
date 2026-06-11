@@ -2,6 +2,7 @@
 name: pm-advanced-search
 description: Perform advanced PubMed search with field qualifiers - author, title, journal, MeSH, date range, article type. Constructs proper PubMed query syntax from natural language. Use for precise filtered searches.
 argument-hint: "[describe search criteria in natural language]"
+version: 0.1.0
 ---
 
 # PubMed Advanced Search

@@ -2,6 +2,7 @@
 name: cnki-export
 description: Export paper from CNKI and push to Zotero, or save as RIS file. Use when user wants to save a paper to Zotero or export citation data.
 argument-hint: "[zotero|ris|gb] [paper URL or blank if on detail page]"
+version: 0.1.0
 ---
 
 # CNKI Export & Zotero Integration

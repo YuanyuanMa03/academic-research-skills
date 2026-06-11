@@ -2,6 +2,7 @@
 name: sd-paper-detail
 description: Extract full metadata from a ScienceDirect article page (abstract, authors, keywords, DOI, references, PDF link). Use when the user wants details about a specific paper.
 argument-hint: "[PII or article URL]"
+version: 0.1.0
 ---
 
 # ScienceDirect Paper Detail Extraction

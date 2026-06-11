@@ -7,6 +7,8 @@ description: >-
   restricted or sensitive data, source data, supplementary datasets, DataCite-style dataset
   references, FAIR metadata for academic publication, or Chinese-to-English data availability
   wording for Chinese-speaking authors preparing Nature-family submissions.
+argument-hint: "[data availability statement or repository plan request]"
+version: 0.1.0
 ---
 
 # Nature Data Availability Skill

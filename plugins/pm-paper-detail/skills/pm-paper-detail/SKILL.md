@@ -2,6 +2,7 @@
 name: pm-paper-detail
 description: Get full paper details for a PubMed article by PMID - title, authors with affiliations, abstract, MeSH terms, keywords, publication types, DOI, and citation info. Use when user needs detailed information about a specific paper.
 argument-hint: "[PMID]"
+version: 0.1.0
 ---
 
 # PubMed Paper Detail
@@ -117,7 +118,9 @@ async () => {
 }
 ```
 
-### 3. Format and present
+### 3. Format and present output
+
+## Output
 
 ```
 ## {title}

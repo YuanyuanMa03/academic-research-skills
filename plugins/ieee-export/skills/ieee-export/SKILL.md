@@ -2,6 +2,7 @@
 name: ieee-export
 description: Exports citations from IEEE Xplore in RIS, BibTeX, or plain text format. Supports pushing to Zotero. Use when the user wants to export or save citation data for papers.
 argument-hint: "[article number(s)] [format: ris|bibtex|text] [zotero]"
+version: 0.1.0
 ---
 
 # IEEE Xplore Citation Export

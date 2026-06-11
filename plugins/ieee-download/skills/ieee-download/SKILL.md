@@ -2,6 +2,7 @@
 name: ieee-download
 description: Downloads PDF from IEEE Xplore articles. Requires institutional or subscriber access. Use when the user wants to download a paper PDF by article number.
 argument-hint: "[article number(s) or URL]"
+version: 0.1.0
 disable-model-invocation: true
 ---
 

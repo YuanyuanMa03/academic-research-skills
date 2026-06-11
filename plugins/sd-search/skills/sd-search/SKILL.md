@@ -2,6 +2,7 @@
 name: sd-search
 description: Search for academic papers on ScienceDirect. Use when the user wants to find papers by keyword on ScienceDirect/Elsevier.
 argument-hint: "[search keywords]"
+version: 0.1.0
 ---
 
 # ScienceDirect Basic Search

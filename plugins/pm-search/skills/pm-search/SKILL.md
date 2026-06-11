@@ -2,6 +2,7 @@
 name: pm-search
 description: Search PubMed for biomedical literature by keywords. Returns structured results with PMID, title, authors, journal, date, DOI. Use when the user wants to find papers on a topic.
 argument-hint: "[search keywords]"
+version: 0.1.0
 ---
 
 # PubMed Basic Search

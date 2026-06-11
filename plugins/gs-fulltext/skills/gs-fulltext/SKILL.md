@@ -2,6 +2,7 @@
 name: gs-fulltext
 description: Get full-text access links for a Google Scholar paper - PDF, DOI, Sci-Hub, and publisher links. Use when user wants to read or download a paper's full text.
 argument-hint: "[data-cid or result number from previous search]"
+version: 0.1.0
 ---
 
 # Google Scholar Full Text Access

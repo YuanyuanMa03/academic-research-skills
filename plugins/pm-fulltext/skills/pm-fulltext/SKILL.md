@@ -2,6 +2,7 @@
 name: pm-fulltext
 description: Find full-text download links for a PubMed paper by PMID - DOI, PMC open access, Sci-Hub, and publisher links. Use when user wants to read or download a paper's full text.
 argument-hint: "[PMID]"
+version: 0.1.0
 ---
 
 # PubMed Full Text Links

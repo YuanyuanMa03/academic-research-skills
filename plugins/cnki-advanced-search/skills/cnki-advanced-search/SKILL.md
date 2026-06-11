@@ -2,6 +2,7 @@
 name: cnki-advanced-search
 description: Perform advanced search on CNKI with field filters like author, title, journal, date range, source category (SCI/EI/CSSCI/北大核心). Use when user needs precise filtered search beyond simple keywords.
 argument-hint: "[describe search criteria in natural language]"
+version: 0.1.0
 ---
 
 # CNKI Advanced Search (高级检索)

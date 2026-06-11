@@ -2,6 +2,7 @@
 name: ieee-standards-search
 description: Searches IEEE SA (standards.ieee.org) for IEEE/ANSI standards. Use when the user wants to find IEEE standards, or when searching for IEC/ISO standard counterparts in the IEEE ecosystem.
 argument-hint: "[standard number or keywords]"
+version: 0.1.0
 ---
 
 # IEEE SA Standards Search

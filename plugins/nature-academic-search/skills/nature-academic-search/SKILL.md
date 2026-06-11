@@ -6,6 +6,8 @@ description: >-
   (BibTeX, related articles, ID conversion) via MCP tools (PubMed, CrossRef, arXiv).
   Use when the user needs coordinated multi-step literature workflows beyond a
   single MCP call.
+argument-hint: "[literature search, citation, MeSH, or reference-management request]"
+version: 0.1.0
 ---
 
 # Academic Search

@@ -2,6 +2,7 @@
 name: cnki-journal-index
 description: Query journal indexing/inclusion status on CNKI - check which databases include a journal (北大核心, CSSCI, CSCD, SCI, EI, etc.), get impact factors and evaluation data. Use when user asks about a journal's level, indexing, or ranking.
 argument-hint: "[journal name or journal detail URL]"
+version: 0.1.0
 ---
 
 # CNKI Journal Indexing Query (收录查询)

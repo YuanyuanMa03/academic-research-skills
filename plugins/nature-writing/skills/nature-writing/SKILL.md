@@ -1,6 +1,7 @@
 ---
 name: nature-writing
 description: Draft, restructure, or plan Nature-style manuscript sections from author-provided claims, results, figures, notes, or Chinese drafts. Use when the user wants to write or rebuild an abstract, introduction, results narrative, discussion, conclusion, title, or full manuscript argument rather than only polish finished prose.
+argument-hint: "[manuscript section brief, claims, figures, or notes]"
 version: 0.2.0
 author: Community contribution based on curated Nature/Nature Communications writing patterns and open research-writing notes
 ---

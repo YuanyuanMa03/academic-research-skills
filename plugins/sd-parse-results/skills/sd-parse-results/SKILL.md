@@ -1,6 +1,8 @@
 ---
 name: sd-parse-results
 description: Re-parse the currently open ScienceDirect search results page. Internal skill used by other skills.
+argument-hint: "[current ScienceDirect results page or exported result HTML]"
+version: 0.1.0
 user-invokable: false
 ---
 

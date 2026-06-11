@@ -2,6 +2,7 @@
 name: wos-export
 description: Export WoS records to Zotero, RIS, BibTeX, or Excel.
 argument-hint: "[zotero/ris/bibtex/excel] [WoS IDs or 'current']"
+version: 0.1.0
 user-invocable: true
 disable-model-invocation: true
 ---

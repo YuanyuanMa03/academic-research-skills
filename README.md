@@ -118,6 +118,9 @@ cp -R academic-research-skills/plugins/*/skills/* ~/.copilot/skills/
 
 ### Codex
 
+This repository is a multi-skill collection. Do not install the repository root
+as a single Codex skill; install the directories under `plugins/*/skills/*`.
+
 ```bash
 git clone https://github.com/YuanyuanMa03/academic-research-skills.git
 mkdir -p ~/.codex/skills
@@ -179,6 +182,15 @@ cp -R academic-research-skills/plugins/wos-search/skills/wos-search ~/.codex/ski
 ```
 
 Skills load natively in Codex — just follow the instructions in SKILL.md.
+
+If you use a GitHub-based Codex skill installer, pass the nested skill path
+instead of the repository root, for example:
+
+```bash
+python3 /path/to/install-skill-from-github.py \
+  --repo YuanyuanMa03/academic-research-skills \
+  --path plugins/nature-academic-search/skills/nature-academic-search
+```
 
 | Skill tool | Codex equivalent |
 |------------|------------------|

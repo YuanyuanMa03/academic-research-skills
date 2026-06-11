@@ -2,6 +2,7 @@
 name: gs-cited-by
 description: Find papers that cite a given Google Scholar paper. Tracks citation chains using data-cid (cluster ID). Use when user wants to see who cited a specific paper.
 argument-hint: "[data-cid or paper title to look up]"
+version: 0.1.0
 ---
 
 # Google Scholar — Cited By (Citation Tracking)

@@ -2,6 +2,7 @@
 name: sd-export
 description: Export citations from ScienceDirect in RIS, BibTeX, or plain text format. Supports pushing to Zotero.
 argument-hint: "[PII(s)] [format: ris|bibtex|text] [zotero]"
+version: 0.1.0
 ---
 
 # ScienceDirect Citation Export

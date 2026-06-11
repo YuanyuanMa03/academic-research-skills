@@ -8,6 +8,8 @@ description: >-
   automatically get references, add citations to a paragraph/manuscript, find Nature-series or CNS
   support for statements, create text-to-reference correspondence, "分段引用", "自动给出引用",
   "Nature系列引用", "CNS及子刊", "支撑文献", "补引用", "找引用", or export EndNote/RIS/ENW/Zotero RDF.
+argument-hint: "[manuscript passage or claims needing Nature-style citations]"
+version: 0.1.0
 ---
 
 # Nature Citation

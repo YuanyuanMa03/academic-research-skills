@@ -2,6 +2,7 @@
 name: wos-paper-detail
 description: Get detailed information for a paper by WoS ID (e.g., WOS:000779183600001).
 argument-hint: "[WoS ID or full-record URL]"
+version: 0.1.0
 user-invocable: true
 disable-model-invocation: false
 ---

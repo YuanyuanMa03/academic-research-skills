@@ -2,6 +2,7 @@
 name: sd-navigate-pages
 description: Navigate pages, change sort order, or adjust results per page on ScienceDirect search results.
 argument-hint: "[next|prev|page N|sort by date|show 50]"
+version: 0.1.0
 ---
 
 # ScienceDirect Pagination & Sorting

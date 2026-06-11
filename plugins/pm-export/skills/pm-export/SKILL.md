@@ -2,6 +2,7 @@
 name: pm-export
 description: Export PubMed paper(s) to Zotero or save as RIS file. Supports single paper by PMID or batch export from search results. Use when user wants to save papers to their reference manager.
 argument-hint: "[PMID or space-separated PMIDs]"
+version: 0.1.0
 ---
 
 # PubMed Export to Zotero

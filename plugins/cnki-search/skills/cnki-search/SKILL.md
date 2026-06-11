@@ -2,6 +2,7 @@
 name: cnki-search
 description: Search CNKI (中国知网) for papers by keyword. Use when the user wants to find academic papers on a topic.
 argument-hint: "[search keywords]"
+version: 0.1.0
 ---
 
 # CNKI Basic Search

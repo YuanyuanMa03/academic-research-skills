@@ -1,6 +1,8 @@
 ---
 name: cnki-parse-results
 description: Parse current CNKI search results page into structured paper data (title, authors, journal, date, citations). Use after a search has been performed and you need to extract the results.
+argument-hint: "[current CNKI results page or exported result HTML]"
+version: 0.1.0
 user-invokable: false
 ---
 
