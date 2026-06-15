@@ -14,6 +14,7 @@ https://github.com/YuanyuanMa03/academic-research-skills
 ```
 
 Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek, or any LLM agent that can read GitHub repos.
+<img width="780" height="573" alt="image" src="https://github.com/user-attachments/assets/9e306fab-863e-436c-bb00-7af8ec212564" />
 
 ## Platforms
 
