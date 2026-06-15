@@ -14,6 +14,7 @@ https://github.com/YuanyuanMa03/academic-research-skills
 ```
 
 适用于 Claude Code、Copilot CLI、Codex、Gemini CLI、ChatGPT、通义千问、DeepSeek，或任何能读取 GitHub 仓库的 LLM agent。
+<img width="980" height="741" alt="image" src="https://github.com/user-attachments/assets/f1529dbd-c01c-4c69-9ff2-6634c5bef75a" />
 
 ## 支持平台
 
