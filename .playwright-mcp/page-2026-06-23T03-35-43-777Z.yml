@@ -1,0 +1,616 @@
+- generic [ref=e1]:
+  - link "Skip to main page content" [ref=e2] [cursor=pointer]:
+    - /url: "#search-results"
+  - generic [ref=e6]:
+    - img "U.S. flag" [ref=e7]
+    - paragraph [ref=e8]: An official website of the United States government
+    - button "Here's how you know" [ref=e9] [cursor=pointer]
+  - banner [ref=e10]:
+    - generic [ref=e12]:
+      - link "NCBI Logo" [ref=e14] [cursor=pointer]:
+        - /url: https://www.ncbi.nlm.nih.gov/
+        - img "NIH NLM Logo" [ref=e15]
+      - link "Log in" [ref=e17] [cursor=pointer]:
+        - /url: https://account.ncbi.nlm.nih.gov/?back_url=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F%3Fterm%3Dagricultural%2Blarge%2Bmodels
+  - navigation "access keys":
+    - link "Access keys" [ref=e18] [cursor=pointer]:
+      - /url: https://www.ncbi.nlm.nih.gov/guide/browsers/#ncbi_accesskeys
+    - link "NCBI Homepage" [ref=e19] [cursor=pointer]:
+      - /url: https://www.ncbi.nlm.nih.gov
+    - link "MyNCBI Homepage" [ref=e20] [cursor=pointer]:
+      - /url: /myncbi/
+    - link "Main Content" [ref=e21] [cursor=pointer]:
+      - /url: "#maincontent"
+    - link "Main Navigation" [ref=e22] [cursor=pointer]:
+      - /url: "#"
+  - navigation "Main page content below"
+  - main [ref=e23]:
+    - heading "Search Page" [level=1] [ref=e24]
+    - search [ref=e25]:
+      - generic [ref=e26]:
+        - link "Pubmed Logo" [ref=e27] [cursor=pointer]:
+          - /url: /
+          - img "pubmed logo" [ref=e28]
+        - search [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]: "Search:"
+            - generic [ref=e32]:
+              - combobox "Search:" [expanded] [active] [ref=e33]: agricultural large models
+              - status [ref=e34]: 0 results are available, use up and down arrow keys to navigate.
+            - button "Clear search input" [ref=e35] [cursor=pointer]
+            - button "Search" [ref=e36] [cursor=pointer]
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - link "Advanced" [ref=e39] [cursor=pointer]:
+              - /url: /advanced/
+            - link "Create alert" [ref=e40] [cursor=pointer]:
+              - /url: https://account.ncbi.nlm.nih.gov/?back_url=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F%3Fterm%3Dagricultural%2Blarge%2Bmodels%23open-saved-search-panel
+            - button "Create RSS" [ref=e41] [cursor=pointer]
+          - link "User Guide" [ref=e43] [cursor=pointer]:
+            - /url: /help/
+      - generic [ref=e45]:
+        - text: ()
+        - generic [ref=e46]:
+          - generic [ref=e48]:
+            - generic [ref=e49]: "Sort by:"
+            - combobox "Sort by" [ref=e50]:
+              - option "Best match" [selected]
+              - option "Most recent"
+              - option "Publication date"
+              - option "First author"
+              - option "Journal"
+          - generic [ref=e51]:
+            - button "Display options" [ref=e52] [cursor=pointer]:
+              - generic [ref=e53]: Display options
+            - option "Summary" [selected]
+            - option "Abstract"
+            - option "PubMed"
+            - option "PMID"
+            - option "10" [selected]
+            - option "20"
+            - option "50"
+            - option "100"
+            - option "200"
+        - region "save, email, send to" [ref=e54]:
+          - button "Save" [ref=e55] [cursor=pointer]
+          - button "Email" [ref=e56] [cursor=pointer]
+          - button "Send to" [ref=e58] [cursor=pointer]
+    - text: "* * * *"
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - heading "Filters" [level=2] [ref=e61]
+        - generic [ref=e63]:
+          - heading "My Custom Filters" [level=3] [ref=e64]
+          - link "Edit My Custom Filters" [ref=e65] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/sites/myncbi/pubmed/filters
+            - text: Edit custom filters
+        - generic [ref=e66]:
+          - heading "Results by year" [level=3] [ref=e67]
+          - button "Expand/collapse timeline" [ref=e68] [cursor=pointer]
+          - button "Download CSV" [ref=e69] [cursor=pointer]
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - img [ref=e72]
+              - text: ":"
+            - generic [ref=e258]:
+              - slider "Lower handle" [ref=e261]:
+                - generic [ref=e263]: "1966"
+              - slider "Upper handle" [ref=e264]:
+                - generic [ref=e266]: "2026"
+          - paragraph [ref=e267]: Table representation of search results timeline featuring number of search results per year.
+          - table "Table of search results timeline data" [ref=e268]:
+            - rowgroup [ref=e269]:
+              - row "Year Number of Results" [ref=e270]:
+                - columnheader "Year" [ref=e271]
+                - columnheader "Number of Results" [ref=e272]
+            - rowgroup [ref=e273]:
+              - row "1966 1" [ref=e274]:
+                - cell "1966" [ref=e275]
+                - cell "1" [ref=e276]
+              - row "1972 1" [ref=e277]:
+                - cell "1972" [ref=e278]
+                - cell "1" [ref=e279]
+              - row "1973 1" [ref=e280]:
+                - cell "1973" [ref=e281]
+                - cell "1" [ref=e282]
+              - row "1974 1" [ref=e283]:
+                - cell "1974" [ref=e284]
+                - cell "1" [ref=e285]
+              - row "1975 1" [ref=e286]:
+                - cell "1975" [ref=e287]
+                - cell "1" [ref=e288]
+              - row "1977 2" [ref=e289]:
+                - cell "1977" [ref=e290]
+                - cell "2" [ref=e291]
+              - row "1978 2" [ref=e292]:
+                - cell "1978" [ref=e293]
+                - cell "2" [ref=e294]
+              - row "1979 3" [ref=e295]:
+                - cell "1979" [ref=e296]
+                - cell "3" [ref=e297]
+              - row "1980 1" [ref=e298]:
+                - cell "1980" [ref=e299]
+                - cell "1" [ref=e300]
+              - row "1981 2" [ref=e301]:
+                - cell "1981" [ref=e302]
+                - cell "2" [ref=e303]
+              - row "1982 6" [ref=e304]:
+                - cell "1982" [ref=e305]
+                - cell "6" [ref=e306]
+              - row "1983 3" [ref=e307]:
+                - cell "1983" [ref=e308]
+                - cell "3" [ref=e309]
+              - row "1984 6" [ref=e310]:
+                - cell "1984" [ref=e311]
+                - cell "6" [ref=e312]
+              - row "1985 9" [ref=e313]:
+                - cell "1985" [ref=e314]
+                - cell "9" [ref=e315]
+              - row "1986 2" [ref=e316]:
+                - cell "1986" [ref=e317]
+                - cell "2" [ref=e318]
+              - row "1987 14" [ref=e319]:
+                - cell "1987" [ref=e320]
+                - cell "14" [ref=e321]
+              - row "1988 17" [ref=e322]:
+                - cell "1988" [ref=e323]
+                - cell "17" [ref=e324]
+              - row "1989 29" [ref=e325]:
+                - cell "1989" [ref=e326]
+                - cell "29" [ref=e327]
+              - row "1990 19" [ref=e328]:
+                - cell "1990" [ref=e329]
+                - cell "19" [ref=e330]
+              - row "1991 27" [ref=e331]:
+                - cell "1991" [ref=e332]
+                - cell "27" [ref=e333]
+              - row "1992 31" [ref=e334]:
+                - cell "1992" [ref=e335]
+                - cell "31" [ref=e336]
+              - row "1993 28" [ref=e337]:
+                - cell "1993" [ref=e338]
+                - cell "28" [ref=e339]
+              - row "1994 34" [ref=e340]:
+                - cell "1994" [ref=e341]
+                - cell "34" [ref=e342]
+              - row "1995 41" [ref=e343]:
+                - cell "1995" [ref=e344]
+                - cell "41" [ref=e345]
+              - row "1996 43" [ref=e346]:
+                - cell "1996" [ref=e347]
+                - cell "43" [ref=e348]
+              - row "1997 49" [ref=e349]:
+                - cell "1997" [ref=e350]
+                - cell "49" [ref=e351]
+              - row "1998 57" [ref=e352]:
+                - cell "1998" [ref=e353]
+                - cell "57" [ref=e354]
+              - row "1999 73" [ref=e355]:
+                - cell "1999" [ref=e356]
+                - cell "73" [ref=e357]
+              - row "2000 70" [ref=e358]:
+                - cell "2000" [ref=e359]
+                - cell "70" [ref=e360]
+              - row "2001 111" [ref=e361]:
+                - cell "2001" [ref=e362]
+                - cell "111" [ref=e363]
+              - row "2002 129" [ref=e364]:
+                - cell "2002" [ref=e365]
+                - cell "129" [ref=e366]
+              - row "2003 148" [ref=e367]:
+                - cell "2003" [ref=e368]
+                - cell "148" [ref=e369]
+              - row "2004 130" [ref=e370]:
+                - cell "2004" [ref=e371]
+                - cell "130" [ref=e372]
+              - row "2005 189" [ref=e373]:
+                - cell "2005" [ref=e374]
+                - cell "189" [ref=e375]
+              - row "2006 201" [ref=e376]:
+                - cell "2006" [ref=e377]
+                - cell "201" [ref=e378]
+              - row "2007 237" [ref=e379]:
+                - cell "2007" [ref=e380]
+                - cell "237" [ref=e381]
+              - row "2008 297" [ref=e382]:
+                - cell "2008" [ref=e383]
+                - cell "297" [ref=e384]
+              - row "2009 321" [ref=e385]:
+                - cell "2009" [ref=e386]
+                - cell "321" [ref=e387]
+              - row "2010 351" [ref=e388]:
+                - cell "2010" [ref=e389]
+                - cell "351" [ref=e390]
+              - row "2011 390" [ref=e391]:
+                - cell "2011" [ref=e392]
+                - cell "390" [ref=e393]
+              - row "2012 489" [ref=e394]:
+                - cell "2012" [ref=e395]
+                - cell "489" [ref=e396]
+              - row "2013 562" [ref=e397]:
+                - cell "2013" [ref=e398]
+                - cell "562" [ref=e399]
+              - row "2014 720" [ref=e400]:
+                - cell "2014" [ref=e401]
+                - cell "720" [ref=e402]
+              - row "2015 887" [ref=e403]:
+                - cell "2015" [ref=e404]
+                - cell "887" [ref=e405]
+              - row "2016 1020" [ref=e406]:
+                - cell "2016" [ref=e407]
+                - cell "1020" [ref=e408]
+              - row "2017 1108" [ref=e409]:
+                - cell "2017" [ref=e410]
+                - cell "1108" [ref=e411]
+              - row "2018 1186" [ref=e412]:
+                - cell "2018" [ref=e413]
+                - cell "1186" [ref=e414]
+              - row "2019 1304" [ref=e415]:
+                - cell "2019" [ref=e416]
+                - cell "1304" [ref=e417]
+              - row "2020 1503" [ref=e418]:
+                - cell "2020" [ref=e419]
+                - cell "1503" [ref=e420]
+              - row "2021 1732" [ref=e421]:
+                - cell "2021" [ref=e422]
+                - cell "1732" [ref=e423]
+              - row "2022 1972" [ref=e424]:
+                - cell "2022" [ref=e425]
+                - cell "1972" [ref=e426]
+              - row "2023 1925" [ref=e427]:
+                - cell "2023" [ref=e428]
+                - cell "1925" [ref=e429]
+              - row "2024 1947" [ref=e430]:
+                - cell "2024" [ref=e431]
+                - cell "1947" [ref=e432]
+              - row "2025 2419" [ref=e433]:
+                - cell "2025" [ref=e434]
+                - cell "2419" [ref=e435]
+              - row "2026 1470" [ref=e436]:
+                - cell "2026" [ref=e437]
+                - cell "1470" [ref=e438]
+        - generic [ref=e440]:
+          - group "Filters" [ref=e441]:
+            - generic [ref=e442]:
+              - heading "Publication date" [level=3] [ref=e443]
+              - list [ref=e444]:
+                - listitem [ref=e445]:
+                  - radio "1 year" [ref=e446]
+                  - generic [ref=e447] [cursor=pointer]: 1 year
+                - listitem [ref=e448]:
+                  - radio "5 years" [ref=e449]
+                  - generic [ref=e450] [cursor=pointer]: 5 years
+                - listitem [ref=e451]:
+                  - radio "10 years" [ref=e452]
+                  - generic [ref=e453] [cursor=pointer]: 10 years
+                - listitem [ref=e454]:
+                  - radio "Select to open a dropdown and enter a custom date range." [ref=e455]
+                  - generic "Select to open a dropdown and enter a custom date range." [ref=e456] [cursor=pointer]: Custom Range
+            - generic [ref=e457]:
+              - heading "Text availability" [level=3] [ref=e458]
+              - list [ref=e459]:
+                - listitem [ref=e460]:
+                  - checkbox "Abstract" [ref=e461]
+                  - generic [ref=e462] [cursor=pointer]: Abstract
+                - listitem [ref=e463]:
+                  - checkbox "Free full text" [ref=e464]
+                  - generic [ref=e465] [cursor=pointer]: Free full text
+                - listitem [ref=e466]:
+                  - checkbox "Full text" [ref=e467]
+                  - generic [ref=e468] [cursor=pointer]: Full text
+            - generic [ref=e469]:
+              - heading "Article attribute" [level=3] [ref=e470]
+              - list [ref=e471]:
+                - listitem [ref=e472]:
+                  - checkbox "Associated data" [ref=e473]
+                  - generic [ref=e474] [cursor=pointer]: Associated data
+            - generic [ref=e475]:
+              - heading "Article type" [level=3] [ref=e476]
+              - list [ref=e477]:
+                - listitem [ref=e478]:
+                  - checkbox "Books and Documents" [ref=e479]
+                  - generic [ref=e480] [cursor=pointer]: Books and Documents
+                - listitem [ref=e481]:
+                  - checkbox "Clinical Trial" [ref=e482]
+                  - generic [ref=e483] [cursor=pointer]: Clinical Trial
+                - listitem [ref=e484]:
+                  - checkbox "Meta-Analysis" [ref=e485]
+                  - generic [ref=e486] [cursor=pointer]: Meta-Analysis
+                - listitem [ref=e487]:
+                  - checkbox "Randomized Controlled Trial" [ref=e488]
+                  - generic [ref=e489] [cursor=pointer]: Randomized Controlled Trial
+                - listitem [ref=e490]:
+                  - checkbox "Review" [ref=e491]
+                  - generic [ref=e492] [cursor=pointer]: Review
+                - listitem [ref=e493]:
+                  - checkbox "Systematic Review" [ref=e494]
+                  - generic [ref=e495] [cursor=pointer]: Systematic Review
+              - button "See all article type filters" [ref=e496] [cursor=pointer]
+          - generic [ref=e497]:
+            - heading "Additional filters" [level=2] [ref=e498]
+            - button "Additional filters" [ref=e499] [cursor=pointer]
+          - generic [ref=e500]:
+            - button "Clear applied filters" [ref=e501] [cursor=pointer]
+            - button "Reset filters menu" [ref=e502] [cursor=pointer]
+      - heading "Search Results" [level=2] [ref=e503]
+      - generic [ref=e504]:
+        - text: …
+        - generic [ref=e505]:
+          - heading "20,882 results" [level=3] [ref=e508]
+          - generic [ref=e509]:
+            - button "Navigates to the first page of results." [disabled]:
+              - img "first page"
+            - button "Navigates to the previous page of results." [disabled]:
+              - img "previous page"
+            - generic [ref=e510]:
+              - generic [ref=e511]: Page
+              - spinbutton "page number input" [ref=e513]: "1"
+              - generic [ref=e514]: of 2,089
+            - button "Navigates to the next page of results." [ref=e515] [cursor=pointer]:
+              - img "next page" [ref=e516]
+            - button "Navigates to the last page of results." [ref=e517] [cursor=pointer]:
+              - img "last page" [ref=e518]
+        - text: ":"
+        - generic [ref=e519]:
+          - generic [ref=e520]: Select search result to email or save
+          - generic [ref=e522]:
+            - article [ref=e523]:
+              - generic [ref=e524]:
+                - checkbox "Select search result to email or save" [ref=e525]
+                - generic [ref=e527] [cursor=pointer]: "1"
+                - button "Cite" [ref=e530] [cursor=pointer]
+              - generic [ref=e532]:
+                - link "Assessment of off-road agricultural traction in situ using large scale machine learning and neurocomputing models." [ref=e533] [cursor=pointer]:
+                  - /url: /41006420/
+                - generic [ref=e534]:
+                  - generic [ref=e535]: Mwiti F, Gitau A, Mbuge D, Njoroge R, Antille DL, Khatti J.
+                  - generic [ref=e536]: "Sci Rep. 2025 Sep 26;15(1):33098. doi: 10.1038/s41598-025-17736-1."
+                  - generic [ref=e537]: "PMID: 41006420"
+                  - generic [ref=e538]: Free PMC article.
+                - generic [ref=e540]: "Artificial neuro-cognitive models can simulate human brain intelligence to enable accurate decision-making during complex agricultural operations in situ. ...The Anderson-Darling test confirmed the normality of the predictions ([Formula: see text] = 0.001), with bot …"
+            - article [ref=e541]:
+              - generic [ref=e542]:
+                - checkbox "Select search result to email or save" [ref=e543]
+                - generic [ref=e545] [cursor=pointer]: "2"
+                - button "Cite" [ref=e548] [cursor=pointer]
+              - generic [ref=e550]:
+                - link "The development and evaluation of agricultural question-answering systems based on large language models." [ref=e551] [cursor=pointer]:
+                  - /url: /41663434/
+                - generic [ref=e552]:
+                  - generic [ref=e553]: Eldem A, Eldem H.
+                  - generic [ref=e554]: "Sci Rep. 2026 Feb 9;16(1):5357. doi: 10.1038/s41598-026-35003-9."
+                  - generic [ref=e555]: "PMID: 41663434"
+                  - generic [ref=e556]: Free PMC article.
+                - generic [ref=e558]:
+                  - generic [ref=e559]: Large language models (LLMs) show superior performance in different fields. However, the applications of these models, which have shown superior performance in many studies, are still limited and incomplete in agriculture. ...The results obtained were
+                  - text: …
+            - article [ref=e560]:
+              - generic [ref=e561]:
+                - checkbox "Select search result to email or save" [ref=e562]
+                - generic [ref=e564] [cursor=pointer]: "3"
+                - button "Cite" [ref=e567] [cursor=pointer]
+              - generic [ref=e569]:
+                - link "Environment-coupled models of leaf metabolism." [ref=e570] [cursor=pointer]:
+                  - /url: /33492365/
+                - generic [ref=e571]:
+                  - generic [ref=e572]: Töpfer N.
+                  - generic [ref=e573]: "Biochem Soc Trans. 2021 Feb 26;49(1):119-129. doi: 10.1042/BST20200059."
+                  - generic [ref=e574]: "PMID: 33492365"
+                  - generic [ref=e575]: Free PMC article.
+                  - generic [ref=e576]: Review.
+                - generic [ref=e578]: With the increasing pressure to improve agricultural performance in current and future climates, these models have become important tools to improve our understanding of plant-environment interactions and to propel plant breeders efforts. This overview article revie …
+            - article [ref=e579]:
+              - generic [ref=e580]:
+                - checkbox "Select search result to email or save" [ref=e581]
+                - generic [ref=e583] [cursor=pointer]: "4"
+                - button "Cite" [ref=e586] [cursor=pointer]
+              - generic [ref=e588]:
+                - link "Modelling phosphorus uptake in microalgae." [ref=e589] [cursor=pointer]:
+                  - /url: /29666218/
+                - generic [ref=e590]:
+                  - generic [ref=e591]: Singh D, Nedbal L, Ebenhöh O.
+                  - generic [ref=e592]: "Biochem Soc Trans. 2018 Apr 17;46(2):483-490. doi: 10.1042/BST20170262."
+                  - generic [ref=e593]: "PMID: 29666218"
+                  - generic [ref=e594]: Review.
+                - generic [ref=e596]: Phosphorus (P) is an essential non-renewable nutrient that frequently limits plant growth. It is the foundation of modern agriculture and, to a large extent, demand for P is met from phosphate rock deposits which are limited and becoming increasingly scarce. ...In t …
+            - article [ref=e597]:
+              - generic [ref=e598]:
+                - checkbox "Select search result to email or save" [ref=e599]
+                - generic [ref=e601] [cursor=pointer]: "5"
+                - button "Cite" [ref=e604] [cursor=pointer]
+              - generic [ref=e606]:
+                - link "Gender-based differences in eco-efficient farming." [ref=e607] [cursor=pointer]:
+                  - /url: /40335544/
+                - generic [ref=e608]:
+                  - generic [ref=e609]: Fertő I, Baráth L, Bojnec Š.
+                  - generic [ref=e610]: "Sci Rep. 2025 May 7;15(1):15895. doi: 10.1038/s41598-025-00584-4."
+                  - generic [ref=e611]: "PMID: 40335544"
+                  - generic [ref=e612]: Free PMC article.
+                - generic [ref=e614]: Applying Data Envelopment Analysis and Blinder-Oaxaca decompositions, we reveal a consistent eco-efficiency advantage for women-headed farms, particularly at mid-quantiles of eco-efficiency distribution. This advantage is largely attributed to women's ability to optimize r …
+            - article [ref=e615]:
+              - generic [ref=e616]:
+                - checkbox "Select search result to email or save" [ref=e617]
+                - generic [ref=e619] [cursor=pointer]: "6"
+                - button "Cite" [ref=e622] [cursor=pointer]
+              - generic [ref=e624]:
+                - link "What drives bat activity at field boundaries?" [ref=e625] [cursor=pointer]:
+                  - /url: /36577300/
+                - generic [ref=e626]:
+                  - generic [ref=e627]: Foxley T, Lintott P, Stone E.
+                  - generic [ref=e628]: "J Environ Manage. 2023 Mar 1;329:117029. doi: 10.1016/j.jenvman.2022.117029. Epub 2022 Dec 26."
+                  - generic [ref=e629]: "PMID: 36577300"
+                  - generic [ref=e630]: Free article.
+                - generic [ref=e632]: We validated our models with k-fold cross-validation and explored the utility of our models for predicting bat activity at new sites. ...Still, bat activity was highly variable and predictive error was high. We found a large spatial effect driving activity pa …
+            - article [ref=e633]:
+              - generic [ref=e634]:
+                - checkbox "Select search result to email or save" [ref=e635]
+                - generic [ref=e637] [cursor=pointer]: "7"
+                - button "Cite" [ref=e640] [cursor=pointer]
+              - generic [ref=e642]:
+                - link "AI-Driven Validation of Digital Agriculture Models." [ref=e643] [cursor=pointer]:
+                  - /url: /36772227/
+                - generic [ref=e644]:
+                  - generic [ref=e645]: Romero-Gainza E, Stewart C.
+                  - generic [ref=e646]: "Sensors (Basel). 2023 Jan 20;23(3):1187. doi: 10.3390/s23031187."
+                  - generic [ref=e647]: "PMID: 36772227"
+                  - generic [ref=e648]: Free PMC article.
+                - generic [ref=e650]: Effective digital agriculture models can detect problems early, reducing costs significantly. However, ineffective models can be counterproductive. ...However, in large fields, farmers can spot check too few areas, leading them to wrongly believe that …
+            - article [ref=e651]:
+              - generic [ref=e652]:
+                - checkbox "Select search result to email or save" [ref=e653]
+                - generic [ref=e655] [cursor=pointer]: "8"
+                - button "Cite" [ref=e658] [cursor=pointer]
+              - generic [ref=e660]:
+                - 'link "Enhancing Agricultural Sustainability Through Rhizomicrobiome: A Review." [ref=e661] [cursor=pointer]':
+                  - /url: /38899609/
+                - generic [ref=e662]:
+                  - generic [ref=e663]: Behera PR, Behera KK, Sethi G, Prabina BJ, Bai AT, Sipra BS, Adarsh V, Das S, Behera KC, Singh L, Mishra MK, Behera M.
+                  - generic [ref=e664]: "J Basic Microbiol. 2024 Nov;64(11):e2400100. doi: 10.1002/jobm.202400100. Epub 2024 Jun 20."
+                  - generic [ref=e665]: "PMID: 38899609"
+                  - generic [ref=e666]: Review.
+                - generic [ref=e668]: Yet, the mechanisms by which the RM contributes to sustainable agriculture remain largely unknown. Investigating this microbial population presents a significant opportunity to advance toward sustainable agriculture. Hence, this study aims to provide an overv …
+            - article [ref=e669]:
+              - generic [ref=e670]:
+                - checkbox "Select search result to email or save" [ref=e671]
+                - generic [ref=e673] [cursor=pointer]: "9"
+                - button "Cite" [ref=e676] [cursor=pointer]
+              - generic [ref=e678]:
+                - link "Environmental filtering drives the assembly of mammal communities in a heterogeneous Mediterranean region." [ref=e679] [cursor=pointer]:
+                  - /url: /36546604/
+                - generic [ref=e680]:
+                  - generic [ref=e681]: Suárez-Tangil BD, Rodríguez A.
+                  - generic [ref=e682]: "Ecol Appl. 2023 Mar;33(2):e2801. doi: 10.1002/eap.2801. Epub 2023 Jan 8."
+                  - generic [ref=e683]: "PMID: 36546604"
+                  - generic [ref=e684]: Review.
+                - generic [ref=e686]: We used multiple detection methods to record the occurrence of medium-sized and large-sized mammals in three managed landscapes of a heterogeneous Mediterranean region. ...Our results suggest that further removal of shrubland, the expansion of intensive agriculture, …
+            - article [ref=e687]:
+              - generic [ref=e688]:
+                - checkbox "Select search result to email or save" [ref=e689]
+                - generic [ref=e691] [cursor=pointer]: "10"
+                - button "Cite" [ref=e694] [cursor=pointer]
+              - generic [ref=e696]:
+                - link "Progress in modelling agricultural impacts of and adaptations to climate change." [ref=e697] [cursor=pointer]:
+                  - /url: /29866444/
+                - generic [ref=e698]:
+                  - generic [ref=e699]: Rötter RP, Hoffmann MP, Koch M, Müller C.
+                  - generic [ref=e700]: "Curr Opin Plant Biol. 2018 Oct;45(Pt B):255-261. doi: 10.1016/j.pbi.2018.05.009. Epub 2018 Jun 1."
+                  - generic [ref=e701]: "PMID: 29866444"
+                  - generic [ref=e702]: Review.
+                - generic [ref=e704]:
+                  - generic [ref=e705]: Modelling is a key tool to explore agricultural impacts of and adaptations to climate change. Here we report recent progress made especially referring to the large project initiatives MACSUR and AgMIP; in particular, in modelling potential crop impacts
+                  - text: …
+            - generic:
+              - option "AMA"
+              - option "APA"
+              - option "MLA"
+              - option "NLM" [selected]
+          - generic [ref=e706]:
+            - generic [ref=e707]: 20,882 results
+            - button "Show more results" [ref=e708] [cursor=pointer]
+          - option "AMA"
+          - option "APA"
+          - option "MLA"
+          - option "NLM" [selected]
+        - generic [ref=e709]:
+          - button "Navigates to the first page of results." [disabled]:
+            - img "first page"
+            - generic: First
+          - button "Navigates to the previous page of results." [disabled]:
+            - img "previous page"
+            - generic: Prev
+          - generic [ref=e710]:
+            - generic [ref=e711]: Page
+            - spinbutton "page number input" [ref=e713]: "1"
+            - generic [ref=e714]: of 2,089
+          - button "Navigates to the next page of results." [ref=e715] [cursor=pointer]:
+            - generic [ref=e716]: Next
+            - img "next page" [ref=e717]
+          - button "Navigates to the last page of results." [ref=e718] [cursor=pointer]:
+            - generic [ref=e719]: Last
+            - img "last page" [ref=e720]
+  - generic [ref=e721]:
+    - complementary "Links to NCBI Literature Resources" [ref=e722]:
+      - generic [ref=e723]:
+        - paragraph [ref=e724]: NCBI Literature Resources
+        - paragraph [ref=e725]:
+          - link "MeSH" [ref=e726] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/mesh/
+          - link "PMC" [ref=e727] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/pmc/
+          - link "Bookshelf" [ref=e728] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/books
+          - link "Disclaimer" [ref=e729] [cursor=pointer]:
+            - /url: /disclaimer/
+        - paragraph [ref=e730]: The PubMed wordmark and PubMed logo are registered trademarks of the U.S. Department of Health and Human Services (HHS). Unauthorized use of these marks is strictly prohibited.
+    - contentinfo [ref=e731]:
+      - generic [ref=e732]:
+        - generic [ref=e733]: Follow NCBI
+        - generic [ref=e735]:
+          - link "Twitter" [ref=e736] [cursor=pointer]:
+            - /url: https://twitter.com/ncbi
+            - img "Twitter" [ref=e737]
+          - link "Facebook" [ref=e740] [cursor=pointer]:
+            - /url: https://www.facebook.com/ncbi.nlm
+            - img "Facebook" [ref=e741]
+          - link "LinkedIn" [ref=e742] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/ncbinlm
+            - img "LinkedIn" [ref=e743]
+          - link "GitHub" [ref=e744] [cursor=pointer]:
+            - /url: https://github.com/ncbi
+            - img "GitHub" [ref=e745]
+          - link "Blog" [ref=e748] [cursor=pointer]:
+            - /url: https://ncbiinsights.ncbi.nlm.nih.gov/
+            - img [ref=e749]
+      - generic [ref=e752]:
+        - generic [ref=e753]:
+          - generic [ref=e754]:
+            - paragraph [ref=e755]:
+              - link "Connect with NLM" [ref=e756] [cursor=pointer]:
+                - /url: https://www.nlm.nih.gov/socialmedia/index.html
+            - list [ref=e757]:
+              - listitem [ref=e758]:
+                - link "Twitter" [ref=e759] [cursor=pointer]:
+                  - /url: https://twitter.com/NLM_NIH
+                  - img "Twitter" [ref=e760]
+              - listitem [ref=e764]:
+                - link "Facebook" [ref=e765] [cursor=pointer]:
+                  - /url: https://www.facebook.com/nationallibraryofmedicine
+                  - img "SM-Facebook" [ref=e766]
+              - listitem [ref=e771]:
+                - link "Youtube" [ref=e772] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/NLMNIH
+                  - img "SM-Youtube" [ref=e773]
+          - paragraph [ref=e778]:
+            - text: National Library of Medicine
+            - link "8600 Rockville Pike Bethesda, MD 20894" [ref=e779] [cursor=pointer]:
+              - /url: https://www.google.com/maps/place/8600+Rockville+Pike,+Bethesda,+MD+20894/@38.9959508,-77.101021,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c95e25765ddb:0x19156f88b27635b8!8m2!3d38.9959508!4d-77.0988323
+              - text: 8600 Rockville Pike
+              - text: Bethesda, MD 20894
+          - paragraph [ref=e781]:
+            - link "Web Policies" [ref=e782] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/web_policies.html
+            - link "FOIA" [ref=e783] [cursor=pointer]:
+              - /url: https://www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/freedom-information-act-office
+            - link "HHS Vulnerability Disclosure" [ref=e784] [cursor=pointer]:
+              - /url: https://www.hhs.gov/vulnerability-disclosure-policy/index.html
+          - paragraph [ref=e786]:
+            - link "Help" [ref=e787] [cursor=pointer]:
+              - /url: https://support.nlm.nih.gov/?pagename=pubmed%3Apubmed%3Asearchresult%3ANONE
+            - link "Accessibility" [ref=e788] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/accessibility.html
+            - link "Careers" [ref=e789] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/careers/careers.html
+        - navigation [ref=e792]:
+          - list [ref=e793]:
+            - listitem [ref=e794]:
+              - link "NLM" [ref=e795] [cursor=pointer]:
+                - /url: //www.nlm.nih.gov/
+            - listitem [ref=e796]:
+              - link "NIH" [ref=e797] [cursor=pointer]:
+                - /url: https://www.nih.gov/
+            - listitem [ref=e798]:
+              - link "HHS" [ref=e799] [cursor=pointer]:
+                - /url: https://www.hhs.gov/
+            - listitem [ref=e800]:
+              - link "USA.gov" [ref=e801] [cursor=pointer]:
+                - /url: https://www.usa.gov/

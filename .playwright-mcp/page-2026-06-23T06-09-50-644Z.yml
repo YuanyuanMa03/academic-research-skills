@@ -1,0 +1,251 @@
+- generic [active] [ref=e2]:
+  - main [ref=e4]:
+    - heading "WOS Top Header" [level=1] [ref=e5]
+    - generic [ref=e6]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - button "Clarivate" [ref=e11] [cursor=pointer]:
+            - img [ref=e12]
+          - generic [ref=e14]:
+            - generic:
+              - generic:
+                - button "Skip navigation menu skipToNav":
+                  - img [ref=e15]: expand_more
+                  - generic [ref=e16]:
+                    - text: Skip navigation menu
+                    - generic [ref=e17]: skipToNav
+            - button "Language dropdown. English selected" [ref=e18]:
+              - generic [ref=e19]: English
+              - img [ref=e20]:
+                - img [ref=e21]
+            - button "Web of Science products dropdown" [ref=e27]:
+              - img [ref=e28]: apps
+              - generic [ref=e29]: Products
+        - generic [ref=e32]:
+          - link "Web of Science header logo. Click to return to home page" [ref=e34] [cursor=pointer]:
+            - /url: /wos/
+            - text: Web of Science
+            - superscript [ref=e35]: ™
+          - navigation "Navigation Bar" [ref=e36]:
+            - generic [ref=e37]:
+              - navigation "Main Nav tab landmark" [ref=e38]:
+                - generic [ref=e41]:
+                  - link "Smart Search" [ref=e42] [cursor=pointer]:
+                    - /url: /wos/woscc/smart-search
+                    - generic [ref=e44]: Smart Search
+                  - link "Advanced Search" [ref=e45] [cursor=pointer]:
+                    - /url: /wos/woscc/basic-search
+                    - generic [ref=e47]: Advanced Search
+                  - generic [ref=e48]:
+                    - generic [ref=e49]:
+                      - img [ref=e50]:
+                        - img [ref=e51]
+                      - text: Research Assistant
+                    - img [ref=e55] [cursor=pointer]:
+                      - img [ref=e56]
+              - generic [ref=e59]:
+                - button "Sign In" [ref=e60]:
+                  - generic [ref=e61]: Sign In
+                  - img [ref=e62]:
+                    - img [ref=e63]
+                - button "Register" [ref=e68]:
+                  - generic [ref=e69]: Register
+      - generic [ref=e72]:
+        - navigation "Flyout side navigation menu" [ref=e74]:
+          - generic [ref=e75]:
+            - button "MENU" [ref=e78] [cursor=pointer]:
+              - generic [ref=e79]:
+                - img [ref=e80]:
+                  - img [ref=e81]
+                - generic [ref=e83]: MENU
+            - button "Marked List" [ref=e84]:
+              - img [ref=e87] [cursor=pointer]:
+                - img [ref=e88]
+            - button "View your search history" [ref=e90]:
+              - img [ref=e93] [cursor=pointer]:
+                - img [ref=e94]
+            - button "Researcher Profile" [ref=e98]:
+              - img [ref=e101] [cursor=pointer]:
+                - img [ref=e102]
+            - button "Saved Searches and Alerts" [ref=e104]:
+              - img [ref=e107] [cursor=pointer]:
+                - img [ref=e108]
+        - generic [ref=e112]:
+          - generic [ref=e114]:
+            - heading "Advanced search" [level=1] [ref=e115]
+            - generic [ref=e116]:
+              - navigation "search tabs" [ref=e117]:
+                - link "DOCUMENTS" [ref=e118] [cursor=pointer]:
+                  - /url: /wos/woscc/basic-search
+                  - generic [ref=e119]: DOCUMENTS
+                - link "researcherSearchPage" [ref=e122] [cursor=pointer]:
+                  - /url: /wos/author/author-search
+                  - generic [ref=e123]: RESEARCHERS
+              - generic [ref=e127]:
+                - generic [ref=e128]:
+                  - generic "Search in:" [ref=e129]
+                  - generic "Select database" [ref=e130]:
+                    - combobox "Select database, Web of Science Core Collection" [ref=e131]:
+                      - generic [ref=e132]: Web of Science Core Collection
+                      - img [ref=e133]:
+                        - img [ref=e134]
+                - generic [ref=e137]:
+                  - generic [ref=e138]: "Editions:"
+                  - combobox "selectEdition, All" [ref=e140]:
+                    - generic [ref=e141]: All
+                    - img [ref=e142]:
+                      - img [ref=e143]
+              - generic [ref=e146]:
+                - navigation "Advanced Search Query Builder" [ref=e147]:
+                  - list [ref=e148]:
+                    - listitem [ref=e149]:
+                      - link "FIELDED SEARCH" [ref=e150] [cursor=pointer]:
+                        - /url: /wos/woscc/basic-search
+                        - generic [ref=e151]: FIELDED SEARCH
+                    - listitem [ref=e152]:
+                      - link "QUERY BUILDER" [ref=e153] [cursor=pointer]:
+                        - /url: /wos/woscc/advanced-search
+                        - generic [ref=e154]: QUERY BUILDER
+                    - listitem [ref=e155]:
+                      - link "CITED REFERENCES" [ref=e156] [cursor=pointer]:
+                        - /url: /wos/woscc/cited-reference-search
+                        - generic [ref=e157]: CITED REFERENCES
+                    - listitem [ref=e158]:
+                      - link "STRUCTURE" [ref=e159] [cursor=pointer]:
+                        - /url: /wos/woscc/structure-search
+                        - generic [ref=e160]: STRUCTURE
+                - generic [ref=e164]:
+                  - alert [ref=e364]: Please enter some text in the search field
+                  - generic [ref=e167]:
+                    - combobox "Select search field, Topic" [ref=e171]:
+                      - generic [ref=e172]: Topic
+                      - img [ref=e173]:
+                        - img [ref=e174]
+                    - generic [ref=e180]:
+                      - generic [ref=e181]: "Example: oil spill* mediterranean"
+                      - 'textbox "Search box 1 Topic, Example: oil spill* mediterranean" [ref=e183]'
+                  - generic [ref=e185]:
+                    - button "Add row" [ref=e186]:
+                      - img [ref=e187]: add
+                      - generic [ref=e188]: Add row
+                    - button "Add date range" [ref=e191]:
+                      - img [ref=e192]: add
+                      - generic [ref=e193]: Add date range
+                  - generic [ref=e196]:
+                    - button "Clear" [disabled] [ref=e197]:
+                      - img [ref=e198]: clear
+                      - generic [ref=e199]: Clear
+                    - button "Search" [ref=e202]:
+                      - generic [ref=e203]:
+                        - img [ref=e204]: search
+                        - text: Search
+            - generic [ref=e209]:
+              - heading "Sign in to Personalize your experience" [level=3] [ref=e211]:
+                - text: Sign in to
+                - text: Personalize your experience
+              - list [ref=e214]:
+                - listitem [ref=e215]: Save searches
+                - listitem [ref=e216]: Save and organize documents to lists
+                - listitem [ref=e217]: Receive alerts when new publications match your search
+                - listitem [ref=e218]: Manage your profile
+                - listitem [ref=e219]: Get alerted when your publications are cited
+                - listitem [ref=e220]: Get personalized suggested content
+              - button "Register now" [ref=e223]:
+                - generic [ref=e224]: Register now
+          - region "Home page widget" [ref=e227]:
+            - generic [ref=e233]:
+              - img [ref=e234]:
+                - img [ref=e235]
+              - generic [ref=e257]:
+                - paragraph [ref=e258]:
+                  - strong [ref=e259]: Jump back into your research - try out our personalized homepage dashboard.
+                - paragraph [ref=e260]:
+                  - text: Don't have an account?
+                  - link "Register for a new account" [ref=e261] [cursor=pointer]:
+                    - /url: /wos/my/register
+              - button "Sign in to access" [ref=e263]:
+                - generic [ref=e264]: Sign in to access
+      - generic [ref=e269]:
+        - strong [ref=e270]:
+          - generic [ref=e271]: Nanjing Agricultural University
+        - link "&#27426;&#36814;&#35775;&#38382;&#21335;&#20140;&#20892;&#19994;&#22823;&#23398;&#22270;&#20070;&#39302;" [ref=e273] [cursor=pointer]:
+          - /url: http://libwww.njau.edu.cn/
+          - img "&#27426;&#36814;&#35775;&#38382;&#21335;&#20140;&#20892;&#19994;&#22823;&#23398;&#22270;&#20070;&#39302;" [ref=e274]
+        - link "Produc Training" [ref=e276] [cursor=pointer]:
+          - /url: https://clarivate.com.cn/e-clarivate/wos.htm
+          - img "Produc Training" [ref=e277]
+      - generic [ref=e281]:
+        - generic [ref=e282]:
+          - img [ref=e284]:
+            - img [ref=e285]
+          - generic [ref=e287]: © 2026 Clarivate. All rights reserved.
+        - generic [ref=e288]:
+          - list [ref=e290]:
+            - listitem [ref=e291]:
+              - link "Legal Center" [ref=e292] [cursor=pointer]:
+                - /url: https://clarivate.com/legal-center/
+            - listitem [ref=e293]:
+              - link "Privacy Statement" [ref=e294] [cursor=pointer]:
+                - /url: https://clarivate.com/privacy-center/notices-policies/privacy-policy/
+            - listitem [ref=e295]:
+              - link "Copyright Notice" [ref=e296] [cursor=pointer]:
+                - /url: https://clarivate.com/legal-center/notices-policies/
+          - list [ref=e298]:
+            - listitem [ref=e299]:
+              - link "Training Portal" [ref=e300] [cursor=pointer]:
+                - /url: https://webofscience.zendesk.com/hc/en-us/categories/23290193729041-Training
+            - listitem [ref=e301]:
+              - link "Product Support" [ref=e302] [cursor=pointer]:
+                - /url: https://supportcenter.clarivate.com/s/product/webofscience
+            - listitem [ref=e303]:
+              - link "Newsletter" [ref=e304] [cursor=pointer]:
+                - /url: https://discover.clarivate.com/preferencecenter_en
+          - list [ref=e306]:
+            - listitem [ref=e307]:
+              - link "Cookie Policy" [ref=e308] [cursor=pointer]:
+                - /url: https://clarivate.com/privacy-center/notices-policies/cookie-notice/
+            - listitem [ref=e309]:
+              - link "Manage cookie preferences" [ref=e310] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=e311]:
+              - link "Data Correction" [ref=e313] [cursor=pointer]:
+                - /url: javascript:void(0)
+          - list [ref=e315]:
+            - listitem [ref=e316]:
+              - link "Accessibility" [ref=e317] [cursor=pointer]:
+                - /url: "https://support.proquest.com/s/article/Web-of-Science-Accessibility-Statement?language=en_US "
+            - listitem [ref=e318]:
+              - link "Help" [ref=e319] [cursor=pointer]:
+                - /url: https://webofscience.zendesk.com/hc/en-us
+            - listitem [ref=e320]:
+              - link "Terms of Use" [ref=e321] [cursor=pointer]:
+                - /url: https://clarivate.com/legal-center/terms-of-business/
+          - list [ref=e323]:
+            - listitem [ref=e324]:
+              - link "京ICP备20012568号 ICP Recordal Number 京公网安备 11010802032525号" [ref=e325] [cursor=pointer]:
+                - /url: https://beian.miit.gov.cn/
+                - text: 京ICP备20012568号
+                - img "ICP Recordal Number" [ref=e326]
+                - text: 京公网安备 11010802032525号
+            - listitem [ref=e327]:
+              - link "CBPDT Acknowledgement" [ref=e328] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem
+          - separator [ref=e330]
+          - list [ref=e332]:
+            - listitem [ref=e333]: Follow Us
+            - listitem [ref=e334]:
+              - link "Click to visit Web of Science on Twitter." [ref=e335] [cursor=pointer]:
+                - /url: https://x.com/ClarivateAG
+                - img [ref=e336]:
+                  - img [ref=e337]
+                - img [ref=e339]:
+                  - img [ref=e340]
+              - link "Click to visit Web of Science on Facebook." [ref=e342] [cursor=pointer]:
+                - /url: https://www.facebook.com/clarivateag
+                - img [ref=e343]:
+                  - img [ref=e344]
+                - img [ref=e346]:
+                  - img [ref=e347]
+  - button "Open Resource Center, 35 new notifications" [ref=e365] [cursor=pointer]:
+    - generic [ref=e367]: "35"

@@ -1,0 +1,1115 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: https://www.cnki.net/
+      - link "总库" [ref=e8] [cursor=pointer]:
+        - /url: https://kns.cnki.net/starter/index
+      - generic [ref=e9]:
+        - link "检索" [ref=e11] [cursor=pointer]:
+          - /url: https://kns.cnki.net/kns8s/search
+          - text: 检索
+        - link "CNKI AI" [ref=e14] [cursor=pointer]:
+          - /url: https://ai.cnki.net
+          - text: CNKI AI
+        - link "出版来源" [ref=e17] [cursor=pointer]:
+          - /url: https://navi.cnki.net/knavi/
+          - text: 出版来源
+        - link "我的CNKI" [ref=e20] [cursor=pointer]:
+          - /url: https://kns.cnki.net/myspace/collect
+          - text: 我的CNKI
+      - generic [ref=e23]:
+        - generic [ref=e28] [cursor=pointer]: 充值
+        - link "会员" [ref=e30] [cursor=pointer]:
+          - /url: https://member.cnki.net/
+  - generic [ref=e31]:
+    - generic [ref=e32]:
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic "主题" [ref=e39] [cursor=pointer]
+          - generic [ref=e41] [cursor=pointer]: ×
+          - textbox "中文文献、外文文献" [ref=e42]: 农业大模型
+          - link "#":
+            - /url: javascript:void(0)
+          - button [ref=e43] [cursor=pointer]
+          - link:
+            - /url: "#"
+        - link "结果中检索" [ref=e45] [cursor=pointer]:
+          - /url: javascript:void(0)
+      - generic [ref=e46]:
+        - generic:
+          - generic [ref=e47]:
+            - link "总库" [ref=e48] [cursor=pointer]:
+              - /url: javascript:void(0)
+              - generic [ref=e49]: 总库
+              - emphasis
+            - generic [ref=e50]:
+              - generic [ref=e51] [cursor=pointer]: 中文
+              - generic [ref=e52] [cursor=pointer]: 外文
+          - list [ref=e53]:
+            - listitem [ref=e54]:
+              - link "学术期刊" [ref=e55] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e56]: 学术期刊
+                - emphasis
+            - listitem [ref=e57]:
+              - link "学位论文" [ref=e58] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e59]: 学位论文
+                - emphasis
+            - listitem [ref=e60]:
+              - link "会议" [ref=e61] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e62]: 会议
+                - emphasis
+            - listitem [ref=e63]:
+              - link "报纸" [ref=e64] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e65]: 报纸
+                - emphasis
+            - listitem [ref=e66]:
+              - link "年鉴" [ref=e67] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e68]: 年鉴
+                - emphasis
+            - listitem [ref=e69]:
+              - link "图书" [ref=e70] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e71]: 图书
+                - emphasis
+            - listitem [ref=e72]:
+              - link "专利" [ref=e73] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e74]: 专利
+                - emphasis
+            - listitem [ref=e75]:
+              - link "标准" [ref=e76] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e77]: 标准
+                - emphasis
+            - listitem [ref=e78]:
+              - link "法律法规" [ref=e79] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e80]: 法律法规
+                - emphasis
+          - link "更多资源" [ref=e81] [cursor=pointer]:
+            - /url: javascript:void(0);
+    - generic [ref=e83]:
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - term [ref=e90]:
+            - generic "只对前4万条记录分组" [ref=e91]: 主题
+            - generic "可视化" [ref=e93] [cursor=pointer]
+          - term [ref=e94]:
+            - link "主要主题" [ref=e95] [cursor=pointer]:
+              - /url: javascript:void(0)
+            - link "次要主题" [ref=e96] [cursor=pointer]:
+              - /url: javascript:void(0)
+          - definition [ref=e97]:
+            - list [ref=e99]:
+              - listitem [ref=e100]:
+                - checkbox "大模型" [ref=e101] [cursor=pointer]
+                - link "大模型" [ref=e102] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e103] [cursor=pointer]: (10)
+              - listitem [ref=e104]:
+                - checkbox "农业大数据" [ref=e105] [cursor=pointer]
+                - link "农业大数据" [ref=e106] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e107] [cursor=pointer]: (9)
+              - listitem [ref=e108]:
+                - checkbox "智慧农业" [ref=e109] [cursor=pointer]
+                - link "智慧农业" [ref=e110] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e111] [cursor=pointer]: (7)
+              - listitem [ref=e112]:
+                - checkbox "农业大省" [ref=e113] [cursor=pointer]
+                - link "农业大省" [ref=e114] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e115] [cursor=pointer]: (4)
+              - listitem [ref=e116]:
+                - checkbox "DEA" [ref=e117] [cursor=pointer]
+                - link "DEA" [ref=e118] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e119] [cursor=pointer]: (3)
+              - listitem [ref=e120]:
+                - checkbox "农业大语言模型" [ref=e121] [cursor=pointer]
+                - link "农业大语言模型" [ref=e122] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e123] [cursor=pointer]: (2)
+              - listitem [ref=e124]:
+                - checkbox "人工智能" [ref=e125] [cursor=pointer]
+                - link "人工智能" [ref=e126] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e127] [cursor=pointer]: (2)
+              - listitem [ref=e128]:
+                - checkbox "河南省" [ref=e129] [cursor=pointer]
+                - link "河南省" [ref=e130] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e131] [cursor=pointer]: (2)
+              - listitem [ref=e132]:
+                - checkbox "农业大模型" [ref=e133] [cursor=pointer]
+                - link "农业大模型" [ref=e134] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e135] [cursor=pointer]: (2)
+              - listitem [ref=e136]:
+                - checkbox "大数据" [ref=e137] [cursor=pointer]
+                - link "大数据" [ref=e138] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e139] [cursor=pointer]: (2)
+        - generic [ref=e141]:
+          - term [ref=e142]:
+            - generic "只对前4万条记录分组" [ref=e143]: 学科
+            - generic "可视化" [ref=e145] [cursor=pointer]
+          - definition [ref=e146]:
+            - list [ref=e148]:
+              - listitem [ref=e149]:
+                - checkbox "计算机软件及计算机应用" [ref=e150] [cursor=pointer]
+                - link "计算机软件及计算机应用" [ref=e151] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e152] [cursor=pointer]: (22)
+              - listitem [ref=e153]:
+                - checkbox "农业经济" [ref=e154] [cursor=pointer]
+                - link "农业经济" [ref=e155] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e156] [cursor=pointer]: (21)
+              - listitem [ref=e157]:
+                - checkbox "农业基础科学" [ref=e158] [cursor=pointer]
+                - link "农业基础科学" [ref=e159] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e160] [cursor=pointer]: (21)
+              - listitem [ref=e161]:
+                - checkbox "自动化技术" [ref=e162] [cursor=pointer]
+                - link "自动化技术" [ref=e163] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e164] [cursor=pointer]: (11)
+              - listitem [ref=e165]:
+                - checkbox "植物保护" [ref=e166] [cursor=pointer]
+                - link "植物保护" [ref=e167] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e168] [cursor=pointer]: (7)
+              - listitem [ref=e169]:
+                - checkbox "宏观经济管理与可持续发展" [ref=e170] [cursor=pointer]
+                - link "宏观经济管理与可持续发展" [ref=e171] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e172] [cursor=pointer]: (7)
+              - listitem [ref=e173]:
+                - checkbox "信息经济与邮政经济" [ref=e174] [cursor=pointer]
+                - link "信息经济与邮政经济" [ref=e175] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e176] [cursor=pointer]: (5)
+              - listitem [ref=e177]:
+                - checkbox "数学" [ref=e178] [cursor=pointer]
+                - link "数学" [ref=e179] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e180] [cursor=pointer]: (4)
+              - listitem [ref=e181]:
+                - checkbox "保险" [ref=e182] [cursor=pointer]
+                - link "保险" [ref=e183] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e184] [cursor=pointer]: (2)
+              - listitem [ref=e185]:
+                - checkbox "园艺" [ref=e186] [cursor=pointer]
+                - link "园艺" [ref=e187] [cursor=pointer]:
+                  - /url: javascript:void(0)
+                - generic [ref=e188] [cursor=pointer]: (2)
+        - term [ref=e191]:
+          - generic "只对前100万条记录分组" [ref=e192] [cursor=pointer]: 年度
+          - generic [ref=e193]:
+            - generic [ref=e194] [cursor=pointer]: 时间
+            - generic [ref=e196] [cursor=pointer]: 文献量
+        - term [ref=e200]:
+          - generic "只对前4万条记录分组" [ref=e201] [cursor=pointer]: 研究层次
+        - term [ref=e204]:
+          - generic "只对前200万条记录分组" [ref=e205] [cursor=pointer]: 期刊
+          - generic [ref=e206]:
+            - generic [ref=e207] [cursor=pointer]: 文献量
+            - generic [ref=e209] [cursor=pointer]: CI指数
+        - term [ref=e213]:
+          - generic "只对前4万条记录分组" [ref=e214] [cursor=pointer]: 来源类别
+        - term [ref=e217]:
+          - generic "只对前4万条记录分组" [ref=e218] [cursor=pointer]: 作者
+          - generic [ref=e219]:
+            - generic [ref=e220] [cursor=pointer]: 文献量
+            - generic [ref=e222] [cursor=pointer]: H指数
+        - term [ref=e226]:
+          - generic "只对前4万条记录分组" [ref=e227] [cursor=pointer]: 机构
+        - term [ref=e230]:
+          - generic "只对前4万条记录分组" [ref=e231] [cursor=pointer]: 基金
+        - term [ref=e234]:
+          - generic "只对前100万条记录分组" [ref=e235] [cursor=pointer]: OA出版
+      - generic [ref=e239]:
+        - generic [ref=e240]:
+          - generic [ref=e241]:
+            - text: 检索范围：
+            - generic [ref=e242]: 学术期刊
+            - generic [ref=e244]: 主题：农业大模型
+          - link "主题定制" [ref=e245] [cursor=pointer]:
+            - /url: javascript:void(0)
+          - link "检索历史" [ref=e246] [cursor=pointer]:
+            - /url: javascript:void(0)
+        - generic [ref=e248]:
+          - generic [ref=e250]:
+            - generic [ref=e251]:
+              - generic [ref=e252]:
+                - text: 共找到
+                - emphasis [ref=e253]: "62"
+                - text: 条结果
+              - text: 1/4
+              - generic "键盘的“← →”可以实现快速翻页" [ref=e255] [cursor=pointer]: ">>"
+            - generic [ref=e256]:
+              - generic [ref=e257]:
+                - generic [ref=e258] [cursor=pointer]:
+                  - checkbox "全选" [ref=e259]
+                  - text: 全选
+                - text: 已选
+                - emphasis [ref=e260] [cursor=pointer]: "0"
+                - link "清除" [ref=e261] [cursor=pointer]:
+                  - /url: javascript:$(this).filenameClear();
+              - list [ref=e262]:
+                - listitem [ref=e263] [cursor=pointer]:
+                  - link "批量操作" [ref=e264]:
+                    - /url: javascript:void(0)
+                - listitem [ref=e266] [cursor=pointer]:
+                  - link "导出与分析" [ref=e267]:
+                    - /url: javascript:void(0)
+              - list [ref=e269]:
+                - listitem "详情" [ref=e270] [cursor=pointer]
+                - listitem "列表" [ref=e272] [cursor=pointer]
+              - generic [ref=e275]:
+                - generic [ref=e276]: 显示
+                - generic [ref=e279] [cursor=pointer]: "20"
+              - generic [ref=e281]:
+                - generic [ref=e282]: 排序：
+                - list [ref=e283] [cursor=pointer]:
+                  - listitem "只在800万条记录以内有效" [ref=e284]: 相关度
+                  - listitem "只在800万条记录以内有效" [ref=e285]: 发表时间
+                  - listitem "只在800万条记录以内有效" [ref=e286]: 被引
+                  - listitem "只在800万条记录以内有效" [ref=e287]: 下载
+                  - listitem "只在800万条记录以内有效" [ref=e288]: 综合
+          - generic [ref=e290]:
+            - table [ref=e295]:
+              - rowgroup [ref=e296]:
+                - row "篇名 作者 刊名 发表时间 被引 下载 操作" [ref=e297]:
+                  - columnheader [ref=e298]
+                  - columnheader "篇名" [ref=e299]
+                  - columnheader "作者" [ref=e300]
+                  - columnheader "刊名" [ref=e301]
+                  - columnheader "发表时间" [ref=e302]
+                  - columnheader "被引" [ref=e303]
+                  - columnheader "下载" [ref=e304]
+                  - columnheader "操作" [ref=e305]
+              - rowgroup [ref=e306]:
+                - row "1 基于动态混合分片策略与系统分层架构的农业大语言模型高效预训练方法 吉明;李田法 智慧农业导刊 2026-05-10 30 HTML阅读 CNKI AI阅读" [ref=e307]:
+                  - cell "1" [ref=e308]:
+                    - checkbox [ref=e309] [cursor=pointer]
+                    - text: "1"
+                  - cell "基于动态混合分片策略与系统分层架构的农业大语言模型高效预训练方法" [ref=e310]:
+                    - link "基于动态混合分片策略与系统分层架构的农业大语言模型高效预训练方法" [ref=e311] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSySproTqWfhfWUhHp9QinrZKZR_GsAvMRk5-GI9BuXZPYlzs9d-u5nqXbwHLbdNZ8muzP-ZUGsBRZHZl0zCOqg7ZYT5lYe1i5GPMTtYD7xyfjwsaX1uf1PEuAZXbzzjZ0qQIGeBVafwKvIwtEzyjxY1je47itcR0YfO0c2LQaaPxuQ==&uniplatform=NZKPT&language=CHS
+                  - cell "吉明;李田法" [ref=e312]:
+                    - link "吉明" [ref=e313] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySproTqWfhfWdjrRsEo_ZdMiOJjBfT81p3UXE8BrET2z__Szj8vTuTLyHQfpdE8OTH66F8Ll393KPC5rA_Lvrh7pkggpsPvhezTGDeFPI_EoQ==&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "李田法" [ref=e314] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySproTqWfhfWdjrRsEo_ZdMZoZvFUQLdWLQ7qfmzDanvZKMkLY_it62k6iKhX24T8KVy9Q6aqOL-cPC9X4J9fc8P-Pl1SQ0k9JffMhdJlFthfIqYgK9-3hb&uniplatform=NZKPT&language=CHS
+                  - cell "智慧农业导刊" [ref=e315]:
+                    - link "智慧农业导刊" [ref=e317] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6AaIrKFhmVAJWUIoE0W3LeyvZ8ZtIQX39mMhri8HidT053wRiTxaGK3EwEKU48cCjCZh5GCePiHhHFN1LhvheAihOnTpwC6o7U=&uniplatform=NZKPT&language=CHS
+                  - cell "2026-05-10" [ref=e318]
+                  - cell [ref=e319]
+                  - cell "30" [ref=e320]:
+                    - link "30" [ref=e323] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e324]:
+                    - link "下载" [ref=e325] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvjMKNSQwBIl4wRdJzL0QEWzXcAnP8r1CXQr3sOk9lHqSYH3Qxbe6V8mm5sfQnj%2Fg3vGKYzIVc6k%2BlmR7ZV41DT0Yz7hIz%2Bm4gioz%2Fd0uFLWAlsQo%2BpRvK7ckfm79OSQVfSBnBa%2BGi6z13JPvtSv3a9ygQ3rcCWK8v00%2FaZoGrk3nhvwSr2ExqgMWR7VIpkufGerP1sCVDIU78SjM2UNqHzgutK7CNoydpGb7cQ5fGtjzcYv2GXYe%2BBJCrML7o%2FId9FNhm%2BKss77sEQmONusy%2Bmk%3D&language=CHS
+                    - link "HTML阅读" [ref=e327] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvjMKNSQwBIl4wRdJzL0QEWzXcAnP8r1CXQr3sOk9lHqSYH3Qxbe6V8mm5sfQnj%2Fg3l2HWe2ePFLIFnob1uiwq8eKYUMOo8J8xduABzFUNW8cwchwR2FN4KCUBRwOPEA0KFoI06JeZj3AHASLOphhm2oAnR5FO8BkeNJ%2BjSDXO3jzq4Qi89k7RhHs%2BZ2T51F%2FPxGgC15D5QDdrHTVq4DxOMmqT63EkRGSJkjzyxNOA%2F%2Fm4eByK2%2BXqu1WJmJcg8kSm3tr09vED%2F%2BTJIZmBG1xNo0%3D&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e329] [cursor=pointer]
+                    - link "引用" [ref=e331] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e333] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgidxTj9jHU_BXaCRliM5Mkv87LR_GeETns1RArQ32-cID4nDa1x0Roidi_RcpyaNH-4!&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "2 农业大灾风险分析与集成智能决策平台设计与应用 孔莉莎;吴焕萍;李玉;谢能付;刘北 显示全部作者 农业大数据学报 2026-03-15 54 HTML阅读 CNKI AI阅读" [ref=e335]:
+                  - cell "2" [ref=e336]:
+                    - checkbox [ref=e337] [cursor=pointer]
+                    - text: "2"
+                  - cell "农业大灾风险分析与集成智能决策平台设计与应用" [ref=e338]:
+                    - link "农业大灾风险分析与集成智能决策平台设计与应用" [ref=e339] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyTYObyWlojm3QXQROxMh8-QE438rB4dRmpRxbYRBR7YuQQXGoK57eHC3m5Uhw2O3XBRnuIg-SgQfrbJZwbYi6-OLXbD4oZIxSRdyuJ159CypRMccVoqDRt9JLMLYvqS4YGssI17PRNXngQegWu0A1fSqtnf4dmb1vL0wCiQfwf2dA==&uniplatform=NZKPT&language=CHS
+                  - cell "孔莉莎;吴焕萍;李玉;谢能付;刘北 显示全部作者" [ref=e340]:
+                    - link "孔莉莎" [ref=e341] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyTYObyWlojm3cDAnenl1m3dEDmo98fxHrCtC-_i316hfcYLjtgLAzkXM3zaqSSpoZaj-CHOyuNvDm87enl6SIWX6MZbX3I7QwIW64pRvOpq4nG-A43JotI6&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "吴焕萍" [ref=e342] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyTYObyWlojm3cDAnenl1m3dJE3k9LYazlm7iVgj6G0yWzSllQvF7wbFVYmx3BMASBG-3vD0ev6SJVjov9P2ttxzpo8c_yGU6k046OTDLhSIUa-dq12b5Ffk&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "李玉" [ref=e343] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyTYObyWlojm3cDAnenl1m3dLS_e4nrn3qcV1ei0zYIX41AcL-oaLsM14gunB0LgR7V6SfeU19Uywu6ZOdum_IFTYpjW88l-5hEcGoun5B_36Q==&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "谢能付" [ref=e344] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyTYObyWlojm3cDAnenl1m3dSdjJazPzHoeN5ai7TNmzgfHq0VlsWuPuBW8DNgvBUtGTG8gB4PXRir6LRaRA0qACEAohJeJ7TR6QlSItlSxWV4dlFHa_CLh-&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "刘北" [ref=e345] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyTYObyWlojm3cDAnenl1m3d_JIlvVTaU828royIjfncesGaMBoQTSo6W9wKel8oZcdaA45IUx5_0LZmozkDs6PCuqjhEixM15T3AaogoMo87g==&uniplatform=NZKPT&language=CHS
+                    - generic "显示全部作者" [ref=e346] [cursor=pointer]
+                  - cell "农业大数据学报" [ref=e347]:
+                    - link "农业大数据学报" [ref=e349] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6C4kz3BVNAJRbIEkB8TbcgqrNg2SWj4-sCSXlBETVPCJynUlfF245Y1qo6LzqKBvx1dv268H-Qmw1rAYiGnMPrdjWB-OZk3OEI=&uniplatform=NZKPT&language=CHS
+                  - cell "2026-03-15" [ref=e350]
+                  - cell [ref=e351]
+                  - cell "54" [ref=e352]:
+                    - link "54" [ref=e355] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e356]:
+                    - link "下载" [ref=e357] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdp%2FBATd6cHlCPC9fmWrw2DGFBgp%2BCPji27mTfALmEU6lpMxixLarNh1MSpZZD3k1bZ7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIk2K%2FJWlZR9gYS8HMfQSxcoVxluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e359] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdp%2FBATd6cHlCPC9fmWrw2DGFBgp%2BCPji27mTfALmEU6ltzTVdpAd1fd7U9W4R5sAoGL6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGWvtWYJQejAny9%2FebUQ9ddQO6uTdFRAwGi2sLNK9fySOR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e361] [cursor=pointer]
+                    - link "引用" [ref=e363] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e365] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgic4XaAEPD9ti2SvXerGIDMhIdHmBM5XpsfOvgVJSnPMySuvxLHoq_16S_0IlLn6ZVV3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "3 农业大模型的技术赋能、应用革新与未来挑战 马陈承 江苏农村经济 2026-03-10 18 HTML阅读 CNKI AI阅读" [ref=e367]:
+                  - cell "3" [ref=e368]:
+                    - checkbox [ref=e369] [cursor=pointer]
+                    - text: "3"
+                  - cell "农业大模型的技术赋能、应用革新与未来挑战" [ref=e370]:
+                    - link "农业大模型的技术赋能、应用革新与未来挑战" [ref=e371] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSySX943reP5WJmZ4KhRP28ismYztvdYFRCPWcFJhH_sb2_sf2QwfgDSlyPGCT0NUUjqCLdLeWq2kgqddY_iDG9uWf9vdJN1FoX3AYptgyjlGuXSPSyKpRne2u-oF9qhQlMz5VREoNM_iSyIAKRthweFCNxYnRPZR9cU5XzPNUvKi6g==&uniplatform=NZKPT&language=CHS
+                  - cell "马陈承" [ref=e372]:
+                    - link "马陈承" [ref=e373] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySX943reP5WJh3NSzTegVNFuic0Ez_1g14lD8r9GoYBuI-kMDG_ZBowbf0jw2aY98AhM69fbWHUTiLGrkdScAfC_embugS5JNuHTNee_dBMZ4C4igxjEnYo&uniplatform=NZKPT&language=CHS
+                  - cell "江苏农村经济" [ref=e374]:
+                    - link "江苏农村经济" [ref=e376] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6DyFJ4a6xchINb-B47h8Sfn8m426cCfK56Px0hnkyyeA70AS9liN9DCekAklRSlGGdUEW71QTwHeXhfFOVPuc0TfBZ-jP_AyoI=&uniplatform=NZKPT&language=CHS
+                  - cell "2026-03-10" [ref=e377]
+                  - cell [ref=e378]
+                  - cell "18" [ref=e379]:
+                    - link "18" [ref=e382] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e383]:
+                    - link "下载" [ref=e384] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvjMKNSQwBIl4wRdJzL0QEWzXcAnP8r1CXQr3sOk9lHqSWPqB2gcV%2Bvfh40tGV%2Fv62fpGlGREgU0f96PcVxmD89sYz7hIz%2Bm4gioz%2Fd0uFLWAlsQo%2BpRvK7ckfm79OSQVfSBnBa%2BGi6z13JPvtSv3a9ygQ3rcCWK8v00%2FaZoGrk3nhvwSr2ExqgMWR7VIpkufGSEJY74D744WmWSDBnkSCTMutK7CNoydpGb7cQ5fGtjzcYv2GXYe%2BBJCrML7o%2FId9FNhm%2BKss77sEQmONusy%2Bmk%3D&language=CHS
+                    - link "HTML阅读" [ref=e386] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvjMKNSQwBIl4wRdJzL0QEWzXcAnP8r1CXQr3sOk9lHqSWPqB2gcV%2Bvfh40tGV%2Fv62exlQNHviqMi8xnDVMzsyd%2BKYUMOo8J8xduABzFUNW8cwchwR2FN4KCUBRwOPEA0KFoI06JeZj3AHASLOphhm2oAnR5FO8BkeNJ%2BjSDXO3jzq4Qi89k7RhHs%2BZ2T51F%2FPx2Iytsj%2B7E878BUCvJEj%2BiqT63EkRGSJkjzyxNOA%2F%2Fm4eByK2%2BXqu1WJmJcg8kSm3tr09vED%2F%2BTJIZmBG1xNo0%3D&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e388] [cursor=pointer]
+                    - link "引用" [ref=e390] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e392] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgieHSpQ4QUdo6ymIIzNGB8N-hP5ZdZjKS03OKNQeoiUK3YnDa1x0Roidi_RcpyaNH-4!&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "4 基于DeepSeek的农业AI智能体的实现和应用研究 陈培专 江苏通信 2026-02-15 173 HTML阅读 CNKI AI阅读" [ref=e394]:
+                  - cell "4" [ref=e395]:
+                    - checkbox [ref=e396] [cursor=pointer]
+                    - text: "4"
+                  - cell "基于DeepSeek的农业AI智能体的实现和应用研究" [ref=e397]:
+                    - link "基于DeepSeek的农业AI智能体的实现和应用研究" [ref=e398] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSySJ30lrL1zZGksgvgDdTImoUmcuWixWpXihzSolEEgpcSCzgwvQhzG-Odk214Z8-qNUOJO4pROgr8UM87_LivyNFsfRcOlyHXa9NIuk-BkYsSsjJP_Q9ca3aVkpoxgH5WH0ZmjPgTGnp5CRET-LRxSe-dtqA2R5gprME7POSwQIXA==&uniplatform=NZKPT&language=CHS
+                  - cell "陈培专" [ref=e399]:
+                    - link "陈培专" [ref=e400] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySX943reP5WJh3NSzTegVNFrlUkR6GDTXdnNQKJyRO5PkCKzcedKpbhW_5ZYvjF2evQxwumkZrdTmUQpej7KN2CqMiMpNwNmKheV6GRpG2NQpFgeZ508bZd&uniplatform=NZKPT&language=CHS
+                  - cell "江苏通信" [ref=e401]:
+                    - link "江苏通信" [ref=e403] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6C1uG3peaDGism9oiTWgeU4LkuS4LSOLacp98hdOhgNI5Kr7wGHKjrMlz5nvybAAF1InWhHcpUpErzfOC51FWjn4ibNhvoxLCg=&uniplatform=NZKPT&language=CHS
+                  - cell "2026-02-15" [ref=e404]
+                  - cell [ref=e405]
+                  - cell "173" [ref=e406]:
+                    - link "173" [ref=e409] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e410]:
+                    - link "下载" [ref=e411] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdp%2FBATd6cHlCPC9fmWrw2DGDREh8PIf%2BCuDoa33ns9aTeHwO1CPsrumxXna3rfQZ5d7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIkxwE1TVw5O7boFgtiakJ97txluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e413] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdp%2FBATd6cHlCPC9fmWrw2DGDREh8PIf%2BCuDoa33ns9aTSM9NU9ur7NH0lg9xq4mrhuL6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGWvtWYJQejAny9%2FebUQ9ddTTREL%2BA%2FyJwEZyi2g84QvIR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e415] [cursor=pointer]
+                    - link "引用" [ref=e417] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e419] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgidwo99YYUYMuKjK2bY9pfK2Wc58ptg7VE8XfYenQPZYPyuvxLHoq_16S_0IlLn6ZVV3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "5 中国农业大模型数据治理、核心技术与应用挑战 欧阳峥峥;马毓聪;寇远涛;刘小杰 农业工程学报 2025-12-03 09:46 4 1371 HTML阅读 CNKI AI阅读" [ref=e421]:
+                  - cell "5" [ref=e422]:
+                    - checkbox [ref=e423] [cursor=pointer]
+                    - text: "5"
+                  - cell "中国农业大模型数据治理、核心技术与应用挑战" [ref=e424]:
+                    - link "中国农业大模型数据治理、核心技术与应用挑战" [ref=e425] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyRrazJS3Ui6cDhIvEqzzcp-_3VIt5mbZp8YdPTjSsuVFrIxD3umvcfFHGdn4XlLZ0j73JpxpC4m6cWDA5XYId5mTkKYZCwpb5hGWs4PdQGnIIWH4Jg6NZU0QXnVUSDCcYuug90wkkUfzosYukeAjrqRrSawPehXHxXu50l1jjTGVA==&uniplatform=NZKPT&language=CHS
+                  - cell "欧阳峥峥;马毓聪;寇远涛;刘小杰" [ref=e426]:
+                    - link "欧阳峥峥" [ref=e427] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySJ30lrL1zZGr4GtwdWbCWX4tfgy2kime9CzMcpiQo5MkqrjfyCouwtwxAOSk5-UxPJCNH11cOSf1PW2ThtLDhuGchaOykU8CWRCU4OUcJhyk3_EOwqJR9FbFBbVeQbK54=&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "马毓聪" [ref=e428] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySJ30lrL1zZGr4GtwdWbCWXcGPl-YYiudy_bjFkG_1b_k0oXtbLfro_TURQA3HrgjzJQHsnXKOVr9MXsuq2lI8zLwXRMlB5LBJDO_n8xEZelStDoMD-yF33&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "寇远涛" [ref=e429] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySJ30lrL1zZGr4GtwdWbCWX0xl7Op-EJStAKqo6_ZjZ2y-SxaiYLORpuqLwf0l5JcebI-4KMy47lStkURUyW9VkXuVnNHvhHu6NL-AtAmZ0Fa80tW07HnAO&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "刘小杰" [ref=e430] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySJ30lrL1zZGr4GtwdWbCWX5SNsX2rBBgeZNUutHcczAQEL5T-1RhzXXEIuD-J5RzcWAmdU4nDwmpdsgb1AwPfPpIBD2qPCVPfbJV-YxgwmNe3EhBnACXho&uniplatform=NZKPT&language=CHS
+                  - cell "农业工程学报" [ref=e431]:
+                    - link "农业工程学报" [ref=e433] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6A-n4ptyAnxaSOb0dgALRS34bf3PBGia1_LtmMysWwzXgW6-v-OUClSahFYkHfQx_I0XhLWk9UYy2RJuRLr3zFCsjY-DlRnyWI=&uniplatform=NZKPT&language=CHS
+                  - cell "2025-12-03 09:46" [ref=e434]
+                  - cell "4" [ref=e435]:
+                    - link "4" [ref=e437] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyRrazJS3Ui6cDhIvEqzzcp-_3VIt5mbZp8YdPTjSsuVFrIxD3umvcfFHGdn4XlLZ0j73JpxpC4m6cWDA5XYId5mTkKYZCwpb5hGWs4PdQGnIIWH4Jg6NZU0QXnVUSDCcYuug90wkkUfzosYukeAjrqRrSawPehXHxXu50l1jjTGVA==&uniplatform=NZKPT&language=CHS&anchor=citnet
+                  - cell "1371" [ref=e438]:
+                    - link "1371" [ref=e441] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e442]:
+                    - link "下载" [ref=e443] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdp%2FBATd6cHlCPC9fmWrw2DG3u7nQ9GTYeW1uJa3meCOjntVqYbSTOoVMzlT7HMh4T17b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIk9Wm1w2UdhEG5pDqkk5%2FiFZxluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e445] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdp%2FBATd6cHlCPC9fmWrw2DG3u7nQ9GTYeW1uJa3meCOjjC69rFZvjT6ISXL2akcONOL6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGWvtWYJQejAny9%2FebUQ9ddSOSPNnbndV3LMYmTFqdzguR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e447] [cursor=pointer]
+                    - link "引用" [ref=e449] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e451] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgifTkDvtnaWvzs8_koOHZL3hc0L3meeABDbSo6lrCDmqniuvxLHoq_16S_0IlLn6ZVV3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "6 农业大数据在农产品市场预测中的应用研究 曹瑞敏 中国果业信息 2025-10-28 154 HTML阅读 CNKI AI阅读" [ref=e453]:
+                  - cell "6" [ref=e454]:
+                    - checkbox [ref=e455] [cursor=pointer]
+                    - text: "6"
+                  - cell "农业大数据在农产品市场预测中的应用研究" [ref=e456]:
+                    - link "农业大数据在农产品市场预测中的应用研究" [ref=e457] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyRrazJS3Ui6cDhIvEqzzcp-_3VIt5mbZp9N08Jfk1rs-YJxgsELzlxSr2P1BkA6xlB2_K-25UzHfy4Arxf7yYUawTjpHHfRPI3Hd-aXq4ZVNYdN2BORKKqy1hRH-AGjjmyo6oII7IQFqy0OKo8vf8qzW8RHwT9hr6zqHQQsDBfCuw==&uniplatform=NZKPT&language=CHS
+                  - cell "曹瑞敏" [ref=e458]:
+                    - link "曹瑞敏" [ref=e459] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyRrazJS3Ui6cOM2Oxco9knNIhwA4XPRz1jcYo3T1WtqqAsQGCuU81O1gEorBphMH2Wovpz7ZG4xIVyry9Y-plQhPSHLItmkPXjeRyqvwkskHDuhaJKOPAAL&uniplatform=NZKPT&language=CHS
+                  - cell "中国果业信息" [ref=e460]:
+                    - link "中国果业信息" [ref=e462] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6A-n4ptyAnxaSOb0dgALRS34bf3PBGia1_LtmMysWwzXgW6-v-OUClSEuXoSW0DBZjxOvjtMeCcZg8ez_7PM7Ojuy0gdLB51lI=&uniplatform=NZKPT&language=CHS
+                  - cell "2025-10-28" [ref=e463]
+                  - cell [ref=e464]
+                  - cell "154" [ref=e465]:
+                    - link "154" [ref=e468] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e469]:
+                    - link "下载" [ref=e470] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSpE7nvaUJ0kxrLiU24ECYjYN%2BOhwlcLiGcs4WQ6jYBM57b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIk9Wm1w2UdhEG5pDqkk5%2FiFZxluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e472] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSpE7nvaUJ0kxrLiU24ECYjWWYE6pcltaP%2FAzMhUIJ00GL6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGWvtWYJQejAny9%2FebUQ9ddSOSPNnbndV3LMYmTFqdzguR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e474] [cursor=pointer]
+                    - link "引用" [ref=e476] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e478] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgidwwCQWDG1DgG2HCXRTztimWjO2Zt3MQkmEIoThndGrdg6c3WW7qTe3koRylZhzBMR3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "7 智慧农业视角下的大模型驱动碳效管理系统实践研究——山东鲁南粮库集群智能化转型案例 马洪宗;吴敬仁;王成玉 当代农机 2025-10-25 150 HTML阅读 CNKI AI阅读" [ref=e480]:
+                  - cell "7" [ref=e481]:
+                    - checkbox [ref=e482] [cursor=pointer]
+                    - text: "7"
+                  - cell "智慧农业视角下的大模型驱动碳效管理系统实践研究——山东鲁南粮库集群智能化转型案例" [ref=e483]:
+                    - link "智慧农业视角下的大模型驱动碳效管理系统实践研究——山东鲁南粮库集群智能化转型案例" [ref=e484] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyT0ku_PRY0Lf2x5UL7-Gr4_aLXdzznZLH3rf-mP-6McNHpBj2bpZMM3-nWSd5bNFPy9h5gZ3FgzQSpwkmw-idKYuVAAtg0H_oeXuSmNPhul3FkYpfei1oPxHzVBBfnm0BoMC3b9SceKBnlEq7on77t5mtDNR2RyJd7dMN5Rthn31w==&uniplatform=NZKPT&language=CHS
+                  - cell "马洪宗;吴敬仁;王成玉" [ref=e485]:
+                    - link "马洪宗" [ref=e486] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyT0ku_PRY0Lf98gqfipfxD7YKnx2Q5xcHInlEFIcdYcj3Z4VsRDTQB4b6pH0isJz58p11sVI5scPF9dTZ8eRMJtM1f6vMR19uPtiMeiJVGwWveVFh1fZ3rF&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "吴敬仁" [ref=e487] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyT0ku_PRY0Lf98gqfipfxD7Pv0lbpL8HMRR2jc6DaInCXeTN3JwZX3gJKh9RjdKQWu-pH8Jz40v_Bt1AygnS2cztj04YzUic9lKWSaqbqIdLC8jSJtyf0AY&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "王成玉" [ref=e488] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyT0ku_PRY0Lf98gqfipfxD7Pv0lbpL8HMQkVIGtULnIMh_GAydJaUodtWr1W5g1K7eo7fkxj4aYGbZDmj4NZtj09kvMLs3CR3O0g66TJqKwJkAJm-f3X9HY&uniplatform=NZKPT&language=CHS
+                  - cell "当代农机" [ref=e489]:
+                    - link "当代农机" [ref=e491] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6DejhgobxPIHQwj3Dl98zMnK4uSGOYHr5rPtNf08dJbW0qUv1Y6UCs4x9XIXFeM9R8DS-fkzA9F0BuH-XvYBMNb8uQVax-mmHE=&uniplatform=NZKPT&language=CHS
+                  - cell "2025-10-25" [ref=e492]
+                  - cell [ref=e493]
+                  - cell "150" [ref=e494]:
+                    - link "150" [ref=e497] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e498]:
+                    - link "下载" [ref=e499] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSjBOeTxfD0ydT4r4IJdtiVV6sNwWxn8eGdDEVns5odKx7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIk7yRSip1Q4L6JtzlTQy3RTxxluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e501] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSjBOeTxfD0ydT4r4IJdtiVWJHuPuqLJDxWBSOrAvLtc2L6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGWvtWYJQejAny9%2FebUQ9ddRSutAlZXAaiLdZ9Dmx4wjyR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e503] [cursor=pointer]
+                    - link "引用" [ref=e505] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e507] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgifU3eKlYKlGAk2euWqLRA_L-7EiN99FAtcHl6r95EAKEA6c3WW7qTe3koRylZhzBMR3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "8 AI Agent与大模型在设施果菜病虫害筛查与品种培育中的应用 杨奎;宋甘;杜一;岳艳芬 农村经济与科技 2025-09-30 303 HTML阅读 CNKI AI阅读" [ref=e509]:
+                  - cell "8" [ref=e510]:
+                    - checkbox [ref=e511] [cursor=pointer]
+                    - text: "8"
+                  - cell "AI Agent与大模型在设施果菜病虫害筛查与品种培育中的应用" [ref=e512]:
+                    - link "AI Agent与大模型在设施果菜病虫害筛查与品种培育中的应用" [ref=e513] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyShhrpLq9UrkfIWLTCR8F3ZpD3nGHcDDhq_zdviWC62E7uL_So3mlXgvBQwGcoA1TtRHYJ4t4l9LOfcqJ_TwTd3P0cT8wxZBnPwIGQyKtzpy1dDSTTlcL-S3AI-Hh5u27cQ5c0kDGlZw2RNn6Wyh27EDhCoRE_t4LLBI-2td-ZCYw==&uniplatform=NZKPT&language=CHS
+                  - cell "杨奎;宋甘;杜一;岳艳芬" [ref=e514]:
+                    - link "杨奎" [ref=e515] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyT0ku_PRY0Lf98gqfipfxD7ZyNjC5hb6kZhxcErWWO5AVsBNd7Q8ivXk-seQ_wy_8RMnjU0pTHIKrnhnjx0yZqwSz_YdHNEoJ0PTgjxVbBU-g==&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "宋甘" [ref=e516] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyT0ku_PRY0Lf98gqfipfxD7Q64j_dAGPE4gqBXEg0-lFuXIc073LqotXzvT3q01_iNjkr7dfDeyeWLUqfmpapehgfJ3amBNcj-goceX0qulOg==&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "杜一" [ref=e517] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyT0ku_PRY0Lf98gqfipfxD7Q64j_dAGPE4QXSvsK7Ed7mFsSoQZMavif60QB7WDLhBsZf4tAiSY_Uz4Afzi8hmFUE1nvYQsHOnfZkUgi0K-bA==&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "岳艳芬" [ref=e518] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyT0ku_PRY0Lf98gqfipfxD7Q64j_dAGPE7IfYZCh6GcAfOHksf8MjV1UBxc8zW84UdzoDdOG-_8JepvmWmRBE7n0FNsR0c44Wqavkxc91U68GZVrj9vVs47&uniplatform=NZKPT&language=CHS
+                  - cell "农村经济与科技" [ref=e519]:
+                    - link "农村经济与科技" [ref=e521] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6Ag-vixk71k7UGWd6Vw4_lbVoPlh13iY2evsn4VC5BtOqazqc3aKdYHusiD9YBp0ZH5_PA2ZoqR2llhlWquAuJqXgfkWLVviec=&uniplatform=NZKPT&language=CHS
+                  - cell "2025-09-30" [ref=e522]
+                  - cell [ref=e523]
+                  - cell "303" [ref=e524]:
+                    - link "303" [ref=e527] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e528]:
+                    - link "下载" [ref=e529] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSg%2B7CcSSgBPfuowcJ07FeV4YIhnOWEPtmmCL5DlTv%2BBp7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIk517bM5D7fLS9m97GODe3blxluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e531] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSg%2B7CcSSgBPfuowcJ07FeV4RSRGoiBSvS4foYYeisCRSL6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGWvtWYJQejAny9%2FebUQ9ddTK3%2F%2FWE0smiHtbCUITH5dhR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e533] [cursor=pointer]
+                    - link "引用" [ref=e535] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e537] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgidh6Oy6pgTSxY4jDiTzcIAEExoF3wbm6WxJQ2qCmpMQOg6c3WW7qTe3koRylZhzBMR3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "9 基于多模态大模型的农业病虫害动态预警系统研究 谢丽萍 中国果业信息 2025-09-28 3 323 HTML阅读 CNKI AI阅读" [ref=e539]:
+                  - cell "9" [ref=e540]:
+                    - checkbox [ref=e541] [cursor=pointer]
+                    - text: "9"
+                  - cell "基于多模态大模型的农业病虫害动态预警系统研究" [ref=e542]:
+                    - link "基于多模态大模型的农业病虫害动态预警系统研究" [ref=e543] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyShhrpLq9UrkfIWLTCR8F3ZpD3nGHcDDhpplEoM1YGXjNhubIj2IUUbfCK3ZNIZeKsvgFvPBPI2Y8QtfFOBGGESLP4-daDHkzuCnIitqIBlADoBpexIfUyKq_HzTcsb24-NPcw7mH1zLiT0yRzkzYyVJDwrqzuRss534_0bqj887g==&uniplatform=NZKPT&language=CHS
+                  - cell "谢丽萍" [ref=e544]:
+                    - link "谢丽萍" [ref=e545] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyShhrpLq9UrkW-UCxDm3zu1Hi7QUunTcBzCj8H1sgho0Mu2tFkncH91p2QhniUqG6G9JtNOdtHprQLqJ0qD-FA92h6l7Fj6DF3qZv1qUrpqZdhYeafzOxVt&uniplatform=NZKPT&language=CHS
+                  - cell "中国果业信息" [ref=e546]:
+                    - link "中国果业信息" [ref=e548] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6Ag-vixk71k7UGWd6Vw4_lbVoPlh13iY2evsn4VC5BtOqazqc3aKdYHbQmO_e6r2N0EwUHzdTSI3xxG1ljAxL8Lpd1FT9_glb4=&uniplatform=NZKPT&language=CHS
+                  - cell "2025-09-28" [ref=e549]
+                  - cell "3" [ref=e550]:
+                    - link "3" [ref=e552] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyShhrpLq9UrkfIWLTCR8F3ZpD3nGHcDDhpplEoM1YGXjNhubIj2IUUbfCK3ZNIZeKsvgFvPBPI2Y8QtfFOBGGESLP4-daDHkzuCnIitqIBlADoBpexIfUyKq_HzTcsb24-NPcw7mH1zLiT0yRzkzYyVJDwrqzuRss534_0bqj887g==&uniplatform=NZKPT&language=CHS&anchor=citnet
+                  - cell "323" [ref=e553]:
+                    - link "323" [ref=e556] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e557]:
+                    - link "下载" [ref=e558] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSpE7nvaUJ0kxrLiU24ECYjSrpt20sS47d%2FMHJCcto0NB7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIk517bM5D7fLS9m97GODe3blxluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e560] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSpE7nvaUJ0kxrLiU24ECYjUzPnRRw4yhr1AZhR%2Ft6RCCL6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGWvtWYJQejAny9%2FebUQ9ddTK3%2F%2FWE0smiHtbCUITH5dhR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e562] [cursor=pointer]
+                    - link "引用" [ref=e564] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e566] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgidwwCQWDG1DgG2HCXRTztimyX_2Iu4frnz-wCJlb4sTYg6c3WW7qTe3koRylZhzBMR3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "10 基于AI大模型的农业服务模式研究 杨绪春 中国农机装备 2025-07-31 3 315 HTML阅读 CNKI AI阅读" [ref=e568]:
+                  - cell "10" [ref=e569]:
+                    - checkbox [ref=e570] [cursor=pointer]
+                    - text: "10"
+                  - cell "基于AI大模型的农业服务模式研究" [ref=e571]:
+                    - link "基于AI大模型的农业服务模式研究" [ref=e572] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyQkccR62v46UNNgwh8ndUURpMCq_FfUG0H6-qWl0qCdLfprg1M4_7zF6xI5WAelxx92SRCOUeSuEylZ4Z3ORvRpTWVH7Rt5fGcp3MHpYjtGs2JP7t51j6ev7RlHSLsAkvAuP8_j9x7fiu-qDvX_MIVcbAWXy4ASPy4o6_SFsQ6QFw==&uniplatform=NZKPT&language=CHS
+                  - cell "杨绪春" [ref=e573]:
+                    - link "杨绪春" [ref=e574] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyQkccR62v46UH56A2dUCxOEp1PrTcJN8m8Q1JZrJ026-1MXrWzjUvuMyTrFaOe5Pc9iXgTTsqdd1FFpeipyu-FsCJZbcnrLGpBVirJr8iBrnuD3Q5hwUVph&uniplatform=NZKPT&language=CHS
+                  - cell "中国农机装备" [ref=e575]:
+                    - link "中国农机装备" [ref=e577] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6CxekiRIWqCvGHyagNRKu6Io1J9RpZi43xio5J7QJcm_qWnoIDrIeJWx-8BhFM9m0BcEkXo4cFENkp55Gh7ykTZ8Of55fcUe_E=&uniplatform=NZKPT&language=CHS
+                  - cell "2025-07-31" [ref=e578]
+                  - cell "3" [ref=e579]:
+                    - link "3" [ref=e581] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyQkccR62v46UNNgwh8ndUURpMCq_FfUG0H6-qWl0qCdLfprg1M4_7zF6xI5WAelxx92SRCOUeSuEylZ4Z3ORvRpTWVH7Rt5fGcp3MHpYjtGs2JP7t51j6ev7RlHSLsAkvAuP8_j9x7fiu-qDvX_MIVcbAWXy4ASPy4o6_SFsQ6QFw==&uniplatform=NZKPT&language=CHS&anchor=citnet
+                  - cell "315" [ref=e582]:
+                    - link "315" [ref=e585] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e586]:
+                    - link "下载" [ref=e587] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSzlhbWC1wAcJF%2BvFpityatX9op0tffE3TbfPe4ge9njR7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIk3hA4oGzfqyuGcqlxNdEfX1xluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e589] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSzlhbWC1wAcJF%2BvFpityatSHlw45rzCeOJvaXT%2FaHCrOL6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGeVrBk0woPryBJ%2FYBQ7F1RX1fs4iheqXGejVmqoCIWDbR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e591] [cursor=pointer]
+                    - link "引用" [ref=e593] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e595] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgierBLEOL8KPv90QGWl61i9_40zUfXBU6sBriq2v0n-M6g6c3WW7qTe3koRylZhzBMR3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "11 智慧养殖农业物联网与边缘计算中大模型技术应用综述 薛飞跃;周玉玲;李俊凯;李霄雯;黄王军 显示全部作者 农业机械学报 2025-07-18 11:38 17 1876 HTML阅读 CNKI AI阅读" [ref=e597]:
+                  - cell "11" [ref=e598]:
+                    - checkbox [ref=e599] [cursor=pointer]
+                    - text: "11"
+                  - cell "智慧养殖农业物联网与边缘计算中大模型技术应用综述" [ref=e600]:
+                    - link "智慧养殖农业物联网与边缘计算中大模型技术应用综述" [ref=e601] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyQeXq9oRAPcv5CmveY5-g8wF7W96WvNuMu1VUzuyM8c_mfhZEArerKy8bhfCXD5PRVTWem0KpjUBzOy4Bm8_PmAlvpvxrKKiyyzGyccKINit832D7QTGFjoAGdxcOcj77R-kWbqvAOBx6go3cD3xsk1yxyu_r5ciVbqQuF2U7X2BA==&uniplatform=NZKPT&language=CHS
+                  - cell "薛飞跃;周玉玲;李俊凯;李霄雯;黄王军 显示全部作者" [ref=e602]:
+                    - link "薛飞跃" [ref=e603] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyQeXq9oRAPcv9vulBs3EKBwqNjYhbN-_ctYCi9p-n6vah3H2XCTop3fk2zdrPnKKfewAuUb3mwvJdu8XrXzM2HdcOPl6Tcf7fl2LQVlTsKNbfYeuN_aSTTs&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "周玉玲" [ref=e604] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyQeXq9oRAPcv9vulBs3EKBwoW0sGWZij9mtiXpYo8FqS2IYEPIma20ZeGTyiMLvNm-2PfsAu3QcsfmVuw5otfhvtt3G3hw_ikiANX6YU8lf8QMfZm0Xl531&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "李俊凯" [ref=e605] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyQeXq9oRAPcv9vulBs3EKBwqNjYhbN-_ctxLWJjy39udXxPx7s3UGQdU0etQyQuh9_uEtKKGifIqRu4ikCudTBFva10mKZbnoL3iWxDPi5ON8-OvfQbvvO_&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "李霄雯" [ref=e606] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyQeXq9oRAPcv9vulBs3EKBwoW0sGWZij9k1-tQwLFY5bKv4dLOhampG6Acqf31yVbZm9yVuMYomP2kbsV0hypycfsMrQ_3wfpJBtRJAMoCsj88dnEa8YyFE&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "黄王军" [ref=e607] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyQeXq9oRAPcv9vulBs3EKBwHMqhh49ooRAIXKB7TeGm0k7afxl1FoPcNPB9MLKg0A-To8EQbaB--0cM5MTRavVx6a_5YRagaoFmnGaMQTQoxy3YtWjanJHB&uniplatform=NZKPT&language=CHS
+                    - generic "显示全部作者" [ref=e608] [cursor=pointer]
+                  - cell "农业机械学报" [ref=e609]:
+                    - link "农业机械学报" [ref=e611] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6Bea93fXpvXyVgfEetK6HW2gBgDQ8Ihuy8YhckkGdrnDLsCR6gFVlA56oAVttWWKauuMnQ-ztMLYh6n_YJwXbPy5lzSaJa2C0E=&uniplatform=NZKPT&language=CHS
+                  - cell "2025-07-18 11:38" [ref=e612]
+                  - cell "17" [ref=e613]:
+                    - link "17" [ref=e615] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyQeXq9oRAPcv5CmveY5-g8wF7W96WvNuMu1VUzuyM8c_mfhZEArerKy8bhfCXD5PRVTWem0KpjUBzOy4Bm8_PmAlvpvxrKKiyyzGyccKINit832D7QTGFjoAGdxcOcj77R-kWbqvAOBx6go3cD3xsk1yxyu_r5ciVbqQuF2U7X2BA==&uniplatform=NZKPT&language=CHS&anchor=citnet
+                  - cell "1876" [ref=e616]:
+                    - link "1876" [ref=e619] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e620]:
+                    - link "下载" [ref=e621] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSuR36op%2FC6KO%2BidJbcj2hs1LQVVTZ6t76xNC4327m6Kp7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIk%2FR1uSMw4LK%2F3T0erus5TulxluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e623] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSuR36op%2FC6KO%2BidJbcj2hs5JW8LIoDvA7Cvt9gvkNDuuL6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGeVrBk0woPryBJ%2FYBQ7F1RWhjBJ4SdPzeIoEwnK573VeR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e625] [cursor=pointer]
+                    - link "引用" [ref=e627] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e629] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgiePzofICikQRwQNtKiO5r9kkf8VzIuDt0ZogIwO97mnWA6c3WW7qTe3koRylZhzBMR3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "12 Beehive：基于智能体的智慧农场操作系统 张浩;蔡晨馨;屈傲;刘轩宇;刘劼 计算 2025-06-20 2 72 HTML阅读 CNKI AI阅读" [ref=e631]:
+                  - cell "12" [ref=e632]:
+                    - checkbox [ref=e633] [cursor=pointer]
+                    - text: "12"
+                  - cell "Beehive：基于智能体的智慧农场操作系统" [ref=e634]:
+                    - link "Beehive：基于智能体的智慧农场操作系统" [ref=e635] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyRp7vJhLdHbG6OFZ4XCAdb4pxSPd4kP0UpAXj_wx8oN2XPke8-TiM25_oNe7XP_1ybVVyouSRQod8M7kClxfVAF_x3Vb3GAsPZl87A762N5C3cA5SypAF3U_pkYcZ3ekcadlGp5DcANqwC53cd2WUEe-xm-XuCa1TBrlvIByPfMQg==&uniplatform=NZKPT&language=CHS
+                  - cell "张浩;蔡晨馨;屈傲;刘轩宇;刘劼" [ref=e636]:
+                    - link "张浩" [ref=e637] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyRp7vJhLdHbG--63gNqbLEkwqUSXr-s822g3AV4QkPIct3HZ_t8dnfk3CE7Ib5JTl2zTKUC4V1cvFOGFheCECdKTx5qxjhFL_0i3-zJRev_HQ==&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "蔡晨馨" [ref=e638] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyRp7vJhLdHbG--63gNqbLEkQcUiqfFwcPoGwv7fQdPYXC9Oeb6-4EsOMy25QDEj-__PN0244OvPWsUyv9gD7Ce0MGFocKrhTEkFblJhfeEz1FTZpBwI3emd&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "屈傲" [ref=e639] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyRp7vJhLdHbG--63gNqbLEkRLab7lK4mOmHSGDMlB_DJl-JHP57Pff1WJU49fHZXTp1_oXr0EUN0AJbpuroZWbuDVksPI6Zmk7MlptmahifFw==&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "刘轩宇" [ref=e640] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyRp7vJhLdHbG--63gNqbLEkYrIzRJFLK7fmyvrPR1xUxlYtqkcl-YGuvSZ8n8-MjwHjKgvRd1iVnMifNGG7Mg1QS53CBBVO3cqSuj3QXeSUWCquw9N3hVou&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "刘劼" [ref=e641] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyRp7vJhLdHbG--63gNqbLEksD0H1G_KrMUAazPemZ4k7Li4qUpq3DJHKWr_0AbkYGPHbG069cz81B1V6hlV0wHuz16N0mhekByo0AIqHf_ayQ==&uniplatform=NZKPT&language=CHS
+                  - cell "计算" [ref=e642]:
+                    - link "计算" [ref=e644] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6B-Jg-JcLMH7xWaRRifa6ANsaRoDp2ReFFtwPWdUaXFMLg5PP7TBakMDm3k0N0sewsJ45p0OOBMFbohb-kmaGll_BwpFkV1Ud8=&uniplatform=NZKPT&language=CHS
+                  - cell "2025-06-20" [ref=e645]
+                  - cell "2" [ref=e646]:
+                    - link "2" [ref=e648] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyRp7vJhLdHbG6OFZ4XCAdb4pxSPd4kP0UpAXj_wx8oN2XPke8-TiM25_oNe7XP_1ybVVyouSRQod8M7kClxfVAF_x3Vb3GAsPZl87A762N5C3cA5SypAF3U_pkYcZ3ekcadlGp5DcANqwC53cd2WUEe-xm-XuCa1TBrlvIByPfMQg==&uniplatform=NZKPT&language=CHS&anchor=citnet
+                  - cell "72" [ref=e649]:
+                    - link "72" [ref=e652] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e653]:
+                    - link "下载" [ref=e654] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdp%2FBATd6cHlCPC9fmWrw2DGwn5LomGXYxaWY7Fw6X15E3UXYuDAb4HK5JhI1D9ueIh7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIk4uZv%2FgRSTnja3YxlM%2FkpZhxluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e656] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdp%2FBATd6cHlCPC9fmWrw2DGwn5LomGXYxaWY7Fw6X15EzT5TcFBu4Ts0%2FbJxmuqTdWL6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGeVrBk0woPryBJ%2FYBQ7F1RXcyOsNIK6BfWW7qZ05BNy3R4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e658] [cursor=pointer]
+                    - link "引用" [ref=e660] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e662] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgicFNcn27cPJldeZ8OnRHoAn5uyCCuyrY0dTBQHVlVy4NCuvxLHoq_16S_0IlLn6ZVV3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "13 智慧农业领域人工智能大模型的应用研究 李小玲 中国农机装备 2025-06-09 3 813 HTML阅读 CNKI AI阅读" [ref=e664]:
+                  - cell "13" [ref=e665]:
+                    - checkbox [ref=e666] [cursor=pointer]
+                    - text: "13"
+                  - cell "智慧农业领域人工智能大模型的应用研究" [ref=e667]:
+                    - link "智慧农业领域人工智能大模型的应用研究" [ref=e668] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSySvJVfK5xIbq3xsKLF4se1oOFFmywXq-vLzjBfL7wDgZtiz9TPDjrmOcwVwUECdEhAvE8QFx8osGsXWNLs0kTheb-lcuMLwjBYYMd8D6RwvjQhxZ1bjeWWvlMqX9Le761UC5JJrJ1RRwp91dYd7Tkv9_sfB3UqUfaWeP1UJP7-BYA==&uniplatform=NZKPT&language=CHS
+                  - cell "李小玲" [ref=e669]:
+                    - link "李小玲" [ref=e670] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyRp7vJhLdHbG--63gNqbLEkBx56xH_di_EUwC_BUu7Vx4Dh5AC1gFUgfVFTm8Bp3-2-YapsUbLdkRiqW6RCqyW545zwvudylop_raGFmpCQLYfVpJ0Qw3za&uniplatform=NZKPT&language=CHS
+                  - cell "中国农机装备" [ref=e671]:
+                    - link "中国农机装备" [ref=e673] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6AYhE7VfNsEyUKdE5t4oJ4ohISAFsCRWYW1vg72-Ghv6Dcbqo-K_f41okV7Zb6XHY7cLjA2J5FkfjzWHtziXb5Sqdy6WbDNtfQ=&uniplatform=NZKPT&language=CHS
+                  - cell "2025-06-09" [ref=e674]
+                  - cell "3" [ref=e675]:
+                    - link "3" [ref=e677] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSySvJVfK5xIbq3xsKLF4se1oOFFmywXq-vLzjBfL7wDgZtiz9TPDjrmOcwVwUECdEhAvE8QFx8osGsXWNLs0kTheb-lcuMLwjBYYMd8D6RwvjQhxZ1bjeWWvlMqX9Le761UC5JJrJ1RRwp91dYd7Tkv9_sfB3UqUfaWeP1UJP7-BYA==&uniplatform=NZKPT&language=CHS&anchor=citnet
+                  - cell "813" [ref=e678]:
+                    - link "813" [ref=e681] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e682]:
+                    - link "下载" [ref=e683] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSzlhbWC1wAcJF%2BvFpityatbCgU70jJcTDdSpZRdaMddF7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIk5MgNw6DBsKJqHE3sP38rsNxluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e685] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSzlhbWC1wAcJF%2BvFpityatStcMLV3AOx8Xu0MZWSfyr%2BL6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGeVrBk0woPryBJ%2FYBQ7F1RUzqEI8XWU2elB03jpqAqQuR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e687] [cursor=pointer]
+                    - link "引用" [ref=e689] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e691] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgierBLEOL8KPv90QGWl61i9_FIyXHP5yJ-AhRPlz88cRBQ6c3WW7qTe3koRylZhzBMR3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "14 农业大模型赋能农业工程专业人才培养研究 孙小博;唐汉;王奇;周文琪;王一甲 农业科技与装备 2025-05-20 81 HTML阅读 CNKI AI阅读" [ref=e693]:
+                  - cell "14" [ref=e694]:
+                    - checkbox [ref=e695] [cursor=pointer]
+                    - text: "14"
+                  - cell "农业大模型赋能农业工程专业人才培养研究" [ref=e696]:
+                    - link "农业大模型赋能农业工程专业人才培养研究" [ref=e697] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSySvJVfK5xIbq3xsKLF4se1oOFFmywXq-vLG8U4cASVhfMsIPGW47Tt_RoxI33R01WOOuTBZ3wXq_1-oEatyPEhOIFva6rddrMr6CQWdnzZXq1khdcIoO2QnkApb-yihZaQjJX01Gc6MTi1h_SG5HY53t2Z67qtW0-GIVKoFvawt4Q==&uniplatform=NZKPT&language=CHS
+                  - cell "孙小博;唐汉;王奇;周文琪;王一甲" [ref=e698]:
+                    - link "孙小博" [ref=e699] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySvJVfK5xIbq8RkbI4naa8wIRE443BoPt867UbjYN3Zx6sGRLAGquySrotafhocqWm5bvA8O2z6fQXbp0R-VmvZxfgXeIepQL74yy8wGnqsbtTsZbTz_KRL&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "唐汉" [ref=e700] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySvJVfK5xIbq8RkbI4naa8wtFe5oc4UdZl3MUBZjwC57sKjwDidNFLxiHM-W1XgOrC7-ydkJ-IGRujvHUNBlzSeaflZA2_YD1ldGqEb7L7Ypg==&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "王奇" [ref=e701] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySvJVfK5xIbq8RkbI4naa8wLRjpZvzl97UmAFI_TytPKfSSag7Oew-EcvUoGz_gX-JW6X_DaGzMjuMy3v1DzRA55Aky1Eos-l4maUucGB37zg==&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "周文琪" [ref=e702] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySvJVfK5xIbq8RkbI4naa8wokz8GSkX12RrLKrnAeUuGA1hUy35rfneRPKLlPlgHaQc3V62EOmROtjfBzbbVN4zvXIUdfZE01OTgDwXDlwR0WS7rZD_ey_V&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "王一甲" [ref=e703] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySvJVfK5xIbq8RkbI4naa8wb9rzqRO1Puz6K3WRDFeDB8D6MGRQCyYrpNFGhV1lD8wvNk-HDlscLUatfch2P7l_UnLRELIDUzqTyiNyAIdToU_l9sTylcLI&uniplatform=NZKPT&language=CHS
+                  - cell "农业科技与装备" [ref=e704]:
+                    - link "农业科技与装备" [ref=e706] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6AYhE7VfNsEyUKdE5t4oJ4ohISAFsCRWYW1vg72-Ghv6Dcbqo-K_f41Zc2zG-p1fSJPX8JHj9RBSnx0Ey12B_3WEgvh5ar0-rQ=&uniplatform=NZKPT&language=CHS
+                  - cell "2025-05-20" [ref=e707]
+                  - cell [ref=e708]
+                  - cell "81" [ref=e709]:
+                    - link "81" [ref=e712] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e713]:
+                    - link "下载" [ref=e714] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSRcLeuJdilO6OvjG52TZkCW9pB3BBhKXTmDXsuznzE4F7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIk5MgNw6DBsKJqHE3sP38rsNxluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e716] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSRcLeuJdilO6OvjG52TZkCYnP%2FZxGfSyrkq69aAsTLf2L6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGeVrBk0woPryBJ%2FYBQ7F1RUzqEI8XWU2elB03jpqAqQuR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e718] [cursor=pointer]
+                    - link "引用" [ref=e720] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e722] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgiePzofICikQRwQNtKiO5r9kgIicKt9Lw6Ubhvu-cQZP1Q6c3WW7qTe3koRylZhzBMR3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "15 农业大语言模型的部署及应用开发探索 刘铮;朱轶 中国农业文摘-农业工程 2025-04-24 09:49 2 485 HTML阅读 CNKI AI阅读" [ref=e724]:
+                  - cell "15" [ref=e725]:
+                    - checkbox [ref=e726] [cursor=pointer]
+                    - text: "15"
+                  - cell "农业大语言模型的部署及应用开发探索" [ref=e727]:
+                    - link "农业大语言模型的部署及应用开发探索" [ref=e728] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSySij85AB_o6EzP51Oc4LmOiZ5oyfnnAkvjna38m6PWQF1S4laCj7eOh5_hVc6daOd7Jo6dwNeoO1pdba-q95tA7Ny9DA4aQoPYwoYrK90TURtjFMyjU3vRu2TluVlNux8SP2hzoB6wrb88PRqKNT4BQtMLEh8Q3SqV5Yc7iG81icQ==&uniplatform=NZKPT&language=CHS
+                  - cell "刘铮;朱轶" [ref=e729]:
+                    - link "刘铮" [ref=e730] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySij85AB_o6E20CyS3sy_EUXEjV9OAwebqnxGUC3bchOWCCRtthiq1kH7c2DLeVimuP43LL3vNCVfJCWcAFrRKsnn8gcCBSZlq-NZgE_cqrxg==&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "朱轶" [ref=e731] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySij85AB_o6E20CyS3sy_EUK-ppJeKH_9DxmLao68RryMklENxGgyI9MeWYoFbVYyE6NR2vTtp_gg3a0koKwghCGiPw0wX9oda1v6H6BA13fw==&uniplatform=NZKPT&language=CHS
+                  - cell "中国农业文摘-农业工程" [ref=e732]:
+                    - link "中国农业文摘-农业工程" [ref=e734] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6Ddkl2SF4Mo5bXf--GOWRoootIU1vfxbSdp6XvYlPO91q5TJd8weiDENRu0jsTtpHHzj33WUYCSwaNUeXl3nhc4iqJulYSabAo=&uniplatform=NZKPT&language=CHS
+                  - cell "2025-04-24 09:49" [ref=e735]
+                  - cell "2" [ref=e736]:
+                    - link "2" [ref=e738] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSySij85AB_o6EzP51Oc4LmOiZ5oyfnnAkvjna38m6PWQF1S4laCj7eOh5_hVc6daOd7Jo6dwNeoO1pdba-q95tA7Ny9DA4aQoPYwoYrK90TURtjFMyjU3vRu2TluVlNux8SP2hzoB6wrb88PRqKNT4BQtMLEh8Q3SqV5Yc7iG81icQ==&uniplatform=NZKPT&language=CHS&anchor=citnet
+                  - cell "485" [ref=e739]:
+                    - link "485" [ref=e742] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e743]:
+                    - link "下载" [ref=e744] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSoUQxaKMfveUVAFToB6g2TTYDtl7KVv6GEsLKhEMxq2h7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIkwN1EV0fdYpkD8rwaRqjxolxluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e746] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSoUQxaKMfveUVAFToB6g2TROqAxn9ib5IGK6V%2FssuR5SL6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGeVrBk0woPryBJ%2FYBQ7F1RUO6uTdFRAwGi2sLNK9fySOR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e748] [cursor=pointer]
+                    - link "引用" [ref=e750] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e752] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgifqS1GPR68ysoCuZpW0GEwGl4NStiMMn7YIOjQYvm4zZg6c3WW7qTe3koRylZhzBMR3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "16 全国人大代表田淑娴：鼓励开展秸秆综合利用 支持创建智慧农业大模型试点县 刘华彬 中国农民合作社 2025-04-15 41 HTML阅读 CNKI AI阅读" [ref=e754]:
+                  - cell "16" [ref=e755]:
+                    - checkbox [ref=e756] [cursor=pointer]
+                    - text: "16"
+                  - cell "全国人大代表田淑娴：鼓励开展秸秆综合利用 支持创建智慧农业大模型试点县" [ref=e757]:
+                    - link "全国人大代表田淑娴：鼓励开展秸秆综合利用 支持创建智慧农业大模型试点县" [ref=e758] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyR9wS4FETvDI0jNlD1FLcrW2McdQ8D7yz3KAnUtwO0DXCctmv8ukX_tejhYT9j9xvby7i8OkQmIclHzOkU4FR2grOBVsNRXflKxZPc4CvSNc-Q7m5ToZcT7fPZXoAwVFouyKVEBHdm1X5oflPe2Txe2nFUmZ1xOBiwggag3ki9ejQ==&uniplatform=NZKPT&language=CHS
+                  - cell "刘华彬" [ref=e759]:
+                    - link "刘华彬" [ref=e760] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySij85AB_o6E20CyS3sy_EUevrrXtT-tCr_-OibCyX05cXhb57SapmFK3OP9O0cS8Bp6M93pUq6Jf0_ruixWRrMyV-2zSFDwsNEZwPw9xhkxC3uc0hvcnxU&uniplatform=NZKPT&language=CHS
+                  - cell "中国农民合作社" [ref=e761]:
+                    - link "中国农民合作社" [ref=e763] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6Ddkl2SF4Mo5bXf--GOWRoootIU1vfxbSdp6XvYlPO91q5TJd8weiDEd1R77DR4kOFVtjVeXRYHlpyVpfpaUifAMDJlLjF7DEs=&uniplatform=NZKPT&language=CHS
+                  - cell "2025-04-15" [ref=e764]
+                  - cell [ref=e765]
+                  - cell "41" [ref=e766]:
+                    - link "41" [ref=e769] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e770]:
+                    - link "下载" [ref=e771] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSUfczlieINAacGjts3bclToV5AVeAL8qs%2Ba8aS8CGvjV7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIk2Vf7D%2Fr2otb0Qsi8wjtfA5xluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e773] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSUfczlieINAacGjts3bclTl2Cs6Nh%2Ffqr1iWnmquVcjGL6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGeVrBk0woPryBJ%2FYBQ7F1RWePRUwEkXIy4guYtxdLJq%2FR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e775] [cursor=pointer]
+                    - link "引用" [ref=e777] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e779] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgid46g3qBHGoa2cLnJKQTci4DY7H0i0OcJVncP2OGWkuiw6c3WW7qTe3koRylZhzBMR3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "17 农业大模型驱动智慧农业——技术、应用与趋势 章强 扬州职业大学学报 2025-03-30 1 721 HTML阅读 CNKI AI阅读" [ref=e781]:
+                  - cell "17" [ref=e782]:
+                    - checkbox [ref=e783] [cursor=pointer]
+                    - text: "17"
+                  - cell "农业大模型驱动智慧农业——技术、应用与趋势" [ref=e784]:
+                    - link "农业大模型驱动智慧农业——技术、应用与趋势" [ref=e785] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyR9wS4FETvDI0jNlD1FLcrW2McdQ8D7yz1ockvWG11vpWXMJpdGKPCLROmDYCA-t9-oB2iHamBXEwJ7WiIn8iyEFhpYtGDzwYwRhBBv6tOIQvZZPIz1tOkmWmBkwr84J5LkAtzfFS-AyUnjnOgz2hDDeEhoZ5TNTRimxMYBbuAVYg==&uniplatform=NZKPT&language=CHS
+                  - cell "章强" [ref=e786]:
+                    - link "章强" [ref=e787] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyR9wS4FETvDI3QDRsMjbtPKtJVsetvUzbELsrdLSy_19BFNWQUT-eJ3EXUNlWH_EHgSG9bHSZsdmiX2BE7HTNOLrEtvfWUwbte9SBtwsgoO7A==&uniplatform=NZKPT&language=CHS
+                  - cell "扬州职业大学学报" [ref=e788]:
+                    - link "扬州职业大学学报" [ref=e790] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6C7L27FsRxCAvbNeKO7wKVjitOnsrKMVoH4hy9upbzjocWsbzNMwIIsVlLPT7e816nChS5VZwyiEzphPpl3oxLhLaFU-IFk7IU=&uniplatform=NZKPT&language=CHS
+                  - cell "2025-03-30" [ref=e791]
+                  - cell "1" [ref=e792]:
+                    - link "1" [ref=e794] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyR9wS4FETvDI0jNlD1FLcrW2McdQ8D7yz1ockvWG11vpWXMJpdGKPCLROmDYCA-t9-oB2iHamBXEwJ7WiIn8iyEFhpYtGDzwYwRhBBv6tOIQvZZPIz1tOkmWmBkwr84J5LkAtzfFS-AyUnjnOgz2hDDeEhoZ5TNTRimxMYBbuAVYg==&uniplatform=NZKPT&language=CHS&anchor=citnet
+                  - cell "721" [ref=e795]:
+                    - link "721" [ref=e798] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e799]:
+                    - link "下载" [ref=e800] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BS6V4vt4ofiaC1WZqE9mbycHaDdL7AA9dFIh%2B5AJ1lSTB7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIk2Vf7D%2Fr2otb0Qsi8wjtfA5xluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e802] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BS6V4vt4ofiaC1WZqE9mbycKqvH6YHthgrmGjxJ0NlU7%2BL6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGeVrBk0woPryBJ%2FYBQ7F1RWePRUwEkXIy4guYtxdLJq%2FR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e804] [cursor=pointer]
+                    - link "引用" [ref=e806] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e808] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgie6WEuLfwbkbWGunlH24kOVbEgkdoADDFLBPWTqNgaLpg6c3WW7qTe3koRylZhzBMR3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "18 基于精准知识筛选及知识协同生成的农业大语言模型 姜京池;闫莲;刘劼 智慧农业(中英文) 2025-03-24 13:09 6 684 HTML阅读 CNKI AI阅读" [ref=e810]:
+                  - cell "18" [ref=e811]:
+                    - checkbox [ref=e812] [cursor=pointer]
+                    - text: "18"
+                  - cell "基于精准知识筛选及知识协同生成的农业大语言模型" [ref=e813]:
+                    - link "基于精准知识筛选及知识协同生成的农业大语言模型" [ref=e814] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyR-JcCb5xU8tNBMSypFlSF8-AKwtSFr2qo3OK2ruFAIo26oC9dx_DGk2Rqi_cE8B130-NJl26KUbq5aiTbmqGb8hU49-JkKN98RXNhses16Wcp2TYBAk3mC9OJd9GIBU-t08loZ-SvV9vefqFqebzxRQu4zkO9TiTwkDnr_0v-3VQ==&uniplatform=NZKPT&language=CHS
+                  - cell "姜京池;闫莲;刘劼" [ref=e815]:
+                    - link "姜京池" [ref=e816] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyR-JcCb5xU8tK2wiY-1tRn24LksmtMA1d49uBmEqhZ5kgcmCaQhjuiCNXA6Fj9CTsGbpqxyC99Qc4ERaYftX3WInkPjeRMA2twLrHAXBfYjiohX1P0IKvVr&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "闫莲" [ref=e817] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyR-JcCb5xU8tK2wiY-1tRn2D1pXt8TkyGdUbWy3Nivf0ZAmAXe3ehdwg7CR5FGhaKbJG0K0BffrHOHqx5BHlxXIMeNvEE3NX-OeaqL7d64JgA==&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "刘劼" [ref=e818] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyR-JcCb5xU8tK2wiY-1tRn29rxNyZFskXk5yrX-Yl0oKMlY9KTFh6w_JBudhlvTdedN6raP2YGLbycA61eY6ENHmfJ4YWOBtRFtL9AmrDXLvQ==&uniplatform=NZKPT&language=CHS
+                  - cell "智慧农业(中英文)" [ref=e819]:
+                    - link "智慧农业(中英文)" [ref=e821] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6AgL0f3M2BuF7SIxqj2wnptq2xaBuLSTj2-G5MqwzSSEHD2X_6tsHs2VKCUmNJEe3T8HwNhRgAuCyJc5NZQfmSI5mhw32zbQfI=&uniplatform=NZKPT&language=CHS
+                  - cell "2025-03-24 13:09" [ref=e822]
+                  - cell "6" [ref=e823]:
+                    - link "6" [ref=e825] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyR-JcCb5xU8tNBMSypFlSF8-AKwtSFr2qo3OK2ruFAIo26oC9dx_DGk2Rqi_cE8B130-NJl26KUbq5aiTbmqGb8hU49-JkKN98RXNhses16Wcp2TYBAk3mC9OJd9GIBU-t08loZ-SvV9vefqFqebzxRQu4zkO9TiTwkDnr_0v-3VQ==&uniplatform=NZKPT&language=CHS&anchor=citnet
+                  - cell "684" [ref=e826]:
+                    - link "684" [ref=e829] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e830]:
+                    - link "下载" [ref=e831] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSgUznAFih8%2F4l8wwEGcT7%2FtaDDbwb37xRrGksxeNECzh7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIk19MtzozX4WVCEnP7hqhUe1xluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e833] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSgUznAFih8%2F4l8wwEGcT7%2Fsk7SO6EoecpTNPaGkuqry2L6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGeVrBk0woPryBJ%2FYBQ7F1RXTREL%2BA%2FyJwEZyi2g84QvIR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e835] [cursor=pointer]
+                    - link "引用" [ref=e837] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e839] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgif2gDidLPFouzIhkSGe9IjFSQwjlUSdZ5Cu-jaR0MQVhg6c3WW7qTe3koRylZhzBMR3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "19 农业领域大模型的关键技术、应用实例及未来发展趋势 张立智 中国农机装备 2025-02-08 2 624 HTML阅读 CNKI AI阅读" [ref=e841]:
+                  - cell "19" [ref=e842]:
+                    - checkbox [ref=e843] [cursor=pointer]
+                    - text: "19"
+                  - cell "农业领域大模型的关键技术、应用实例及未来发展趋势" [ref=e844]:
+                    - link "农业领域大模型的关键技术、应用实例及未来发展趋势" [ref=e845] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyQpMecLtpaPRMR2yjfzSwqDUjeSCqZ7LwBgKn_fSzVvvHxJxR5QCgLHUWHsJSRz1Kh3SpHMGB8AwDfQVs4V4gw5OShvyJru0DV6Kckewf7TGdmFQziyUcpDVWr08GnYCQ9uEs4InIZcJklWQAbEbv2DhevlGc9HAzSI1gLLO2pQgA==&uniplatform=NZKPT&language=CHS
+                  - cell "张立智" [ref=e846]:
+                    - link "张立智" [ref=e847] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyQpMecLtpaPRFY5CiFjbshr_F7T6eg-bHokgOIwttCUzQRnBDoYeYeuyTwOrH79oadIn-Uauy3ALQGP5xA0aDHgnYWiCQWiKi8OsIzyuuYLR-5pCwCgjNEi&uniplatform=NZKPT&language=CHS
+                  - cell "中国农机装备" [ref=e848]:
+                    - link "中国农机装备" [ref=e850] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6ACu238OsNXaO7hmhvMevYdO5MzCj1CUAtl4F1Je98Y1NQ3dY6VES6i7sikEkJkUvPOUAV59H-9QXsBPTv_sevfU0nIt6SdwM8=&uniplatform=NZKPT&language=CHS
+                  - cell "2025-02-08" [ref=e851]
+                  - cell "2" [ref=e852]:
+                    - link "2" [ref=e854] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyQpMecLtpaPRMR2yjfzSwqDUjeSCqZ7LwBgKn_fSzVvvHxJxR5QCgLHUWHsJSRz1Kh3SpHMGB8AwDfQVs4V4gw5OShvyJru0DV6Kckewf7TGdmFQziyUcpDVWr08GnYCQ9uEs4InIZcJklWQAbEbv2DhevlGc9HAzSI1gLLO2pQgA==&uniplatform=NZKPT&language=CHS&anchor=citnet
+                  - cell "624" [ref=e855]:
+                    - link "624" [ref=e858] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e859]:
+                    - link "下载" [ref=e860] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSzlhbWC1wAcJF%2BvFpityatcZedl5f0e2bzX5D0a2TZht7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIkwDOHt6RVuLv2kbpeAGTzVxxluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e862] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6Kdog%2BHL%2FGFrGhKahW4YGMC%2BSzlhbWC1wAcJF%2BvFpityatf2imkV6LzPWv4U8g3U2QImL6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGeVrBk0woPryBJ%2FYBQ7F1RWOSPNnbndV3LMYmTFqdzguR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e864] [cursor=pointer]
+                    - link "引用" [ref=e866] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e868] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgierBLEOL8KPv90QGWl61i9_COa7xa9PqRQNcF4SClImpg6c3WW7qTe3koRylZhzBMR3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+                - row "20 大模型在设施蔬菜智能化生产中的应用 吴华瑞;李晓锁 蔬菜 2024-11-15 5 707 HTML阅读 CNKI AI阅读" [ref=e870]:
+                  - cell "20" [ref=e871]:
+                    - checkbox [ref=e872] [cursor=pointer]
+                    - text: "20"
+                  - cell "大模型在设施蔬菜智能化生产中的应用" [ref=e873]:
+                    - link "大模型在设施蔬菜智能化生产中的应用" [ref=e874] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyRU847E0gD_H3ysuR43W90H05ORPN5l9y4Tp2Ac4WWiRnjnwJegIFzmG4z69QRxh8e6_cDhEBHbkN8iQZ5m2NQ85SJQCD3gQtkzU65cp1lJyN9N5XIOTIuucHBfvEckzRhgEROzyD6Zvvf_fBekOe7dPRswCnsW8wlVL3frWWiNjw==&uniplatform=NZKPT&language=CHS
+                  - cell "吴华瑞;李晓锁" [ref=e875]:
+                    - link "吴华瑞" [ref=e876] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyRU847E0gD_Hz6Dwhx5E-eQ3oIBHH7R5eWJds4sOEiL_MU1pI7al4C7WqFomMpT_W8OTgt6tqlnhyEs51wec3oKc8p9fku6K9LJ0SfqD2ZEHE4S36uU8aPd&uniplatform=NZKPT&language=CHS
+                    - text: ;
+                    - link "李晓锁" [ref=e877] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyRU847E0gD_Hz6Dwhx5E-eQPMQFOkxqAzf9SP37DYjvR-aG_G01TNZaPtALH5cG3uWAr8x8hNN54lU-ChMhdZ5KU-oSmeyUbwLVImq4Gh9qTAojNNQVu0MF&uniplatform=NZKPT&language=CHS
+                  - cell "蔬菜" [ref=e878]:
+                    - link "蔬菜" [ref=e880] [cursor=pointer]:
+                      - /url: https://navi.cnki.net/knavi/detail?p=3Vs8p2pVc6DBSXyhAH0Bj1g7Ct26zHLuV6Y52AI4YCdiqi7xpvQHXw3JRgQfeF6dZ-4LdjWHgsGKO6zcV8nqJ2EX969-nJKSCHjyhO5ytBY=&uniplatform=NZKPT&language=CHS
+                  - cell "2024-11-15" [ref=e881]
+                  - cell "5" [ref=e882]:
+                    - link "5" [ref=e884] [cursor=pointer]:
+                      - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyRU847E0gD_H3ysuR43W90H05ORPN5l9y4Tp2Ac4WWiRnjnwJegIFzmG4z69QRxh8e6_cDhEBHbkN8iQZ5m2NQ85SJQCD3gQtkzU65cp1lJyN9N5XIOTIuucHBfvEckzRhgEROzyD6Zvvf_fBekOe7dPRswCnsW8wlVL3frWWiNjw==&uniplatform=NZKPT&language=CHS&anchor=citnet
+                  - cell "707" [ref=e885]:
+                    - link "707" [ref=e888] [cursor=pointer]:
+                      - /url: javascript:void(0);
+                  - cell "HTML阅读 CNKI AI阅读" [ref=e889]:
+                    - link "下载" [ref=e890] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6KdrCpOSDrTKNGQdBiFAHwa0KWJtgNQjllvAAj8f6ukUcSrufO2zwCAEWWWv2PBxxwOd7b5mY%2FmsIpB5E%2FKF94iQVtRGRF3wJSTnwmOEEZ8vwAlK57xT%2B8LhM%2BfEqYWvBGm0igmLMld3nSvbU4a5%2BOkNaUlSU0HSLnl9m7MwOtW%2FIk6DAvsnWSCjZ5JeCIU%2B%2FKylxluINF6fMO20iEpFsF%2FxvLGz%2Bz36TeLCyBRZ5MVuwHifB6QxOYUyIR8PMoF5%2F7cs%3D&language=CHS
+                    - link "HTML阅读" [ref=e892] [cursor=pointer]:
+                      - /url: https://bar.cnki.net/bar/download/order?id=Pmp%2F5es3RB81cmauPwpbvsPMJcfwHgIZAnUyOJG6KdrCpOSDrTKNGQdBiFAHwa0KWJtgNQjllvAAj8f6ukUcSvlF9%2FOXu3BKhpAGn4PR%2BpmL6pUY4deTV2VvozAOFIpRZPJZEQefXW1RVS3a1v8jK%2F1BfoaD1y1Qo7XRFd7QjHpuNlDuxMvlZu263io%2FYiDKaul1dsBYtTi0d7iCbJHlGeVrBk0woPryBJ%2FYBQ7F1RVSutAlZXAaiLdZ9Dmx4wjyR4MXWMVKZ0AuDIoSVAxlFqCIPOZZU1gs%2B4tMAbrwuo93KAUBlVIsgcb0E8u%2FYkCK&language=CHS
+                      - text: HTML阅读
+                    - generic "收藏" [ref=e894] [cursor=pointer]
+                    - link "引用" [ref=e896] [cursor=pointer]:
+                      - /url: javascript:void(0)
+                    - link "CNKI AI阅读" [ref=e898] [cursor=pointer]:
+                      - /url: https://ai.cnki.net/study?cid=Pe2nFq1PBOM11SpCErZ-LwM1UHjV0uMR_icN4IXwgiefR8frPt-hkKQQbNjnXkowhZI51B9B1zfm5QNi0FCO6FiqCPJLFwH2BlC2ozHIHgx3KAUBlVIsgcb0E8u_YkCK&mimetype=XML&language=CHS
+                      - text: CNKI AI阅读
+            - generic [ref=e900]:
+              - link "1" [ref=e902] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - link "2" [ref=e904] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - link "3" [ref=e906] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - link "4" [ref=e908] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - link "下一页" [ref=e909] [cursor=pointer]:
+                - /url: javascript:void(0);
+        - generic:
+          - generic:
+            - list:
+              - listitem
+  - contentinfo [ref=e911]:
+    - generic [ref=e912]:
+      - generic [ref=e913]:
+        - list:
+          - listitem [ref=e914]:
+            - generic [ref=e915]: 读者服务
+            - link "购买知网卡" [ref=e916] [cursor=pointer]:
+              - /url: http://vipcard.cnki.net/ec/skwd/skwd.htm
+            - link "充值中心" [ref=e917] [cursor=pointer]:
+              - /url: http://zhifu.cnki.net/
+            - link "我的CNKI" [ref=e918] [cursor=pointer]:
+              - /url: http://my.cnki.net/
+            - link "帮助中心" [ref=e919] [cursor=pointer]:
+              - /url: http://service.cnki.net/helpcenter/
+          - listitem [ref=e920]:
+            - generic [ref=e921]: CNKI常用软件下载
+            - link "CAJViewer浏览器" [ref=e922] [cursor=pointer]:
+              - /url: http://cajviewer.cnki.net
+            - link "知网研学（原E-Study）" [ref=e923] [cursor=pointer]:
+              - /url: https://estudy.cnki.net/
+            - link "下载中心" [ref=e924] [cursor=pointer]:
+              - /url: https://www.cnki.net/software/xzydq.htm
+            - link "标准阅读器" [ref=e925] [cursor=pointer]:
+              - /url: https://piccache.cnki.net/2022/kdn/software/standardreader.exe
+          - listitem [ref=e926]:
+            - generic [ref=e927]: 特色服务
+            - link "手机知网" [ref=e928] [cursor=pointer]:
+              - /url: http://wap.cnki.net/
+            - link "杂志订阅" [ref=e929] [cursor=pointer]:
+              - /url: http://wuxizazhi.cnki.net/
+            - link "数字出版物订阅" [ref=e930] [cursor=pointer]:
+              - /url: http://mall.cnki.net/
+            - link "广告服务" [ref=e931] [cursor=pointer]:
+              - /url: http://a.cnki.net
+          - listitem [ref=e932]:
+            - generic [ref=e933]: 客户服务
+            - generic [ref=e934]: 订卡热线：400-819-9993
+            - generic [ref=e935]: 服务热线：400-810-9888
+            - generic [ref=e936]:
+              - text: 在线咨询：
+              - link "service.cnki.net" [ref=e937] [cursor=pointer]:
+                - /url: http://service.cnki.net
+            - generic [ref=e938]:
+              - text: 邮件咨询：
+              - link "help@cnki.net" [ref=e939] [cursor=pointer]:
+                - /url: mailto:help@cnki.net
+          - listitem [ref=e940]:
+            - link "新浪微博客服" [ref=e941] [cursor=pointer]:
+              - /url: http://e.weibo.com/u/3059308095
+              - generic [ref=e943]: 新浪微博客服
+            - link "官方微信" [ref=e944] [cursor=pointer]:
+              - /url: javascript:void(0)
+              - generic [ref=e946]: 官方微信
+      - generic [ref=e947]:
+        - generic [ref=e948]:
+          - paragraph [ref=e950]:
+            - generic [ref=e951]:
+              - link "关于我们" [ref=e952] [cursor=pointer]:
+                - /url: http://cnki.net/gycnki/gycnki.htm
+              - link "CNKI 荣誉" [ref=e953] [cursor=pointer]:
+                - /url: http://www.cnki.net/other/gonggao/gongsirongyu.html
+              - link "版权公告" [ref=e954] [cursor=pointer]:
+                - /url: http://www.cnki.net/other/gonggao/bqsm.htm
+              - link "客服中心" [ref=e955] [cursor=pointer]:
+                - /url: https://service.cnki.net/
+              - link "用户建议" [ref=e956] [cursor=pointer]:
+                - /url: https://service.cnki.net/home?flag=1
+              - link "知网招聘" [ref=e957] [cursor=pointer]:
+                - /url: https://piccache.cnki.net/index/CNKIRecruit/index.html
+              - link "知网推广" [ref=e958] [cursor=pointer]:
+                - /url: http://a.cnki.net/
+            - generic [ref=e959]: © 1998-2026中国知网（CNKI）
+          - paragraph [ref=e960]:
+            - link [ref=e961] [cursor=pointer]:
+              - /url: https://ss.knet.cn/verifyseal.dll?sn=e13111111010043364isll000000&a=1&pa=0.08881110103584755
+        - generic [ref=e963]:
+          - generic [ref=e964]:
+            - text: 京 ICP 证 040431 号
+            - link "网络出版服务许可证网出证(京)字第416号" [ref=e965] [cursor=pointer]:
+              - /url: https://piccache.cnki.net/index/images/gb/416.jpg
+            - text: 京公网安备 11010802020460 号
+          - text: 同方知网数字科技有限公司 KDN 平台基础技术由 AIKBase 提供.
+    - generic [ref=e967]:
+      - link "在线咨询" [ref=e968] [cursor=pointer]:
+        - /url: https://service.cnki.net
+      - link "用户反馈" [ref=e969] [cursor=pointer]:
+        - /url: https://kefu.cnki.net/im/goLeavemsg.html?appid=01xds8&isLogin=true&skill=ff8080818906901e018909b8eda90057

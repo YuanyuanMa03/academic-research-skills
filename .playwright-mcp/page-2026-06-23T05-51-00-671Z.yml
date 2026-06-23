@@ -1,0 +1,133 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - link "Skip to main content":
+      - /url: "#main_content"
+      - generic [ref=e5] [cursor=pointer]: Skip to main content
+    - banner [ref=e6]:
+      - generic [ref=e7]:
+        - link "ScienceDirect home page" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - img "Elsevier logo" [ref=e9]
+          - img [ref=e10]
+        - generic [ref=e18]:
+          - navigation "links" [ref=e19]:
+            - list [ref=e20]:
+              - listitem [ref=e21]:
+                - link "Journals & Books" [ref=e22] [cursor=pointer]:
+                  - /url: /browse/journals-and-books
+                  - generic [ref=e23]: Journals & Books
+          - navigation "utilities" [ref=e24]:
+            - list [ref=e25]:
+              - listitem [ref=e26]:
+                - button "Help" [ref=e30] [cursor=pointer]:
+                  - img [ref=e31]
+                  - generic [ref=e33]: Help
+        - link "My account" [ref=e35] [cursor=pointer]:
+          - /url: /user/login?targetURL=%2Fsearch%3Fqs%3D%2522smart%2520agriculture%2522%2520OR%2520%2522agricultural%2520large%2520model%2522%26lastSelectedFacet%3Dyears%26years%3D2022%252C2023%252C2024%252C2025%252C2026&from=globalheader
+          - img [ref=e36]
+          - generic [ref=e38]: My account
+        - button "Nanjing Agricultural University Institutional Access" [ref=e42] [cursor=pointer]:
+          - img [ref=e43]
+          - generic [ref=e45]: Nanjing Agricultural University
+    - generic [ref=e51]:
+      - dialog "Advanced search" [ref=e57]:
+        - generic [ref=e60]:
+          - generic [ref=e63]:
+            - generic [ref=e64]: Quick search form field
+            - generic [ref=e67]:
+              - generic [ref=e68]:
+                - generic [ref=e70]:
+                  - generic [ref=e71]: Find articles with these terms
+                  - combobox "Find articles with these terms" [ref=e72]: "\"smart agriculture\" OR \"agricultural large model\""
+                - button "Submit quick search" [ref=e73] [cursor=pointer]:
+                  - img [ref=e74]
+              - status [ref=e76]
+              - generic [ref=e77]: When autosuggest results are available use up and down arrows to review and enter to select.
+          - group [ref=e80]:
+            - generic [ref=e81]: Search form fields
+            - generic [ref=e84]:
+              - generic [ref=e88]:
+                - generic [ref=e90]:
+                  - generic [ref=e91]: In this journal or book title
+                  - combobox [ref=e92]
+                - status [ref=e94]
+                - generic [ref=e95]: When autosuggest results are available use up and down arrows to review and enter to select.
+              - generic [ref=e99]:
+                - generic [ref=e100]: Year(s)
+                - searchbox [ref=e101]
+            - generic [ref=e107]:
+              - generic [ref=e111]:
+                - generic [ref=e112]: Author(s)
+                - searchbox [ref=e113]
+              - generic [ref=e118]:
+                - generic [ref=e119]: Author affiliation
+                - searchbox [ref=e120]
+            - generic [ref=e126]:
+              - generic [ref=e130]:
+                - generic [ref=e131]: Volume(s)
+                - searchbox [ref=e132]
+              - generic [ref=e137]:
+                - generic [ref=e138]: Issue(s)
+                - searchbox [ref=e139]
+              - generic [ref=e144]:
+                - generic [ref=e145]: Page(s)
+                - searchbox [ref=e146]
+            - generic [ref=e149]:
+              - generic [ref=e155]:
+                - generic [ref=e156]: Title, abstract or author-specified keywords
+                - textbox [ref=e157]
+              - generic [ref=e165]:
+                - generic [ref=e166]: Title
+                - searchbox [ref=e167]
+              - generic [ref=e175]:
+                - generic [ref=e176]: References
+                - searchbox [ref=e177]
+              - generic [ref=e185]:
+                - generic [ref=e186]: ISSN or ISBN
+                - searchbox [ref=e187]
+          - generic [ref=e192]:
+            - list "Edit search criteria"
+          - button "Open Advanced Search" [ref=e199] [cursor=pointer]:
+            - img [ref=e200]
+            - generic [ref=e203]: Advanced search
+      - main "Browse search results" [ref=e207]
+  - contentinfo [ref=e213]:
+    - link "Elsevier home page (opens in a new tab)" [ref=e215] [cursor=pointer]:
+      - /url: https://www.elsevier.com/
+      - img "Elsevier logo with wordmark" [ref=e216]
+    - generic [ref=e217]:
+      - list [ref=e219]:
+        - listitem [ref=e220]:
+          - link "About ScienceDirectOpens in new window" [ref=e221] [cursor=pointer]:
+            - /url: https://www.elsevier.com/solutions/sciencedirect
+            - generic [ref=e222]:
+              - text: About ScienceDirect
+              - img "Opens in new window" [ref=e223]
+        - listitem [ref=e225]:
+          - link "Remote access" [ref=e226] [cursor=pointer]:
+            - /url: /user/institution/login?targetURL=%2Fsearch%3Fqs%3D%2522smart%2520agriculture%2522%2520OR%2520%2522agricultural%2520large%2520model%2522%26lastSelectedFacet%3Dyears%26years%3D2022%252C2023%252C2024%252C2025%252C2026
+            - generic [ref=e227]: Remote access
+        - listitem [ref=e228]:
+          - link "Contact and supportOpens in new window" [ref=e229] [cursor=pointer]:
+            - /url: https://service.elsevier.com/app/contact/supporthub/sciencedirect/
+            - generic [ref=e230]:
+              - text: Contact and support
+              - img "Opens in new window" [ref=e231]
+        - listitem [ref=e233]:
+          - link "Terms and conditionsOpens in new window" [ref=e234] [cursor=pointer]:
+            - /url: https://www.elsevier.com/legal/elsevier-website-terms-and-conditions
+            - generic [ref=e235]:
+              - text: Terms and conditions
+              - img "Opens in new window" [ref=e236]
+        - listitem [ref=e238]:
+          - link "Privacy policyOpens in new window" [ref=e239] [cursor=pointer]:
+            - /url: https://www.elsevier.com/legal/privacy-policy
+            - generic [ref=e240]:
+              - text: Privacy policy
+              - img "Opens in new window" [ref=e241]
+        - listitem [ref=e243]:
+          - button "Cookie settings" [ref=e244] [cursor=pointer]
+      - paragraph [ref=e245]: "All content on this site: Copyright © 2026 Elsevier B.V., its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply."
+    - link "RELX home page (opens in a new tab)" [ref=e247] [cursor=pointer]:
+      - /url: https://www.relx.com/
+      - img "RELX group home page" [ref=e248]

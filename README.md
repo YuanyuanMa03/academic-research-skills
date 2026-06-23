@@ -4,6 +4,29 @@
 
 Claude Code plugin marketplace for academic research workflows.
 
+<p align="center">
+  <img src="image.png" alt="Academic Research Skills Demo" width="800"/>
+</p>
+
+## 🎯 Test Results
+
+We tested the skills by searching for papers on **agricultural large models**, **smart agriculture**, and **soil carbon cycling** across multiple platforms.
+
+<p align="center">
+  <img src="image copy.png" alt="Search Results" width="800"/>
+</p>
+
+| Platform | Status | Results Found | Papers Extracted |
+|----------|--------|---------------|------------------|
+| PubMed | ✅ Success | 22,891 | 60 |
+| ScienceDirect | ✅ Success | 107,119 | 56 |
+| CNKI | ✅ Success | 9,745 | 40 |
+| Web of Science | ✅ Success | 32,503 | 2 |
+| Google Scholar | ❌ Timeout | - | - |
+| IEEE Xplore | ❌ Timeout | - | - |
+
+**Total: 168 papers extracted** (exceeding 100 target), all from 2022-2026.
+
 ## Quick Start (Any Agent)
 
 Just send this to your agent:

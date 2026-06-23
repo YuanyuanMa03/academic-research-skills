@@ -1,0 +1,1168 @@
+- generic [ref=e1]:
+  - link "Skip to main page content" [ref=e2] [cursor=pointer]:
+    - /url: "#search-results"
+  - generic [ref=e6]:
+    - img "U.S. flag" [ref=e7]
+    - paragraph [ref=e8]: An official website of the United States government
+    - button "Here's how you know" [ref=e9] [cursor=pointer]
+  - banner [ref=e10]:
+    - generic [ref=e12]:
+      - link "NCBI Logo" [ref=e14] [cursor=pointer]:
+        - /url: https://www.ncbi.nlm.nih.gov/
+        - img "NIH NLM Logo" [ref=e15]
+      - link "Log in" [ref=e17] [cursor=pointer]:
+        - /url: https://account.ncbi.nlm.nih.gov/?back_url=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F%3Fterm%3D%2522agricultural%2Blarge%2Bmodels%2522%2BOR%2B%2522smart%2Bagriculture%2522%2BOR%2B%2522soil%2Bcarbon%2Bcycling%2522%26sort%3Ddate%26size%3D50
+  - navigation "access keys":
+    - link "Access keys" [ref=e18] [cursor=pointer]:
+      - /url: https://www.ncbi.nlm.nih.gov/guide/browsers/#ncbi_accesskeys
+    - link "NCBI Homepage" [ref=e19] [cursor=pointer]:
+      - /url: https://www.ncbi.nlm.nih.gov
+    - link "MyNCBI Homepage" [ref=e20] [cursor=pointer]:
+      - /url: /myncbi/
+    - link "Main Content" [ref=e21] [cursor=pointer]:
+      - /url: "#maincontent"
+    - link "Main Navigation" [ref=e22] [cursor=pointer]:
+      - /url: "#"
+  - navigation "Main page content below"
+  - main [ref=e23]:
+    - heading "Search Page" [level=1] [ref=e24]
+    - search [ref=e25]:
+      - generic [ref=e26]:
+        - link "Pubmed Logo" [ref=e27] [cursor=pointer]:
+          - /url: /
+          - img "pubmed logo" [ref=e28]
+        - search [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]: "Search:"
+            - generic [ref=e32]:
+              - combobox "Search:" [expanded] [active] [ref=e33]: "\"agricultural large models\" OR \"smart agriculture\" OR \"soil carbon cycling\""
+              - status [ref=e34]: 0 results are available, use up and down arrow keys to navigate.
+            - button "Clear search input" [ref=e35] [cursor=pointer]
+            - button "Search" [ref=e36] [cursor=pointer]
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - link "Advanced" [ref=e39] [cursor=pointer]:
+              - /url: /advanced/
+            - link "Create alert" [ref=e40] [cursor=pointer]:
+              - /url: https://account.ncbi.nlm.nih.gov/?back_url=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F%3Fterm%3D%2522agricultural%2Blarge%2Bmodels%2522%2BOR%2B%2522smart%2Bagriculture%2522%2BOR%2B%2522soil%2Bcarbon%2Bcycling%2522%26sort%3Ddate%26size%3D50%23open-saved-search-panel
+            - button "Create RSS" [ref=e41] [cursor=pointer]
+          - link "User Guide" [ref=e43] [cursor=pointer]:
+            - /url: /help/
+      - generic [ref=e45]:
+        - text: ()
+        - generic [ref=e46]:
+          - generic [ref=e48]:
+            - generic [ref=e49]: "Sort by:"
+            - combobox "Sort by" [ref=e50]:
+              - option "Best match"
+              - option "Most recent" [selected]
+              - option "Publication date"
+              - option "First author"
+              - option "Journal"
+            - button "Sort order" [ref=e51] [cursor=pointer]
+          - generic [ref=e52]:
+            - button "Display options" [ref=e53] [cursor=pointer]:
+              - generic [ref=e54]: Display options
+            - option "Summary" [selected]
+            - option "Abstract"
+            - option "PubMed"
+            - option "PMID"
+            - option "10"
+            - option "20"
+            - option "50" [selected]
+            - option "100"
+            - option "200"
+        - region "save, email, send to" [ref=e55]:
+          - button "Save" [ref=e56] [cursor=pointer]
+          - button "Email" [ref=e57] [cursor=pointer]
+          - button "Send to" [ref=e59] [cursor=pointer]
+    - text: "* * * *"
+    - generic [ref=e60]:
+      - generic [ref=e61]:
+        - heading "Filters" [level=2] [ref=e62]
+        - generic [ref=e64]:
+          - heading "My Custom Filters" [level=3] [ref=e65]
+          - link "Edit My Custom Filters" [ref=e66] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/sites/myncbi/pubmed/filters
+            - text: Edit custom filters
+        - generic [ref=e67]:
+          - heading "Results by year" [level=3] [ref=e68]
+          - button "Expand/collapse timeline" [ref=e69] [cursor=pointer]
+          - button "Download CSV" [ref=e70] [cursor=pointer]
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - img [ref=e73]
+              - text: ":"
+            - generic [ref=e259]:
+              - slider "Lower handle" [ref=e262]:
+                - generic [ref=e264]: "1966"
+              - slider "Upper handle" [ref=e265]:
+                - generic [ref=e267]: "2026"
+          - paragraph [ref=e268]: Table representation of search results timeline featuring number of search results per year.
+          - table "Table of search results timeline data" [ref=e269]:
+            - rowgroup [ref=e270]:
+              - row "Year Number of Results" [ref=e271]:
+                - columnheader "Year" [ref=e272]
+                - columnheader "Number of Results" [ref=e273]
+            - rowgroup [ref=e274]:
+              - row "1966 1" [ref=e275]:
+                - cell "1966" [ref=e276]
+                - cell "1" [ref=e277]
+              - row "1972 1" [ref=e278]:
+                - cell "1972" [ref=e279]
+                - cell "1" [ref=e280]
+              - row "1973 1" [ref=e281]:
+                - cell "1973" [ref=e282]
+                - cell "1" [ref=e283]
+              - row "1974 1" [ref=e284]:
+                - cell "1974" [ref=e285]
+                - cell "1" [ref=e286]
+              - row "1975 1" [ref=e287]:
+                - cell "1975" [ref=e288]
+                - cell "1" [ref=e289]
+              - row "1977 2" [ref=e290]:
+                - cell "1977" [ref=e291]
+                - cell "2" [ref=e292]
+              - row "1978 2" [ref=e293]:
+                - cell "1978" [ref=e294]
+                - cell "2" [ref=e295]
+              - row "1979 3" [ref=e296]:
+                - cell "1979" [ref=e297]
+                - cell "3" [ref=e298]
+              - row "1980 1" [ref=e299]:
+                - cell "1980" [ref=e300]
+                - cell "1" [ref=e301]
+              - row "1981 2" [ref=e302]:
+                - cell "1981" [ref=e303]
+                - cell "2" [ref=e304]
+              - row "1982 6" [ref=e305]:
+                - cell "1982" [ref=e306]
+                - cell "6" [ref=e307]
+              - row "1983 3" [ref=e308]:
+                - cell "1983" [ref=e309]
+                - cell "3" [ref=e310]
+              - row "1984 6" [ref=e311]:
+                - cell "1984" [ref=e312]
+                - cell "6" [ref=e313]
+              - row "1985 9" [ref=e314]:
+                - cell "1985" [ref=e315]
+                - cell "9" [ref=e316]
+              - row "1986 2" [ref=e317]:
+                - cell "1986" [ref=e318]
+                - cell "2" [ref=e319]
+              - row "1987 14" [ref=e320]:
+                - cell "1987" [ref=e321]
+                - cell "14" [ref=e322]
+              - row "1988 17" [ref=e323]:
+                - cell "1988" [ref=e324]
+                - cell "17" [ref=e325]
+              - row "1989 29" [ref=e326]:
+                - cell "1989" [ref=e327]
+                - cell "29" [ref=e328]
+              - row "1990 19" [ref=e329]:
+                - cell "1990" [ref=e330]
+                - cell "19" [ref=e331]
+              - row "1991 27" [ref=e332]:
+                - cell "1991" [ref=e333]
+                - cell "27" [ref=e334]
+              - row "1992 31" [ref=e335]:
+                - cell "1992" [ref=e336]
+                - cell "31" [ref=e337]
+              - row "1993 28" [ref=e338]:
+                - cell "1993" [ref=e339]
+                - cell "28" [ref=e340]
+              - row "1994 34" [ref=e341]:
+                - cell "1994" [ref=e342]
+                - cell "34" [ref=e343]
+              - row "1995 41" [ref=e344]:
+                - cell "1995" [ref=e345]
+                - cell "41" [ref=e346]
+              - row "1996 43" [ref=e347]:
+                - cell "1996" [ref=e348]
+                - cell "43" [ref=e349]
+              - row "1997 49" [ref=e350]:
+                - cell "1997" [ref=e351]
+                - cell "49" [ref=e352]
+              - row "1998 57" [ref=e353]:
+                - cell "1998" [ref=e354]
+                - cell "57" [ref=e355]
+              - row "1999 73" [ref=e356]:
+                - cell "1999" [ref=e357]
+                - cell "73" [ref=e358]
+              - row "2000 70" [ref=e359]:
+                - cell "2000" [ref=e360]
+                - cell "70" [ref=e361]
+              - row "2001 111" [ref=e362]:
+                - cell "2001" [ref=e363]
+                - cell "111" [ref=e364]
+              - row "2002 130" [ref=e365]:
+                - cell "2002" [ref=e366]
+                - cell "130" [ref=e367]
+              - row "2003 148" [ref=e368]:
+                - cell "2003" [ref=e369]
+                - cell "148" [ref=e370]
+              - row "2004 130" [ref=e371]:
+                - cell "2004" [ref=e372]
+                - cell "130" [ref=e373]
+              - row "2005 190" [ref=e374]:
+                - cell "2005" [ref=e375]
+                - cell "190" [ref=e376]
+              - row "2006 202" [ref=e377]:
+                - cell "2006" [ref=e378]
+                - cell "202" [ref=e379]
+              - row "2007 239" [ref=e380]:
+                - cell "2007" [ref=e381]
+                - cell "239" [ref=e382]
+              - row "2008 297" [ref=e383]:
+                - cell "2008" [ref=e384]
+                - cell "297" [ref=e385]
+              - row "2009 321" [ref=e386]:
+                - cell "2009" [ref=e387]
+                - cell "321" [ref=e388]
+              - row "2010 351" [ref=e389]:
+                - cell "2010" [ref=e390]
+                - cell "351" [ref=e391]
+              - row "2011 390" [ref=e392]:
+                - cell "2011" [ref=e393]
+                - cell "390" [ref=e394]
+              - row "2012 490" [ref=e395]:
+                - cell "2012" [ref=e396]
+                - cell "490" [ref=e397]
+              - row "2013 570" [ref=e398]:
+                - cell "2013" [ref=e399]
+                - cell "570" [ref=e400]
+              - row "2014 736" [ref=e401]:
+                - cell "2014" [ref=e402]
+                - cell "736" [ref=e403]
+              - row "2015 905" [ref=e404]:
+                - cell "2015" [ref=e405]
+                - cell "905" [ref=e406]
+              - row "2016 1045" [ref=e407]:
+                - cell "2016" [ref=e408]
+                - cell "1045" [ref=e409]
+              - row "2017 1132" [ref=e410]:
+                - cell "2017" [ref=e411]
+                - cell "1132" [ref=e412]
+              - row "2018 1219" [ref=e413]:
+                - cell "2018" [ref=e414]
+                - cell "1219" [ref=e415]
+              - row "2019 1363" [ref=e416]:
+                - cell "2019" [ref=e417]
+                - cell "1363" [ref=e418]
+              - row "2020 1600" [ref=e419]:
+                - cell "2020" [ref=e420]
+                - cell "1600" [ref=e421]
+              - row "2021 1895" [ref=e422]:
+                - cell "2021" [ref=e423]
+                - cell "1895" [ref=e424]
+              - row "2022 2208" [ref=e425]:
+                - cell "2022" [ref=e426]
+                - cell "2208" [ref=e427]
+              - row "2023 2196" [ref=e428]:
+                - cell "2023" [ref=e429]
+                - cell "2196" [ref=e430]
+              - row "2024 2289" [ref=e431]:
+                - cell "2024" [ref=e432]
+                - cell "2289" [ref=e433]
+              - row "2025 2965" [ref=e434]:
+                - cell "2025" [ref=e435]
+                - cell "2965" [ref=e436]
+              - row "2026 1793" [ref=e437]:
+                - cell "2026" [ref=e438]
+                - cell "1793" [ref=e439]
+        - generic [ref=e441]:
+          - group "Filters" [ref=e442]:
+            - generic [ref=e443]:
+              - heading "Publication date" [level=3] [ref=e444]
+              - list [ref=e445]:
+                - listitem [ref=e446]:
+                  - radio "1 year" [ref=e447]
+                  - generic [ref=e448] [cursor=pointer]: 1 year
+                - listitem [ref=e449]:
+                  - radio "5 years" [ref=e450]
+                  - generic [ref=e451] [cursor=pointer]: 5 years
+                - listitem [ref=e452]:
+                  - radio "10 years" [ref=e453]
+                  - generic [ref=e454] [cursor=pointer]: 10 years
+                - listitem [ref=e455]:
+                  - radio "Select to open a dropdown and enter a custom date range." [ref=e456]
+                  - generic "Select to open a dropdown and enter a custom date range." [ref=e457] [cursor=pointer]: Custom Range
+            - generic [ref=e458]:
+              - heading "Text availability" [level=3] [ref=e459]
+              - list [ref=e460]:
+                - listitem [ref=e461]:
+                  - checkbox "Abstract" [ref=e462]
+                  - generic [ref=e463] [cursor=pointer]: Abstract
+                - listitem [ref=e464]:
+                  - checkbox "Free full text" [ref=e465]
+                  - generic [ref=e466] [cursor=pointer]: Free full text
+                - listitem [ref=e467]:
+                  - checkbox "Full text" [ref=e468]
+                  - generic [ref=e469] [cursor=pointer]: Full text
+            - generic [ref=e470]:
+              - heading "Article attribute" [level=3] [ref=e471]
+              - list [ref=e472]:
+                - listitem [ref=e473]:
+                  - checkbox "Associated data" [ref=e474]
+                  - generic [ref=e475] [cursor=pointer]: Associated data
+            - generic [ref=e476]:
+              - heading "Article type" [level=3] [ref=e477]
+              - list [ref=e478]:
+                - listitem [ref=e479]:
+                  - checkbox "Books and Documents" [ref=e480]
+                  - generic [ref=e481] [cursor=pointer]: Books and Documents
+                - listitem [ref=e482]:
+                  - checkbox "Clinical Trial" [ref=e483]
+                  - generic [ref=e484] [cursor=pointer]: Clinical Trial
+                - listitem [ref=e485]:
+                  - checkbox "Meta-Analysis" [ref=e486]
+                  - generic [ref=e487] [cursor=pointer]: Meta-Analysis
+                - listitem [ref=e488]:
+                  - checkbox "Randomized Controlled Trial" [ref=e489]
+                  - generic [ref=e490] [cursor=pointer]: Randomized Controlled Trial
+                - listitem [ref=e491]:
+                  - checkbox "Review" [ref=e492]
+                  - generic [ref=e493] [cursor=pointer]: Review
+                - listitem [ref=e494]:
+                  - checkbox "Systematic Review" [ref=e495]
+                  - generic [ref=e496] [cursor=pointer]: Systematic Review
+              - button "See all article type filters" [ref=e497] [cursor=pointer]
+          - generic [ref=e498]:
+            - heading "Additional filters" [level=2] [ref=e499]
+            - button "Additional filters" [ref=e500] [cursor=pointer]
+          - generic [ref=e501]:
+            - button "Clear applied filters" [ref=e502] [cursor=pointer]
+            - button "Reset filters menu" [ref=e503] [cursor=pointer]
+      - heading "Search Results" [level=2] [ref=e504]
+      - generic [ref=e505]:
+        - text: …
+        - generic [ref=e506]:
+          - heading "22,891 results" [level=3] [ref=e509]
+          - generic [ref=e510]:
+            - button "Navigates to the first page of results." [disabled]:
+              - img "first page"
+            - button "Navigates to the previous page of results." [disabled]:
+              - img "previous page"
+            - generic [ref=e511]:
+              - generic [ref=e512]: Page
+              - spinbutton "page number input" [ref=e514]: "1"
+              - generic [ref=e515]: of 458
+            - button "Navigates to the next page of results." [ref=e516] [cursor=pointer]:
+              - img "next page" [ref=e517]
+            - button "Navigates to the last page of results." [ref=e518] [cursor=pointer]:
+              - img "last page" [ref=e519]
+        - text: ":"
+        - generic [ref=e520]:
+          - generic [ref=e523]:
+            - text: Quoted phrase not found in
+            - link "phrase index" [ref=e524] [cursor=pointer]:
+              - /url: ./help/#phrase-index
+            - text: ": \"agricultural large models\""
+          - generic [ref=e525]: Select search result to email or save
+          - generic [ref=e527]:
+            - article [ref=e528]:
+              - generic [ref=e529]:
+                - checkbox "Select search result to email or save" [ref=e530]
+                - generic [ref=e532] [cursor=pointer]: "1"
+                - button "Cite" [ref=e535] [cursor=pointer]
+              - generic [ref=e537]:
+                - link "Smartphone-integrated RPA-CRISPR/Cas12a detection system with microneedle sampling for early point-of-care diagnosis of potato late blight." [ref=e538] [cursor=pointer]:
+                  - /url: /42330664/
+                - generic [ref=e539]:
+                  - generic [ref=e540]: Zhao J, Xu H, Fei S, Xu C, Yin W, Wei Q, Lin J, Liu G, Feng S, Gao F, Wang Y.
+                  - generic [ref=e541]: "Biosens Bioelectron. 2026 Jun 20;311:118943. doi: 10.1016/j.bios.2026.118943. Online ahead of print."
+                  - generic [ref=e542]: "PMID: 42330664"
+            - article [ref=e543]:
+              - generic [ref=e544]:
+                - checkbox "Select search result to email or save" [ref=e545]
+                - generic [ref=e547] [cursor=pointer]: "2"
+                - button "Cite" [ref=e550] [cursor=pointer]
+              - generic [ref=e552]:
+                - 'link "Mechanistic investigation of carotenoid effects on lipid digestion-related processes: Pancreatic lipase inhibition and bile salt-mediated emulsion destabilization." [ref=e553] [cursor=pointer]':
+                  - /url: /42330614/
+                - generic [ref=e554]:
+                  - generic [ref=e555]: Pan J, Nawaz M, Feng K, Li C, Liu J, Liu H, Lv Z, Yang W, Zhang Q, Jiao Z.
+                  - generic [ref=e556]: "Food Chem. 2026 Jun 19;523:150130. doi: 10.1016/j.foodchem.2026.150130. Online ahead of print."
+                  - generic [ref=e557]: "PMID: 42330614"
+                - generic [ref=e559]: This study explored the effects of four common carotenoids (lutein, zeaxanthin, lycopene, and beta-carotene) on lipid digestion using simplified in vitro model systems from biochemical and interfacial perspectives. Lutein showed noncompetitive inhibition of pancreatic lipa …
+            - article [ref=e560]:
+              - generic [ref=e561]:
+                - checkbox "Select search result to email or save" [ref=e562]
+                - generic [ref=e564] [cursor=pointer]: "3"
+                - button "Cite" [ref=e567] [cursor=pointer]
+              - generic [ref=e569]:
+                - link "Prime editing-mediated microhomology enables efficient replacement of large DNA." [ref=e570] [cursor=pointer]:
+                  - /url: /42328791/
+                - generic [ref=e571]:
+                  - generic [ref=e572]: Xie Y, Li P, He Z, Huang H, Wu D, Ma Z, Feng S, Ran J, Hou K, Gao F, Du X, Capecchi MR, Wu S.
+                  - generic [ref=e573]: "Nucleic Acids Res. 2026 Jun 22;54(12):gkag626. doi: 10.1093/nar/gkag626."
+                  - generic [ref=e574]: "PMID: 42328791"
+                - generic [ref=e576]: Precise and efficient replacement of large genomic DNA segments without inducing double-strand breaks (DSBs) remains a central challenge in genome engineering. ...Altogether, PREMIER provides a precise, high-efficiency, and DSB-free strategy for large-scale genome r …
+            - article [ref=e577]:
+              - generic [ref=e578]:
+                - checkbox "Select search result to email or save" [ref=e579]
+                - generic [ref=e581] [cursor=pointer]: "4"
+                - button "Cite" [ref=e584] [cursor=pointer]
+              - generic [ref=e586]:
+                - 'link "Efficiency and equity of water transfers to megacities: reconfiguring urban water security in Istanbul." [ref=e587] [cursor=pointer]':
+                  - /url: /42328669/
+                - generic [ref=e588]:
+                  - generic [ref=e589]: Varty Bayar F, Daloğlu Çetinkaya İ.
+                  - generic [ref=e590]: "PeerJ. 2026 Jun 17;14:e21241. doi: 10.7717/peerj.21241. eCollection 2026."
+                  - generic [ref=e591]: "PMID: 42328669"
+                  - generic [ref=e592]: Free PMC article.
+                - generic [ref=e594]: The qualitative assessment highlights that these transfers, while effective in meeting Istanbul's supply needs, often reinforce centralized, supply-driven governance models and overlook the socio-environmental impacts on donor regions. Recurring droughts, reduced streamflo …
+            - article [ref=e595]:
+              - generic [ref=e596]:
+                - checkbox "Select search result to email or save" [ref=e597]
+                - generic [ref=e599] [cursor=pointer]: "5"
+                - button "Cite" [ref=e602] [cursor=pointer]
+              - generic [ref=e604]:
+                - 'link "Identifying systemic risks and mitigation strategies of artificial intelligence in agriculture: from social-technical-ecological systems framework." [ref=e605] [cursor=pointer]':
+                  - /url: /42328078/
+                - generic [ref=e606]:
+                  - generic [ref=e607]: Yuan Y, Sun Y.
+                  - generic [ref=e608]: "Front Plant Sci. 2026 Jun 5;17:1811551. doi: 10.3389/fpls.2026.1811551. eCollection 2026."
+                  - generic [ref=e609]: "PMID: 42328078"
+                  - generic [ref=e610]: Free PMC article.
+                  - generic [ref=e611]: Review.
+                - generic [ref=e613]: While the transformative potential of Artificial Intelligence (AI) in global agriculture is widely acknowledged, especially its contributions to plant protection and agricultural production, much of the research mainly highlights its benefits, overlooking the potent …
+            - article [ref=e614]:
+              - generic [ref=e615]:
+                - checkbox "Select search result to email or save" [ref=e616]
+                - generic [ref=e618] [cursor=pointer]: "6"
+                - button "Cite" [ref=e621] [cursor=pointer]
+              - generic [ref=e623]:
+                - link "Estimation of SPAD values in litchi based on improved LSTM with fusion of IoT and multispectral image texture features." [ref=e624] [cursor=pointer]:
+                  - /url: /42328077/
+                - generic [ref=e625]:
+                  - generic [ref=e626]: Li Z, Chen X, He J, Chen L, Gao P.
+                  - generic [ref=e627]: "Front Plant Sci. 2026 Jun 5;17:1858723. doi: 10.3389/fpls.2026.1858723. eCollection 2026."
+                  - generic [ref=e628]: "PMID: 42328077"
+                  - generic [ref=e629]: Free PMC article.
+                - generic [ref=e631]: The attention mechanism effectively enhanced the model's focus on key features, improving feature utilization efficiency and model interpretability. The multi-source data fusion method and MLSTM model proposed in this study enable high precision, dynam …
+            - article [ref=e632]:
+              - generic [ref=e633]:
+                - checkbox "Select search result to email or save" [ref=e634]
+                - generic [ref=e636] [cursor=pointer]: "7"
+                - button "Cite" [ref=e639] [cursor=pointer]
+              - generic [ref=e641]:
+                - link "A knowledge-driven unified framework for plant disease classification and severity grading via domain adaptation." [ref=e642] [cursor=pointer]:
+                  - /url: /42326761/
+                - generic [ref=e643]:
+                  - generic [ref=e644]: Yuan Z, Wu X, Liu Y, Shuai X, Huang X, Gunarathna RDSM, Yu P, Xiao Y, Wang Q.
+                  - generic [ref=e645]: "Plant Phenomics. 2026 Jun 6;8(3):100233. doi: 10.1016/j.plaphe.2026.100233. eCollection 2026 Sep."
+                  - generic [ref=e646]: "PMID: 42326761"
+                  - generic [ref=e647]: Free PMC article.
+                - generic [ref=e649]: Plant leaf disease classification and severity grading are essential for precision agriculture, enabling timely intervention and optimized management. Existing models often fail to recognize previously unseen disease categories due to rigid label spaces and limited …
+            - article [ref=e650]:
+              - generic [ref=e651]:
+                - checkbox "Select search result to email or save" [ref=e652]
+                - generic [ref=e654] [cursor=pointer]: "8"
+                - button "Cite" [ref=e657] [cursor=pointer]
+              - generic [ref=e659]:
+                - link "Class imbalance aware deep semantic segmentation framework for weed and tobacco crops in UAV imagery." [ref=e660] [cursor=pointer]:
+                  - /url: /42325281/
+                - generic [ref=e661]:
+                  - generic [ref=e662]: Khan AJ, Abu Bakr M, Khan SD, Ullah H, Ullah M.
+                  - generic [ref=e663]: "Front Artif Intell. 2026 Jun 4;9:1792086. doi: 10.3389/frai.2026.1792086. eCollection 2026."
+                  - generic [ref=e664]: "PMID: 42325281"
+                  - generic [ref=e665]: Free PMC article.
+                - generic [ref=e667]: In this study, we introduce a novel approach that enhances the accuracy of pixel-level crop-weed interclass classification. We suggested a DeepLabV3Plus ResNeSt model that was trained using the Lovasz cross-entropy combined loss and inverse square root frequency weighted c …
+            - article [ref=e668]:
+              - generic [ref=e669]:
+                - checkbox "Select search result to email or save" [ref=e670]
+                - generic [ref=e672] [cursor=pointer]: "9"
+                - button "Cite" [ref=e675] [cursor=pointer]
+              - generic [ref=e677]:
+                - link "Correcting Apparent Priming Bias Unveils Fertilizer Nitrogen-Risk Archetypes of Surplus and Depletion Across Asian Rice Systems." [ref=e678] [cursor=pointer]:
+                  - /url: /42325172/
+                - generic [ref=e679]:
+                  - generic [ref=e680]: Liu X, Cai S, Xia L, Ladha JK, Yan X, Zhao X.
+                  - generic [ref=e681]: "Adv Sci (Weinh). 2026 Jun 22:e76227. doi: 10.1002/advs.76227. Online ahead of print."
+                  - generic [ref=e682]: "PMID: 42325172"
+                - generic [ref=e684]: This progress has been fundamentally constrained by the prohibitive cost of isotopic tracing, which has not only limited large-scale deployment but also prevented the correction of apparent priming effect (APE)-induced bias, resulting in a systematic misestimation of soil …
+            - article [ref=e685]:
+              - generic [ref=e686]:
+                - checkbox "Select search result to email or save" [ref=e687]
+                - generic [ref=e689] [cursor=pointer]: "10"
+                - button "Cite" [ref=e692] [cursor=pointer]
+              - generic [ref=e694]:
+                - 'link "Trap spaces as labelled ideals of SCC posets: A structural-functional theory of reachability in asynchronous boolean networks." [ref=e695] [cursor=pointer]':
+                  - /url: /42324817/
+                - generic [ref=e696]:
+                  - generic [ref=e697]: Yizengaw BY.
+                  - generic [ref=e698]: "J Bioinform Comput Biol. 2026 Jun;24(3):2650007. doi: 10.1142/S0219720026500071. Epub 2026 Jun 12."
+                  - generic [ref=e699]: "PMID: 42324817"
+                - generic [ref=e701]: Boolean networks provide a qualitative framework for modelling regulatory systems when kinetic parameters are unavailable, with cellular phenotypes represented as attractors of the induced dynamics [J. ...Schwab et al., Concepts in Boolean network modeling, Comput. …
+            - article [ref=e702]:
+              - generic [ref=e703]:
+                - checkbox "Select search result to email or save" [ref=e704]
+                - generic [ref=e706] [cursor=pointer]: "11"
+                - button "Cite" [ref=e709] [cursor=pointer]
+              - generic [ref=e711]:
+                - 'link "GinkgoSense-Net: A method for characterization and real-time detection of ginkgo fruits in complex field environments." [ref=e712] [cursor=pointer]':
+                  - /url: /42324324/
+                - generic [ref=e713]:
+                  - generic [ref=e714]: Yan D, Chen G, Wang Y, Liu X, Wang J, Xue Y, Zhang H, Lan S.
+                  - generic [ref=e715]: "Sci Rep. 2026 Jun 21. doi: 10.1038/s41598-026-52483-x. Online ahead of print."
+                  - generic [ref=e716]: "PMID: 42324324"
+                  - generic [ref=e717]: Free article.
+                - generic [ref=e719]: These findings indicate that the proposed model achieves an effective balance among detection accuracy, computational efficiency, and model complexity. The research findings facilitate the advancement of smart agriculture and promote the practical appl …
+            - article [ref=e720]:
+              - generic [ref=e721]:
+                - checkbox "Select search result to email or save" [ref=e722]
+                - generic [ref=e724] [cursor=pointer]: "12"
+                - button "Cite" [ref=e727] [cursor=pointer]
+              - generic [ref=e729]:
+                - 'link "Beyond Source Restrictions: Combined Mitigation Strategies Substantially Reduce Emissions and Exposure of Intentionally Added Microplastics in the UK." [ref=e730] [cursor=pointer]':
+                  - /url: /42323863/
+                - generic [ref=e731]:
+                  - generic [ref=e732]: Uluseker C, Chen H, Sletten T, Pilkington O, Roberts S, Spurgeon D, Cross R, Harrison S.
+                  - generic [ref=e733]: "Integr Environ Assess Manag. 2026 Jun 20:vjag103. doi: 10.1093/inteam/vjag103. Online ahead of print."
+                  - generic [ref=e734]: "PMID: 42323863"
+                - generic [ref=e736]: The analysis covers changes in product usage over time, the contribution of each sector to overall emissions, and the implications for environmental exposure. Results indicate that agricultural soils are the dominant receiving environment, mainly due to wastewater treatmen …
+            - article [ref=e737]:
+              - generic [ref=e738]:
+                - checkbox "Select search result to email or save" [ref=e739]
+                - generic [ref=e741] [cursor=pointer]: "13"
+                - button "Cite" [ref=e744] [cursor=pointer]
+              - generic [ref=e746]:
+                - link "Strong phylogenetic signal from chloroplast genomes of three Barringtonia species provides the first genomic resources for their conservation." [ref=e747] [cursor=pointer]:
+                  - /url: /42323549/
+                - generic [ref=e748]:
+                  - generic [ref=e749]: Liang F, Tan X, Wei Y, Huang X, Mao L, Qin Q, Tang Y, Li L, Qin Y, Yu Y.
+                  - generic [ref=e750]: "BMC Plant Biol. 2026 Jun 20. doi: 10.1186/s12870-026-09322-y. Online ahead of print."
+                  - generic [ref=e751]: "PMID: 42323549"
+                  - generic [ref=e752]: Free article.
+                - generic [ref=e754]: Collinearity and IR boundary analyses revealed high structural conservation without large-scale rearrangements. Interspecific sequence-level variations were detected in simple sequence repeats (SSRs) and long repeats. ...
+            - article [ref=e755]:
+              - generic [ref=e756]:
+                - checkbox "Select search result to email or save" [ref=e757]
+                - generic [ref=e759] [cursor=pointer]: "14"
+                - button "Cite" [ref=e762] [cursor=pointer]
+              - generic [ref=e764]:
+                - link "Large-scale flood susceptibility mapping along major tributaries of the Nile River system in Sudan using convolutional neural network." [ref=e765] [cursor=pointer]:
+                  - /url: /42323447/
+                - generic [ref=e766]:
+                  - generic [ref=e767]: Mohammed MAA, Eltijani A, Szabó NP, Szűcs P.
+                  - generic [ref=e768]: "Sci Rep. 2026 Jun 20. doi: 10.1038/s41598-026-58194-7. Online ahead of print."
+                  - generic [ref=e769]: "PMID: 42323447"
+                  - generic [ref=e770]: Free article.
+                - generic [ref=e772]: To the best of the authors' knowledge, this study represents one of the first large-scale, data-driven flood susceptibility assessments for Sudan using deep Convolutional Neural Network (CNN) model. ...A five-fold cross-validation strategy was implemented to ensure …
+            - article [ref=e773]:
+              - generic [ref=e774]:
+                - checkbox "Select search result to email or save" [ref=e775]
+                - generic [ref=e777] [cursor=pointer]: "15"
+                - button "Cite" [ref=e780] [cursor=pointer]
+              - generic [ref=e782]:
+                - link "Accelerating cancer research and personalized medicine by tie-up with AI empowered genomics and proteomics." [ref=e783] [cursor=pointer]:
+                  - /url: /42322793/
+                - generic [ref=e784]:
+                  - generic [ref=e785]: Patwekar M, Patwekar F, Kari ZA, Mohammed A, Sharma R.
+                  - generic [ref=e786]: "Pathol Res Pract. 2026 Jun 19;286:156594. doi: 10.1016/j.prp.2026.156594. Online ahead of print."
+                  - generic [ref=e787]: "PMID: 42322793"
+                  - generic [ref=e788]: Review.
+                - generic [ref=e790]: "However, multiple challenges linked to data heterogeneity and large-scale integration requires advanced computational frameworks. METHODS: AI-based advanced methodologies such as machine learning (ML) and deep learning (DL) models, are utilized to analyze multi-omic …"
+            - article [ref=e791]:
+              - generic [ref=e792]:
+                - checkbox "Select search result to email or save" [ref=e793]
+                - generic [ref=e795] [cursor=pointer]: "16"
+                - button "Cite" [ref=e798] [cursor=pointer]
+              - generic [ref=e800]:
+                - 'link "Biodegradable plastic mulches: Distinct effects on microbial communities but no impact on soil multifunctionality during cabbage production." [ref=e801] [cursor=pointer]':
+                  - /url: /42320104/
+                - generic [ref=e802]:
+                  - generic [ref=e803]: Liang R, Mei L, Ding J, Wang L, Xiao M, Li Y, Liu X, Shao C, Chadwick DR, Jones D, Ding F, Hu C, Qi R, Yuan Z, Yang T, Ge T.
+                  - generic [ref=e804]: "J Hazard Mater. 2026 Jun 15;514:142713. doi: 10.1016/j.jhazmat.2026.142713. Online ahead of print."
+                  - generic [ref=e805]: "PMID: 42320104"
+            - article [ref=e806]:
+              - generic [ref=e807]:
+                - checkbox "Select search result to email or save" [ref=e808]
+                - generic [ref=e810] [cursor=pointer]: "17"
+                - button "Cite" [ref=e813] [cursor=pointer]
+              - generic [ref=e815]:
+                - link "Variations in rice yield and quality during the early and late seasons under the HLREP-CC model across different ecological zones." [ref=e816] [cursor=pointer]:
+                  - /url: /42319069/
+                - generic [ref=e817]:
+                  - generic [ref=e818]: Wen C, Wu Y, Yin J, Xiong Y, Yao X, Zeng F, Peng Z, Chen C.
+                  - generic [ref=e819]: "J Sci Food Agric. 2026 Jun 19. doi: 10.1002/jsfa.70827. Online ahead of print."
+                  - generic [ref=e820]: "PMID: 42319069"
+                - generic [ref=e822]: "BACKGROUND: Stabilizing grain production in double-cropping rice areas depends largely on early rice; however, its production is often considered a reserve due to high-temperature stress during the grain filling stage, leading to poor quality and low market acceptance. Hig …"
+            - article [ref=e823]:
+              - generic [ref=e824]:
+                - checkbox "Select search result to email or save" [ref=e825]
+                - generic [ref=e827] [cursor=pointer]: "18"
+                - button "Cite" [ref=e830] [cursor=pointer]
+              - generic [ref=e832]:
+                - link "A systematic pipeline for diagnosing and reducing gender-stereotype bias in Japanese PLMs for sentiment analysis." [ref=e833] [cursor=pointer]:
+                  - /url: /42318581/
+                - generic [ref=e834]:
+                  - generic [ref=e835]: Liu Y, Li Z.
+                  - generic [ref=e836]: "Front Artif Intell. 2026 Jun 3;9:1851069. doi: 10.3389/frai.2026.1851069. eCollection 2026."
+                  - generic [ref=e837]: "PMID: 42318581"
+                  - generic [ref=e838]: Free PMC article.
+                - generic [ref=e840]: Pre-trained language models (PLMs) are widely used in sentiment analysis, but they may inherit gender-stereotypical bias from large-scale text corpora and transfer such bias to downstream sentiment predictions. ...Experimental results on three Japanese BERT-based se …
+            - article [ref=e841]:
+              - generic [ref=e842]:
+                - checkbox "Select search result to email or save" [ref=e843]
+                - generic [ref=e845] [cursor=pointer]: "19"
+                - button "Cite" [ref=e848] [cursor=pointer]
+              - generic [ref=e850]:
+                - 'link "Coniferous-to-broadleaved forest conversion in subtropical coastal sandy lands enhances soil component respiration: coupled driving effects and mechanisms for improved carbon sequestration stability." [ref=e851] [cursor=pointer]':
+                  - /url: /42318132/
+                - generic [ref=e852]:
+                  - generic [ref=e853]: Huang X, Gao W, Gong C, Zeng X, Zhou X, Ye G.
+                  - generic [ref=e854]: "Front Plant Sci. 2026 Jun 3;17:1825439. doi: 10.3389/fpls.2026.1825439. eCollection 2026."
+                  - generic [ref=e855]: "PMID: 42318132"
+                  - generic [ref=e856]: Free PMC article.
+                - generic [ref=e858]: "INTRODUCTION: Coniferous_to_broadleaved forest conversion reshapes soil carbon cycling in coastal sandy ecosystems, yet its regulation on component soil respiration and thermal sensitivity remains poorly quantified. To explore the regulatory effects and under …"
+            - article [ref=e859]:
+              - generic [ref=e860]:
+                - checkbox "Select search result to email or save" [ref=e861]
+                - generic [ref=e863] [cursor=pointer]: "20"
+                - button "Cite" [ref=e866] [cursor=pointer]
+              - generic [ref=e868]:
+                - link "Sexual reproduction and the polygenic architecture of azole resistance in agricultural populations of Aspergillus fumigatus." [ref=e869] [cursor=pointer]:
+                  - /url: /42317766/
+                - generic [ref=e870]:
+                  - generic [ref=e871]: Huang J, Liu H, He Y, Zhang Y.
+                  - generic [ref=e872]: "Front Microbiol. 2026 Jun 3;17:1843477. doi: 10.3389/fmicb.2026.1843477. eCollection 2026."
+                  - generic [ref=e873]: "PMID: 42317766"
+                  - generic [ref=e874]: Free PMC article.
+                - generic [ref=e876]: "INTRODUCTION: Agricultural environments, particularly greenhouses, are recognized as hotspots for the evolution of azole resistance in the opportunistic pathogen Aspergillus fumigatus. This study aimed to investigate the role of sexual reproduction and its underlying genet …"
+            - article [ref=e877]:
+              - generic [ref=e878]:
+                - checkbox "Select search result to email or save" [ref=e879]
+                - generic [ref=e881] [cursor=pointer]: "21"
+                - button "Cite" [ref=e884] [cursor=pointer]
+              - generic [ref=e886]:
+                - link "A multi-source remote sensing dataset for large-scale forest monitoring." [ref=e887] [cursor=pointer]:
+                  - /url: /42317621/
+                - generic [ref=e888]:
+                  - generic [ref=e889]: D'Amico G, Botticelli D, Marcelli G, Mattioli W, Chirici G, Vangi E, Borghi C, Corona P, Schumacher J, Breidenbach J, Su Y, Mehtätalo L, Francini S.
+                  - generic [ref=e890]: "Data Brief. 2026 Jun 6;67:112945. doi: 10.1016/j.dib.2026.112945. eCollection 2026 Aug."
+                  - generic [ref=e891]: "PMID: 42317621"
+                  - generic [ref=e892]: Free PMC article.
+                - generic [ref=e894]: It provides harmonized predictors across seven European countries, ensuring consistency, scalability, and ease of use for researchers developing or validating models to understand forest dynamics and estimate forest-related variables such as biomass or canopy recovery. ... …
+            - article [ref=e895]:
+              - generic [ref=e896]:
+                - checkbox "Select search result to email or save" [ref=e897]
+                - generic [ref=e899] [cursor=pointer]: "22"
+                - button "Cite" [ref=e902] [cursor=pointer]
+              - generic [ref=e904]:
+                - 'link "Multilevel analysis of risk factors for clinical mastitis in dairy cows in Plateau State, Nigeria: a hierarchical mixed-effects logistic regression modelling approach." [ref=e905] [cursor=pointer]':
+                  - /url: /42316382/
+                - generic [ref=e906]:
+                  - generic [ref=e907]: Onyango J, Shittu A, Bolajoko MB, Fasina FO, Peters A.
+                  - generic [ref=e908]: "BMC Vet Res. 2026 Jun 18. doi: 10.1186/s12917-026-05643-0. Online ahead of print."
+                  - generic [ref=e909]: "PMID: 42316382"
+                  - generic [ref=e910]: Free article.
+                - generic [ref=e912]: Univariable and multivariable mixed-effects logistic regression models were fitted for each conceptual block of variables, accounting for clustering at the local government area (LGA) level using random intercepts. Model performance was evaluated using likelihood ra …
+            - article [ref=e913]:
+              - generic [ref=e914]:
+                - checkbox "Select search result to email or save" [ref=e915]
+                - generic [ref=e917] [cursor=pointer]: "23"
+                - button "Cite" [ref=e920] [cursor=pointer]
+              - generic [ref=e922]:
+                - link "Deciphering the mosaic genome of sugarcane cultivars through polyploid admixture inference with AdmixPoly." [ref=e923] [cursor=pointer]:
+                  - /url: /42316312/
+                - generic [ref=e924]:
+                  - generic [ref=e925]: Rio S, Gauthier F, Garsmeur O, Piperidis G, Hoarau JY, Serino G, Castillo Torres R, Joshi SV, Terajima Y, Lopez-Gerena J, Perera MF, Stoute A, Badaloo G, Huang D, Barry K, Schmutz J, Mary-Huard T, D'Hont A.
+                  - generic [ref=e926]: "Genome Biol. 2026 Jun 19. doi: 10.1186/s13059-026-04162-3. Online ahead of print."
+                  - generic [ref=e927]: "PMID: 42316312"
+                  - generic [ref=e928]: Free article.
+                - generic [ref=e930]: Notably, local admixture inference in complex scenarios, such as high ploidy levels, large numbers of ancestral groups and alleles per marker is enabled through efficient approximations of emission and transition probabilities within a hidden Markov model framework. …
+            - article [ref=e931]:
+              - generic [ref=e932]:
+                - checkbox "Select search result to email or save" [ref=e933]
+                - generic [ref=e935] [cursor=pointer]: "24"
+                - button "Cite" [ref=e938] [cursor=pointer]
+              - generic [ref=e940]:
+                - 'link "Reprogramming the Genetic Potential of Buckwheat: A Roadmap for Functional Trait Improvement and Breeder-Ready Innovation." [ref=e941] [cursor=pointer]':
+                  - /url: /42314872/
+                - generic [ref=e942]:
+                  - generic [ref=e943]: Chettry U, Chrungoo NK.
+                  - generic [ref=e944]: "J Nutr. 2026 Jun 18:101673. doi: 10.1016/j.tjnut.2026.101673. Online ahead of print."
+                  - generic [ref=e945]: "PMID: 42314872"
+                  - generic [ref=e946]: Review.
+                - generic [ref=e948]: While Buckwheat is considered as a healthy food because of its nutraceutical properties, low yields due to seed shattering because of pedicel breaking and heterozygosity due to self-incompatibility as a consequence of dimorphic heterostylism have always remained major problems in …
+            - article [ref=e949]:
+              - generic [ref=e950]:
+                - checkbox "Select search result to email or save" [ref=e951]
+                - generic [ref=e953] [cursor=pointer]: "25"
+                - button "Cite" [ref=e956] [cursor=pointer]
+              - generic [ref=e958]:
+                - link "Codonopsis pilosula (Dangshen) decoction promotes NR2F2-dependent pulmonary endothelial repair in an H9N2-induced lung injury model." [ref=e959] [cursor=pointer]:
+                  - /url: /42314812/
+                - generic [ref=e960]:
+                  - generic [ref=e961]: Ye Q, Liu Z, Zhang Y, Qiao C, Guo H, Zhi Y, Zhang C, Hu G, Zhang T, Wu Y, Zhang Q.
+                  - generic [ref=e962]: "J Ethnopharmacol. 2026 Jun 18;370:122078. doi: 10.1016/j.jep.2026.122078. Online ahead of print."
+                  - generic [ref=e963]: "PMID: 42314812"
+                - generic [ref=e965]: In vitro, C. pilosula-containing serum enhanced MVEC repair functions, including viability/proliferation, migration and barrier recovery (TEER), together with induction of the NR2F2-NRP1-CCND1 axis. NR2F2 knockdown largely attenuated these effects, while NR2F2 overexpressi …
+            - article [ref=e966]:
+              - generic [ref=e967]:
+                - checkbox "Select search result to email or save" [ref=e968]
+                - generic [ref=e970] [cursor=pointer]: "26"
+                - button "Cite" [ref=e973] [cursor=pointer]
+              - generic [ref=e975]:
+                - link "Lipid biosynthesis from HTC-AP of sewage sludge using engineered Yarrowia lipolytica." [ref=e976] [cursor=pointer]:
+                  - /url: /42314630/
+                - generic [ref=e977]:
+                  - generic [ref=e978]: Szczepańczyk M, Kosiorowska KE, Domińska M, Hamal K, Jasiak MD, Dobrowolski A, Valentin M, Igwegbe CA, Ciolkosz D, Białowiec A, Rasaq WA.
+                  - generic [ref=e979]: "J Environ Manage. 2026 Jun 18;412:130244. doi: 10.1016/j.jenvman.2026.130244. Online ahead of print."
+                  - generic [ref=e980]: "PMID: 42314630"
+                  - generic [ref=e981]: Free article.
+                - generic [ref=e983]: Hydrothermal carbonization (HTC) converts wet biomass, such as sewage sludge, into value-added products; however, the aqueous post-reaction phase (HTC-AP) remains largely underutilized. The presented study aimed to evaluate HTC-AP derived from sewage sludge as a medium for …
+            - article [ref=e984]:
+              - generic [ref=e985]:
+                - checkbox "Select search result to email or save" [ref=e986]
+                - generic [ref=e988] [cursor=pointer]: "27"
+                - button "Cite" [ref=e991] [cursor=pointer]
+              - generic [ref=e993]:
+                - link "Interfacial structural-functional modulation of PLA-TPGS macromolecular assemblies for synergistic Tri-modal colorectal cancer therapy." [ref=e994] [cursor=pointer]:
+                  - /url: /42314511/
+                - generic [ref=e995]:
+                  - generic [ref=e996]: Tran THT, Mai TTT, Phan KS, Doan BT, Do HN, Nguyen TM, Bui TQ, Pham HN, Le TTH, Ha PT.
+                  - generic [ref=e997]: "Colloids Surf B Biointerfaces. 2026 Jun 17;267:115921. doi: 10.1016/j.colsurfb.2026.115921. Online ahead of print."
+                  - generic [ref=e998]: "PMID: 42314511"
+                - generic [ref=e1000]: Molecular crowding and homo-FRET first lower the NIR emission inside the core, but this turns into a fluorescence dequenching effect that reveals tumour accumulation in CT26 colorectal cancer models. The lipophilic PPIX, owing to its lipophilicity, is expected to localize …
+            - article [ref=e1001]:
+              - generic [ref=e1002]:
+                - checkbox "Select search result to email or save" [ref=e1003]
+                - generic [ref=e1005] [cursor=pointer]: "28"
+                - button "Cite" [ref=e1008] [cursor=pointer]
+              - generic [ref=e1010]:
+                - 'link "Artificial Intelligence in East African Agriculture: A Systematic Review of Applications, Adoption, and Implications for Smallholder Farmers." [ref=e1011] [cursor=pointer]':
+                  - /url: /42313460/
+                - generic [ref=e1012]:
+                  - generic [ref=e1013]: Shitaye Z, Embyale MA, Nega TA, Gidelew GE, Mohammed M.
+                  - generic [ref=e1014]: "ScientificWorldJournal. 2026;2026(1):e5128133. doi: 10.1155/tswj/5128133."
+                  - generic [ref=e1015]: "PMID: 42313460"
+                  - generic [ref=e1016]: Free PMC article.
+                  - generic [ref=e1017]: Review.
+                - generic [ref=e1019]: The review shows that early developments in AI-related agricultural technologies were limited and largely experimental, but advancements in digital technologies, mobile connectivity, remote sensing, and data analytics have significantly expanded AI applications in r …
+            - article [ref=e1020]:
+              - generic [ref=e1021]:
+                - checkbox "Select search result to email or save" [ref=e1022]
+                - generic [ref=e1024] [cursor=pointer]: "29"
+                - button "Cite" [ref=e1027] [cursor=pointer]
+              - generic [ref=e1029]:
+                - link "Machine learning-based retrieval of total nitrogen matter from an inland highly turbid lake using Landsat 8 OLI Imagery." [ref=e1030] [cursor=pointer]:
+                  - /url: /42313248/
+                - generic [ref=e1031]:
+                  - generic [ref=e1032]: Du C, Yang S, Liu Y, Liu G, Jiang M, Wang J.
+                  - generic [ref=e1033]: "Environ Monit Assess. 2026 Jun 18;198(7):741. doi: 10.1007/s10661-026-15592-8."
+                  - generic [ref=e1034]: "PMID: 42313248"
+                - generic [ref=e1036]: In this study, four machine learning algorithms-random forest (RF), support vector machine (SVM), multilayer perceptron (MLP), and eXtreme gradient boosting (XGB)-were employed to automatically determine an optimal threshold that divides TN concentrations into high-value and low- …
+            - article [ref=e1037]:
+              - generic [ref=e1038]:
+                - checkbox "Select search result to email or save" [ref=e1039]
+                - generic [ref=e1041] [cursor=pointer]: "30"
+                - button "Cite" [ref=e1044] [cursor=pointer]
+              - generic [ref=e1046]:
+                - 'link "Adult paclobutrazol exposure impairs zebrafish reproduction: evidence from fertility outcomes and gonadal histology." [ref=e1047] [cursor=pointer]':
+                  - /url: /42313221/
+                - generic [ref=e1048]:
+                  - generic [ref=e1049]: Chen YR, Hsu HJ, Lai HT, Wang WD.
+                  - generic [ref=e1050]: "Ecotoxicology. 2026 Jun 18;35(5):121. doi: 10.1007/s10646-026-03105-9."
+                  - generic [ref=e1051]: "PMID: 42313221"
+                - generic [ref=e1053]: Paclobutrazol (PBZ), a triazole-based plant growth retardant, is widely employed in agriculture and horticulture to control plant height and promote root growth. However, its persistence and mobility in the environment raise concerns regarding its bioavailability and toxic …
+            - article [ref=e1054]:
+              - generic [ref=e1055]:
+                - checkbox "Select search result to email or save" [ref=e1056]
+                - generic [ref=e1058] [cursor=pointer]: "31"
+                - button "Cite" [ref=e1061] [cursor=pointer]
+              - generic [ref=e1063]:
+                - link "CsWRKY33 Integrates Immune Signalling and Metabolic Reprogramming to Enhance Tea Plant Resistance Against Colletotrichum camelliae." [ref=e1064] [cursor=pointer]:
+                  - /url: /42312495/
+                - generic [ref=e1065]:
+                  - generic [ref=e1066]: Li T, Cao D, Fang W, Li M, Jiang T, Zhang L, Gao L, Xia T, Liu Y.
+                  - generic [ref=e1067]: "Plant Cell Environ. 2026 Jun 18. doi: 10.1111/pce.70684. Online ahead of print."
+                  - generic [ref=e1068]: "PMID: 42312495"
+                - generic [ref=e1070]: While certain transcription factors have been implicated in stress responses, the core transcriptional networks governing immunity in tea plants remain largely elusive. In this study, we identify CsWRKY33 as a central regulator that orchestrates immune responses and metabo …
+            - article [ref=e1071]:
+              - generic [ref=e1072]:
+                - checkbox "Select search result to email or save" [ref=e1073]
+                - generic [ref=e1075] [cursor=pointer]: "32"
+                - button "Cite" [ref=e1078] [cursor=pointer]
+              - generic [ref=e1080]:
+                - link "Large language model assisted decision support framework for uncertainty aware detection and management of tomato lateral shoots." [ref=e1081] [cursor=pointer]:
+                  - /url: /42312082/
+                - generic [ref=e1082]:
+                  - generic [ref=e1083]: Jiang Y, Geng Y, Zheng Z, Pang X.
+                  - generic [ref=e1084]: "Front Plant Sci. 2026 Jun 2;17:1853269. doi: 10.3389/fpls.2026.1853269. eCollection 2026."
+                  - generic [ref=e1085]: "PMID: 42312082"
+                  - generic [ref=e1086]: Free PMC article.
+                - generic [ref=e1088]: This study proposes an optical vision-based framework that integrates deep learning perception with large language model assisted pruning decision support. A tomato lateral Shoot image dataset was constructed using RGB imaging in greenhouse environments. ...Data aug …
+            - article [ref=e1089]:
+              - generic [ref=e1090]:
+                - checkbox "Select search result to email or save" [ref=e1091]
+                - generic [ref=e1093] [cursor=pointer]: "33"
+                - button "Cite" [ref=e1096] [cursor=pointer]
+              - generic [ref=e1098]:
+                - 'link "Decoding plant volatile stress signals across scales: from molecular responses to ecosystem dynamics." [ref=e1099] [cursor=pointer]':
+                  - /url: /42312079/
+                - generic [ref=e1100]:
+                  - generic [ref=e1101]: Ogwu MC, Ulimboka R, Aliu OO.
+                  - generic [ref=e1102]: "Front Plant Sci. 2026 Jun 2;17:1815183. doi: 10.3389/fpls.2026.1815183. eCollection 2026."
+                  - generic [ref=e1103]: "PMID: 42312079"
+                  - generic [ref=e1104]: Free PMC article.
+                  - generic [ref=e1105]: Review.
+                - generic [ref=e1107]: Integrating these technologies with multi-omics datasets and digital twin modeling enables the development of predictive monitoring systems capable of scaling plant stress detection from agricultural fields to regional ecosystems. ...Decoding plant volatile stress s …
+            - article [ref=e1108]:
+              - generic [ref=e1109]:
+                - checkbox "Select search result to email or save" [ref=e1110]
+                - generic [ref=e1112] [cursor=pointer]: "34"
+                - button "Cite" [ref=e1115] [cursor=pointer]
+              - generic [ref=e1117]:
+                - 'link "Clinical predictors of BRCA1/2 P/LP variants for high-risk breast cancer patients in China: HBRCA-risk prediction." [ref=e1118] [cursor=pointer]':
+                  - /url: /42311241/
+                  - text: Clinical predictors of
+                  - emphasis [ref=e1119]: BRCA1/2
+                  - text: "P/LP variants for high-risk breast cancer patients in China:"
+                  - emphasis [ref=e1120]: HBRCA-risk prediction
+                  - text: .
+                - generic [ref=e1121]:
+                  - generic [ref=e1122]: Gu W, Xu C, Fu J, Lei H, Khan NU, Lei R, Chen X, Wang XJ, Chen T.
+                  - generic [ref=e1123]: "Front Oncol. 2026 Jun 2;16:1779548. doi: 10.3389/fonc.2026.1779548. eCollection 2026."
+                  - generic [ref=e1124]: "PMID: 42311241"
+                  - generic [ref=e1125]: Free PMC article.
+                - generic [ref=e1127]: "We developed a multivariable logistic regression model to predict P/LP carrier status and evaluated its performance across imputed datasets with bootstrap internal validation. ...CONCLUSIONS: We developed a clinicopathology-based model from a high-risk Chinese breas …"
+            - article [ref=e1128]:
+              - generic [ref=e1129]:
+                - checkbox "Select search result to email or save" [ref=e1130]
+                - generic [ref=e1132] [cursor=pointer]: "35"
+                - button "Cite" [ref=e1135] [cursor=pointer]
+              - generic [ref=e1137]:
+                - 'link "How psychological distance shapes ecological farming: cognitive-social mechanisms in smallholder decision-making." [ref=e1138] [cursor=pointer]':
+                  - /url: /42310880/
+                - generic [ref=e1139]:
+                  - generic [ref=e1140]: Ma Z, Zhang Z, Zhu Y, Song J, Liu Y.
+                  - generic [ref=e1141]: "J Sci Food Agric. 2026 Jun 17. doi: 10.1002/jsfa.70787. Online ahead of print."
+                  - generic [ref=e1142]: "PMID: 42310880"
+                - generic [ref=e1144]: "BACKGROUND: Global agriculture is facing a contradiction between production improvement and ecological protection. Ecological farming is essential for China's smallholder-dominated green transition, but a large gap remains between policy goals and actual farmer beha …"
+            - article [ref=e1145]:
+              - generic [ref=e1146]:
+                - checkbox "Select search result to email or save" [ref=e1147]
+                - generic [ref=e1149] [cursor=pointer]: "36"
+                - button "Cite" [ref=e1152] [cursor=pointer]
+              - generic [ref=e1154]:
+                - link "Air-breathing synchrony in juvenile Arapaima gigas reveals collective coordination under individual physiological constraints." [ref=e1155] [cursor=pointer]:
+                  - /url: /42310419/
+                - generic [ref=e1156]:
+                  - generic [ref=e1157]: Bartashevich P, Francisco FA, Escurra-Alegre A, Schäfer F, Wuertz S, Krause J, Kloas W, Bierbach D.
+                  - generic [ref=e1158]: "Commun Biol. 2026 Jun 17;9(1):831. doi: 10.1038/s42003-026-10472-w."
+                  - generic [ref=e1159]: "PMID: 42310419"
+                  - generic [ref=e1160]: Free PMC article.
+                - generic [ref=e1162]: We address this question by combining agent-based modeling with empirical observations of a distinctive case of synchronization in fish - the collective air-breathing of juvenile Arapaima gigas. We show that individuals differ consistently in surfacing rhythms when alone, …
+            - article [ref=e1163]:
+              - generic [ref=e1164]:
+                - checkbox "Select search result to email or save" [ref=e1165]
+                - generic [ref=e1167] [cursor=pointer]: "37"
+                - button "Cite" [ref=e1170] [cursor=pointer]
+              - generic [ref=e1172]:
+                - link "Multi-perspective prompt fusion for zero-shot classification of agricultural news texts with large language models." [ref=e1173] [cursor=pointer]:
+                  - /url: /42310319/
+                - generic [ref=e1174]:
+                  - generic [ref=e1175]: Liu Q, Ding Y, Liu H, Xu Z, Zou Y.
+                  - generic [ref=e1176]: "Sci Rep. 2026 Jun 17. doi: 10.1038/s41598-026-56518-1. Online ahead of print."
+                  - generic [ref=e1177]: "PMID: 42310319"
+                  - generic [ref=e1178]: Free article.
+                - generic [ref=e1180]: In the era of smart agriculture, agricultural information and related event news spread rapidly across social media and online platforms. ...However, the domain vocabulary sparsity, semantic ambiguity, and annotated data scarcity of agricultural texts …
+            - article [ref=e1181]:
+              - generic [ref=e1182]:
+                - checkbox "Select search result to email or save" [ref=e1183]
+                - generic [ref=e1185] [cursor=pointer]: "38"
+                - button "Cite" [ref=e1188] [cursor=pointer]
+              - generic [ref=e1190]:
+                - link "Cellular and molecular characterization of the testicular development of GDF9-edited pigs." [ref=e1191] [cursor=pointer]:
+                  - /url: /42309824/
+                - generic [ref=e1192]:
+                  - generic [ref=e1193]: Jiang T, Guo J, Jiao Y, Xu M, He J, Liu X, Qin G, Liu X, Chen Y, Cong P, He Z.
+                  - generic [ref=e1194]: "Reprod Fertil Dev. 2026 Jun 19;38(9):RD26060. doi: 10.1071/RD26060."
+                  - generic [ref=e1195]: "PMID: 42309824"
+                - generic [ref=e1197]: "However, its regulatory role in the male reproductive system remains largely unknown. AIMS: This study aimed to investigate the regulatory mechanism of GDF9 in porcine testicular development. METHODS: We established a GDF9-edited pig model through CRISPR-Cas9 techno …"
+            - article [ref=e1198]:
+              - generic [ref=e1199]:
+                - checkbox "Select search result to email or save" [ref=e1200]
+                - generic [ref=e1202] [cursor=pointer]: "39"
+                - button "Cite" [ref=e1205] [cursor=pointer]
+              - generic [ref=e1207]:
+                - link "Evaluation of Large Language Models for Mapping Dietary Data to Food Databases." [ref=e1208] [cursor=pointer]:
+                  - /url: /42309308/
+                - generic [ref=e1209]:
+                  - generic [ref=e1210]: Lemay DG, Strohmeier MP, Stoker RB, Larke JA, Wilson SMG.
+                  - generic [ref=e1211]: "J Nutr. 2026 Jun 17:101678. doi: 10.1016/j.tjnut.2026.101678. Online ahead of print."
+                  - generic [ref=e1212]: "PMID: 42309308"
+                  - generic [ref=e1213]: Free article.
+                - generic [ref=e1215]: "OBJECTIVE: We sought to provide real-world ground truth (benchmark) datasets and evaluate the use of large language models (LLMs) to match foods reported in dietary data with foods in FCDs. ...An investigation of different prompt strategies and model sizes de …"
+            - article [ref=e1216]:
+              - generic [ref=e1217]:
+                - checkbox "Select search result to email or save" [ref=e1218]
+                - generic [ref=e1220] [cursor=pointer]: "40"
+                - button "Cite" [ref=e1223] [cursor=pointer]
+              - generic [ref=e1225]:
+                - 'link "Engineering lignin-based antimicrobials: Experimental foundations and data-driven optimization." [ref=e1226] [cursor=pointer]':
+                  - /url: /42309269/
+                - generic [ref=e1227]:
+                  - generic [ref=e1228]: Feng J, Kalinoski RM, Liu C, Shao Q, Shi J.
+                  - generic [ref=e1229]: "Biotechnol Adv. 2026 Jun 17:108953. doi: 10.1016/j.biotechadv.2026.108953. Online ahead of print."
+                  - generic [ref=e1230]: "PMID: 42309269"
+                  - generic [ref=e1231]: Review.
+                - generic [ref=e1233]: Lignin is the most abundant naturally occurring phenolic polymers on Earth and represents a largely underutilized renewable resource. Owing to its aromatic-rich architecture, diverse functional groups, and intrinsic antioxidant properties, lignin has attracted increasing a …
+            - article [ref=e1234]:
+              - generic [ref=e1235]:
+                - checkbox "Select search result to email or save" [ref=e1236]
+                - generic [ref=e1238] [cursor=pointer]: "41"
+                - button "Cite" [ref=e1241] [cursor=pointer]
+              - generic [ref=e1243]:
+                - link "Comparative mediation analysis of dog and cat ownership and perceived stress." [ref=e1244] [cursor=pointer]:
+                  - /url: /42308192/
+                - generic [ref=e1245]:
+                  - generic [ref=e1246]: Ogata N, Heck AL, Weng HY.
+                  - generic [ref=e1247]: "PLoS One. 2026 Jun 17;21(6):e0350098. doi: 10.1371/journal.pone.0350098. eCollection 2026."
+                  - generic [ref=e1248]: "PMID: 42308192"
+                  - generic [ref=e1249]: Free article.
+                - generic [ref=e1251]: We conducted a comparative mediation analysis to examine how pet ownership type (dog vs. cat) relates to perceived stress, leveraging a large, balanced dataset (1,923 dog owners and 1,804 cat owners) collected throughout the COVID-19 pandemic. ...Yet their mediation-based …
+            - article [ref=e1252]:
+              - generic [ref=e1253]:
+                - checkbox "Select search result to email or save" [ref=e1254]
+                - generic [ref=e1256] [cursor=pointer]: "42"
+                - button "Cite" [ref=e1259] [cursor=pointer]
+              - generic [ref=e1261]:
+                - link "Aridity-induced energy reallocation from green to brown food webs predicts grassland carbon storage." [ref=e1262] [cursor=pointer]:
+                  - /url: /42308037/
+                - generic [ref=e1263]:
+                  - generic [ref=e1264]: Wan B, Barnes AD, Jochum M, Chen X, Allen K, Yao J, He N, Hu F, Liu M.
+                  - generic [ref=e1265]: "Proc Natl Acad Sci U S A. 2026 Jun 23;123(25):e2534463123. doi: 10.1073/pnas.2534463123. Epub 2026 Jun 17."
+                  - generic [ref=e1266]: "PMID: 42308037"
+                - generic [ref=e1268]: We found that increasing aridity decreases total energy flux through whole food webs across all study regions, largely driven by species losses and weakened trophic interactions. Energy flux to herbivory-based "green" channels declined more sharply than microbivory-based " …
+            - article [ref=e1269]:
+              - generic [ref=e1270]:
+                - checkbox "Select search result to email or save" [ref=e1271]
+                - generic [ref=e1273] [cursor=pointer]: "43"
+                - button "Cite" [ref=e1276] [cursor=pointer]
+              - generic [ref=e1278]:
+                - link "A labelled dataset of healthy and diseased common bean (Phaseolus vulgaris) from Tanzania." [ref=e1279] [cursor=pointer]:
+                  - /url: /42306783/
+                  - text: A labelled dataset of healthy and diseased common bean (
+                  - emphasis [ref=e1280]: Phaseolus vulgaris
+                  - text: ) from Tanzania.
+                - generic [ref=e1281]:
+                  - generic [ref=e1282]: Mduma N, Laizer H.
+                  - generic [ref=e1283]: "Data Brief. 2026 May 31;67:112909. doi: 10.1016/j.dib.2026.112909. eCollection 2026 Aug."
+                  - generic [ref=e1284]: "PMID: 42306783"
+                  - generic [ref=e1285]: Free PMC article.
+                - generic [ref=e1287]: Images were acquired from farms in Arusha, Kilimanjaro and Manyara regions using smartphone cameras and were subsequently reviewed and validated with support from agricultural extension officers and plant pathologists to improve annotation reliability. The dataset is organ …
+            - article [ref=e1288]:
+              - generic [ref=e1289]:
+                - checkbox "Select search result to email or save" [ref=e1290]
+                - generic [ref=e1292] [cursor=pointer]: "44"
+                - button "Cite" [ref=e1295] [cursor=pointer]
+              - generic [ref=e1297]:
+                - link "Cultivar-specific drought responses in pineapple revealed by concurrent changes in PSII and PSI energy partitioning." [ref=e1298] [cursor=pointer]:
+                  - /url: /42306417/
+                - generic [ref=e1299]:
+                  - generic [ref=e1300]: An D, Yan C, He J, Xu Z, Su J, Zhao B.
+                  - generic [ref=e1301]: "Front Plant Sci. 2026 Jun 1;17:1826518. doi: 10.3389/fpls.2026.1826518. eCollection 2026."
+                  - generic [ref=e1302]: "PMID: 42306417"
+                  - generic [ref=e1303]: Free PMC article.
+                - generic [ref=e1305]: PSI-related parameters showed comparatively smaller variation, with stable Y(ND) but increased Y(NA) under severe drought. Linear mixed-effects model analysis further indicated that the estimated cyclic electron flow (CEF), used as a proxy, exhibited a significant cultivar …
+            - article [ref=e1306]:
+              - generic [ref=e1307]:
+                - checkbox "Select search result to email or save" [ref=e1308]
+                - generic [ref=e1310] [cursor=pointer]: "45"
+                - button "Cite" [ref=e1313] [cursor=pointer]
+              - generic [ref=e1315]:
+                - link "Success criteria comparison of eight implemented projects to improve the planning, design, and construction of floodplain wetlands." [ref=e1316] [cursor=pointer]:
+                  - /url: /42306177/
+                - generic [ref=e1317]:
+                  - generic [ref=e1318]: Hawley RJ, Nietch C, Knight D, Acosta S, Cooper K, Korth N, Raetz A, McManus J, McClatchy R, Hahn J, Lubbers H, Lair L, Winston RJ.
+                  - generic [ref=e1319]: "PLOS Water. 2026;5(1):e0000426. doi: 10.1371/journal.pwat.0000426. Epub 2026 Jan 16."
+                  - generic [ref=e1320]: "PMID: 42306177"
+                  - generic [ref=e1321]: Free PMC article.
+                - generic [ref=e1323]: Deforestation of steep slopes and the associated accumulation of alluvial sediment in valley bottoms have left floodplains much drier and largely disconnected from their adjacent rivers, restricting the ecosystem and societal benefits floodplains can provide. ...This paper …
+            - article [ref=e1324]:
+              - generic [ref=e1325]:
+                - checkbox "Select search result to email or save" [ref=e1326]
+                - generic [ref=e1328] [cursor=pointer]: "46"
+                - button "Cite" [ref=e1331] [cursor=pointer]
+              - generic [ref=e1333]:
+                - 'link "Safety evaluation of epidermal growth factor receptor tyrosine kinase inhibitors in patients with interstitial pneumonia: a study using a Japanese nationwide database." [ref=e1334] [cursor=pointer]':
+                  - /url: /42305076/
+                - generic [ref=e1335]:
+                  - generic [ref=e1336]: Ihara Y, Nakamura Y, Shimomura Y, Yamamoto S.
+                  - generic [ref=e1337]: "Future Oncol. 2026 Jun 17:1-10. doi: 10.1080/14796694.2026.2690161. Online ahead of print."
+                  - generic [ref=e1338]: "PMID: 42305076"
+                - generic [ref=e1340]: "Cumulative incidence was estimated, and differences according to IP status were assessed using Fine-Gray models. RESULTS: Among 13,092 eligible patients, 481 (3.7%) had preexisting IP. The 2-year cumulative incidence of severe drug-induced ILD was 3.2% in patients with IP …"
+            - article [ref=e1341]:
+              - generic [ref=e1342]:
+                - checkbox "Select search result to email or save" [ref=e1343]
+                - generic [ref=e1345] [cursor=pointer]: "47"
+                - button "Cite" [ref=e1348] [cursor=pointer]
+              - generic [ref=e1350]:
+                - link "A cooperative cobalamide biosynthesis guild in the endosphere of the edible aquatic plant Wolffia globosa Mankai." [ref=e1351] [cursor=pointer]:
+                  - /url: /42304541/
+                - generic [ref=e1352]:
+                  - generic [ref=e1353]: Dutta R, Obayomi O, Yosef AF, Ghazaryan L, Chalifa-Caspi V, Lapidot M, Gillor O.
+                  - generic [ref=e1354]: "Environ Microbiome. 2026 Jun 16. doi: 10.1186/s40793-026-00917-4. Online ahead of print."
+                  - generic [ref=e1355]: "PMID: 42304541"
+                - generic [ref=e1357]: However, how cobalamin biosynthetic capacity is organized within angiosperm-associated microbiomes remains largely unresolved. Here, we investigated bacterial community structure and cobamide biosynthetic potential across the cultivation medium, plant surface, and internal …
+            - article [ref=e1358]:
+              - generic [ref=e1359]:
+                - checkbox "Select search result to email or save" [ref=e1360]
+                - generic [ref=e1362] [cursor=pointer]: "48"
+                - button "Cite" [ref=e1365] [cursor=pointer]
+              - generic [ref=e1367]:
+                - link "Sheep erythrocyte potassium locus highlights MYADM family regulation of electroneutral potassium chloride cotransporters (KCC)." [ref=e1368] [cursor=pointer]:
+                  - /url: /42304218/
+                - generic [ref=e1369]:
+                  - generic [ref=e1370]: Gonzalez MV, Mousel MR, Herndon DR, Massa AT, Durfee CJ, Knowles DP, Taylor BJ, Neibergs HL, Seabury CM, White SN.
+                  - generic [ref=e1371]: "BMC Genomics. 2026 Jun 16. doi: 10.1186/s12864-026-13029-7. Online ahead of print."
+                  - generic [ref=e1372]: "PMID: 42304218"
+                  - generic [ref=e1373]: Free article.
+                - generic [ref=e1375]: Herein, genome-wide association identified a large, artiodactyl-specific tandem duplication of the MYADM gene family locus as highly associated (P = 1.1 10(- 63)) with erythrocyte intracellular potassium concentration. ...Since there are many fewer MYADM genes in humans, …
+            - article [ref=e1376]:
+              - generic [ref=e1377]:
+                - checkbox "Select search result to email or save" [ref=e1378]
+                - generic [ref=e1380] [cursor=pointer]: "49"
+                - button "Cite" [ref=e1383] [cursor=pointer]
+              - generic [ref=e1385]:
+                - 'link "Physics-guided cross-domain adaptation: a hierarchical hybrid transformer framework with contrastive learning for robust fault diagnosis under variable working conditions." [ref=e1386] [cursor=pointer]':
+                  - /url: /42304057/
+                - generic [ref=e1387]:
+                  - generic [ref=e1388]: Liu L, Hao C, Xiong L, Lv X.
+                  - generic [ref=e1389]: "Sci Rep. 2026 Jun 16. doi: 10.1038/s41598-026-57900-9. Online ahead of print."
+                  - generic [ref=e1390]: "PMID: 42304057"
+                  - generic [ref=e1391]: Free article.
+                - generic [ref=e1393]: The domain shift problem induced by variable working conditions severely constrains the cross-domain generalization capability of data-driven fault diagnosis models. Existing methods lack collaborative modeling of the multi-scale time-frequency characteristics of vi …
+            - article [ref=e1394]:
+              - generic [ref=e1395]:
+                - checkbox "Select search result to email or save" [ref=e1396]
+                - generic [ref=e1398] [cursor=pointer]: "50"
+                - button "Cite" [ref=e1401] [cursor=pointer]
+              - generic [ref=e1403]:
+                - link "Explainable CNN framework for accurate crop disease detection using plant leaf images." [ref=e1404] [cursor=pointer]:
+                  - /url: /42304051/
+                - generic [ref=e1405]:
+                  - generic [ref=e1406]: Ray A, Murugan TK, Govindaraj L, Hussain I.
+                  - generic [ref=e1407]: "Sci Rep. 2026 Jun 16. doi: 10.1038/s41598-026-56868-w. Online ahead of print."
+                  - generic [ref=e1408]: "PMID: 42304051"
+                  - generic [ref=e1409]: Free article.
+                - generic [ref=e1411]: Early and accurate disease detection is important for increasing the agricultural output, decreasing the financial costs, and ensuring food security. Traditional diagnostic procedures take much time and effort, involve the necessity of having deep expertise, and are not al …
+            - generic:
+              - option "AMA"
+              - option "APA"
+              - option "MLA"
+              - option "NLM" [selected]
+          - generic [ref=e1412]:
+            - generic [ref=e1413]: 22,891 results
+            - button "Show more results" [ref=e1414] [cursor=pointer]
+          - option "AMA"
+          - option "APA"
+          - option "MLA"
+          - option "NLM" [selected]
+        - generic [ref=e1415]:
+          - button "Navigates to the first page of results." [disabled]:
+            - img "first page"
+            - generic: First
+          - button "Navigates to the previous page of results." [disabled]:
+            - img "previous page"
+            - generic: Prev
+          - generic [ref=e1416]:
+            - generic [ref=e1417]: Page
+            - spinbutton "page number input" [ref=e1419]: "1"
+            - generic [ref=e1420]: of 458
+          - button "Navigates to the next page of results." [ref=e1421] [cursor=pointer]:
+            - generic [ref=e1422]: Next
+            - img "next page" [ref=e1423]
+          - button "Navigates to the last page of results." [ref=e1424] [cursor=pointer]:
+            - generic [ref=e1425]: Last
+            - img "last page" [ref=e1426]
+  - generic [ref=e1427]:
+    - complementary "Links to NCBI Literature Resources" [ref=e1428]:
+      - generic [ref=e1429]:
+        - paragraph [ref=e1430]: NCBI Literature Resources
+        - paragraph [ref=e1431]:
+          - link "MeSH" [ref=e1432] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/mesh/
+          - link "PMC" [ref=e1433] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/pmc/
+          - link "Bookshelf" [ref=e1434] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/books
+          - link "Disclaimer" [ref=e1435] [cursor=pointer]:
+            - /url: /disclaimer/
+        - paragraph [ref=e1436]: The PubMed wordmark and PubMed logo are registered trademarks of the U.S. Department of Health and Human Services (HHS). Unauthorized use of these marks is strictly prohibited.
+    - contentinfo [ref=e1437]:
+      - generic [ref=e1438]:
+        - generic [ref=e1439]: Follow NCBI
+        - generic [ref=e1441]:
+          - link "Twitter" [ref=e1442] [cursor=pointer]:
+            - /url: https://twitter.com/ncbi
+            - img "Twitter" [ref=e1443]
+          - link "Facebook" [ref=e1446] [cursor=pointer]:
+            - /url: https://www.facebook.com/ncbi.nlm
+            - img "Facebook" [ref=e1447]
+          - link "LinkedIn" [ref=e1448] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/ncbinlm
+            - img "LinkedIn" [ref=e1449]
+          - link "GitHub" [ref=e1450] [cursor=pointer]:
+            - /url: https://github.com/ncbi
+            - img "GitHub" [ref=e1451]
+          - link "Blog" [ref=e1454] [cursor=pointer]:
+            - /url: https://ncbiinsights.ncbi.nlm.nih.gov/
+            - img [ref=e1455]
+      - generic [ref=e1458]:
+        - generic [ref=e1459]:
+          - generic [ref=e1460]:
+            - paragraph [ref=e1461]:
+              - link "Connect with NLM" [ref=e1462] [cursor=pointer]:
+                - /url: https://www.nlm.nih.gov/socialmedia/index.html
+            - list [ref=e1463]:
+              - listitem [ref=e1464]:
+                - link "Twitter" [ref=e1465] [cursor=pointer]:
+                  - /url: https://twitter.com/NLM_NIH
+                  - img "Twitter" [ref=e1466]
+              - listitem [ref=e1470]:
+                - link "Facebook" [ref=e1471] [cursor=pointer]:
+                  - /url: https://www.facebook.com/nationallibraryofmedicine
+                  - img "SM-Facebook" [ref=e1472]
+              - listitem [ref=e1477]:
+                - link "Youtube" [ref=e1478] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/NLMNIH
+                  - img "SM-Youtube" [ref=e1479]
+          - paragraph [ref=e1484]:
+            - text: National Library of Medicine
+            - link "8600 Rockville Pike Bethesda, MD 20894" [ref=e1485] [cursor=pointer]:
+              - /url: https://www.google.com/maps/place/8600+Rockville+Pike,+Bethesda,+MD+20894/@38.9959508,-77.101021,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c95e25765ddb:0x19156f88b27635b8!8m2!3d38.9959508!4d-77.0988323
+              - text: 8600 Rockville Pike
+              - text: Bethesda, MD 20894
+          - paragraph [ref=e1487]:
+            - link "Web Policies" [ref=e1488] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/web_policies.html
+            - link "FOIA" [ref=e1489] [cursor=pointer]:
+              - /url: https://www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/freedom-information-act-office
+            - link "HHS Vulnerability Disclosure" [ref=e1490] [cursor=pointer]:
+              - /url: https://www.hhs.gov/vulnerability-disclosure-policy/index.html
+          - paragraph [ref=e1492]:
+            - link "Help" [ref=e1493] [cursor=pointer]:
+              - /url: https://support.nlm.nih.gov/?pagename=pubmed%3Apubmed%3Asearchresult%3ANONE
+            - link "Accessibility" [ref=e1494] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/accessibility.html
+            - link "Careers" [ref=e1495] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/careers/careers.html
+        - navigation [ref=e1498]:
+          - list [ref=e1499]:
+            - listitem [ref=e1500]:
+              - link "NLM" [ref=e1501] [cursor=pointer]:
+                - /url: //www.nlm.nih.gov/
+            - listitem [ref=e1502]:
+              - link "NIH" [ref=e1503] [cursor=pointer]:
+                - /url: https://www.nih.gov/
+            - listitem [ref=e1504]:
+              - link "HHS" [ref=e1505] [cursor=pointer]:
+                - /url: https://www.hhs.gov/
+            - listitem [ref=e1506]:
+              - link "USA.gov" [ref=e1507] [cursor=pointer]:
+                - /url: https://www.usa.gov/

@@ -1,0 +1,122 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic:
+      - generic [ref=e6]:
+        - link "新闻" [ref=e7] [cursor=pointer]:
+          - /url: http://news.baidu.com
+        - link "hao123" [ref=e8] [cursor=pointer]:
+          - /url: https://www.hao123.com?src=from_pc
+        - link "地图" [ref=e9] [cursor=pointer]:
+          - /url: http://map.baidu.com
+        - link "贴吧" [ref=e10] [cursor=pointer]:
+          - /url: http://tieba.baidu.com/
+        - link "视频" [ref=e11] [cursor=pointer]:
+          - /url: https://haokan.baidu.com/?sfrom=baidu-top
+        - link "图片" [ref=e12] [cursor=pointer]:
+          - /url: http://image.baidu.com/
+        - link "网盘" [ref=e13] [cursor=pointer]:
+          - /url: https://pan.baidu.com?from=1026962h
+        - link "文库" [ref=e14] [cursor=pointer]:
+          - /url: https://wenku.baidu.com/?fr=bdpcindex
+        - link "文心" [ref=e15] [cursor=pointer]:
+          - /url: https://chat.baidu.com/search?isShowHello=1&pd=csaitab&setype=csaitab&extParamsJson=%7B%22enter_type%22%3A%22home_tab%22%7D
+        - link "搭子DuMate" [ref=e16] [cursor=pointer]:
+          - /url: https://dumate.cn?track=bdsy
+        - link "更多" [ref=e18] [cursor=pointer]:
+          - /url: http://www.baidu.com/more/
+      - generic [ref=e19]:
+        - generic [ref=e20] [cursor=pointer]: 设置
+        - link "登录" [ref=e21] [cursor=pointer]:
+          - /url: https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F&sms=5
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - img [ref=e26]
+        - generic:
+          - link:
+            - /url: //www.baidu.com/s?word=%E9%AB%98%E8%80%83&rsv_dl=26gk_pd_gkpc
+      - generic [ref=e31]:
+        - generic [ref=e34]:
+          - textbox "伊朗:瑞士谈判未涉及核问题" [active] [ref=e36]
+          - generic [ref=e38]:
+            - generic [ref=e39]:
+              - img [ref=e47] [cursor=pointer]
+              - generic [ref=e50]:
+                - img [ref=e54] [cursor=pointer]
+                - img [ref=e59] [cursor=pointer]
+            - button "百度一下" [ref=e63] [cursor=pointer]
+        - link "复杂问题就找文心助手，深入思考回答更优 " [ref=e67] [cursor=pointer]:
+          - /url: https://chat.baidu.com/search?extParams=%7B%22enter_type%22%3A%22home_operate%22%7D&isShowHello=1
+          - img [ref=e68]
+          - generic [ref=e69]:
+            - generic [ref=e70]: 复杂问题就找文心助手，深入思考回答更优
+            - generic [ref=e71]: 
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - link "百度热搜":
+            - /url: https://top.baidu.com/board?platform=pc&sa=pcindex_entry
+            - generic "百度热搜" [ref=e76] [cursor=pointer]: 
+          - generic [ref=e77] [cursor=pointer]:
+            - generic [ref=e78]: 
+            - text: 换一换
+        - list:
+          - listitem [ref=e79]:
+            - link " 把党的政治建设作为党的根本性建设" [ref=e80] [cursor=pointer]:
+              - /url: https://www.baidu.com/s?wd=%E6%8A%8A%E5%85%9A%E7%9A%84%E6%94%BF%E6%B2%BB%E5%BB%BA%E8%AE%BE%E4%BD%9C%E4%B8%BA%E5%85%9A%E7%9A%84%E6%A0%B9%E6%9C%AC%E6%80%A7%E5%BB%BA%E8%AE%BE&sa=fyb_n_homepage&rsv_dl=fyb_n_homepage&from=super&cl=3&tn=baidutop10&fr=top1000&rsv_idx=2&hisfilter=1
+              - generic [ref=e81]: 
+              - text: 把党的政治建设作为党的根本性建设
+          - listitem [ref=e83]:
+            - link "5 男子16万多购入路虎 购置税或翻倍" [ref=e84] [cursor=pointer]:
+              - /url: https://www.baidu.com/s?wd=%E7%94%B7%E5%AD%9016%E4%B8%87%E5%A4%9A%E8%B4%AD%E5%85%A5%E8%B7%AF%E8%99%8E+%E8%B4%AD%E7%BD%AE%E7%A8%8E%E6%88%96%E7%BF%BB%E5%80%8D&sa=fyb_n_homepage&rsv_dl=fyb_n_homepage&from=super&cl=3&tn=baidutop10&fr=top1000&rsv_idx=2&hisfilter=1
+              - generic [ref=e85]: "5"
+              - text: 男子16万多购入路虎 购置税或翻倍
+          - listitem [ref=e87]:
+            - link "1 姆巴佩世界波" [ref=e88] [cursor=pointer]:
+              - /url: https://www.baidu.com/s?wd=%E5%A7%86%E5%B7%B4%E4%BD%A9%E4%B8%96%E7%95%8C%E6%B3%A2&sa=fyb_n_homepage&rsv_dl=fyb_n_homepage&from=super&cl=3&tn=baidutop10&fr=top1000&rsv_idx=2&hisfilter=1
+              - generic [ref=e89]: "1"
+              - text: 姆巴佩世界波
+            - generic [ref=e90]: 热
+          - listitem [ref=e91]:
+            - link "6 一根烟头触发喷淋致多家企业被淹" [ref=e92] [cursor=pointer]:
+              - /url: https://www.baidu.com/s?wd=%E4%B8%80%E6%A0%B9%E7%83%9F%E5%A4%B4%E8%A7%A6%E5%8F%91%E5%96%B7%E6%B7%8B%E8%87%B4%E5%A4%9A%E5%AE%B6%E4%BC%81%E4%B8%9A%E8%A2%AB%E6%B7%B9&sa=fyb_n_homepage&rsv_dl=fyb_n_homepage&from=super&cl=3&tn=baidutop10&fr=top1000&rsv_idx=2&hisfilter=1
+              - generic [ref=e93]: "6"
+              - text: 一根烟头触发喷淋致多家企业被淹
+          - listitem [ref=e95]:
+            - link "2 世界杯首个爆款竟然是根头绳" [ref=e96] [cursor=pointer]:
+              - /url: https://www.baidu.com/s?wd=%E4%B8%96%E7%95%8C%E6%9D%AF%E9%A6%96%E4%B8%AA%E7%88%86%E6%AC%BE%E7%AB%9F%E7%84%B6%E6%98%AF%E6%A0%B9%E5%A4%B4%E7%BB%B3&sa=fyb_n_homepage&rsv_dl=fyb_n_homepage&from=super&cl=3&tn=baidutop10&fr=top1000&rsv_idx=2&hisfilter=1
+              - generic [ref=e97]: "2"
+              - text: 世界杯首个爆款竟然是根头绳
+            - generic [ref=e98]: 热
+          - listitem [ref=e99]:
+            - link "7 伊拉克超巨失误 姆巴佩梅开二度" [ref=e100] [cursor=pointer]:
+              - /url: https://www.baidu.com/s?wd=%E4%BC%8A%E6%8B%89%E5%85%8B%E8%B6%85%E5%B7%A8%E5%A4%B1%E8%AF%AF+%E5%A7%86%E5%B7%B4%E4%BD%A9%E6%A2%85%E5%BC%80%E4%BA%8C%E5%BA%A6&sa=fyb_n_homepage&rsv_dl=fyb_n_homepage&from=super&cl=3&tn=baidutop10&fr=top1000&rsv_idx=2&hisfilter=1
+              - generic [ref=e101]: "7"
+              - text: 伊拉克超巨失误 姆巴佩梅开二度
+            - generic [ref=e102]: 热
+          - listitem [ref=e103]:
+            - link "3 重磅举措发布 让外资“不见外”" [ref=e104] [cursor=pointer]:
+              - /url: https://www.baidu.com/s?wd=%E9%87%8D%E7%A3%85%E4%B8%BE%E6%8E%AA%E5%8F%91%E5%B8%83+%E8%AE%A9%E5%A4%96%E8%B5%84%E2%80%9C%E4%B8%8D%E8%A7%81%E5%A4%96%E2%80%9D&sa=fyb_n_homepage&rsv_dl=fyb_n_homepage&from=super&cl=3&tn=baidutop10&fr=top1000&rsv_idx=2&hisfilter=1
+              - generic [ref=e105]: "3"
+              - text: 重磅举措发布 让外资“不见外”
+          - listitem [ref=e107]:
+            - link "8 救人遇难外卖小哥爸爸获赠新车" [ref=e108] [cursor=pointer]:
+              - /url: https://www.baidu.com/s?wd=%E6%95%91%E4%BA%BA%E9%81%87%E9%9A%BE%E5%A4%96%E5%8D%96%E5%B0%8F%E5%93%A5%E7%88%B8%E7%88%B8%E8%8E%B7%E8%B5%A0%E6%96%B0%E8%BD%A6&sa=fyb_n_homepage&rsv_dl=fyb_n_homepage&from=super&cl=3&tn=baidutop10&fr=top1000&rsv_idx=2&hisfilter=1
+              - generic [ref=e109]: "8"
+              - text: 救人遇难外卖小哥爸爸获赠新车
+          - listitem [ref=e111]:
+            - link "4 姆巴佩哈兰德同日双响 压力给到C罗" [ref=e112] [cursor=pointer]:
+              - /url: https://www.baidu.com/s?wd=%E5%A7%86%E5%B7%B4%E4%BD%A9%E5%93%88%E5%85%B0%E5%BE%B7%E5%90%8C%E6%97%A5%E5%8F%8C%E5%93%8D+%E5%8E%8B%E5%8A%9B%E7%BB%99%E5%88%B0C%E7%BD%97&sa=fyb_n_homepage&rsv_dl=fyb_n_homepage&from=super&cl=3&tn=baidutop10&fr=top1000&rsv_idx=2&hisfilter=1
+              - generic [ref=e113]: "4"
+              - text: 姆巴佩哈兰德同日双响 压力给到C罗
+            - generic [ref=e114]: 热
+          - listitem [ref=e115]:
+            - link "9 哈兰德梅开二度" [ref=e116] [cursor=pointer]:
+              - /url: https://www.baidu.com/s?wd=%E5%93%88%E5%85%B0%E5%BE%B7%E6%A2%85%E5%BC%80%E4%BA%8C%E5%BA%A6&sa=fyb_n_homepage&rsv_dl=fyb_n_homepage&from=super&cl=3&tn=baidutop10&fr=top1000&rsv_idx=2&hisfilter=1
+              - generic [ref=e117]: "9"
+              - text: 哈兰德梅开二度
+            - generic [ref=e118]: 热
+  - generic [ref=e119]:
+    - generic:
+      - generic:
+        - generic:
+          - img
+    - img [ref=e124] [cursor=pointer]

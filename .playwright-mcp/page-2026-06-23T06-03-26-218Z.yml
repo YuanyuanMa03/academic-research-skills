@@ -1,0 +1,747 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - link "×" [ref=e3] [cursor=pointer]:
+      - /url: javascript:void(0);
+    - list [ref=e4]:
+      - listitem [ref=e5]:
+        - link [ref=e6] [cursor=pointer]:
+          - /url: https://book.cnki.net/activity618
+          - img [ref=e7]
+    - list [ref=e8]:
+      - listitem [ref=e9] [cursor=pointer]: "0"
+      - listitem [ref=e10] [cursor=pointer]: "1"
+      - listitem [ref=e11] [cursor=pointer]: "2"
+      - listitem [ref=e12] [cursor=pointer]: "3"
+      - listitem [ref=e13] [cursor=pointer]: "4"
+  - generic [ref=e14]:
+    - banner [ref=e16]:
+      - generic [ref=e17]:
+        - generic:
+          - list [ref=e19]:
+            - listitem [ref=e20]
+            - listitem [ref=e22]:
+              - link "手机版" [ref=e23] [cursor=pointer]:
+                - /url: javascript:void(0)
+            - listitem [ref=e24]:
+              - link "读者服务" [ref=e25] [cursor=pointer]:
+                - /url: javascript:void(0)
+            - listitem [ref=e26]:
+              - link "作者服务" [ref=e27] [cursor=pointer]:
+                - /url: javascript:void(0)
+            - listitem [ref=e28]:
+              - link "出版服务" [ref=e29] [cursor=pointer]:
+                - /url: javascript:void(0)
+            - listitem [ref=e30]:
+              - link "产品解决方案" [ref=e31] [cursor=pointer]:
+                - /url: javascript:void(0)
+            - listitem [ref=e32]:
+              - link "学术评价" [ref=e33] [cursor=pointer]:
+                - /url: javascript:void(0)
+            - listitem [ref=e34]:
+              - link "联系我们" [ref=e35] [cursor=pointer]:
+                - /url: https://www.cnki.net/subpages/contactus.html
+            - listitem [ref=e36]:
+              - link "帮助" [ref=e37] [cursor=pointer]:
+                - /url: https://service.cnki.net/
+          - list [ref=e39]:
+            - listitem [ref=e40]:
+              - link "旧版入口" [ref=e41] [cursor=pointer]:
+                - /url: https://www.cnki.net/old/
+            - listitem [ref=e42]:
+              - link "充值" [ref=e43] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - text: 充值
+            - listitem [ref=e44]:
+              - link "会员" [ref=e45] [cursor=pointer]:
+                - /url: https://mall.cnki.net/user/user.html
+    - generic [ref=e46]:
+      - img "CNKI" [ref=e48]
+      - list [ref=e49]:
+        - listitem [ref=e50] [cursor=pointer]: 检 索
+        - listitem [ref=e51] [cursor=pointer]: CNKI AI
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e55] [cursor=pointer]:
+            - text: 主题
+            - generic [ref=e56]: ▼
+          - textbox "中文文献、外文文献" [active] [ref=e58]
+          - generic:
+            - generic [ref=e59] [cursor=pointer]: 检索
+            - generic [ref=e61]:
+              - link [ref=e62] [cursor=pointer]:
+                - /url: javascript:;
+              - link [ref=e64] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - link [ref=e67] [cursor=pointer]:
+                - /url: javascript:void(0);
+              - link [ref=e70] [cursor=pointer]:
+                - /url: javascript:void(0);
+        - generic [ref=e72]:
+          - link "高级检索 >" [ref=e73] [cursor=pointer]:
+            - /url: https://kns.cnki.net/starter/advanced
+          - link "出版物检索 >" [ref=e74] [cursor=pointer]:
+            - /url: https://navi.cnki.net/knavi
+          - link "增强检索" [ref=e75] [cursor=pointer]:
+            - /url: https://ai.cnki.net/aisearch
+        - generic [ref=e76]:
+          - list [ref=e77]:
+            - listitem [ref=e78]:
+              - link "学术期刊" [ref=e80] [cursor=pointer]:
+                - /url: https://kns.cnki.net/res/category/journal
+            - listitem [ref=e81]:
+              - link "学位论文" [ref=e83] [cursor=pointer]:
+                - /url: https://kns.cnki.net/res/category/dissertation
+            - listitem [ref=e84]:
+              - link "会议" [ref=e86] [cursor=pointer]:
+                - /url: https://kns.cnki.net/res/category/conference
+            - listitem [ref=e87]:
+              - link "报纸" [ref=e89] [cursor=pointer]:
+                - /url: https://kns.cnki.net/res/ccnd
+            - listitem [ref=e90]:
+              - link "年鉴" [ref=e92] [cursor=pointer]:
+                - /url: https://kns.cnki.net/res/cyfd
+            - listitem [ref=e93]:
+              - link "专利" [ref=e95] [cursor=pointer]:
+                - /url: https://kns.cnki.net/res/category/patent
+            - listitem [ref=e96]:
+              - link "标准" [ref=e98] [cursor=pointer]:
+                - /url: https://kns.cnki.net/res/category/standard
+            - listitem [ref=e99]:
+              - link "成果" [ref=e101] [cursor=pointer]:
+                - /url: https://kns.cnki.net/res/category/achievements
+            - listitem [ref=e102]:
+              - link "学术辑刊" [ref=e104] [cursor=pointer]:
+                - /url: https://kns.cnki.net/res/ccjd
+            - listitem [ref=e105]:
+              - link "图书" [ref=e107] [cursor=pointer]:
+                - /url: https://kns.cnki.net/res/category/book
+            - listitem [ref=e108]:
+              - link "文库" [ref=e110] [cursor=pointer]:
+                - /url: https://wenku.cnki.net
+            - listitem [ref=e111]:
+              - link "法律法规" [ref=e113] [cursor=pointer]:
+                - /url: https://lawpro.cnki.net/inds/advsearch?ES8LPH01Aw4ZFCVwCvh5Kn4zqnJ1PxwCGGUiOoNlycTCTXEH1Z7bvSTxfXxCacnkimmd2FMsOWGI8LvFnvyH19rs2DytdIIrUOL6ott
+          - list [ref=e114]:
+            - listitem [ref=e115]:
+              - link "工具书" [ref=e116] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - emphasis [ref=e117]
+                - text: 工具书
+            - listitem [ref=e118]:
+              - link "中国引文库" [ref=e119] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - emphasis [ref=e120]
+                - text: 中国引文库
+            - listitem [ref=e121]:
+              - link "学术图片" [ref=e122] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - emphasis [ref=e123]
+                - text: 学术图片
+            - listitem [ref=e124]:
+              - link "学术视频" [ref=e125] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - emphasis [ref=e126]
+                - text: 学术视频
+            - listitem [ref=e127]:
+              - link "音频" [ref=e128] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - emphasis [ref=e129]
+                - text: 音频
+            - listitem [ref=e130]:
+              - link "统计数据" [ref=e131] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - emphasis [ref=e132]
+                - text: 统计数据
+              - superscript [ref=e133] [cursor=pointer]: AI知数
+            - listitem [ref=e134]:
+              - link "政府文件" [ref=e135] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - emphasis [ref=e136]
+                - text: 政府文件
+            - listitem [ref=e137]:
+              - link "科技报告" [ref=e138] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - emphasis [ref=e139]
+                - text: 科技报告
+            - listitem [ref=e140]:
+              - link "OA" [ref=e141] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - emphasis [ref=e142]
+                - text: OA
+    - generic [ref=e143]:
+      - generic "设置" [ref=e144] [cursor=pointer]
+      - list [ref=e147]:
+        - listitem [ref=e148]:
+          - link "CNKI AI" [ref=e149] [cursor=pointer]:
+            - /url: https://ai.cnki.net
+            - emphasis [ref=e150]
+            - text: CNKI AI
+        - listitem [ref=e151]:
+          - link "AI深度研究" [ref=e152] [cursor=pointer]:
+            - /url: https://ai.cnki.net/deepresearch
+            - emphasis [ref=e153]
+            - text: AI深度研究
+        - listitem [ref=e154]:
+          - link "文献计量" [ref=e155] [cursor=pointer]:
+            - /url: https://ai.cnki.net/wxjl
+            - emphasis [ref=e156]
+            - text: 文献计量
+        - listitem [ref=e157]:
+          - link "个人查重" [ref=e158] [cursor=pointer]:
+            - /url: https://cx.cnki.net
+            - emphasis [ref=e159]
+            - text: 个人查重
+        - listitem [ref=e160]:
+          - link "AIGC检测" [ref=e161] [cursor=pointer]:
+            - /url: https://cx.cnki.net/aigc
+            - emphasis [ref=e162]
+            - text: AIGC检测
+        - listitem [ref=e163]:
+          - link "科研诚信" [ref=e164] [cursor=pointer]:
+            - /url: https://check.cnki.net
+            - emphasis [ref=e165]
+            - text: 科研诚信
+        - listitem [ref=e166]:
+          - link "知网研学" [ref=e167] [cursor=pointer]:
+            - /url: https://x.cnki.net
+            - emphasis [ref=e168]
+            - text: 知网研学
+        - listitem [ref=e169]:
+          - link "知网书店" [ref=e170] [cursor=pointer]:
+            - /url: https://book.cnki.net/
+            - emphasis [ref=e171]
+            - text: 知网书店
+        - listitem [ref=e172]:
+          - link "知网文库" [ref=e173] [cursor=pointer]:
+            - /url: https://wenku.cnki.net
+            - emphasis [ref=e174]
+            - text: 知网文库
+        - listitem [ref=e175]:
+          - link "我要投稿" [ref=e176] [cursor=pointer]:
+            - /url: https://xztg.cnki.net/
+            - emphasis [ref=e177]
+            - text: 我要投稿
+        - listitem [ref=e178]:
+          - link "翻译助手" [ref=e179] [cursor=pointer]:
+            - /url: https://dict.cnki.net
+            - emphasis [ref=e180]
+            - text: 翻译助手
+        - listitem [ref=e181]:
+          - link "智能排版" [ref=e182] [cursor=pointer]:
+            - /url: https://author.cnki.net/
+            - emphasis [ref=e183]
+            - text: 智能排版
+        - listitem [ref=e184]:
+          - link "智能写作" [ref=e185] [cursor=pointer]:
+            - /url: https://aidoc.cnki.net/
+            - emphasis [ref=e186]
+            - text: 智能写作
+        - listitem [ref=e187]:
+          - link "作者服务" [ref=e188] [cursor=pointer]:
+            - /url: https://au.cnki.net/author/workbench/homePage
+            - emphasis [ref=e189]
+            - text: 作者服务
+        - listitem [ref=e190] [cursor=pointer]: 更多
+    - generic [ref=e192]:
+      - generic [ref=e193]: 网络首发
+      - generic [ref=e194]: 20分钟前
+    - generic [ref=e195]:
+      - generic [ref=e196]:
+        - generic [ref=e197]:
+          - text: 自然科学
+          - generic [ref=e199] [cursor=pointer]: 换一换
+        - list [ref=e202]:
+          - listitem [ref=e203]:
+            - link "1":
+              - /url: javascript:;
+              - generic [ref=e204] [cursor=pointer]: "1"
+            - paragraph [ref=e205]:
+              - link:
+                - /url: javascript:;
+              - link "崔竞雯" [ref=e206] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyQc_BWRSUlXoKr4igSEffivNEV0XvPuyb51KdJncAxKZ0FiKdi_m8hgtA6dYoEfhl2tCasW9_PwIo00U5D5krF21GJqv-cRlgobcXPMm0PChS0Jk5HO_NO6EUPcm_KwOXq2v_lnxu81cuoOsLSuCziR&uniplatform=NZKPT&language=CHS
+              - text: ：
+              - link "石斛碱对脂多糖诱导的BV2小胶质细胞极化的影响及作用机制" [ref=e208] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyS5M-zz255Bjw4opFL4mZdDvk_bnoejHiaLILmJZlPBTvzIFZmDgcS-Hc7ANPASvg9WUxJ8wuZ1sVVlOUMVR0tnzCXgrGirMGH21hDwj8oEQ68BcscFAnXZoWwD08bXc5_Ry7fq15ymdwrH28mbshqbXmzDzQqUa70LxgSvMvgYKQ==&uniplatform=NZKPT&language=CHS
+          - listitem [ref=e209]:
+            - link "2":
+              - /url: javascript:;
+              - generic [ref=e210] [cursor=pointer]: "2"
+            - paragraph [ref=e211]:
+              - link:
+                - /url: javascript:;
+              - link "叶幼玲" [ref=e212] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyS5M-zz255Bj43oIpcBL_4va90uQCXrBO2nhmqj9Gqn9mWBWpZITP0mqlFOD7_TNdCNQIYD3vrzHOlCQgATqoaXy71JARAj0vctQhSwQ_MF8jdWgaBDYvy27UxmMuO27jq6rPRzw2JQesC9CWJ8_8CZ&uniplatform=NZKPT&language=CHS
+              - text: ：
+              - link "黄鳍棘鲷微卫星分子标记的开发及其中国群体遗传多样性与遗传分化研究" [ref=e214] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyR8n569neDtQJxNvghoenq9d6B9f-NxP3aMR_9_tyzypdNhtOUR5hp-7g3_Ad9xdVUfr-fT282tSdk6S_4F4QfDc0wo1s64yFo0qTcfTlGIM2byIcVenqflEZnqqY9iV2Gis6MCuMfU-yb3aFqykRYo8imqyjYLoR0cu1xgSglPkQ==&uniplatform=NZKPT&language=CHS
+          - listitem [ref=e215]:
+            - link "3":
+              - /url: javascript:;
+              - generic [ref=e216] [cursor=pointer]: "3"
+            - paragraph [ref=e217]:
+              - link:
+                - /url: javascript:;
+              - link "李冲" [ref=e218] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyR8n569neDtQE8PaOPPuZ3Tq_Na-eyGERBBaSgXKdN6ZyDWIXhCVmCh9tZdZ5KWoIYVv_LeB5b8qB-nJgwjbSsWrleeX9wFy48BCBE64fGzKL0A_eJfPJg5o4hfnCBkba-qV-fwjPQTJA==&uniplatform=NZKPT&language=CHS
+              - text: ：
+              - link "中药桑根酮 C改善脓毒性肺损伤机制研究" [ref=e220] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyTtRPxrsrPZWCP2pARnoUjVTit7c81rOXCecdQ2337MKpQ2THByjEdPt_APRqcULGo9gjip-tlGqky0_cbWpqsmcFfWhZ1N2TL36ZOSlbD7RgVR2w9aNDm7rbjHOp-h_QMkIcCdEI7mufI-_h91uunTP-gSDba3akiQWs7Ghyoxow==&uniplatform=NZKPT&language=CHS
+      - generic [ref=e221]:
+        - generic [ref=e222]:
+          - text: 思想理论
+          - generic [ref=e224] [cursor=pointer]: 换一换
+        - list [ref=e227]:
+          - listitem [ref=e228]:
+            - link "1":
+              - /url: javascript:;
+              - generic [ref=e229] [cursor=pointer]: "1"
+            - paragraph [ref=e230]:
+              - link:
+                - /url: javascript:;
+              - link "褚尔康" [ref=e231] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySuY9-YyWrp59JaOQ0DP6JrMANn7YFyEppH1CpJb-lRHyzC_eTZ7kfBPX1cBLenQor6bmZwanSv4MnsjFMMsNtSiHxIm9e_YeCgUv2dGMOLQiaXJB6MSb-Y3JpsTk4YtYvg7Ys2FyvRR7HAGr2xcGA2&uniplatform=NZKPT&language=CHS
+              - text: ：
+              - link "新时代党的领导与数字劳动关系治理" [ref=e233] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSySuY9-YyWrp5x7E7D1m8xymB2E36HkHoerACZlWvipX_ihEslKadB-7lWJwLNCIdnkqTYChUeX4kxuhvy5uKUBKmfoGFfZmQn7EJPzFMSw9-evPs0mZxXWZph1ASeGo0a2rf0yMOJ6KDZT3y6BiyTtrZtIqGt5ZXgvPljnZM-wAeg==&uniplatform=NZKPT&language=CHS
+          - listitem [ref=e234]:
+            - link "2":
+              - /url: javascript:;
+              - generic [ref=e235] [cursor=pointer]: "2"
+            - paragraph [ref=e236]:
+              - link:
+                - /url: javascript:;
+              - link "智慧" [ref=e237] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySuY9-YyWrp59JaOQ0DP6JrOkrQ6ZkSQTt0NgCtfmYIvmY-l0yK5JdDSAMCRa0ZRkX-QfisoiQikeC_xqRyjRpvlLzAlL0Rovpd_vSLhp4tsVGgFYl102m5Qd3x5FuJgG_uBM9YfRJK5w==&uniplatform=NZKPT&language=CHS
+              - text: ：
+              - link "新质生产力对马克思主义生态观的创新发展" [ref=e239] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSySuY9-YyWrp5x7E7D1m8xymB2E36HkHoeqcOij8BpMpwsu9SHtyb3Q8Ljf39sxWZp2_eaoe1hGM5Bqi8q0DYO_qnDZuXsQpsWdfGe6O8NPL7wB3PvrLgnR47pFAFTmEn1k7S6bc3v0D9fY9Jhxo1aRFQuo2zygs6-m00TpO_Fn7xQ==&uniplatform=NZKPT&language=CHS
+          - listitem [ref=e240]:
+            - link "3":
+              - /url: javascript:;
+              - generic [ref=e241] [cursor=pointer]: "3"
+            - paragraph [ref=e242]:
+              - link:
+                - /url: javascript:;
+              - link "王文龙" [ref=e243] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyQTtX7wo9Pv0rFeelS7lz006dJocB443nUn2FDc01ijgsRzJr5tdpbGcqil4HYxd-rCnIfDabhmBKVoRVhVCGnllkUemqMA9AmfGXb7woxUpBC9bxxCxB-ZJVxnKxEK2kLGPwcrUWc-JzIYc31_kb4T&uniplatform=NZKPT&language=CHS
+              - text: ：
+              - link "伟大长征精神铸牢中华民族共同体意识的耦合逻辑、价值意蕴与实践路径" [ref=e245] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyQTtX7wo9Pv0l9qqbCcRgU12cmEGrjGKbwyXs1A5kiWj8tNLaWDG0RpdN-2V6-eutciFiLuKivYP91fOsvkwE_YMBF_rJYty_irCIiKxOrdQFjuTElXM5Z1DnJml-ynPVs-MB7iq-Hjg1Vmy-bJ7BViMUVXY2yVWDIkXfp6Es3ylg==&uniplatform=NZKPT&language=CHS
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - text: 人文社科
+          - generic [ref=e249] [cursor=pointer]: 换一换
+        - list [ref=e252]:
+          - listitem [ref=e253]:
+            - link "1":
+              - /url: javascript:;
+              - generic [ref=e254] [cursor=pointer]: "1"
+            - paragraph [ref=e255]:
+              - link:
+                - /url: javascript:;
+              - link "来子臣" [ref=e256] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSyRBWpxOXr6HrBpu2ZggH-EsVBm0OKziacrux3XTh59In3PfZXDziGX5WFCO0dpPiSx3BV1Syxv8L3wCZF_wzix95lJD4bjaIBJ1bIqI-MmTcHK5POhSk0k3v4rMv22ZlQkvd49wgW2wOO0_HwmQAvCg&uniplatform=NZKPT&language=CHS
+              - text: ：
+              - link "天山北坡经济带耕地利用生态效率与城镇化耦合协调研究" [ref=e258] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSyRBWpxOXr6HrBIwpeRFFBbsxMJv1tLDoqgWOkMlpLoWIigxgpcHYANyEaLBSrjCfElkSuCPRhzxkBRwqW3-CWkh9a7jq7mfaWxRBm71KhEjV3RF6GaRbtIgxRdtx0oLYtN8PLabeLSoGgxQdDncxN1chuxHbm7HcKJ2CiI6FAWrpA==&uniplatform=NZKPT&language=CHS
+          - listitem [ref=e259]:
+            - link "2":
+              - /url: javascript:;
+              - generic [ref=e260] [cursor=pointer]: "2"
+            - paragraph [ref=e261]:
+              - link:
+                - /url: javascript:;
+              - link "李谦" [ref=e262] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySqY_p2Wy8gjh_JoxIbLSHv4OGDi1XKbmkyJQP3ZZ67XVyPSOehXvdZUeHJtohZ87c-3xuiqoWXZSUhC7Uccg6ymIZeQUnLXHItDrj0I_B3UvOfS7m0peDoLhOxf_OLWfyNL8eLceXZaA==&uniplatform=NZKPT&language=CHS
+              - text: ：
+              - link "新时代中医药院校思政课讲好党振兴发展中医药故事的原则遵循、价值意蕴和实践进路" [ref=e264] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSySqY_p2Wy8gjq8Waim79riryRLxYns_rjaHhPN55MHFW_6VNaAatku0cGa30v-v4vTdJFrd_RFvkO6yKVNdefsGO10KM7iGYfJBv9D6zNTW1sSvYC7Sy_xmB_YXtDXKxjuRf4pwUFwb3q-JxN2MmNr1ZBC1Fv3RiLmqKGprzvcQSw==&uniplatform=NZKPT&language=CHS
+          - listitem [ref=e265]:
+            - link "3":
+              - /url: javascript:;
+              - generic [ref=e266] [cursor=pointer]: "3"
+            - paragraph [ref=e267]:
+              - link:
+                - /url: javascript:;
+              - link "梅杰" [ref=e268] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/author/detail?v=H26UkN0bSySqY_p2Wy8gjh_JoxIbLSHvMImAzsXRmuRbeojmYlUwNNBJafTZjVtZB_uo5vG2hTmdztHXJdA3nTzp2sUHgWOa_BAY-IYwTg72a7dOiLwTAIVwI-7-4cg9y5PPEZNncg3hlkTUxh864Q==&uniplatform=NZKPT&language=CHS
+              - text: ：
+              - link "投资促进政策对企业创新发展影响机理研究" [ref=e270] [cursor=pointer]:
+                - /url: https://kns.cnki.net/kcms2/article/abstract?v=H26UkN0bSySqY_p2Wy8gjq8Waim79riryRLxYns_rjZlM06s5759jMhbAy_qehx5x5oAxb9lAcBk5bkLJIPIp935RhiDyYAEXq02BxthEFXV4nHAwuo5EgZ6_L0vlFWOIzdRh_eA3EM7wZ2ndqjjjgHNKQDN5WGOjUx4aKKXy--Kcub5GS72lA==&uniplatform=NZKPT&language=CHS
+    - generic [ref=e272]:
+      - generic [ref=e273]:
+        - generic [ref=e274]: 下载热榜
+        - generic:
+          - generic [ref=e277]: 全部 自然科学 社会科学 哲学与人文科学
+          - generic [ref=e279]:
+            - generic [ref=e280] [cursor=pointer]: 周
+            - generic [ref=e281] [cursor=pointer]: 月
+        - list [ref=e282]:
+          - listitem [ref=e283]:
+            - generic [ref=e284]: "1"
+            - link "基于AI算法的无线通信机房空调节能优化设计与实现" [ref=e286] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/article?cate=all&range=0&id=04d17e82324848cb5ab3a6e92527e1e871c403463689ab5e19cc90d8b21bbfe0fbf83f0db9dc4ffdf19e5e481d45485f44d80459ef62ff7e8cf518b635cbf8f59152ef2127625b27df0d0ad216a16586b322d8eaa4f8d523ebabdec14ed42fa9f16f420342645715689f5d16991246171971c471980b0096d5591ebf1d2bdd891afefc38ebdd49adbfaa6120520782f8d1bb0e00a95688361ef1a4e913593dbc68cc77e442dcb5905a286cf8b8bdd262ce6d286bae85bd5c5681fd264fd6ac076104369abb8b1bba46b767ffdb0db49d1daca6ce98994c70
+            - link "李涛" [ref=e288] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/author?cate=all&range=0&id=0453cc786bec09aeea7ef23cf4a8861c7492d6edf294ebe3797bb75470107f4001f5c7c15f5821a7bc4c474c845f295aef32cebf42ead8dcd91bcb163cd29e5c1feb30967b5b479d728649fc7147f2b6bdd319a9b651d48bef2d1f74204d5933f4c38f953b9a018bc0d5176e869ccb6a89bc7b159c657ec68a0e2cb46ebf27beeae6dd956d45d7d917b1b00752fee7a798ad9809def17ed07838fb81247cb079d6186d678601062b2292e82e5a706ee2da613a6efd39bf45a1d66373c61254e783e1
+            - link "《电信工程技术与标准化》" [ref=e290] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/navi?cate=all&range=0&id=0456c4ba780af5fcd6eeae7d10ed931e42a65c26905a2943c12ee27e4515bb21d4ae0a058bc77611a4600a2f677943976850cfc79953de9e761e4fe099657e1ceb8fdfb61b976f1d03e456e3bc0ba9673726cae18c3ebc3fa11d936f239b4c5cb3f73b7b16933b5a69d7e060616820d25ee02bad019808d01ab5b28074d17d2f9111185b2dacb8882bd533b7ddeb1a7f4a4a72d6960b3032b666734888db5b2acbbd407ea8efe9ce13ee81734938793e01ee00e9af11311035116779320fd38c36924d057ce2c9a5d735f5bc4c
+            - generic [ref=e291]: 2024-06-15
+          - listitem [ref=e293]:
+            - generic [ref=e294]: "2"
+            - link "原发性肝癌诊疗指南（2026年版）" [ref=e296] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/article?cate=all&range=0&id=04ba8105feffbe9784029a1728c4c0cc9d9bcf7cc65067aed063ac9bc59bafd21050049040bc10197064f4ed2b1bf0d40b769a14c959229d27830d0c250dd795f5328fecffa2b057a3b795c97041d6f78dd6d7fda85af260996fc860c1dd8decbc412d2127e2644f37a34461d40f4c037656d30120baf48045873797416b469e498b40e2438e1338b261d5e149302551bfbf197b177f6f0cc39b72e9f90017d9d765ac4cb49cb0f6e563ebd0b31c278821cf607dbcb66e49f0b1d711c08b86fd8bf7158098824c226e1fbc7e9baf28a2ed68b54ba517e86e
+            - link "中华人民共和国国家卫生健康委员会" [ref=e298] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/author?cate=all&range=0&id=042808dfd9977bd0d54855a3f54d45000e223a6ef312f52d057a6247fbbfa34d1618e912d8ca6f6ebe4087d1982d13970ed93282618583ef2a81052629e99ca3b0210a79c44ec0dc16eab35cef100877aee6c03661e732bfcfc211b1bc7392bd02296af10f82bd5385457299f4fea0fda7eed9d6ff08484d396acb25e749d21580fd8c78e2baea7a7f476a89ec2ef0e76f3c36a98039ba875d98cea5ba9daa76dc164d44f0a8fe6894d3d0e9ca293f76e0b424e1d5aa1339741f31510abd6f4f4f5c421bace2666d884abaf6d1c0e9229a0887de770f87f52f087b9a634d0efd9895c257fae133b99bdf0931
+            - link "《肿瘤防治研究》" [ref=e300] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/navi?cate=all&range=0&id=04154f428cff9cf20d6ea84de35958f4d9ab0c87bd413fe9b802d6b579bb9dc8a6dc85e03d5c4d8dae3a1e6cc115f7508fc16db5c9d31f52670d9d696fe7be58c2df786275a9f4f89143a6f257d726ed7728a25b77150d80155a8fdd0e6ff11b252d82b1c174997fa8cd2c3a2c8dcce2c2032040c5bb152e458580149f3e2a5b34d7175ad0d2c256eedb1368f74d475e2acb5ffdb3a5c9665c0ee1f6666482186181d00271ad7ab84a5f1cd0541c3c020d4f54b1d9346cafe275fd7e25c6a8591228c451ce883e54f7f22dc54b
+            - generic [ref=e301]: 2026-05-25
+          - listitem [ref=e303]:
+            - generic [ref=e304]: "3"
+            - link "深静脉血栓形成诊断和治疗指南（第四版）" [ref=e306] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/article?cate=all&range=0&id=04d282d1dca727295c4dc966021a680d0f133528967b956cb4543876433c41a326aa2ef5336726c3eb909ac6c1f5fb7ae46bc723e128e30042d46323880aa2d251442f61c79ba582cd5d96b07da851227863e05c8b9320a5d84f9288a27c9863daa742255a146399d661659baf766fd74a0b04294426a5dd58cf4c4fef40636d183eaa3ab94185879281b15e20b4319304218156c6a8bf0dd2d8472d81ab046aabc632bb9cb98ce51f971e6c7b2d296fff88a849e662300f4724d6f585151b7e38eea30ceea57b063c89297f1eb90e2b318d9b45d4ae9fd1
+            - link "中华医学会外科学分会血管外科学组" [ref=e308] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/author?cate=all&range=0&id=04a20a1a3d79bdd9c1dff70d4324762edf144fdfb0c13af162018e24c4808b791073161a10ab0a190b11d2611e24f84fd08e79ce3b6294aa884a650f9b42cd4480462bf8d07741625d4637ef1b45614c94750b2ba0b4b588f9e774bbdf76a4832be81c16a35d6e564212baf8ee56e98a10532b4e915b19e3afbf042d6eb9ade6c4271c9315e38fa4fc3a737c6edf6b32d44050587a7fe89afd8c22b74babab8614dfeed7de4a8172eed6e9c6aaf1de3eddbf7ae6d481225fe3044590919a6ed21cc224918e60809a969e195bf438f33228fb32d972a3e53ba0e6f53b8ef891ff75668a501b8eac34f6e5fd5c
+            - link "《中国实用外科杂志》" [ref=e310] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/navi?cate=all&range=0&id=046daf3881f24379c4fbea867b2b818ccbd1adee7b272154be830e494f63dc4f344888b5522439b032a35236d133a52cebc11130944d452f48647388aee8a81b06a3e6304510669d914a26c3fad16bf98e0edaa5f8fcc80ad02ef4b5a4eb37e9fea37aeb963174ed1785455bb2a270876d687fe7b625a9a0aeb92a3a60f168a6f534433b7708b65dff1e437b222b3bc0b7bb75058aef2e03217adeb95f3e07c4bb63e59f46025368bec91a363664b6492a686edb16a4fd8ce2bcae2eb8a8d141a3b2612a2f81af0d6616851126
+            - generic [ref=e311]: 2026-05-01
+          - listitem [ref=e313]:
+            - generic [ref=e314]: "4"
+            - link "基于多源数据融合的铁路路基填筑施工工序识别与施工冲突预警方法研究" [ref=e316] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/article?cate=all&range=0&id=046625a462e1288637e2a80fa3e6a4e4b0fe2fa0a2b49e555b2ffbf5145f0596012ec796f8e316363116f68f4f5be74917180ce12ce25f245dc0332eae935ad708055add2b4956045506eec816e693b28097623e4933f5cbb99657244e65ab570ea4e53b676b2a2e6896304d690ffdc836ce684eff1f29b07f34f62a403988c1324ffa0c2d995baa004957c91284ce4660bbbaeff138c63db851051714fa2d7f64babc3eb80a9d09981471776303300611480dd6b2e3acd3dca5099b1132a8e8089b8c45d38884f8237f6b20ca3daa8c9a03aad0ef42831c63a36dbcc6
+            - link "陈川江" [ref=e318] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/author?cate=all&range=0&id=049ceac6b18861e3e68e12f535f1d96fd233d154cbed37f2ce10a472e858d2f504e34e840bfa5b66b0e9174cbc99b8cc8ca20ec07fb6d2cfdfa9873dee8ce9b5706082016ff7b67c883c7b9c500d54241cec11baac0e49e44e970c781e7019d49b091a73e5c48b4a7c0ef4eba3d381304bc2968b512dd83e37ea7ac372656e0f5499105e8459b0993b4180a6435d7bf6d3bb3de9dcfa6eacc0cbbf11b5aa59be363710a4f01f51167a58620c408d928aaaacf9064d51d3a885d0ef17f233468eaf651ae8bd
+            - link "广州大学" [ref=e320] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/navi?cate=all&range=0&id=04dbaa2cc4c38ba4980d672537e77f0f94dd4135e493c3d1a77da64903a97db931cfa5823722c759e1c4feb9634a1c2a017876f79d99e47a0fc7e5f1994123dd1d3c724ea2ecf5a7a56117c5058684e3168573cb9edfdcc656e34c2fc61e8d7b29e5341f7507a65a290cc94132bc525665d49eca3dcf359d44660f170d9b15e7660d68d10055e40d3275a287e6d01aaae9f85c1a4025babf37e6c4b7d8f4451175992630ad5905df6718dda6142d6a098afab492ce5d44bd23a6f1620cb6a89ead2673c53eea5029ec469e35
+            - generic [ref=e321]: 2026-06-01
+          - listitem [ref=e323]:
+            - generic [ref=e324]: "5"
+            - link "基于网络药理学和动物实验探讨防己黄芪汤调控AMPK/mTOR通路激活自噬治疗膝骨关节炎的作用机制" [ref=e326] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/article?cate=all&range=0&id=044612dc7c7bc38557b1693c2ce35a07d2cdda898a87d78a5622efc036b640ff35a5a6e4310bb7f6fc745494ea87b6ee11d0bbbe35eed2bf9c7185468aae3dcc3b58c2345573ed51f879807445cd2f40232164755b8a17aa2053ba54edf0efb3e5e243a2f7b64fe16689a64fe88e54deef39e1aac4d416b5823a461c0cc9ece350d2f11a0a58ffe74c5412b834572b6973585383595969516a5d184852c842f37ea3139035917840e27f0d8e35adf54698f924a44c26686dbf1cfe920899d33539a95d337b69d7cad4b6f6138a1f591d02b46cf2f557d1948dbe
+            - link "王厚元" [ref=e328] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/author?cate=all&range=0&id=0434d372908604b3b38c4f6ad5a9050aa53c9063ea1b92355b9e993d49516a5a72d08e38cc44fed3c65aa93ff603cb53f0a6384b3a8e803372fb243cdc65810a2061662d0bcd551ce39157e67f564e6143951aefc8cc484c33c15c0723c30a1a6a68f964fc82aef6cd61e84184a2777a58f44fe49f400e0e001eee243ef73c08d7b9e16627a19b3cff2a7673efbb3b8e52f0055e1788cd7f30802a69c30624fbeec2e41a7483d27c6c3d7aae8981fc11d80f4a393f9ddbfaa527d11a88e08e9051788bb8c5
+            - link "《中国中药杂志》" [ref=e330] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/navi?cate=all&range=0&id=0425f951966144b79c340e0062a26a364c9557f2788b056463e3d3bd3aa4101dd321d92b5b0d816feddc1296db9e4dd8eba3f6752f23b16d5f2ffd359e684f62508b836937249ae520df0c45af9426da71a17436299e43e663b922467f019c1aa209ab418b78de2c7411d1b035b026b3e69ee6f9a2c2d9f9a3770f577ea08a8feb1f0e0e6d2a186c3a996c6242b07d245b3027c09ef7af2d8d43e1f38c69c6bc92b62185c5b5b19fe4f0b502906e714cdde9a336425708ef10bbf3905a75e606dff450a22fb878d3839a90d07e
+            - generic [ref=e331]: 2026-05-26
+          - listitem [ref=e333]:
+            - generic [ref=e334]: "6"
+            - link "中国人文地理学自主知识体系框架的建构" [ref=e336] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/article?cate=all&range=0&id=04bce2a8f584251605453b23a852532b1b04a3c7571a006dc3ad4d7f76a3115d64b5e0b58fb3563cbce5a69de93697e026a993e433dab326bcfc0143a2339efe5cb9786d075e5820b31d0df69e2087388e08615374803a0dc3d1c271997b2c22508920c14ee24b3a36fbc85e4e03c1279c3d66cbfa73c657599a9752ef7d2c3bc360d8b767deefac33f70f0e9bc4729e0ed9a54950ec7ab2b4cca032a2b4bda6bd9b37e3da053e6c98a0256fa6375ce1afb8d273e641c576e3731a6cb6f3091b36878cce1815b761b496fd26d624ec348951526a4904f2c96a34
+            - link "谢晓如" [ref=e338] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/author?cate=all&range=0&id=04718b34a7566e6df09f93fbf9c90d9e1536337272d3bbf25d63262606bdf8cd06a84542fc1988291df712c0bf780f1b5c392ddf117771292bc054bf8df327703d9bb1336d0d3f65b4bf975d74f4359e2b55549e4bf877ccdc6dfaaed0044c7404fed98c7233826e1268080b4a0181b749d828ae8fa99433461db3e33e3f924a683cbb1ad591de90708955437b74c54d01c26b74d17edd2421c8e1c4a7d6178abc739888bccc84668df5f0acc26997a34aa1bb85f252e7033696082c840a51e599010cc46d
+            - link "《地理学报》" [ref=e340] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/navi?cate=all&range=0&id=04c5e64d4ea155472053ca37dd840d7a3f76aab9976d9e9329e48c95fb7311cc69b6ae7874a439cc04c453f083916dd86ed909491c977dde3a3240a1b57d6d463ef62834d6748cb25a2515b66b1ab8381276f32327dbf50493980e38cc04893f3bca6e9270e7a527ce7416eb9570311338bd06329e2d74a3755f519abe92f0d7dd4fc341a38aec5ca5745599931cdf61fbbda5ee0797b2e9801c71f818b8661959750cf5bcee2fccbf751b72e6e0bd9f6220ec988fdb4e1914e2617206cf4565d3bf355305248fbf167229fcb8
+            - generic [ref=e341]: 2026-06-08
+          - listitem [ref=e343]:
+            - generic [ref=e344]: "7"
+            - link "基于文化基因理论的长城沿线民居装饰与民俗茶具转译设计研究" [ref=e346] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/article?cate=all&range=0&id=0414202206c550a29830cac5fc7636d42b2691b7e9dfc168c18b19c8b9fa0aa5499488e01f870ff7537610ee85a1d2840290bbbdd49d2b55f5819181e88d19a644fec9d7d6a9e1ffb0a0d02042e36f418d4f7323a03b36ef2471c204dda2df5184c5425b7fdf9bd150bd0661c93021f74fdf37faa99f97c3737506ec2e131d456b880fa7821ca74edcecc5dd620a7aa6068bc08618a467013165ca90b820f5f4be87af15c5ca849944b9ce8474719a3d16da5c5f4c664dcda1e3f1a34ae9249dbc9af29f70c91f7fe30ce9136ba83fdf5bfc2911e2e9f85082b6
+            - link "刘宗明" [ref=e348] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/author?cate=all&range=0&id=047f7843eb9e6846e6fe78c5eabff6d91dbb18bedda091526baf338f01712f9cbb96e879a8184ae4753bcfc15696a60c84fc76476808622ecb63f43971f837fe46a236f9ad5fe1275db64e4ba157786efe94db32dcd142ebac170885da74ff485382947675eac43815c9102df7ced147096a058c7b5358e6c69262b19c29baf0289fc3e57d9d28704db1632074bfe73ab049b9b10920db108c1fd9fa72e6866d0283fa8858e100620ffb053b1faeebfcf910418eafe133071774abe38f3ec18e223338b7c9
+            - link "《包装工程》" [ref=e350] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/navi?cate=all&range=0&id=04cf44a8f337bfbd3ea8fbafaefc62b471d6cd0b075919ae90e55129e30d5f394b58dbf69e6512ce9f66260aea021d19c18583ef9d92c57edce42796637dc43e2acf5d81f557258d3321ed882416f60bfd3f56a59b7e7282070d225a3d9786281c1876b121002cf760557995f0524e97fce287c315cd21e65ee5d542cc5dd8656ef682dcd21eb4089a6f23f5bf1a87805d88155642000afda2430bfcdaf9f90dc0e8fd511fb0ae71572be992fceab52e5611a11432578e46f1e802bd7ec7d36e670e88925fa782f986efa6db46
+            - generic [ref=e351]: 2026-06-08
+          - listitem [ref=e353]:
+            - generic [ref=e354]: "8"
+            - link "备案审查中比例原则的适用" [ref=e356] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/article?cate=all&range=0&id=042b79fe3044f3fb62d576cf62b49fd1183bfa58dd7ea9354353988dfed2de6317f4a397aafae12e52c42111163dc6ca9a96fcbf0f31d1b342676d49e2b6058bc192407f331739ba8922d8281dcfffe11a6027d022ca00aa7511e8e706363ccf1315df0bd5cc14baee2d9b090b4b3402ff42009413bcf06eba1c5bbb82add139892a30ab5a9451c54a1ceacba39c1b240c4ac2c90aec2bcb8d3f87edfa2a00d9fd3718a3ddc1cd80ff8fa7222bb14e958ff306718fe2fe5072369a31d55932e8cce61c6776d1471772332694e36db0e4dc4b49682751a3410f52
+            - link "刘权" [ref=e358] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/author?cate=all&range=0&id=0450dc5fc7a66978672493b1fb933edb76a82387ef0a2b7d3084a20b7bf570ecfefd57b5d0dd1530ab7d72260d2e2937c1b5efa72c3956358262d41287574668e7411b060c5a757dcf75a5c681f47f5b99a4cbad6d3b57f5fbe10b9793bc068a92d2469114e2c1282e44339684832adc6955622f9239d5aeca4c0325c7c717e5229fa7b363b8e57eb68faee22f1ea381fdbaa2a1388bdeadbea947e09ed8a96fc060126594a6289c84edf0ceaff3f4885d6fb05929bdd2168d67520600f777983a04
+            - link "《中国法学》" [ref=e360] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/navi?cate=all&range=0&id=0489c831cb0396183d2564e0cefa30f209887a05cb610c52485b8bfde7c97720ff1f244b566353bb523c4e15cb88aed4e47727d07e66189b8f2535d6a3b75da2c5689c56f30c03b032ffb5dd3706b9320996e08d73d16cd107e73b712495971152bbada5b273b8c15c37de818cd64e662654ed13d0b6f94e14ae2abb427349c8c2152deddda3dfcb93fa1c21c7598927750b990ab7ac03db52116ea7518a859e5ad0ac39645a19a9880f10e16661a9302b6674b41c27046df908174efd280796238f5cdf0b7fe12aab674b39e5
+            - generic [ref=e361]: 2026-06-04
+          - listitem [ref=e363]:
+            - generic [ref=e364]: "9"
+            - link "中国法学自主知识体系的建构逻辑" [ref=e366] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/article?cate=all&range=0&id=047bde0bdd2087ee33cdecc01d35091f737f7cd7cc49e3f05dc8a3653579ae375add9a1cd0cdd04352f72ab9600dd99311bd9185159a1ad2d2d68ca15daf706782ebbd5324c96db56ca3f6d7e327073453fade436e06774035faaf991b75b226e060b8c15b78f4e8275516c9054bf105581182a0ef547e53bf3242e4eef2cc181cec35bf0ef069807225c11e180b8e91778a76024a00c9c63dd2ea9ccba8095d078ead1d500a2da14e38537785d2f7605ead5c99520267655fe9ef12cd9910b8e5b086807be2718f568ab1d1df32a285417bddc7b4740fb6
+            - link "张文显" [ref=e368] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/author?cate=all&range=0&id=04fa5a935d8b4d22923a4abecae0772ad2dc031d8bb148e50eeff4c1a6c7026b918257cf54332ba4e12a889e261896f57228f05b90bcd9698faf3b84f39d0b92b62f154bd08a3f549d12c5648a6fa9aca5622586530b25a997a58eb323e00fa2900cb6ac26fb83c4d590a8821a2b6ec17206d8de0d76df16283f75a28430c37f1366898adfe1d2754b6f41235cf0b3460d1d313cd8e33415bafe5ae2b817f105b37316e39970ae97dafe61b8b373c2af3d19fbf770bc7e60507a99354876f048994ab603ce
+            - link "《法学研究》" [ref=e370] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/navi?cate=all&range=0&id=04d8c0c6fce52aecb4acb3b11075a3d22d2fdebeec0c96b3e3598f41d2ef14f97a77f028edc9de2c55a097714661d200a04e6038a13276045566fd7eae47212c3ea827ea304439dab158d72f444967d4ce13dda456cab9c503b717e9674302138904a816574e45348b117733408719161b36ae0b7e5dd6de4420718d7e3606cb8a31ccbc73463e74d1ed13169ce2e64e2156b9e99b7f8e7c67b291e34844113acc82f9e90b83536b6f4f3ce1fb0637f7fcdbbaaa273d55eb1bc285cf6c18dae5b49e9a7f78ec0a2f8aaa7eadd1
+            - generic [ref=e371]: 2026-05-20
+          - listitem [ref=e373]:
+            - generic [ref=e374]: "10"
+            - link "基于深度学习的人工智能技术与医疗机器人诊疗技术融合的应用进展" [ref=e376] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/article?cate=all&range=0&id=04fb472679f5ef37e3178d11ad935870a95f272b1301c7850af7219f5ea032fcbe726e749cd74d28ae0514b1b978b41a99fd8638e5d07d18fe118ab3b1d1392af27f9691291dd36f7baaadcd1a017726dbdec17297f2a89a6f1cd33c3c3b908b34cd49642f706a2bcded89be4642ea02c2606243a45af6388244be678cb46c220343dcfc3cfffc9044d8215f851f1fd680ec8b3e85cc4b6629906f2d146b24222390d9e41e464806bffa3f0386e30a7a185c915edf480788dd072a9fa8c0ca869b4a2f18c9b6d5307a640eef40c0fb99c4f6a23c3e48c137d14e62
+            - link "王勇" [ref=e378] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/author?cate=all&range=0&id=04c34a905744c26ce41e0532f60792103f41909eefd5bf218be8442ec4f14c0bbc06d8cd33ce2ce463be0dcda23bdf5124c397d494ae9122ed554525b5d6926da693ffc3fca7d0ac3951d231fa18e34c99d61c3269bbea4a23a0d8e910f3e90ea5aec7832777cc9b2b58c29de78cf0c549730a82c9a6fbc309898ad29895a3694945e13142a462cc6adc42cc3aa55efc8705f6e204a7e349b8cef2ebc6e13f7b195c7b14ff395396441a7126240d4feb23d972cff3d5027a48f1b6fede71ab545d29db
+            - link "《中国医疗设备》" [ref=e380] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/navi?cate=all&range=0&id=04ba3b0442b887d14eaafb0fb500533926651e43e35ddf7c6342476c882ba038ff5591f9776ecd43051a05142ae52c302083f09f13bd2fdc566ce1ca3034ef10bf914377c67ad9c1c22f28619afb3c0e6431dc4b85566b9de543778ce5539e184958520493d8090d33bdad438715b5839297c13a5a94b831069a88ca60f9ca1a19a67419ae683fdd085defc1153a1797112078112a396224fcc480a1152adf914c36964a8fc6eaa19c77d5dbe59c36e5938509cea9f18f7c30dd5cfb1fdb81187b232ac97c41b761dad57a008b22
+            - generic [ref=e381]: 2026-06-08
+      - generic [ref=e383]:
+        - paragraph [ref=e384]: 热词榜
+        - generic [ref=e386]:
+          - generic [ref=e387] [cursor=pointer]: 周
+          - generic [ref=e388] [cursor=pointer]: 月
+        - list [ref=e389]:
+          - listitem [ref=e390]:
+            - generic [ref=e391]: "1"
+            - link "人工智能" [ref=e393] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/hotword?range=0&id=045d029ff8e7c0a85146dc2d9458f5d72800bb1f457a4e848bfe82912f7d3e7dc3c37ba8b81664fb46b3d338fb90d36ba5712f7429ddee84862b0ed972d09f8617a6978e4a3bc6404a0dc7d64bfca07901410e0a6edeb19f22956a9d1497d096c51489a4b4af7ad0cdfda79d2289a9a87370f5f7b1c6ebb1b93d680fcb223999b21ad6f1e2f680b0f5c814f45ec3fdbf9af8cd89682e2ae2483be43efce2d6cdaa207366
+            - generic [ref=e395]: 热度值5574
+          - listitem [ref=e396]:
+            - generic [ref=e397]: "2"
+            - link "耐心资本" [ref=e399] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/hotword?range=0&id=04c77a5b5fc2a602e85ec98b19056bfffc3a250ba6c7fa5083e4e304fd6f606933f24ba256996dba7ab8e1d5eb886bf630f56d7f18ac8dff9d0ea77ac4d913d7484a86b88749f410279bf125a3c70731b538a11557eeb0daf0b9452fecaece41dbce9054b5e4e144648a0f397208b53a3d9b190758a4876be314cf8cbafaa9e4382b22a70e1b72bcafba7de25c563c378602de87aec83f48d3d132e023a08ca6172da7ba
+            - generic [ref=e401]: 热度值5314
+          - listitem [ref=e402]:
+            - generic [ref=e403]: "3"
+            - link "供应链韧性" [ref=e405] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/hotword?range=0&id=04646e8f4b6c20a0ff7f6613cc5694db4cb456b39b7023d03eeac7807d8e8c4ef8ee5dd8a5427fd11c34fa0ce55492efcdf206f5dad8f2ba2dd7fb2e99355806e4169ee76152e207b59bd94066d4d6908d45d3090f9cc386fd8fc512f5564e0d51db18bfa0b4751f1353539c2b654efa812dd1e5d88291f74e934d742fc4af64d565daa7803743fb5f218c169685d5771f5eb78215fc0842744983eabea265520666a9fa49fea3
+            - generic [ref=e407]: 热度值3152
+          - listitem [ref=e408]:
+            - generic [ref=e409]: "4"
+            - link "数字化转型" [ref=e411] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/hotword?range=0&id=04d36c8924449e28b2f533219180339dd6ac83b3b653c819e0933ab6e0fb24d9a11a78725eabba5593bac4f57088e0406e12301eb294896d4131c50d956e9adeb7e2c3470efd11fa3c6fb506ada5226a07c9de756b1ebdabb32ca407454d565334d0f11b90668deb6e862f1780a48d063ef93fd26684ea5323624f7186d140bf81a795ccb54782b7496befb0154c6d7fc744f794abfc30101c5f602a52e2e37032a48c7405cc7b
+            - generic [ref=e413]: 热度值2528
+          - listitem [ref=e414]:
+            - generic [ref=e415]: "5"
+            - link "新质生产力" [ref=e417] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/hotword?range=0&id=0490e5b314dead833050d0ac59bd2bfdcf2cd15739342f27cfd9bb5af5a2aa53c96f2906aded9571ab5d2427c6f0b763f3b5a5dbc39413ff1fac596a6029d128631caf9479abaaf274795ad9ebe825b8993503d742345535f33b738b27ca4b9125ffff46b112f4b00c96c54162ffd7f5689be87b08cf3cf1377661d84ff40978258a6f20a9d0073755528ccddde98d0e8b25048d6f4c4c7eec392b68ef5af43d465275ef28ced8
+            - generic [ref=e419]: 热度值2214
+          - listitem [ref=e420]:
+            - generic [ref=e421]: "6"
+            - link "数字经济" [ref=e423] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/hotword?range=0&id=043fca249dc87fc4cd51062fc9828091174ab296b45ed6979e3f6fae8256c13f08cb37adc42a06dbc958689ccf72ac7fc0699d41d43af36137fe25294c229a06a8478dc55770df1adb9818abc46a3a11c12eaecf06faeff51cdfcca50e27f9b05dc0f8e43df6f44b5bafed9613b98c5339c92b0f551216f4a4c4bab3a35de7ee709525fc5a1a93bd271c5ba05a16f96651aaa99ce55761840b9921fad64c5a3a95a2a7dc
+            - generic [ref=e425]: 热度值2200
+          - listitem [ref=e426]:
+            - generic [ref=e427]: "7"
+            - link "数据资产" [ref=e429] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/hotword?range=0&id=0490a3ad76ff2ddff144b0b9762c13c455d5592e5f316e786f55f4b77bb3ff1b27cb85b60e99b80293270a0194b1ec84b3d89fc2988d3ba5cadda29021ee7327700225d89f5fa3e83564540c630ad3f7e2bcd378c029a522665c36f53ffe224cdb19e1052f4f8b1ff53d9ea20cd58636973a7262480ae79cd688bd00af68923d7ce5d1a389b0cdee625a0efa5b6135627e1612e23fc6910cc7ab503ae2f1002e23aacfd8
+            - generic [ref=e431]: 热度值2147
+          - listitem [ref=e432]:
+            - generic [ref=e433]: "8"
+            - link "新大众文艺" [ref=e435] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/hotword?range=0&id=041e5e5040604fc562e8501b251773d2328e0a2fe2429b37f06c3b82a8ae007a3a7bb03a4170d9302bd88fc746dbbc7ba089943765afbee431a19a2367c569627b4c4f6cd9e9d924f473b9f817c28852d6e35ecfd92a748054514eb0e73d0c248345f4efc777c917b62e80a5fef507c6f363c8cc93e4362326491284d52a19e2ef78e34b2beaf93228a23b559bc3dc2ef5e50c3ed18ce1798f9a9a63160c812632c58658ab36c7
+            - generic [ref=e437]: 热度值2034
+          - listitem [ref=e438]:
+            - generic [ref=e439]: "9"
+            - link "中国工业经济" [ref=e441] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/hotword?range=0&id=04b36c2b88ad7f29df8353cbaa18996c5907ab7a7036caf0aa15abf4177662a211566dd0b28929a878548b87b05cac704b907bfa88905fe124c84555b706d0b2a9ba0f54161a38ec0697595e32f72e7d52e06ecbd50a45ecf57d6c0c3c666bbfd3174fdf051f274107cf5ad06e04890d1f98d9f5a97299186f7e5b246bc6bd254c32060c2e83e8b626e28632a59118cad2228f140d16422a3bd6897b66980fcf25d8419484eebfe69c47
+            - generic [ref=e443]: 热度值1957
+          - listitem [ref=e444]:
+            - generic [ref=e445]: "10"
+            - link "低空经济" [ref=e447] [cursor=pointer]:
+              - /url: https://link.cnki.net/rankinglist/hotword?range=0&id=04225ac13ff2af9004dbf9137880db2066d75cc8c825be3cb83bf76951af9d8c922f22685e1aaea4180a53cd68f1522a84a047b4d0fa8f0cead74b17656d8ef9ea0080f651ea82b29265471a3641c61f2082a0f0e9564b493927a2816b2aff86dea5df1efd439786d989b7887d274e5e5db6be589c431e09ab4b2fe65c855248ab7b319bd38f0ae907e2dad2f64466b5d27f6d53221d608b6a5dcc6399750613e27588197a
+            - generic [ref=e449]: 热度值1749
+    - generic [ref=e451]:
+      - heading "Recommendation 知网推荐" [level=2] [ref=e452]:
+        - generic [ref=e453]: Recommendation
+        - generic [ref=e454]: 知网推荐
+      - generic [ref=e455]:
+        - generic [ref=e456] [cursor=pointer]: 主编推荐
+        - generic [ref=e457] [cursor=pointer]: 图书推荐
+      - generic [ref=e458]:
+        - generic [ref=e461]: 最新
+        - generic [ref=e467]: 热门
+    - generic [ref=e472]:
+      - heading "CNKI Updates 知网动态 了解更多" [level=2] [ref=e473]:
+        - generic [ref=e474]: CNKI Updates
+        - generic [ref=e475]: 知网动态
+        - link "了解更多" [ref=e476] [cursor=pointer]:
+          - /url: https://www.cnki.net/subpages/news.html
+      - generic [ref=e477]:
+        - generic [ref=e478]:
+          - paragraph [ref=e479]:
+            - generic [ref=e480]: 06-01
+            - generic [ref=e481]: "2026"
+          - generic [ref=e482]:
+            - link "《管理世界》大讲堂2026年第五期来啦!" [ref=e483] [cursor=pointer]:
+              - /url: https://k.cnki.net/themeInfo/2007
+            - paragraph [ref=e484]: 本期嘉宾来自：吉林大学、山西大学、华东师范大学、天津财经大学、厦门大学、北京物资学院、北京大学、华南师范大学、中山大学、南开大学。
+        - generic [ref=e485]:
+          - paragraph [ref=e486]:
+            - generic [ref=e487]: 04-28
+            - generic [ref=e488]: "2026"
+          - generic [ref=e489]:
+            - link "诚邀参加2026年“陶行知教育思想理论研究与创新实践”学术研讨会！" [ref=e490] [cursor=pointer]:
+              - /url: https://mp.weixin.qq.com/s/-L5Szo7UbRFnbNaal8eyTA
+            - paragraph [ref=e491]: 2026年6月27日至30日，2026年“陶行知教育思想理论研究与创新实践”学术研讨会将于南京举办！
+        - generic [ref=e492]:
+          - paragraph [ref=e493]:
+            - generic [ref=e494]: 04-21
+            - generic [ref=e495]: "2026"
+          - generic [ref=e496]:
+            - link "第五届全民阅读大会“江右书旅”——知网邀您共赴书香之约" [ref=e497] [cursor=pointer]:
+              - /url: https://yuedu.cnki.net/jiangxi.html
+            - paragraph [ref=e498]: 2026年全民阅读大会即将在江西南昌拉开帷幕，由咪咕数媒、中国知网、京东、帆书、凯叔讲故事多方共同搭建的线上主会场——“江右书旅”互动专区已于4月10日正式上线，中国知网诚邀全国读者共赴一场有温度、有回响的书香盛宴。
+        - generic [ref=e499]:
+          - paragraph [ref=e500]:
+            - generic [ref=e501]: 04-20
+            - generic [ref=e502]: "2026"
+          - generic [ref=e503]:
+            - link "“学术成果汇编”征稿启事" [ref=e504] [cursor=pointer]:
+              - /url: https://yccb.cnki.net/#/article-detail?id=9898b6f8-6ac2-4fab-8ec1-fa9502041850&type=5&hideSearch=1
+            - paragraph [ref=e505]: “学术成果汇编”由中国知网推出，汇编作者本人/他人知网收录文献，以纸质图书或电子图书形式出版，并同步上线知网各平台。
+        - generic [ref=e506]:
+          - paragraph [ref=e507]:
+            - generic [ref=e508]: 04-15
+            - generic [ref=e509]: "2026"
+          - generic [ref=e510]:
+            - link "《基层农技推广》征稿啦" [ref=e511] [cursor=pointer]:
+              - /url: https://yccb.cnki.net/#/article-detail?id=ba238438-bf51-47c8-9002-d9fbdec27de6&type=5&hideSearch=1
+            - paragraph [ref=e512]: 《基层农技推广》面向农业院校师生、农技推广人员、农业从业者、农业领域管理人员等征稿啦！
+      - generic [ref=e514]:
+        - generic [ref=e516]:
+          - img [ref=e519]
+          - img [ref=e522]
+        - generic [ref=e525] [cursor=pointer]:
+          - heading "《管理世界》大讲堂2026年第五期来啦!" [level=5] [ref=e528]
+          - heading "诚邀参加2026年“陶行知教育思想理论研究与创新实践”学术研讨会！" [level=5] [ref=e531]
+          - heading "第五届全民阅读大会“江右书旅”——知网邀您共赴书香之约" [level=5] [ref=e534]
+          - heading "“学术成果汇编”征稿启事" [level=5] [ref=e537]
+          - heading "《基层农技推广》征稿啦" [level=5] [ref=e540]
+          - heading "展师能·塑名师“创意写作赋能写作教育”论文、课例征集活动正式启动" [level=5] [ref=e543]
+          - heading "“2026科研诚信公益大讲堂——大学生毕业论文写作指导系列讲座之第二讲：论文撰写与答辩”重磅开讲！" [level=5] [ref=e546]
+          - heading "出版级人工翻译母语润色，为知识全球传播保驾护航！" [level=5] [ref=e549]
+          - heading "中国知网博士学术专著丛书征稿启事" [level=5] [ref=e552]
+          - heading "中国知网高被引学者个人成果汇编/学术专著征稿函" [level=5] [ref=e555]
+    - generic [ref=e559]:
+      - heading "New Products 新品速递" [level=2] [ref=e560]:
+        - generic [ref=e561]: New Products
+        - generic [ref=e562]: 新品速递
+      - list [ref=e563]:
+        - listitem [ref=e564]:
+          - generic [ref=e565]:
+            - link [ref=e567] [cursor=pointer]:
+              - /url: https://claw.cnki.net/
+            - generic [ref=e568]:
+              - heading "CNKI Claw全新上线" [level=6] [ref=e569]:
+                - link "CNKI Claw全新上线" [ref=e570] [cursor=pointer]:
+                  - /url: https://claw.cnki.net/
+              - paragraph [ref=e571]:
+                - text: CNKI Claw助你读懂海量文献，构建知识体系，守护科研初心，让深度探索不再孤独！
+                - link "[查看详情]" [ref=e572] [cursor=pointer]:
+                  - /url: https://claw.cnki.net/
+              - paragraph [ref=e573]: 2026-05-22
+        - listitem [ref=e574]:
+          - generic [ref=e575]:
+            - link [ref=e577] [cursor=pointer]:
+              - /url: https://gw.cnki.net/
+            - generic [ref=e578]:
+              - heading "公文大模型（政知通）重磅升级" [level=6] [ref=e579]:
+                - link "公文大模型（政知通）重磅升级" [ref=e580] [cursor=pointer]:
+                  - /url: https://gw.cnki.net/
+              - paragraph [ref=e581]:
+                - text: 面向党政机关、科研院所和企事业单位提供调研助手、智能公文写作、智能公文核稿、智能查重比对...
+                - link "[查看详情]" [ref=e582] [cursor=pointer]:
+                  - /url: https://gw.cnki.net/
+              - paragraph [ref=e583]: 2025-12-26
+        - listitem [ref=e584]:
+          - generic [ref=e585]:
+            - link [ref=e587] [cursor=pointer]:
+              - /url: https://biaozhi.cnki.net
+            - generic [ref=e588]:
+              - heading "标准质量评估服务平台重磅发布！" [level=6] [ref=e589]:
+                - link "标准质量评估服务平台重磅发布！" [ref=e590] [cursor=pointer]:
+                  - /url: https://biaozhi.cnki.net
+              - paragraph [ref=e591]:
+                - text: 标准质量评估服务平台集成全量标准资源，以提升标准制定质量为核心，聚焦于标准质量的专业评估...
+                - link "[查看详情]" [ref=e592] [cursor=pointer]:
+                  - /url: https://biaozhi.cnki.net
+              - paragraph [ref=e593]: 2025-12-16
+        - listitem [ref=e594]:
+          - generic [ref=e595]:
+            - link [ref=e597] [cursor=pointer]:
+              - /url: https://cajx.cnki.net/webcaj/
+            - generic [ref=e598]:
+              - heading "CAJX阅读器云服务版" [level=6] [ref=e599]:
+                - link "CAJX阅读器云服务版" [ref=e600] [cursor=pointer]:
+                  - /url: https://cajx.cnki.net/webcaj/
+              - paragraph [ref=e601]:
+                - text: CAJX阅读器云服务版是最新打造的桌面级在线阅读服务，提供在线全文翻译、格式转换等系列实用...
+                - link "[查看详情]" [ref=e602] [cursor=pointer]:
+                  - /url: https://cajx.cnki.net/webcaj/
+              - paragraph [ref=e603]: 2025-12-08
+    - generic [ref=e604]:
+      - generic [ref=e605]:
+        - list:
+          - listitem [ref=e606]:
+            - generic [ref=e607]: 读者服务
+            - link "购买知网卡" [ref=e608] [cursor=pointer]:
+              - /url: https://vipcard.cnki.net/ec/skwd/skwd.htm
+            - link "充值中心" [ref=e609] [cursor=pointer]:
+              - /url: https://zhifu.cnki.net/
+            - link "我的CNKI" [ref=e610] [cursor=pointer]:
+              - /url: https://i.cnki.net/
+            - link "帮助中心" [ref=e611] [cursor=pointer]:
+              - /url: https://service.cnki.net/
+          - listitem [ref=e612]:
+            - generic [ref=e613]: CNKI常用软件下载
+            - link "CAJViewer浏览器" [ref=e614] [cursor=pointer]:
+              - /url: https://cajviewer.cnki.net
+            - link "知网研学（原E-Study）" [ref=e615] [cursor=pointer]:
+              - /url: https://estudy.cnki.net/
+            - link "下载中心" [ref=e616] [cursor=pointer]:
+              - /url: https://www.cnki.net/software/xzydq.htm
+            - link "标准阅读器" [ref=e617] [cursor=pointer]:
+              - /url: https://piccache.cnki.net/kdn/software/standardreader.exe
+          - listitem [ref=e618]:
+            - generic [ref=e619]: 特色服务
+            - link "手机知网" [ref=e620] [cursor=pointer]:
+              - /url: https://wap.cnki.net/
+            - link "知网书店" [ref=e621] [cursor=pointer]:
+              - /url: https://book.cnki.net/
+            - link "知网文库" [ref=e622] [cursor=pointer]:
+              - /url: https://wenku.cnki.net
+            - link "知网阅读" [ref=e623] [cursor=pointer]:
+              - /url: https://mall.cnki.net/
+          - listitem [ref=e624]:
+            - generic [ref=e625]: 客户服务
+            - generic [ref=e626]: 订卡热线：400-819-9993
+            - generic [ref=e627]: 服务热线：400-810-9888
+            - generic [ref=e628]:
+              - text: 在线咨询：
+              - link "service.cnki.net" [ref=e629] [cursor=pointer]:
+                - /url: https://service.cnki.net/
+            - generic [ref=e630]: 邮件咨询：help@cnki.net
+          - listitem [ref=e631]:
+            - generic [ref=e632]: 监督举报
+            - generic [ref=e633]: 违法和不良信息举报电话：400-062-8866
+            - generic [ref=e634]: 违法和不良信息举报邮箱：jubao@cnki.net
+            - generic [ref=e635]: 合规举报邮箱：zwhegui-tsjb@cnki.net
+            - generic [ref=e636]:
+              - text: 服务监督：400-819-1966（
+              - link "fwjd.cnki.net" [ref=e637] [cursor=pointer]:
+                - /url: https://fwjd.cnki.net
+              - text: ）
+          - listitem [ref=e638]:
+            - link "新浪微博客服" [ref=e639] [cursor=pointer]:
+              - /url: https://e.weibo.com/u/3059308095
+              - generic [ref=e641]: 新浪微博客服
+            - link "官方微信" [ref=e642] [cursor=pointer]:
+              - /url: javascript:void(0)
+              - generic [ref=e644]: 官方微信
+      - generic [ref=e645]:
+        - generic [ref=e646]:
+          - generic [ref=e648]:
+            - generic [ref=e649]:
+              - link "关于我们" [ref=e650] [cursor=pointer]:
+                - /url: https://www.cnki.net/gycnki/gycnki.htm
+              - link "CNKI 荣誉" [ref=e651] [cursor=pointer]:
+                - /url: https://www.cnki.net/other/gonggao/gongsirongyu.html
+              - link "客服中心" [ref=e652] [cursor=pointer]:
+                - /url: https://service.cnki.net/
+              - link "用户建议" [ref=e653] [cursor=pointer]:
+                - /url: https://service.cnki.net/home?flag=1
+              - link "知网招聘" [ref=e654] [cursor=pointer]:
+                - /url: https://piccache.cnki.net/index/cnkirecruit/index.html
+              - link "知网推广" [ref=e655] [cursor=pointer]:
+                - /url: https://a.cnki.net/
+            - generic [ref=e656]: © 1998-2026 中国知网（CNKI）
+          - link [ref=e657] [cursor=pointer]:
+            - /url: https://ss.knet.cn/verifyseal.dll?sn=e13111111010043364isll000000&a=1&pa=0.08881110103584755
+        - generic [ref=e658]:
+          - generic [ref=e659]:
+            - link "京ICP备11019815号-4" [ref=e660] [cursor=pointer]:
+              - /url: https://beian.miit.gov.cn/
+            - text: 京ICP证040431号
+            - link "网络出版服务许可证网出证(京)字第416号" [ref=e661] [cursor=pointer]:
+              - /url: https://piccache.cnki.net/index/images/gb/416.jpg
+            - link "出版物经营许可证" [ref=e662] [cursor=pointer]:
+              - /url: https://piccache.cnki.net/index/images/gb/170001.jpg
+            - text: 京公网安备11010802020460号 互联网宗教信息服务许可证：京（2026）0000014
+          - text: 同方知网数字科技有限公司 KDN 平台基础技术由 AIKBase 提供.
+    - link "在线咨询" [ref=e664] [cursor=pointer]:
+      - /url: https://service.cnki.net
+      - generic [ref=e667]: 在线咨询

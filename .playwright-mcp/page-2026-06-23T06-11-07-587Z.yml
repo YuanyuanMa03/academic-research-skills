@@ -1,0 +1,804 @@
+- generic [ref=e2]:
+  - main [ref=e4]:
+    - heading "WOS Top Header" [level=1] [ref=e5]
+    - generic [ref=e6]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - button "Clarivate" [ref=e11] [cursor=pointer]:
+            - img [ref=e12]
+          - generic [ref=e14]:
+            - generic:
+              - generic:
+                - button "Skip navigation menu skipToNav":
+                  - img [ref=e15]: expand_more
+                  - generic [ref=e16]:
+                    - text: Skip navigation menu
+                    - generic [ref=e17]: skipToNav
+            - button "Language dropdown. English selected" [ref=e18]:
+              - generic [ref=e19]: English
+              - img [ref=e20]:
+                - img [ref=e21]
+            - button "Web of Science products dropdown" [ref=e27]:
+              - img [ref=e28]: apps
+              - generic [ref=e29]: Products
+        - generic [ref=e32]:
+          - link "Web of Science header logo. Click to return to home page" [ref=e34] [cursor=pointer]:
+            - /url: /wos/
+            - text: Web of Science
+            - superscript [ref=e35]: ™
+          - navigation "Navigation Bar" [ref=e36]:
+            - generic [ref=e37]:
+              - navigation "Main Nav tab landmark" [ref=e38]:
+                - generic [ref=e41]:
+                  - link "Smart Search" [ref=e42] [cursor=pointer]:
+                    - /url: /wos/woscc/smart-search
+                    - generic [ref=e44]: Smart Search
+                  - link "Advanced Search" [ref=e45] [cursor=pointer]:
+                    - /url: /wos/woscc/basic-search
+                    - generic [ref=e47]: Advanced Search
+                  - generic [ref=e48]:
+                    - generic [ref=e49]:
+                      - img [ref=e50]:
+                        - img [ref=e51]
+                      - text: Research Assistant
+                    - img [ref=e55] [cursor=pointer]:
+                      - img [ref=e56]
+              - generic [ref=e59]:
+                - button "Sign In" [ref=e60]:
+                  - generic [ref=e61]: Sign In
+                  - img [ref=e62]:
+                    - img [ref=e63]
+                - button "Register" [ref=e68]:
+                  - generic [ref=e69]: Register
+      - generic [ref=e72]:
+        - navigation "Flyout side navigation menu" [ref=e74]:
+          - generic [ref=e75]:
+            - button "MENU" [ref=e78] [cursor=pointer]:
+              - generic [ref=e79]:
+                - img [ref=e80]:
+                  - img [ref=e81]
+                - generic [ref=e83]: MENU
+            - button "Marked List" [ref=e84]:
+              - img [ref=e87] [cursor=pointer]:
+                - img [ref=e88]
+            - button "View your search history" [ref=e90]:
+              - img [ref=e93] [cursor=pointer]:
+                - img [ref=e94]
+            - button "Researcher Profile" [ref=e98]:
+              - img [ref=e101] [cursor=pointer]:
+                - img [ref=e102]
+            - button "Saved Searches and Alerts" [ref=e104]:
+              - img [ref=e107] [cursor=pointer]:
+                - img [ref=e108]
+        - generic [ref=e112]:
+          - list [ref=e379]:
+            - listitem [ref=e380]:
+              - generic [ref=e381]:
+                - link "Search" [ref=e382] [cursor=pointer]:
+                  - /url: /wos/woscc/basic-search
+                  - generic [ref=e383]: Search
+                - img [ref=e385]: keyboard_arrow_right
+            - listitem [ref=e386]:
+              - generic [ref=e389]: Results for agricultural large models OR smart agriculture (Topic)
+          - generic [ref=e391]:
+            - generic [active] [ref=e392]:
+              - generic [ref=e394]:
+                - heading "32,503 results from Web of Science Core Collection for:" [level=1] [ref=e397]
+                - generic [ref=e398]:
+                  - generic [ref=e399]:
+                    - generic [ref=e401]:
+                      - generic [ref=e404] [cursor=pointer]:
+                        - strong [ref=e405]: agricultural large models OR smart agriculture
+                        - text: (Topic)
+                      - button "Search" [disabled] [ref=e406]:
+                        - img [ref=e409]:
+                          - img [ref=e410]
+                    - button "Copy query link to clipboard" [ref=e415]:
+                      - img [ref=e416]: link
+                      - generic [ref=e418]:
+                        - text: Copy query link
+                        - generic [ref=e419]: to clipboard
+                  - generic [ref=e423]:
+                    - button "Add Keywords" [ref=e425]:
+                      - img [ref=e426]: add
+                      - generic [ref=e427]: Add Keywords
+                    - generic [ref=e430]:
+                      - heading "Quick add keywords:" [level=2] [ref=e431]
+                      - button "Scroll left" [disabled] [ref=e432]:
+                        - img [ref=e433]: keyboard_arrow_left
+                      - group "Quick add keywords:" [ref=e436]:
+                        - button "Add Keyword smart agriculture, keyword 1 of 10" [ref=e437]:
+                          - img [ref=e438]: add
+                          - generic [ref=e439]: smart agriculture
+                        - button "Add Keyword climate-smart agriculture, keyword 2 of 10" [ref=e442]:
+                          - img [ref=e443]: add
+                          - generic [ref=e444]: climate-smart agriculture
+                        - button "Add Keyword smart farming, keyword 3 of 10" [ref=e447]:
+                          - img [ref=e448]: add
+                          - generic [ref=e449]: smart farming
+                        - button "Add Keyword climate smart agriculture, keyword 4 of 10" [ref=e452]:
+                          - img [ref=e453]: add
+                          - generic [ref=e454]: climate smart agriculture
+                        - button "Add Keyword precision agriculture, keyword 5 of 10" [ref=e457]:
+                          - img [ref=e458]: add
+                          - generic [ref=e459]: precision agriculture
+                        - button "Add Keyword agriculture, keyword 6 of 10" [ref=e462]:
+                          - img [ref=e463]: add
+                          - generic [ref=e464]: agriculture
+                        - button "Add Keyword smart irrigation, keyword 7 of 10" [ref=e467]:
+                          - img [ref=e468]: add
+                          - generic [ref=e469]: smart irrigation
+                        - button "Add Keyword agriculture 4 0, keyword 8 of 10" [ref=e472]:
+                          - img [ref=e473]: add
+                          - generic [ref=e474]: agriculture 4 0
+                        - button "Add Keyword smart farm, keyword 9 of 10" [ref=e477]:
+                          - img [ref=e478]: add
+                          - generic [ref=e479]: smart farm
+                        - button "Add Keyword smart irrigation system, keyword 10 of 10" [ref=e482]:
+                          - img [ref=e483]: add
+                          - generic [ref=e484]: smart irrigation system
+                      - button "Scroll right" [ref=e487] [cursor=pointer]:
+                        - img [ref=e488]: keyboard_arrow_right
+              - generic [ref=e491]:
+                - generic [ref=e492]:
+                  - tablist "basic-search" [ref=e493]:
+                    - generic [ref=e496]:
+                      - tab "32,503 Documents" [selected] [ref=e497] [cursor=pointer]:
+                        - generic [ref=e499]:
+                          - generic [ref=e500]: 32,503
+                          - generic [ref=e501]: Documents
+                      - tab "You may also like..." [ref=e502] [cursor=pointer]:
+                        - generic [ref=e505]: You may also like...
+                  - tabpanel "32,503 Documents"
+                - generic [ref=e509]:
+                  - button "Analyze Results" [ref=e511]:
+                    - generic [ref=e512]: Analyze Results
+                  - button "Citation Report" [ref=e516]:
+                    - generic [ref=e517]: Citation Report
+                  - button "Create Alert" [ref=e520]:
+                    - generic [ref=e521]: Create Alert
+            - generic [ref=e524]:
+              - generic [ref=e526]:
+                - generic [ref=e527]:
+                  - generic [ref=e528]:
+                    - heading "Refine results" [level=2] [ref=e529]
+                    - button "Export Refine" [ref=e531]:
+                      - generic [ref=e532]: Export Refine
+                  - form "Refine panel" [ref=e535]:
+                    - generic [ref=e536]:
+                      - textbox "Search results" [ref=e537]:
+                        - /placeholder: Search within results...
+                      - button "Search" [ref=e538]:
+                        - img [ref=e539]:
+                          - img [ref=e540]
+                    - group "Quick Filters" [ref=e546]:
+                      - generic [ref=e547]: Quick Filters
+                      - generic [ref=e549]:
+                        - generic [ref=e553]:
+                          - generic [ref=e554] [cursor=pointer]:
+                            - checkbox "Review Article, 2,347" [ref=e556]
+                            - generic:
+                              - img
+                          - generic [ref=e557] [cursor=pointer]:
+                            - img [ref=e558]:
+                              - img [ref=e559]
+                            - generic [ref=e562]: Review Article
+                            - generic [ref=e563]: 2,347
+                        - generic [ref=e567]:
+                          - generic [ref=e568] [cursor=pointer]:
+                            - checkbox "Early Access, 340" [ref=e570]
+                            - generic:
+                              - img
+                          - generic [ref=e571] [cursor=pointer]:
+                            - img [ref=e572]:
+                              - img [ref=e573]
+                            - generic [ref=e576]: Early Access
+                            - generic [ref=e577]: "340"
+                        - generic [ref=e581]:
+                          - generic [ref=e582] [cursor=pointer]:
+                            - checkbox "Open Access, 16,004" [ref=e584]
+                            - generic:
+                              - img
+                          - generic [ref=e585] [cursor=pointer]:
+                            - img [ref=e586]:
+                              - img [ref=e587]
+                            - generic [ref=e590]: Open Access
+                            - generic [ref=e591]: 16,004
+                        - generic [ref=e595]:
+                          - generic [ref=e596] [cursor=pointer]:
+                            - checkbox "Enriched Cited References, 7,931" [ref=e598]
+                            - generic:
+                              - img
+                          - generic [ref=e599] [cursor=pointer]:
+                            - img [ref=e600]:
+                              - img [ref=e601]
+                            - generic [ref=e603]: Enriched Cited References
+                            - generic [ref=e604]: 7,931
+                        - generic [ref=e608]:
+                          - generic [ref=e609] [cursor=pointer]:
+                            - checkbox "Open publisher-invited reviews, 46" [ref=e611]
+                            - generic:
+                              - img
+                          - generic [ref=e612] [cursor=pointer]:
+                            - img [ref=e613]:
+                              - img [ref=e614]
+                            - generic [ref=e616]: Open publisher-invited reviews
+                            - generic [ref=e617]: "46"
+                        - generic [ref=e618]:
+                          - button [ref=e620]:
+                            - generic [ref=e621]: Exclude
+                          - button [ref=e624]: Refine
+                    - generic [ref=e627]:
+                      - button "Publication Years" [expanded] [ref=e629]:
+                        - generic [ref=e631]: Publication Years
+                        - img [ref=e632]:
+                          - img [ref=e633]
+                      - group "Publication Years" [ref=e637]:
+                        - generic [ref=e638]: Publication Years
+                        - generic [ref=e640]:
+                          - generic [ref=e643]:
+                            - switch "Show Final Publication Year" [ref=e644] [cursor=pointer]
+                            - generic [ref=e652] [cursor=pointer]: Show Final Publication Year
+                          - generic [ref=e656]:
+                            - generic [ref=e657] [cursor=pointer]:
+                              - checkbox "2026, 2,091" [ref=e659]
+                              - generic:
+                                - img
+                            - generic [ref=e660] [cursor=pointer]:
+                              - generic [ref=e661]: "2026"
+                              - generic [ref=e662]: 2,091
+                          - generic [ref=e666]:
+                            - generic [ref=e667] [cursor=pointer]:
+                              - checkbox "2025, 4,231" [ref=e669]
+                              - generic:
+                                - img
+                            - generic [ref=e670] [cursor=pointer]:
+                              - generic [ref=e671]: "2025"
+                              - generic [ref=e672]: 4,231
+                          - generic [ref=e676]:
+                            - generic [ref=e677] [cursor=pointer]:
+                              - checkbox "2024, 3,295" [ref=e679]
+                              - generic:
+                                - img
+                            - generic [ref=e680] [cursor=pointer]:
+                              - generic [ref=e681]: "2024"
+                              - generic [ref=e682]: 3,295
+                          - generic [ref=e686]:
+                            - generic [ref=e687] [cursor=pointer]:
+                              - checkbox "2023, 2,821" [ref=e689]
+                              - generic:
+                                - img
+                            - generic [ref=e690] [cursor=pointer]:
+                              - generic [ref=e691]: "2023"
+                              - generic [ref=e692]: 2,821
+                          - generic [ref=e696]:
+                            - generic [ref=e697] [cursor=pointer]:
+                              - checkbox "2022, 2,965" [ref=e699]
+                              - generic:
+                                - img
+                            - generic [ref=e700] [cursor=pointer]:
+                              - generic [ref=e701]: "2022"
+                              - generic [ref=e702]: 2,965
+                          - generic [ref=e703]:
+                            - button "See all Publication Years" [ref=e704] [cursor=pointer]:
+                              - generic [ref=e705]: See all >
+                            - button [ref=e709]:
+                              - generic [ref=e710]: Exclude
+                            - button [ref=e713]: Refine
+                    - generic [ref=e716]:
+                      - button "Document Types" [expanded] [ref=e718]:
+                        - generic [ref=e720]: Document Types
+                        - img [ref=e721]:
+                          - img [ref=e722]
+                      - group "Document Types" [ref=e726]:
+                        - generic [ref=e727]: Document Types
+                        - generic [ref=e729]:
+                          - generic [ref=e733]:
+                            - generic [ref=e734] [cursor=pointer]:
+                              - checkbox "Article, 25,851" [ref=e736]
+                              - generic:
+                                - img
+                            - generic [ref=e737] [cursor=pointer]:
+                              - generic [ref=e738]: Article
+                              - generic [ref=e739]: 25,851
+                          - generic [ref=e743]:
+                            - generic [ref=e744] [cursor=pointer]:
+                              - checkbox "Proceeding Paper, 4,569" [ref=e746]
+                              - generic:
+                                - img
+                            - generic [ref=e747] [cursor=pointer]:
+                              - generic [ref=e748]: Proceeding Paper
+                              - generic [ref=e749]: 4,569
+                          - generic [ref=e753]:
+                            - generic [ref=e754] [cursor=pointer]:
+                              - checkbox "Review Article, 2,347" [ref=e756]
+                              - generic:
+                                - img
+                            - generic [ref=e757] [cursor=pointer]:
+                              - generic [ref=e758]: Review Article
+                              - generic [ref=e759]: 2,347
+                          - generic [ref=e763]:
+                            - generic [ref=e764] [cursor=pointer]:
+                              - checkbox "Early Access, 340" [ref=e766]
+                              - generic:
+                                - img
+                            - generic [ref=e767] [cursor=pointer]:
+                              - generic [ref=e768]: Early Access
+                              - generic [ref=e769]: "340"
+                          - generic [ref=e773]:
+                            - generic [ref=e774] [cursor=pointer]:
+                              - checkbox "Editorial Material, 147" [ref=e776]
+                              - generic:
+                                - img
+                            - generic [ref=e777] [cursor=pointer]:
+                              - generic [ref=e778]: Editorial Material
+                              - generic [ref=e779]: "147"
+                          - generic [ref=e780]:
+                            - button "See all Document Types" [ref=e781] [cursor=pointer]:
+                              - generic [ref=e782]: See all >
+                            - button [ref=e786]:
+                              - generic [ref=e787]: Exclude
+                            - button [ref=e790]: Refine
+                    - generic [ref=e793]:
+                      - button "Researcher Profiles" [expanded] [ref=e795]:
+                        - generic [ref=e797]: Researcher Profiles
+                        - img [ref=e798]:
+                          - img [ref=e799]
+                      - group "Researcher Profiles" [ref=e803]:
+                        - generic [ref=e804]: Researcher Profiles
+                        - generic [ref=e806]:
+                          - generic [ref=e809]:
+                            - switch "Show Researcher Profiles" [checked] [ref=e810] [cursor=pointer]
+                            - generic [ref=e818] [cursor=pointer]: Show Researcher Profiles
+                          - generic [ref=e822]:
+                            - generic [ref=e823] [cursor=pointer]:
+                              - checkbox "Ciais, Philippe, 45" [ref=e825]
+                              - generic:
+                                - img
+                            - generic [ref=e826] [cursor=pointer]:
+                              - link "Ciais, Philippe" [ref=e827]
+                              - generic [ref=e828]: "45"
+                          - generic [ref=e832]:
+                            - generic [ref=e833] [cursor=pointer]:
+                              - checkbox "Müller, Christoph, 42" [ref=e835]
+                              - generic:
+                                - img
+                            - generic [ref=e836] [cursor=pointer]:
+                              - link "Müller, Christoph" [ref=e837]
+                              - generic [ref=e838]: "42"
+                          - generic [ref=e842]:
+                            - generic [ref=e843] [cursor=pointer]:
+                              - checkbox "Verburg, Peter H, 41" [ref=e845]
+                              - generic:
+                                - img
+                            - generic [ref=e846] [cursor=pointer]:
+                              - link "Verburg, Peter H" [ref=e847]
+                              - generic [ref=e848]: "41"
+                          - generic [ref=e852]:
+                            - generic [ref=e853] [cursor=pointer]:
+                              - checkbox "Tao, Fulu, 39" [ref=e855]
+                              - generic:
+                                - img
+                            - generic [ref=e856] [cursor=pointer]:
+                              - link "Tao, Fulu" [ref=e857]
+                              - generic [ref=e858]: "39"
+                          - generic [ref=e862]:
+                            - generic [ref=e863] [cursor=pointer]:
+                              - checkbox "Smith, Pete, 38" [ref=e865]
+                              - generic:
+                                - img
+                            - generic [ref=e866] [cursor=pointer]:
+                              - link "Smith, Pete" [ref=e867]
+                              - generic [ref=e868]: "38"
+                          - generic [ref=e869]:
+                            - button "See all Researcher Profiles" [ref=e870] [cursor=pointer]:
+                              - generic [ref=e871]: See all >
+                            - button [ref=e875]:
+                              - generic [ref=e876]: Exclude
+                            - button [ref=e879]: Refine
+                    - generic [ref=e882]:
+                      - button "Web of Science Categories" [ref=e884]:
+                        - generic [ref=e886]: Web of Science Categories
+                        - img [ref=e887]:
+                          - img [ref=e888]
+                      - group "Web of Science Categories" [ref=e892]:
+                        - generic [ref=e893]: Web of Science Categories
+                    - generic [ref=e894]:
+                      - button "Citation Topics Meso" [ref=e896]:
+                        - generic [ref=e898]: Citation Topics Meso
+                        - img [ref=e899]:
+                          - img [ref=e900]
+                      - group "Citation Topics Meso" [ref=e904]:
+                        - generic [ref=e905]: Citation Topics Meso
+                    - generic [ref=e906]:
+                      - button "Citation Topics Micro" [ref=e908]:
+                        - generic [ref=e910]: Citation Topics Micro
+                        - img [ref=e911]:
+                          - img [ref=e912]
+                      - group "Citation Topics Micro" [ref=e916]:
+                        - generic [ref=e917]: Citation Topics Micro
+                    - generic [ref=e918]:
+                      - button "Sustainable Development Goals" [ref=e920]:
+                        - generic [ref=e922]: Sustainable Development Goals
+                        - img [ref=e923]:
+                          - img [ref=e924]
+                      - group "Sustainable Development Goals" [ref=e928]:
+                        - generic [ref=e929]: Sustainable Development Goals
+                    - generic [ref=e930]:
+                      - button "Web of Science Index" [ref=e932]:
+                        - generic [ref=e934]: Web of Science Index
+                        - img [ref=e935]:
+                          - img [ref=e936]
+                      - group "Web of Science Index" [ref=e940]:
+                        - generic [ref=e941]: Web of Science Index
+                    - generic [ref=e942]:
+                      - button "Affiliations" [ref=e944]:
+                        - generic [ref=e946]: Affiliations
+                        - img [ref=e947]:
+                          - img [ref=e948]
+                      - group "Affiliations" [ref=e952]:
+                        - generic [ref=e953]: Affiliations
+                    - generic [ref=e954]:
+                      - button "Affiliation with Department" [ref=e956]:
+                        - generic [ref=e958]: Affiliation with Department
+                        - img [ref=e959]:
+                          - img [ref=e960]
+                      - group "Affiliation with Department" [ref=e964]:
+                        - generic [ref=e965]: Affiliation with Department
+                    - generic [ref=e966]:
+                      - button "Publication Titles" [ref=e968]:
+                        - generic [ref=e970]: Publication Titles
+                        - img [ref=e971]:
+                          - img [ref=e972]
+                      - group "Publication Titles" [ref=e976]:
+                        - generic [ref=e977]: Publication Titles
+                    - generic [ref=e978]:
+                      - button "Languages" [ref=e980]:
+                        - generic [ref=e982]: Languages
+                        - img [ref=e983]:
+                          - img [ref=e984]
+                      - group "Languages" [ref=e988]:
+                        - generic [ref=e989]: Languages
+                    - generic [ref=e990]:
+                      - button "Countries/Regions" [ref=e992]:
+                        - generic [ref=e994]: Countries/Regions
+                        - img [ref=e995]:
+                          - img [ref=e996]
+                      - group "Countries/Regions" [ref=e1000]:
+                        - generic [ref=e1001]: Countries/Regions
+                    - generic [ref=e1002]:
+                      - button "Publishers" [ref=e1004]:
+                        - generic [ref=e1006]: Publishers
+                        - img [ref=e1007]:
+                          - img [ref=e1008]
+                      - group "Publishers" [ref=e1012]:
+                        - generic [ref=e1013]: Publishers
+                    - generic [ref=e1014]:
+                      - button "Research Areas" [ref=e1016]:
+                        - generic [ref=e1018]: Research Areas
+                        - img [ref=e1019]:
+                          - img [ref=e1020]
+                      - group "Research Areas" [ref=e1024]:
+                        - generic [ref=e1025]: Research Areas
+                    - generic [ref=e1026]:
+                      - button "Open Access" [ref=e1028]:
+                        - generic [ref=e1030]: Open Access
+                        - img [ref=e1031]:
+                          - img [ref=e1032]
+                      - group "Open Access" [ref=e1036]:
+                        - generic [ref=e1037]: Open Access
+                    - generic [ref=e1038]:
+                      - button "Filter by Marked List" [ref=e1040]:
+                        - generic [ref=e1042]: Filter by Marked List
+                        - img [ref=e1043]:
+                          - img [ref=e1044]
+                      - group "Filter by Marked List" [ref=e1048]:
+                        - generic [ref=e1049]: Filter by Marked List
+                    - generic [ref=e1050]:
+                      - button "Funding Agencies" [ref=e1052]:
+                        - generic [ref=e1054]: Funding Agencies
+                        - img [ref=e1055]:
+                          - img [ref=e1056]
+                      - group "Funding Agencies" [ref=e1060]:
+                        - generic [ref=e1061]: Funding Agencies
+                    - generic [ref=e1062]:
+                      - button "Conference Titles" [ref=e1064]:
+                        - generic [ref=e1066]: Conference Titles
+                        - img [ref=e1067]:
+                          - img [ref=e1068]
+                      - group "Conference Titles" [ref=e1072]:
+                        - generic [ref=e1073]: Conference Titles
+                    - generic [ref=e1074]:
+                      - button "Group Authors" [ref=e1076]:
+                        - generic [ref=e1078]: Group Authors
+                        - img [ref=e1079]:
+                          - img [ref=e1080]
+                      - group "Group Authors" [ref=e1084]:
+                        - generic [ref=e1085]: Group Authors
+                    - generic [ref=e1086]:
+                      - button "Book Series Titles" [ref=e1088]:
+                        - generic [ref=e1090]: Book Series Titles
+                        - img [ref=e1091]:
+                          - img [ref=e1092]
+                      - group "Book Series Titles" [ref=e1096]:
+                        - generic [ref=e1097]: Book Series Titles
+                    - generic [ref=e1098]:
+                      - button "Editors" [ref=e1100]:
+                        - generic [ref=e1102]: Editors
+                        - img [ref=e1103]:
+                          - img [ref=e1104]
+                      - group "Editors" [ref=e1108]:
+                        - generic [ref=e1109]: Editors
+                    - generic [ref=e1110]:
+                      - button "Editorial Notices" [ref=e1112]:
+                        - generic [ref=e1114]: Editorial Notices
+                        - img [ref=e1115]:
+                          - img [ref=e1116]
+                      - group "Editorial Notices" [ref=e1120]:
+                        - generic [ref=e1121]: Editorial Notices
+                - generic [ref=e1124]:
+                  - text: For more options, use
+                  - link "Analyze Results" [ref=e1125] [cursor=pointer]:
+                    - /url: /wos/woscc/analyze-results/c42dc25a-a9ad-45d9-b4a6-66972731a2c1-01badce773
+              - generic [ref=e1126]:
+                - heading "Search results" [level=2] [ref=e1127]
+                - generic [ref=e1128]:
+                  - generic [ref=e1129]:
+                    - region "summaryRecordsTop" [ref=e1131]:
+                      - generic [ref=e1133]:
+                        - generic [ref=e1134] [cursor=pointer]:
+                          - checkbox "Select all records, 0 of 32,503" [ref=e1136]
+                          - generic:
+                            - img
+                        - generic [ref=e1137] [cursor=pointer]: 0/32,503
+                      - button "Add To Marked List - Click Add To Marked List Option" [ref=e1139]:
+                        - generic [ref=e1140]: Add To Marked List
+                      - button "Export" [ref=e1145]:
+                        - generic [ref=e1147]:
+                          - text: Export
+                          - img [ref=e1148]: expand_more
+                    - generic [ref=e1152]:
+                      - generic [ref=e1153]: Sort by
+                      - button "Sort by Relevance" [ref=e1154]:
+                        - generic [ref=e1156]: Relevance
+                        - img [ref=e1157]:
+                          - img [ref=e1158]
+                    - navigation "Pagination" [ref=e1163]:
+                      - button "Top Prev Page" [disabled] [ref=e1164]:
+                        - img [ref=e1165]:
+                          - img [ref=e1166]
+                        - generic [ref=e1169]: Previous
+                      - button "Top Next Page" [ref=e1172]:
+                        - generic [ref=e1173]:
+                          - text: Next
+                          - img [ref=e1174]:
+                            - img [ref=e1175]
+                  - separator [ref=e1180]
+                - generic [ref=e1181]:
+                  - generic [ref=e1182]:
+                    - generic [ref=e1184]:
+                      - generic [ref=e1185]:
+                        - generic [ref=e1187]:
+                          - generic [ref=e1188] [cursor=pointer]:
+                            - 'checkbox "Select record Multimodal large models for smart agriculture: Frameworks and applications" [ref=e1190]'
+                            - generic:
+                              - img
+                          - generic [ref=e1191] [cursor=pointer]: "1"
+                        - img "Review article for record 1" [ref=e1192]:
+                          - img [ref=e1193]
+                      - generic [ref=e1196]:
+                        - generic [ref=e1197]:
+                          - heading "View full record For (Multimodal large models...)" [level=3] [ref=e1199]:
+                            - link "View full record For (Multimodal large models...)" [ref=e1200] [cursor=pointer]:
+                              - /url: /wos/woscc/full-record/WOS:001620590300001
+                              - text: "Multimodal large models for smart agriculture: Frameworks and applications"
+                          - generic [ref=e1202]:
+                            - link "Liu, J" [ref=e1203] [cursor=pointer]:
+                              - /url: /wos/author/record/3619834
+                            - text: and
+                            - link "Wang, XW" [ref=e1204] [cursor=pointer]:
+                              - /url: /wos/author/record/67872511
+                          - generic [ref=e1205]:
+                            - text: Mar 5 2026
+                            - generic [ref=e1206]:
+                              - text: "|"
+                              - button "EXPERT SYSTEMS WITH APPLICATIONS" [ref=e1210] [cursor=pointer]:
+                                - text: EXPERT SYSTEMS WITH APPLICATIONS
+                                - img [ref=e1211]: arrow_drop_down
+                            - generic [ref=e1214]: "300"
+                          - generic [ref=e1216]:
+                            - paragraph [ref=e1218]: Multimodal large models (MLMs) are advancing smart agriculture by introducing sophisticated construction frameworks and novel application approaches. This study systematically investigates the evolution from generalpurpose MLMs to agricultural-specialized models (Agri-MLMs). The construction frameworks are comprehensively analyzed, encompassing data preprocessing strategies, training paradigms
+                            - generic [ref=e1219]:
+                              - text: ...
+                              - 'button "Show more - Expand abstract for this record Multimodal large models for smart agriculture: Frameworks and applications" [ref=e1220] [cursor=pointer]':
+                                - text: Show more
+                                - img [ref=e1221]: expand_more
+                        - generic [ref=e1222]:
+                          - 'link "Full text at publisher for Multimodal large models for smart agriculture: Frameworks and applications Get Full Text Research for Multimodal large models for smart agriculture: Frameworks and applications" [ref=e1224] [cursor=pointer]':
+                            - /url: http://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=GetFTR&SrcApp=WOS&DestURL=https%3A%2F%2Fct.prod.getft.io%2FY2xhcml2YXRlLGVsc2V2aWVyLE1UQXVNVEF4Tmk5cUxtVnpkMkV1TWpBeU5TNHhNekF6T1RRLE5UZGxNekk0T0RBdFpEQmpaQzAwTW1WbUxUazJNemt0TURSaU56TmlNV0poWVdWaCxodHRwczovL3d3dy5zY2llbmNlZGlyZWN0LmNvbS9zY2llbmNlL2FydGljbGUvcGlpL1MwOTU3NDE3NDI1MDQwMDk2P3Blcz12b3I.OKhsU0ZzWiQSMdJzN9IPFTnb2rzCA0Nq1XdMu-nLPFk&DestApp=GetFTR&SrcItemId=WOS:001620590300001&SrcAppSID=USW2EC0A18TlEtZhOoI7rsYl3oWom&HMAC=SrB64AsRZ%2FxoQLX%2BXq96rK5E2fVmC7DI7cwGIxU9jUY%3D
+                            - text: Full text at publisher
+                            - generic [ref=e1225]: "for Multimodal large models for smart agriculture: Frameworks and applications"
+                            - 'img "Get Full Text Research for Multimodal large models for smart agriculture: Frameworks and applications" [ref=e1226]'
+                          - 'button "Options for record Multimodal large models for smart agriculture: Frameworks and applications" [ref=e1228]':
+                            - img [ref=e1229]: more_horiz
+                      - generic [ref=e1234]:
+                        - generic [ref=e1235]:
+                          - generic [ref=e1236]:
+                            - link "2 Citations For (Multimodal large models...)" [ref=e1237] [cursor=pointer]:
+                              - /url: /wos/woscc/citing-summary/WOS:001620590300001?from=woscc&type=colluid&eventMode=timeCitedOnSummary
+                              - text: "2"
+                            - generic [ref=e1238]: Citations
+                          - generic [ref=e1239]:
+                            - link "190 References For (Multimodal large models...)" [ref=e1240] [cursor=pointer]:
+                              - /url: /wos/woscc/cited-references-summary/WOS:001620590300001?type=colluid&from=woscc
+                              - text: "190"
+                            - generic [ref=e1241]: References
+                        - link "Related records For (Multimodal large models...)" [ref=e1243] [cursor=pointer]:
+                          - /url: /wos/woscc/related-records-summary/WOS:001620590300001?type=colluid&from=woscc
+                          - text: Related records
+                    - separator [ref=e1244]
+                  - generic [ref=e1245]:
+                    - generic [ref=e1247]:
+                      - generic [ref=e1248]:
+                        - generic [ref=e1250]:
+                          - generic [ref=e1251] [cursor=pointer]:
+                            - checkbox "Select record Pseudo-Labeling and Time-Series Data Analysis Model for Device Status Diagnostics in Smart Agriculture" [ref=e1253]
+                            - generic:
+                              - img
+                          - generic [ref=e1254] [cursor=pointer]: "2"
+                        - img "Open Access" [ref=e1255]:
+                          - img [ref=e1256]
+                      - generic [ref=e1259]:
+                        - generic [ref=e1260]:
+                          - heading "View full record For (Pseudo-Labeling and Time-Series...)" [level=3] [ref=e1262]:
+                            - link "View full record For (Pseudo-Labeling and Time-Series...)" [ref=e1263] [cursor=pointer]:
+                              - /url: /wos/woscc/full-record/WOS:001366844500001
+                              - text: Pseudo-Labeling and Time-Series Data Analysis Model for Device Status Diagnostics in Smart Agriculture
+                          - generic [ref=e1265]:
+                            - link "Jung, MW" [ref=e1266] [cursor=pointer]:
+                              - /url: /wos/author/record/29418427
+                            - text: and
+                            - link "Kim, DY" [ref=e1267] [cursor=pointer]:
+                              - /url: /wos/author/record/38039399
+                          - generic [ref=e1268]:
+                            - text: Nov 2024
+                            - generic [ref=e1269]:
+                              - text: "|"
+                              - button "APPLIED SCIENCES-BASEL" [ref=e1273] [cursor=pointer]:
+                                - text: APPLIED SCIENCES-BASEL
+                                - img [ref=e1274]: arrow_drop_down
+                            - generic [ref=e1277]: 14(22)
+                            - generic [ref=e1278]:
+                              - button "Enriched Cited References":
+                                - img:
+                                  - img
+                                - generic: Enriched Cited References
+                          - generic [ref=e1280]:
+                            - paragraph [ref=e1282]: This study proposes an automated data-labeling model that combines a pseudo-labeling algorithm with waveform segmentation based on Long Short-Term Memory (LSTM) to effectively label time-series data in smart agriculture. This model aims to address the inefficiency of manual labeling for large-scale data generated by agricultural systems, enhancing the performance and scalability of predictive m
+                            - generic [ref=e1283]:
+                              - text: ...
+                              - button "Show more - Expand abstract for this record Pseudo-Labeling and Time-Series Data Analysis Model for Device Status Diagnostics in Smart Agriculture" [ref=e1284] [cursor=pointer]:
+                                - text: Show more
+                                - img [ref=e1285]: expand_more
+                        - generic [ref=e1286]:
+                          - generic [ref=e1287]:
+                            - link "Free Full Text from Publisher for Pseudo-Labeling and Time-Series Data Analysis Model for Device Status Diagnostics in Smart Agriculture DOI-oas-approved-gold for Pseudo-Labeling and Time-Series Data Analysis Model for Device Status Diagnostics in Smart Agriculture" [ref=e1288] [cursor=pointer]:
+                              - /url: http://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=GetFTR&SrcApp=WOS&DestURL=https%3A%2F%2Fct.prod.getft.io%2FY2xhcml2YXRlLHVuZGVmaW5lZCxNVEF1TXpNNU1DOWhjSEF4TkRJeU1UQXpOekUsTlRkbE16STRPREF0WkRCalpDMDBNbVZtTFRrMk16a3RNRFJpTnpOaU1XSmhZV1ZoLGh0dHBzOi8vZG9pLm9yZy8xMC4zMzkwL2FwcDE0MjIxMDM3MQ.QBZR9iIkKqb0HSjYMV6ed233LeJ-3QjZCLZ0WPjyfn8&DestApp=GetFTR&SrcItemId=WOS:001366844500001&SrcAppSID=USW2EC0A18TlEtZhOoI7rsYl3oWom&HMAC=XuI%2FqqUapJ2LYCKoXQPTCsLR6Q73jGncLffHjqzGw8s%3D
+                              - text: Free Full Text from Publisher
+                              - generic [ref=e1289]: for Pseudo-Labeling and Time-Series Data Analysis Model for Device Status Diagnostics in Smart Agriculture
+                              - img "DOI-oas-approved-gold for Pseudo-Labeling and Time-Series Data Analysis Model for Device Status Diagnostics in Smart Agriculture" [ref=e1290]
+                            - link "View Full Text on ProQuest for Pseudo-Labeling and Time-Series Data Analysis Model for Device Status Diagnostics in Smart Agriculture" [ref=e1291] [cursor=pointer]:
+                              - /url: http://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=PQPLP&SrcApp=WOS&DestURL=https%3A%2F%2Fwww.proquest.com%2Fdocview%2F3132848261%2Fembedded%2FDCEOH9LA19467H72%3Fpq-origsite%3Dwos&DestApp=PQP_ExternalLink&SrcItemId=WOS:001366844500001&SrcAppSID=USW2EC0A18TlEtZhOoI7rsYl3oWom&HMAC=GY%2BAU2PKagGYb64WdcJDlkXHIaskq9lyOSh%2FShpps7U%3D
+                              - text: View Full Text on ProQuest
+                              - generic [ref=e1292]: for Pseudo-Labeling and Time-Series Data Analysis Model for Device Status Diagnostics in Smart Agriculture
+                          - button "Options for record Pseudo-Labeling and Time-Series Data Analysis Model for Device Status Diagnostics in Smart Agriculture" [ref=e1294]:
+                            - img [ref=e1295]: more_horiz
+                      - generic [ref=e1300]:
+                        - generic [ref=e1301]:
+                          - generic [ref=e1302]:
+                            - link "4 Citations For (Pseudo-Labeling and Time-Series...)" [ref=e1303] [cursor=pointer]:
+                              - /url: /wos/woscc/citing-summary/WOS:001366844500001?from=woscc&type=colluid&eventMode=timeCitedOnSummary
+                              - text: "4"
+                            - generic [ref=e1304]: Citations
+                          - generic [ref=e1305]:
+                            - link "30 References For (Pseudo-Labeling and Time-Series...)" [ref=e1306] [cursor=pointer]:
+                              - /url: /wos/woscc/cited-references-summary/WOS:001366844500001?type=colluid&from=woscc
+                              - text: "30"
+                            - generic [ref=e1307]: References
+                        - link "Related records For (Pseudo-Labeling and Time-Series...)" [ref=e1309] [cursor=pointer]:
+                          - /url: /wos/woscc/related-records-summary/WOS:001366844500001?type=colluid&from=woscc
+                          - text: Related records
+                    - separator [ref=e1310]
+                - generic [ref=e1330]:
+                  - combobox "Page size, 50" [ref=e1332]:
+                    - generic [ref=e1333]: Page size
+                    - generic [ref=e1334]: "50"
+                    - img [ref=e1335]:
+                      - img [ref=e1336]
+                  - navigation "Pagination" [ref=e1339]:
+                    - button "Bottom Prev Page" [disabled] [ref=e1340]:
+                      - img [ref=e1341]:
+                        - img [ref=e1342]
+                      - generic [ref=e1345]: Previous
+                    - button "Bottom Next Page" [ref=e1348]:
+                      - generic [ref=e1349]:
+                        - text: Next
+                        - img [ref=e1350]:
+                          - img [ref=e1351]
+                - generic [ref=e1356]: 32,503 records matched your query of the 71,819,251 in the data limits you selected.
+          - region "Home page widget"
+      - generic [ref=e281]:
+        - generic [ref=e282]:
+          - img [ref=e284]:
+            - img [ref=e285]
+          - generic [ref=e287]: © 2026 Clarivate. All rights reserved.
+        - generic [ref=e288]:
+          - list [ref=e290]:
+            - listitem [ref=e291]:
+              - link "Legal Center" [ref=e292] [cursor=pointer]:
+                - /url: https://clarivate.com/legal-center/
+            - listitem [ref=e293]:
+              - link "Privacy Statement" [ref=e294] [cursor=pointer]:
+                - /url: https://clarivate.com/privacy-center/notices-policies/privacy-policy/
+            - listitem [ref=e295]:
+              - link "Copyright Notice" [ref=e296] [cursor=pointer]:
+                - /url: https://clarivate.com/legal-center/notices-policies/
+          - list [ref=e298]:
+            - listitem [ref=e299]:
+              - link "Training Portal" [ref=e300] [cursor=pointer]:
+                - /url: https://webofscience.zendesk.com/hc/en-us/categories/23290193729041-Training
+            - listitem [ref=e301]:
+              - link "Product Support" [ref=e302] [cursor=pointer]:
+                - /url: https://supportcenter.clarivate.com/s/product/webofscience
+            - listitem [ref=e303]:
+              - link "Newsletter" [ref=e304] [cursor=pointer]:
+                - /url: https://discover.clarivate.com/preferencecenter_en
+          - list [ref=e306]:
+            - listitem [ref=e307]:
+              - link "Cookie Policy" [ref=e308] [cursor=pointer]:
+                - /url: https://clarivate.com/privacy-center/notices-policies/cookie-notice/
+            - listitem [ref=e309]:
+              - link "Manage cookie preferences" [ref=e310] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem [ref=e311]:
+              - link "Data Correction" [ref=e313] [cursor=pointer]:
+                - /url: javascript:void(0)
+          - list [ref=e315]:
+            - listitem [ref=e316]:
+              - link "Accessibility" [ref=e317] [cursor=pointer]:
+                - /url: "https://support.proquest.com/s/article/Web-of-Science-Accessibility-Statement?language=en_US "
+            - listitem [ref=e318]:
+              - link "Help" [ref=e319] [cursor=pointer]:
+                - /url: https://webofscience.zendesk.com/hc/en-us
+            - listitem [ref=e320]:
+              - link "Terms of Use" [ref=e321] [cursor=pointer]:
+                - /url: https://clarivate.com/legal-center/terms-of-business/
+          - list [ref=e323]:
+            - listitem [ref=e324]:
+              - link "京ICP备20012568号 ICP Recordal Number 京公网安备 11010802032525号" [ref=e325] [cursor=pointer]:
+                - /url: https://beian.miit.gov.cn/
+                - text: 京ICP备20012568号
+                - img "ICP Recordal Number" [ref=e326]
+                - text: 京公网安备 11010802032525号
+            - listitem [ref=e327]:
+              - link "CBPDT Acknowledgement" [ref=e328] [cursor=pointer]:
+                - /url: javascript:void(0);
+            - listitem
+          - separator [ref=e330]
+          - list [ref=e332]:
+            - listitem [ref=e333]: Follow Us
+            - listitem [ref=e334]:
+              - link "Click to visit Web of Science on Twitter." [ref=e335] [cursor=pointer]:
+                - /url: https://x.com/ClarivateAG
+                - img [ref=e336]:
+                  - img [ref=e337]
+                - img [ref=e339]:
+                  - img [ref=e340]
+              - link "Click to visit Web of Science on Facebook." [ref=e342] [cursor=pointer]:
+                - /url: https://www.facebook.com/clarivateag
+                - img [ref=e343]:
+                  - img [ref=e344]
+                - img [ref=e346]:
+                  - img [ref=e347]
+  - button "Open Resource Center, 35 new notifications" [ref=e365] [cursor=pointer]:
+    - generic [ref=e367]: "35"

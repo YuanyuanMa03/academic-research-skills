@@ -1,0 +1,478 @@
+- generic [ref=e1]:
+  - link "Skip to main page content" [ref=e2] [cursor=pointer]:
+    - /url: "#search-results"
+  - generic [ref=e6]:
+    - img "U.S. flag" [ref=e7]
+    - paragraph [ref=e8]: An official website of the United States government
+    - button "Here's how you know" [ref=e9] [cursor=pointer]
+  - banner [ref=e10]:
+    - generic [ref=e12]:
+      - link "NCBI Logo" [ref=e14] [cursor=pointer]:
+        - /url: https://www.ncbi.nlm.nih.gov/
+        - img "NIH NLM Logo" [ref=e15]
+      - link "Log in" [ref=e17] [cursor=pointer]:
+        - /url: https://account.ncbi.nlm.nih.gov/?back_url=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F%3Fterm%3Dsmart%2Bagriculture%2Bmachine%2Blearning
+  - navigation "access keys":
+    - link "Access keys" [ref=e18] [cursor=pointer]:
+      - /url: https://www.ncbi.nlm.nih.gov/guide/browsers/#ncbi_accesskeys
+    - link "NCBI Homepage" [ref=e19] [cursor=pointer]:
+      - /url: https://www.ncbi.nlm.nih.gov
+    - link "MyNCBI Homepage" [ref=e20] [cursor=pointer]:
+      - /url: /myncbi/
+    - link "Main Content" [ref=e21] [cursor=pointer]:
+      - /url: "#maincontent"
+    - link "Main Navigation" [ref=e22] [cursor=pointer]:
+      - /url: "#"
+  - navigation "Main page content below"
+  - main [ref=e23]:
+    - heading "Search Page" [level=1] [ref=e24]
+    - search [ref=e25]:
+      - generic [ref=e26]:
+        - link "Pubmed Logo" [ref=e27] [cursor=pointer]:
+          - /url: /
+          - img "pubmed logo" [ref=e28]
+        - search [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]: "Search:"
+            - generic [ref=e32]:
+              - combobox "Search:" [expanded] [active] [ref=e33]: smart agriculture machine learning
+              - status [ref=e34]: 0 results are available, use up and down arrow keys to navigate.
+            - button "Clear search input" [ref=e35] [cursor=pointer]
+            - button "Search" [ref=e36] [cursor=pointer]
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - link "Advanced" [ref=e39] [cursor=pointer]:
+              - /url: /advanced/
+            - link "Create alert" [ref=e40] [cursor=pointer]:
+              - /url: https://account.ncbi.nlm.nih.gov/?back_url=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F%3Fterm%3Dsmart%2Bagriculture%2Bmachine%2Blearning%23open-saved-search-panel
+            - button "Create RSS" [ref=e41] [cursor=pointer]
+          - link "User Guide" [ref=e43] [cursor=pointer]:
+            - /url: /help/
+      - generic [ref=e45]:
+        - text: ()
+        - generic [ref=e46]:
+          - generic [ref=e48]:
+            - generic [ref=e49]: "Sort by:"
+            - combobox "Sort by" [ref=e50]:
+              - option "Best match" [selected]
+              - option "Most recent"
+              - option "Publication date"
+              - option "First author"
+              - option "Journal"
+          - generic [ref=e51]:
+            - button "Display options" [ref=e52] [cursor=pointer]:
+              - generic [ref=e53]: Display options
+            - option "Summary" [selected]
+            - option "Abstract"
+            - option "PubMed"
+            - option "PMID"
+            - option "10" [selected]
+            - option "20"
+            - option "50"
+            - option "100"
+            - option "200"
+        - region "save, email, send to" [ref=e54]:
+          - button "Save" [ref=e55] [cursor=pointer]
+          - button "Email" [ref=e56] [cursor=pointer]
+          - button "Send to" [ref=e58] [cursor=pointer]
+    - text: "* * * *"
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - heading "Filters" [level=2] [ref=e61]
+        - generic [ref=e63]:
+          - heading "My Custom Filters" [level=3] [ref=e64]
+          - link "Edit My Custom Filters" [ref=e65] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/sites/myncbi/pubmed/filters
+            - text: Edit custom filters
+        - generic [ref=e66]:
+          - heading "Results by year" [level=3] [ref=e67]
+          - button "Expand/collapse timeline" [ref=e68] [cursor=pointer]
+          - button "Download CSV" [ref=e69] [cursor=pointer]
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - img [ref=e72]
+              - text: ":"
+            - generic [ref=e114]:
+              - slider "Lower handle" [ref=e117]:
+                - generic [ref=e119]: "2014"
+              - slider "Upper handle" [ref=e120]:
+                - generic [ref=e122]: "2026"
+          - paragraph [ref=e123]: Table representation of search results timeline featuring number of search results per year.
+          - table "Table of search results timeline data" [ref=e124]:
+            - rowgroup [ref=e125]:
+              - row "Year Number of Results" [ref=e126]:
+                - columnheader "Year" [ref=e127]
+                - columnheader "Number of Results" [ref=e128]
+            - rowgroup [ref=e129]:
+              - row "2014 1" [ref=e130]:
+                - cell "2014" [ref=e131]
+                - cell "1" [ref=e132]
+              - row "2017 2" [ref=e133]:
+                - cell "2017" [ref=e134]
+                - cell "2" [ref=e135]
+              - row "2018 2" [ref=e136]:
+                - cell "2018" [ref=e137]
+                - cell "2" [ref=e138]
+              - row "2019 5" [ref=e139]:
+                - cell "2019" [ref=e140]
+                - cell "5" [ref=e141]
+              - row "2020 14" [ref=e142]:
+                - cell "2020" [ref=e143]
+                - cell "14" [ref=e144]
+              - row "2021 36" [ref=e145]:
+                - cell "2021" [ref=e146]
+                - cell "36" [ref=e147]
+              - row "2022 67" [ref=e148]:
+                - cell "2022" [ref=e149]
+                - cell "67" [ref=e150]
+              - row "2023 103" [ref=e151]:
+                - cell "2023" [ref=e152]
+                - cell "103" [ref=e153]
+              - row "2024 126" [ref=e154]:
+                - cell "2024" [ref=e155]
+                - cell "126" [ref=e156]
+              - row "2025 205" [ref=e157]:
+                - cell "2025" [ref=e158]
+                - cell "205" [ref=e159]
+              - row "2026 124" [ref=e160]:
+                - cell "2026" [ref=e161]
+                - cell "124" [ref=e162]
+        - generic [ref=e164]:
+          - group "Filters" [ref=e165]:
+            - generic [ref=e166]:
+              - heading "Publication date" [level=3] [ref=e167]
+              - list [ref=e168]:
+                - listitem [ref=e169]:
+                  - radio "1 year" [ref=e170]
+                  - generic [ref=e171] [cursor=pointer]: 1 year
+                - listitem [ref=e172]:
+                  - radio "5 years" [ref=e173]
+                  - generic [ref=e174] [cursor=pointer]: 5 years
+                - listitem [ref=e175]:
+                  - radio "10 years" [ref=e176]
+                  - generic [ref=e177] [cursor=pointer]: 10 years
+                - listitem [ref=e178]:
+                  - radio "Select to open a dropdown and enter a custom date range." [ref=e179]
+                  - generic "Select to open a dropdown and enter a custom date range." [ref=e180] [cursor=pointer]: Custom Range
+            - generic [ref=e181]:
+              - heading "Text availability" [level=3] [ref=e182]
+              - list [ref=e183]:
+                - listitem [ref=e184]:
+                  - checkbox "Abstract" [ref=e185]
+                  - generic [ref=e186] [cursor=pointer]: Abstract
+                - listitem [ref=e187]:
+                  - checkbox "Free full text" [ref=e188]
+                  - generic [ref=e189] [cursor=pointer]: Free full text
+                - listitem [ref=e190]:
+                  - checkbox "Full text" [ref=e191]
+                  - generic [ref=e192] [cursor=pointer]: Full text
+            - generic [ref=e193]:
+              - heading "Article attribute" [level=3] [ref=e194]
+              - list [ref=e195]:
+                - listitem [ref=e196]:
+                  - checkbox "Associated data" [ref=e197]
+                  - generic [ref=e198] [cursor=pointer]: Associated data
+            - generic [ref=e199]:
+              - heading "Article type" [level=3] [ref=e200]
+              - list [ref=e201]:
+                - listitem [ref=e202]:
+                  - checkbox "Books and Documents" [ref=e203]
+                  - generic [ref=e204] [cursor=pointer]: Books and Documents
+                - listitem [ref=e205]:
+                  - checkbox "Clinical Trial" [ref=e206]
+                  - generic [ref=e207] [cursor=pointer]: Clinical Trial
+                - listitem [ref=e208]:
+                  - checkbox "Meta-Analysis" [ref=e209]
+                  - generic [ref=e210] [cursor=pointer]: Meta-Analysis
+                - listitem [ref=e211]:
+                  - checkbox "Randomized Controlled Trial" [ref=e212]
+                  - generic [ref=e213] [cursor=pointer]: Randomized Controlled Trial
+                - listitem [ref=e214]:
+                  - checkbox "Review" [ref=e215]
+                  - generic [ref=e216] [cursor=pointer]: Review
+                - listitem [ref=e217]:
+                  - checkbox "Systematic Review" [ref=e218]
+                  - generic [ref=e219] [cursor=pointer]: Systematic Review
+              - button "See all article type filters" [ref=e220] [cursor=pointer]
+          - generic [ref=e221]:
+            - heading "Additional filters" [level=2] [ref=e222]
+            - button "Additional filters" [ref=e223] [cursor=pointer]
+          - generic [ref=e224]:
+            - button "Clear applied filters" [ref=e225] [cursor=pointer]
+            - button "Reset filters menu" [ref=e226] [cursor=pointer]
+      - heading "Search Results" [level=2] [ref=e227]
+      - generic [ref=e228]:
+        - text: …
+        - generic [ref=e229]:
+          - heading "652 results" [level=3] [ref=e232]
+          - generic [ref=e233]:
+            - button "Navigates to the first page of results." [disabled]:
+              - img "first page"
+            - button "Navigates to the previous page of results." [disabled]:
+              - img "previous page"
+            - generic [ref=e234]:
+              - generic [ref=e235]: Page
+              - spinbutton "page number input" [ref=e237]: "1"
+              - generic [ref=e238]: of 66
+            - button "Navigates to the next page of results." [ref=e239] [cursor=pointer]:
+              - img "next page" [ref=e240]
+            - button "Navigates to the last page of results." [ref=e241] [cursor=pointer]:
+              - img "last page" [ref=e242]
+        - text: ":"
+        - generic [ref=e243]:
+          - generic [ref=e244]: Select search result to email or save
+          - generic [ref=e246]:
+            - article [ref=e247]:
+              - generic [ref=e248]:
+                - checkbox "Select search result to email or save" [ref=e249]
+                - generic [ref=e251] [cursor=pointer]: "1"
+                - button "Cite" [ref=e254] [cursor=pointer]
+              - generic [ref=e256]:
+                - 'link "Machine Learning: Algorithms, Real-World Applications and Research Directions." [ref=e257] [cursor=pointer]':
+                  - /url: /33778771/
+                - generic [ref=e258]:
+                  - generic [ref=e259]: Sarker IH.
+                  - generic [ref=e260]: "SN Comput Sci. 2021;2(3):160. doi: 10.1007/s42979-021-00592-x. Epub 2021 Mar 22."
+                  - generic [ref=e261]: "PMID: 33778771"
+                  - generic [ref=e262]: Free PMC article.
+                  - generic [ref=e263]: Review.
+                - generic [ref=e265]: To intelligently analyze these data and develop the corresponding smart and automated applications, the knowledge of artificial intelligence (AI), particularly, machine learning (ML) is the key. ...Thus, this study's key contribution is explaining the princip …
+            - article [ref=e266]:
+              - generic [ref=e267]:
+                - checkbox "Select search result to email or save" [ref=e268]
+                - generic [ref=e270] [cursor=pointer]: "2"
+                - button "Cite" [ref=e273] [cursor=pointer]
+              - generic [ref=e275]:
+                - 'link "Editorial: Machine learning and artificial intelligence for smart agriculture." [ref=e276] [cursor=pointer]':
+                  - /url: /36699839/
+                - generic [ref=e277]:
+                  - generic [ref=e278]: Zhang C, Park DS, Yoon S, Zhang S.
+                  - generic [ref=e279]: "Front Plant Sci. 2023 Jan 9;13:1121468. doi: 10.3389/fpls.2022.1121468. eCollection 2022."
+                  - generic [ref=e280]: "PMID: 36699839"
+                  - generic [ref=e281]: Free PMC article.
+                  - generic [ref=e282]: No abstract available.
+            - article [ref=e283]:
+              - generic [ref=e284]:
+                - checkbox "Select search result to email or save" [ref=e285]
+                - generic [ref=e287] [cursor=pointer]: "3"
+                - button "Cite" [ref=e290] [cursor=pointer]
+              - generic [ref=e292]:
+                - link "Frontiers of machine learning in smart food safety." [ref=e293] [cursor=pointer]:
+                  - /url: /39103217/
+                - generic [ref=e294]:
+                  - generic [ref=e295]: Liu J, Bensimon J, Lu X.
+                  - generic [ref=e296]: "Adv Food Nutr Res. 2024;111:35-70. doi: 10.1016/bs.afnr.2024.06.009. Epub 2024 Jun 22."
+                  - generic [ref=e297]: "PMID: 39103217"
+                  - generic [ref=e298]: Review.
+                - generic [ref=e300]: Integration of machine learning (ML) technologies into the realm of smart food safety represents a rapidly evolving field with significant potential to transform the management and assurance of food quality and safety. ...Despite advances in both theory and p …
+            - article [ref=e301]:
+              - generic [ref=e302]:
+                - checkbox "Select search result to email or save" [ref=e303]
+                - generic [ref=e305] [cursor=pointer]: "4"
+                - button "Cite" [ref=e308] [cursor=pointer]
+              - generic [ref=e310]:
+                - 'link "Editorial: Machine learning and artificial intelligence for smart agriculture, volume II." [ref=e311] [cursor=pointer]':
+                  - /url: /37152126/
+                - generic [ref=e312]:
+                  - generic [ref=e313]: Zhang S, Zhang C, Park DS, Yoon S.
+                  - generic [ref=e314]: "Front Plant Sci. 2023 Apr 20;14:1166209. doi: 10.3389/fpls.2023.1166209. eCollection 2023."
+                  - generic [ref=e315]: "PMID: 37152126"
+                  - generic [ref=e316]: Free PMC article.
+                  - generic [ref=e317]: No abstract available.
+            - article [ref=e318]:
+              - generic [ref=e319]:
+                - checkbox "Select search result to email or save" [ref=e320]
+                - generic [ref=e322] [cursor=pointer]: "5"
+                - button "Cite" [ref=e325] [cursor=pointer]
+              - generic [ref=e327]:
+                - 'link "Smart agriculture: utilizing machine learning and deep learning for drought stress identification in crops." [ref=e328] [cursor=pointer]':
+                  - /url: /39627235/
+                - generic [ref=e329]:
+                  - generic [ref=e330]: Ali T, Rehman SU, Ali S, Mahmood K, Obregon SA, Iglesias RC, Khurshaid T, Ashraf I.
+                  - generic [ref=e331]: "Sci Rep. 2024 Dec 3;14(1):30062. doi: 10.1038/s41598-024-74127-8."
+                  - generic [ref=e332]: "PMID: 39627235"
+                  - generic [ref=e333]: Free PMC article.
+                - generic [ref=e335]: Plant stress reduction research has advanced significantly with the use of Artificial Intelligence (AI) techniques, such as machine learning and deep learning. This is a significant step toward sustainable agriculture. ...Modern resources were used in …
+            - article [ref=e336]:
+              - generic [ref=e337]:
+                - checkbox "Select search result to email or save" [ref=e338]
+                - generic [ref=e340] [cursor=pointer]: "6"
+                - button "Cite" [ref=e343] [cursor=pointer]
+              - generic [ref=e345]:
+                - link "Integrating geospatial intelligence and machine learning for smart environmental monitoring and management." [ref=e346] [cursor=pointer]:
+                  - /url: /41419718/
+                - generic [ref=e347]:
+                  - generic [ref=e348]: Das J, Rahman ATMS.
+                  - generic [ref=e349]: "Environ Sci Pollut Res Int. 2025 Dec;32(59):31141-31144. doi: 10.1007/s11356-025-37312-4."
+                  - generic [ref=e350]: "PMID: 41419718"
+                  - generic [ref=e351]: No abstract available.
+            - article [ref=e352]:
+              - generic [ref=e353]:
+                - checkbox "Select search result to email or save" [ref=e354]
+                - generic [ref=e356] [cursor=pointer]: "7"
+                - button "Cite" [ref=e359] [cursor=pointer]
+              - generic [ref=e361]:
+                - link "Precision Agriculture Using Soil Sensor Driven Machine Learning for Smart Strawberry Production." [ref=e362] [cursor=pointer]:
+                  - /url: /36850843/
+                - generic [ref=e363]:
+                  - generic [ref=e364]: Elashmawy R, Uysal I.
+                  - generic [ref=e365]: "Sensors (Basel). 2023 Feb 16;23(4):2247. doi: 10.3390/s23042247."
+                  - generic [ref=e366]: "PMID: 36850843"
+                  - generic [ref=e367]: Free PMC article.
+            - article [ref=e368]:
+              - generic [ref=e369]:
+                - checkbox "Select search result to email or save" [ref=e370]
+                - generic [ref=e372] [cursor=pointer]: "8"
+                - button "Cite" [ref=e375] [cursor=pointer]
+              - generic [ref=e377]:
+                - link "Machine learning-based optimal crop selection system in smart agriculture." [ref=e378] [cursor=pointer]:
+                  - /url: /37749111/
+                - generic [ref=e379]:
+                  - generic [ref=e380]: Rani S, Mishra AK, Kataria A, Mallik S, Qin H.
+                  - generic [ref=e381]: "Sci Rep. 2023 Sep 25;13(1):15997. doi: 10.1038/s41598-023-42356-y."
+                  - generic [ref=e382]: "PMID: 37749111"
+                  - generic [ref=e383]: Free PMC article.
+                - generic [ref=e385]: So, the analysis of the agro-climatic conditions of a zone contributes significantly to deciding the right crop for the right land in the right season to obtain a better yield. Machine learning algorithms facilitate this process to a great extent for better results. …
+            - article [ref=e386]:
+              - generic [ref=e387]:
+                - checkbox "Select search result to email or save" [ref=e388]
+                - generic [ref=e390] [cursor=pointer]: "9"
+                - button "Cite" [ref=e393] [cursor=pointer]
+              - generic [ref=e395]:
+                - link "A Review of Federated Learning in Agriculture." [ref=e396] [cursor=pointer]:
+                  - /url: /38067939/
+                - generic [ref=e397]:
+                  - generic [ref=e398]: Žalik KR, Žalik M.
+                  - generic [ref=e399]: "Sensors (Basel). 2023 Dec 2;23(23):9566. doi: 10.3390/s23239566."
+                  - generic [ref=e400]: "PMID: 38067939"
+                  - generic [ref=e401]: Free PMC article.
+                  - generic [ref=e402]: Review.
+                - generic [ref=e404]: Federated learning (FL), with the aim of training machine learning models using data and computational resources on edge devices without sharing raw local data, is essential for improving agricultural management and smart agriculture. ... …
+            - article [ref=e405]:
+              - generic [ref=e406]:
+                - checkbox "Select search result to email or save" [ref=e407]
+                - generic [ref=e409] [cursor=pointer]: "10"
+                - button "Cite" [ref=e412] [cursor=pointer]
+              - generic [ref=e414]:
+                - link "Smart IoT and Machine Learning-based Framework for Water Quality Assessment and Device Component Monitoring." [ref=e415] [cursor=pointer]:
+                  - /url: /35165843/
+                - generic [ref=e416]:
+                  - generic [ref=e417]: Bhardwaj A, Dagar V, Khan MO, Aggarwal A, Alvarado R, Kumar M, Irfan M, Proshad R.
+                  - generic [ref=e418]: "Environ Sci Pollut Res Int. 2022 Jun;29(30):46018-46036. doi: 10.1007/s11356-022-19014-3. Epub 2022 Feb 14."
+                  - generic [ref=e419]: "PMID: 35165843"
+                - generic [ref=e421]: However, mismanagement of water storage, distribution, or quality leads to serious threats to human health and ecosystems. Sensors, embedded and smart devices in water plants require proactive monitoring for optimal performance. Traditional quality and device management re …
+            - generic:
+              - option "AMA"
+              - option "APA"
+              - option "MLA"
+              - option "NLM" [selected]
+          - generic [ref=e422]:
+            - generic [ref=e423]: 652 results
+            - button "Show more results" [ref=e424] [cursor=pointer]
+          - option "AMA"
+          - option "APA"
+          - option "MLA"
+          - option "NLM" [selected]
+        - generic [ref=e425]:
+          - button "Navigates to the first page of results." [disabled]:
+            - img "first page"
+            - generic: First
+          - button "Navigates to the previous page of results." [disabled]:
+            - img "previous page"
+            - generic: Prev
+          - generic [ref=e426]:
+            - generic [ref=e427]: Page
+            - spinbutton "page number input" [ref=e429]: "1"
+            - generic [ref=e430]: of 66
+          - button "Navigates to the next page of results." [ref=e431] [cursor=pointer]:
+            - generic [ref=e432]: Next
+            - img "next page" [ref=e433]
+          - button "Navigates to the last page of results." [ref=e434] [cursor=pointer]:
+            - generic [ref=e435]: Last
+            - img "last page" [ref=e436]
+  - generic [ref=e437]:
+    - complementary "Links to NCBI Literature Resources" [ref=e438]:
+      - generic [ref=e439]:
+        - paragraph [ref=e440]: NCBI Literature Resources
+        - paragraph [ref=e441]:
+          - link "MeSH" [ref=e442] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/mesh/
+          - link "PMC" [ref=e443] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/pmc/
+          - link "Bookshelf" [ref=e444] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/books
+          - link "Disclaimer" [ref=e445] [cursor=pointer]:
+            - /url: /disclaimer/
+        - paragraph [ref=e446]: The PubMed wordmark and PubMed logo are registered trademarks of the U.S. Department of Health and Human Services (HHS). Unauthorized use of these marks is strictly prohibited.
+    - contentinfo [ref=e447]:
+      - generic [ref=e448]:
+        - generic [ref=e449]: Follow NCBI
+        - generic [ref=e451]:
+          - link "Twitter" [ref=e452] [cursor=pointer]:
+            - /url: https://twitter.com/ncbi
+            - img "Twitter" [ref=e453]
+          - link "Facebook" [ref=e456] [cursor=pointer]:
+            - /url: https://www.facebook.com/ncbi.nlm
+            - img "Facebook" [ref=e457]
+          - link "LinkedIn" [ref=e458] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/ncbinlm
+            - img "LinkedIn" [ref=e459]
+          - link "GitHub" [ref=e460] [cursor=pointer]:
+            - /url: https://github.com/ncbi
+            - img "GitHub" [ref=e461]
+          - link "Blog" [ref=e464] [cursor=pointer]:
+            - /url: https://ncbiinsights.ncbi.nlm.nih.gov/
+            - img [ref=e465]
+      - generic [ref=e468]:
+        - generic [ref=e469]:
+          - generic [ref=e470]:
+            - paragraph [ref=e471]:
+              - link "Connect with NLM" [ref=e472] [cursor=pointer]:
+                - /url: https://www.nlm.nih.gov/socialmedia/index.html
+            - list [ref=e473]:
+              - listitem [ref=e474]:
+                - link "Twitter" [ref=e475] [cursor=pointer]:
+                  - /url: https://twitter.com/NLM_NIH
+                  - img "Twitter" [ref=e476]
+              - listitem [ref=e480]:
+                - link "Facebook" [ref=e481] [cursor=pointer]:
+                  - /url: https://www.facebook.com/nationallibraryofmedicine
+                  - img "SM-Facebook" [ref=e482]
+              - listitem [ref=e487]:
+                - link "Youtube" [ref=e488] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/NLMNIH
+                  - img "SM-Youtube" [ref=e489]
+          - paragraph [ref=e494]:
+            - text: National Library of Medicine
+            - link "8600 Rockville Pike Bethesda, MD 20894" [ref=e495] [cursor=pointer]:
+              - /url: https://www.google.com/maps/place/8600+Rockville+Pike,+Bethesda,+MD+20894/@38.9959508,-77.101021,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c95e25765ddb:0x19156f88b27635b8!8m2!3d38.9959508!4d-77.0988323
+              - text: 8600 Rockville Pike
+              - text: Bethesda, MD 20894
+          - paragraph [ref=e497]:
+            - link "Web Policies" [ref=e498] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/web_policies.html
+            - link "FOIA" [ref=e499] [cursor=pointer]:
+              - /url: https://www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/freedom-information-act-office
+            - link "HHS Vulnerability Disclosure" [ref=e500] [cursor=pointer]:
+              - /url: https://www.hhs.gov/vulnerability-disclosure-policy/index.html
+          - paragraph [ref=e502]:
+            - link "Help" [ref=e503] [cursor=pointer]:
+              - /url: https://support.nlm.nih.gov/?pagename=pubmed%3Apubmed%3Asearchresult%3ANONE
+            - link "Accessibility" [ref=e504] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/accessibility.html
+            - link "Careers" [ref=e505] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/careers/careers.html
+        - navigation [ref=e508]:
+          - list [ref=e509]:
+            - listitem [ref=e510]:
+              - link "NLM" [ref=e511] [cursor=pointer]:
+                - /url: //www.nlm.nih.gov/
+            - listitem [ref=e512]:
+              - link "NIH" [ref=e513] [cursor=pointer]:
+                - /url: https://www.nih.gov/
+            - listitem [ref=e514]:
+              - link "HHS" [ref=e515] [cursor=pointer]:
+                - /url: https://www.hhs.gov/
+            - listitem [ref=e516]:
+              - link "USA.gov" [ref=e517] [cursor=pointer]:
+                - /url: https://www.usa.gov/

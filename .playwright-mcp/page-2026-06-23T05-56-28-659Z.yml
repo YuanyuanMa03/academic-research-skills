@@ -1,0 +1,362 @@
+- generic [ref=e1]:
+  - link "Skip to main page content" [ref=e2] [cursor=pointer]:
+    - /url: "#search-results"
+  - generic [ref=e6]:
+    - img "U.S. flag" [ref=e7]
+    - paragraph [ref=e8]: An official website of the United States government
+    - button "Here's how you know" [ref=e9] [cursor=pointer]
+  - banner [ref=e10]:
+    - generic [ref=e12]:
+      - link "NCBI Logo" [ref=e14] [cursor=pointer]:
+        - /url: https://www.ncbi.nlm.nih.gov/
+        - img "NIH NLM Logo" [ref=e15]
+      - link "Log in" [ref=e17] [cursor=pointer]:
+        - /url: https://account.ncbi.nlm.nih.gov/?back_url=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F%3Fterm%3D%2522precision%2Bagriculture%2522%2B%2522deep%2Blearning%2522%2B%25222022%2522%253A%25222026%2522%255Bdp%255D%26sort%3Ddate%26size%3D10
+  - navigation "access keys":
+    - link "Access keys" [ref=e18] [cursor=pointer]:
+      - /url: https://www.ncbi.nlm.nih.gov/guide/browsers/#ncbi_accesskeys
+    - link "NCBI Homepage" [ref=e19] [cursor=pointer]:
+      - /url: https://www.ncbi.nlm.nih.gov
+    - link "MyNCBI Homepage" [ref=e20] [cursor=pointer]:
+      - /url: /myncbi/
+    - link "Main Content" [ref=e21] [cursor=pointer]:
+      - /url: "#maincontent"
+    - link "Main Navigation" [ref=e22] [cursor=pointer]:
+      - /url: "#"
+  - navigation "Main page content below"
+  - main [ref=e23]:
+    - heading "Search Page" [level=1] [ref=e24]
+    - search [ref=e25]:
+      - generic [ref=e26]:
+        - link "Pubmed Logo" [ref=e27] [cursor=pointer]:
+          - /url: /
+          - img "pubmed logo" [ref=e28]
+        - search [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]: "Search:"
+            - generic [ref=e32]:
+              - combobox "Search:" [expanded] [active] [ref=e33]: "\"precision agriculture\" \"deep learning\" \"2022\":\"2026\"[dp]"
+              - status [ref=e34]: 0 results are available, use up and down arrow keys to navigate.
+            - button "Clear search input" [ref=e35] [cursor=pointer]
+            - button "Search" [ref=e36] [cursor=pointer]
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - link "Advanced" [ref=e39] [cursor=pointer]:
+              - /url: /advanced/
+            - link "Create alert" [ref=e40] [cursor=pointer]:
+              - /url: https://account.ncbi.nlm.nih.gov/?back_url=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F%3Fterm%3D%2522precision%2Bagriculture%2522%2B%2522deep%2Blearning%2522%2B%25222022%2522%253A%25222026%2522%255Bdp%255D%26sort%3Ddate%26size%3D10%23open-saved-search-panel
+            - button "Create RSS" [ref=e41] [cursor=pointer]
+          - link "User Guide" [ref=e43] [cursor=pointer]:
+            - /url: /help/
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - button "Filters" [ref=e47] [cursor=pointer]:
+            - generic [ref=e48]: Filters ()
+          - button "Timeline" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: Timeline
+        - generic [ref=e51]:
+          - generic [ref=e53]:
+            - generic [ref=e54]: "Sort by:"
+            - combobox "Sort by" [ref=e55]:
+              - option "Best match"
+              - option "Most recent" [selected]
+              - option "Publication date"
+              - option "First author"
+              - option "Journal"
+            - button "Sort order" [ref=e56] [cursor=pointer]
+          - generic [ref=e57]:
+            - button "Display options" [ref=e58] [cursor=pointer]:
+              - generic [ref=e59]: Display options
+            - option "Summary" [selected]
+            - option "Abstract"
+            - option "PubMed"
+            - option "PMID"
+            - option "10" [selected]
+            - option "20"
+            - option "50"
+            - option "100"
+            - option "200"
+        - region "save, email, send to" [ref=e60]:
+          - button "Save" [ref=e61] [cursor=pointer]
+          - button "Email" [ref=e62] [cursor=pointer]
+          - button "Send to" [ref=e64] [cursor=pointer]
+    - text: "* * * *"
+    - generic [ref=e65]:
+      - generic:
+        - heading "Filters" [level=2] [ref=e66]
+        - text: ":"
+      - heading "Search Results" [level=2] [ref=e67]
+      - generic [ref=e68]:
+        - text: …
+        - generic [ref=e69]:
+          - heading "464 results" [level=3] [ref=e72]
+          - generic [ref=e73]:
+            - button "Navigates to the first page of results." [disabled]:
+              - img "first page"
+            - button "Navigates to the previous page of results." [disabled]:
+              - img "previous page"
+            - generic [ref=e74]:
+              - generic [ref=e75]: Page
+              - spinbutton "page number input" [ref=e77]: "1"
+              - generic [ref=e78]: of 47
+            - button "Navigates to the next page of results." [ref=e79] [cursor=pointer]:
+              - img "next page" [ref=e80]
+            - button "Navigates to the last page of results." [ref=e81] [cursor=pointer]:
+              - img "last page" [ref=e82]
+        - generic [ref=e83]:
+          - generic [ref=e84]: Select search result to email or save
+          - generic [ref=e86]:
+            - article [ref=e87]:
+              - generic [ref=e88]:
+                - checkbox "Select search result to email or save" [ref=e89]
+                - generic [ref=e91] [cursor=pointer]: "1"
+                - button "Cite" [ref=e94] [cursor=pointer]
+              - generic [ref=e96]:
+                - 'link "AI-based UAV pest and disease detection: Time for a reset?" [ref=e97] [cursor=pointer]':
+                  - /url: /42331654/
+                - generic [ref=e98]:
+                  - generic [ref=e99]: Eeckhout E, Spanoghe P, Maes WH.
+                  - generic [ref=e100]: "Trends Plant Sci. 2026 Jun 22:S1360-1385(26)00180-9. doi: 10.1016/j.tplants.2026.05.015. Online ahead of print."
+                  - generic [ref=e101]: "PMID: 42331654"
+                  - generic [ref=e102]: Review.
+                - generic [ref=e104]: Remote sensing using uncrewed aerial vehicles (UAVs) and AI, particularly machine learning and deep learning, is increasingly applied to crop pest and disease detection. However, the real-world robustness of these models remains uncertain. ...
+            - article [ref=e105]:
+              - generic [ref=e106]:
+                - checkbox "Select search result to email or save" [ref=e107]
+                - generic [ref=e109] [cursor=pointer]: "2"
+                - button "Cite" [ref=e112] [cursor=pointer]
+              - generic [ref=e114]:
+                - 'link "GreenAid: a confidence-weighted ensemble deep learning system for real-time plant disease detection and management." [ref=e115] [cursor=pointer]':
+                  - /url: /42324331/
+                - generic [ref=e116]:
+                  - generic [ref=e117]: Talaat FM, Tawfik M, Shaban WM.
+                  - generic [ref=e118]: "Sci Rep. 2026 Jun 21;16(1):19193. doi: 10.1038/s41598-026-57979-0."
+                  - generic [ref=e119]: "PMID: 42324331"
+                  - generic [ref=e120]: Free article.
+                - generic [ref=e122]: This work presents GreenAid, an end-to-end plant disease detection and management system that bridges the gap between laboratory-level deep learning performance and practical agricultural deployment. The system integrates a confidence-weighted ensemble of three CNN …
+            - article [ref=e123]:
+              - generic [ref=e124]:
+                - checkbox "Select search result to email or save" [ref=e125]
+                - generic [ref=e127] [cursor=pointer]: "3"
+                - button "Cite" [ref=e130] [cursor=pointer]
+              - generic [ref=e132]:
+                - link "Multi-scale feature fusion-based vision mamba for robust plant disease image classification on field-acquired plantdoc data." [ref=e133] [cursor=pointer]:
+                  - /url: /42318111/
+                - generic [ref=e134]:
+                  - generic [ref=e135]: Zhang S, Liu R.
+                  - generic [ref=e136]: "Front Plant Sci. 2026 Jun 3;17:1842426. doi: 10.3389/fpls.2026.1842426. eCollection 2026."
+                  - generic [ref=e137]: "PMID: 42318111"
+                  - generic [ref=e138]: Free PMC article.
+                - generic [ref=e140]: The proposed method can serve as an efficient technical scheme for intelligent identification of crop diseases and is well applicable to edge device deployment in precision agriculture practice....
+            - article [ref=e141]:
+              - generic [ref=e142]:
+                - checkbox "Select search result to email or save" [ref=e143]
+                - generic [ref=e145] [cursor=pointer]: "4"
+                - button "Cite" [ref=e148] [cursor=pointer]
+              - generic [ref=e150]:
+                - link "Tomato leaf disease and severity prediction using multi-task learning." [ref=e151] [cursor=pointer]:
+                  - /url: /42316042/
+                - generic [ref=e152]:
+                  - generic [ref=e153]: Kadam A, Jain P, Tripathi S, Garg T, Shahade AK, Sunnad S, Deshmukh PV, Kotecha K.
+                  - generic [ref=e154]: "BMC Plant Biol. 2026 Jun 18. doi: 10.1186/s12870-026-09296-x. Online ahead of print."
+                  - generic [ref=e155]: "PMID: 42316042"
+                  - generic [ref=e156]: Free article.
+                - generic [ref=e158]: Accurate and timely identification of plant diseases along with their severity is critical for effective crop management and minimizing agricultural losses. While recent advances in deep learning have demonstrated high performance in plant disease classification, li …
+            - article [ref=e159]:
+              - generic [ref=e160]:
+                - checkbox "Select search result to email or save" [ref=e161]
+                - generic [ref=e163] [cursor=pointer]: "5"
+                - button "Cite" [ref=e166] [cursor=pointer]
+              - generic [ref=e168]:
+                - link "A lightweight graph-enhanced deep learning framework for explainable cucumber leaf disease diagnosis." [ref=e169] [cursor=pointer]:
+                  - /url: /42315925/
+                - generic [ref=e170]:
+                  - generic [ref=e171]: Gani R, Isty MN, Salehin Y, Rashid MRA, Islam RU, Reza AW, Ripon SH.
+                  - generic [ref=e172]: "Sci Rep. 2026 Jun 18. doi: 10.1038/s41598-026-57076-2. Online ahead of print."
+                  - generic [ref=e173]: "PMID: 42315925"
+                  - generic [ref=e174]: Free article.
+                - generic [ref=e176]: However, most state-of-the-art plant disease recognition models, including those employing deep learning, often fail to identify spatial dependencies among symptomatic leaf feature regions, require high computational resources, and lack robustness in their predictio …
+            - article [ref=e177]:
+              - generic [ref=e178]:
+                - checkbox "Select search result to email or save" [ref=e179]
+                - generic [ref=e181] [cursor=pointer]: "6"
+                - button "Cite" [ref=e184] [cursor=pointer]
+              - generic [ref=e186]:
+                - link "Explainable CNN framework for accurate crop disease detection using plant leaf images." [ref=e187] [cursor=pointer]:
+                  - /url: /42304051/
+                - generic [ref=e188]:
+                  - generic [ref=e189]: Ray A, Murugan TK, Govindaraj L, Hussain I.
+                  - generic [ref=e190]: "Sci Rep. 2026 Jun 16. doi: 10.1038/s41598-026-56868-w. Online ahead of print."
+                  - generic [ref=e191]: "PMID: 42304051"
+                  - generic [ref=e192]: Free article.
+            - article [ref=e193]:
+              - generic [ref=e194]:
+                - checkbox "Select search result to email or save" [ref=e195]
+                - generic [ref=e197] [cursor=pointer]: "7"
+                - button "Cite" [ref=e200] [cursor=pointer]
+              - generic [ref=e202]:
+                - link "AgriTrack framework for AI-based tracking of pest migration through farmers' helpline data." [ref=e203] [cursor=pointer]:
+                  - /url: /42303731/
+                - generic [ref=e204]:
+                  - generic [ref=e205]: Godara S, Avinash G, Batra K, Bana RS.
+                  - generic [ref=e206]: "Sci Rep. 2026 Jun 16. doi: 10.1038/s41598-026-57248-0. Online ahead of print."
+                  - generic [ref=e207]: "PMID: 42303731"
+                  - generic [ref=e208]: Free article.
+                - generic [ref=e210]: Tracking the spatio-temporal movements of agricultural pests and diseases on a large scale is essential for informed and proactive management in precision agriculture. However, the traditional methods rely on manual data collection and analysis. ...The proposed syst …
+            - article [ref=e211]:
+              - generic [ref=e212]:
+                - checkbox "Select search result to email or save" [ref=e213]
+                - generic [ref=e215] [cursor=pointer]: "8"
+                - button "Cite" [ref=e218] [cursor=pointer]
+              - generic [ref=e220]:
+                - link "Hybrid fusion of E-nose and computer vision using optimized deep learning and machine learning for robust plant leaf recognition." [ref=e221] [cursor=pointer]:
+                  - /url: /42297898/
+                - generic [ref=e222]:
+                  - generic [ref=e223]: Bohlol P, Dizavandi MHS, Mohtasebi SS, Omid M.
+                  - generic [ref=e224]: "Sci Rep. 2026 Jun 15. doi: 10.1038/s41598-026-58222-6. Online ahead of print."
+                  - generic [ref=e225]: "PMID: 42297898"
+                  - generic [ref=e226]: Free article.
+                - generic [ref=e228]: The fusion multi-sensory system with optimized deep learning and machine learning algorithms appeared to synergize difficult paradigms in precision agriculture and boost recognition of various plant species. ...Multiple machine learning models, includi …
+            - article [ref=e229]:
+              - generic [ref=e230]:
+                - checkbox "Select search result to email or save" [ref=e231]
+                - generic [ref=e233] [cursor=pointer]: "9"
+                - button "Cite" [ref=e236] [cursor=pointer]
+              - generic [ref=e238]:
+                - 'link "Toward smart agriculture: a hybrid mamba-transformer vision framework for plant disease detection." [ref=e239] [cursor=pointer]':
+                  - /url: /42293019/
+                - generic [ref=e240]:
+                  - generic [ref=e241]: Zhang Q, Zhao J, Cai YL, Liu K, Li Y.
+                  - generic [ref=e242]: "Front Plant Sci. 2026 May 29;17:1846242. doi: 10.3389/fpls.2026.1846242. eCollection 2026."
+                  - generic [ref=e243]: "PMID: 42293019"
+                  - generic [ref=e244]: Free PMC article.
+                - generic [ref=e246]: Plant disease detection under complex field conditions remains a critical challenge for precision agriculture due to varying illumination, scale variations, subtle lesion patterns, and inter-class visual ambiguity. ...
+            - article [ref=e247]:
+              - generic [ref=e248]:
+                - checkbox "Select search result to email or save" [ref=e249]
+                - generic [ref=e251] [cursor=pointer]: "10"
+                - button "Cite" [ref=e254] [cursor=pointer]
+              - generic [ref=e256]:
+                - 'link "WaveST-Yield: a novel spatio-temporal deep learning framework with frequency-domain refinement for UAV-based maize yield prediction." [ref=e257] [cursor=pointer]':
+                  - /url: /42293002/
+                - generic [ref=e258]:
+                  - generic [ref=e259]: Li H, Hou P, Zhang R, Zhang X, Peng J, Cui X, Li F, Zhang X.
+                  - generic [ref=e260]: "Front Plant Sci. 2026 May 29;17:1838598. doi: 10.3389/fpls.2026.1838598. eCollection 2026."
+                  - generic [ref=e261]: "PMID: 42293002"
+                  - generic [ref=e262]: Free PMC article.
+                - generic [ref=e264]: Accurate and generalizable plot-scale maize yield prediction is critical for precision agriculture and food security. While UAV-based multispectral remote sensing provides rich phenotyping data, existing yield prediction models often struggle with insufficient minin …
+            - generic:
+              - option "AMA"
+              - option "APA"
+              - option "MLA"
+              - option "NLM" [selected]
+          - generic [ref=e265]:
+            - generic [ref=e266]: 464 results
+            - button "Show more results" [ref=e267] [cursor=pointer]
+          - option "AMA"
+          - option "APA"
+          - option "MLA"
+          - option "NLM" [selected]
+        - generic [ref=e268]:
+          - button "Navigates to the first page of results." [disabled]:
+            - img "first page"
+            - generic: First
+          - button "Navigates to the previous page of results." [disabled]:
+            - img "previous page"
+            - generic: Prev
+          - generic [ref=e269]:
+            - generic [ref=e270]: Page
+            - spinbutton "page number input" [ref=e272]: "1"
+            - generic [ref=e273]: of 47
+          - button "Navigates to the next page of results." [ref=e274] [cursor=pointer]:
+            - generic [ref=e275]: Next
+            - img "next page" [ref=e276]
+          - button "Navigates to the last page of results." [ref=e277] [cursor=pointer]:
+            - generic [ref=e278]: Last
+            - img "last page" [ref=e279]
+  - generic [ref=e280]:
+    - complementary "Links to NCBI Literature Resources" [ref=e281]:
+      - generic [ref=e282]:
+        - paragraph [ref=e283]: NCBI Literature Resources
+        - paragraph [ref=e284]:
+          - link "MeSH" [ref=e285] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/mesh/
+          - link "PMC" [ref=e286] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/pmc/
+          - link "Bookshelf" [ref=e287] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/books
+          - link "Disclaimer" [ref=e288] [cursor=pointer]:
+            - /url: /disclaimer/
+        - paragraph [ref=e289]: The PubMed wordmark and PubMed logo are registered trademarks of the U.S. Department of Health and Human Services (HHS). Unauthorized use of these marks is strictly prohibited.
+    - contentinfo [ref=e290]:
+      - generic [ref=e291]:
+        - generic [ref=e292]: Follow NCBI
+        - generic [ref=e294]:
+          - link "Twitter" [ref=e295] [cursor=pointer]:
+            - /url: https://twitter.com/ncbi
+            - img "Twitter" [ref=e296]
+          - link "Facebook" [ref=e299] [cursor=pointer]:
+            - /url: https://www.facebook.com/ncbi.nlm
+            - img "Facebook" [ref=e300]
+          - link "LinkedIn" [ref=e301] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/ncbinlm
+            - img "LinkedIn" [ref=e302]
+          - link "GitHub" [ref=e303] [cursor=pointer]:
+            - /url: https://github.com/ncbi
+            - img "GitHub" [ref=e304]
+          - link "Blog" [ref=e307] [cursor=pointer]:
+            - /url: https://ncbiinsights.ncbi.nlm.nih.gov/
+            - img [ref=e308]
+      - generic [ref=e311]:
+        - generic [ref=e312]:
+          - generic [ref=e313]:
+            - paragraph [ref=e314]:
+              - link "Connect with NLM" [ref=e315] [cursor=pointer]:
+                - /url: https://www.nlm.nih.gov/socialmedia/index.html
+            - list [ref=e316]:
+              - listitem [ref=e317]:
+                - link "Twitter" [ref=e318] [cursor=pointer]:
+                  - /url: https://twitter.com/NLM_NIH
+                  - img "Twitter" [ref=e319]
+              - listitem [ref=e323]:
+                - link "Facebook" [ref=e324] [cursor=pointer]:
+                  - /url: https://www.facebook.com/nationallibraryofmedicine
+                  - img "SM-Facebook" [ref=e325]
+              - listitem [ref=e330]:
+                - link "Youtube" [ref=e331] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/NLMNIH
+                  - img "SM-Youtube" [ref=e332]
+          - paragraph [ref=e337]:
+            - text: National Library of Medicine
+            - link "8600 Rockville Pike Bethesda, MD 20894" [ref=e338] [cursor=pointer]:
+              - /url: https://www.google.com/maps/place/8600+Rockville+Pike,+Bethesda,+MD+20894/@38.9959508,-77.101021,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c95e25765ddb:0x19156f88b27635b8!8m2!3d38.9959508!4d-77.0988323
+              - text: 8600 Rockville Pike
+              - text: Bethesda, MD 20894
+          - paragraph [ref=e340]:
+            - link "Web Policies" [ref=e341] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/web_policies.html
+            - link "FOIA" [ref=e342] [cursor=pointer]:
+              - /url: https://www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/freedom-information-act-office
+            - link "HHS Vulnerability Disclosure" [ref=e343] [cursor=pointer]:
+              - /url: https://www.hhs.gov/vulnerability-disclosure-policy/index.html
+          - paragraph [ref=e345]:
+            - link "Help" [ref=e346] [cursor=pointer]:
+              - /url: https://support.nlm.nih.gov/?pagename=pubmed%3Apubmed%3Asearchresult%3ANONE
+            - link "Accessibility" [ref=e347] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/accessibility.html
+            - link "Careers" [ref=e348] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/careers/careers.html
+        - navigation [ref=e351]:
+          - list [ref=e352]:
+            - listitem [ref=e353]:
+              - link "NLM" [ref=e354] [cursor=pointer]:
+                - /url: //www.nlm.nih.gov/
+            - listitem [ref=e355]:
+              - link "NIH" [ref=e356] [cursor=pointer]:
+                - /url: https://www.nih.gov/
+            - listitem [ref=e357]:
+              - link "HHS" [ref=e358] [cursor=pointer]:
+                - /url: https://www.hhs.gov/
+            - listitem [ref=e359]:
+              - link "USA.gov" [ref=e360] [cursor=pointer]:
+                - /url: https://www.usa.gov/

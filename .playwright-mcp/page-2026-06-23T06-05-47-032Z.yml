@@ -1,0 +1,201 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link [ref=e5] [cursor=pointer]:
+        - /url: https://www.cnki.net/
+      - link "总库" [ref=e8] [cursor=pointer]:
+        - /url: https://kns.cnki.net/starter/index
+      - generic [ref=e9]:
+        - link "检索" [ref=e11] [cursor=pointer]:
+          - /url: https://kns.cnki.net/kns8s/search
+          - text: 检索
+        - link "CNKI AI" [ref=e14] [cursor=pointer]:
+          - /url: https://ai.cnki.net
+          - text: CNKI AI
+        - link "出版来源" [ref=e17] [cursor=pointer]:
+          - /url: https://navi.cnki.net/knavi/
+          - text: 出版来源
+        - link "我的CNKI" [ref=e20] [cursor=pointer]:
+          - /url: https://kns.cnki.net/myspace/collect
+          - text: 我的CNKI
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - generic [ref=e28] [cursor=pointer]: 充值
+          - link "会员" [ref=e30] [cursor=pointer]:
+            - /url: https://member.cnki.net/
+        - generic [ref=e35]:
+          - generic [ref=e36] [cursor=pointer]: 机构登录
+          - generic [ref=e37] [cursor=pointer]: 个人登录
+  - generic [ref=e38]:
+    - generic [ref=e39]:
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic "主题" [ref=e46] [cursor=pointer]
+          - generic [ref=e48] [cursor=pointer]: ×
+          - textbox "中文文献、外文文献" [ref=e49]: 智慧农业
+          - link "#":
+            - /url: javascript:void(0)
+          - button [ref=e50] [cursor=pointer]
+          - link:
+            - /url: "#"
+        - link "结果中检索" [ref=e52] [cursor=pointer]:
+          - /url: javascript:void(0)
+      - generic [ref=e53]:
+        - generic:
+          - generic [ref=e54]:
+            - link "总库" [ref=e55] [cursor=pointer]:
+              - /url: javascript:void(0)
+              - generic [ref=e56]: 总库
+              - emphasis
+            - generic [ref=e57]:
+              - generic [ref=e58] [cursor=pointer]: 中文
+              - generic [ref=e59] [cursor=pointer]: 外文
+          - list [ref=e60]:
+            - listitem [ref=e61]:
+              - link "学术期刊" [ref=e62] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e63]: 学术期刊
+                - emphasis
+            - listitem [ref=e64]:
+              - link "学位论文" [ref=e65] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e66]: 学位论文
+                - emphasis
+            - listitem [ref=e67]:
+              - link "会议" [ref=e68] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e69]: 会议
+                - emphasis
+            - listitem [ref=e70]:
+              - link "报纸" [ref=e71] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e72]: 报纸
+                - emphasis
+            - listitem [ref=e73]:
+              - link "年鉴" [ref=e74] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e75]: 年鉴
+                - emphasis
+            - listitem [ref=e76]:
+              - link "图书" [ref=e77] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e78]: 图书
+                - emphasis
+            - listitem [ref=e79]:
+              - link "专利" [ref=e80] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e81]: 专利
+                - emphasis
+            - listitem [ref=e82]:
+              - link "标准" [ref=e83] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e84]: 标准
+                - emphasis
+            - listitem [ref=e85]:
+              - link "法律法规" [ref=e86] [cursor=pointer]:
+                - /url: javascript:void(0)
+                - generic [ref=e87]: 法律法规
+                - emphasis
+          - link "更多资源" [ref=e88] [cursor=pointer]:
+            - /url: javascript:void(0);
+    - generic [ref=e93]:
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - text: 检索范围：
+          - generic [ref=e96]: 学术期刊
+          - generic [ref=e98]: 主题：智慧农业
+        - link "主题定制" [ref=e99] [cursor=pointer]:
+          - /url: javascript:void(0)
+        - link "检索历史" [ref=e100] [cursor=pointer]:
+          - /url: javascript:void(0)
+      - generic:
+        - generic:
+          - list:
+            - listitem
+  - contentinfo [ref=e103]:
+    - generic [ref=e104]:
+      - generic [ref=e105]:
+        - list:
+          - listitem [ref=e106]:
+            - generic [ref=e107]: 读者服务
+            - link "购买知网卡" [ref=e108] [cursor=pointer]:
+              - /url: http://vipcard.cnki.net/ec/skwd/skwd.htm
+            - link "充值中心" [ref=e109] [cursor=pointer]:
+              - /url: http://zhifu.cnki.net/
+            - link "我的CNKI" [ref=e110] [cursor=pointer]:
+              - /url: http://my.cnki.net/
+            - link "帮助中心" [ref=e111] [cursor=pointer]:
+              - /url: http://service.cnki.net/helpcenter/
+          - listitem [ref=e112]:
+            - generic [ref=e113]: CNKI常用软件下载
+            - link "CAJViewer浏览器" [ref=e114] [cursor=pointer]:
+              - /url: http://cajviewer.cnki.net
+            - link "知网研学（原E-Study）" [ref=e115] [cursor=pointer]:
+              - /url: https://estudy.cnki.net/
+            - link "下载中心" [ref=e116] [cursor=pointer]:
+              - /url: https://www.cnki.net/software/xzydq.htm
+            - link "标准阅读器" [ref=e117] [cursor=pointer]:
+              - /url: https://piccache.cnki.net/2022/kdn/software/standardreader.exe
+          - listitem [ref=e118]:
+            - generic [ref=e119]: 特色服务
+            - link "手机知网" [ref=e120] [cursor=pointer]:
+              - /url: http://wap.cnki.net/
+            - link "杂志订阅" [ref=e121] [cursor=pointer]:
+              - /url: http://wuxizazhi.cnki.net/
+            - link "数字出版物订阅" [ref=e122] [cursor=pointer]:
+              - /url: http://mall.cnki.net/
+            - link "广告服务" [ref=e123] [cursor=pointer]:
+              - /url: http://a.cnki.net
+          - listitem [ref=e124]:
+            - generic [ref=e125]: 客户服务
+            - generic [ref=e126]: 订卡热线：400-819-9993
+            - generic [ref=e127]: 服务热线：400-810-9888
+            - generic [ref=e128]:
+              - text: 在线咨询：
+              - link "service.cnki.net" [ref=e129] [cursor=pointer]:
+                - /url: http://service.cnki.net
+            - generic [ref=e130]:
+              - text: 邮件咨询：
+              - link "help@cnki.net" [ref=e131] [cursor=pointer]:
+                - /url: mailto:help@cnki.net
+          - listitem [ref=e132]:
+            - link "新浪微博客服" [ref=e133] [cursor=pointer]:
+              - /url: http://e.weibo.com/u/3059308095
+              - generic [ref=e135]: 新浪微博客服
+            - link "官方微信" [ref=e136] [cursor=pointer]:
+              - /url: javascript:void(0)
+              - generic [ref=e138]: 官方微信
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - paragraph [ref=e142]:
+            - generic [ref=e143]:
+              - link "关于我们" [ref=e144] [cursor=pointer]:
+                - /url: http://cnki.net/gycnki/gycnki.htm
+              - link "CNKI 荣誉" [ref=e145] [cursor=pointer]:
+                - /url: http://www.cnki.net/other/gonggao/gongsirongyu.html
+              - link "版权公告" [ref=e146] [cursor=pointer]:
+                - /url: http://www.cnki.net/other/gonggao/bqsm.htm
+              - link "客服中心" [ref=e147] [cursor=pointer]:
+                - /url: https://service.cnki.net/
+              - link "用户建议" [ref=e148] [cursor=pointer]:
+                - /url: https://service.cnki.net/home?flag=1
+              - link "知网招聘" [ref=e149] [cursor=pointer]:
+                - /url: https://piccache.cnki.net/index/CNKIRecruit/index.html
+              - link "知网推广" [ref=e150] [cursor=pointer]:
+                - /url: http://a.cnki.net/
+            - generic [ref=e151]: © 1998-2026中国知网（CNKI）
+          - paragraph [ref=e152]:
+            - link [ref=e153] [cursor=pointer]:
+              - /url: https://ss.knet.cn/verifyseal.dll?sn=e13111111010043364isll000000&a=1&pa=0.08881110103584755
+        - generic [ref=e155]:
+          - generic [ref=e156]:
+            - text: 京 ICP 证 040431 号
+            - link "网络出版服务许可证网出证(京)字第416号" [ref=e157] [cursor=pointer]:
+              - /url: https://piccache.cnki.net/index/images/gb/416.jpg
+            - text: 京公网安备 11010802020460 号
+          - text: 同方知网数字科技有限公司 KDN 平台基础技术由 AIKBase 提供.
+    - generic [ref=e159]:
+      - link "在线咨询" [ref=e160] [cursor=pointer]:
+        - /url: https://service.cnki.net
+      - link "用户反馈" [ref=e161] [cursor=pointer]:
+        - /url: https://kefu.cnki.net/im/goLeavemsg.html?appid=01xds8&isLogin=true&skill=ff8080818906901e018909b8eda90057

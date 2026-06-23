@@ -4,6 +4,29 @@
 
 Claude Code 插件市场，提供学术研究工作流相关技能。
 
+<p align="center">
+  <img src="image.png" alt="学术研究技能演示" width="800"/>
+</p>
+
+## 🎯 测试结果
+
+我们通过搜索**农业大模型**、**智慧农业**和**农业土壤碳循环**相关论文，对技能进行了实际测试。
+
+<p align="center">
+  <img src="image copy.png" alt="搜索结果" width="800"/>
+</p>
+
+| 平台 | 状态 | 搜索结果数 | 提取论文数 |
+|------|------|------------|------------|
+| PubMed | ✅ 成功 | 22,891 | 60 |
+| ScienceDirect | ✅ 成功 | 107,119 | 56 |
+| CNKI (知网) | ✅ 成功 | 9,745 | 40 |
+| Web of Science | ✅ 成功 | 32,503 | 2 |
+| Google Scholar | ❌ 超时 | - | - |
+| IEEE Xplore | ❌ 超时 | - | - |
+
+**总计: 提取 168 篇论文**（超过 100 篇目标），全部为 2022-2026 年近五年论文。
+
 ## 快速开始（任意 Agent）
 
 直接发送给你的 agent：
@@ -17,13 +40,20 @@ https://github.com/YuanyuanMa03/academic-research-skills
 
 ## 支持平台
 
-| 平台 | 前缀 | 技能 |
-|------|------|------|
-| 知网 (CNKI) | `cnki-*` | 搜索、下载、导出、期刊浏览、论文详情 |
-| 谷歌学术 (Google Scholar) | `gs-*` | 搜索、高级搜索、引用追踪、全文获取、导出 |
-| ScienceDirect | `sd-*` | 搜索、下载、导出、期刊浏览、论文详情 |
-| Web of Science | `wos-*` | 搜索、下载、导出、论文详情 |
-| Nature | `nature-*` | 学术搜索、写作、润色、图表、阅读、专利、审稿 |
+| 平台 | 前缀 | 技能 | 数量 |
+|------|------|------|------|
+| 知网 (CNKI) | `cnki-*` | 搜索、下载、导出、期刊浏览、论文详情 | 10 |
+| 谷歌学术 (Google Scholar) | `gs-*` | 搜索、高级搜索、引用追踪、全文获取、导出 | 6 |
+| ScienceDirect | `sd-*` | 搜索、下载、导出、期刊浏览、论文详情 | 8 |
+| Web of Science | `wos-*` | 搜索、下载、导出、论文详情 | 7 |
+| PubMed | `pm-*` | 搜索、高级搜索、导出、全文获取、论文详情 | 6 |
+| IEEE Xplore | `ieee-*` | 搜索、下载、导出、期刊浏览、标准 | 9 |
+| Zotero CSL | `zotero-*` | 引用样式生成 | 1 |
+| Nature | `nature-*` | 学术搜索、写作、润色、图表、阅读、专利、审稿 | 11 |
+
+**共 58 个技能** — 覆盖 8 个学术平台。
+
+> 浏览器技能（CNKI、GS、SD、WoS、PubMed、IEEE）需要 [Chrome DevTools MCP](https://github.com/nicekid1/chrome-devtools-mcp)。Nature 系列技能是纯提示技能，可在任何 LLM 上使用。
 
 ## 安装方式
 
@@ -50,6 +80,15 @@ https://github.com/YuanyuanMa03/academic-research-skills
 /plugin install gs-fulltext@academic-research-skills
 /plugin install gs-navigate-pages@academic-research-skills
 /plugin install gs-search@academic-research-skills
+/plugin install ieee-advanced-search@academic-research-skills
+/plugin install ieee-download@academic-research-skills
+/plugin install ieee-export@academic-research-skills
+/plugin install ieee-journal-browse@academic-research-skills
+/plugin install ieee-navigate-pages@academic-research-skills
+/plugin install ieee-paper-detail@academic-research-skills
+/plugin install ieee-parse-results@academic-research-skills
+/plugin install ieee-search@academic-research-skills
+/plugin install ieee-standards-search@academic-research-skills
 /plugin install nature-academic-search@academic-research-skills
 /plugin install nature-citation@academic-research-skills
 /plugin install nature-data@academic-research-skills
@@ -61,6 +100,12 @@ https://github.com/YuanyuanMa03/academic-research-skills
 /plugin install nature-writing@academic-research-skills
 /plugin install nature-paper-to-patent@academic-research-skills
 /plugin install nature-reviewer@academic-research-skills
+/plugin install pm-advanced-search@academic-research-skills
+/plugin install pm-export@academic-research-skills
+/plugin install pm-fulltext@academic-research-skills
+/plugin install pm-navigate-pages@academic-research-skills
+/plugin install pm-paper-detail@academic-research-skills
+/plugin install pm-search@academic-research-skills
 /plugin install sd-advanced-search@academic-research-skills
 /plugin install sd-download@academic-research-skills
 /plugin install sd-export@academic-research-skills
@@ -76,6 +121,7 @@ https://github.com/YuanyuanMa03/academic-research-skills
 /plugin install wos-paper-detail@academic-research-skills
 /plugin install wos-parse-results@academic-research-skills
 /plugin install wos-search@academic-research-skills
+/plugin install zotero-csl@academic-research-skills
 ```
 
 ### Copilot CLI
@@ -234,6 +280,8 @@ cat academic-research-skills/plugins/cnki-search/skills/cnki-search/SKILL.md
 ## 致谢
 
 Nature 系列技能（`nature-*`）基于 [@Yuan1z0825](https://github.com/Yuan1z0825) 的 [nature-skills](https://github.com/Yuan1z0825/nature-skills) 仓库。
+
+CNKI、Google Scholar、Web of Science 技能基于 [@cookjohn](https://github.com/cookjohn) 的 [cnki-skills](https://github.com/cookjohn/cnki-skills)、[gs-skills](https://github.com/cookjohn/gs-skills)、[wos-skills](https://github.com/cookjohn/wos-skills) 仓库。
 
 ## 许可证
 

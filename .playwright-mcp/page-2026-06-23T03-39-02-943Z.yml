@@ -1,0 +1,552 @@
+- generic [ref=e1]:
+  - link "Skip to main page content" [ref=e2] [cursor=pointer]:
+    - /url: "#search-results"
+  - generic [ref=e6]:
+    - img "U.S. flag" [ref=e7]
+    - paragraph [ref=e8]: An official website of the United States government
+    - button "Here's how you know" [ref=e9] [cursor=pointer]
+  - banner [ref=e10]:
+    - generic [ref=e12]:
+      - link "NCBI Logo" [ref=e14] [cursor=pointer]:
+        - /url: https://www.ncbi.nlm.nih.gov/
+        - img "NIH NLM Logo" [ref=e15]
+      - link "Log in" [ref=e17] [cursor=pointer]:
+        - /url: https://account.ncbi.nlm.nih.gov/?back_url=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F%3Fterm%3Dsoil%2Bcarbon%2Bcycling%2Bagriculture%26sort%3Ddate
+  - navigation "access keys":
+    - link "Access keys" [ref=e18] [cursor=pointer]:
+      - /url: https://www.ncbi.nlm.nih.gov/guide/browsers/#ncbi_accesskeys
+    - link "NCBI Homepage" [ref=e19] [cursor=pointer]:
+      - /url: https://www.ncbi.nlm.nih.gov
+    - link "MyNCBI Homepage" [ref=e20] [cursor=pointer]:
+      - /url: /myncbi/
+    - link "Main Content" [ref=e21] [cursor=pointer]:
+      - /url: "#maincontent"
+    - link "Main Navigation" [ref=e22] [cursor=pointer]:
+      - /url: "#"
+  - navigation "Main page content below"
+  - main [ref=e23]:
+    - heading "Search Page" [level=1] [ref=e24]
+    - search [ref=e25]:
+      - generic [ref=e26]:
+        - link "Pubmed Logo" [ref=e27] [cursor=pointer]:
+          - /url: /
+          - img "pubmed logo" [ref=e28]
+        - search [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]: "Search:"
+            - generic [ref=e32]:
+              - combobox "Search:" [expanded] [active] [ref=e33]: soil carbon cycling agriculture
+              - status [ref=e34]: 0 results are available, use up and down arrow keys to navigate.
+            - button "Clear search input" [ref=e35] [cursor=pointer]
+            - button "Search" [ref=e36] [cursor=pointer]
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - link "Advanced" [ref=e39] [cursor=pointer]:
+              - /url: /advanced/
+            - link "Create alert" [ref=e40] [cursor=pointer]:
+              - /url: https://account.ncbi.nlm.nih.gov/?back_url=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F%3Fterm%3Dsoil%2Bcarbon%2Bcycling%2Bagriculture%26sort%3Ddate%23open-saved-search-panel
+            - button "Create RSS" [ref=e41] [cursor=pointer]
+          - link "User Guide" [ref=e43] [cursor=pointer]:
+            - /url: /help/
+      - generic [ref=e45]:
+        - text: ()
+        - generic [ref=e46]:
+          - generic [ref=e48]:
+            - generic [ref=e49]: "Sort by:"
+            - combobox "Sort by" [ref=e50]:
+              - option "Best match"
+              - option "Most recent" [selected]
+              - option "Publication date"
+              - option "First author"
+              - option "Journal"
+            - button "Sort order" [ref=e51] [cursor=pointer]
+          - generic [ref=e52]:
+            - button "Display options" [ref=e53] [cursor=pointer]:
+              - generic [ref=e54]: Display options
+            - option "Summary" [selected]
+            - option "Abstract"
+            - option "PubMed"
+            - option "PMID"
+            - option "10" [selected]
+            - option "20"
+            - option "50"
+            - option "100"
+            - option "200"
+        - region "save, email, send to" [ref=e55]:
+          - button "Save" [ref=e56] [cursor=pointer]
+          - button "Email" [ref=e57] [cursor=pointer]
+          - button "Send to" [ref=e59] [cursor=pointer]
+    - text: "* * * *"
+    - generic [ref=e60]:
+      - generic [ref=e61]:
+        - heading "Filters" [level=2] [ref=e62]
+        - generic [ref=e64]:
+          - heading "My Custom Filters" [level=3] [ref=e65]
+          - link "Edit My Custom Filters" [ref=e66] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/sites/myncbi/pubmed/filters
+            - text: Edit custom filters
+        - generic [ref=e67]:
+          - heading "Results by year" [level=3] [ref=e68]
+          - button "Expand/collapse timeline" [ref=e69] [cursor=pointer]
+          - button "Download CSV" [ref=e70] [cursor=pointer]
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - img [ref=e73]
+              - text: ":"
+            - generic [ref=e241]:
+              - slider "Lower handle" [ref=e244]:
+                - generic [ref=e246]: "1972"
+              - slider "Upper handle" [ref=e247]:
+                - generic [ref=e249]: "2026"
+          - paragraph [ref=e250]: Table representation of search results timeline featuring number of search results per year.
+          - table "Table of search results timeline data" [ref=e251]:
+            - rowgroup [ref=e252]:
+              - row "Year Number of Results" [ref=e253]:
+                - columnheader "Year" [ref=e254]
+                - columnheader "Number of Results" [ref=e255]
+            - rowgroup [ref=e256]:
+              - row "1972 1" [ref=e257]:
+                - cell "1972" [ref=e258]
+                - cell "1" [ref=e259]
+              - row "1991 1" [ref=e260]:
+                - cell "1991" [ref=e261]
+                - cell "1" [ref=e262]
+              - row "1993 1" [ref=e263]:
+                - cell "1993" [ref=e264]
+                - cell "1" [ref=e265]
+              - row "1994 1" [ref=e266]:
+                - cell "1994" [ref=e267]
+                - cell "1" [ref=e268]
+              - row "1996 1" [ref=e269]:
+                - cell "1996" [ref=e270]
+                - cell "1" [ref=e271]
+              - row "1997 4" [ref=e272]:
+                - cell "1997" [ref=e273]
+                - cell "4" [ref=e274]
+              - row "1998 3" [ref=e275]:
+                - cell "1998" [ref=e276]
+                - cell "3" [ref=e277]
+              - row "1999 4" [ref=e278]:
+                - cell "1999" [ref=e279]
+                - cell "4" [ref=e280]
+              - row "2000 2" [ref=e281]:
+                - cell "2000" [ref=e282]
+                - cell "2" [ref=e283]
+              - row "2001 11" [ref=e284]:
+                - cell "2001" [ref=e285]
+                - cell "11" [ref=e286]
+              - row "2002 10" [ref=e287]:
+                - cell "2002" [ref=e288]
+                - cell "10" [ref=e289]
+              - row "2003 13" [ref=e290]:
+                - cell "2003" [ref=e291]
+                - cell "13" [ref=e292]
+              - row "2004 13" [ref=e293]:
+                - cell "2004" [ref=e294]
+                - cell "13" [ref=e295]
+              - row "2005 6" [ref=e296]:
+                - cell "2005" [ref=e297]
+                - cell "6" [ref=e298]
+              - row "2006 26" [ref=e299]:
+                - cell "2006" [ref=e300]
+                - cell "26" [ref=e301]
+              - row "2007 26" [ref=e302]:
+                - cell "2007" [ref=e303]
+                - cell "26" [ref=e304]
+              - row "2008 19" [ref=e305]:
+                - cell "2008" [ref=e306]
+                - cell "19" [ref=e307]
+              - row "2009 16" [ref=e308]:
+                - cell "2009" [ref=e309]
+                - cell "16" [ref=e310]
+              - row "2010 38" [ref=e311]:
+                - cell "2010" [ref=e312]
+                - cell "38" [ref=e313]
+              - row "2011 56" [ref=e314]:
+                - cell "2011" [ref=e315]
+                - cell "56" [ref=e316]
+              - row "2012 57" [ref=e317]:
+                - cell "2012" [ref=e318]
+                - cell "57" [ref=e319]
+              - row "2013 86" [ref=e320]:
+                - cell "2013" [ref=e321]
+                - cell "86" [ref=e322]
+              - row "2014 85" [ref=e323]:
+                - cell "2014" [ref=e324]
+                - cell "85" [ref=e325]
+              - row "2015 130" [ref=e326]:
+                - cell "2015" [ref=e327]
+                - cell "130" [ref=e328]
+              - row "2016 163" [ref=e329]:
+                - cell "2016" [ref=e330]
+                - cell "163" [ref=e331]
+              - row "2017 190" [ref=e332]:
+                - cell "2017" [ref=e333]
+                - cell "190" [ref=e334]
+              - row "2018 251" [ref=e335]:
+                - cell "2018" [ref=e336]
+                - cell "251" [ref=e337]
+              - row "2019 281" [ref=e338]:
+                - cell "2019" [ref=e339]
+                - cell "281" [ref=e340]
+              - row "2020 333" [ref=e341]:
+                - cell "2020" [ref=e342]
+                - cell "333" [ref=e343]
+              - row "2021 424" [ref=e344]:
+                - cell "2021" [ref=e345]
+                - cell "424" [ref=e346]
+              - row "2022 494" [ref=e347]:
+                - cell "2022" [ref=e348]
+                - cell "494" [ref=e349]
+              - row "2023 549" [ref=e350]:
+                - cell "2023" [ref=e351]
+                - cell "549" [ref=e352]
+              - row "2024 724" [ref=e353]:
+                - cell "2024" [ref=e354]
+                - cell "724" [ref=e355]
+              - row "2025 760" [ref=e356]:
+                - cell "2025" [ref=e357]
+                - cell "760" [ref=e358]
+              - row "2026 431" [ref=e359]:
+                - cell "2026" [ref=e360]
+                - cell "431" [ref=e361]
+        - generic [ref=e363]:
+          - group "Filters" [ref=e364]:
+            - generic [ref=e365]:
+              - heading "Publication date" [level=3] [ref=e366]
+              - list [ref=e367]:
+                - listitem [ref=e368]:
+                  - radio "1 year" [ref=e369]
+                  - generic [ref=e370] [cursor=pointer]: 1 year
+                - listitem [ref=e371]:
+                  - radio "5 years" [ref=e372]
+                  - generic [ref=e373] [cursor=pointer]: 5 years
+                - listitem [ref=e374]:
+                  - radio "10 years" [ref=e375]
+                  - generic [ref=e376] [cursor=pointer]: 10 years
+                - listitem [ref=e377]:
+                  - radio "Select to open a dropdown and enter a custom date range." [ref=e378]
+                  - generic "Select to open a dropdown and enter a custom date range." [ref=e379] [cursor=pointer]: Custom Range
+            - generic [ref=e380]:
+              - heading "Text availability" [level=3] [ref=e381]
+              - list [ref=e382]:
+                - listitem [ref=e383]:
+                  - checkbox "Abstract" [ref=e384]
+                  - generic [ref=e385] [cursor=pointer]: Abstract
+                - listitem [ref=e386]:
+                  - checkbox "Free full text" [ref=e387]
+                  - generic [ref=e388] [cursor=pointer]: Free full text
+                - listitem [ref=e389]:
+                  - checkbox "Full text" [ref=e390]
+                  - generic [ref=e391] [cursor=pointer]: Full text
+            - generic [ref=e392]:
+              - heading "Article attribute" [level=3] [ref=e393]
+              - list [ref=e394]:
+                - listitem [ref=e395]:
+                  - checkbox "Associated data" [ref=e396]
+                  - generic [ref=e397] [cursor=pointer]: Associated data
+            - generic [ref=e398]:
+              - heading "Article type" [level=3] [ref=e399]
+              - list [ref=e400]:
+                - listitem [ref=e401]:
+                  - checkbox "Books and Documents" [ref=e402]
+                  - generic [ref=e403] [cursor=pointer]: Books and Documents
+                - listitem [ref=e404]:
+                  - checkbox "Clinical Trial" [ref=e405]
+                  - generic [ref=e406] [cursor=pointer]: Clinical Trial
+                - listitem [ref=e407]:
+                  - checkbox "Meta-Analysis" [ref=e408]
+                  - generic [ref=e409] [cursor=pointer]: Meta-Analysis
+                - listitem [ref=e410]:
+                  - checkbox "Randomized Controlled Trial" [ref=e411]
+                  - generic [ref=e412] [cursor=pointer]: Randomized Controlled Trial
+                - listitem [ref=e413]:
+                  - checkbox "Review" [ref=e414]
+                  - generic [ref=e415] [cursor=pointer]: Review
+                - listitem [ref=e416]:
+                  - checkbox "Systematic Review" [ref=e417]
+                  - generic [ref=e418] [cursor=pointer]: Systematic Review
+              - button "See all article type filters" [ref=e419] [cursor=pointer]
+          - generic [ref=e420]:
+            - heading "Additional filters" [level=2] [ref=e421]
+            - button "Additional filters" [ref=e422] [cursor=pointer]
+          - generic [ref=e423]:
+            - button "Clear applied filters" [ref=e424] [cursor=pointer]
+            - button "Reset filters menu" [ref=e425] [cursor=pointer]
+      - heading "Search Results" [level=2] [ref=e426]
+      - generic [ref=e427]:
+        - text: …
+        - generic [ref=e428]:
+          - heading "4,539 results" [level=3] [ref=e431]
+          - generic [ref=e432]:
+            - button "Navigates to the first page of results." [disabled]:
+              - img "first page"
+            - button "Navigates to the previous page of results." [disabled]:
+              - img "previous page"
+            - generic [ref=e433]:
+              - generic [ref=e434]: Page
+              - spinbutton "page number input" [ref=e436]: "1"
+              - generic [ref=e437]: of 454
+            - button "Navigates to the next page of results." [ref=e438] [cursor=pointer]:
+              - img "next page" [ref=e439]
+            - button "Navigates to the last page of results." [ref=e440] [cursor=pointer]:
+              - img "last page" [ref=e441]
+        - text: ":"
+        - generic [ref=e442]:
+          - generic [ref=e443]: Select search result to email or save
+          - generic [ref=e445]:
+            - article [ref=e446]:
+              - generic [ref=e447]:
+                - checkbox "Select search result to email or save" [ref=e448]
+                - generic [ref=e450] [cursor=pointer]: "1"
+                - button "Cite" [ref=e453] [cursor=pointer]
+              - generic [ref=e455]:
+                - 'link "Lifecycle environmental impacts of biochar in Belgium: The influence of biochar feedstocks, production temperatures, and applications." [ref=e456] [cursor=pointer]':
+                  - /url: /42331191/
+                - generic [ref=e457]:
+                  - generic [ref=e458]: Luca C, Tobias PT, Bo W, Robert M, Tom K.
+                  - generic [ref=e459]: "Bioresour Technol. 2026 Jun 22:135219. doi: 10.1016/j.biortech.2026.135219. Online ahead of print."
+                  - generic [ref=e460]: "PMID: 42331191"
+                - generic [ref=e462]: Biochar applications are direct soil amendment and cascading use, where biochar is first used to enhance anaerobic digestion. ...In the current case study, with its specific modeling assumptions and system boundaries, the environmental impacts are driven more by market sub …
+            - article [ref=e463]:
+              - generic [ref=e464]:
+                - checkbox "Select search result to email or save" [ref=e465]
+                - generic [ref=e467] [cursor=pointer]: "2"
+                - button "Cite" [ref=e470] [cursor=pointer]
+              - generic [ref=e472]:
+                - 'link "Critical zone agrohydrology: An integrative paradigm for agricultural water sustainability." [ref=e473] [cursor=pointer]':
+                  - /url: /42327640/
+                - generic [ref=e474]:
+                  - generic [ref=e475]: Zhao Y, Guo L, Liu J, Xue J, Liu J, Chen Y, Cai X, Carroll KC, Jobbagy E, Loheide SP 2nd, Boomer KMB, Li Y.
+                  - generic [ref=e476]: "PNAS Nexus. 2026 Jun 5;5(6):pgag203. doi: 10.1093/pnasnexus/pgag203. eCollection 2026 Jun."
+                  - generic [ref=e477]: "PMID: 42327640"
+                  - generic [ref=e478]: Free PMC article.
+                - generic [ref=e480]: Meeting rising food demand under intensifying climate variability, soil degradation, and groundwater decline requires agriculture to produce more with less freshwater. ...By reframing agriculture as a potential contributor to aquifer stability, water quality, …
+            - article [ref=e481]:
+              - generic [ref=e482]:
+                - checkbox "Select search result to email or save" [ref=e483]
+                - generic [ref=e485] [cursor=pointer]: "3"
+                - button "Cite" [ref=e488] [cursor=pointer]
+              - generic [ref=e490]:
+                - link "Soil microbial communities and carbon and nitrogen forms across snow-driven vegetation types in alpine tundra." [ref=e491] [cursor=pointer]:
+                  - /url: /42326429/
+                - generic [ref=e492]:
+                  - generic [ref=e493]: Benech A, Pintaldi E, Voyron S, Gruppuso L, Marengo G, Lombardi G, Girlanda M, Freppaz M.
+                  - generic [ref=e494]: "Front Microbiol. 2026 Jun 4;17:1858414. doi: 10.3389/fmicb.2026.1858414. eCollection 2026."
+                  - generic [ref=e495]: "PMID: 42326429"
+                  - generic [ref=e496]: Free PMC article.
+                - generic [ref=e498]: "INTRODUCTION: Alpine tundra vegetation, also shaped by snow persistence, is expected to undergo shifts in plant community composition under climate change as snow cover duration declines, with potential consequences for soil biogeochemistry and microbial communities. Howev …"
+            - article [ref=e499]:
+              - generic [ref=e500]:
+                - checkbox "Select search result to email or save" [ref=e501]
+                - generic [ref=e503] [cursor=pointer]: "4"
+                - button "Cite" [ref=e506] [cursor=pointer]
+              - generic [ref=e508]:
+                - link "Vegetation restoration restructures soil sulfur allocation and sulfur-cycling functional potential in the Mu Us Sandy Land." [ref=e509] [cursor=pointer]:
+                  - /url: /42326425/
+                - generic [ref=e510]:
+                  - generic [ref=e511]: Wang X, Yang N, Hu Y, Wang X, Wu Y, Zhang A, Wang Y.
+                  - generic [ref=e512]: "Front Microbiol. 2026 Jun 4;17:1845938. doi: 10.3389/fmicb.2026.1845938. eCollection 2026."
+                  - generic [ref=e513]: "PMID: 42326425"
+                  - generic [ref=e514]: Free PMC article.
+                - generic [ref=e516]: Vegetation restoration markedly reshaped the soil physicochemical and microbial context, as reflected by lower pH and higher TN, microbial biomass carbon, and enzyme activity in restored soils. ...Co-variation and Mantel analyses showed that sulfur-cycling ge …
+            - article [ref=e517]:
+              - generic [ref=e518]:
+                - checkbox "Select search result to email or save" [ref=e519]
+                - generic [ref=e521] [cursor=pointer]: "5"
+                - button "Cite" [ref=e524] [cursor=pointer]
+              - generic [ref=e526]:
+                - link "Shift in Soil Fauna Feeding Mode With Litter Quality Across Forest Biomes." [ref=e527] [cursor=pointer]:
+                  - /url: /42324235/
+                - generic [ref=e528]:
+                  - generic [ref=e529]: Tsurikov SM, Barnes AD, Brose U, Crotty FV, Goncharov AA, Gorbunova AY, Hyodo F, Jochum M, Klarner B, Korobushkin DI, Li Z, Liebke D, Lyubechanskii II, Pollierer MM, Prameswari DA, Rozanova OL, Saifutdinov RA, Scheunemann N, Susanti WI, Zenkova IV, Zhang Y, Zhou Z, Zuev AG, Scheu S, Tiunov AV, Potapov AM.
+                  - generic [ref=e530]: "Ecol Lett. 2026 Jun;29(6):e70421. doi: 10.1111/ele.70421."
+                  - generic [ref=e531]: "PMID: 42324235"
+                  - generic [ref=e532]: Review.
+                - generic [ref=e534]:
+                  - generic [ref=e535]: Soil fauna regulates litter decomposition and soil organic matter transformation, acting as both litter and microbial feeders. ...In contrast, delta(13)C values showed no consistent association with litter C:N ratio or climate, reflecting context dependent microbial
+                  - text: …
+            - article [ref=e536]:
+              - generic [ref=e537]:
+                - checkbox "Select search result to email or save" [ref=e538]
+                - generic [ref=e540] [cursor=pointer]: "6"
+                - button "Cite" [ref=e543] [cursor=pointer]
+              - generic [ref=e545]:
+                - link "Aridity-related differences in soil elemental ratios reshape microbial functional traits across global biomes." [ref=e546] [cursor=pointer]:
+                  - /url: /42323301/
+                - generic [ref=e547]:
+                  - generic [ref=e548]: Li C, Feng Y, Sáez-Sandino T, Xiong C, Eldridge DJ, Gross N, Le Bagousse-Pinguet Y, Ochoa V, Gozalo B, Guirado E, Zhou G, García-Gómez M, Valencia E, Berdugo M, Asensio S, Martínez-Valderrama J, Mendoza BJ, Berhe AA, Cutler NA, Abades S, Alcántara J, Alfaro F, Arroyo AI, Barrett M, Bastida F, Blaum N, Boldgiv B, Bowker M, Branquinho C, Hart SC, Deák B, Durán J, Espinosa CI, Fajardo A, Fraser LH, Gallardo A, García Velázquez L, Geissler K, Grebenc T, Gusman Moltanvan E, Kindermann L, Köbel M, Laanisto L, le Roux PC, Liancourt P, Liang J, Linstädter A, Louw MA, Macek P, Maggs-Kölling G, Makhalanyane TP, Manzaneda AJ, Marais E, Montesinos D, Mora JP, Moreno G, Muñoz-Rojas M, Mussery A, Unuk Nahberger T, Nair GR, Neuhauser S, Plaza C, Pueyo Y, Rey PJ, Rey A, de Los Ríos A, Rodríguez A, Rodriguez Lozano B, Roman R, C Ruppert J, Salah A, Serôdio J, Siles JA, Singh J, Travers S, Undrakhbold S, Valkó O, Vivas M, Wang L, Williams MA, Zaady E, Maestre FT, Singh BK, Delgado-Baquerizo M.
+                  - generic [ref=e549]: "Nat Commun. 2026 Jun 20. doi: 10.1038/s41467-026-73215-9. Online ahead of print."
+                  - generic [ref=e550]: "PMID: 42323301"
+                  - generic [ref=e551]: Free article.
+                - generic [ref=e553]: Aridity alters soil carbon (C), nitrogen (N) and phosphorus (P) stoichiometry, yet the implications of these processes for soil microbial functional traits and potentials at the genomic level remain poorly synthesized. ...By linking soil elemental rati …
+            - article [ref=e554]:
+              - generic [ref=e555]:
+                - checkbox "Select search result to email or save" [ref=e556]
+                - generic [ref=e558] [cursor=pointer]: "7"
+                - button "Cite" [ref=e561] [cursor=pointer]
+              - generic [ref=e563]:
+                - 'link "Soil amendment ameliorating health of degraded soils affected by heavy metals and acidification: New insights from highly active silicon." [ref=e564] [cursor=pointer]':
+                  - /url: /42322672/
+                - generic [ref=e565]:
+                  - generic [ref=e566]: Jiang S, Huang Z, Zhang J.
+                  - generic [ref=e567]: "Ecotoxicol Environ Saf. 2026 Jun 20;320:120394. doi: 10.1016/j.ecoenv.2026.120394. Online ahead of print."
+                  - generic [ref=e568]: "PMID: 42322672"
+                  - generic [ref=e569]: Free article.
+                - generic [ref=e571]: Heavy metals (HMs) contamination and acidification lead to soil degradation, which has negative impacts on soil health and crop growth. However, high-activity silicon (Si) has been received little attention in soil for improving degraded soil health. . …
+            - article [ref=e572]:
+              - generic [ref=e573]:
+                - checkbox "Select search result to email or save" [ref=e574]
+                - generic [ref=e576] [cursor=pointer]: "8"
+                - button "Cite" [ref=e579] [cursor=pointer]
+              - generic [ref=e581]:
+                - link "Stage-specific rhizosphere microbial succession is associated with nutrient cycling in the desert plant Leymus racemosus (Lam.) tzvelev." [ref=e582] [cursor=pointer]:
+                  - /url: /42321605/
+                - generic [ref=e583]:
+                  - generic [ref=e584]: Sun Y, Tang J, Ma S, Maimaiti A, Liu J, Qiu J, Ge J.
+                  - generic [ref=e585]: "BMC Plant Biol. 2026 Jun 20. doi: 10.1186/s12870-026-09294-z. Online ahead of print."
+                  - generic [ref=e586]: "PMID: 42321605"
+                  - generic [ref=e587]: Free article.
+                - generic [ref=e589]: However, a systematic understanding of how the rhizosphere core and functional microbiota jointly regulate the dynamics of carbon, nitrogen, phosphorus, and potassium across the entire plant life cycle in desert ecosystems remains limited. ...For each stage, ten 5 …
+            - article [ref=e590]:
+              - generic [ref=e591]:
+                - checkbox "Select search result to email or save" [ref=e592]
+                - generic [ref=e594] [cursor=pointer]: "9"
+                - button "Cite" [ref=e597] [cursor=pointer]
+              - generic [ref=e599]:
+                - link "Cover cropping differentially shapes soil fungal and bacterial communities in citrus orchards." [ref=e600] [cursor=pointer]:
+                  - /url: /42321293/
+                - generic [ref=e601]:
+                  - generic [ref=e602]: Erhunmwunse AS, Karlsen-Ayala E, Gonzalez YN, Maltais-Landry G, Strauss SL.
+                  - generic [ref=e603]: "Sci Rep. 2026 Jun 19. doi: 10.1038/s41598-026-57565-4. Online ahead of print."
+                  - generic [ref=e604]: "PMID: 42321293"
+                  - generic [ref=e605]: Free article.
+                - generic [ref=e607]: The role of cover crops in promoting the abundance of beneficial soil microbes is increasingly gaining attention in tree crops. However, soil fungi remain comparatively understudied despite their roles in nutrient cycling and soil organic matter turnov …
+            - article [ref=e608]:
+              - generic [ref=e609]:
+                - checkbox "Select search result to email or save" [ref=e610]
+                - generic [ref=e612] [cursor=pointer]: "10"
+                - button "Cite" [ref=e615] [cursor=pointer]
+              - generic [ref=e617]:
+                - link "Microbial and anthropogenic controls on global soil nitrogen mineralization efficiency." [ref=e618] [cursor=pointer]:
+                  - /url: /42320212/
+                - generic [ref=e619]:
+                  - generic [ref=e620]: Elrys AS, Müller C, Ali AM, Al-Sadi AM, Zhu T, Samarah N.
+                  - generic [ref=e621]: "J Environ Manage. 2026 Jun 19;412:130272. doi: 10.1016/j.jenvman.2026.130272. Online ahead of print."
+                  - generic [ref=e622]: "PMID: 42320212"
+                - generic [ref=e624]: Here, we quantified soil N turnover using the N mineralization efficiency index (NMEI), defined as gross N mineralization normalized by soil N content, together with recalcitrant and labile NMEIs. ...Bacterial abundance was the strongest positive predictor of NMEI, …
+            - generic:
+              - option "AMA"
+              - option "APA"
+              - option "MLA"
+              - option "NLM" [selected]
+          - generic [ref=e625]:
+            - generic [ref=e626]: 4,539 results
+            - button "Show more results" [ref=e627] [cursor=pointer]
+          - option "AMA"
+          - option "APA"
+          - option "MLA"
+          - option "NLM" [selected]
+        - generic [ref=e628]:
+          - button "Navigates to the first page of results." [disabled]:
+            - img "first page"
+            - generic: First
+          - button "Navigates to the previous page of results." [disabled]:
+            - img "previous page"
+            - generic: Prev
+          - generic [ref=e629]:
+            - generic [ref=e630]: Page
+            - spinbutton "page number input" [ref=e632]: "1"
+            - generic [ref=e633]: of 454
+          - button "Navigates to the next page of results." [ref=e634] [cursor=pointer]:
+            - generic [ref=e635]: Next
+            - img "next page" [ref=e636]
+          - button "Navigates to the last page of results." [ref=e637] [cursor=pointer]:
+            - generic [ref=e638]: Last
+            - img "last page" [ref=e639]
+  - generic [ref=e640]:
+    - complementary "Links to NCBI Literature Resources" [ref=e641]:
+      - generic [ref=e642]:
+        - paragraph [ref=e643]: NCBI Literature Resources
+        - paragraph [ref=e644]:
+          - link "MeSH" [ref=e645] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/mesh/
+          - link "PMC" [ref=e646] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/pmc/
+          - link "Bookshelf" [ref=e647] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/books
+          - link "Disclaimer" [ref=e648] [cursor=pointer]:
+            - /url: /disclaimer/
+        - paragraph [ref=e649]: The PubMed wordmark and PubMed logo are registered trademarks of the U.S. Department of Health and Human Services (HHS). Unauthorized use of these marks is strictly prohibited.
+    - contentinfo [ref=e650]:
+      - generic [ref=e651]:
+        - generic [ref=e652]: Follow NCBI
+        - generic [ref=e654]:
+          - link "Twitter" [ref=e655] [cursor=pointer]:
+            - /url: https://twitter.com/ncbi
+            - img "Twitter" [ref=e656]
+          - link "Facebook" [ref=e659] [cursor=pointer]:
+            - /url: https://www.facebook.com/ncbi.nlm
+            - img "Facebook" [ref=e660]
+          - link "LinkedIn" [ref=e661] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/ncbinlm
+            - img "LinkedIn" [ref=e662]
+          - link "GitHub" [ref=e663] [cursor=pointer]:
+            - /url: https://github.com/ncbi
+            - img "GitHub" [ref=e664]
+          - link "Blog" [ref=e667] [cursor=pointer]:
+            - /url: https://ncbiinsights.ncbi.nlm.nih.gov/
+            - img [ref=e668]
+      - generic [ref=e671]:
+        - generic [ref=e672]:
+          - generic [ref=e673]:
+            - paragraph [ref=e674]:
+              - link "Connect with NLM" [ref=e675] [cursor=pointer]:
+                - /url: https://www.nlm.nih.gov/socialmedia/index.html
+            - list [ref=e676]:
+              - listitem [ref=e677]:
+                - link "Twitter" [ref=e678] [cursor=pointer]:
+                  - /url: https://twitter.com/NLM_NIH
+                  - img "Twitter" [ref=e679]
+              - listitem [ref=e683]:
+                - link "Facebook" [ref=e684] [cursor=pointer]:
+                  - /url: https://www.facebook.com/nationallibraryofmedicine
+                  - img "SM-Facebook" [ref=e685]
+              - listitem [ref=e690]:
+                - link "Youtube" [ref=e691] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/NLMNIH
+                  - img "SM-Youtube" [ref=e692]
+          - paragraph [ref=e697]:
+            - text: National Library of Medicine
+            - link "8600 Rockville Pike Bethesda, MD 20894" [ref=e698] [cursor=pointer]:
+              - /url: https://www.google.com/maps/place/8600+Rockville+Pike,+Bethesda,+MD+20894/@38.9959508,-77.101021,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c95e25765ddb:0x19156f88b27635b8!8m2!3d38.9959508!4d-77.0988323
+              - text: 8600 Rockville Pike
+              - text: Bethesda, MD 20894
+          - paragraph [ref=e700]:
+            - link "Web Policies" [ref=e701] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/web_policies.html
+            - link "FOIA" [ref=e702] [cursor=pointer]:
+              - /url: https://www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/freedom-information-act-office
+            - link "HHS Vulnerability Disclosure" [ref=e703] [cursor=pointer]:
+              - /url: https://www.hhs.gov/vulnerability-disclosure-policy/index.html
+          - paragraph [ref=e705]:
+            - link "Help" [ref=e706] [cursor=pointer]:
+              - /url: https://support.nlm.nih.gov/?pagename=pubmed%3Apubmed%3Asearchresult%3ANONE
+            - link "Accessibility" [ref=e707] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/accessibility.html
+            - link "Careers" [ref=e708] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/careers/careers.html
+        - navigation [ref=e711]:
+          - list [ref=e712]:
+            - listitem [ref=e713]:
+              - link "NLM" [ref=e714] [cursor=pointer]:
+                - /url: //www.nlm.nih.gov/
+            - listitem [ref=e715]:
+              - link "NIH" [ref=e716] [cursor=pointer]:
+                - /url: https://www.nih.gov/
+            - listitem [ref=e717]:
+              - link "HHS" [ref=e718] [cursor=pointer]:
+                - /url: https://www.hhs.gov/
+            - listitem [ref=e719]:
+              - link "USA.gov" [ref=e720] [cursor=pointer]:
+                - /url: https://www.usa.gov/
