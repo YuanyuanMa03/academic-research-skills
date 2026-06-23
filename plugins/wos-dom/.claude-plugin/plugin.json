@@ -10,5 +10,17 @@
     "academic",
     "research",
     "wos"
-  ]
+  ],
+  "mcpServers": {
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--ignoreDefaultChromeArg=--enable-automation",
+        "--ignoreDefaultChromeArg=--disable-infobars",
+        "--chromeArg=--disable-blink-features=AutomationControlled"
+      ]
+    }
+  }
 }
