@@ -2,6 +2,7 @@
 name: wos-parse-results
 description: Parse search results from the current WoS results page or API response. Internal skill used by other skills.
 argument-hint: "[number of results to extract, default 10]"
+version: 0.1.0
 user-invocable: false
 disable-model-invocation: false
 ---

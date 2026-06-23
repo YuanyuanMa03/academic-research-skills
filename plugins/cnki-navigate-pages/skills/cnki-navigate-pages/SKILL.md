@@ -2,6 +2,7 @@
 name: cnki-navigate-pages
 description: Navigate CNKI search result pages (next/previous/specific page) or change sort order. Use when user wants to see more results or change sorting.
 argument-hint: "[next|previous|page N|sort by date|citations|downloads]"
+version: 0.1.0
 ---
 
 # CNKI Results Pagination and Sorting

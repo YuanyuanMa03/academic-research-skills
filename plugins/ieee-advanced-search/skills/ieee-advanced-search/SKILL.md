@@ -2,6 +2,7 @@
 name: ieee-advanced-search
 description: Performs advanced search on IEEE Xplore with filters like author, title, publication, year, DOI. Use when the user wants filtered academic paper search.
 argument-hint: "[search terms and filters]"
+version: 0.1.0
 ---
 
 # IEEE Xplore Advanced Search

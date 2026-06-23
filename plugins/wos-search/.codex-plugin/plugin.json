@@ -1,0 +1,29 @@
+{
+  "name": "wos-search",
+  "version": "1.0.1",
+  "description": "Search Web of Science by topic, author, title, DOI, or advanced query. Supports edition/database filtering and sort.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "wos-search",
+    "shortDescription": "Search Web of Science by topic, author, title, DOI, or advanced query. Supports edition/database filtering and sort.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell",
+      "MCP"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use wos-search for an academic research task."
+    ],
+    "longDescription": "Search Web of Science by topic, author, title, DOI, or advanced query. Supports edition/database filtering and sort."
+  },
+  "mcpServers": "./.mcp.json"
+}

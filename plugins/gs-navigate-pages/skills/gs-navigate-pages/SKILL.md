@@ -2,6 +2,7 @@
 name: gs-navigate-pages
 description: Navigate Google Scholar search result pages. Use when user wants to see more results or go to a specific page.
 argument-hint: "[next|previous|page N]"
+version: 0.1.0
 user-invokable: false
 ---
 

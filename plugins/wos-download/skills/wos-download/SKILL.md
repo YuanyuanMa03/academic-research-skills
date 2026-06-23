@@ -2,6 +2,7 @@
 name: wos-download
 description: Download PDF full text for a WoS paper via publisher links.
 argument-hint: "[WoS ID or DOI]"
+version: 0.1.0
 user-invocable: true
 disable-model-invocation: true
 ---

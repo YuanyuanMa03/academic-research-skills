@@ -1,0 +1,31 @@
+{
+  "name": "nature-paper2ppt",
+  "version": "1.0.0",
+  "description": "Convert Nature papers to presentations",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic",
+    "research",
+    "nature"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "nature-paper2ppt",
+    "shortDescription": "Convert Nature papers to presentations",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use nature-paper2ppt for an academic research task."
+    ],
+    "longDescription": "Convert Nature papers to presentations"
+  }
+}

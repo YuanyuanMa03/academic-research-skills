@@ -2,6 +2,7 @@
 name: wos-navigate-pages
 description: Navigate to a specific page of WoS search results, or load more results from the last search.
 argument-hint: "[page number or 'next'/'prev']"
+version: 0.1.0
 user-invocable: true
 disable-model-invocation: false
 ---

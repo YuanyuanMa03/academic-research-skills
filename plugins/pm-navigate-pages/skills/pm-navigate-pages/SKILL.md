@@ -2,6 +2,7 @@
 name: pm-navigate-pages
 description: Navigate PubMed search result pages or change sort order. Use when user wants to see more results or change ordering.
 argument-hint: "[next|previous|page N|sort by date|relevance]"
+version: 0.1.0
 user-invokable: false
 ---
 

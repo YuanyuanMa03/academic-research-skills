@@ -2,6 +2,7 @@
 name: sd-advanced-search
 description: Advanced search on ScienceDirect with filters like author, journal, year, title, keywords. Use when the user wants filtered academic paper search.
 argument-hint: "[search terms and filters]"
+version: 0.1.0
 ---
 
 # ScienceDirect Advanced Search

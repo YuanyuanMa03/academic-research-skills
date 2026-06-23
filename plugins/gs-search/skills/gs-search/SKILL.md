@@ -2,6 +2,7 @@
 name: gs-search
 description: Search Google Scholar for academic papers by keywords. Returns results with title, authors, journal, year, citation count, and full-text links. Use when the user wants to search Google Scholar.
 argument-hint: "[search keywords]"
+version: 0.1.0
 ---
 
 # Google Scholar Basic Search

@@ -2,6 +2,7 @@
 name: gs-export
 description: Export Google Scholar paper(s) to Zotero via BibTeX. Gets citation data from Google Scholar's cite dialog, then pushes to Zotero desktop. Supports single or batch export.
 argument-hint: "[data-cid or space-separated data-cids]"
+version: 0.1.0
 ---
 
 # Google Scholar Export to Zotero

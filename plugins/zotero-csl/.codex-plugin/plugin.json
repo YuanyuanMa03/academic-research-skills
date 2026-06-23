@@ -1,0 +1,27 @@
+{
+  "name": "zotero-csl",
+  "version": "1.0.0",
+  "description": "Generate Zotero-compatible CSL citation style files from natural language descriptions",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "zotero-csl",
+    "shortDescription": "Generate Zotero-compatible CSL citation style files from natural language descriptions",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use zotero-csl for an academic research task."
+    ],
+    "longDescription": "Generate Zotero-compatible CSL citation style files from natural language descriptions"
+  }
+}

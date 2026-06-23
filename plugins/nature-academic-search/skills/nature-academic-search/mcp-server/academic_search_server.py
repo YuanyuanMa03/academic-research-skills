@@ -1,7 +1,10 @@
 """Academic search MCP server.
 
-Unified entry point exposing multi-source search and source-specific tools for
-CrossRef, PubMed, arXiv, Scopus, and ScienceDirect.
+Unified entry point exposing four tools:
+  - search_papers: multi-source concurrent search
+  - get_paper_by_id: fetch details by DOI / PMID / arXiv ID
+  - get_citation: formatted citation via CrossRef content negotiation
+  - lookup_mesh: MeSH descriptor lookup
 """
 
 from __future__ import annotations
@@ -13,24 +16,25 @@ from typing import Any
 
 from mcp.server import FastMCP
 
-from sources import (
-    ArxivSource,
-    CrossRefSource,
-    PubMedSource,
-    ScienceDirectSource,
-    ScopusSource,
-)
+from sources import ArxivSource, CrossRefSource, PubMedSource
 from utils import AcademicSearchError, DataSourceError, setup_logging
 
 mcp = FastMCP("academic-search")
 logger = setup_logging()
 
+# Warn if PubMed email is not configured
+from utils.config import Config
+_cfg = Config()
+if not _cfg.pubmed_email:
+    logger.warning(
+        "PUBMED_EMAIL not set — PubMed requests will run without contact metadata. "
+        "Set PUBMED_EMAIL or config.toml [pubmed] email for NCBI best practice."
+    )
+
 # Singleton source instances (shared across tool calls)
 _crossref = CrossRefSource()
 _pubmed = PubMedSource()
 _arxiv = ArxivSource()
-_scopus = ScopusSource()
-_sciencedirect = ScienceDirectSource()
 
 
 # ---------------------------------------------------------------------------
@@ -96,14 +100,6 @@ async def _search_arxiv(query: str, rows: int) -> dict:
     return await asyncio.to_thread(_arxiv.search, query, rows)
 
 
-async def _search_scopus(query: str, rows: int) -> dict:
-    return await asyncio.to_thread(_scopus.search, query, rows)
-
-
-async def _search_sciencedirect(query: str, rows: int) -> dict:
-    return await asyncio.to_thread(_sciencedirect.search, query, rows)
-
-
 async def _search_all(
     query: str,
     sources: list[str],
@@ -123,12 +119,6 @@ async def _search_all(
     if "arxiv" in sources:
         tasks.append(asyncio.create_task(_search_arxiv(query, rows)))
         source_order.append("arxiv")
-    if "scopus" in sources:
-        tasks.append(asyncio.create_task(_search_scopus(query, rows)))
-        source_order.append("scopus")
-    if "sciencedirect" in sources:
-        tasks.append(asyncio.create_task(_search_sciencedirect(query, rows)))
-        source_order.append("sciencedirect")
 
     if not tasks:
         return {"total": 0, "results": [], "errors": []}
@@ -167,16 +157,13 @@ async def search_papers(
     rows: int = 5,
     type: str | None = None,
 ) -> str:
-    """Search academic papers across multiple sources.
+    """Search academic papers across multiple sources (CrossRef, PubMed, arXiv).
 
     Args:
         query: Search keywords or query string.
-        sources: List of source names to query. Defaults to CrossRef, PubMed,
-            and arXiv. Add "scopus" and/or "sciencedirect" explicitly to use
-            Elsevier-backed providers; they require local pybliometrics config
-            and may consume Elsevier API quota.
-        rows: Number of results per source (max 50), not total result count.
-        type: Optional CrossRef-only work type filter (e.g. "journal-article").
+        sources: List of source names to query. Defaults to all three.
+        rows: Number of results per source (max 50).
+        type: Optional CrossRef work type filter (e.g. "journal-article").
 
     Returns:
         JSON string with total count, merged results, and any per-source errors.
@@ -188,7 +175,7 @@ async def search_papers(
         sources = ["crossref", "pubmed", "arxiv"]
 
     # Validate source names
-    valid_sources = {"crossref", "pubmed", "arxiv", "scopus", "sciencedirect"}
+    valid_sources = {"crossref", "pubmed", "arxiv"}
     invalid = [s for s in sources if s not in valid_sources]
     if invalid:
         return _json_error(f"Invalid sources: {invalid}. Valid: {sorted(valid_sources)}")
@@ -209,246 +196,6 @@ async def search_papers(
         return _json_error(f"Search failed: {exc}")
 
     return _json_ok(result)
-
-
-@mcp.tool()
-def search_scopus(
-    query: str,
-    rows: int = 5,
-    view: str | None = None,
-    subscriber: bool = True,
-) -> str:
-    """Search Scopus documents using a Scopus advanced-search query.
-
-    Args:
-        query: Scopus advanced search query.
-        rows: Number of normalized results to return (max 50).
-        view: Optional Scopus view ("STANDARD" or "COMPLETE").
-        subscriber: Whether to use subscriber cursor navigation.
-    """
-    try:
-        return _json_ok(_scopus.search(query, rows, view=view, subscriber=subscriber))
-    except DataSourceError as exc:
-        logger.error("search_scopus failed: %s", exc)
-        return _json_error(str(exc), source=exc.source)
-    except Exception as exc:
-        logger.exception("search_scopus failed unexpectedly")
-        return _json_error(f"Unexpected error: {exc}")
-
-
-@mcp.tool()
-def get_scopus_abstract(
-    identifier: str,
-    id_type: str | None = None,
-    view: str = "META_ABS",
-) -> str:
-    """Retrieve Scopus abstract metadata.
-
-    Args:
-        identifier: EID, Scopus ID, DOI, PMID, or PII.
-        id_type: Optional pybliometrics ID type; auto-detected when omitted.
-        view: Scopus abstract view, usually "META_ABS".
-    """
-    try:
-        return _json_ok(_scopus.get_abstract(identifier, id_type=id_type, view=view))
-    except DataSourceError as exc:
-        logger.error("get_scopus_abstract failed: %s", exc)
-        return _json_error(str(exc), source=exc.source)
-    except Exception as exc:
-        logger.exception("get_scopus_abstract failed unexpectedly")
-        return _json_error(f"Unexpected error: {exc}")
-
-
-@mcp.tool()
-def get_scopus_citation_overview(
-    identifiers: list[str],
-    id_type: str = "scopus_id",
-    date: str | None = None,
-    citation: str | None = None,
-) -> str:
-    """Retrieve Scopus citation overview for one or more documents.
-
-    Args:
-        identifiers: Document identifiers.
-        id_type: Identifier type, e.g. "scopus_id", "doi", or "eid".
-        date: Optional year range such as "2020-2025".
-        citation: Optional exclusion mode, e.g. "exclude-self".
-    """
-    try:
-        result = _scopus.get_citation_overview(
-            identifiers,
-            id_type=id_type,
-            date=date,
-            citation=citation,
-        )
-        return _json_ok(result)
-    except DataSourceError as exc:
-        logger.error("get_scopus_citation_overview failed: %s", exc)
-        return _json_error(str(exc), source=exc.source)
-    except Exception as exc:
-        logger.exception("get_scopus_citation_overview failed unexpectedly")
-        return _json_error(f"Unexpected error: {exc}")
-
-
-@mcp.tool()
-def search_scopus_authors(query: str, rows: int = 5) -> str:
-    """Search Scopus author profiles."""
-    try:
-        return _json_ok(_scopus.search_authors(query, rows))
-    except DataSourceError as exc:
-        logger.error("search_scopus_authors failed: %s", exc)
-        return _json_error(str(exc), source=exc.source)
-    except Exception as exc:
-        logger.exception("search_scopus_authors failed unexpectedly")
-        return _json_error(f"Unexpected error: {exc}")
-
-
-@mcp.tool()
-def get_scopus_author(author_id: str, view: str = "ENHANCED") -> str:
-    """Retrieve a Scopus author profile by author ID."""
-    try:
-        return _json_ok(_scopus.get_author(author_id, view=view))
-    except DataSourceError as exc:
-        logger.error("get_scopus_author failed: %s", exc)
-        return _json_error(str(exc), source=exc.source)
-    except Exception as exc:
-        logger.exception("get_scopus_author failed unexpectedly")
-        return _json_error(f"Unexpected error: {exc}")
-
-
-@mcp.tool()
-def search_scopus_affiliations(query: str, rows: int = 5) -> str:
-    """Search Scopus affiliations."""
-    try:
-        return _json_ok(_scopus.search_affiliations(query, rows))
-    except DataSourceError as exc:
-        logger.error("search_scopus_affiliations failed: %s", exc)
-        return _json_error(str(exc), source=exc.source)
-    except Exception as exc:
-        logger.exception("search_scopus_affiliations failed unexpectedly")
-        return _json_error(f"Unexpected error: {exc}")
-
-
-@mcp.tool()
-def get_scopus_affiliation(affiliation_id: str, view: str = "STANDARD") -> str:
-    """Retrieve a Scopus affiliation by affiliation ID."""
-    try:
-        return _json_ok(_scopus.get_affiliation(affiliation_id, view=view))
-    except DataSourceError as exc:
-        logger.error("get_scopus_affiliation failed: %s", exc)
-        return _json_error(str(exc), source=exc.source)
-    except Exception as exc:
-        logger.exception("get_scopus_affiliation failed unexpectedly")
-        return _json_error(f"Unexpected error: {exc}")
-
-
-@mcp.tool()
-def search_scopus_serial_titles(
-    title: str | None = None,
-    issn: str | None = None,
-    publisher: str | None = None,
-    subject: str | None = None,
-    subject_code: str | None = None,
-    content: str | None = None,
-    open_access: str | None = None,
-    rows: int = 5,
-    view: str = "ENHANCED",
-) -> str:
-    """Search Scopus serial titles.
-
-    Args:
-        title: Serial title query.
-        issn: ISSN query.
-        publisher: Publisher query.
-        subject: Subject-area query.
-        subject_code: Subject-area code query.
-        content: Content type query.
-        open_access: Open-access filter.
-        rows: Number of results to return.
-        view: Scopus serial title view.
-    """
-    query = {
-        "title": title,
-        "issn": issn,
-        "pub": publisher,
-        "subj": subject,
-        "subjCode": subject_code,
-        "content": content,
-        "oa": open_access,
-    }
-    try:
-        return _json_ok(_scopus.search_serial_titles(query, rows=rows, view=view))
-    except DataSourceError as exc:
-        logger.error("search_scopus_serial_titles failed: %s", exc)
-        return _json_error(str(exc), source=exc.source)
-    except Exception as exc:
-        logger.exception("search_scopus_serial_titles failed unexpectedly")
-        return _json_error(f"Unexpected error: {exc}")
-
-
-@mcp.tool()
-def get_scopus_serial_title(
-    issn: str,
-    view: str = "ENHANCED",
-    years: str | None = None,
-) -> str:
-    """Retrieve a Scopus serial title by ISSN."""
-    try:
-        return _json_ok(_scopus.get_serial_title(issn, view=view, years=years))
-    except DataSourceError as exc:
-        logger.error("get_scopus_serial_title failed: %s", exc)
-        return _json_error(str(exc), source=exc.source)
-    except Exception as exc:
-        logger.exception("get_scopus_serial_title failed unexpectedly")
-        return _json_error(f"Unexpected error: {exc}")
-
-
-@mcp.tool()
-def get_scopus_plumx_metrics(identifier: str, id_type: str) -> str:
-    """Retrieve PlumX metrics for a document identifier."""
-    try:
-        return _json_ok(_scopus.get_plumx_metrics(identifier, id_type))
-    except DataSourceError as exc:
-        logger.error("get_scopus_plumx_metrics failed: %s", exc)
-        return _json_error(str(exc), source=exc.source)
-    except Exception as exc:
-        logger.exception("get_scopus_plumx_metrics failed unexpectedly")
-        return _json_error(f"Unexpected error: {exc}")
-
-
-@mcp.tool()
-def search_sciencedirect(
-    query: str,
-    rows: int = 5,
-    view: str | None = None,
-) -> str:
-    """Search ScienceDirect article metadata."""
-    try:
-        return _json_ok(_sciencedirect.search(query, rows=rows, view=view))
-    except DataSourceError as exc:
-        logger.error("search_sciencedirect failed: %s", exc)
-        return _json_error(str(exc), source=exc.source)
-    except Exception as exc:
-        logger.exception("search_sciencedirect failed unexpectedly")
-        return _json_error(f"Unexpected error: {exc}")
-
-
-@mcp.tool()
-def get_sciencedirect_article_metadata(
-    query: str,
-    rows: int = 5,
-    view: str | None = None,
-) -> str:
-    """Retrieve ScienceDirect article metadata with a metadata API query."""
-    try:
-        result = _sciencedirect.get_article_metadata(query, rows=rows, view=view)
-        return _json_ok(result)
-    except DataSourceError as exc:
-        logger.error("get_sciencedirect_article_metadata failed: %s", exc)
-        return _json_error(str(exc), source=exc.source)
-    except Exception as exc:
-        logger.exception("get_sciencedirect_article_metadata failed unexpectedly")
-        return _json_error(f"Unexpected error: {exc}")
 
 
 @mcp.tool()

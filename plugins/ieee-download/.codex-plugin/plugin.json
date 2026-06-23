@@ -1,0 +1,29 @@
+{
+  "name": "ieee-download",
+  "version": "1.0.1",
+  "description": "Download PDF from IEEE Xplore articles. Requires institutional or subscriber access.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ieee-download",
+    "shortDescription": "Download PDF from IEEE Xplore articles. Requires institutional or subscriber access.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell",
+      "MCP"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use ieee-download for an academic research task."
+    ],
+    "longDescription": "Download PDF from IEEE Xplore articles. Requires institutional or subscriber access."
+  },
+  "mcpServers": "./.mcp.json"
+}

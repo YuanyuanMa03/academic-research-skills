@@ -2,6 +2,7 @@
 name: ieee-paper-detail
 description: Extracts full metadata from an IEEE Xplore article page (abstract, authors, keywords, DOI, references, PDF link). Use when the user wants details about a specific paper.
 argument-hint: "[article number or URL]"
+version: 0.1.0
 ---
 
 # IEEE Xplore Paper Detail Extraction

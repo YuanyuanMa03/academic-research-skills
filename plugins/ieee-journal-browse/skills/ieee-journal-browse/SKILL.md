@@ -2,6 +2,7 @@
 name: ieee-journal-browse
 description: Browses a journal or conference on IEEE Xplore — views info, impact factor, latest articles, and specific issues. Use when the user asks about a journal/conference or wants to browse its contents.
 argument-hint: "[journal name or punumber]"
+version: 0.1.0
 ---
 
 # IEEE Xplore Journal/Conference Browse

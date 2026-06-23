@@ -1,0 +1,29 @@
+{
+  "name": "ieee-advanced-search",
+  "version": "1.0.1",
+  "description": "Advanced search on IEEE Xplore with filters - author, title, publication, year, DOI.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ieee-advanced-search",
+    "shortDescription": "Advanced search on IEEE Xplore with filters - author, title, publication, year, DOI.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell",
+      "MCP"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use ieee-advanced-search for an academic research task."
+    ],
+    "longDescription": "Advanced search on IEEE Xplore with filters - author, title, publication, year, DOI."
+  },
+  "mcpServers": "./.mcp.json"
+}

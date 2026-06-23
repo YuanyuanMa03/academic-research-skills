@@ -1,0 +1,31 @@
+{
+  "name": "nature-data",
+  "version": "1.0.0",
+  "description": "Access Nature paper data",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic",
+    "research",
+    "nature"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "nature-data",
+    "shortDescription": "Access Nature paper data",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use nature-data for an academic research task."
+    ],
+    "longDescription": "Access Nature paper data"
+  }
+}

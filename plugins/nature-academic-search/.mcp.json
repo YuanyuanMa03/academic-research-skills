@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "academic-search": {
+      "command": "python3",
+      "args": [
+        "-c",
+        "from pathlib import Path; import runpy; base=Path.home()/'.codex/plugins/cache/academic-research-skills/nature-academic-search'; versions=[p for p in base.iterdir() if p.is_dir()]; root=max(versions, key=lambda p:p.stat().st_mtime); script=root/'skills/nature-academic-search/scripts/run_academic_search_mcp.py'; runpy.run_path(str(script), run_name='__main__')"
+      ]
+    }
+  }
+}

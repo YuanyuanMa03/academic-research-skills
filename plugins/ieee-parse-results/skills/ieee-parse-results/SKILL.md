@@ -1,6 +1,8 @@
 ---
 name: ieee-parse-results
 description: Re-parses the currently open IEEE Xplore search results page. Internal skill used by other skills to extract structured data without navigation.
+argument-hint: "[current IEEE Xplore results page or exported result HTML]"
+version: 0.1.0
 user-invocable: false
 ---
 

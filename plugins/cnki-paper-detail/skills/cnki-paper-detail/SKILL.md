@@ -2,6 +2,7 @@
 name: cnki-paper-detail
 description: Extract full paper details from a CNKI paper page including title, authors, affiliations, abstract, keywords, fund, classification. Use when the user needs detailed information about a specific paper.
 argument-hint: "[paper URL or blank if already on detail page]"
+version: 0.1.0
 ---
 
 # CNKI Paper Detail Extraction

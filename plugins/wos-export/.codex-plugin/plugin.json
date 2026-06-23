@@ -1,0 +1,27 @@
+{
+  "name": "wos-export",
+  "version": "1.0.0",
+  "description": "Export WoS records to Zotero, RIS, BibTeX, or Excel.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "wos-export",
+    "shortDescription": "Export WoS records to Zotero, RIS, BibTeX, or Excel.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use wos-export for an academic research task."
+    ],
+    "longDescription": "Export WoS records to Zotero, RIS, BibTeX, or Excel."
+  }
+}

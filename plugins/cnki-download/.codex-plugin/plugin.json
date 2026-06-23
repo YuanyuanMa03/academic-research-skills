@@ -1,0 +1,29 @@
+{
+  "name": "cnki-download",
+  "version": "1.0.1",
+  "description": "Download a paper PDF/CAJ from CNKI. Requires user to be logged in. Use when user wants to download a specific paper.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "cnki-download",
+    "shortDescription": "Download a paper PDF/CAJ from CNKI. Requires user to be logged in. Use when user wants to download a specific paper.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell",
+      "MCP"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use cnki-download for an academic research task."
+    ],
+    "longDescription": "Download a paper PDF/CAJ from CNKI. Requires user to be logged in. Use when user wants to download a specific paper."
+  },
+  "mcpServers": "./.mcp.json"
+}

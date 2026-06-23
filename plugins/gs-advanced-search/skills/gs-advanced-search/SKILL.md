@@ -2,6 +2,7 @@
 name: gs-advanced-search
 description: Perform advanced Google Scholar search with filters - author, journal, date range, exact phrase, title-only. Constructs proper URL parameters from natural language. Use for precise filtered searches.
 argument-hint: "[describe search criteria in natural language]"
+version: 0.1.0
 ---
 
 # Google Scholar Advanced Search

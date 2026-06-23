@@ -1,0 +1,29 @@
+{
+  "name": "cnki-search",
+  "version": "1.0.1",
+  "description": "Search CNKI (中国知网) for papers by keyword. Use when the user wants to find academic papers on a topic.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "cnki-search",
+    "shortDescription": "Search CNKI (中国知网) for papers by keyword. Use when the user wants to find academic papers on a topic.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell",
+      "MCP"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use cnki-search for an academic research task."
+    ],
+    "longDescription": "Search CNKI (中国知网) for papers by keyword. Use when the user wants to find academic papers on a topic."
+  },
+  "mcpServers": "./.mcp.json"
+}

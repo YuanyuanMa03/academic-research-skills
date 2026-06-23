@@ -1,0 +1,33 @@
+{
+  "name": "nature-academic-search",
+  "version": "1.0.3",
+  "description": "Academic search on Nature",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic",
+    "research",
+    "nature"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "nature-academic-search",
+    "shortDescription": "Academic search on Nature",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell",
+      "MCP"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use nature-academic-search for an academic research task."
+    ],
+    "longDescription": "Academic search on Nature"
+  },
+  "mcpServers": "./.mcp.json"
+}

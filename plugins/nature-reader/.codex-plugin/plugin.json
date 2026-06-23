@@ -1,0 +1,31 @@
+{
+  "name": "nature-reader",
+  "version": "1.0.0",
+  "description": "Read and analyze Nature papers",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic",
+    "research",
+    "nature"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "nature-reader",
+    "shortDescription": "Read and analyze Nature papers",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use nature-reader for an academic research task."
+    ],
+    "longDescription": "Read and analyze Nature papers"
+  }
+}

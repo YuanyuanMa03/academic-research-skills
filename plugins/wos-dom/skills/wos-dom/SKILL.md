@@ -1,6 +1,8 @@
 ---
 name: wos-dom
 description: "WoS DOM and URL reference. Internal reference used by wos-search, wos-navigate-pages, wos-paper-detail."
+argument-hint: "[current Web of Science page or DOM extraction request]"
+version: 0.1.0
 user-invocable: false
 disable-model-invocation: false
 ---

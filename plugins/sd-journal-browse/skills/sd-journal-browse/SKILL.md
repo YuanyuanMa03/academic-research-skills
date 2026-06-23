@@ -2,6 +2,7 @@
 name: sd-journal-browse
 description: Browse a journal on ScienceDirect — view info, impact factor, latest articles, and specific issues. Use when the user asks about a journal or wants to browse its contents.
 argument-hint: "[journal name or slug]"
+version: 0.1.0
 ---
 
 # ScienceDirect Journal Browse

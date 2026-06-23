@@ -2,6 +2,7 @@
 name: sd-download
 description: Download PDF from ScienceDirect articles. Requires institutional or subscriber access.
 argument-hint: "[PII or article URL]"
+version: 0.1.0
 disable-model-invocation: true
 ---
 

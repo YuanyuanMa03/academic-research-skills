@@ -2,6 +2,7 @@
 name: cnki-download
 description: Download a paper PDF/CAJ from CNKI. Requires user to be logged in. Use when user wants to download a specific paper.
 argument-hint: "[paper URL or blank if already on detail page]"
+version: 0.1.0
 ---
 
 # CNKI Paper Download (文献下载)

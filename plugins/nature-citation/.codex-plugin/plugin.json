@@ -1,0 +1,31 @@
+{
+  "name": "nature-citation",
+  "version": "1.0.0",
+  "description": "Manage Nature citations",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic",
+    "research",
+    "nature"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "nature-citation",
+    "shortDescription": "Manage Nature citations",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use nature-citation for an academic research task."
+    ],
+    "longDescription": "Manage Nature citations"
+  }
+}

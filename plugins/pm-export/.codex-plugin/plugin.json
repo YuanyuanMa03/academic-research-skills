@@ -1,0 +1,29 @@
+{
+  "name": "pm-export",
+  "version": "1.0.1",
+  "description": "Export PubMed paper(s) to Zotero or save as RIS file. Supports single paper by PMID or batch export from search results.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "pm-export",
+    "shortDescription": "Export PubMed paper(s) to Zotero or save as RIS file. Supports single paper by PMID or batch export from search results.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell",
+      "MCP"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use pm-export for an academic research task."
+    ],
+    "longDescription": "Export PubMed paper(s) to Zotero or save as RIS file. Supports single paper by PMID or batch export from search results."
+  },
+  "mcpServers": "./.mcp.json"
+}

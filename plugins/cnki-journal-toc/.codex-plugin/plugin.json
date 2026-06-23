@@ -1,0 +1,29 @@
+{
+  "name": "cnki-journal-toc",
+  "version": "1.0.1",
+  "description": "Browse journal issues, view table of contents, and download original TOC PDF from CNKI. Use when user wants to see papers in a specific journal issue or download the original cover/TOC pages.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "cnki-journal-toc",
+    "shortDescription": "Browse journal issues, view table of contents, and download original TOC PDF from CNKI. Use when user wants to see papers in a specific journal issue or download the original cover/TOC pages.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell",
+      "MCP"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use cnki-journal-toc for an academic research task."
+    ],
+    "longDescription": "Browse journal issues, view table of contents, and download original TOC PDF from CNKI. Use when user wants to see papers in a specific journal issue or download the original cover/TOC pages."
+  },
+  "mcpServers": "./.mcp.json"
+}

@@ -2,6 +2,7 @@
 name: ieee-search
 description: Searches for academic papers on IEEE Xplore. Use when the user wants to find papers by keyword on IEEE Xplore.
 argument-hint: "[search keywords]"
+version: 0.1.0
 ---
 
 # IEEE Xplore Basic Search

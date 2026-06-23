@@ -1,0 +1,29 @@
+{
+  "name": "ieee-navigate-pages",
+  "version": "1.0.1",
+  "description": "Navigate pages, change sort order, or adjust results per page on IEEE Xplore search results.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ieee-navigate-pages",
+    "shortDescription": "Navigate pages, change sort order, or adjust results per page on IEEE Xplore search results.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell",
+      "MCP"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use ieee-navigate-pages for an academic research task."
+    ],
+    "longDescription": "Navigate pages, change sort order, or adjust results per page on IEEE Xplore search results."
+  },
+  "mcpServers": "./.mcp.json"
+}

@@ -2,6 +2,7 @@
 name: cnki-journal-toc
 description: Browse journal issues, view table of contents, and download original TOC PDF from CNKI. Use when user wants to see papers in a specific journal issue or download the original cover/TOC pages.
 argument-hint: "[journal name] [year] [issue] [download]"
+version: 0.1.0
 ---
 
 # CNKI Journal Table of Contents (期刊目录浏览 + 原版目录下载)

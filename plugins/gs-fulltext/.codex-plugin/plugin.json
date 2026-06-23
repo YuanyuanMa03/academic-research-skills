@@ -1,0 +1,29 @@
+{
+  "name": "gs-fulltext",
+  "version": "1.0.1",
+  "description": "Get full-text access links for a Google Scholar paper - PDF, DOI, Sci-Hub, and publisher links. Use when user wants to read or download a paper's full text.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "gs-fulltext",
+    "shortDescription": "Get full-text access links for a Google Scholar paper - PDF, DOI, Sci-Hub, and publisher links. Use when user wants to read or download a paper's full text.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell",
+      "MCP"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use gs-fulltext for an academic research task."
+    ],
+    "longDescription": "Get full-text access links for a Google Scholar paper - PDF, DOI, Sci-Hub, and publisher links. Use when user wants to read or download a paper's full text."
+  },
+  "mcpServers": "./.mcp.json"
+}

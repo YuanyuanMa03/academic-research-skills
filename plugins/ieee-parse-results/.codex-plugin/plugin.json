@@ -1,0 +1,29 @@
+{
+  "name": "ieee-parse-results",
+  "version": "1.0.1",
+  "description": "Re-parse the currently open IEEE Xplore search results page. Internal skill.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ieee-parse-results",
+    "shortDescription": "Re-parse the currently open IEEE Xplore search results page. Internal skill.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell",
+      "MCP"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use ieee-parse-results for an academic research task."
+    ],
+    "longDescription": "Re-parse the currently open IEEE Xplore search results page. Internal skill."
+  },
+  "mcpServers": "./.mcp.json"
+}

@@ -2,6 +2,7 @@
 name: wos-search
 description: Search Web of Science by topic, author, title, DOI, or advanced query. Supports edition/database filtering and sort.
 argument-hint: "[search keywords] [--edition SCI/SSCI/...] [--sort citations/date/relevance] [--db woscc|alldb|...]"
+version: 0.1.0
 user-invocable: true
 disable-model-invocation: false
 ---

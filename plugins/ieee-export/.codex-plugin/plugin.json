@@ -1,0 +1,29 @@
+{
+  "name": "ieee-export",
+  "version": "1.0.1",
+  "description": "Export citations from IEEE Xplore in RIS, BibTeX, or plain text. Supports pushing to Zotero.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ieee-export",
+    "shortDescription": "Export citations from IEEE Xplore in RIS, BibTeX, or plain text. Supports pushing to Zotero.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell",
+      "MCP"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Use ieee-export for an academic research task."
+    ],
+    "longDescription": "Export citations from IEEE Xplore in RIS, BibTeX, or plain text. Supports pushing to Zotero."
+  },
+  "mcpServers": "./.mcp.json"
+}
