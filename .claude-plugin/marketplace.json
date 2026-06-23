@@ -1041,6 +1041,44 @@
         "writing"
       ],
       "category": "nature"
+    },
+    {
+      "name": "nature-paper-to-patent",
+      "source": "./plugins/nature-paper-to-patent",
+      "description": "Convert scientific papers, theses, technical reports, source code, figures, or research manuscripts into evidence-grounded Chinese invention patent drafts. Use when an AI agent must extract patentable technical contributions, map every claimed feature to source evidence, preserve core formulas as editable Office Math, generate claim-aligned flowcharts and methodology figures, compare a paper with an existing patent, audit support and consistency, or deliver separate Chinese DOCX files for claims, specification, abstract, and abstract figure.",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "journal",
+        "nature",
+        "patent",
+        "research",
+        "writing"
+      ],
+      "category": "nature"
+    },
+    {
+      "name": "nature-reviewer",
+      "source": "./plugins/nature-reviewer",
+      "description": "Simulate a Nature-style reviewer assessment from the referee perspective rather than an author rebuttal. Use when the user wants a pre-submission review, reviewer report, peer-review style critique, novelty/significance/technical soundness assessment, reviewer-style manuscript evaluation.",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "journal",
+        "nature",
+        "peer-review",
+        "research",
+        "review"
+      ],
+      "category": "nature"
     }
   ]
 }

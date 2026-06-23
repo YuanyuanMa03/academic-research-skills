@@ -23,7 +23,7 @@ https://github.com/YuanyuanMa03/academic-research-skills
 | 谷歌学术 (Google Scholar) | `gs-*` | 搜索、高级搜索、引用追踪、全文获取、导出 |
 | ScienceDirect | `sd-*` | 搜索、下载、导出、期刊浏览、论文详情 |
 | Web of Science | `wos-*` | 搜索、下载、导出、论文详情 |
-| Nature | `nature-*` | 学术搜索、写作、润色、图表、阅读 |
+| Nature | `nature-*` | 学术搜索、写作、润色、图表、阅读、专利、审稿 |
 
 ## 安装方式
 
@@ -59,6 +59,8 @@ https://github.com/YuanyuanMa03/academic-research-skills
 /plugin install nature-reader@academic-research-skills
 /plugin install nature-response@academic-research-skills
 /plugin install nature-writing@academic-research-skills
+/plugin install nature-paper-to-patent@academic-research-skills
+/plugin install nature-reviewer@academic-research-skills
 /plugin install sd-advanced-search@academic-research-skills
 /plugin install sd-download@academic-research-skills
 /plugin install sd-export@academic-research-skills
@@ -228,6 +230,10 @@ cat academic-research-skills/plugins/cnki-search/skills/cnki-search/SKILL.md
 2. 添加 `plugins/your-skill-name/.claude-plugin/plugin.json`
 3. 在 `.claude-plugin/marketplace.json` 中添加条目
 4. 提交 Pull Request
+
+## 致谢
+
+Nature 系列技能（`nature-*`）基于 [@Yuan1z0825](https://github.com/Yuan1z0825) 的 [nature-skills](https://github.com/Yuan1z0825/nature-skills) 仓库。
 
 ## 许可证
 

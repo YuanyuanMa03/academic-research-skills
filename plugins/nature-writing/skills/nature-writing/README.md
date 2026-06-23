@@ -1,37 +1,32 @@
-# `nature-writing` skill
+# `nature-writing` 技能
 
-A Nature-style manuscript writing skill for drafting or rebuilding sections from
-author-provided claims, figures, results, notes, or Chinese drafts.
+`nature-writing` 用于根据作者提供的 claims、图表、结果、笔记或中文草稿，起草或重建 Nature 风格手稿章节。
 
-## What it does
+## 功能
 
-`nature-writing` helps write:
+`nature-writing` 可帮助撰写：
 
-- titles
-- abstracts
-- introductions
-- results narratives
-- discussions
-- conclusions
-- significance paragraphs
-- manuscript outlines
+- 标题
+- 摘要
+- 引言
+- 结果叙事
+- 讨论
+- 结论
+- significance paragraph
+- 手稿大纲
 
-It is for argument construction and section drafting. For sentence-level polish
-of an existing draft, use `nature-polishing`.
+该技能用于论证构建和章节起草。如果已有英文草稿只需要句子级润色，应使用 `nature-polishing`。
 
-## Built from
+## 来源基础
 
-Close reading of curated Nature and Nature Communications research articles
-across materials, energy systems, construction decarbonization and machine
-learning, combined with the existing writing-strategy rules in this repository.
+该技能来自对材料、能源系统、建筑脱碳和机器学习等领域 Nature 与 Nature Communications 研究论文的细读，并结合仓库中已有的 writing-strategy 规则。
 
-Section-level writing and reviewer-facing self-review guidance is also adapted
-from Prof. Peng Sida's open research-writing notes:
+章节级写作和面向审稿人的自审规则也参考了彭思达老师公开的科研写作笔记：
 
 - https://pengsida.notion.site/c1a22465a0fa4b15a12985223916048e
 - https://github.com/pengsida/learning_research
 
-## File structure
+## 文件结构
 
 ```text
 nature-writing/
@@ -45,22 +40,23 @@ nature-writing/
     ├── experiments.md
     ├── introduction.md
     ├── method.md
+    ├── nature-summary-paragraph.md
     ├── paper-review.md
     ├── paragraph-flow.md
     ├── related-work.md
     └── examples/
 ```
 
-## Key rules
+## 核心规则
 
-| Domain | Core rule |
+| 领域 | 规则 |
 |---|---|
-| Evidence first | Do not invent data, mechanisms, statistics, sample sizes or novelty |
-| Abstract | Context, gap, approach, key result, implication, boundary |
-| Introduction | Field scale, bottleneck, prior attempts, unresolved gap, present study |
-| Method | Explain module motivation, design, forward process, and technical advantage |
-| Results | Build an evidence ladder, not a chronological lab diary |
-| Experiments | Tie every major claim to comparison, ablation, metric, or stress-test evidence |
-| Discussion | Explain meaning, prior-work relation, constraints and future use |
-| Review | Run adversarial self-review before submission |
-| Chinese notes | Translate intent and argument, not clause order |
+| 证据优先 | 不编造数据、机制、统计量、样本量或创新性 |
+| 摘要 | 背景、缺口、方法、关键结果、意义、边界 |
+| 引言 | 领域尺度、瓶颈、已有尝试、未解决缺口、本文工作；面向 `Nature` 时使用分阶段 summary-paragraph funnel |
+| 方法 | 解释模块动机、设计、正向流程和技术优势 |
+| 结果 | 构建证据阶梯，而不是按实验流水账写作 |
+| 实验 | 每个主要 claim 都要对应比较、消融、指标或压力测试证据 |
+| 讨论 | 解释意义、与既有工作的关系、约束和未来使用 |
+| 自审 | 投稿前做 adversarial self-review |
+| 中文笔记 | 翻译意图和论证，不照搬中文句序 |

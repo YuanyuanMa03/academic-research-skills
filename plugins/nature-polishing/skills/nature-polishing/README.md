@@ -1,22 +1,22 @@
-# `nature-polishing` skill
+# `nature-polishing` 技能
 
-An academic-writing skill for polishing, restructuring, and translating manuscript prose into concise `Nature`-leaning English.
+`nature-polishing` 用于把学术手稿文本润色、重构或翻译成更接近 `Nature` 风格的简洁英文。
 
-Source hierarchy:
+## 来源层级
 
-- `Main strategy`: the course notes in `Chapter1-Week1-7 full version.pdf`
-- `Published article patterns`: curated Nature and Nature Communications examples
-- `Reference support`: `Academic-Phrasebank-Navigable-PDF-2023.pdf`
+- `Main strategy`：`Chapter1-Week1-7 full version.pdf` 中的写作课程笔记。
+- `Published article patterns`：精选 Nature 与 Nature Communications 论文范式。
+- `Reference support`：`Academic-Phrasebank-Navigable-PDF-2023.pdf`。
 
-## What changed
+## 当前变化
 
-- The main `SKILL.md` now follows the first PDF's architecture: paper type, reader workflow, hourglass structure, writing order, section responsibilities, intellectual debt, and AI/ethics boundaries.
-- Article-level polishing can now use the published-paper pattern reference for abstracts, introductions, Results, Discussions, conclusions, and titles.
-- The reference folder now serves a narrower role: phrase families, move templates, and style checks derived from the second PDF.
-- The skill now distinguishes `research papers` from `methods papers`.
-- The skill treats `core argument ownership` as a central rule, not a side note.
+- 主 `SKILL.md` 已按第一份 PDF 的架构重写：论文类型、读者工作流、沙漏结构、写作顺序、各部分职责、intellectual debt 以及 AI/ethics 边界。
+- 全文级润色可以使用已发表论文范式，覆盖摘要、引言、结果、讨论、结论和标题。
+- `references/` 现在承担更窄的职责：短语族、move template 和风格检查主要来自第二份 PDF。
+- 技能会区分 `research papers` 与 `methods papers`。
+- 技能把 `core argument ownership` 视为核心规则，而不是附带提醒。
 
-## File structure
+## 文件结构
 
 ```text
 nature-polishing/
@@ -27,39 +27,42 @@ nature-polishing/
     ├── phrasebank-playbook.md
     ├── section-moves.md
     ├── style-guardrails.md
-    └── writing-strategy.md
+    ├── writing-strategy.md
+    └── latex-layout.md
 ```
 
-## When to use
+## 适用场景
 
-- polishing an abstract, introduction, results, discussion, conclusion, or title
-- polishing a methods section or a methods paper with fair-comparison logic
-- translating Chinese academic text into publishable English
-- tightening section logic before submission
-- softening overclaims and fixing evidence-weighted language
-- making prose read more like strong journal English without inventing content
+- 润色摘要、引言、结果、讨论、结论或标题。
+- 润色 methods section，或处理强调公平比较逻辑的 methods paper。
+- 将中文学术文本翻译成可投稿英文。
+- 投稿前收紧章节逻辑。
+- 降低过度声称，修正证据强度不匹配的措辞。
+- 在不编造内容的前提下，让文本更像高水平期刊英文。
+- 修复 LaTeX 排版问题：页面过松、标题孤立、图片未填满页面或跨页、`Float too large`、多面板图排列、Supplementary Information 页面稀疏等。
 
-## Design intent
+## 设计意图
 
-The skill should:
+该技能应当：
 
-- preserve facts, citation intent, and author responsibility
-- make the first PDF the governing writing strategy
-- improve rhetorical sequencing at paragraph level
-- keep sentences short and readable
-- use the second PDF only as the phrase and reference layer
-- avoid generic AI prose and unsupported claims
+- 保留事实、引用意图和作者责任。
+- 以第一份 PDF 作为主导写作策略。
+- 改善段落层面的修辞顺序。
+- 保持句子短、清楚、可读。
+- 只把第二份 PDF 作为短语和参考层。
+- 避免通用 AI 腔和无支撑声称。
 
-## Reference map
+## 参考文件
 
-- `section-moves.md`: section order and move patterns
-- `published-article-patterns.md`: writing patterns from curated Nature and Nature Communications articles
-- `phrasebank-playbook.md`: hedging, transitions, evidence, limitations, future work
-- `style-guardrails.md`: British style, articles, abbreviations, units, register, overclaim control
-- `writing-strategy.md`: paragraph- and section-level argument logic
+- `section-moves.md`：各章节顺序与 move pattern。
+- `published-article-patterns.md`：精选 Nature 与 Nature Communications 论文写法。
+- `phrasebank-playbook.md`：hedging、过渡、证据、局限和未来工作表达。
+- `style-guardrails.md`：英式风格、冠词、缩写、单位、语域和过度声称控制。
+- `writing-strategy.md`：段落与章节层面的论证逻辑。
+- `latex-layout.md`：LaTeX 浮动体和页面排版，包括顶端对齐、`\clearpage` + `[H]` 标题-图片单元、`placeins` 注意点、源头重绘又宽又矮的图、多面板堆叠，以及渲染后生成 contact sheet 的诊断流程。
 
-## Notes
+## 注意事项
 
-- The skill is designed for polishing and restructuring, not for fabricating scientific content.
-- The main strategic rules live in `SKILL.md`; the reference files should not overrule them.
-- The reference files are intentionally selective. They are meant to guide choices, not to encourage boilerplate copying.
+- 该技能用于润色和结构重组，不用于编造科学内容。
+- 主要策略规则位于 `SKILL.md`；参考文件不应覆盖这些规则。
+- 参考文件有意保持选择性，用于辅助判断，而不是鼓励套话堆砌。

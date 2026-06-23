@@ -7,111 +7,56 @@ description: >-
   restricted or sensitive data, source data, supplementary datasets, DataCite-style dataset
   references, FAIR metadata for academic publication, or Chinese-to-English data availability
   wording for Chinese-speaking authors preparing Nature-family submissions.
+  Also trigger on general academic-writing data needs even without the word "Nature", such as
+  writing a data availability statement for any journal, code/data sharing sections, repository
+  selection while writing a paper, and Chinese phrasings like 数据可用性声明、数据可用性、
+  数据共享、代码可用性、学术写作数据声明、写数据声明、数据存放、数据仓库选择.
+version: 2.0.0
+author: Yuan1z skill, refactored into static/dynamic layers
 ---
 
-# Nature Data Availability Skill
+# Nature Data Availability — Router
 
-Use this skill to turn a manuscript's supporting data into a transparent, Nature-ready data
-availability package: statement text, repository plan, dataset citations, and missing-information
-flags.
+This skill is split into two layers:
 
-The governing policy layer is Springer Nature / Nature Portfolio data policy. The implementation
-layer is FAIR data practice and DataCite-style citation metadata.
+- A **static layer** under `static/` that holds versioned, reusable content fragments (the default stance and source hierarchy, the Chinese-user operating mode, and the workflow with output format).
+- A **dynamic layer** (this file plus `manifest.yaml`) that loads the core every time and reaches for the deeper policy/repository/FAIR references only when a step needs them.
 
-## Chinese-user operating mode
+Do not try to apply the data-availability logic from memory or from this router. Always load fragments from disk as described below.
 
-When the user writes in Chinese, provides a Chinese manuscript note, or asks for "中文对应",
-"中英对照", "数据可用性声明", "数据获取声明", "原始数据", "数据存储库", or "受限数据":
+## Routing protocol
 
-- Accept Chinese input naturally, but draft the final submission-ready statement in English unless
-  the user explicitly asks for Chinese only.
-- Preserve a short Chinese explanation of unresolved decisions when it helps the author act.
-- Translate intent, not wording. Chinese phrases such as "可向通讯作者索取" are usually too vague
-  for Nature-style English unless the restriction and access process are specified.
-- Convert Chinese repository/status descriptions into precise publication terms:
-  `数据可用性声明` -> `Data Availability`; `原始数据` -> `raw data`;
-  `处理后数据` -> `processed data`; `源数据` -> `source data`;
-  `补充材料` -> `Supplementary Information`; `受限数据` -> `restricted data`;
-  `合理请求` -> `reasonable request`, only with reason and review route.
-- Use `references/chinese-author-alignment.md` for Chinese terminology, common CN-to-EN failure
-  modes, and bilingual intake questions.
+Follow these four steps every time the skill is invoked.
 
-## Default stance
+### 1. Load the manifest and the core layer
 
-- Treat the Data Availability statement as a link between the paper's claims and the evidence
-  needed to inspect, reproduce, or reuse them.
-- Do not invent DOIs, accession numbers, repository names, licences, embargo dates, ethics
-  approvals, access committees, or data-use conditions.
-- Prefer public, discipline-specific repositories. Use generalist or institutional repositories
-  only when no suitable community repository exists.
-- Describe both newly generated data and reused third-party data.
-- If data cannot be openly shared, state why, who controls access, how requests are evaluated,
-  and what metadata or representative data can still be public.
-- Separate data, code, materials, and protocols unless the journal asks for a combined
-  availability section.
-- Keep this skill focused on availability and metadata. Do not rewrite methods, analyze
-  statistics, or polish the manuscript unless the user asks for those tasks separately.
-- Flag "available upon request" as weak unless there is a specific legal, ethical, commercial, or
-  third-party restriction.
+Read [manifest.yaml](manifest.yaml). Then read every file listed under `always_load`:
 
-## Workflow
+- `static/core/stance.md` — what the data-availability package is, the default stance, and the source hierarchy.
+- `static/core/chinese-mode.md` — how to operate when the user writes in Chinese (accept Chinese, draft English, convert terms precisely).
+- `static/core/workflow.md` — the eight-step workflow and the output format.
 
-1. Identify the target journal and article type. If journal-specific instructions conflict with
-   this skill, follow the journal.
-2. Inventory every dataset needed to support the main and supplementary results:
-   generated raw data, processed data, figure source data, secondary data, software outputs,
-   models, tables, images, and files underlying statistical analysis.
-3. Classify each dataset into one access route:
-   `public repository`, `controlled access repository`, `within paper or supplement`,
-   `reused public source`, `third-party restricted`, `available on justified request`,
-   or `not applicable`.
-4. Choose repository and identifier strategy before drafting text. Prefer DOI, accession number,
-   Handle, ARK, or stable repository record over personal websites and temporary cloud links.
-5. Draft the Data Availability statement using explicit dataset-to-location mapping.
-6. Add formal dataset citations for public data that support conclusions.
-7. Run the FAIR and metadata audit before finalizing.
-8. Return ready-to-paste statement text plus any unresolved fields the author must confirm.
+### 2. No content axis — confirm journal and language inline
 
-## Output format
+Unlike nature-writing or nature-figure, nature-data has no fragment axis. Its variation is handled at runtime, not by loading different content bodies:
 
-Unless the user asks for another format, return:
+- **journal/article type** — if journal-specific instructions conflict with this skill, follow the journal.
+- **access route** — each dataset is classified into one route (public repository, controlled access, within paper, reused public, third-party restricted, justified request, or not applicable).
+- **user language** — if the user writes Chinese, follow `core/chinese-mode.md` and add the 中文核对 block.
 
-```text
-Data Availability
-[ready-to-paste statement]
+### 3. Run the workflow
 
-Repository and citation actions
-- [specific actions or "None"]
+Follow the eight-step workflow in `core/workflow.md`: identify the journal, inventory every supporting dataset, classify each into one access route, choose repository and identifier strategy before drafting, draft the statement with explicit dataset-to-location mapping, add formal dataset citations, run the FAIR/metadata audit, and return ready-to-paste text plus unresolved fields.
 
-Missing information / risk flags
-- [specific flags or "None"]
+Do not invent DOIs, accession numbers, repository names, licences, embargo dates, ethics approvals, access committees, or data-use conditions. Flag "available upon request" as weak unless there is a specific legal, ethical, commercial, or third-party restriction.
 
-中文核对
-- [用中文列出作者需要确认的字段或 "无"]
-```
+### 4. Reach for references only when needed
 
-When auditing an existing statement, lead with blocking issues first, then provide a revised
-version.
+The files under `references/` are deep references, not defaults. Open them on demand per the `references.on_demand` table in the manifest — for example `references/policy-principles.md` for the governing rules and edge cases, `references/repository-and-identifiers.md` for repository/accession/DOI choices, `references/statement-patterns.md` for ready-to-adapt statements, `references/fair-metadata-checklist.md` for the FAIR audit, `references/chinese-author-alignment.md` for Chinese wording, and `references/source-basis.md` to justify a rule with its official source.
 
-## Related files
+## Why this split
 
-| File | Open when |
-|---|---|
-| [references/policy-principles.md](references/policy-principles.md) | You need the governing Nature/Springer Nature data-sharing rules or edge-case policy logic |
-| [references/chinese-author-alignment.md](references/chinese-author-alignment.md) | The user writes in Chinese, needs bilingual wording, or provides Chinese availability notes |
-| [references/statement-patterns.md](references/statement-patterns.md) | You need ready-to-adapt Data Availability statement patterns |
-| [references/repository-and-identifiers.md](references/repository-and-identifiers.md) | You need repository choice, accession, DOI, embargo, versioning, or dataset citation guidance |
-| [references/fair-metadata-checklist.md](references/fair-metadata-checklist.md) | You need FAIR checks, README metadata, file organization, licences, provenance, or DataCite fields |
-| [references/source-basis.md](references/source-basis.md) | You need to justify rules with official sources or check which source supports which rule |
-
-## Source hierarchy
-
-Use sources in this order:
-
-1. Target journal instructions and submission system requirements.
-2. Nature Portfolio / Springer Nature data, code, materials, and reporting policies.
-3. Repository-specific requirements and domain community standards.
-4. FAIR principles and DataCite metadata practice.
-
-If a policy detail may have changed, verify the current journal page before giving final
-submission advice.
+- The static layer is versioned and reviewable; the core stays small for a normal statement.
+- The dynamic layer keeps each invocation cheap: the policy, repository, and FAIR depth load only when a step needs them.
+- The router itself is short on purpose. Update fragments and references, not this file, when adding scope.
+- This structure mirrors `nature-writing`, `nature-polishing`, `nature-reader`, `nature-paper2ppt`, `nature-figure`, `nature-citation`, and `nature-response`.

@@ -1,69 +1,73 @@
-# `nature-response` skill
+# `nature-response` 技能
 
-A reviewer-response skill for drafting, auditing, and revising point-by-point response
-letters for Nature-family and high-impact journal manuscript revisions.
+`nature-response` 用于起草、审查和修改逐点回复审稿人的 response letter，适用于 Nature 系列和其他高影响力期刊的返修场景。
 
-This skill is bilingual-aware. It accepts Chinese or English reviewer comments, editor
-letters, author notes, and draft rebuttals, then prepares an English response package with
-Chinese author confirmation notes when useful.
+该技能支持中英文输入。它可以接收中文或英文审稿意见、编辑决定信、作者修改说明和 rebuttal 草稿，并生成英文回复包；需要作者确认的信息会用中文提示。
 
-## What it does
+## 功能
 
-- splits reviewer comments into stable IDs such as `R1.1`, `R1.2`, and `R2.1`
-- classifies each concern by type, severity, action, evidence need, and risk
-- creates a response strategy summary before drafting prose
-- routes requests into drafting, auditing, revising, triage-only, or appeal-like handling
-- assigns editor instruction IDs such as `E.1` before reviewer IDs when the decision letter includes editor instructions
-- drafts an editor-readable point-by-point response letter
-- maps each response to a manuscript action, location, or missing-information flag
-- rewrites defensive or vague author notes into professional response language
-- handles difficult cases such as out-of-scope experiments, factual reviewer errors, conflicting reviewers, statistical critiques, and compliance concerns
-- flags missing experiments, analyses, line numbers, citations, figure panels, and manuscript changes instead of inventing them
+- 将审稿意见拆分为稳定编号，例如 `R1.1`、`R1.2`、`R2.1`。
+- 按类型、严重程度、所需行动、证据需求和风险对每条意见分类。
+- 在正式起草前生成 response strategy summary。
+- 根据任务需要路由到起草、审查、修改、只做分诊或类似 appeal 的处理。
+- 如果决定信包含编辑要求，先生成 `E.1` 等 editor instruction ID，再处理 reviewer ID。
+- 起草编辑可读的逐点回复信。
+- 将每条回复映射到手稿修改动作、修改位置或缺失信息标记。
+- 把防御性或含糊的作者笔记改写成专业回复语言。
+- 处理困难情况，例如超出范围的实验、审稿人事实错误、审稿人意见冲突、统计质疑和合规问题。
+- 标记缺失实验、分析、行号、引用、图版和手稿改动，不能编造这些内容。
 
-## When to use
+## 适用场景
 
-- preparing a Nature, Nature Portfolio, Springer Nature, or similar high-impact journal revision
-- responding to major or minor revision comments
-- turning reviewer comments into a manuscript change checklist
-- auditing a draft rebuttal for missing responses, tone problems, or unsupported claims
-- converting Chinese author notes into submission-ready English point-by-point replies
-- deciding how to respectfully disagree with a reviewer or explain a scope boundary
+- 准备 Nature、Nature Portfolio、Springer Nature 或类似高影响力期刊返修。
+- 回复大修或小修意见。
+- 将审稿意见转化为手稿修改清单。
+- 审查 rebuttal 草稿中遗漏回复、语气问题或无支撑声称。
+- 将中文作者笔记转成可提交的英文逐点回复。
+- 判断如何礼貌反驳审稿人，或解释研究范围边界。
 
-## What it returns
+## 默认返回内容
 
-Unless the user asks for another format, the skill returns:
+除非用户要求其他格式，技能会返回：
 
 1. response strategy summary
 2. comment-response tracker
 3. draft point-by-point response letter
 4. manuscript change checklist
 5. missing information / risk flags
-6. Chinese confirmation notes when the user writes in Chinese
+6. 用户使用中文时的中文确认说明
 
-## Core rules
+## 核心规则
 
-- Preserve reviewer comments faithfully before responding.
-- Answer every concern, cross-reference it, or mark it unresolved.
-- Map every response to a concrete action such as `ACCEPT_TEXT`, `ACCEPT_ANALYSIS`, `SOFTEN_CLAIM`, `DISAGREE`, or `AUTHOR_INPUT_NEEDED`.
-- Do not invent experiments, analyses, citations, line numbers, figure panels, supplementary items, reviewer identities, editor instructions, or manuscript changes.
-- Use cooperative, evidence-forward, non-defensive language.
-- Treat the response letter as an editor-facing verification document, not a politeness exercise.
+- 回复前必须忠实保留审稿意见。
+- 每条意见都要得到回应、交叉引用或标记为未解决。
+- 每条回复必须映射到具体动作，例如 `ACCEPT_TEXT`、`ACCEPT_ANALYSIS`、`SOFTEN_CLAIM`、`DISAGREE` 或 `AUTHOR_INPUT_NEEDED`。
+- 不得编造实验、分析、引用、行号、图版、补充材料、审稿人身份、编辑要求或手稿修改。
+- 使用合作、证据优先、非防御性的语言。
+- 将 response letter 视为给编辑核查的验证文件，而不只是礼貌文本。
 
-## Source hierarchy
+## 来源层级
 
-- Target journal instructions and decision-letter requirements.
-- Nature / Nature Portfolio / Springer Nature revision and peer-review process guidance.
-- Springer Nature editorial advice on rebuttal letters.
-- Local manuscript facts supplied by the author.
+- 目标期刊说明与决定信要求。
+- Nature / Nature Portfolio / Springer Nature 返修和同行评审流程说明。
+- Springer Nature 关于 rebuttal letter 的编辑建议。
+- 作者提供的本地手稿事实。
 
-The source basis is summarized in `references/source-basis.md` with URLs, rule summaries, and source-type labels.
+来源依据汇总在 `references/source-basis.md` 中，包含 URL、规则摘要和来源类型标签。
 
-## File structure
+## 文件结构
+
+该技能采用 router/static-dynamic 结构：`SKILL.md` 负责短路由，`manifest.yaml` 加载常驻 core 和按需 references。`nature-response` 是线性工作流，没有内容轴。
 
 ```text
 nature-response/
 ├── README.md
-├── SKILL.md
+├── SKILL.md                     # 短路由
+├── manifest.yaml                # always_load core + 按需 references
+├── static/
+│   └── core/                    # 始终加载
+│       ├── stance.md            # 目的、默认立场、红线、来源层级
+│       └── workflow.md          # 输入类型、10 步工作流、输出格式
 ├── references/
 │   ├── source-basis.md
 │   ├── response-structure.md
@@ -88,7 +92,6 @@ nature-response/
     └── minor-revision.md
 ```
 
-## Status
+## 状态
 
-Beta. The behavior is defined by synthetic Markdown fixtures and examples. The skill should remain
-below Stable until it has been validated on real anonymized revision packages with author permission.
+Beta。当前行为由合成 Markdown fixtures 和示例定义。只有在经过真实匿名返修包、且获得作者许可的验证后，才应提升到 Stable。

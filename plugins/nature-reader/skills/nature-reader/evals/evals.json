@@ -5,7 +5,7 @@
       "id": 1,
       "prompt": "把这篇 Nature 风格 PDF 做成全文中英文对照阅读稿：不要只做摘要或前几页。每个正文段落要有 Original 和中文翻译，图表要裁剪出来并插到首次实质引用附近，英文图注和中文图注都要保留，每一段都要能点回原文位置。",
       "expected_output": "A full-paper Markdown reader with paragraph-level Original/中文 pairs, stable source anchors, cropped figure/table assets, figure cards near first substantive mentions, bilingual captions, and grounded follow-up pointers.",
-      "files": ["$PAPER_PATH/s41586-026-10452-4.pdf"]
+      "files": ["/Users/yuanyz/nature-read/s41586-026-10452-4.pdf"]
     },
     {
       "id": 2,

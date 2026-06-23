@@ -1,33 +1,13 @@
 # Chinese Author Workflow
 
-Use this reference when the user's input is Chinese, mixed Chinese-English, or
-written as lab notes.
+Deep reference for Chinese, mixed Chinese-English, or lab-note input.
 
-## Translate intent, not syntax
-
-Chinese academic notes often place background, motivation, method and implication
-in one long sentence. Before drafting English, split the note into:
-
-- claim
-- evidence
-- condition
-- comparison
-- implication
-- limitation
-
-Then write English in the order required by the section, not in the order of the
-Chinese sentence.
-
-## Common repairs
-
-| Chinese-draft pattern | Repair |
-|---|---|
-| Broad importance before a clear object | Name the system or problem earlier |
-| Method list before research gap | Move the gap before the method |
-| `显著提高/明显改善` without baseline | Add the comparator or soften the verb |
-| `首次/创新性` without scope | Replace with a bounded novelty claim |
-| Mechanism inferred from correlation | Use `suggests`, `is consistent with`, or ask for mechanistic evidence |
-| Results mixed with implications | Put observation in Results and meaning in Discussion |
+This extends `static/fragments/language/zh-to-en.md`. That fragment already holds
+the base rule (**translate intent, not syntax** — split each note into claim /
+evidence / condition / comparison / implication / limitation, then reorder for
+the section) and the common-repair table. Do not repeat those here. Open this
+file only when the fragment is not enough: for the drafting sequence below and
+the edge-case repairs.
 
 ## Drafting from author notes
 
@@ -40,3 +20,16 @@ Use this sequence:
 
 Do not make the English sound like a literal translation. Make it sound like a
 Nature-style manuscript paragraph supported by the user's facts.
+
+## Edge-case repairs (beyond the fragment table)
+
+These patterns come from Chinese having no tense, no obligatory plural, and a
+topic-comment structure. They are the ones the base table does not cover.
+
+| Chinese-draft pattern | Repair |
+|---|---|
+| No tense marking | Choose tense explicitly: past for what was done/found, present for established facts and what the figure shows |
+| No obligatory plural | Decide singular vs plural per noun; do not leave bare count nouns (`sample` → `samples` / `each sample`) |
+| Stacked `的…的` nested modifiers | Break into a relative clause or a separate sentence; do not pile modifiers before the head noun |
+| Topic-comment opener (`关于X，…`) | Rewrite as subject-verb-object; make the topic the grammatical subject or drop it |
+| Every sentence opening with `本文 / 我们` | Vary openings; lead some sentences with the result or the object, not the agent |

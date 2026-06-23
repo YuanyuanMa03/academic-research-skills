@@ -6,122 +6,58 @@ description: >-
   letters, revision notes, response drafts, or asks how to respond to major/minor
   revision requests, rebuttal letters, response to reviewers, peer-review reports,
   审稿意见回复, 逐点回复, 修回信, 大修回复, 小修回复, or 如何回复 reviewer.
-version: 0.1.0
+  Also trigger on general peer-review response needs during academic writing/revision even without
+  the word "Nature", such as replying to reviewers for any journal, writing a rebuttal/response
+  letter, handling revision comments, and Chinese phrasings like 回复审稿人、审稿回复、返修、
+  修改稿回复、写rebuttal、回应审稿意见、应对审稿.
+version: 1.0.0
 status: Beta
+author: Community contribution, refactored into static/dynamic layers
 ---
 
-# Nature Reviewer Response Skill
+# Nature Reviewer Response — Router
 
-Use this skill to convert editor decision letters, reviewer comments, author notes, or
-draft rebuttals into an auditable point-by-point response package for manuscript revisions.
+This skill is split into two layers:
 
-The response letter is an editor-facing verification document. The goal is to show that every
-reviewer concern has been understood, addressed, and mapped to a concrete manuscript change,
-justified scientific response, or unresolved author action.
+- A **static layer** under `static/` that holds versioned, reusable content fragments (the default stance and red lines, and the response workflow with output format).
+- A **dynamic layer** (this file plus `manifest.yaml`) that loads the core every time and reaches for the deeper response references only when a step needs them.
 
-## Default stance
+Do not try to apply the response logic from memory or from this router. Always load fragments from disk as described below.
 
-- Preserve each reviewer comment faithfully before responding.
-- Every reviewer concern must be answered, cross-referenced, or explicitly marked as unresolved.
-- Map every response to manuscript evidence, a revision location, a justified disagreement, or `AUTHOR_INPUT_NEEDED`.
-- Do not invent experiments, analyses, citations, line numbers, figure panels, supplementary materials, editor instructions, reviewer identities, or manuscript changes.
-- Prefer concise, evidence-linked replies over long defensive explanations.
-- When disagreeing, acknowledge the concern first, then give a scientific or scope-based reason.
-- When a reviewer misunderstood the manuscript, first consider whether the manuscript presentation caused the misunderstanding.
-- Treat rebuttal letters as potentially public review artifacts; write with professional tone and traceability.
+## Routing protocol
 
-## Accepted inputs
+Follow these four steps every time the skill is invoked.
 
-The skill may receive:
+### 1. Load the manifest and the core layer
 
-- editor decision letter
-- reviewer comments
-- previous response draft
-- manuscript change notes
-- tracked-change summary
-- line or page numbers
-- figure, table, and supplement list
-- author notes in Chinese or English
-- journal name and article type
+Read [manifest.yaml](manifest.yaml). Then read every file listed under `always_load`:
 
-If reviewer boundaries or comment segmentation are ambiguous, flag the ambiguity instead of
-inventing reviewer structure.
+- `static/core/stance.md` — the editor-facing purpose, the default stance, the red lines, and the source hierarchy that apply to every response job.
+- `static/core/workflow.md` — accepted inputs, the ten-step workflow, and the output package format.
 
-## Workflow
+### 2. No content axis — identify mode and language inline
 
-1. Identify task mode and input readiness: `draft`, `audit`, `revise`, `triage-only`, or `appeal-like`.
-2. Identify decision type: minor revision, major revision, revise-and-resubmit, transfer after review, or unclear.
-3. Extract editor instructions first and assign IDs such as `E.1`, then split reviewer comments with IDs such as `R1.1`, `R1.2`, and `R2.1`.
-4. Classify each item by category, severity, action label, missing input, readiness state, and risk.
-5. Create a response strategy summary before drafting prose.
-6. Draft responses using preserved reviewer comments unless the mode is `triage-only` or `appeal-like`.
-7. Map each claimed change to manuscript location, figure, table, supplement, citation, or explicit placeholder.
-8. Flag missing author input rather than fabricating details.
-9. Run QA for completeness, traceability, factuality, tone, and unresolved risk.
-10. Return the response package with package readiness: `ready_to_submit`, `draft_with_placeholders`, `needs_author_input`, or `blocked`.
+Unlike nature-writing or nature-figure, nature-response has no fragment axis. Its variation is identified at runtime, not by loading different content bodies:
 
-## Output format
+- **task mode** — `draft` / `audit` / `revise` / `triage-only` / `appeal-like`.
+- **decision type** — minor revision, major revision, revise-and-resubmit, transfer after review, or unclear.
+- **user language** — if the user writes Chinese, also produce the 中文核对 block.
 
-Unless the user asks for another format, return:
+Use `references/intake-and-routing.md` to fix the task mode, minimum inputs, and readiness state before drafting. Route appeal-like cases separately; do not draft an appeal as the default path.
 
-```text
-Response strategy summary
-- Decision type:
-- Overall posture:
-- Major risks:
-- Suggested ordering:
+### 3. Run the workflow
 
-Comment-response tracker
-| ID | Reviewer concern | Type | Severity | Proposed action | Missing author input |
-|---|---|---|---|---|---|
+Follow the ten-step workflow in `core/workflow.md`: identify mode and decision type, extract editor instructions (IDs `E.1`) then reviewer comments (`R1.1`, `R2.1`), classify each item, build a strategy summary, draft point-by-point responses from the preserved comments, map every claimed change to a manuscript location or an explicit placeholder, flag missing author input, run QA, and return the package with a readiness state.
 
-Draft point-by-point response letter
-[editor-readable English response]
+Never invent experiments, citations, line numbers, figure panels, supplementary items, editor instructions, or manuscript changes. Mark anything the author must supply as `AUTHOR_INPUT_NEEDED`.
 
-Manuscript change checklist
-- [specific manuscript changes or placeholders]
+### 4. Reach for references only when needed
 
-Missing information / risk flags
-- [specific unresolved items or "None"]
+The files under `references/` are deep references, not defaults. Open them on demand per the `references.on_demand` table in the manifest — for example `references/comment-taxonomy.md` to classify comments, `references/action-mapping.md` for tracker fields, `references/tone-and-stance.md` for disagreement wording, `references/difficult-cases.md` for impossible experiments / conflicting reviewers / appeal-like cases, `references/chinese-author-alignment.md` for Chinese author notes, and `references/qa-checklist.md` before finalizing.
 
-中文核对
-- [when the user writes in Chinese; otherwise omit unless useful]
-```
+## Why this split
 
-## Red lines
-
-- Do not ignore any reviewer comment.
-- Do not rephrase reviewer comments in a way that changes their meaning.
-- Do not claim a revision was made unless the user supplied it.
-- Do not invent line numbers, figure panels, citations, statistical results, or supplementary items.
-- Do not use hostile or accusatory language.
-- Do not cite time, money, or convenience as the primary reason for not doing a requested experiment.
-- Do not hide limitations.
-- Do not generate an appeal letter as the default path. Route appeal-like cases separately.
-- Do not generate a cover letter in the MVP. Mention it only as adjacent revision-package material when relevant.
-
-## Related files
-
-| File | Open when |
-|---|---|
-| [references/intake-and-routing.md](references/intake-and-routing.md) | Before drafting, to identify task mode, minimum inputs, editor IDs, readiness state, and clarifying-question need |
-| [references/source-basis.md](references/source-basis.md) | You need source hierarchy, rule provenance, or policy-vs-advice boundaries |
-| [references/response-structure.md](references/response-structure.md) | You need the response package format or point-by-point letter anatomy |
-| [references/comment-taxonomy.md](references/comment-taxonomy.md) | You need to classify reviewer comments by category and severity |
-| [references/action-mapping.md](references/action-mapping.md) | You need action labels, tracker fields, and missing-input states |
-| [references/tone-and-stance.md](references/tone-and-stance.md) | You need recommended language, forbidden phrasing, or disagreement tone |
-| [references/chinese-author-alignment.md](references/chinese-author-alignment.md) | The user writes in Chinese or provides Chinese author notes |
-| [references/difficult-cases.md](references/difficult-cases.md) | The comments involve impossible experiments, factual errors, conflicting reviewers, citations, statistics, compliance, transfer, or appeal-like cases |
-| [references/qa-checklist.md](references/qa-checklist.md) | Before finalizing an output or auditing a draft response |
-
-## Source hierarchy
-
-Use sources in this order:
-
-1. Target journal instructions and the editor decision letter.
-2. Nature / Nature Portfolio / Springer Nature revision and peer-review process guidance.
-3. Springer Nature editorial advice on rebuttal letters.
-4. Local manuscript facts supplied by the author.
-
-If a policy detail may have changed, verify the current journal page before giving final
-submission advice.
+- The static layer is versioned and reviewable; the core stays small for a normal response.
+- The dynamic layer keeps each invocation cheap: the difficult-case, taxonomy, and QA depth load only when a step needs them.
+- The router itself is short on purpose. Update fragments and references, not this file, when adding scope.
+- This structure mirrors `nature-writing`, `nature-polishing`, `nature-reader`, `nature-paper2ppt`, `nature-figure`, and `nature-citation`.

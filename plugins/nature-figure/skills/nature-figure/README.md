@@ -1,118 +1,102 @@
-# nature-figure skill
+# `nature-figure` 技能
 
-Submission-grade scientific figures for Nature-tier journals and high-impact academic venues,
-with both Python and R plotting tracks.
+`nature-figure` 用于生成可投稿级科研图，面向 Nature 级期刊和高影响力学术场景，同时支持 Python 与 R 两条绘图路径。
 
-The skill starts from a figure contract: core conclusion, evidence hierarchy, archetype,
-backend choice, journal/export constraints, statistics, and source-data traceability.
-Plotting templates are used only after the scientific logic is clear.
+该技能从“图件契约”开始，而不是直接套模板。开始绘图前，必须明确核心结论、证据层级、图件原型、后端选择、期刊与导出约束、统计说明和 source-data 可追溯性。只有在科学逻辑明确后，才使用绘图模板。
 
-Python remains the best-supported low-level layout path through `matplotlib`, `seaborn`,
-`subplot_mosaic`, and `statsmodels`. R is supported through `ggplot2`, `patchwork`,
-`ComplexHeatmap`, `ggrepel`, `svglite`, `cairo_pdf`, and `ragg`. If private template
-collections are used, their paths, filenames, and provenance must not appear in
-user-facing output.
+Python 路径主要使用 `matplotlib`、`seaborn`、`subplot_mosaic` 和 `statsmodels`，适合精细低层布局控制。R 路径使用 `ggplot2`、`patchwork`、`ComplexHeatmap`、`ggrepel`、`svglite`、`cairo_pdf` 和 `ragg`。如果使用私有模板集合，不得在面向用户的输出中暴露私有路径、文件名或来源信息。
 
-Derived from production scripts in [figures4papers](https://github.com/ChenLiu-1996/figures4papers)
-(published in *Nature Machine Intelligence* and top ML/bioinformatics venues).
-The original figures4papers demo scripts and preview images are also bundled under
-`assets/figures4papers/` for pattern-level adaptation.
+该技能参考了 [figures4papers](https://github.com/ChenLiu-1996/figures4papers) 中来自 *Nature Machine Intelligence* 和顶级机器学习/生物信息学论文的生产脚本。原始 demo 脚本和预览图也打包在 `assets/figures4papers/` 中，供模式级改写使用。
 
 ---
 
-## Example output gallery
+## 示例图库
 
-The images below are simulated data mockups generated with this skill's rules:
-editable SVG-first export, restrained semantic palettes, lowercase panel labels, and
-asymmetric multi-panel information architecture. They are PNG previews for README display;
-production use should still export SVG/PDF from the plotting script.
+下面的图像是按本技能规则生成的模拟数据 mockup：优先导出可编辑 SVG、使用克制的语义配色、小写 panel label，并采用非对称多面板信息结构。README 中展示的是 PNG 预览；正式使用时仍应从绘图脚本导出 SVG/PDF。
 
-| Figure | Preview | What the skill demonstrates |
+| 图件 | 预览 | 展示能力 |
 |--------|---------|-----------------------------|
-| Material design and physical validation | <a href="assets/gallery/fig1-material-mechanism-rich.png"><img src="assets/gallery/fig1-material-mechanism-rich.png" width="260" alt="Material design and physical validation"></a> | Schematic-led composite, SEM-like image panel, rheology, release kinetics, retention map, correlation and endpoint quantification |
-| Spatial retention and uptake | <a href="assets/gallery/fig2-spatial-imaging-rich.png"><img src="assets/gallery/fig2-spatial-imaging-rich.png" width="260" alt="Spatial retention and uptake"></a> | Dark microscopy plate, channel rows, zoom crops, depth profiles, uptake histograms, 3D penetration heatmap and image-derived correlation |
-| In vivo efficacy and tolerability | <a href="assets/gallery/fig3-in-vivo-efficacy-rich.png"><img src="assets/gallery/fig3-in-vivo-efficacy-rich.png" width="260" alt="In vivo efficacy and tolerability"></a> | Experimental timeline, longitudinal tumour curves, individual growth traces, waterfall response, forest plot, histology, immune composition and toxicity panels |
-| Single-cell systems figure | <a href="assets/gallery/fig4-single-cell-systems-rich.png"><img src="assets/gallery/fig4-single-cell-systems-rich.png" width="260" alt="Single-cell systems figure"></a> | UMAP-style embedding, composition, marker heatmap, pseudotime, volcano plot, enrichment, ligand-receptor bubble matrix and spatial niche adjacency |
-| Perturbation validation | <a href="assets/gallery/fig5-validation-perturbation-rich.png"><img src="assets/gallery/fig5-validation-perturbation-rich.png" width="260" alt="Perturbation validation"></a> | Mechanistic perturbation timeline, relapse endpoint, polar summary, dose response, synergy matrix, biodistribution, cytokines, flow-like scatter and safety score |
+| 材料设计与物理验证 | <a href="assets/gallery/fig1-material-mechanism-rich.png"><img src="assets/gallery/fig1-material-mechanism-rich.png" width="260" alt="Material design and physical validation"></a> | 机制示意主导的复合图、SEM-like 图像面板、流变、释放动力学、滞留图、相关性与终点定量 |
+| 空间滞留与摄取 | <a href="assets/gallery/fig2-spatial-imaging-rich.png"><img src="assets/gallery/fig2-spatial-imaging-rich.png" width="260" alt="Spatial retention and uptake"></a> | 深色显微图版、通道行、局部放大、深度剖面、摄取直方图、3D 穿透热图和图像衍生相关性 |
+| 体内疗效与耐受性 | <a href="assets/gallery/fig3-in-vivo-efficacy-rich.png"><img src="assets/gallery/fig3-in-vivo-efficacy-rich.png" width="260" alt="In vivo efficacy and tolerability"></a> | 实验时间线、肿瘤纵向曲线、个体生长轨迹、waterfall response、forest plot、组织学、免疫组成和毒性面板 |
+| 单细胞系统图 | <a href="assets/gallery/fig4-single-cell-systems-rich.png"><img src="assets/gallery/fig4-single-cell-systems-rich.png" width="260" alt="Single-cell systems figure"></a> | UMAP-style embedding、组成、marker heatmap、pseudotime、volcano plot、enrichment、ligand-receptor bubble matrix 和空间邻域关系 |
+| 扰动验证 | <a href="assets/gallery/fig5-validation-perturbation-rich.png"><img src="assets/gallery/fig5-validation-perturbation-rich.png" width="260" alt="Perturbation validation"></a> | 机制扰动时间线、复发终点、polar summary、剂量反应、synergy matrix、生物分布、细胞因子、flow-like scatter 和安全评分 |
 
-**Gallery file policy**  
-Keep only lightweight PNG previews in `assets/gallery/`. Do not commit large generated
-SVG/PDF outputs unless they are needed for a tutorial, because real users should regenerate
-editable outputs from source data and scripts.
+**图库文件策略**：`assets/gallery/` 中只保留轻量 PNG 预览。除非教程确实需要，不提交大型生成 SVG/PDF，因为真实用户应从源数据和脚本重新生成可编辑输出。
 
 ---
 
-## Chart-type atlas
+## 图表类型图谱
 
-The gallery below classifies the skill by chart family. Each preview is a dense 4 x 4
-atlas of small panels, designed to show the range of visual grammars that can be combined
-inside a larger *Nature*-style result figure.
+下面的图库按 chart family 分类。每张预览都是紧凑的 4 x 4 小面板 atlas，用来展示可组合进 Nature 风格结果图的视觉语法范围。
 
-| Type | Preview | Common use |
+| 类型 | 预览 | 常见用途 |
 |------|---------|------------|
-| Bar charts | <a href="assets/chart-atlas/atlas-01-bar-charts.png"><img src="assets/chart-atlas/atlas-01-bar-charts.png" width="240" alt="Bar chart atlas"></a> | Group comparisons, signed deltas, grouped-within-grouped designs, stacked composition |
-| Line and longitudinal trends | <a href="assets/chart-atlas/atlas-02-line-trends.png"><img src="assets/chart-atlas/atlas-02-line-trends.png" width="240" alt="Line chart atlas"></a> | Time courses, uncertainty ribbons, intervention marks, individual traces |
-| Heatmaps | <a href="assets/chart-atlas/atlas-03-heatmaps.png"><img src="assets/chart-atlas/atlas-03-heatmaps.png" width="240" alt="Heatmap atlas"></a> | Z-score matrices, sequential abundance maps, annotated tables, clustered blocks |
-| Scatter and bubble plots | <a href="assets/chart-atlas/atlas-04-scatter-bubble.png"><img src="assets/chart-atlas/atlas-04-scatter-bubble.png" width="240" alt="Scatter and bubble atlas"></a> | Correlation, clusters, volcano-style tests, quadrant summaries, third-variable bubbles |
-| Radar and polar charts | <a href="assets/chart-atlas/atlas-05-radar-polar.png"><img src="assets/chart-atlas/atlas-05-radar-polar.png" width="240" alt="Radar and polar atlas"></a> | Multi-axis benchmarking, circular summaries, polar histograms, directional density |
-| Distribution plots | <a href="assets/chart-atlas/atlas-06-distributions.png"><img src="assets/chart-atlas/atlas-06-distributions.png" width="240" alt="Distribution plot atlas"></a> | Histograms, violins, boxes, ridgelines and sample-level spread |
-| Forest and interval plots | <a href="assets/chart-atlas/atlas-07-forest-interval.png"><img src="assets/chart-atlas/atlas-07-forest-interval.png" width="240" alt="Forest and interval atlas"></a> | Effect sizes, confidence intervals, point ranges, paired slope comparisons |
-| Area and stacked trends | <a href="assets/chart-atlas/atlas-08-area-stacked.png"><img src="assets/chart-atlas/atlas-08-area-stacked.png" width="240" alt="Area and stacked trend atlas"></a> | Filled trajectories, stacked shares, cumulative curves, stream-like compositions |
-| Image plates | <a href="assets/chart-atlas/atlas-09-image-plates.png"><img src="assets/chart-atlas/atlas-09-image-plates.png" width="240" alt="Image plate atlas"></a> | Microscopy channels, overlays, crops, scale bars and dark-panel layouts |
-| Network and matrix charts | <a href="assets/chart-atlas/atlas-10-network-matrix.png"><img src="assets/chart-atlas/atlas-10-network-matrix.png" width="240" alt="Network and matrix atlas"></a> | Bubble matrices, adjacency maps, node-link diagrams and bipartite interaction panels |
+| 柱状图 | <a href="assets/chart-atlas/atlas-01-bar-charts.png"><img src="assets/chart-atlas/atlas-01-bar-charts.png" width="240" alt="Bar chart atlas"></a> | 组间比较、有符号差值、组内分组设计、堆叠组成 |
+| 折线与纵向趋势 | <a href="assets/chart-atlas/atlas-02-line-trends.png"><img src="assets/chart-atlas/atlas-02-line-trends.png" width="240" alt="Line chart atlas"></a> | 时间过程、不确定性带、干预标记、个体轨迹 |
+| 热图 | <a href="assets/chart-atlas/atlas-03-heatmaps.png"><img src="assets/chart-atlas/atlas-03-heatmaps.png" width="240" alt="Heatmap atlas"></a> | Z-score 矩阵、连续丰度图、带注释表格、聚类块 |
+| 散点与气泡图 | <a href="assets/chart-atlas/atlas-04-scatter-bubble.png"><img src="assets/chart-atlas/atlas-04-scatter-bubble.png" width="240" alt="Scatter and bubble atlas"></a> | 相关性、簇、volcano-style 检验、象限总结、第三变量编码 |
+| 雷达与极坐标图 | <a href="assets/chart-atlas/atlas-05-radar-polar.png"><img src="assets/chart-atlas/atlas-05-radar-polar.png" width="240" alt="Radar and polar atlas"></a> | 多轴 benchmarking、圆形摘要、polar histogram、方向密度 |
+| 分布图 | <a href="assets/chart-atlas/atlas-06-distributions.png"><img src="assets/chart-atlas/atlas-06-distributions.png" width="240" alt="Distribution plot atlas"></a> | 直方图、小提琴图、箱线图、ridgeline 和样本级分布 |
+| Forest 与区间图 | <a href="assets/chart-atlas/atlas-07-forest-interval.png"><img src="assets/chart-atlas/atlas-07-forest-interval.png" width="240" alt="Forest and interval atlas"></a> | 效应量、置信区间、点范围、配对斜率比较 |
+| 面积与堆叠趋势 | <a href="assets/chart-atlas/atlas-08-area-stacked.png"><img src="assets/chart-atlas/atlas-08-area-stacked.png" width="240" alt="Area and stacked trend atlas"></a> | 填充轨迹、份额堆叠、累计曲线、stream-like 构图 |
+| 图像板 | <a href="assets/chart-atlas/atlas-09-image-plates.png"><img src="assets/chart-atlas/atlas-09-image-plates.png" width="240" alt="Image plate atlas"></a> | 显微通道、叠加图、裁剪、比例尺和暗色面板 |
+| 网络与矩阵图 | <a href="assets/chart-atlas/atlas-10-network-matrix.png"><img src="assets/chart-atlas/atlas-10-network-matrix.png" width="240" alt="Network and matrix atlas"></a> | 气泡矩阵、邻接图、node-link 图和二分互作面板 |
 
 ---
 
-## File structure
+## 文件结构
 
-```
+该技能采用 router/static-dynamic 结构：短 `SKILL.md` 路由配合 `manifest.yaml`，加载常驻 core、用户选择的后端片段，以及按需 references。
+
+```text
 nature-figure/
-├── SKILL.md                     ← skill trigger & overview (loaded by Claude automatically)
-├── README.md                    ← this file
+├── SKILL.md                     # 短路由：后端 gate，加载 fragments
+├── manifest.yaml                # always_load core + backend axis + 按需 references
+├── README.md                    # 本文件
+├── static/
+│   ├── core/                    # 始终加载
+│   │   ├── contract.md          # 图件契约、后端 gate、互斥规则、运行时缺失处理
+│   │   └── stance.md            # 配色策略、默认立场、隐私、何时加载
+│   └── fragments/
+│       └── backend/             # 在 Python-or-R gate 解决后加载
+│           ├── python.md        # Python-only 规则与 matplotlib quick-start
+│           └── r.md             # R-only 规则与 ggplot2 quick-start
 ├── assets/
-│   ├── gallery/                 ← result-figure preview PNGs
-│   ├── chart-atlas/             ← chart-type taxonomy preview PNGs
-│   └── figures4papers/          ← original demo scripts and preview assets
-└── references/
-    ├── figure-contract.md       ← core conclusion, evidence hierarchy, panel map
-    ├── backend-selection.md     ← Python vs R decision rules
-    ├── r-workflow.md            ← R scaffold, patchwork, ComplexHeatmap, export
-    ├── r-template-index.md      ← local R template atlas
-    ├── qa-contract.md           ← submission/revision QA checklist
-    ├── api.md                   ← PALETTE constants, helper function signatures
-    ├── design-theory.md         ← typography, color theory, layout, export policy
-    ├── common-patterns.md       ← reusable code patterns (bars, legends, heatmaps)
-    ├── tutorials.md             ← end-to-end walkthroughs
-    ├── chart-types.md           ← radar, 3D sphere, scatter, fill_between, log-scale
-    └── demos.md                 ← figures4papers demo map and routing guide
+│   ├── gallery/                 # 结果图预览 PNG
+│   ├── chart-atlas/             # 图表类型预览 PNG
+│   └── figures4papers/          # 原始 demo 脚本和预览资产
+└── references/                  # 按需打开
+    ├── figure-contract.md       # 核心结论、证据层级、panel map
+    ├── backend-selection.md     # Python vs R 选择规则
+    ├── r-workflow.md            # R scaffold、patchwork、ComplexHeatmap、导出
+    ├── r-template-index.md      # 本地 R template atlas
+    ├── qa-contract.md           # 投稿/返修 QA 清单
+    ├── api.md                   # PALETTE 常量、helper 函数签名
+    ├── design-theory.md         # 字体、色彩理论、布局、导出策略
+    ├── common-patterns.md       # 可复用代码模式
+    ├── tutorials.md             # 端到端教程
+    ├── chart-types.md           # radar、3D sphere、scatter、fill_between、log-scale
+    └── demos.md                 # figures4papers demo map 与路由指南
 ```
 
 ---
 
-## Backend and contract rules
+## 后端与图件契约规则
 
-Ask the user to choose **Python or R** unless the backend is already specified.
-If they ask for a recommendation, use `references/backend-selection.md`.
+除非用户已经指定后端，否则先询问用户选择 **Python 或 R**。如果用户需要推荐，参考 `references/backend-selection.md`。
 
-After a backend is selected, use it exclusively for plotting, previews, exports,
-and visual QA. If the selected runtime or packages are missing, stop and report the
-blocker; do not render a fallback preview with the other language. This applies in
-both directions: no Python substitute for R, and no R substitute for Python.
+后端一旦选定，绘图、预览、导出和视觉 QA 都必须只使用该后端。如果所选运行时或包缺失，应停止并报告 blocker；不要用另一种语言临时替代。该规则双向适用：不能用 Python 替代 R，也不能用 R 替代 Python。
 
-Before plotting, write or infer the core conclusion, figure archetype, panel map,
-evidence hierarchy, target output, statistics/source-data needs, and export bundle.
-The figure must serve the scientific logic first. Aesthetic polish and template
-matching are secondary.
+绘图前必须写明或推断核心结论、图件原型、panel map、证据层级、目标输出、统计/source-data 需求和导出包。图件首先服务科学逻辑，美观和模板匹配是次级目标。
 
-User-facing output must not disclose private local paths, private filenames, internal
-reference documents, template identifiers, or private-material provenance unless the
-user explicitly asks for that audit trail.
+面向用户的输出不得暴露私有本地路径、私有文件名、内部参考文档、模板编号或私有材料来源，除非用户明确要求审计轨迹。
 
 ---
 
-## Python mandatory rules
+## Python 强制规则
 
-### 1. Three required rcParams — editable SVG text
+### 1. 三个必需 rcParams：保留 SVG 可编辑文本
 
 ```python
 plt.rcParams['font.family'] = 'sans-serif'
@@ -120,28 +104,20 @@ plt.rcParams['font.sans-serif'] = ['Arial', 'DejaVu Sans', 'Liberation Sans']
 plt.rcParams['svg.fonttype'] = 'none'
 ```
 
-**Why `svg.fonttype = 'none'`**  
-Matplotlib's default (`'path'`) converts every glyph to a bezier curve. The result is
-visually identical but every `<text>` element becomes a `<path d="M...">` — unselectable,
-unsearchable, and impossible to realign in Illustrator or Inkscape.  
-With `'none'`, text stays as SVG `<text>` nodes. Font substitution happens at render time.
+`svg.fonttype = 'none'` 可以避免 matplotlib 默认把每个字形转为 bezier 曲线。这样导出的 SVG 中，文字仍是 `<text>` 节点，可选择、可搜索，也方便在 Illustrator 或 Inkscape 中重新对齐。
 
-**Why three fonts in the stack**  
-`Arial` is standard on macOS/Windows. `DejaVu Sans` ships with matplotlib and is the
-Linux fallback. `Liberation Sans` is metric-compatible with Arial on RHEL/Ubuntu.
-The cascade guarantees identical letter-spacing on all platforms.
+字体栈中包含 `Arial`、`DejaVu Sans` 和 `Liberation Sans`：`Arial` 是 macOS/Windows 常见字体，`DejaVu Sans` 随 matplotlib 提供，`Liberation Sans` 在 RHEL/Ubuntu 上与 Arial 度量兼容。这个级联能提高跨平台字距一致性。
 
-### 2. Primary output format is SVG
+### 2. 主输出格式是 SVG
 
 ```python
-fig.savefig('figure.svg', bbox_inches='tight')        # primary — editable text
-fig.savefig('figure.png', dpi=300, bbox_inches='tight')  # optional raster preview
+fig.savefig('figure.svg', bbox_inches='tight')           # 主输出：可编辑文本
+fig.savefig('figure.png', dpi=300, bbox_inches='tight')  # 可选栅格预览
 ```
 
-Never use PNG alone when the figure will go into a paper or slide deck that requires
-post-hoc text adjustment.
+当图要进入论文或需要后期文字微调的 slide deck 时，不要只导出 PNG。
 
-### 3. Always close the figure
+### 3. 始终关闭 figure
 
 ```python
 plt.close(fig)
@@ -149,7 +125,7 @@ plt.close(fig)
 
 ---
 
-## Quick-start template
+## 快速模板
 
 ```python
 import matplotlib
@@ -158,12 +134,12 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import numpy as np
 
-# ── MANDATORY ─────────────────────────────────────────────────────────────────
+# 必需设置
 plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.sans-serif'] = ['Arial', 'DejaVu Sans', 'Liberation Sans']
 plt.rcParams['svg.fonttype'] = 'none'
 
-# ── Style ──────────────────────────────────────────────────────────────────────
+# 基础样式
 plt.rcParams.update({
     'font.size': 12,
     'axes.spines.right': False,
@@ -174,12 +150,12 @@ plt.rcParams.update({
     'ytick.major.width': 1.5,
 })
 
-# ── Figure ──────────────────────────────────────────────────────────────────────
+# 图件
 fig, ax = plt.subplots(figsize=(8, 5))
 ax.spines['bottom'].set_linewidth(2)
 ax.spines['left'].set_linewidth(2)
 
-# ... your plot code ...
+# ... 在这里写绘图代码 ...
 
 fig.tight_layout(pad=2)
 fig.savefig('output.svg', bbox_inches='tight')
@@ -189,31 +165,31 @@ plt.close(fig)
 
 ---
 
-## Color palette
+## 配色方案
 
 ```python
 PALETTE = {
-    # Primary / hero method
+    # 主方法 / 核心系列
     'blue_main':      '#0F4D92',
     'blue_secondary': '#3775BA',
 
-    # Positive / improvement shades
+    # 正向 / 提升色阶
     'green_1': '#DDF3DE',
     'green_2': '#AADCA9',
     'green_3': '#8BCF8B',
 
-    # Baseline / contrast
+    # 基线 / 对照
     'red_1':      '#F6CFCB',
     'red_2':      '#E9A6A1',
     'red_strong': '#B64342',
 
-    # Neutral support
+    # 中性辅助
     'neutral_light': '#CFCECE',
     'neutral_mid':   '#767676',
     'neutral_dark':  '#4D4D4D',
     'neutral_black': '#272727',
 
-    # Accent (use sparingly)
+    # 强调色，谨慎使用
     'gold':    '#FFD700',
     'teal':    '#42949E',
     'violet':  '#9A4D8E',
@@ -221,37 +197,33 @@ PALETTE = {
 }
 ```
 
-**Semantic mapping convention**  
-`blue_main` = your method / hero series. `green_3` = positive variants. `red_strong` = baselines.
-`neutral_light` = reference / background. Apply this consistently across every panel in the figure.
+语义映射约定：`blue_main` 表示本文方法或核心系列，`green_3` 表示正向变体，`red_strong` 表示基线，`neutral_light` 表示参考或背景。所有 panel 中必须保持一致。
 
-**Unified palette policy (recommended for recent Nature Machine Intelligence-style layouts)**  
-Do not maximize hue separation by default. In dense multi-panel figures, prefer **one coherent baseline family**
-and **one coherent hero family**, then reserve green/red for delta markers or genuinely signed semantics.
+推荐在近期 Nature Machine Intelligence 风格的密集多面板图中使用统一低饱和配色：一个 coherent baseline family 加一个 coherent hero family，绿色/红色只用于差值标记或真正有方向性的语义。
 
 ```python
 PALETTE_NMI_PASTEL = {
-    # Baseline / comparison family (cool blue-grey)
+    # 基线 / 对照家族
     'baseline_dark': '#484878',
     'baseline_mid':  '#7884B4',
     'baseline_soft': '#B4C0E4',
 
-    # Hero / proposed family (lilac → rose)
+    # 本文方法家族
     'ours_tiny':  '#E4E4F0',
     'ours_base':  '#E4CCD8',
     'ours_large': '#F0C0CC',
 
-    # Background blocks for overview / concept panels
+    # 概览 / 概念面板背景块
     'bg_lilac': '#E0E0F0',
     'bg_aqua':  '#E0F0F0',
     'bg_peach': '#F0E0D0',
 
-    # Neutral support
+    # 中性辅助
     'neutral_light': '#D8D8D8',
     'neutral_mid':   '#A8A8A8',
     'neutral_dark':  '#606060',
 
-    # Accent only for directional annotations
+    # 仅用于方向性标注
     'delta_up':   '#2E9E44',
     'delta_down': '#E53935',
 }
@@ -266,59 +238,57 @@ DEFAULT_COLORS_NMI_PASTEL = [
 ]
 ```
 
-Use `DEFAULT_COLORS_NMI_PASTEL` when:
-- comparing related model families such as `Tiny / Base / Large`
-- building 1-page result atlases where multiple panels must feel visually unified
-- matching low-saturation editorial styling rather than maximum category separation
+适用场景：
 
-**Practical rule**  
-The same method family keeps the same hue family in every panel. Do not recolor a model from blue-grey in panel `a`
-to green in panel `d` just because that panel needs more contrast.
+- 比较 `Tiny / Base / Large` 等相关模型家族。
+- 构建 1 页 result atlas，需要多个 panel 视觉统一。
+- 追求低饱和编辑风格，而不是最大化类别区分。
+
+实践规则：同一方法家族在所有 panel 中保持同一 hue family。不要因为某个 panel 需要对比，就把 panel `a` 中的蓝灰模型在 panel `d` 里改成绿色。
 
 ---
 
-## Supported chart types
+## 支持的图表类型
 
-| Chart | File | Key pattern |
+| 图表 | 文件 | 关键模式 |
 |-------|------|-------------|
-| Grouped bar | `tutorials.md` | `ax.bar()` with `x + offset`, legend-only last panel |
-| Stacked bar | `common-patterns.md` | iterate `col_order`, accumulate `bottom` |
-| Horizontal ablation bar | `tutorials.md` | `ax.barh()`, alpha-gradient for completeness encoding |
-| Trend / line | `tutorials.md` + `api.md` | `make_trend()`, `fill_between` for uncertainty shadow |
-| Heatmap (sequential) | `api.md` | `make_heatmap()`, `YlOrRd`, cell annotation with luminance check |
-| Heatmap (diverging / z-score) | `design-theory.md §11` | `RdBu_r`, `vmin=-2.5, vmax=2.5` |
-| Bubble scatter | `design-theory.md §11` | x/y = two compartments, `s=` = third variable |
-| Radar / polar | `chart-types.md` | `projection='polar'`, custom spokes, per-spoke normalization |
-| 3D sphere / illustration | `chart-types.md` | Lambertian shading via ray-cast on numpy grid |
-| Fill-between (stacked area) | `chart-types.md` | hatch for print-safe grayscale |
-| Log-scale bar | `chart-types.md` | `set_yscale('log')`, expand top for annotations |
-| Multi-panel GridSpec | `chart-types.md` | `GridSpec(rows, cols)`, `gs[0, :]` for full-width spans |
+| 分组柱状图 | `tutorials.md` | `ax.bar()` 配合 `x + offset`，最后一个 panel 只放 legend |
+| 堆叠柱状图 | `common-patterns.md` | 遍历 `col_order`，累计 `bottom` |
+| 横向 ablation bar | `tutorials.md` | `ax.barh()`，用 alpha-gradient 编码完整性 |
+| 趋势 / 折线 | `tutorials.md` + `api.md` | `make_trend()`，用 `fill_between` 表示不确定性 |
+| 连续热图 | `api.md` | `make_heatmap()`、`YlOrRd`、按亮度决定 cell annotation 颜色 |
+| 发散 / z-score 热图 | `design-theory.md §11` | `RdBu_r`，`vmin=-2.5, vmax=2.5` |
+| 气泡散点图 | `design-theory.md §11` | x/y 表示两个维度，`s=` 表示第三变量 |
+| 雷达 / 极坐标图 | `chart-types.md` | `projection='polar'`，自定义 spokes，逐轴归一化 |
+| 3D sphere / illustration | `chart-types.md` | 用 numpy 网格 ray-cast 实现 Lambertian shading |
+| Fill-between / 堆叠面积 | `chart-types.md` | 使用 hatch 保证灰度打印安全 |
+| Log-scale bar | `chart-types.md` | `set_yscale('log')`，顶部留出标注空间 |
+| 多面板 GridSpec | `chart-types.md` | `GridSpec(rows, cols)`，用 `gs[0, :]` 做全宽 panel |
 
 ---
 
-## Multi-panel information architecture
+## 多面板信息结构
 
-Each panel in a multi-panel figure must answer a **unique** scientific question.
-Covering any one panel should leave a gap that cannot be recovered from the others.
+多面板图中的每个 panel 都必须回答一个**唯一**科学问题。遮住任意一个 panel 后，其他 panel 不应能完全替代它。
 
-### Three-level progressive complexity (recommended)
+### 推荐的三层递进复杂度
 
-| Level | Question | Encoding |
+| 层级 | 问题 | 编码方式 |
 |-------|----------|----------|
-| Overview | "What is the landscape?" | Stacked bar, composition |
-| Deviation | "What is distinctive per group?" | Z-score heatmap, diverging cmap |
-| Relationship | "How do variables co-vary?" | Bubble scatter, correlation |
+| Overview | “整体格局是什么？” | 堆叠柱、组成图 |
+| Deviation | “每组的独特性是什么？” | Z-score 热图、发散色图 |
+| Relationship | “变量之间如何共变？” | 气泡散点、相关性图 |
 
-### Common redundancy traps
+### 常见冗余陷阱
 
-| Trap | Example | Fix |
+| 陷阱 | 示例 | 修正 |
 |------|---------|-----|
-| Absolute + absolute | Stacked bar (%) + heatmap of same % | Replace heatmap with z-score deviation |
-| Subset of parent | Tumor-only ranked bar is just one column of the stacked bar | Swap for scatter: tumor % vs immune % |
-| Two rankings | Two ranked bars on related metrics | Replace one with bubble scatter |
-| Different chart, same data | Pie + stacked bar | Merge or replace with a relationship plot |
+| 绝对值 + 绝对值 | 堆叠柱百分比 + 同一百分比热图 | 把热图换成 z-score deviation |
+| 父集的子集 | tumor-only ranked bar 只是堆叠柱的一列 | 换成 tumor % vs immune % 散点 |
+| 两个排序 | 两个相关指标的 ranked bar | 将其中一个换成气泡散点 |
+| 图形不同但数据相同 | 饼图 + 堆叠柱 | 合并或换成关系图 |
 
-### Z-score deviation heatmap
+### Z-score deviation 热图
 
 ```python
 z = (heat - heat.mean(axis=0)) / heat.std(axis=0)
@@ -326,9 +296,9 @@ im = ax.imshow(z.values, cmap='RdBu_r', aspect='auto', vmin=-2.5, vmax=2.5)
 cbar.set_label('Z-score vs pan-cohort mean')
 ```
 
-`RdBu_r`: red = enriched above average, blue = depleted. Orthogonal to absolute % shown in panel a.
+`RdBu_r` 中红色表示高于平均富集，蓝色表示低于平均。它与 panel a 中展示的绝对百分比形成正交信息。
 
-### Bubble scatter with quadrant labels
+### 带象限标签的气泡散点
 
 ```python
 ax.scatter(x, y, s=size_var * scale, c=colors, edgecolors='white', linewidth=0.8, alpha=0.9)
@@ -336,24 +306,24 @@ ax.axvline(np.median(x), lw=1.2, ls='--', color='#767676', alpha=0.6)
 ax.axhline(np.median(y), lw=1.2, ls='--', color='#767676', alpha=0.6)
 ```
 
-Label quadrants at corners with small grey italic text (`fontsize=7.5, color='#888888', style='italic'`).
+象限标签放在角落，使用小号灰色斜体文字，例如 `fontsize=7.5, color='#888888', style='italic'`。
 
 ---
 
-## Layout rules
+## 布局规则
 
-### Figure sizes
+### Figure 尺寸
 
-| Type | `figsize` |
+| 类型 | `figsize` |
 |------|-----------|
-| Multi-metric bar (3–4 metrics + legend panel) | `(28–45, 6–12)` |
-| Grand multi-panel (3 panels, 2-row GridSpec) | `(22, 17)` |
-| Compact single bar | `(9–16, 5–8)` |
-| Trend / line multi-panel | `(14, 4)` or `(9, 8)` |
-| Heatmap single | `(8–20, 5–9)` |
-| Radar polar | `(12, 10)` |
+| 多指标柱状图（3-4 个指标 + legend panel） | `(28-45, 6-12)` |
+| 大型多面板图（3 panels，2-row GridSpec） | `(22, 17)` |
+| 紧凑单柱状图 | `(9-16, 5-8)` |
+| 趋势 / 折线多面板 | `(14, 4)` 或 `(9, 8)` |
+| 单热图 | `(8-20, 5-9)` |
+| 雷达极坐标 | `(12, 10)` |
 
-**Rule**: width ≈ 3–4× height for comparison bar panels.
+规则：比较型柱状面板的宽度通常约为高度的 3-4 倍。
 
 ### Panel labels
 
@@ -362,46 +332,45 @@ ax.text(-0.05, 1.06, 'a', transform=ax.transAxes,
         fontsize=22, fontweight='bold', va='top', ha='right')
 ```
 
-Use lowercase bold (`a`, `b`, `c`) at top-left of each subplot axes, placed via `transAxes`.
+每个 subplot 左上角使用小写粗体 `a`、`b`、`c`，通过 `transAxes` 放置。
 
 ### Legend
 
-- For multi-axis figures: give the legend its own axis (`ax.set_axis_off()`).
-- Always `frameon=False`.
-- When the legend is large, place it `bbox_to_anchor=(0.5, -0.24), loc='upper center'` below the panel.
+- 多轴图件中，legend 应有独立 axis，例如 `ax.set_axis_off()`。
+- 始终使用 `frameon=False`。
+- 如果 legend 较大，放在 panel 下方：`bbox_to_anchor=(0.5, -0.24), loc='upper center'`。
 
 ---
 
-## Font size hierarchy
+## 字号层级
 
-| Context | `font.size` |
+| 场景 | `font.size` |
 |---------|-------------|
-| Base (compact subfigures) | 12–16 |
-| Large bar panels (figsize > 28 in) | 24 |
-| Axis labels (large panels) | 32–54 via per-label override |
-| In-bar / in-cell annotations | 6.5–12 |
-| Panel letter labels | 20–22 |
-| Legend | 8–14 |
+| 基础紧凑子图 | 12-16 |
+| 大型柱状 panel（figsize > 28 in） | 24 |
+| 大 panel 坐标轴标题 | 32-54，可逐标签覆盖 |
+| 柱内 / cell 内注释 | 6.5-12 |
+| Panel letter label | 20-22 |
+| Legend | 8-14 |
 
 ---
 
-## Axes & spines rules
+## 坐标轴与边框规则
 
 ```python
-plt.rcParams['axes.spines.right'] = False   # always off
-plt.rcParams['axes.spines.top'] = False     # always off
+plt.rcParams['axes.spines.right'] = False
+plt.rcParams['axes.spines.top'] = False
 plt.rcParams['legend.frameon'] = False
 
-ax.spines['bottom'].set_linewidth(2)        # thicker for emphasis
+ax.spines['bottom'].set_linewidth(2)
 ax.spines['left'].set_linewidth(2)
 ```
 
-No gridlines by default. Use sparse `set_yticks` to guide the eye.  
-Y-limits tightened to data range — never use `0–100` when all values sit in `80–95`.
+默认不使用 gridline。用稀疏 `set_yticks` 引导阅读。Y 轴范围要贴近数据，不要在所有值都落在 `80-95` 时使用 `0-100`。
 
 ---
 
-## In-cell / in-bar text contrast
+## Cell / bar 内文字对比度
 
 ```python
 def luminance_text_color(hex_color):
@@ -412,20 +381,20 @@ def luminance_text_color(hex_color):
 
 ---
 
-## Reproduction checklist
+## 复现检查清单
 
-- [ ] Core conclusion and panel map are clear before styling
-- [ ] Backend is explicitly Python or R
-- [ ] **Lines 1–3**: `font.family`, `font.sans-serif` (three fonts), `svg.fonttype = 'none'`
-- [ ] Primary output is **SVG** (`bbox_inches='tight'`)
-- [ ] Right and top spines off; `legend.frameon = False`
-- [ ] Font size matches final use: 5–7 pt for dense journal output, larger only for slide-sized panels
-- [ ] Colors come from one coherent palette system: either semantic `PALETTE` or unified `PALETTE_NMI_PASTEL`
-- [ ] Related model sizes / variants share a hue family; do not assign unrelated saturated colors to siblings
-- [ ] Green / red reserved for gains, drops, thresholds, or truly signed semantics
-- [ ] Y-limits tightened to data range
-- [ ] Multi-panel figures: each panel answers a **different** question (anti-redundancy checklist passed)
-- [ ] Panel labels (`a`, `b`, `c`) are bold lowercase and sized for final output
-- [ ] Statistics, `n`, source data, and image-integrity notes are documented when manuscript-facing
-- [ ] `tight_layout(pad=2)` before save
-- [ ] `plt.close(fig)` after save
+- [ ] 核心结论和 panel map 在美化前已经明确。
+- [ ] 后端已明确为 Python 或 R。
+- [ ] **前 3 个设置**包含 `font.family`、`font.sans-serif` 三字体栈、`svg.fonttype = 'none'`。
+- [ ] 主输出为 **SVG**，并使用 `bbox_inches='tight'`。
+- [ ] 右侧和顶部 spines 关闭，`legend.frameon = False`。
+- [ ] 字号符合最终用途：密集期刊图通常 5-7 pt，只有 slide-sized panel 才使用更大字号。
+- [ ] 颜色来自同一个 coherent palette system：语义 `PALETTE` 或统一 `PALETTE_NMI_PASTEL`。
+- [ ] 相关模型大小或变体共享同一 hue family，不给同胞系列分配不相关的高饱和颜色。
+- [ ] 绿色 / 红色只用于提升、下降、阈值或真正有方向性的语义。
+- [ ] Y 轴范围贴近数据范围。
+- [ ] 多面板图中每个 panel 回答**不同**问题，已通过反冗余检查。
+- [ ] Panel labels 使用粗体小写 `a`、`b`、`c`，字号适合最终输出。
+- [ ] 面向手稿时，已记录统计、`n`、source data 和图像完整性说明。
+- [ ] 保存前调用 `tight_layout(pad=2)`。
+- [ ] 保存后调用 `plt.close(fig)`。

@@ -1,188 +1,60 @@
 ---
 name: nature-figure
 description: >-
-  Submission-grade Nature/high-impact journal figure workflow for Python or R. Use whenever the user asks to create, revise, audit, or polish manuscript figures, multi-panel scientific plots, figures4papers-style matplotlib plots, or journal-ready SVG/PDF/TIFF outputs, especially for Nature-family or other high-impact journals. Before plotting, define the figure's conclusion, evidence logic, export needs, and review risks. If the user has not chosen Python or R, ask "Python or R?" and stop. Use only the selected backend for figure generation, previewing, exporting, and QA. Supports matplotlib/seaborn and ggplot2/patchwork/ComplexHeatmap. Not for dashboards or Illustrator/Figma-first infographics.
+  Submission-grade Nature/high-impact journal figure workflow for Python or R. Use whenever the user asks to create, revise, audit, or polish manuscript figures, multi-panel scientific plots, figures4papers-style matplotlib plots, or journal-ready SVG/PDF/TIFF outputs, especially for Nature-family or other high-impact journals. Before plotting, define the figure's conclusion, evidence logic, export needs, and review risks. If the user has not chosen Python or R, ask "Python or R?" and stop. Use only the selected backend for figure generation, previewing, exporting, and QA. Supports matplotlib/seaborn and ggplot2/patchwork/ComplexHeatmap. Not for dashboards or Illustrator/Figma-first infographics. Also trigger on general academic-writing figure needs even without the word "Nature", such as making figures/plots for a paper, scientific/academic plotting, data visualization for a manuscript, and Chinese phrasings like 论文配图、学术写作配图、科研绘图、科研作图、画图、作图、出图、论文图表、可视化.
+version: 2.0.0
+author: Community contribution, refactored into static/dynamic layers
 ---
 
-# Nature Figure Making Skill
+# Nature Figure Making — Router
 
-A guide for producing publication-quality scientific figures as a visual argument, not
-as isolated pretty plots. Every figure starts from a claim, an evidence hierarchy, and a
-review-risk check before code or aesthetics.
+This skill is split into two layers:
 
-The older Python/matplotlib rules in this skill remain valid. The skill now also supports
-R, especially `ggplot2 + patchwork + ComplexHeatmap + ggrepel + svglite/cairo_pdf + ragg`.
-If the user provides a private plotting template collection, use it only as an internal
-adaptation source and do not reveal its path, filenames, or provenance in user-facing output.
+- A **static layer** under `static/` that holds versioned, reusable content fragments (the figure contract and default stance, plus a per-backend quick-start for Python and R).
+- A **dynamic layer** (this file plus `manifest.yaml`) that detects the plotting backend and loads only the fragment needed for the current job. The large design, API, pattern, and QA material lives in on-demand references.
 
-Color policy: prefer **unified method families across all panels** over maximal hue separation.
-For dense Nature Machine Intelligence-style figure pages, use the low-saturation `NMI pastel`
-family described in `references/api.md` and reserve green/red mainly for gains, drops, and other directional cues.
+Do not try to apply the figure logic from memory or from this router. Always load fragments from disk as described below.
 
-## First move: figure contract before plotting
+## Routing protocol
 
-Before generating or editing code, establish the contract below.
+Follow these five steps every time the skill is invoked.
 
-**Backend selection is a blocking gate.** If the user has not explicitly chosen Python
-or R in the current request or provided a clearly language-specific input file/workflow,
-ask one concise question: **Python or R?** Then stop and wait for the user's answer.
-Do not generate mock data, write scripts, create figures, or choose Python/R by default.
-This overrides general autonomy/default-execution behavior for figure tasks.
+### 1. Load the manifest and the core layer
 
-**The selected backend is exclusive for all figure generation.** Once Python or R is
-selected, every plotting script, preview image, SVG/PDF/TIFF/PNG export, QA render,
-and visual workaround must be produced by that same backend. Do not use Python to
-draw a preview for an R figure, and do not use R to draw a preview for a Python figure,
-even if the selected runtime or packages are missing locally. The non-selected language
-may only be used for non-visual file inspection or data conversion when it does not
-open a graphics device, import plotting libraries, create image/vector files, or
-change the final visual appearance.
+Read [manifest.yaml](manifest.yaml). It declares the `backend` axis, the allowed values, and the file paths each value maps to.
 
-**Missing runtime/package rule.** After the backend is selected, check the selected
-runtime early (`Rscript`/R for R; Python and required plotting packages for Python).
-If the selected runtime or required packages are unavailable, stop before rendering
-and report the exact blocker. You may provide a selected-backend script and installation
-commands, or ask permission to install dependencies, but you must not fall back to the
-other language to make a substitute figure.
+Also read every file listed under `always_load` (`static/core/contract.md` and `static/core/stance.md`). These hold the figure contract, the backend gate, the missing-runtime rule, the privacy rule, and the default operating stance that apply to every figure job.
 
-Only recommend a backend when the user explicitly asks you to choose or recommend one.
-In that case, use `references/backend-selection.md`, state the reason, and then proceed
-with the recommended backend.
+### 2. Resolve the backend — a blocking gate
 
-1. Core conclusion: write the one-sentence claim the figure must defend.
-2. Evidence chain: map each planned panel to the claim, and drop panels that do not carry
-   a unique piece of evidence.
-3. Archetype: classify the figure as `quantitative grid`, `schematic-led composite`,
-   `image plate + quant`, or `asymmetric mixed-modality figure`.
-4. Backend: use the selected Python or R track exclusively for all figure drawing,
-   previewing, exporting, and visual QA. Do not cross-render with the other language.
-5. Journal/export contract: set final dimensions, editable text, source data, statistics,
-   image-integrity notes, and export formats before styling.
+Backend selection blocks everything else. Decide the `backend` value only from an explicit user choice or a clearly language-specific input file/workflow:
 
-The highest-priority rule is: **the chart serves the scientific logic**. Aesthetic polish,
-template matching, and complex layout are subordinate to making the core conclusion clear,
-defensible, and reviewable.
+- `python` — matplotlib / seaborn.
+- `r` — ggplot2 / patchwork / ComplexHeatmap.
 
-## User-facing privacy rule
+If the user has **not** explicitly chosen, ask exactly one concise question — **Python or R?** — and stop. Do not default, guess, generate mock data, or write scripts before the answer. Only recommend a backend when the user explicitly asks you to choose; then use `references/backend-selection.md`, state the reason, and proceed. Once selected, the backend is **exclusive** for all drawing, previewing, exporting, and visual QA (see `core/contract.md`).
 
-Do not disclose private local paths, private filenames, chat-attachment names, internal
-reference filenames, template identifiers, or the provenance of private working materials
-in user-facing replies, generated code comments, figure legends, reports, or manuscript
-text. Use generic descriptions such as "the provided R template collection", "a private
-working draft", or "the internal figure contract". Only reveal an exact path or source
-file when the user explicitly asks for that audit trail.
+### 3. Load the matching backend fragment
 
-## Python quick-start
+After the backend is resolved, Read the mapped fragment (`static/fragments/backend/python.md` or `static/fragments/backend/r.md`). It carries the backend-only execution rule and the publication quick-start (rcParams/theme and export helper). Do **not** load the other backend's fragment.
 
-**Python-only execution rule.** When the user has selected Python, do all figure
-drawing, previewing, exporting, and visual QA in Python. Do not call R/ggplot2,
-ComplexHeatmap, patchwork, or any R graphics device to create a temporary preview,
-fallback export, or layout approximation. If Python or required Python plotting
-packages are missing, stop before rendering and report the missing dependency. You
-may still write the Python script, provide `pip`/environment install commands, or
-ask permission to install dependencies, but do not cross-render the figure in R.
+### 4. Build the figure using the loaded material
 
-```python
-import matplotlib as mpl
-import matplotlib.pyplot as plt
+Apply the loaded material in this order:
 
-mpl.rcParams.update({
-    "font.family": "sans-serif",
-    "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans", "sans-serif"],
-    "svg.fonttype": "none",     # editable text in SVG
-    "pdf.fonttype": 42,         # editable TrueType text in PDF
-    "font.size": 7,             # use 15-24 only for large slide-sized panels
-    "axes.spines.right": False,
-    "axes.spines.top": False,
-    "axes.linewidth": 0.8,
-    "legend.frameon": False,
-})
+1. Figure contract (`core/contract.md`) — write the core conclusion, map the evidence chain, classify the archetype, set the journal/export contract, before any code.
+2. Default stance (`core/stance.md`) — archetype-first composition, hero panel, restrained palette, statistics/integrity as part of the figure.
+3. Backend fragment — the exclusive Python or R quick-start and execution rule.
 
-def save_pub_py(fig, filename, dpi=600):
-    fig.savefig(f"{filename}.svg", bbox_inches="tight")
-    fig.savefig(f"{filename}.pdf", bbox_inches="tight")
-    fig.savefig(f"{filename}.tiff", dpi=dpi, bbox_inches="tight")
-```
+The chart serves the scientific logic; aesthetic polish is subordinate to making the core conclusion clear, defensible, and reviewable.
 
-Use `text.usetex = True` only when LaTeX is installed and math-rich labels are required.
+### 5. Reach for references only when needed
 
-## R quick-start
+The files under `references/` are deep references, not defaults. Open them on demand per the `references.on_demand` table in the manifest — for example `references/figure-contract.md` to build the contract, `references/api.md` for the Python palette and helpers, `references/r-workflow.md` for R, `references/design-theory.md` for color/typography/export rationale, `references/common-patterns.md` and `references/chart-types.md` for layout/chart recipes, `references/nature-2026-observations.md` for real Nature page archetypes, `references/qa-contract.md` before final delivery, and `references/tutorials.md` / `references/demos.md` for worked examples.
 
-```r
-library(ggplot2)
-library(patchwork)
+## Why this split
 
-theme_set(
-  theme_classic(base_size = 6.5, base_family = "Arial") +
-    theme(
-      axis.line = element_line(linewidth = 0.35, colour = "black"),
-      axis.ticks = element_line(linewidth = 0.35, colour = "black"),
-      legend.title = element_text(size = 6.2),
-      legend.text = element_text(size = 5.8),
-      strip.text = element_text(size = 6.2, face = "bold"),
-      plot.title = element_text(size = 7, face = "bold"),
-      panel.grid = element_blank()
-    )
-)
-
-save_pub_r <- function(plot, filename, width_mm = 183, height_mm = 120, dpi = 600) {
-  w <- width_mm / 25.4
-  h <- height_mm / 25.4
-  svglite::svglite(paste0(filename, ".svg"), width = w, height = h)
-  print(plot)
-  dev.off()
-  grDevices::cairo_pdf(paste0(filename, ".pdf"), width = w, height = h, family = "Arial")
-  print(plot)
-  dev.off()
-  ragg::agg_tiff(paste0(filename, ".tiff"), width = w, height = h, units = "in", res = dpi)
-  print(plot)
-  dev.off()
-}
-```
-
-## Default operating stance
-
-- Start by classifying the requested figure into one of four archetypes:
-  `quantitative grid`, `schematic-led composite`, `image plate + quant`, or `asymmetric mixed-modality figure`.
-- Prefer one **hero panel** plus subordinate evidence panels over filling the canvas with equal-sized subplots.
-- If the user asks for a single chart, still identify its role in the manuscript claim:
-  discovery, mechanism, validation, comparison, robustness, or clinical/biological relevance.
-- Keep the background white for plots and diagrams; switch to black only for microscopy / volume-rendering image plates.
-- Prefer direct labels over legends when categories are spatially fixed or the legend would force unnecessary eye travel.
-- Keep one restrained palette per figure: usually one neutral family, one signal family, and one accent family.
-- Treat statistics, `n`, error-bar definitions, source-data traceability, and image-integrity notes as part of the figure,
-  not as optional caption cleanup.
-- When the user asks for broad `Nature` style rather than ML/NMI-specific style, read `references/nature-2026-observations.md` before choosing layout.
-- When the user references `figures4papers` or the older `scientific-figure-making` skill,
-  treat this skill as the successor and open `references/demos.md` for bundled Python demo scripts.
-
-## When to load this skill
-
-- Python or R figures for **papers, slides, or reports** targeting Nature, Science, Cell, NeurIPS, ICLR, or similar venues.
-- Requests involving **grouped bars, trend lines, heatmaps, radar plots, multi-panel grids**, or **PDF/SVG/high-DPI** output.
-- Any mention of "Nature style", "publication figure", "paper figure", "SCI figure", "figures4papers", "scientific-figure-making", "R plotting template", or "high-quality scientific plot".
-- Requests to improve a figure's logic, aesthetics, panel layout, figure legend, export quality, or journal-readiness.
-
-## When NOT to load
-
-- Plotly, Altair, Bokeh, or other interactive/web-first plotting.
-- EDA-only plots without a publication target.
-- Primary workflow is 3D, GIS, or non-scientific illustration tooling.
-- Illustrator / Figma–first layout.
-
-## Related files
-
-| File | Open when |
-|------|-----------|
-| [references/figure-contract.md](references/figure-contract.md) | Need to convert a user request into core conclusion, evidence hierarchy, panel map, and review-risk checks |
-| [references/backend-selection.md](references/backend-selection.md) | User has not chosen Python/R, asks for a recommendation, or a mixed Python/R workflow is possible |
-| [references/r-workflow.md](references/r-workflow.md) | User chooses R or provides R scripts/templates/data |
-| [references/r-template-index.md](references/r-template-index.md) | Need to adapt a user-provided or private R template collection without exposing source paths |
-| [references/qa-contract.md](references/qa-contract.md) | Before final delivery, revision package, microscopy/blot figure, or journal-specific audit |
-| [references/design-theory.md](references/design-theory.md) | Typography, color theory, layout rationale, export policy |
-| [references/api.md](references/api.md) | Python PALETTE, helper function signatures, validation rules |
-| [references/common-patterns.md](references/common-patterns.md) | Python layout patterns: hero panels, legend-only axes, dark image plates, asymmetric layouts |
-| [references/nature-2026-observations.md](references/nature-2026-observations.md) | Real `Nature` page archetypes: schematic-led composites, dark image plates, clinical triptychs, asymmetric hero layouts |
-| [references/tutorials.md](references/tutorials.md) | End-to-end walkthroughs: bars, trends, heatmaps |
-| [references/chart-types.md](references/chart-types.md) | Radar, 3D sphere, fill_between, scatter patterns |
-| [references/demos.md](references/demos.md) | Bundled figures4papers Python scripts and output previews for concrete pattern adaptation |
+- The static layer is versioned and reviewable. The backend gate is now explicit in the manifest rather than buried in prose.
+- The dynamic layer keeps each invocation cheap: only the selected backend's quick-start enters context, and the 2,600+ lines of reference depth load only when a step needs them.
+- The router itself is short on purpose. Update fragments and references, not this file, when adding scope.
+- This structure mirrors `nature-writing`, `nature-polishing`, `nature-reader`, and `nature-paper2ppt`.

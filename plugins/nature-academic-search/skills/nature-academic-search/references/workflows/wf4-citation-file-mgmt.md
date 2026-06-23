@@ -10,16 +10,16 @@
 2. **Download** via format-converter:
    ```bash
    # PubMed
-   python {SKILL_DIR}/scripts/format-converter.py --pmid 28344011 --format nbib
+   python scripts/format-converter.py --pmid 28344011 --format nbib
 
    # CrossRef
-   python {SKILL_DIR}/scripts/format-converter.py --doi 10.1038/nature14539 --format ris
+   python scripts/format-converter.py --doi 10.1038/nature14539 --format ris
 
    # arXiv
-   python {SKILL_DIR}/scripts/format-converter.py --arxiv 1706.03762 --format bib
+   python scripts/format-converter.py --arxiv 1706.03762 --format bib
 
    # Batch from file
-   python {SKILL_DIR}/scripts/format-converter.py --input refs.txt --format ris
+   python scripts/format-converter.py --input refs.txt --format ris
    ```
 3. **Convert format** as needed: `.nbib` (MEDLINE), `.ris` (EndNote/Zotero), `.bib` (BibTeX/LaTeX).
    Format specifications: [RIS and BibTeX Format](../ris-bibtex-format.md).

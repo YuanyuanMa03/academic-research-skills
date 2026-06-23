@@ -26,9 +26,9 @@ Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek,
 | PubMed | `pm-*` | search, advanced search, export, fulltext, paper detail | 6 |
 | IEEE Xplore | `ieee-*` | search, download, export, journal browse, standards | 9 |
 | Zotero CSL | `zotero-*` | citation style generation | 1 |
-| Nature | `nature-*` | academic search, writing, polishing, figures, reader | 9 |
+| Nature | `nature-*` | academic search, writing, polishing, figures, reader, patent, reviewer | 11 |
 
-**56 skills total** — 8 academic platforms covered.
+**58 skills total** — 8 academic platforms covered.
 
 > Browser skills (CNKI, GS, SD, WoS, PubMed, IEEE) require [Chrome DevTools MCP](https://github.com/nicekid1/chrome-devtools-mcp). Nature skills are pure prompt-based and work with any LLM.
 
@@ -75,6 +75,8 @@ Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek,
 /plugin install nature-reader@academic-research-skills
 /plugin install nature-response@academic-research-skills
 /plugin install nature-writing@academic-research-skills
+/plugin install nature-paper-to-patent@academic-research-skills
+/plugin install nature-reviewer@academic-research-skills
 /plugin install pm-advanced-search@academic-research-skills
 /plugin install pm-export@academic-research-skills
 /plugin install pm-fulltext@academic-research-skills
@@ -251,6 +253,10 @@ cat academic-research-skills/plugins/cnki-search/skills/cnki-search/SKILL.md
 2. Add `plugins/your-skill-name/.claude-plugin/plugin.json`
 3. Add entry to `.claude-plugin/marketplace.json`
 4. Submit a pull request
+
+## Acknowledgments
+
+Nature skills (`nature-*`) are based on [nature-skills](https://github.com/Yuan1z0825/nature-skills) by [@Yuan1z0825](https://github.com/Yuan1z0825).
 
 ## License
 

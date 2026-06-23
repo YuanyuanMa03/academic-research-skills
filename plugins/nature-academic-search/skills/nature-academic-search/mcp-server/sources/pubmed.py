@@ -303,10 +303,7 @@ class PubMedSource:
             "retmode": "xml",
         }
         resp = _get("esearch.fcgi", search_params)
-        try:
-            root = ET.fromstring(resp.content)
-        except ET.ParseError:
-            return {"term": term, "results": []}
+        root = ET.fromstring(resp.content)
 
         id_list = root.find("IdList")
         if id_list is None or len(id_list) == 0:
@@ -324,10 +321,7 @@ class PubMedSource:
             "retmode": "xml",
         }
         resp = _get("efetch.fcgi", fetch_params)
-        try:
-            fetch_root = ET.fromstring(resp.content)
-        except ET.ParseError:
-            return {"term": term, "results": []}
+        fetch_root = ET.fromstring(resp.content)
 
         results: list[dict[str, str]] = []
         for descriptor in fetch_root.findall(".//DescriptorRecord"):

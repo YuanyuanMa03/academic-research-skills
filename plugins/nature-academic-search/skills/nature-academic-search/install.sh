@@ -1,91 +1,85 @@
 #!/usr/bin/env bash
-# Academic Search Skill + MCP Server Installer
-# Supports: Claude Code, QoderWork (Qoder), and generic MCP clients
+# Academic Search Skill + MCP Server Installer for Claude Code
 # Usage: bash install.sh [PUBMED_EMAIL]
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CLAUDE_DIR="${HOME}/.claude"
+MCP_TARGET="${CLAUDE_DIR}/mcp_servers/academic-search"
+SKILL_TARGET="${CLAUDE_DIR}/skills/academic-search"
+MCP_JSON="${CLAUDE_DIR}/.mcp.json"
+
 PUBMED_EMAIL="${1:-user@example.com}"
 
-# --- Platform detection ---
-# Detect which AI coding assistant is running this script
-if [ -d "${HOME}/.claude" ]; then
-    PLATFORM="claude"
-    PLATFORM_DIR="${HOME}/.claude"
-    PLATFORM_NAME="Claude Code"
-elif [ -d "${HOME}/.qoderwork" ]; then
-    PLATFORM="qoderwork"
-    PLATFORM_DIR="${HOME}/.qoderwork"
-    PLATFORM_NAME="QoderWork"
-elif [ -d "${HOME}/.qoder" ]; then
-    PLATFORM="qoder"
-    PLATFORM_DIR="${HOME}/.qoder"
-    PLATFORM_NAME="Qoder"
-else
-    PLATFORM="generic"
-    PLATFORM_DIR=""
-    PLATFORM_NAME="Unknown"
-fi
-
 echo "=== Academic Search Installer ==="
-echo "Detected platform: ${PLATFORM_NAME}"
+echo "Target: ${CLAUDE_DIR}"
 echo "PubMed email: ${PUBMED_EMAIL}"
 echo
 
+required_paths=(
+    "README.md"
+    "SKILL.md"
+    "manifest.yaml"
+    "static"
+    "references"
+    "scripts"
+    "config"
+    "mcp-server"
+)
+
+missing_paths=()
+for relpath in "${required_paths[@]}"; do
+    if [ ! -e "${SCRIPT_DIR}/${relpath}" ]; then
+        missing_paths+=("${relpath}")
+    fi
+done
+
+if [ "${#missing_paths[@]}" -gt 0 ]; then
+    echo "ERROR: incomplete nature-academic-search skill directory." >&2
+    echo "Missing required path(s):" >&2
+    for relpath in "${missing_paths[@]}"; do
+        echo "  - ${SCRIPT_DIR}/${relpath}" >&2
+    done
+    echo "Install the full skills/nature-academic-search folder and retry." >&2
+    exit 1
+fi
+
 # 1. Install Python dependencies
-echo "[1/4] Installing Python dependencies..."
-pip install --quiet mcp requests toml lxml 2>/dev/null || {
+echo "[1/5] Installing Python dependencies..."
+pip install --quiet -r "${SCRIPT_DIR}/mcp-server/requirements.txt" 2>/dev/null || {
     echo "  pip failed, trying pip3..."
-    pip3 install --quiet mcp requests toml lxml 2>/dev/null || {
+    pip3 install --quiet -r "${SCRIPT_DIR}/mcp-server/requirements.txt" 2>/dev/null || {
         echo "  WARNING: Could not install Python deps. Install manually:"
-        echo "    pip install mcp requests toml lxml"
+        echo "    pip install -r mcp-server/requirements.txt"
     }
 }
 
-# 2. Install MCP server
-echo "[2/4] Installing MCP server..."
-if [ -n "${PLATFORM_DIR}" ]; then
-    MCP_TARGET="${PLATFORM_DIR}/mcp_servers/academic-search"
-    mkdir -p "${MCP_TARGET}"
-    cp -r "${SCRIPT_DIR}/mcp-server/"* "${MCP_TARGET}/"
-    echo "  Installed to: ${MCP_TARGET}/"
-else
-    echo "  No standard platform directory found."
-    echo "  MCP server source: ${SCRIPT_DIR}/mcp-server/"
-    echo "  Copy it manually to your MCP server directory."
-fi
+# 2. Copy MCP server
+echo "[2/5] Copying MCP server..."
+mkdir -p "${MCP_TARGET}"
+cp -r "${SCRIPT_DIR}/mcp-server/"* "${MCP_TARGET}/"
 
-# 3. Install Skill files
-echo "[3/4] Installing Skill files..."
-if [ -n "${PLATFORM_DIR}" ]; then
-    SKILL_TARGET="${PLATFORM_DIR}/skills/academic-search"
-    mkdir -p "${SKILL_TARGET}"
-    cp "${SCRIPT_DIR}/README.md" "${SKILL_TARGET}/" 2>/dev/null || true
-    cp "${SCRIPT_DIR}/SKILL.md" "${SKILL_TARGET}/"
-    cp -r "${SCRIPT_DIR}/references" "${SKILL_TARGET}/" 2>/dev/null || true
-    cp -r "${SCRIPT_DIR}/scripts" "${SKILL_TARGET}/" 2>/dev/null || true
-    cp -r "${SCRIPT_DIR}/config" "${SKILL_TARGET}/" 2>/dev/null || true
-    echo "  Installed to: ${SKILL_TARGET}/"
-else
-    echo "  No standard platform directory found."
-    echo "  Skill source: ${SCRIPT_DIR}/"
-    echo "  Copy SKILL.md and references/ manually to your skill directory."
-fi
+# 3. Copy Skill
+echo "[3/5] Copying Skill..."
+mkdir -p "${SKILL_TARGET}"
+cp "${SCRIPT_DIR}/README.md" "${SKILL_TARGET}/"
+cp "${SCRIPT_DIR}/SKILL.md" "${SKILL_TARGET}/"
+cp "${SCRIPT_DIR}/manifest.yaml" "${SKILL_TARGET}/"
+cp -r "${SCRIPT_DIR}/static" "${SKILL_TARGET}/"
+cp -r "${SCRIPT_DIR}/references" "${SKILL_TARGET}/"
+cp -r "${SCRIPT_DIR}/scripts" "${SKILL_TARGET}/"
+cp -r "${SCRIPT_DIR}/config" "${SKILL_TARGET}/"
 
-# 4. Configure MCP server registration
-echo "[4/4] Configuring MCP server..."
-
-if [ "${PLATFORM}" = "claude" ]; then
-    # Claude Code: .mcp.json + settings.json
-    MCP_JSON="${PLATFORM_DIR}/.mcp.json"
-    SETTINGS_JSON="${PLATFORM_DIR}/settings.json"
-
-    if [ -f "${MCP_JSON}" ]; then
-        if grep -q '"academic-search"' "${MCP_JSON}" 2>/dev/null; then
-            echo "  academic-search already in .mcp.json, skipping."
-        else
-            python3 -c "
-import json
+# 4. Merge .mcp.json
+echo "[4/5] Configuring .mcp.json..."
+if [ -f "${MCP_JSON}" ]; then
+    # Check if academic-search already exists
+    if grep -q '"academic-search"' "${MCP_JSON}" 2>/dev/null; then
+        echo "  academic-search already in .mcp.json, skipping merge."
+    else
+        # Inject into existing mcpServers object
+        python3 -c "
+import json, sys
 with open('${MCP_JSON}', 'r') as f:
     cfg = json.load(f)
 cfg.setdefault('mcpServers', {})['academic-search'] = {
@@ -96,11 +90,11 @@ cfg.setdefault('mcpServers', {})['academic-search'] = {
 with open('${MCP_JSON}', 'w') as f:
     json.dump(cfg, f, indent=2)
     f.write('\n')
-print('  Merged academic-search into .mcp.json')
+print('  Merged academic-search into existing .mcp.json')
 "
-        fi
-    else
-        cat > "${MCP_JSON}" <<MCPJSON
+    fi
+else
+    cat > "${MCP_JSON}" <<MCPJSON
 {
   "mcpServers": {
     "academic-search": {
@@ -113,12 +107,14 @@ print('  Merged academic-search into .mcp.json')
   }
 }
 MCPJSON
-        echo "  Created .mcp.json"
-    fi
+    echo "  Created new .mcp.json"
+fi
 
-    # Enable in settings.json
-    if [ -f "${SETTINGS_JSON}" ]; then
-        python3 -c "
+# 5. Enable in settings.json
+echo "[5/5] Enabling in settings.json..."
+SETTINGS_JSON="${CLAUDE_DIR}/settings.json"
+if [ -f "${SETTINGS_JSON}" ]; then
+    python3 -c "
 import json
 with open('${SETTINGS_JSON}', 'r') as f:
     cfg = json.load(f)
@@ -128,68 +124,26 @@ if 'academic-search' not in enabled:
     with open('${SETTINGS_JSON}', 'w') as f:
         json.dump(cfg, f, indent=2)
         f.write('\n')
-    print('  Enabled in settings.json')
+    print('  Added academic-search to enabledMcpjsonServers')
 else:
-    print('  Already enabled in settings.json')
+    print('  academic-search already enabled')
 "
-    else
-        echo "  WARNING: settings.json not found. Manually enable 'academic-search'."
-    fi
-
-elif [ "${PLATFORM}" = "qoderwork" ] || [ "${PLATFORM}" = "qoder" ]; then
-    # QoderWork/Qoder: use MCP config in platform directory
-    MCP_CONFIG="${PLATFORM_DIR}/mcp.json"
-    if [ -f "${MCP_CONFIG}" ]; then
-        if grep -q '"academic-search"' "${MCP_CONFIG}" 2>/dev/null; then
-            echo "  academic-search already configured."
-        else
-            python3 -c "
-import json
-with open('${MCP_CONFIG}', 'r') as f:
-    cfg = json.load(f)
-cfg.setdefault('mcpServers', {})['academic-search'] = {
-    'command': 'python3',
-    'args': ['${MCP_TARGET}/academic_search_server.py'],
-    'env': {'PUBMED_EMAIL': '${PUBMED_EMAIL}'}
-}
-with open('${MCP_CONFIG}', 'w') as f:
-    json.dump(cfg, f, indent=2)
-    f.write('\n')
-print('  Added academic-search to mcp.json')
-"
-        fi
-    else
-        cat > "${MCP_CONFIG}" <<MCPJSON
-{
-  "mcpServers": {
-    "academic-search": {
-      "command": "python3",
-      "args": ["${MCP_TARGET}/academic_search_server.py"],
-      "env": {
-        "PUBMED_EMAIL": "${PUBMED_EMAIL}"
-      }
-    }
-  }
-}
-MCPJSON
-        echo "  Created mcp.json"
-    fi
 else
-    echo "  Could not detect platform. Add the MCP server manually:"
-    echo "    Command: python3"
-    echo "    Args: [\"<path-to>/academic_search_server.py\"]"
-    echo "    Env: {\"PUBMED_EMAIL\": \"${PUBMED_EMAIL}\"}"
+    echo '  WARNING: settings.json not found. Manually add "academic-search" to enabledMcpjsonServers.'
 fi
 
 echo
 echo "=== Done ==="
 echo
 echo "Installed:"
-[ -n "${PLATFORM_DIR}" ] && echo "  MCP server : ${PLATFORM_DIR}/mcp_servers/academic-search/"
-[ -n "${PLATFORM_DIR}" ] && echo "  Skill      : ${PLATFORM_DIR}/skills/academic-search/"
+echo "  MCP server : ${MCP_TARGET}/"
+echo "  Skill      : ${SKILL_TARGET}/"
 echo
 echo "Next steps:"
-echo "  1. Restart ${PLATFORM_NAME} (or reload MCP servers)"
+echo "  1. Restart Claude Code (or /clear)"
 echo "  2. Set your PubMed email in config.toml or PUBMED_EMAIL env var"
 echo "  3. (Optional) Add NCBI_API_KEY for higher rate limits"
-echo "  4. Test: ask 'search papers about CRISPR'"
+echo "  4. Test: ask Claude 'search papers about CRISPR'"
+echo
+echo "Optional: copy triggers to your data/triggers.toml"
+echo "  See: config/triggers-academic-search.toml"

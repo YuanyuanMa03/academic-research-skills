@@ -3,134 +3,73 @@ name: nature-academic-search
 description: >-
   Multi-source literature search, citation verification, MeSH search strategy,
   citation file management (.nbib/.ris/.bib conversion), and reference management
-  (BibTeX, related articles, ID conversion) via MCP tools (PubMed, CrossRef, arXiv).
+  (BibTeX, related articles, ID conversion) via MCP tools (PubMed, CrossRef,
+  arXiv, Scopus, ScienceDirect).
   Use when the user needs coordinated multi-step literature workflows beyond a
   single MCP call.
+  Also trigger on general literature-search needs during academic writing even without the word
+  "Nature", such as searching for papers/literature, doing a literature review, verifying a
+  citation, converting citation files, and Chinese phrasings like 文献检索、查文献、找文献、
+  文献综述检索、查论文、引文核对、参考文献管理、文献去重.
+version: 2.0.0
+author: Community contribution, refactored into static/dynamic layers
 ---
 
-# Academic Search
+# Academic Search — Router
 
-Multi-source literature search, citation verification, citation format conversion,
-and reference management via MCP tools.
+This skill is split into two layers:
 
-## MCP Tools
+- A **static layer** under `static/` that holds versioned, reusable content fragments (the MCP tool inventory and shared modules, and source routing plus operational rules).
+- A **dynamic layer** (this file plus `manifest.yaml`) that detects which workflow the user needs and loads that workflow, reaching for shared modules and scripts only when a step needs them.
 
-### Bundled MCP Server (academic-search)
+Do not try to apply the search logic from memory or from this router. Always load fragments from disk as described below.
 
-The bundled MCP server provides these tools — **use these names when calling the server**:
+## Routing protocol
 
-| Tool | Purpose |
-|------|---------|
-| `search_papers` | Multi-source search across CrossRef, PubMed, arXiv (concurrent) |
-| `get_paper_by_id` | Fetch paper by DOI, PMID, or arXiv ID |
-| `get_citation` | Formatted citation output (APA, MLA, BibTeX, etc.) |
-| `lookup_mesh` | MeSH term exploration and hierarchy |
+Follow these five steps every time the skill is invoked.
 
-### External MCP Tools (require separate installation)
+### 1. Load the manifest and the core layer
 
-The following tools are referenced in workflows but require **external MCP servers** to be installed separately. If unavailable, fall back to the bundled `search_papers` tool.
+Read [manifest.yaml](manifest.yaml). It declares the `workflow` axis, the allowed values, and the file paths each value maps to.
 
-| Tool | Source | Best For |
-|------|--------|----------|
-| `pubmed_search_articles` | PubMed MCP | Biomedical, MeSH, clinical trials |
-| `search_crossref` | paper-search MCP | Cross-disciplinary, citation counts |
-| `search_arxiv` | paper-search MCP | Preprints (physics, math, CS, biology) |
+Also read every file listed under `always_load`:
 
-### Extended Search (external only)
+- `static/core/tools.md` — the MCP tool inventory (core search, extended search, PubMed utilities) and the shared-module map.
+- `static/core/routing-and-ops.md` — the T1→T2→T3 source routing quick guide, environment setup, error handling, and limitations.
 
-| Tool | Source | Best For |
-|------|--------|----------|
-| `search_google_scholar` | paper-search MCP | Broad academic search (scraped) |
-| `search_semantic_scholar` | paper-search MCP | Citation graph, field-of-study filters |
-| `search_biorxiv` | paper-search MCP | Biology preprints |
-| `search_medrxiv` | paper-search MCP | Medical preprints |
-| `search_webofscience` | paper-search MCP | Curated index, citation reports |
-| `search_scopus` | paper-search MCP | Broad scholarly database |
+### 2. Detect the workflow
 
-### PubMed Utilities
+Map the user's need to one or more `workflow` values:
 
-| Tool | Purpose |
-|------|---------|
-| `pubmed_fetch_articles` | Full metadata by PMID |
-| `pubmed_find_related` | Related article discovery |
-| `pubmed_format_citations` | APA / MLA / BibTeX / RIS formatting |
-| `pubmed_convert_ids` | DOI ↔ PMID ↔ PMCID conversion |
-| `pubmed_lookup_mesh` | MeSH term exploration and hierarchy |
-| `pubmed_lookup_citation` | Bibliographic citation → PMID lookup |
+- `multi-source-search` — find literature across sources.
+- `citation-verification` — verify citations extracted from a document.
+- `mesh-strategy` — build a MeSH/PubMed search strategy.
+- `citation-file-mgmt` — convert/manage `.nbib`/`.ris`/`.bib` files.
+- `reference-mgmt` — BibTeX, related-article discovery, ID conversion.
 
-## Source Routing
+A combined request (for example search then export) may need more than one. State the detected workflow(s) in one short line before proceeding.
 
-See [Source Tiers & Reliability](references/source-tiers.md) for the complete reliability classification and fallback routing rules. The T1→T2→T3 fallback chain is the standard execution order across all workflows.
+### 3. Load the matching workflow fragment(s)
 
-Quick guide:
+Read the file mapped for each detected workflow (under `references/workflows/`). Do **not** read every workflow. Each workflow file links to the shared modules it needs.
 
-| User need | Primary (T1) | Secondary (T2) | Last Resort (T3) |
-|-----------|-------------|-----------------|-------------------|
-| Medical / clinical | PubMed | Semantic Scholar | Google Scholar |
-| Cross-disciplinary | CrossRef | Semantic Scholar | Scopus |
-| Preprints / CS / physics | arXiv | bioRxiv / medRxiv | — |
-| Exhaustive review | PubMed + CrossRef + arXiv | Semantic Scholar + bioRxiv/medRxiv | WoS / Scopus |
-| Citation count sensitive | Semantic Scholar | CrossRef | — |
-| Chinese literature | — | — | CNKI / 万方 (manual) |
+### 4. Run the workflow using the loaded material
 
-## Workflows
+Apply the loaded material in this order:
 
-| # | Workflow | Reference |
-|---|----------|-----------|
-| 1 | Multi-Source Literature Search | [wf1](references/workflows/wf1-multi-source-search.md) |
-| 2 | Citation Verification | [wf2](references/workflows/wf2-citation-verification.md) |
-| 3 | MeSH Search Strategy | [wf3](references/workflows/wf3-mesh-strategy.md) |
-| 4 | Citation File Management | [wf4](references/workflows/wf4-citation-file-mgmt.md) |
-| 5 | Reference Management | [wf5](references/workflows/wf5-reference-mgmt.md) |
+1. Core tools and routing (`core/tools.md`, `core/routing-and-ops.md`) — which MCP tool for which need, and the T1→T2→T3 fallback chain that is the standard execution order across all workflows.
+2. The workflow fragment — its specific steps.
+3. Shared modules and scripts on demand (dedup, citation parser, search strategy, RIS/BibTeX format, format converter).
 
-## Shared Modules
+Report specific tool failures and continue with remaining tools; broaden terms when there are no results; fall back to manual generation from MCP-fetched metadata if a script fails twice.
 
-| Module | Purpose |
-|--------|---------|
-| [Dedup Engine](references/dedup-engine.md) | Unified deduplication (WFs 1, 2, 5a) |
-| [Citation Parser](references/citation-parser.md) | Extract citations from documents (WF 2) |
-| [Search Strategy](references/search-strategy.md) | Query construction, source selection, ranking |
-| [RIS/BibTeX Format](references/ris-bibtex-format.md) | Format specifications and field mappings |
-| [Format Converter](scripts/format-converter.py) | Multi-source .nbib/.ris/.bib downloader |
+### 5. Reach for references only when needed
 
-## Environment Setup
+The files under `references/` (and `scripts/`) are deep references, not defaults. Open them on demand per the `references.on_demand` table in the manifest — for example `references/source-tiers.md` for the full reliability classification, `references/dedup-engine.md` / `references/citation-parser.md` / `references/search-strategy.md` / `references/ris-bibtex-format.md` for the shared modules, and `scripts/academic_search.py` (no-MCP fallback discovery search) / `scripts/format-converter.py` / `scripts/preflight.py` for the tooling.
 
-### API Keys (optional but recommended)
+## Why this split
 
-| Service | Env Var | Register At | Free Tier |
-|---------|---------|-------------|-----------|
-| Semantic Scholar | `SEMANTIC_SCHOLAR_API_KEY` | [api.semanticscholar.org](https://api.semanticscholar.org/) | 100 req/s with key (1/s without) |
-| NCBI E-utilities | `NCBI_API_KEY` | [ncbi.nlm.nih.gov/account](https://www.ncbi.nlm.nih.gov/account/) | 10 req/s with key (3/s without) |
-
-Set via `export` or `.env` file.
-
-### Proxy (if behind firewall)
-
-```bash
-export http_proxy=http://127.0.0.1:7890
-export https_proxy=http://127.0.0.1:7890
-```
-
-### Pre-flight Check
-
-```bash
-python scripts/preflight.py
-```
-
-Run before batch operations to verify API endpoints are reachable.
-
-### Format Converter Dependencies
-
-The format converter (`scripts/format-converter.py`) uses Python stdlib only — no extra dependencies. Run `python scripts/format-converter.py --test` to verify the conversion pipeline.
-
-## Error Handling
-
-- **MCP tool unavailable**: report specific failure, continue with remaining tools.
-- **No results**: broaden terms, try alternative sources, suggest user refine query.
-- **Script failure (2x)**: fall back to manual generation from MCP-fetched metadata.
-
-## Limitations
-
-- Google Scholar and Semantic Scholar are scraped (not API-backed) — results may vary.
-- Chinese literature (CNKI / 万方) not indexed by CrossRef or PubMed.
-- Citation counts may be delayed (CrossRef updates monthly).
+- The static layer is versioned and reviewable; the workflow files and shared modules were already factored this way.
+- The dynamic layer keeps each invocation cheap: only the workflow the user needs enters context, instead of all five plus every module.
+- The router itself is short on purpose. Update fragments and references, not this file, when adding scope.
+- This structure mirrors the other nature-* skills (`nature-writing`, `nature-polishing`, `nature-reader`, `nature-paper2ppt`, `nature-figure`, `nature-citation`, `nature-response`, `nature-data`).
