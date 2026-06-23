@@ -4,20 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-academic-research-skills is a plugin marketplace for AI-powered academic research tools. It provides 56+ skills across 8 academic platforms (CNKI, Google Scholar, ScienceDirect, Web of Science, PubMed, IEEE Xplore, Nature, Zotero) for Claude Code, Copilot CLI, Codex, Gemini CLI, and other AI assistants.
+academic-research-skills is a plugin marketplace for AI-powered academic research tools. It provides 58+ skills across 8 academic platforms (CNKI, Google Scholar, ScienceDirect, Web of Science, PubMed, IEEE Xplore, Nature, Zotero) for Claude Code, Copilot CLI, Codex, Gemini CLI, and other AI assistants.
 
 ## Repository Structure
 
 ```
 academic-research-skills/
-├── shared/                  # Shared infrastructure (reuse, don't duplicate)
-│   ├── zotero/              # Unified Zotero client & platform adapters
-│   │   ├── core.py          # ZoteroClient (localhost:23119 API)
-│   │   ├── pdf.py           # PDF download & attachment handling
-│   │   ├── cli.py           # CLI framework for export scripts
-│   │   └── adapters/        # Platform-specific: cnki.py, gs.py, sd.py, wos.py
-│   ├── output_templates/    # Standard report formats (search, detail, export)
-│   └── python_base/         # Logging config (get_logger)
 ├── plugins/                 # One directory per plugin
 │   └── {platform}-{action}/
 │       ├── .claude-plugin/
@@ -26,8 +18,7 @@ academic-research-skills/
 │           └── {skill-name}/
 │               ├── SKILL.md     # Skill instructions (required)
 │               ├── scripts/     # Executable scripts (optional)
-│               ├── references/  # Supporting docs (optional)
-│               └── evals/       # Test fixtures (optional)
+│               └── references/  # Reference documents (optional)
 ├── scripts/                 # Validation tools
 │   ├── validate_skills.py   # SKILL.md validator
 │   └── validate_plugin_json.py
@@ -45,21 +36,8 @@ python scripts/validate_plugin_json.py # Validate plugin.json files
 
 ### Linting
 ```bash
-ruff check shared/ scripts/ plugins/   # Lint Python files
-ruff format --check shared/ scripts/   # Format check
-```
-
-### Testing
-```bash
-pytest shared/ -v                      # Run all tests
-pytest shared/zotero/tests/ -v         # Run Zotero tests only
-pytest shared/ --cov=shared --cov-report=term-missing --cov-fail-under=55
-```
-
-### Pre-commit Hooks (optional)
-```bash
-pre-commit install
-pre-commit run --all-files
+ruff check plugins/ scripts/           # Lint Python files
+ruff format --check plugins/ scripts/  # Format check
 ```
 
 ## Plugin Architecture
@@ -98,43 +76,7 @@ argument-hint: "<query>"
 ---
 ```
 
-Required sections: Overview/Steps/Workflow, Output Contract (use templates from `shared/output_templates/`), Error Handling.
-
-## Shared Modules
-
-### Zotero Integration
-
-When pushing citations to Zotero, use the shared module:
-
-```python
-import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "..", ".."))
-
-from shared.zotero.core import ZoteroClient
-from shared.zotero.adapters.{platform} import build_zotero_item
-```
-
-Key classes:
-- `ZoteroClient`: API client for Zotero's local Connector API (localhost:23119)
-- `PdfHandler`: PDF download and attachment
-- Platform adapters: `cnki.py`, `gs.py`, `sd.py`, `wos.py`
-
-### Logging
-
-Use structured logging instead of `print()`:
-
-```python
-from shared.python_base.logging_config import get_logger
-logger = get_logger("skill-name")
-logger.info("Processing %d items", count)
-```
-
-### Output Templates
-
-Standard formats in `shared/output_templates/`:
-- `search_report.md`: Search results format
-- `detail_report.md`: Paper details format
-- `export_report.md`: Export confirmation format
+Required sections: Overview/Steps/Workflow, Output Contract, Error Handling.
 
 ## Adding a New Plugin
 
@@ -148,11 +90,9 @@ Standard formats in `shared/output_templates/`:
 
 3. Write `SKILL.md` following the specification
 
-4. If Zotero integration needed, create adapter in `shared/zotero/adapters/{platform}.py`
+4. Add entry to `.claude-plugin/marketplace.json`
 
-5. Add entry to `.claude-plugin/marketplace.json`
-
-6. Run validation:
+5. Run validation:
    ```bash
    python scripts/validate_skills.py
    python scripts/validate_plugin_json.py
@@ -163,7 +103,7 @@ Standard formats in `shared/output_templates/`:
 Two GitHub Actions workflows:
 
 1. **lint.yml**: Validates SKILL.md files, checks for hardcoded paths, lints Python with ruff
-2. **test.yml**: Runs pytest on shared/ with coverage (Python 3.10, 3.11, 3.12)
+2. **test.yml**: Runs lint checks (shared/ tests removed)
 
 Both run on push to `main` and `feature/**` branches, and on PRs to `main`.
 
@@ -182,17 +122,19 @@ Use relative paths or dynamic path resolution.
 
 - Type hints on all function signatures
 - Docstrings on all public functions
-- Use `argparse` for CLI arguments
-- UTF-8 encoding safety (handled by `shared/zotero/core.py`)
+- Use `logging` module for output
+- UTF-8 encoding safety
 
 ## Platform Integration
 
-| Platform | Browser MCP | API Access | Zotero Support |
-|----------|:-----------:|:----------:|:--------------:|
-| CNKI | Yes | Export API only | Yes |
-| Google Scholar | Yes | None | Yes |
-| ScienceDirect | Yes | RIS export | Yes |
-| Web of Science | Yes | Clarivate API | Yes |
-| PubMed | Yes | E-utilities | Yes |
-| IEEE Xplore | Yes | None | Yes |
-| Nature | No | CrossRef/PubMed/arXiv | No |
+| Platform | Browser MCP | Zotero Export |
+|----------|:-----------:|:-------------:|
+| CNKI | Yes | Yes (self-contained script) |
+| Google Scholar | Yes | Yes (self-contained script) |
+| ScienceDirect | Yes | Yes (self-contained script) |
+| Web of Science | Yes | Yes (self-contained script) |
+| PubMed | Yes | Yes (self-contained script) |
+| IEEE Xplore | Yes | Yes (self-contained script) |
+| Nature | No | No |
+
+**Note**: Zotero export scripts are self-contained in each skill's `scripts/` directory, using Zotero's local Connector API (localhost:23119).

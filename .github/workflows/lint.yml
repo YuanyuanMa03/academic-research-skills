@@ -69,7 +69,7 @@ jobs:
         run: pip install ruff==0.8.0
 
       - name: Lint Python files
-        run: ruff check shared/ scripts/ plugins/
+        run: ruff check plugins/ scripts/
 
       - name: Format check
-        run: ruff format --check shared/ scripts/
+        run: ruff format --check plugins/ scripts/

@@ -26,21 +26,14 @@ academic-research-skills is a plugin marketplace for AI-powered academic researc
     │                  plugins/                        │
     │                                                  │
     │  ┌──────────┐ ┌──────────┐ ┌──────────────────┐ │
-    │  │ CNKI (10)│ │ GS  (6)  │ │ Nature (9)       │ │
+    │  │ CNKI (10)│ │ GS  (6)  │ │ Nature (11)      │ │
+    │  └──────────┘ └──────────┘ └──────────────────┘ │
+    │  ┌──────────┐ ┌──────────┐ ┌──────────────────┐ │
+    │  │ SD  (8)  │ │ WoS (7)  │ │ IEEE (9)         │ │
     │  └──────────┘ └──────────┘ └──────────────────┘ │
     │  ┌──────────┐ ┌──────────┐                      │
-    │  │ SD  (8)  │ │ WoS (7)  │                      │
+    │  │ PM  (6)  │ │ Zotero(1)│                      │
     │  └──────────┘ └──────────┘                      │
-    │                                                  │
-    │  ┌─────────────────────────────────────────────┐ │
-    │  │           shared/                            │ │
-    │  │  zotero/core.py   → Unified API client      │ │
-    │  │  zotero/pdf.py    → PDF download & attach    │ │
-    │  │  zotero/cli.py    → CLI framework            │ │
-    │  │  zotero/adapters/ → Platform-specific logic │ │
-    │  │  output_templates/→ Standard report formats  │ │
-    │  │  python_base/     → Logging & utilities      │ │
-    │  └─────────────────────────────────────────────┘ │
     └──────────────────────────────────────────────────┘
 ```
 
@@ -51,41 +44,37 @@ academic-research-skills is a plugin marketplace for AI-powered academic researc
 3. **Execution**: AI follows SKILL.md workflow steps, executing code blocks and tool calls
 4. **Output**: Results formatted per Output Contract section
 
-## Shared Module Dependency Graph
+## Skill Structure
+
+Each skill follows this minimal structure:
 
 ```
-plugins/cnki-export/scripts/push_to_zotero.py
-    ├── shared/zotero/core.py      (ZoteroClient)
-    ├── shared/zotero/pdf.py       (PdfHandler)
-    ├── shared/zotero/cli.py       (CLI framework)
-    └── shared/zotero/adapters/cnki.py  (CNKI adapter)
-
-plugins/gs-export/scripts/push_to_zotero.py
-    ├── shared/zotero/core.py
-    ├── shared/zotero/pdf.py
-    ├── shared/zotero/cli.py
-    └── shared/zotero/adapters/gs.py    (GS/PubMed adapter)
-
-plugins/sd-export/scripts/push_to_zotero.py
-    ├── shared/zotero/core.py
-    ├── shared/zotero/pdf.py
-    └── shared/zotero/adapters/sd.py    (SD adapter, has argparse for RIS)
-
-plugins/wos-export/scripts/push_to_zotero.py
-    ├── shared/zotero/core.py
-    ├── shared/zotero/cli.py
-    └── shared/zotero/adapters/wos.py   (WoS adapter, no PDF support)
+{skill-name}/
+├── SKILL.md           # Main instructions (required)
+├── scripts/           # Executable scripts (optional)
+└── references/        # Supporting docs (optional)
 ```
 
 ## Platform Integration Patterns
 
-| Platform | Browser MCP | API Access | PDF Source |
-|----------|:-----------:|:----------:|:----------:|
-| CNKI | Yes (DOM scraping) | Export API only | CNKI CDN (requires cookies) |
-| Google Scholar | Yes (DOM scraping) | None | Publisher + PMC fallback |
-| ScienceDirect | Yes (DOM scraping) | None (RIS export) | Elsevier CDN (requires cookies) |
-| Web of Science | Yes (DOM scraping) | Clarivate API | Not available |
-| Nature | MCP Server | CrossRef + PubMed + arXiv APIs | Publisher |
+| Platform | Browser MCP | Zotero Export | Export Method |
+|----------|:-----------:|:-------------:|---------------|
+| CNKI | Yes (DOM scraping) | Yes | Self-contained script (localhost:23119) |
+| Google Scholar | Yes (DOM scraping) | Yes | Self-contained script (localhost:23119) |
+| ScienceDirect | Yes (DOM scraping) | Yes | Self-contained script (localhost:23119) |
+| Web of Science | Yes (DOM scraping) | Yes | Self-contained script (localhost:23119) |
+| PubMed | Yes | Yes | Self-contained script (localhost:23119) |
+| IEEE Xplore | Yes | Yes | Self-contained script (localhost:23119) |
+| Nature | No | No | Pure prompt-based |
+
+## Zotero Integration
+
+Export skills (`*-export`) use Zotero's local Connector API at `http://127.0.0.1:23119/connector`. Each export script is self-contained with:
+
+- Deterministic session ID generation (content hash)
+- Idempotent save operations (201 = saved, 409 = already saved)
+- PDF attachment support
+- Collection selection
 
 ## Adding a New Platform
 
@@ -93,6 +82,6 @@ To add support for a new academic platform:
 
 1. Create `plugins/{platform}-{action}/` directories for each action
 2. Write SKILL.md files following the specification in CONTRIBUTING.md
-3. If Zotero integration is needed, create `shared/zotero/adapters/{platform}.py`
+3. If Zotero integration is needed, create a self-contained `push_to_zotero.py` script
 4. Add eval fixtures for each skill
 5. Update marketplace.json
