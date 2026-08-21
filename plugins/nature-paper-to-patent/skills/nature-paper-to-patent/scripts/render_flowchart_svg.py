@@ -3,7 +3,9 @@
 
 import argparse
 import html
+import importlib.util
 import json
+import os
 import re
 import textwrap
 from pathlib import Path
@@ -23,7 +25,9 @@ def claim_step_map(claims: list[dict]) -> dict[int, set[str]]:
     result = {}
     for claim in claims:
         number = claim.get("number")
-        result[number] = {f"S{value}" for value in STEP_PATTERN.findall(claim.get("text", ""))}
+        result[number] = {
+            f"S{value}" for value in STEP_PATTERN.findall(claim.get("text", ""))
+        }
     return result
 
 
@@ -68,7 +72,11 @@ def validate_figure(
         for node in nodes
         if str(node.get("claim_step", "")).strip()
     }
-    if figure_type == "flowchart" and figure.get("complete_claim_flow") and node_steps != available_steps:
+    if (
+        figure_type == "flowchart"
+        and figure.get("complete_claim_flow")
+        and node_steps != available_steps
+    ):
         missing = sorted(available_steps - node_steps)
         extra = sorted(node_steps - available_steps)
         if missing:
@@ -124,7 +132,9 @@ def validate_figure(
             errors.append(f"unreachable nodes from any start node: {disconnected}")
     for node in nodes:
         node_id = str(node.get("id", ""))
-        if outgoing.get(node_id) == 0 and VAGUE_FINAL_RESULT.search(str(node.get("label", ""))):
+        if outgoing.get(node_id) == 0 and VAGUE_FINAL_RESULT.search(
+            str(node.get("label", ""))
+        ):
             errors.append(
                 f"end node {node_id!r} uses a vague result name; state the specific detection, "
                 "estimation, classification, positioning, or control result"
@@ -245,10 +255,13 @@ def render(figure: dict) -> str:
 def load_font(size: int):
     from PIL import ImageFont
 
+    # Windows system fonts via %WINDIR% so no absolute path is hardcoded;
+    # on other platforms every candidate is absent and the default font loads.
+    font_dir = Path(os.environ.get("WINDIR", ""), "Fonts")
     candidates = (
-        Path(r"C:\Windows\Fonts\simsun.ttc"),
-        Path(r"C:\Windows\Fonts\msyh.ttc"),
-        Path(r"C:\Windows\Fonts\simhei.ttf"),
+        font_dir / "simsun.ttc",
+        font_dir / "msyh.ttc",
+        font_dir / "simhei.ttf",
     )
     for candidate in candidates:
         if candidate.exists():
@@ -333,7 +346,9 @@ def render_png(figure: dict, output: Path) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("draft", type=Path, help="UTF-8 patent draft JSON")
-    parser.add_argument("--output-dir", type=Path, required=True, help="SVG output directory")
+    parser.add_argument(
+        "--output-dir", type=Path, required=True, help="SVG output directory"
+    )
     parser.add_argument("--png", action="store_true", help="Also render PNG files")
     args = parser.parse_args()
 
@@ -362,12 +377,10 @@ def main() -> int:
         output.write_text(render(figure), encoding="utf-8")
         print(output)
         if args.png:
-            try:
-                import PIL
-            except ImportError as error:
+            if importlib.util.find_spec("PIL") is None:
                 raise SystemExit(
                     "PNG output requires Pillow: python -m pip install pillow"
-                ) from error
+                )
             png_output = args.output_dir / f"figure-{figure['number']}.png"
             render_png(figure, png_output)
             print(png_output)

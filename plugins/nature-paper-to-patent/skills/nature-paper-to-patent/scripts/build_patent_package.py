@@ -18,7 +18,9 @@ def validate(data: dict) -> None:
     required = ("title", "claims", "specification", "abstract", "figures")
     missing = [key for key in required if not data.get(key)]
     if missing:
-        raise ValueError(f"Missing required complete-package content: {', '.join(missing)}")
+        raise ValueError(
+            f"Missing required complete-package content: {', '.join(missing)}"
+        )
     spec = data["specification"]
     if not spec.get("figure_descriptions"):
         raise ValueError("Specification must contain figure descriptions")
@@ -38,7 +40,9 @@ def validate(data: dict) -> None:
                 f"Equation {equation.get('number')} must include latex source for native Office Math"
             )
     equation_numbers = [item.get("number") for item in spec.get("equations", [])]
-    if equation_numbers and equation_numbers != list(range(1, len(equation_numbers) + 1)):
+    if equation_numbers and equation_numbers != list(
+        range(1, len(equation_numbers) + 1)
+    ):
         raise ValueError(
             f"Equation numbers must be consecutive integers starting at 1: {equation_numbers}"
         )
@@ -60,7 +64,9 @@ def validate(data: dict) -> None:
     if not figure.get("complete_claim_flow"):
         raise ValueError("The abstract figure must be a complete principal claim flow")
     if source_analysis.get("contains_methodology_figures"):
-        methodology = [item for item in data["figures"] if item.get("type") == "methodology"]
+        methodology = [
+            item for item in data["figures"] if item.get("type") == "methodology"
+        ]
         if not methodology:
             raise ValueError(
                 "The source is marked as containing methodology figures, but no methodology "
@@ -133,7 +139,8 @@ def main() -> int:
 
     claims_text = args.output_dir / f"{args.prefix}-权利要求书.txt"
     claims_text.write_text(
-        "\n".join(f"{claim['number']}. {claim['text']}" for claim in data["claims"]) + "\n",
+        "\n".join(f"{claim['number']}. {claim['text']}" for claim in data["claims"])
+        + "\n",
         encoding="utf-8",
     )
     audit = args.output_dir / f"{args.prefix}-权利要求检查.txt"

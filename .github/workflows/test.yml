@@ -30,3 +30,22 @@ jobs:
 
       - name: Format check
         run: ruff format --check plugins/ scripts/
+
+  selftest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: pm-search offline selftest (no network)
+        run: python3 plugins/pm-search/skills/pm-search/scripts/pubmed_api_search.py --selftest
+
+      - name: Shared-asset drift check (no network)
+        run: python3 scripts/check_shared_assets.py
+
+      - name: Live API connectivity check (nature-academic-search)
+        run: python3 plugins/nature-academic-search/skills/nature-academic-search/scripts/preflight.py

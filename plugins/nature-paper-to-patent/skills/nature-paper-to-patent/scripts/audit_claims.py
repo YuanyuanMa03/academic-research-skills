@@ -13,7 +13,9 @@ REFERENCE = re.compile(
     r"权利要求\s*(\d+)(?:\s*[-—~～至]\s*(\d+))?"
     r"|权利要求\s*(\d+)\s*(?:或|、)\s*(\d+)"
 )
-TERM_INTRO = re.compile(r"(?:所述|该)([\u4e00-\u9fffA-Za-z][\u4e00-\u9fffA-Za-z0-9_-]{1,20})")
+TERM_INTRO = re.compile(
+    r"(?:所述|该)([\u4e00-\u9fffA-Za-z][\u4e00-\u9fffA-Za-z0-9_-]{1,20})"
+)
 PLACEHOLDER = re.compile(r"\[(?:TO CONFIRM|待确认)[^\]]*\]", re.IGNORECASE)
 
 
@@ -54,13 +56,20 @@ def audit(text: str) -> list[Finding]:
     claims = split_claims(text)
     findings = []
     if not claims:
-        return [Finding("ERROR", None, "NO_CLAIMS", "未识别到以“1.”形式起始的权利要求。")]
+        return [
+            Finding("ERROR", None, "NO_CLAIMS", "未识别到以“1.”形式起始的权利要求。")
+        ]
 
     numbers = [number for number, _ in claims]
     expected = list(range(1, len(claims) + 1))
     if numbers != expected:
         findings.append(
-            Finding("ERROR", None, "NUMBER_SEQUENCE", f"编号应连续为{expected}，实际为{numbers}。")
+            Finding(
+                "ERROR",
+                None,
+                "NUMBER_SEQUENCE",
+                f"编号应连续为{expected}，实际为{numbers}。",
+            )
         )
 
     previous_text = ""
@@ -75,24 +84,46 @@ def audit(text: str) -> list[Finding]:
             continue
         if PLACEHOLDER.search(body):
             findings.append(
-                Finding("ERROR", number, "PLACEHOLDER", "正式权利要求中仍含待确认标记。")
+                Finding(
+                    "ERROR", number, "PLACEHOLDER", "正式权利要求中仍含待确认标记。"
+                )
             )
         if number == 1 and refs:
             findings.append(
-                Finding("ERROR", number, "INDEPENDENT_REFERENCE", "权利要求1不应引用其他权利要求。")
+                Finding(
+                    "ERROR",
+                    number,
+                    "INDEPENDENT_REFERENCE",
+                    "权利要求1不应引用其他权利要求。",
+                )
             )
         if number > 1 and not refs:
             findings.append(
-                Finding("WARNING", number, "NO_REFERENCE", "未检测到从属引用；确认其是否为独立权利要求。")
+                Finding(
+                    "WARNING",
+                    number,
+                    "NO_REFERENCE",
+                    "未检测到从属引用；确认其是否为独立权利要求。",
+                )
             )
         for ref in refs:
             if ref >= number:
                 findings.append(
-                    Finding("ERROR", number, "FORWARD_REFERENCE", f"引用了非在先权利要求{ref}。")
+                    Finding(
+                        "ERROR",
+                        number,
+                        "FORWARD_REFERENCE",
+                        f"引用了非在先权利要求{ref}。",
+                    )
                 )
             if ref not in claim_map:
                 findings.append(
-                    Finding("ERROR", number, "MISSING_REFERENCE", f"引用的权利要求{ref}不存在。")
+                    Finding(
+                        "ERROR",
+                        number,
+                        "MISSING_REFERENCE",
+                        f"引用的权利要求{ref}不存在。",
+                    )
                 )
 
         if "其特征在于" not in compact:
@@ -101,11 +132,21 @@ def audit(text: str) -> list[Finding]:
             )
         if len(compact) < 25:
             findings.append(
-                Finding("WARNING", number, "TOO_SHORT", "权利要求较短，确认是否完整限定技术方案。")
+                Finding(
+                    "WARNING",
+                    number,
+                    "TOO_SHORT",
+                    "权利要求较短，确认是否完整限定技术方案。",
+                )
             )
         if re.search(r"(效果更好|性能优异|显著提高|大大提高|最佳|最优)", compact):
             findings.append(
-                Finding("WARNING", number, "RESULT_LANGUAGE", "含结果或宣传性措辞，确认是否改为技术限定。")
+                Finding(
+                    "WARNING",
+                    number,
+                    "RESULT_LANGUAGE",
+                    "含结果或宣传性措辞，确认是否改为技术限定。",
+                )
             )
 
         searchable_basis = previous_text + "".join(
@@ -137,7 +178,11 @@ def main() -> int:
     text = args.claims.read_text(encoding="utf-8")
     findings = audit(text)
     if args.json:
-        print(json.dumps([finding.__dict__ for finding in findings], ensure_ascii=False, indent=2))
+        print(
+            json.dumps(
+                [finding.__dict__ for finding in findings], ensure_ascii=False, indent=2
+            )
+        )
     elif not findings:
         print("PASS: 未发现结构性问题。")
     else:

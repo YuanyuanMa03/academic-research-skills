@@ -1,7 +1,5 @@
 import importlib.util
-import json
 import sys
-import tempfile
 import unittest
 from pathlib import Path
 
@@ -25,7 +23,12 @@ def valid_draft():
         },
         "source_map": [
             {"id": "P001", "type": "paper-text", "locator": "第3页", "summary": "流程"},
-            {"id": "E001", "type": "equation", "locator": "第4页公式1", "summary": "融合"},
+            {
+                "id": "E001",
+                "type": "equation",
+                "locator": "第4页公式1",
+                "summary": "融合",
+            },
         ],
         "terminology_ledger": [
             {
@@ -127,10 +130,13 @@ def valid_draft():
                 "claim_architecture": {"score": 4, "evidence": "技术链闭合。"},
                 "terminology_consistency": {"score": 4, "evidence": "术语一致。"},
                 "enablement_detail": {"score": 3, "evidence": "已说明主要步骤。"},
-                "technical_effect_reasoning": {"score": 3, "evidence": "效果关联手段。"},
+                "technical_effect_reasoning": {
+                    "score": 3,
+                    "evidence": "效果关联手段。",
+                },
                 "formula_coverage": {"score": 4, "evidence": "核心公式已收录。"},
                 "figure_alignment": {"score": 4, "evidence": "附图与步骤一致。"},
-            }
+            },
         },
     }
 

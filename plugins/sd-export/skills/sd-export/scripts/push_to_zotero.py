@@ -31,14 +31,19 @@ HTTP_TIMEOUT = 15  # seconds, matching Zotero Connector extension
 # Zotero API helpers
 # ---------------------------------------------------------------------------
 
+
 def zotero_request(endpoint, data=None, timeout=HTTP_TIMEOUT):
     """Send JSON request to Zotero local API with timeout."""
     url = f"{ZOTERO_API}/{endpoint}"
     body = json.dumps(data or {}, ensure_ascii=False).encode("utf-8")
-    req = urllib.request.Request(url, data=body, headers={
-        "Content-Type": "application/json",
-        "X-Zotero-Connector-API-Version": "3",
-    })
+    req = urllib.request.Request(
+        url,
+        data=body,
+        headers={
+            "Content-Type": "application/json",
+            "X-Zotero-Connector-API-Version": "3",
+        },
+    )
     try:
         resp = urllib.request.urlopen(req, timeout=timeout)
         text = resp.read().decode("utf-8")
@@ -79,6 +84,7 @@ def get_selected_collection():
 # RIS import (backward compatible)
 # ---------------------------------------------------------------------------
 
+
 def push_ris(ris_data):
     """Push RIS data to Zotero via /connector/import with deterministic session.
 
@@ -92,19 +98,29 @@ def push_ris(ris_data):
     url = f"{ZOTERO_API}/import?session={session_id}"
     payload = json.dumps(ris_data).encode("utf-8")
 
-    req = urllib.request.Request(url, data=payload, headers={
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-    })
+    req = urllib.request.Request(
+        url,
+        data=payload,
+        headers={
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+    )
 
     try:
         resp = urllib.request.urlopen(req, timeout=HTTP_TIMEOUT)
         body = resp.read().decode("utf-8", errors="replace")
-        return {"success": True, "message": f"Saved to Zotero (session: {session_id}). Response: {body}"}
+        return {
+            "success": True,
+            "message": f"Saved to Zotero (session: {session_id}). Response: {body}",
+        }
     except urllib.error.HTTPError as e:
         resp_body = e.read().decode("utf-8", errors="replace")
         if e.code == 409:
-            return {"success": True, "message": f"Already saved, no duplicates added (session: {session_id})"}
+            return {
+                "success": True,
+                "message": f"Already saved, no duplicates added (session: {session_id})",
+            }
         return {"success": False, "message": f"HTTP {e.code}: {resp_body}"}
     except urllib.error.URLError as e:
         return {
@@ -121,9 +137,11 @@ def push_ris(ris_data):
 # JSON / structured item import with PDF attachment support
 # ---------------------------------------------------------------------------
 
+
 def build_zotero_item(paper):
     """Build Zotero journalArticle item from ScienceDirect paper data."""
     from datetime import datetime, timezone
+
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     item = {
@@ -140,13 +158,9 @@ def build_zotero_item(paper):
         "libraryCatalog": "ScienceDirect",
         "accessDate": now,
         "creators": [
-            {"name": a, "creatorType": "author"}
-            for a in paper.get("authors", [])
+            {"name": a, "creatorType": "author"} for a in paper.get("authors", [])
         ],
-        "tags": [
-            {"tag": k, "type": 1}
-            for k in paper.get("keywords", [])
-        ],
+        "tags": [{"tag": k, "type": 1} for k in paper.get("keywords", [])],
         "attachments": [],
     }
 
@@ -163,39 +177,57 @@ def download_pdf(pdf_url, cookies="", referer="https://www.sciencedirect.com"):
 
     Returns (bytes, content_type) or (None, error_message).
     """
-    req = urllib.request.Request(pdf_url, headers={
-        "Cookie": cookies,
-        "Referer": referer,
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/145.0.0.0",
-    })
+    req = urllib.request.Request(
+        pdf_url,
+        headers={
+            "Cookie": cookies,
+            "Referer": referer,
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/145.0.0.0",
+        },
+    )
     try:
         resp = urllib.request.urlopen(req, timeout=60)
         content_type = resp.headers.get("Content-Type", "application/pdf")
         data = resp.read()
         if len(data) < 1024:
-            return None, f"PDF file too small ({len(data)} bytes), may require authentication"
+            return (
+                None,
+                f"PDF file too small ({len(data)} bytes), may require authentication",
+            )
         return data, content_type
     except Exception as e:
         return None, str(e)
 
 
-def save_attachment(session_id, item_id, pdf_bytes, pdf_url,
-                    content_type="application/pdf", title="Full Text PDF"):
+def save_attachment(
+    session_id,
+    item_id,
+    pdf_bytes,
+    pdf_url,
+    content_type="application/pdf",
+    title="Full Text PDF",
+):
     """Upload PDF binary to Zotero via /connector/saveAttachment (Zotero 7.x workflow)."""
-    metadata = json.dumps({
-        "id": item_id + "_pdf",
-        "parentItemID": item_id,
-        "title": title,
-        "url": pdf_url,
-        "contentType": content_type,
-    })
+    metadata = json.dumps(
+        {
+            "id": item_id + "_pdf",
+            "parentItemID": item_id,
+            "title": title,
+            "url": pdf_url,
+            "contentType": content_type,
+        }
+    )
     url = f"{ZOTERO_API}/saveAttachment?sessionID={session_id}"
-    req = urllib.request.Request(url, data=pdf_bytes, headers={
-        "Content-Type": content_type,
-        "X-Metadata": metadata,
-        "Content-Length": str(len(pdf_bytes)),
-        "X-Zotero-Connector-API-Version": "3",
-    })
+    req = urllib.request.Request(
+        url,
+        data=pdf_bytes,
+        headers={
+            "Content-Type": content_type,
+            "X-Metadata": metadata,
+            "Content-Length": str(len(pdf_bytes)),
+            "X-Zotero-Connector-API-Version": "3",
+        },
+    )
     try:
         resp = urllib.request.urlopen(req, timeout=60)
         return resp.status, None
@@ -236,7 +268,10 @@ def save_items(items, uri="", attachments=None, cookies=""):
     elif status == 500:
         detail = resp.get("error", "") if resp else ""
         if "libraryEditable" in str(resp):
-            return 500, "Target library is read-only. Switch to a writable collection in Zotero."
+            return (
+                500,
+                "Target library is read-only. Switch to a writable collection in Zotero.",
+            )
         return 500, f"Zotero internal error: {detail}"
     elif status == 0:
         return 0, "Zotero is not running or connection refused"
@@ -267,14 +302,21 @@ def save_items(items, uri="", attachments=None, cookies=""):
                     pdf_results.append(f"  PDF download failed: {ct}")
                     continue
 
-                print(f"  Uploading PDF to Zotero ({len(pdf_bytes)} bytes)...", file=sys.stderr)
+                print(
+                    f"  Uploading PDF to Zotero ({len(pdf_bytes)} bytes)...",
+                    file=sys.stderr,
+                )
                 att_status, att_err = save_attachment(
                     session_id, item_id, pdf_bytes, pdf_url, title=title
                 )
                 if att_status == 201:
-                    pdf_results.append(f"  PDF attached: {title} ({len(pdf_bytes) // 1024}KB)")
+                    pdf_results.append(
+                        f"  PDF attached: {title} ({len(pdf_bytes) // 1024}KB)"
+                    )
                 else:
-                    pdf_results.append(f"  PDF upload failed: HTTP {att_status} {att_err or ''}")
+                    pdf_results.append(
+                        f"  PDF upload failed: HTTP {att_status} {att_err or ''}"
+                    )
 
             if pdf_results:
                 msg += "\n" + "\n".join(pdf_results)
@@ -287,6 +329,7 @@ def save_items(items, uri="", attachments=None, cookies=""):
 # ---------------------------------------------------------------------------
 # CLI entry point
 # ---------------------------------------------------------------------------
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -311,7 +354,9 @@ def main():
     if args.list:
         col = get_selected_collection()
         if col:
-            print(f"Current collection: {col.get('name', '?')} (ID: {col.get('id', '?')})")
+            print(
+                f"Current collection: {col.get('name', '?')} (ID: {col.get('id', '?')})"
+            )
             print(f"Library: {col.get('libraryName', '?')}")
             for t in col.get("targets", []):
                 indent = "  " * t.get("level", 0)
@@ -345,9 +390,7 @@ def main():
             papers = paper_data
         elif "items" in paper_data:
             # Already in Zotero format
-            status, msg = save_items(
-                paper_data["items"], paper_data.get("uri", "")
-            )
+            status, msg = save_items(paper_data["items"], paper_data.get("uri", ""))
             if status == 201:
                 print(f"Success: {msg} ({len(paper_data['items'])} items)")
             else:
@@ -374,11 +417,13 @@ def main():
         cookies = ""
         for i, p in enumerate(papers):
             if p.get("pdfUrl"):
-                attachments.append({
-                    "itemIndex": i,
-                    "pdfUrl": p["pdfUrl"],
-                    "title": p.get("pdfTitle", "Full Text PDF"),
-                })
+                attachments.append(
+                    {
+                        "itemIndex": i,
+                        "pdfUrl": p["pdfUrl"],
+                        "title": p.get("pdfTitle", "Full Text PDF"),
+                    }
+                )
             if p.get("cookies") and not cookies:
                 cookies = p["cookies"]
 
