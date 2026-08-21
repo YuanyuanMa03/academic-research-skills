@@ -43,6 +43,7 @@ except ImportError:
 # 辅助函数
 # ---------------------------------------------------------------------------
 
+
 def load_test_data(data_path: str) -> list[dict]:
     """加载 CSL-JSON 格式的测试数据。"""
     with open(data_path, "r", encoding="utf-8") as f:
@@ -126,6 +127,7 @@ def preview_csl(csl_path: str, data_path: str) -> None:
 # CLI 入口
 # ---------------------------------------------------------------------------
 
+
 def main():
     parser = argparse.ArgumentParser(
         description="用 citeproc-py 预览 CSL 样式的 citation 和 bibliography 输出"
@@ -148,7 +150,9 @@ def main():
     if args.data:
         data_path = os.path.abspath(args.data)
     else:
-        data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "test_data.json")
+        data_path = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)), "test_data.json"
+        )
     if not os.path.isfile(data_path):
         print(f"错误: 数据文件不存在: {data_path}")
         sys.exit(1)

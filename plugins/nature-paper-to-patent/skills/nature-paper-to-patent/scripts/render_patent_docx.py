@@ -24,7 +24,9 @@ def set_run_font(run, name: str, size: float, bold: bool = False) -> None:
 
 def add_heading(document: Document, text: str, level: int = 1) -> None:
     paragraph = document.add_paragraph()
-    paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER if level == 1 else WD_ALIGN_PARAGRAPH.LEFT
+    paragraph.alignment = (
+        WD_ALIGN_PARAGRAPH.CENTER if level == 1 else WD_ALIGN_PARAGRAPH.LEFT
+    )
     run = paragraph.add_run(text)
     set_run_font(run, "宋体", 16 if level == 1 else 14, bold=True)
 
@@ -85,7 +87,9 @@ def add_claims(document: Document, claims: list[dict]) -> None:
         add_body(document, f"{claim['number']}. {claim['text']}", indent=False)
 
 
-def add_specification(document: Document, data: dict, figure_dir: Path | None = None) -> None:
+def add_specification(
+    document: Document, data: dict, figure_dir: Path | None = None
+) -> None:
     add_heading(document, "说明书")
     add_heading(document, data.get("title", "[TO CONFIRM: title]"), level=2)
     spec = data.get("specification", {})
@@ -126,7 +130,9 @@ def add_specification(document: Document, data: dict, figure_dir: Path | None = 
             run.add_picture(str(image), width=Cm(14))
             caption = document.add_paragraph()
             caption.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            caption_run = caption.add_run(f"图{figure['number']} {figure.get('title', '')}")
+            caption_run = caption.add_run(
+                f"图{figure['number']} {figure.get('title', '')}"
+            )
             set_run_font(caption_run, "宋体", 11)
 
     add_heading(document, "具体实施方式", level=2)
@@ -163,7 +169,11 @@ def add_figure(
 def abstract_figure(data: dict) -> dict | None:
     number = data.get("abstract_figure_number")
     return next(
-        (figure for figure in data.get("figures", []) if figure.get("number") == number),
+        (
+            figure
+            for figure in data.get("figures", [])
+            if figure.get("number") == number
+        ),
         None,
     )
 
@@ -218,7 +228,14 @@ def add_review_appendix(document: Document, data: dict) -> None:
         headers = ("ID", "技术特征", "来源位置", "技术作用", "效果", "支持状态")
         for cell, header in zip(table.rows[0].cells, headers):
             cell.text = header
-        keys = ("id", "feature", "source_location", "technical_role", "effect", "support_status")
+        keys = (
+            "id",
+            "feature",
+            "source_location",
+            "technical_role",
+            "effect",
+            "support_status",
+        )
         for item in ledger:
             cells = table.add_row().cells
             for cell, key in zip(cells, keys):
@@ -231,7 +248,9 @@ def add_review_appendix(document: Document, data: dict) -> None:
         ("发明人待确认问题", None),
     ):
         add_heading(document, heading, level=2)
-        items = data.get("inventor_questions", []) if key is None else audit.get(key, [])
+        items = (
+            data.get("inventor_questions", []) if key is None else audit.get(key, [])
+        )
         for item in items:
             add_body(document, f"- {item}", indent=False)
 
@@ -243,7 +262,9 @@ def validate(data: dict) -> None:
         raise ValueError(f"Missing required keys: {', '.join(missing)}")
     numbers = [claim.get("number") for claim in data["claims"]]
     if numbers != list(range(1, len(numbers) + 1)):
-        raise ValueError(f"Claim numbers must be consecutive integers starting at 1: {numbers}")
+        raise ValueError(
+            f"Claim numbers must be consecutive integers starting at 1: {numbers}"
+        )
 
 
 def main() -> int:

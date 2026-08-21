@@ -124,12 +124,12 @@ def main() -> int:
 # intentionally different — this manifest only guards against silent drift).
 # Regenerate with: python3 scripts/check_shared_assets.py --update
 ZOTERO_SCRIPT_MANIFEST = {
-    "plugins/cnki-export/skills/cnki-export/scripts/push_to_zotero.py": "5f808b392a35df6cf58eb3f42abdcd2ec1f4b6365bf92cf3a030bf20d29597fc",
-    "plugins/gs-export/skills/gs-export/scripts/push_to_zotero.py": "ba4ee1bea4f16142f1dd0569b15274ad154771a832928a8cdca4f7acfd498ffc",
-    "plugins/ieee-export/skills/ieee-export/scripts/push_to_zotero.py": "7e4cc721db0e0f2ae097f571710ffe764b0ad0feb1ad3b512e6cfb3c892deec5",
-    "plugins/pm-export/skills/pm-export/scripts/push_to_zotero.py": "ba4ee1bea4f16142f1dd0569b15274ad154771a832928a8cdca4f7acfd498ffc",
-    "plugins/sd-export/skills/sd-export/scripts/push_to_zotero.py": "adf63cfad8816a74e5241f9ed25c9cfa1c3dabaf0823a935ca85d1843175352c",
-    "plugins/wos-export/skills/wos-export/scripts/push_to_zotero.py": "2044202852859cb0f50d98680e1e77c614c59267d22e3b61d1ae7890e4f3dd4a",
+    "plugins/cnki-export/skills/cnki-export/scripts/push_to_zotero.py": "c4d5bbda7ff568aea931ad153139b975842c756e96d57847838435fa7db4a5a3",
+    "plugins/gs-export/skills/gs-export/scripts/push_to_zotero.py": "65f2a5650ed459b73df23db7965a9120d8b0e2a986d41930474e257ee10544c7",
+    "plugins/ieee-export/skills/ieee-export/scripts/push_to_zotero.py": "5b31abae65d4b49800bb0ea6e12385e7172dac4d66419b3a7e427748ee4a62c2",
+    "plugins/pm-export/skills/pm-export/scripts/push_to_zotero.py": "65f2a5650ed459b73df23db7965a9120d8b0e2a986d41930474e257ee10544c7",
+    "plugins/sd-export/skills/sd-export/scripts/push_to_zotero.py": "4fcd50c48c93b7e6b8d81a1acc58a85826fec4ec957d7c4d7415025b777c2f18",
+    "plugins/wos-export/skills/wos-export/scripts/push_to_zotero.py": "eb17be894fc9c5ebd8cf37dbdce03c1c4a75b62ebbc584048c872a2cb4c35484",
 }
 
 

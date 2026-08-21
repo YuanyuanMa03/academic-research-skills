@@ -23,7 +23,9 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("project_dir", type=Path)
     parser.add_argument("--paper", type=Path, help="Optional paper to copy into paper/")
-    parser.add_argument("--force", action="store_true", help="Allow an existing project directory")
+    parser.add_argument(
+        "--force", action="store_true", help="Allow an existing project directory"
+    )
     parser.add_argument(
         "--no-embed-skill",
         action="store_true",
@@ -33,7 +35,9 @@ def main() -> int:
 
     project = args.project_dir.resolve()
     if project.exists() and any(project.iterdir()) and not args.force:
-        parser.error("project directory is not empty; use --force to add missing structure")
+        parser.error(
+            "project directory is not empty; use --force to add missing structure"
+        )
     project.mkdir(parents=True, exist_ok=True)
     for directory in DIRECTORIES:
         (project / directory).mkdir(parents=True, exist_ok=True)
