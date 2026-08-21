@@ -11,7 +11,7 @@ Claude Code 插件市场，提供学术研究工作流相关技能。
 ## 🎯 测试结果
 
 > **最后验证：2026-06-23**（完整测试，证据存于 `docs/test-evidence/`）。
-> 2026-08-21 抽查：PubMed 检索仍可用（"soil carbon cycling" 2022–2026 共 5,688 条），浏览器路径与新增的独立 API 脚本 `pm-search/scripts/pubmed_api_search.py` 均通过。
+> 2026-08-21 抽查：PubMed 检索仍可用（"soil carbon cycling" 2022–2026 共 5,688 条），浏览器路径与新增的独立 API 脚本 `plugins/pm-search/skills/pm-search/scripts/pubmed_api_search.py` 均通过。
 
 我们通过搜索**农业大模型**、**智慧农业**和**农业土壤碳循环**相关论文，对技能进行了实际测试。
 

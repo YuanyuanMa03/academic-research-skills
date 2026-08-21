@@ -47,5 +47,5 @@ jobs:
       - name: Shared-asset drift check (no network)
         run: python3 scripts/check_shared_assets.py
 
-      - name: Live API smoke test (nature-academic-search)
-        run: python3 plugins/nature-academic-search/skills/nature-academic-search/scripts/format-converter.py --test
+      - name: Live API connectivity check (nature-academic-search)
+        run: python3 plugins/nature-academic-search/skills/nature-academic-search/scripts/preflight.py

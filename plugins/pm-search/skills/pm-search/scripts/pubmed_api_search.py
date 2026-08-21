@@ -30,6 +30,20 @@ import urllib.request
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 ALLOWED_HOSTS = {"eutils.ncbi.nlm.nih.gov"}
+# CLI name -> valid esearch sort value. The PubMed schema only accepts the
+# four values on the right; other spellings are silently ignored by the API
+# (live-verified: 'date', 'first_author', 'journal' trigger
+# "Unknown sort schema ... ignored" and fall back to default order).
+SORT_MAP = {
+    "relevance": "relevance",
+    "date": "pub_date",
+    "pub_date": "pub_date",
+    "first_author": "author",
+    "journal": "journalname",
+}
+# ESummary GET requests should stay under ~200 UIDs per NCBI NBK25499;
+# larger id lists must be chunked (or POSTed).
+ESUMMARY_CHUNK = 200
 TIMEOUT = 15
 RETRY_STATUS = {429, 500, 502, 503}
 RETRY_DELAY = 1.0
@@ -154,7 +168,7 @@ def run_search(
         "retmax": str(limit),
         "retstart": str(retstart),
         "retmode": "json",
-        "sort": sort,
+        "sort": SORT_MAP[sort],
     }
     if mailto:
         params["tool"] = "academic-research-skills"
@@ -166,6 +180,8 @@ def run_search(
     ids = result.get("idlist") or []
     total = int(result.get("count") or 0)
     query_translation = result.get("querytranslation") or ""
+    for msg in (result.get("warninglist") or {}).get("outputmessages") or []:
+        print(f"warning from E-utilities: {msg}", file=sys.stderr)
     if not ids:
         return {
             "query": query,
@@ -176,8 +192,11 @@ def run_search(
             "results": [],
         }
 
-    sum_url = f"{EUTILS}/esummary.fcgi?db=pubmed&retmode=json&id={','.join(ids)}"
-    sum_data = fetch_json(sum_url).get("result") or {}
+    sum_data: dict = {}
+    for i in range(0, len(ids), ESUMMARY_CHUNK):
+        chunk = ids[i : i + ESUMMARY_CHUNK]
+        sum_url = f"{EUTILS}/esummary.fcgi?db=pubmed&retmode=json&id={','.join(chunk)}"
+        sum_data.update(fetch_json(sum_url).get("result") or {})
 
     records = []
     for i, pmid in enumerate(ids):
@@ -251,7 +270,12 @@ def selftest() -> int:
         raise AssertionError("non-https URL should be blocked")
     except RuntimeError:
         pass
-    print("selftest OK: parse + DOI extraction + term building + URL allowlist")
+    valid_sort = {"relevance", "pub_date", "author", "journalname"}
+    assert set(SORT_MAP.values()) <= valid_sort, "invalid esearch sort value registered"
+    assert set(SORT_MAP) == {"relevance", "date", "pub_date", "first_author", "journal"}
+    print(
+        "selftest OK: parse + DOI extraction + term building + URL allowlist + sort mapping"
+    )
     return 0
 
 

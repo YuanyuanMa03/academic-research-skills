@@ -11,7 +11,7 @@ Claude Code plugin marketplace for academic research workflows.
 ## 🎯 Test Results
 
 > **Last verified: 2026-06-23** (full run, evidence in `docs/test-evidence/`).
-> 2026-08-21 spot-check: PubMed search still working (5,688 results for "soil carbon cycling", 2022–2026), both via browser and via the new standalone API script `pm-search/scripts/pubmed_api_search.py`.
+> 2026-08-21 spot-check: PubMed search still working (5,688 results for "soil carbon cycling", 2022–2026), both via browser and via the new standalone API script `plugins/pm-search/skills/pm-search/scripts/pubmed_api_search.py`.
 
 We tested the skills by searching for papers on **agricultural large models**, **smart agriculture**, and **soil carbon cycling** across multiple platforms.
 
