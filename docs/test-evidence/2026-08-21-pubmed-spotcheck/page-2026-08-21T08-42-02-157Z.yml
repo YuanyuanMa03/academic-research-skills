@@ -1,0 +1,692 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main page content" [ref=e2] [cursor=pointer]:
+    - /url: "#search-results"
+  - generic [ref=e6]:
+    - img "U.S. flag" [ref=e7]
+    - paragraph [ref=e8]: An official website of the United States government
+    - button "Here's how you know" [ref=e9] [cursor=pointer]
+  - banner [ref=e10]:
+    - generic [ref=e12]:
+      - link "NCBI Logo" [ref=e14] [cursor=pointer]:
+        - /url: https://www.ncbi.nlm.nih.gov/
+        - img "NIH NLM Logo" [ref=e15]
+      - link "Log in" [ref=e17] [cursor=pointer]:
+        - /url: https://account.ncbi.nlm.nih.gov/?back_url=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F%3Fterm%3Dsoil%2Bcarbon%2Bcycling%26filter%3Ddates.2022%252F1%252F1-2026%252F12%252F31
+  - navigation "access keys":
+    - link "Access keys" [ref=e18] [cursor=pointer]:
+      - /url: https://www.ncbi.nlm.nih.gov/guide/browsers/#ncbi_accesskeys
+    - link "NCBI Homepage" [ref=e19] [cursor=pointer]:
+      - /url: https://www.ncbi.nlm.nih.gov
+    - link "MyNCBI Homepage" [ref=e20] [cursor=pointer]:
+      - /url: /myncbi/
+    - link "Main Content" [ref=e21] [cursor=pointer]:
+      - /url: "#maincontent"
+    - link "Main Navigation" [ref=e22] [cursor=pointer]:
+      - /url: "#"
+  - navigation "Main page content below"
+  - main [ref=e23]:
+    - heading "Search Page" [level=1] [ref=e24]
+    - search [ref=e25]:
+      - generic [ref=e26]:
+        - link "Pubmed Logo" [ref=e27] [cursor=pointer]:
+          - /url: /
+          - img "pubmed logo" [ref=e28]
+        - search [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]: "Search:"
+            - generic [ref=e32]:
+              - combobox "Search:" [ref=e33]: soil carbon cycling
+              - status [ref=e34]
+            - button "Clear search input" [ref=e35] [cursor=pointer]
+            - button "Search" [ref=e36] [cursor=pointer]
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - link "Advanced" [ref=e39] [cursor=pointer]:
+              - /url: /advanced/
+            - link "Create alert" [ref=e40] [cursor=pointer]:
+              - /url: https://account.ncbi.nlm.nih.gov/?back_url=https%3A%2F%2Fpubmed.ncbi.nlm.nih.gov%2F%3Fterm%3Dsoil%2Bcarbon%2Bcycling%26filter%3Ddates.2022%252F1%252F1-2026%252F12%252F31%23open-saved-search-panel
+            - button "Create RSS" [ref=e41] [cursor=pointer]
+          - link "User Guide" [ref=e43] [cursor=pointer]:
+            - /url: /help/
+      - generic [ref=e45]:
+        - text: ()
+        - generic [ref=e46]:
+          - generic [ref=e48]:
+            - generic [ref=e49]: "Sort by:"
+            - combobox "Sort by" [ref=e50]:
+              - option "Best match" [selected]
+              - option "Most recent"
+              - option "Publication date"
+              - option "First author"
+              - option "Journal"
+          - generic [ref=e51]:
+            - button "Display options" [ref=e52] [cursor=pointer]
+            - option "Summary" [selected]
+            - option "Abstract"
+            - option "PubMed"
+            - option "PMID"
+            - option "10" [selected]
+            - option "20"
+            - option "50"
+            - option "100"
+            - option "200"
+        - region "save, email, send to" [ref=e54]:
+          - button "Save" [ref=e55] [cursor=pointer]
+          - button "Email" [ref=e56] [cursor=pointer]
+          - button "Send to" [ref=e58] [cursor=pointer]
+    - text: "* * * *"
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - heading "Filters" [level=2] [ref=e61]
+        - generic [ref=e63]:
+          - heading "My Custom Filters" [level=3] [ref=e64]
+          - link "Edit My Custom Filters" [ref=e65] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/sites/myncbi/pubmed/filters
+            - text: Edit custom filters
+        - generic [ref=e66]:
+          - heading "Results by year" [level=3] [ref=e67]
+          - button "Expand/collapse timeline" [ref=e68] [cursor=pointer]
+          - button "Download CSV" [ref=e69] [cursor=pointer]
+          - button "Reset" [ref=e70] [cursor=pointer]
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - img [ref=e73]:
+                - generic [ref=e74] [cursor=pointer]
+                - generic [ref=e77] [cursor=pointer]
+                - generic [ref=e80] [cursor=pointer]
+                - generic [ref=e83] [cursor=pointer]
+                - generic [ref=e86] [cursor=pointer]
+                - generic [ref=e89] [cursor=pointer]
+                - generic [ref=e92] [cursor=pointer]
+                - generic [ref=e95] [cursor=pointer]
+                - generic [ref=e98] [cursor=pointer]
+                - generic [ref=e101] [cursor=pointer]
+                - generic [ref=e104] [cursor=pointer]
+                - generic [ref=e107] [cursor=pointer]
+                - generic [ref=e110] [cursor=pointer]
+                - generic [ref=e113] [cursor=pointer]
+                - generic [ref=e116] [cursor=pointer]
+                - generic [ref=e119] [cursor=pointer]
+                - generic [ref=e122] [cursor=pointer]
+                - generic [ref=e125] [cursor=pointer]
+                - generic [ref=e128] [cursor=pointer]
+                - generic [ref=e131] [cursor=pointer]
+                - generic [ref=e134] [cursor=pointer]
+                - generic [ref=e137] [cursor=pointer]
+                - generic [ref=e140] [cursor=pointer]
+                - generic [ref=e143] [cursor=pointer]
+                - generic [ref=e146] [cursor=pointer]
+                - generic [ref=e149] [cursor=pointer]
+                - generic [ref=e152] [cursor=pointer]
+                - generic [ref=e155] [cursor=pointer]
+                - generic [ref=e158] [cursor=pointer]
+                - generic [ref=e161] [cursor=pointer]
+                - generic [ref=e164] [cursor=pointer]
+                - generic [ref=e167] [cursor=pointer]
+                - generic [ref=e170] [cursor=pointer]
+                - generic [ref=e173] [cursor=pointer]
+                - generic [ref=e176] [cursor=pointer]
+                - generic [ref=e179] [cursor=pointer]
+                - generic [ref=e182] [cursor=pointer]
+                - generic [ref=e185] [cursor=pointer]
+                - generic [ref=e188] [cursor=pointer]
+                - generic [ref=e191] [cursor=pointer]
+                - generic [ref=e194] [cursor=pointer]
+                - generic [ref=e197] [cursor=pointer]
+                - generic [ref=e200] [cursor=pointer]
+                - generic [ref=e203] [cursor=pointer]
+                - generic [ref=e206] [cursor=pointer]
+                - generic [ref=e209] [cursor=pointer]
+                - generic [ref=e212] [cursor=pointer]
+                - generic [ref=e215] [cursor=pointer]
+                - generic [ref=e218] [cursor=pointer]
+                - generic [ref=e221] [cursor=pointer]
+                - generic [ref=e224] [cursor=pointer]
+                - generic [ref=e227] [cursor=pointer]
+                - generic [ref=e230] [cursor=pointer]
+                - generic [ref=e233] [cursor=pointer]
+                - generic [ref=e236] [cursor=pointer]
+                - generic [ref=e239] [cursor=pointer]
+                - generic [ref=e242] [cursor=pointer]
+                - generic [ref=e245] [cursor=pointer]
+                - generic [ref=e248] [cursor=pointer]
+                - generic [ref=e251] [cursor=pointer]
+                - generic [ref=e254] [cursor=pointer]
+                - generic [ref=e257] [cursor=pointer]
+                - generic [ref=e260] [cursor=pointer]
+                - generic [ref=e263] [cursor=pointer]
+                - generic [ref=e266] [cursor=pointer]
+              - text: ":"
+            - generic [ref=e271]:
+              - slider "Lower handle" [ref=e274]:
+                - generic [ref=e276]: 2022-
+              - slider "Upper handle" [ref=e277]:
+                - generic [ref=e279]: "2026"
+          - paragraph [ref=e280]: Table representation of search results timeline featuring number of search results per year.
+          - table "Table of search results timeline data" [ref=e281]:
+            - rowgroup [ref=e282]:
+              - row [ref=e283]:
+                - columnheader "Year" [ref=e284]
+                - columnheader "Number of Results" [ref=e285]
+            - rowgroup [ref=e286]:
+              - row [ref=e287]:
+                - cell "1962" [ref=e288]
+                - cell "1" [ref=e289]
+              - row [ref=e290]:
+                - cell "1963" [ref=e291]
+                - cell "2" [ref=e292]
+              - row [ref=e293]:
+                - cell "1964" [ref=e294]
+                - cell "2" [ref=e295]
+              - row [ref=e296]:
+                - cell "1965" [ref=e297]
+                - cell "2" [ref=e298]
+              - row [ref=e299]:
+                - cell "1967" [ref=e300]
+                - cell "1" [ref=e301]
+              - row [ref=e302]:
+                - cell "1968" [ref=e303]
+                - cell "1" [ref=e304]
+              - row [ref=e305]:
+                - cell "1969" [ref=e306]
+                - cell "1" [ref=e307]
+              - row [ref=e308]:
+                - cell "1972" [ref=e309]
+                - cell "1" [ref=e310]
+              - row [ref=e311]:
+                - cell "1973" [ref=e312]
+                - cell "3" [ref=e313]
+              - row [ref=e314]:
+                - cell "1975" [ref=e315]
+                - cell "3" [ref=e316]
+              - row [ref=e317]:
+                - cell "1976" [ref=e318]
+                - cell "3" [ref=e319]
+              - row [ref=e320]:
+                - cell "1977" [ref=e321]
+                - cell "2" [ref=e322]
+              - row [ref=e323]:
+                - cell "1978" [ref=e324]
+                - cell "1" [ref=e325]
+              - row [ref=e326]:
+                - cell "1979" [ref=e327]
+                - cell "3" [ref=e328]
+              - row [ref=e329]:
+                - cell "1981" [ref=e330]
+                - cell "2" [ref=e331]
+              - row [ref=e332]:
+                - cell "1982" [ref=e333]
+                - cell "1" [ref=e334]
+              - row [ref=e335]:
+                - cell "1983" [ref=e336]
+                - cell "1" [ref=e337]
+              - row [ref=e338]:
+                - cell "1984" [ref=e339]
+                - cell "1" [ref=e340]
+              - row [ref=e341]:
+                - cell "1985" [ref=e342]
+                - cell "3" [ref=e343]
+              - row [ref=e344]:
+                - cell "1986" [ref=e345]
+                - cell "5" [ref=e346]
+              - row [ref=e347]:
+                - cell "1987" [ref=e348]
+                - cell "2" [ref=e349]
+              - row [ref=e350]:
+                - cell "1988" [ref=e351]
+                - cell "3" [ref=e352]
+              - row [ref=e353]:
+                - cell "1989" [ref=e354]
+                - cell "6" [ref=e355]
+              - row [ref=e356]:
+                - cell "1990" [ref=e357]
+                - cell "3" [ref=e358]
+              - row [ref=e359]:
+                - cell "1991" [ref=e360]
+                - cell "10" [ref=e361]
+              - row [ref=e362]:
+                - cell "1992" [ref=e363]
+                - cell "7" [ref=e364]
+              - row [ref=e365]:
+                - cell "1993" [ref=e366]
+                - cell "10" [ref=e367]
+              - row [ref=e368]:
+                - cell "1994" [ref=e369]
+                - cell "7" [ref=e370]
+              - row [ref=e371]:
+                - cell "1995" [ref=e372]
+                - cell "7" [ref=e373]
+              - row [ref=e374]:
+                - cell "1996" [ref=e375]
+                - cell "13" [ref=e376]
+              - row [ref=e377]:
+                - cell "1997" [ref=e378]
+                - cell "13" [ref=e379]
+              - row [ref=e380]:
+                - cell "1998" [ref=e381]
+                - cell "10" [ref=e382]
+              - row [ref=e383]:
+                - cell "1999" [ref=e384]
+                - cell "15" [ref=e385]
+              - row [ref=e386]:
+                - cell "2000" [ref=e387]
+                - cell "20" [ref=e388]
+              - row [ref=e389]:
+                - cell "2001" [ref=e390]
+                - cell "55" [ref=e391]
+              - row [ref=e392]:
+                - cell "2002" [ref=e393]
+                - cell "53" [ref=e394]
+              - row [ref=e395]:
+                - cell "2003" [ref=e396]
+                - cell "58" [ref=e397]
+              - row [ref=e398]:
+                - cell "2004" [ref=e399]
+                - cell "67" [ref=e400]
+              - row [ref=e401]:
+                - cell "2005" [ref=e402]
+                - cell "68" [ref=e403]
+              - row [ref=e404]:
+                - cell "2006" [ref=e405]
+                - cell "97" [ref=e406]
+              - row [ref=e407]:
+                - cell "2007" [ref=e408]
+                - cell "92" [ref=e409]
+              - row [ref=e410]:
+                - cell "2008" [ref=e411]
+                - cell "110" [ref=e412]
+              - row [ref=e413]:
+                - cell "2009" [ref=e414]
+                - cell "113" [ref=e415]
+              - row [ref=e416]:
+                - cell "2010" [ref=e417]
+                - cell "142" [ref=e418]
+              - row [ref=e419]:
+                - cell "2011" [ref=e420]
+                - cell "197" [ref=e421]
+              - row [ref=e422]:
+                - cell "2012" [ref=e423]
+                - cell "233" [ref=e424]
+              - row [ref=e425]:
+                - cell "2013" [ref=e426]
+                - cell "348" [ref=e427]
+              - row [ref=e428]:
+                - cell "2014" [ref=e429]
+                - cell "346" [ref=e430]
+              - row [ref=e431]:
+                - cell "2015" [ref=e432]
+                - cell "419" [ref=e433]
+              - row [ref=e434]:
+                - cell "2016" [ref=e435]
+                - cell "472" [ref=e436]
+              - row [ref=e437]:
+                - cell "2017" [ref=e438]
+                - cell "518" [ref=e439]
+              - row [ref=e440]:
+                - cell "2018" [ref=e441]
+                - cell "616" [ref=e442]
+              - row [ref=e443]:
+                - cell "2019" [ref=e444]
+                - cell "653" [ref=e445]
+              - row [ref=e446]:
+                - cell "2020" [ref=e447]
+                - cell "762" [ref=e448]
+              - row [ref=e449]:
+                - cell "2021" [ref=e450]
+                - cell "907" [ref=e451]
+              - row [ref=e452]:
+                - cell "2022" [ref=e453]
+                - cell "1095" [ref=e454]
+              - row [ref=e455]:
+                - cell "2023" [ref=e456]
+                - cell "1152" [ref=e457]
+              - row [ref=e458]:
+                - cell "2024" [ref=e459]
+                - cell "1392" [ref=e460]
+              - row [ref=e461]:
+                - cell "2025" [ref=e462]
+                - cell "1509" [ref=e463]
+              - row [ref=e464]:
+                - cell "2026" [ref=e465]
+                - cell "1122" [ref=e466]
+        - generic [ref=e468]:
+          - group "Filters" [ref=e469]:
+            - generic [ref=e470]:
+              - heading "Publication date" [level=3] [ref=e471]
+              - list [ref=e472]:
+                - listitem [ref=e473]:
+                  - radio "1 year" [ref=e474]
+                  - generic [ref=e475] [cursor=pointer]: 1 year
+                - listitem [ref=e476]:
+                  - radio "5 years" [ref=e477]
+                  - generic [ref=e478] [cursor=pointer]: 5 years
+                - listitem [ref=e479]:
+                  - radio "10 years" [ref=e480]
+                  - generic [ref=e481] [cursor=pointer]: 10 years
+                - listitem [ref=e482]:
+                  - radio "Select to open a dropdown and enter a custom date range." [checked] [ref=e483]
+                  - generic "Select to open a dropdown and enter a custom date range." [ref=e484] [cursor=pointer]: From 2022/1/1 to 2026/12/31
+            - generic [ref=e485]:
+              - heading "Text availability" [level=3] [ref=e486]
+              - list [ref=e487]:
+                - listitem [ref=e488]:
+                  - checkbox "Abstract" [ref=e489]
+                  - generic [ref=e490] [cursor=pointer]: Abstract
+                - listitem [ref=e491]:
+                  - checkbox "Free full text" [ref=e492]
+                  - generic [ref=e493] [cursor=pointer]: Free full text
+                - listitem [ref=e494]:
+                  - checkbox "Full text" [ref=e495]
+                  - generic [ref=e496] [cursor=pointer]: Full text
+            - generic [ref=e497]:
+              - heading "Article attribute" [level=3] [ref=e498]
+              - list [ref=e499]:
+                - listitem [ref=e500]:
+                  - checkbox "Associated data" [ref=e501]
+                  - generic [ref=e502] [cursor=pointer]: Associated data
+            - generic [ref=e503]:
+              - heading "Article type" [level=3] [ref=e504]
+              - list [ref=e505]:
+                - listitem [ref=e506]:
+                  - checkbox "Books and Documents" [ref=e507]
+                  - generic [ref=e508] [cursor=pointer]: Books and Documents
+                - listitem [ref=e509]:
+                  - checkbox "Clinical Trial" [ref=e510]
+                  - generic [ref=e511] [cursor=pointer]: Clinical Trial
+                - listitem [ref=e512]:
+                  - checkbox "Meta-Analysis" [ref=e513]
+                  - generic [ref=e514] [cursor=pointer]: Meta-Analysis
+                - listitem [ref=e515]:
+                  - checkbox "Randomized Controlled Trial" [ref=e516]
+                  - generic [ref=e517] [cursor=pointer]: Randomized Controlled Trial
+                - listitem [ref=e518]:
+                  - checkbox "Review" [ref=e519]
+                  - generic [ref=e520] [cursor=pointer]: Review
+                - listitem [ref=e521]:
+                  - checkbox "Systematic Review" [ref=e522]
+                  - generic [ref=e523] [cursor=pointer]: Systematic Review
+              - button "See all article type filters" [ref=e524] [cursor=pointer]
+          - generic [ref=e525]:
+            - heading "Additional filters" [level=2] [ref=e526]
+            - button "Additional filters" [ref=e527] [cursor=pointer]
+          - generic [ref=e528]:
+            - button "Clear applied filters" [ref=e529] [cursor=pointer]
+            - button "Reset filters menu" [ref=e530] [cursor=pointer]
+      - heading "Search Results" [level=2] [ref=e531]
+      - generic [ref=e532]:
+        - text: …
+        - generic [ref=e533]:
+          - heading "5,688 results" [level=3] [ref=e536]
+          - generic [ref=e537]:
+            - button "Navigates to the first page of results." [disabled]:
+              - img "first page"
+            - button "Navigates to the previous page of results." [disabled]:
+              - img "previous page"
+            - generic [ref=e538]:
+              - generic [ref=e539]: Page
+              - spinbutton "page number input" [ref=e541]: "1"
+              - generic [ref=e542]: of 569
+            - button "Navigates to the next page of results." [ref=e543] [cursor=pointer]:
+              - img "next page" [ref=e544]
+            - button "Navigates to the last page of results." [ref=e545] [cursor=pointer]:
+              - img "last page" [ref=e546]
+        - text: ":"
+        - generic [ref=e547]:
+          - generic [ref=e550]:
+            - text: "Filters applied: from 2022/1/1 - 2026/12/31."
+            - link "Clear all" [ref=e551] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=e552]: Select search result to email or save
+          - generic [ref=e554]:
+            - article [ref=e555]:
+              - generic [ref=e556]:
+                - checkbox "Select search result to email or save" [ref=e557]
+                - generic [ref=e558] [cursor=pointer]: "1"
+                - button "Cite" [ref=e562] [cursor=pointer]
+              - generic [ref=e564]:
+                - 'link "Nitrogen availability mediates soil carbon cycling response to climate warming: A meta-analysis." [ref=e565] [cursor=pointer]':
+                  - /url: /36744998/
+                - generic [ref=e566]:
+                  - generic [ref=e567]: Bai T, Wang P, Qiu Y, Zhang Y, Hu S.
+                  - generic [ref=e568]: "Glob Chang Biol. 2023 May;29(9):2608-2626. doi: 10.1111/gcb.16627. Epub 2023 Feb 26."
+                  - generic [ref=e569]: "PMID: 36744998"
+                - generic [ref=e570]: Global climate warming may induce a positive feedback through increasing soil carbon (C) release to the atmosphere. Although warming can affect both C input to and output from soil, direct and convincing evidence illustrating that warming induces a net change …
+            - article [ref=e572]:
+              - generic [ref=e573]:
+                - checkbox "Select search result to email or save" [ref=e574]
+                - generic [ref=e575] [cursor=pointer]: "2"
+                - button "Cite" [ref=e579] [cursor=pointer]
+              - generic [ref=e581]:
+                - 'link "Unveiling the crucial role of soil microorganisms in carbon cycling: A review." [ref=e582] [cursor=pointer]':
+                  - /url: /37977383/
+                - generic [ref=e583]:
+                  - generic [ref=e584]: Wu H, Cui H, Fu C, Li R, Qi F, Liu Z, Yang G, Xiao K, Qiao M.
+                  - generic [ref=e585]: "Sci Total Environ. 2024 Jan 20;909:168627. doi: 10.1016/j.scitotenv.2023.168627. Epub 2023 Nov 17."
+                  - generic [ref=e586]: "PMID: 37977383"
+                  - generic [ref=e587]: Review.
+                - generic [ref=e589]:
+                  - generic [ref=e590]: Soil microorganisms, by actively participating in the decomposition and transformation of organic matter through diverse metabolic pathways, play a pivotal role in carbon cycling within soil systems and contribute to the stabilization of organic car
+                  - text: …
+            - article [ref=e591]:
+              - generic [ref=e592]:
+                - checkbox "Select search result to email or save" [ref=e593]
+                - generic [ref=e594] [cursor=pointer]: "3"
+                - button "Cite" [ref=e598] [cursor=pointer]
+              - generic [ref=e600]:
+                - 'link "Microplastic effects on carbon cycling in terrestrial soil ecosystems: Storage, formation, mineralization, and microbial mechanisms." [ref=e601] [cursor=pointer]':
+                  - /url: /39370001/
+                - generic [ref=e602]:
+                  - generic [ref=e603]: Liu Y, Wang W, He J.
+                  - generic [ref=e604]: "Sci Total Environ. 2024 Dec 1;954:176658. doi: 10.1016/j.scitotenv.2024.176658. Epub 2024 Oct 4."
+                  - generic [ref=e605]: "PMID: 39370001"
+                - generic [ref=e607]:
+                  - generic [ref=e608]: Soil is the largest environmental reservoir of microplastics (MPs) on the earth. Incremental accumulation of MPs in the soil can cause significant changes in soil physicochemical and microbial traits, which may in turn interfere with soil biogeochemica
+                  - text: …
+            - article [ref=e609]:
+              - generic [ref=e610]:
+                - checkbox "Select search result to email or save" [ref=e611]
+                - generic [ref=e612] [cursor=pointer]: "4"
+                - button "Cite" [ref=e616] [cursor=pointer]
+              - generic [ref=e618]:
+                - 'link "Fire effects on soil carbon cycling pools in forest ecosystems: A global meta-analysis." [ref=e619] [cursor=pointer]':
+                  - /url: /37353021/
+                - generic [ref=e620]:
+                  - generic [ref=e621]: Cheng Y, Luo P, Yang H, Li H, Luo C, Jia H, Huang Y.
+                  - generic [ref=e622]: "Sci Total Environ. 2023 Oct 15;895:165001. doi: 10.1016/j.scitotenv.2023.165001. Epub 2023 Jun 22."
+                  - generic [ref=e623]: "PMID: 37353021"
+                  - generic [ref=e624]: Free article.
+                - generic [ref=e625]: Changes in soil carbon (C) pools driven by fire in forest ecosystems remain equivocal, especially at a global scale. ...On aggregate, fires significantly increased the mean effect sizes of several key soil carbon cycling components-including mic …
+            - article [ref=e627]:
+              - generic [ref=e628]:
+                - checkbox "Select search result to email or save" [ref=e629]
+                - generic [ref=e630] [cursor=pointer]: "5"
+                - button "Cite" [ref=e634] [cursor=pointer]
+              - generic [ref=e636]:
+                - link "Microbial evolution-An under-appreciated driver of soil carbon cycling." [ref=e637] [cursor=pointer]:
+                  - /url: /38562029/
+                - generic [ref=e638]:
+                  - generic [ref=e639]: Abs E, Chase AB, Manzoni S, Ciais P, Allison SD.
+                  - generic [ref=e640]: "Glob Chang Biol. 2024 Apr;30(4):e17268. doi: 10.1111/gcb.17268."
+                  - generic [ref=e641]: "PMID: 38562029"
+                - generic [ref=e642]: Although substantial advances in predicting the ecological impacts of global change have been made, predictions of the evolutionary impacts have lagged behind. In soil ecosystems, microbes act as the primary energetic drivers of carbon cycling; however, micro …
+            - article [ref=e644]:
+              - generic [ref=e645]:
+                - checkbox "Select search result to email or save" [ref=e646]
+                - generic [ref=e647] [cursor=pointer]: "6"
+                - button "Cite" [ref=e651] [cursor=pointer]
+              - generic [ref=e653]:
+                - link "Effects of microplastics on soil microorganisms and microbial functions in nutrients and carbon cycling - A review." [ref=e654] [cursor=pointer]:
+                  - /url: /38438042/
+                - generic [ref=e655]:
+                  - generic [ref=e656]: Aralappanavar VK, Mukhopadhyay R, Yu Y, Liu J, Bhatnagar A, Praveena SM, Li Y, Paller M, Adyel TM, Rinklebe J, Bolan NS, Sarkar B.
+                  - generic [ref=e657]: "Sci Total Environ. 2024 May 10;924:171435. doi: 10.1016/j.scitotenv.2024.171435. Epub 2024 Mar 2."
+                  - generic [ref=e658]: "PMID: 38438042"
+                  - generic [ref=e659]: Free article.
+                  - generic [ref=e660]: Review.
+                - generic [ref=e661]: The harmful effects of microplastics (MPs) pollution in the soil ecosystem have drawn global attention in recent years. This paper critically reviews the effects of MPs on soil microbial diversity and functions in relation to nutrients and carbon cycling …
+            - article [ref=e663]:
+              - generic [ref=e664]:
+                - checkbox "Select search result to email or save" [ref=e665]
+                - generic [ref=e666] [cursor=pointer]: "7"
+                - button "Cite" [ref=e670] [cursor=pointer]
+              - generic [ref=e672]:
+                - link "Global magnitude of rhizosphere effects on soil microbial communities and carbon cycling in natural terrestrial ecosystems." [ref=e673] [cursor=pointer]:
+                  - /url: /36155049/
+                - generic [ref=e674]:
+                  - generic [ref=e675]: Lv C, Wang C, Cai A, Zhou Z.
+                  - generic [ref=e676]: "Sci Total Environ. 2023 Jan 15;856(Pt 1):158961. doi: 10.1016/j.scitotenv.2022.158961. Epub 2022 Sep 22."
+                  - generic [ref=e677]: "PMID: 36155049"
+                  - generic [ref=e678]: Review.
+                - generic [ref=e679]: Understanding the magnitudes of rhizosphere effects (RE, difference in bio-physicochemical properties between rhizosphere and bulk soils) on soil microbial communities and their moderators is important for studying on below-ground carbon (C) cycling. ...Compa …
+            - article [ref=e681]:
+              - generic [ref=e682]:
+                - checkbox "Select search result to email or save" [ref=e683]
+                - generic [ref=e684] [cursor=pointer]: "8"
+                - button "Cite" [ref=e688] [cursor=pointer]
+              - generic [ref=e690]:
+                - 'link "The impacts of microplastics on the cycling of carbon and nitrogen in terrestrial soil ecosystems: Progress and prospects." [ref=e691] [cursor=pointer]':
+                  - /url: /38215847/
+                - generic [ref=e692]:
+                  - generic [ref=e693]: Wang W, Zhang Z, Gao J, Wu H.
+                  - generic [ref=e694]: "Sci Total Environ. 2024 Mar 10;915:169977. doi: 10.1016/j.scitotenv.2024.169977. Epub 2024 Jan 10."
+                  - generic [ref=e695]: "PMID: 38215847"
+                  - generic [ref=e696]: Review.
+                - generic [ref=e697]: Until recently, the effects of MPs on the cycling of carbon and nitrogen in terrestrial soil ecosystems have yet to be fully understood, which necessitates a review to summarize the current research progress and propose suggestions for future studies. ...Expo …
+            - article [ref=e699]:
+              - generic [ref=e700]:
+                - checkbox "Select search result to email or save" [ref=e701]
+                - generic [ref=e702] [cursor=pointer]: "9"
+                - button "Cite" [ref=e706] [cursor=pointer]
+              - generic [ref=e708]:
+                - 'link "Fire frequency and type regulate the response of soil carbon cycling and storage to fire across soil depths and ecosystems: A meta-analysis." [ref=e709] [cursor=pointer]':
+                  - /url: /35189231/
+                - generic [ref=e710]:
+                  - generic [ref=e711]: Xu S, Eisenhauer N, Pellegrini AFA, Wang J, Certini G, Guerra CA, Lai DYF.
+                  - generic [ref=e712]: "Sci Total Environ. 2022 Jun 15;825:153921. doi: 10.1016/j.scitotenv.2022.153921. Epub 2022 Feb 18."
+                  - generic [ref=e713]: "PMID: 35189231"
+                - generic [ref=e714]: Fire is a very common disturbance in terrestrial ecosystems and can give rise to significant effects on soil carbon (C) cycling and storage. Here, we conducted a global meta-analysis on the response of soil C cycling and storage across soil …
+            - article [ref=e716]:
+              - generic [ref=e717]:
+                - checkbox "Select search result to email or save" [ref=e718]
+                - generic [ref=e719] [cursor=pointer]: "10"
+                - button "Cite" [ref=e723] [cursor=pointer]
+              - generic [ref=e725]:
+                - 'link "Altered precipitation affects soil enzyme activity related to nitrogen and phosphorous but not carbon cycling: A meta-analysis." [ref=e726] [cursor=pointer]':
+                  - /url: /40022796/
+                - generic [ref=e727]:
+                  - generic [ref=e728]: Liu X, Bai Q, Liang K, Pei M, Chen J, Zhu B, Yu Q, Peng C, Xing F, Guo L.
+                  - generic [ref=e729]: "J Environ Manage. 2025 Mar;377:124709. doi: 10.1016/j.jenvman.2025.124709. Epub 2025 Feb 28."
+                  - generic [ref=e730]: "PMID: 40022796"
+                - generic [ref=e731]: Furthermore, these effects were linearly correlated with MPM, deviating from the expected nonlinear double asymmetric model. The response of soil hydrolytic EEAs was predominately regulated by soil water content, organic carbon, and microbial biomass. These f …
+            - generic:
+              - option "AMA"
+              - option "APA"
+              - option "MLA"
+              - option "NLM" [selected]
+          - generic [ref=e733]:
+            - generic [ref=e734]: 5,688 results
+            - button "Show more results" [ref=e735] [cursor=pointer]
+          - option "AMA"
+          - option "APA"
+          - option "MLA"
+          - option "NLM" [selected]
+        - generic [ref=e736]:
+          - button "Navigates to the first page of results." [disabled]:
+            - img "first page"
+            - generic: First
+          - button "Navigates to the previous page of results." [disabled]:
+            - img "previous page"
+            - generic: Prev
+          - generic [ref=e737]:
+            - generic [ref=e738]: Page
+            - spinbutton "page number input" [ref=e740]: "1"
+            - generic [ref=e741]: of 569
+          - button "Navigates to the next page of results." [ref=e742] [cursor=pointer]:
+            - generic [ref=e743]: Next
+            - img "next page" [ref=e744]
+          - button "Navigates to the last page of results." [ref=e745] [cursor=pointer]:
+            - generic [ref=e746]: Last
+            - img "last page" [ref=e747]
+  - generic [ref=e748]:
+    - complementary "Links to NCBI Literature Resources" [ref=e749]:
+      - generic [ref=e750]:
+        - paragraph [ref=e751]: NCBI Literature Resources
+        - paragraph [ref=e752]:
+          - link "MeSH" [ref=e753] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/mesh/
+          - link "PMC" [ref=e754] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/pmc/
+          - link "Bookshelf" [ref=e755] [cursor=pointer]:
+            - /url: https://www.ncbi.nlm.nih.gov/books
+          - link "Disclaimer" [ref=e756] [cursor=pointer]:
+            - /url: /disclaimer/
+        - paragraph [ref=e757]: The PubMed wordmark and PubMed logo are registered trademarks of the U.S. Department of Health and Human Services (HHS). Unauthorized use of these marks is strictly prohibited.
+    - contentinfo [ref=e758]:
+      - generic [ref=e759]:
+        - generic [ref=e760]: Follow NCBI
+        - generic [ref=e762]:
+          - link "Twitter" [ref=e763] [cursor=pointer]:
+            - /url: https://twitter.com/ncbi
+            - img "Twitter" [ref=e764]
+          - link "Facebook" [ref=e767] [cursor=pointer]:
+            - /url: https://www.facebook.com/ncbi.nlm
+            - img "Facebook" [ref=e768]
+          - link "LinkedIn" [ref=e769] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/ncbinlm
+            - img "LinkedIn" [ref=e770]
+          - link "GitHub" [ref=e771] [cursor=pointer]:
+            - /url: https://github.com/ncbi
+            - img "GitHub" [ref=e772]
+          - link "Blog" [ref=e775] [cursor=pointer]:
+            - /url: https://ncbiinsights.ncbi.nlm.nih.gov/
+      - generic [ref=e779]:
+        - generic [ref=e780]:
+          - generic [ref=e781]:
+            - paragraph [ref=e782]:
+              - link "Connect with NLM" [ref=e783] [cursor=pointer]:
+                - /url: https://www.nlm.nih.gov/socialmedia/index.html
+            - list [ref=e784]:
+              - listitem [ref=e785]:
+                - link "Twitter" [ref=e786] [cursor=pointer]:
+                  - /url: https://twitter.com/NLM_NIH
+                  - img "Twitter" [ref=e787]
+              - listitem [ref=e791]:
+                - link "Facebook" [ref=e792] [cursor=pointer]:
+                  - /url: https://www.facebook.com/nationallibraryofmedicine
+                  - img "SM-Facebook" [ref=e793]
+              - listitem [ref=e798]:
+                - link "Youtube" [ref=e799] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/NLMNIH
+                  - img "SM-Youtube" [ref=e800]
+          - paragraph [ref=e805]:
+            - text: National Library of Medicine
+            - link "8600 Rockville Pike Bethesda, MD 20894" [ref=e806] [cursor=pointer]:
+              - /url: https://www.google.com/maps/place/8600+Rockville+Pike,+Bethesda,+MD+20894/@38.9959508,-77.101021,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c95e25765ddb:0x19156f88b27635b8!8m2!3d38.9959508!4d-77.0988323
+          - paragraph [ref=e808]:
+            - link "Web Policies" [ref=e809] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/web_policies.html
+            - link "FOIA" [ref=e810] [cursor=pointer]:
+              - /url: https://www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/freedom-information-act-office
+            - link "HHS Vulnerability Disclosure" [ref=e811] [cursor=pointer]:
+              - /url: https://www.hhs.gov/vulnerability-disclosure-policy/index.html
+          - paragraph [ref=e813]:
+            - link "Help" [ref=e814] [cursor=pointer]:
+              - /url: https://support.nlm.nih.gov/?pagename=pubmed%3Apubmed%3Asearchresult%3ANONE
+            - link "Accessibility" [ref=e815] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/accessibility.html
+            - link "Careers" [ref=e816] [cursor=pointer]:
+              - /url: https://www.nlm.nih.gov/careers/careers.html
+        - navigation [ref=e819]:
+          - list [ref=e820]:
+            - listitem [ref=e821]:
+              - link "NLM" [ref=e822] [cursor=pointer]:
+                - /url: //www.nlm.nih.gov/
+            - listitem [ref=e823]:
+              - link "NIH" [ref=e824] [cursor=pointer]:
+                - /url: https://www.nih.gov/
+            - listitem [ref=e825]:
+              - link "HHS" [ref=e826] [cursor=pointer]:
+                - /url: https://www.hhs.gov/
+            - listitem [ref=e827]:
+              - link "USA.gov" [ref=e828] [cursor=pointer]:
+                - /url: https://www.usa.gov/

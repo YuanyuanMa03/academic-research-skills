@@ -26,6 +26,13 @@ Thumbs.db
 # Logs
 *.log
 
+# Browser MCP session artifacts (fresh snapshots land here during live tests;
+# curated evidence lives in docs/test-evidence/)
+.playwright-mcp/
+
+# Mimosa security-scan working data
+.mimosa/
+
 # Zotero session cache
 .zotero_sessions.json
 

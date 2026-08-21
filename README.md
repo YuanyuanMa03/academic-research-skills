@@ -5,15 +5,18 @@
 Claude Code plugin marketplace for academic research workflows.
 
 <p align="center">
-  <img src="image.png" alt="Academic Research Skills Demo" width="800"/>
+  <img src="docs/images/demo.png" alt="Academic Research Skills Demo" width="800"/>
 </p>
 
 ## 🎯 Test Results
 
+> **Last verified: 2026-06-23** (full run, evidence in `docs/test-evidence/`).
+> 2026-08-21 spot-check: PubMed search still working (5,688 results for "soil carbon cycling", 2022–2026), both via browser and via the new standalone API script `pm-search/scripts/pubmed_api_search.py`.
+
 We tested the skills by searching for papers on **agricultural large models**, **smart agriculture**, and **soil carbon cycling** across multiple platforms.
 
 <p align="center">
-  <img src="image copy.png" alt="Search Results" width="800"/>
+  <img src="docs/images/search-results.png" alt="Search Results" width="800"/>
 </p>
 
 | Platform | Status | Results Found | Papers Extracted |
