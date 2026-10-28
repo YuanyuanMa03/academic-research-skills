@@ -46,18 +46,21 @@ Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek,
 
 | Platform | Prefix | Skills | Count |
 |----------|--------|--------|-------|
-| CNKI | `cnki-*` | search, download, export, journal browse, paper detail | 10 |
-| Google Scholar | `gs-*` | search, advanced search, cited-by, fulltext, export | 6 |
-| ScienceDirect | `sd-*` | search, download, export, journal browse, paper detail | 8 |
-| Web of Science | `wos-*` | search, download, export, paper detail | 7 |
-| PubMed | `pm-*` | search, advanced search, export, fulltext, paper detail | 6 |
-| IEEE Xplore | `ieee-*` | search, download, export, journal browse, standards | 9 |
-| Zotero CSL | `zotero-*` | citation style generation | 1 |
+| CNKI | `cnki-*` | search, journal browse, paper detail, parse, navigate | 8 |
+| Google Scholar | `gs-*` | search, advanced search, cited-by, navigate | 4 |
+| ScienceDirect | `sd-*` | search, journal browse, paper detail, parse, navigate | 6 |
+| Web of Science | `wos-*` | search, DOM reference, paper detail, parse, navigate | 5 |
+| PubMed | `pm-*` | search (API-first), fulltext, paper detail, navigate | 5 |
+| IEEE Xplore | `ieee-*` | search, journal browse, standards, paper detail, parse | 7 |
 | Nature | `nature-*` | academic search, writing, polishing, figures, reader, patent, reviewer | 11 |
+| ScanSci PDF | `scansci-pdf` | paper download, citation export, Zotero push, batch, diagnostics | 1 |
 
-**58 skills total** — 8 academic platforms covered.
+**47 plugins total** — platform search & navigation on 7 academic platforms, plus the [`scansci-pdf`](https://github.com/Rimagination/scansci-pdf) retrieval hub (MIT) for downloads, citations, and Zotero.
 
-> Browser skills (CNKI, GS, SD, WoS, PubMed, IEEE) require [Chrome DevTools MCP](https://github.com/nicekid1/chrome-devtools-mcp). Nature skills are pure prompt-based and work with any LLM.
+> Browser skills (CNKI, GS, SD, WoS, IEEE) require [Chrome DevTools MCP](https://github.com/nicekid1/chrome-devtools-mcp) (bundled in each plugin's `.mcp.json`). PubMed search runs standalone via the NCBI API script. `scansci-pdf` needs Python >= 3.11 and `pip install scansci-pdf` (guided on first use). Nature skills are pure prompt-based and work with any LLM.
+>
+> Paper download / citation export / Zotero push all route through `scansci-pdf` — the old `*-download`, `*-export`, and `zotero-csl` skills were removed (see `docs/PLAYBOOK.md`).
+
 
 ## Installation
 
@@ -69,8 +72,6 @@ Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek,
 
 # Install all skills
 /plugin install cnki-advanced-search@academic-research-skills
-/plugin install cnki-download@academic-research-skills
-/plugin install cnki-export@academic-research-skills
 /plugin install cnki-journal-index@academic-research-skills
 /plugin install cnki-journal-search@academic-research-skills
 /plugin install cnki-journal-toc@academic-research-skills
@@ -80,13 +81,9 @@ Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek,
 /plugin install cnki-search@academic-research-skills
 /plugin install gs-advanced-search@academic-research-skills
 /plugin install gs-cited-by@academic-research-skills
-/plugin install gs-export@academic-research-skills
-/plugin install gs-fulltext@academic-research-skills
 /plugin install gs-navigate-pages@academic-research-skills
 /plugin install gs-search@academic-research-skills
 /plugin install ieee-advanced-search@academic-research-skills
-/plugin install ieee-download@academic-research-skills
-/plugin install ieee-export@academic-research-skills
 /plugin install ieee-journal-browse@academic-research-skills
 /plugin install ieee-navigate-pages@academic-research-skills
 /plugin install ieee-paper-detail@academic-research-skills
@@ -97,35 +94,30 @@ Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek,
 /plugin install nature-citation@academic-research-skills
 /plugin install nature-data@academic-research-skills
 /plugin install nature-figure@academic-research-skills
+/plugin install nature-paper-to-patent@academic-research-skills
 /plugin install nature-paper2ppt@academic-research-skills
 /plugin install nature-polishing@academic-research-skills
 /plugin install nature-reader@academic-research-skills
 /plugin install nature-response@academic-research-skills
-/plugin install nature-writing@academic-research-skills
-/plugin install nature-paper-to-patent@academic-research-skills
 /plugin install nature-reviewer@academic-research-skills
+/plugin install nature-writing@academic-research-skills
 /plugin install pm-advanced-search@academic-research-skills
-/plugin install pm-export@academic-research-skills
 /plugin install pm-fulltext@academic-research-skills
 /plugin install pm-navigate-pages@academic-research-skills
 /plugin install pm-paper-detail@academic-research-skills
 /plugin install pm-search@academic-research-skills
+/plugin install scansci-pdf@academic-research-skills
 /plugin install sd-advanced-search@academic-research-skills
-/plugin install sd-download@academic-research-skills
-/plugin install sd-export@academic-research-skills
 /plugin install sd-journal-browse@academic-research-skills
 /plugin install sd-navigate-pages@academic-research-skills
 /plugin install sd-paper-detail@academic-research-skills
 /plugin install sd-parse-results@academic-research-skills
 /plugin install sd-search@academic-research-skills
 /plugin install wos-dom@academic-research-skills
-/plugin install wos-download@academic-research-skills
-/plugin install wos-export@academic-research-skills
 /plugin install wos-navigate-pages@academic-research-skills
 /plugin install wos-paper-detail@academic-research-skills
 /plugin install wos-parse-results@academic-research-skills
 /plugin install wos-search@academic-research-skills
-/plugin install zotero-csl@academic-research-skills
 ```
 
 ### Copilot CLI
@@ -269,19 +261,23 @@ cat academic-research-skills/plugins/cnki-search/skills/cnki-search/SKILL.md
 
 - "Search CNKI for papers on neural rendering"
 - "Find citing papers on Google Scholar"
-- "Download this ScienceDirect paper"
+- "Download this paper via scansci-pdf" / "Export citations and push them to Zotero"
 - "Help me write a Nature-style introduction"
+
+Full intent-routing manual: [`docs/REFERENCE.md`](docs/REFERENCE.md). Maintenance handbook: [`docs/PLAYBOOK.md`](docs/PLAYBOOK.md).
 
 ## Adding Plugins
 
 1. Create `plugins/your-skill-name/skills/your-skill-name/SKILL.md`
-2. Add `plugins/your-skill-name/.claude-plugin/plugin.json`
-3. Add entry to `.claude-plugin/marketplace.json`
-4. Submit a pull request
+2. Add `plugins/your-skill-name/.claude-plugin/plugin.json` and `.codex-plugin/plugin.json`
+3. Register in BOTH `.claude-plugin/marketplace.json` and `.agents/plugins/marketplace.json`
+4. Cover it in `docs/REFERENCE.md`
+5. Run all checks in `scripts/` (CI enforces them), then submit a pull request
 
 ## Acknowledgments
 
-Nature skills (`nature-*`) are based on [nature-skills](https://github.com/Yuan1z0825/nature-skills) by [@Yuan1z0825](https://github.com/Yuan1z0825).
+- Literature retrieval (`scansci-pdf` plugin): [scansci-pdf](https://github.com/Rimagination/scansci-pdf) by [@Rimagination](https://github.com/Rimagination) (MIT).
+- Nature skills (`nature-*`): [nature-skills](https://github.com/Yuan1z0825/nature-skills) by [@Yuan1z0825](https://github.com/Yuan1z0825).
 
 ## License
 

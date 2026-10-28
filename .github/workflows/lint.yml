@@ -27,7 +27,7 @@ jobs:
       - name: Check for hardcoded paths
         run: |
           set -o pipefail
-          HARDcoded=0
+          HARDCODED=0
 
           # Windows drive-letter paths (e.g. C:\, D:/)
           if grep -rnP '(?<![:\w])[a-zA-Z]:[/\\][^\s"'"'"']+' plugins/ \
@@ -53,6 +53,12 @@ jobs:
 
       - name: Validate plugin.json files
         run: python scripts/validate_plugin_json.py
+
+      - name: Check shared assets (.mcp.json drift)
+        run: python scripts/check_shared_assets.py
+
+      - name: Check marketplace consistency
+        run: python scripts/check_marketplace_consistency.py
 
   lint-python:
     runs-on: ubuntu-latest

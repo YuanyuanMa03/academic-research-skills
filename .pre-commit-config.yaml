@@ -22,6 +22,20 @@ repos:
         pass_filenames: false
         always_run: true
 
+      - id: check-shared-assets
+        name: Check shared asset drift (.mcp.json)
+        entry: python scripts/check_shared_assets.py
+        language: python
+        pass_filenames: false
+        always_run: true
+
+      - id: check-marketplace-consistency
+        name: Check marketplace consistency
+        entry: python scripts/check_marketplace_consistency.py
+        language: python
+        pass_filenames: false
+        always_run: true
+
       - id: no-hardcoded-paths
         name: Check for hardcoded paths
         entry: bash -c 'grep -rniE "([a-zA-Z]:[/\\]|/Users/|/home/[a-z])" plugins/ --include="*.md" --include="*.json" --include="*.py" --exclude-dir=references --exclude-dir=assets && exit 1 || exit 0'

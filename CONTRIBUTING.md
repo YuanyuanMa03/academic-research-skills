@@ -9,14 +9,17 @@ academic-research-skills/
 ├── plugins/                 # One directory per plugin
 │   └── {plugin-name}/
 │       ├── .claude-plugin/
-│       │   └── plugin.json  # Plugin metadata
+│       │   └── plugin.json  # Claude plugin metadata (required)
+│       ├── .codex-plugin/
+│       │   └── plugin.json  # Codex plugin metadata (required)
+│       ├── .mcp.json        # MCP config (browser skills / scansci-pdf)
 │       └── skills/
 │           └── {skill-name}/
 │               ├── SKILL.md     # Skill instructions (required)
 │               ├── scripts/     # Executable scripts (optional)
 │               └── references/  # Reference documents (optional)
 ├── scripts/                 # Repository-level validation tools
-└── docs/                    # Documentation
+└── docs/                    # PLAYBOOK.md (maintenance) + REFERENCE.md (routing)
 ```
 
 ## Creating a New Skill
@@ -24,11 +27,13 @@ academic-research-skills/
 ### 1. Create the plugin directory
 
 ```bash
-mkdir -p plugins/{series}-{action}/.claude-plugin
+mkdir -p plugins/{series}-{action}/.claude-plugin plugins/{series}-{action}/.codex-plugin
 mkdir -p plugins/{series}-{action}/skills/{series}-{action}
 ```
 
-### 2. Create plugin.json
+### 2. Create both plugin.json manifests
+
+`.claude-plugin/plugin.json`:
 
 ```json
 {
@@ -40,6 +45,8 @@ mkdir -p plugins/{series}-{action}/skills/{series}-{action}
   "keywords": ["academic", "research", "{series}"]
 }
 ```
+
+Also add `.codex-plugin/plugin.json` (see any existing plugin for the schema), register the plugin in BOTH `.claude-plugin/marketplace.json` and `.agents/plugins/marketplace.json`, and add a routing entry in `docs/REFERENCE.md` — `scripts/check_marketplace_consistency.py` enforces all of this.
 
 ### 3. Write SKILL.md
 
@@ -128,12 +135,12 @@ Plugin names follow the pattern: `{platform}-{action}`
 | `-paper-detail` | Full paper metadata extraction |
 | `-parse-results` | Parse search results page |
 | `-navigate-pages` | Paginate through results |
-| `-export` | Export citations (Zotero / RIS / BibTeX) |
-| `-download` | Download full-text PDF |
+
+Download / citation export / Zotero push do NOT get per-platform skills — they all route through the `scansci-pdf` bridge plugin (see `docs/REFERENCE.md`).
 
 ## Pull Request Process
 
 1. Create a feature branch: `git checkout -b feature/your-skill-name`
-2. Run validation: `python scripts/validate_skills.py`
+2. Run validation: `python scripts/validate_skills.py`, `python scripts/validate_plugin_json.py`, `python scripts/check_shared_assets.py`, `python scripts/check_marketplace_consistency.py`
 3. Ensure CI passes (lint + test workflows)
 4. Submit PR with description of what the skill does

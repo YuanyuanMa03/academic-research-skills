@@ -1,140 +1,22 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file guides Claude Code when working in this repository.
 
-## Project Overview
+**Read [`AGENTS.md`](AGENTS.md) first** — it is the canonical agent entry point: repository layout, development commands, host adapters, and guardrails (dual-marketplace sync, standalone-install constraint, PLAYBOOK pre-reading for browser/anti-scraping skills).
 
-academic-research-skills is a plugin marketplace for AI-powered academic research tools. It provides 58+ skills across 8 academic platforms (CNKI, Google Scholar, ScienceDirect, Web of Science, PubMed, IEEE Xplore, Nature, Zotero) for Claude Code, Copilot CLI, Codex, Gemini CLI, and other AI assistants.
+Quick reference — run all of these before committing (CI repeats them):
 
-## Repository Structure
-
-```
-academic-research-skills/
-├── plugins/                 # One directory per plugin
-│   └── {platform}-{action}/
-│       ├── .claude-plugin/
-│       │   └── plugin.json  # Plugin metadata (required)
-│       └── skills/
-│           └── {skill-name}/
-│               ├── SKILL.md     # Skill instructions (required)
-│               ├── scripts/     # Executable scripts (optional)
-│               └── references/  # Reference documents (optional)
-├── scripts/                 # Validation tools
-│   ├── validate_skills.py   # SKILL.md validator
-│   └── validate_plugin_json.py
-└── docs/
-    └── architecture.md      # System architecture
-```
-
-## Development Commands
-
-### Validation (run before committing)
 ```bash
-python scripts/validate_skills.py      # Validate all SKILL.md files
-python scripts/validate_plugin_json.py # Validate plugin.json files
+python scripts/validate_skills.py               # SKILL.md validation
+python scripts/validate_plugin_json.py          # plugin.json validation
+python scripts/check_shared_assets.py           # .mcp.json template drift
+python scripts/check_marketplace_consistency.py # plugins/ <-> both marketplaces <-> REFERENCE.md
+ruff check plugins/ scripts/ && ruff format --check plugins/ scripts/
 ```
 
-### Linting
-```bash
-ruff check plugins/ scripts/           # Lint Python files
-ruff format --check plugins/ scripts/  # Format check
-```
+Key facts:
 
-## Plugin Architecture
-
-### Two Plugin Types
-
-1. **Browser-based skills** (CNKI, GS, SD, WoS, PubMed, IEEE): Use Chrome DevTools MCP for DOM automation. Each plugin.json includes `mcpServers` config for `chrome-devtools-mcp`.
-
-2. **Pure prompt-based skills** (Nature): Work with any LLM, no browser required.
-
-### Plugin Naming Convention
-
-Pattern: `{platform}-{action}`
-
-| Platform | Prefix |
-|----------|--------|
-| CNKI | `cnki-` |
-| Google Scholar | `gs-` |
-| ScienceDirect | `sd-` |
-| Web of Science | `wos-` |
-| PubMed | `pm-` |
-| IEEE Xplore | `ieee-` |
-| Nature | `nature-` |
-| Zotero | `zotero-` |
-
-Actions: `-search`, `-advanced-search`, `-download`, `-export`, `-paper-detail`, `-parse-results`, `-navigate-pages`, `-journal-browse`
-
-### SKILL.md Specification
-
-Required YAML frontmatter:
-```yaml
----
-name: {platform}-{action}
-description: Brief description of what this skill does.
-argument-hint: "<query>"
----
-```
-
-Required sections: Overview/Steps/Workflow, Output Contract, Error Handling.
-
-## Adding a New Plugin
-
-1. Create directory structure:
-   ```bash
-   mkdir -p plugins/{platform}-{action}/.claude-plugin
-   mkdir -p plugins/{platform}-{action}/skills/{platform}-{action}
-   ```
-
-2. Create `plugin.json` with required fields: `name`, `description`, `version`, `author`, `license`
-
-3. Write `SKILL.md` following the specification
-
-4. Add entry to `.claude-plugin/marketplace.json`
-
-5. Run validation:
-   ```bash
-   python scripts/validate_skills.py
-   python scripts/validate_plugin_json.py
-   ```
-
-## CI/CD
-
-Two GitHub Actions workflows:
-
-1. **lint.yml**: Validates SKILL.md files, checks for hardcoded paths, lints Python with ruff
-2. **test.yml**: Runs lint checks (shared/ tests removed)
-
-Both run on push to `main` and `feature/**` branches, and on PRs to `main`.
-
-## Common Patterns
-
-### Hardcoded Path Detection
-
-CI rejects any absolute paths in plugins:
-- Windows: `C:\...`, `D:/...`
-- macOS: `/Users/...`
-- Linux: `/home/...`
-
-Use relative paths or dynamic path resolution.
-
-### Python Script Quality
-
-- Type hints on all function signatures
-- Docstrings on all public functions
-- Use `logging` module for output
-- UTF-8 encoding safety
-
-## Platform Integration
-
-| Platform | Browser MCP | Zotero Export |
-|----------|:-----------:|:-------------:|
-| CNKI | Yes | Yes (self-contained script) |
-| Google Scholar | Yes | Yes (self-contained script) |
-| ScienceDirect | Yes | Yes (self-contained script) |
-| Web of Science | Yes | Yes (self-contained script) |
-| PubMed | Yes | Yes (self-contained script) |
-| IEEE Xplore | Yes | Yes (self-contained script) |
-| Nature | No | No |
-
-**Note**: Zotero export scripts are self-contained in each skill's `scripts/` directory, using Zotero's local Connector API (localhost:23119).
+- 47 plugins: 46 platform search/navigation skills (CNKI, GS, SD, WoS, PubMed, IEEE, Nature) + 1 `scansci-pdf` bridge plugin (paper download, citations, Zotero push via the scansci-pdf MCP server, MIT).
+- Literature retrieval (download/export/Zotero) belongs to `scansci-pdf`; the old `*-download`/`*-export`/`zotero-csl` skills were removed (decision record in [`docs/PLAYBOOK.md`](docs/PLAYBOOK.md)).
+- New plugins must be registered in BOTH marketplaces (`.claude-plugin/marketplace.json` and `.agents/plugins/marketplace.json`) and covered in `docs/REFERENCE.md`.
+- Maintenance handbook (failure signatures, platform status, iron rules): [`docs/PLAYBOOK.md`](docs/PLAYBOOK.md). Intent-routing manual: [`docs/REFERENCE.md`](docs/REFERENCE.md).
