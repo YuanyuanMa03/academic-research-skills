@@ -1,0 +1,33 @@
+{
+  "name": "nature-paper-to-patent",
+  "version": "1.0.0",
+  "description": "Convert papers, theses, or research manuscripts into evidence-grounded Chinese invention patent drafts with claims, specification, abstract, and figures as separate DOCX files.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "nature",
+    "patent",
+    "writing",
+    "专利",
+    "论文转化"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "nature-paper-to-patent",
+    "shortDescription": "Turn research papers into Chinese invention patent drafts.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Convert this paper into a Chinese invention patent draft"
+    ],
+    "longDescription": "Extracts patentable technical contributions, maps every claimed feature to source evidence, preserves core formulas as editable Office Math, generates claim-aligned flowcharts, and delivers separate Chinese DOCX files for claims, specification, abstract, and abstract figure."
+  }
+}

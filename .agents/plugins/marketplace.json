@@ -18,32 +18,6 @@
       "description": "Perform advanced search on CNKI with field filters like author, title, journal, date range, source category (SCI/EI/CSSCI/北大核心). Use when user needs precise filtered search beyond simple keywords."
     },
     {
-      "name": "cnki-download",
-      "source": {
-        "source": "local",
-        "path": "./plugins/cnki-download"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Research",
-      "description": "Download a paper PDF/CAJ from CNKI. Requires user to be logged in. Use when user wants to download a specific paper."
-    },
-    {
-      "name": "cnki-export",
-      "source": {
-        "source": "local",
-        "path": "./plugins/cnki-export"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Research",
-      "description": "Export paper from CNKI and push to Zotero, or save as RIS file. Use when user wants to save a paper to Zotero or export citation data."
-    },
-    {
       "name": "cnki-journal-index",
       "source": {
         "source": "local",
@@ -161,32 +135,6 @@
       "description": "Find papers that cite a given Google Scholar paper. Tracks citation chains using data-cid (cluster ID). Use when user wants to see who cited a specific paper."
     },
     {
-      "name": "gs-export",
-      "source": {
-        "source": "local",
-        "path": "./plugins/gs-export"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Research",
-      "description": "Export Google Scholar paper(s) to Zotero via BibTeX. Gets citation data from Google Scholar's cite dialog, then pushes to Zotero desktop. Supports single or batch export."
-    },
-    {
-      "name": "gs-fulltext",
-      "source": {
-        "source": "local",
-        "path": "./plugins/gs-fulltext"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Research",
-      "description": "Get full-text access links for a Google Scholar paper - PDF, DOI, Sci-Hub, and publisher links. Use when user wants to read or download a paper's full text."
-    },
-    {
       "name": "gs-navigate-pages",
       "source": {
         "source": "local",
@@ -224,32 +172,6 @@
       },
       "category": "Research",
       "description": "Advanced search on IEEE Xplore with filters - author, title, publication, year, DOI."
-    },
-    {
-      "name": "ieee-download",
-      "source": {
-        "source": "local",
-        "path": "./plugins/ieee-download"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Research",
-      "description": "Download PDF from IEEE Xplore articles. Requires institutional or subscriber access."
-    },
-    {
-      "name": "ieee-export",
-      "source": {
-        "source": "local",
-        "path": "./plugins/ieee-export"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Research",
-      "description": "Export citations from IEEE Xplore in RIS, BibTeX, or plain text. Supports pushing to Zotero."
     },
     {
       "name": "ieee-journal-browse",
@@ -382,6 +304,19 @@
       "description": "Generate and format Nature figures"
     },
     {
+      "name": "nature-paper-to-patent",
+      "source": {
+        "source": "local",
+        "path": "./plugins/nature-paper-to-patent"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Convert papers into evidence-grounded Chinese invention patent drafts"
+    },
+    {
       "name": "nature-paper2ppt",
       "source": {
         "source": "local",
@@ -434,6 +369,19 @@
       "description": "Draft responses for Nature reviews"
     },
     {
+      "name": "nature-reviewer",
+      "source": {
+        "source": "local",
+        "path": "./plugins/nature-reviewer"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Nature-style reviewer assessment from the referee perspective"
+    },
+    {
       "name": "nature-writing",
       "source": {
         "source": "local",
@@ -458,19 +406,6 @@
       },
       "category": "Research",
       "description": "Perform advanced PubMed search with field qualifiers - author, title, journal, MeSH, date range, article type."
-    },
-    {
-      "name": "pm-export",
-      "source": {
-        "source": "local",
-        "path": "./plugins/pm-export"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Research",
-      "description": "Export PubMed paper(s) to Zotero or save as RIS file. Supports single paper by PMID or batch export from search results."
     },
     {
       "name": "pm-fulltext",
@@ -525,6 +460,19 @@
       "description": "Search PubMed for biomedical literature by keywords. Returns structured results with PMID, title, authors, journal, date, DOI."
     },
     {
+      "name": "scansci-pdf",
+      "source": {
+        "source": "local",
+        "path": "./plugins/scansci-pdf"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research",
+      "description": "Paper retrieval hub: multi-route download, batch queues, citation export, Zotero push, diagnostics (scansci-pdf MCP server)"
+    },
+    {
       "name": "sd-advanced-search",
       "source": {
         "source": "local",
@@ -536,32 +484,6 @@
       },
       "category": "Research",
       "description": "Advanced search on ScienceDirect with filters like author, journal, year, title, keywords. Use when the user wants filtered academic paper search."
-    },
-    {
-      "name": "sd-download",
-      "source": {
-        "source": "local",
-        "path": "./plugins/sd-download"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Research",
-      "description": "Download PDF from ScienceDirect articles. Requires institutional or subscriber access."
-    },
-    {
-      "name": "sd-export",
-      "source": {
-        "source": "local",
-        "path": "./plugins/sd-export"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Research",
-      "description": "Export citations from ScienceDirect in RIS, BibTeX, or plain text format. Supports pushing to Zotero."
     },
     {
       "name": "sd-journal-browse",
@@ -642,32 +564,6 @@
       "description": "Web of Science DOM structure reference"
     },
     {
-      "name": "wos-download",
-      "source": {
-        "source": "local",
-        "path": "./plugins/wos-download"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Research",
-      "description": "Download PDF full text for a WoS paper via publisher links."
-    },
-    {
-      "name": "wos-export",
-      "source": {
-        "source": "local",
-        "path": "./plugins/wos-export"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Research",
-      "description": "Export WoS records to Zotero, RIS, BibTeX, or Excel."
-    },
-    {
       "name": "wos-navigate-pages",
       "source": {
         "source": "local",
@@ -718,19 +614,6 @@
       },
       "category": "Research",
       "description": "Search Web of Science by topic, author, title, DOI, or advanced query. Supports edition/database filtering and sort."
-    },
-    {
-      "name": "zotero-csl",
-      "source": {
-        "source": "local",
-        "path": "./plugins/zotero-csl"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Research",
-      "description": "Generate Zotero-compatible CSL citation style files from natural language descriptions"
     }
   ]
 }

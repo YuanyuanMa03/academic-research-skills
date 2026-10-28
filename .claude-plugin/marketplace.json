@@ -9,7 +9,7 @@
       "name": "cnki-advanced-search",
       "source": "./plugins/cnki-advanced-search",
       "description": "Perform advanced search on CNKI with field filters like author, title, journal, date range, source category (SCI/EI/CSSCI/北大核心). Use when user needs precise filtered search beyond simple keywords.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -26,50 +26,10 @@
       "category": "cnki"
     },
     {
-      "name": "cnki-download",
-      "source": "./plugins/cnki-download",
-      "description": "Download a paper PDF/CAJ from CNKI. Requires user to be logged in. Use when user wants to download a specific paper.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "china",
-        "chinese",
-        "cnki",
-        "download",
-        "research",
-        "知网"
-      ],
-      "category": "cnki"
-    },
-    {
-      "name": "cnki-export",
-      "source": "./plugins/cnki-export",
-      "description": "Export paper from CNKI and push to Zotero, or save as RIS file. Use when user wants to save a paper to Zotero or export citation data.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "china",
-        "chinese",
-        "cnki",
-        "export",
-        "research",
-        "知网"
-      ],
-      "category": "cnki"
-    },
-    {
       "name": "cnki-journal-index",
       "source": "./plugins/cnki-journal-index",
       "description": "Query journal indexing/inclusion status on CNKI - check which databases include a journal (北大核心, CSSCI, CSCD, SCI, EI, etc.), get impact factors and evaluation data. Use when user asks about a journal's level, indexing, or ranking.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -89,7 +49,7 @@
       "name": "cnki-journal-search",
       "source": "./plugins/cnki-journal-search",
       "description": "Search for journals/publications on CNKI by name, ISSN, CN, or sponsor. Use when the user wants to find a specific journal or browse publications.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -110,7 +70,7 @@
       "name": "cnki-journal-toc",
       "source": "./plugins/cnki-journal-toc",
       "description": "Browse journal issues, view table of contents, and download original TOC PDF from CNKI. Use when user wants to see papers in a specific journal issue or download the original cover/TOC pages.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -130,7 +90,7 @@
       "name": "cnki-navigate-pages",
       "source": "./plugins/cnki-navigate-pages",
       "description": "Navigate CNKI search result pages (next/previous/specific page) or change sort order. Use when user wants to see more results or change sorting.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -150,7 +110,7 @@
       "name": "cnki-paper-detail",
       "source": "./plugins/cnki-paper-detail",
       "description": "Extract full paper details from a CNKI paper page including title, authors, affiliations, abstract, keywords, fund, classification. Use when the user needs detailed information about a specific paper.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -170,7 +130,7 @@
       "name": "cnki-parse-results",
       "source": "./plugins/cnki-parse-results",
       "description": "Parse current CNKI search results page into structured paper data (title, authors, journal, date, citations). Use after a search has been performed and you need to extract the results.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -190,7 +150,7 @@
       "name": "cnki-search",
       "source": "./plugins/cnki-search",
       "description": "Search CNKI (中国知网) for papers by keyword. Use when the user wants to find academic papers on a topic.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -210,7 +170,7 @@
       "name": "gs-advanced-search",
       "source": "./plugins/gs-advanced-search",
       "description": "Perform advanced Google Scholar search with filters - author, journal, date range, exact phrase, title-only. Constructs proper URL parameters from natural language. Use for precise filtered searches.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -229,7 +189,7 @@
       "name": "gs-cited-by",
       "source": "./plugins/gs-cited-by",
       "description": "Find papers that cite a given Google Scholar paper. Tracks citation chains using data-cid (cluster ID). Use when user wants to see who cited a specific paper.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -237,44 +197,6 @@
       "keywords": [
         "academic",
         "citation",
-        "google-scholar",
-        "research",
-        "谷歌学术"
-      ],
-      "category": "gs"
-    },
-    {
-      "name": "gs-export",
-      "source": "./plugins/gs-export",
-      "description": "Export Google Scholar paper(s) to Zotero via BibTeX. Gets citation data from Google Scholar's cite dialog, then pushes to Zotero desktop. Supports single or batch export.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "citation",
-        "export",
-        "google-scholar",
-        "research",
-        "谷歌学术"
-      ],
-      "category": "gs"
-    },
-    {
-      "name": "gs-fulltext",
-      "source": "./plugins/gs-fulltext",
-      "description": "Get full-text access links for a Google Scholar paper - PDF, DOI, Sci-Hub, and publisher links. Use when user wants to read or download a paper's full text.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "citation",
-        "full-text",
         "google-scholar",
         "research",
         "谷歌学术"
@@ -285,7 +207,7 @@
       "name": "gs-navigate-pages",
       "source": "./plugins/gs-navigate-pages",
       "description": "Navigate Google Scholar search result pages. Use when user wants to see more results or go to a specific page.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -304,7 +226,7 @@
       "name": "gs-search",
       "source": "./plugins/gs-search",
       "description": "Search Google Scholar for academic papers by keywords. Returns results with title, authors, journal, year, citation count, and full-text links. Use when the user wants to search Google Scholar.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -320,388 +242,10 @@
       "category": "gs"
     },
     {
-      "name": "sd-advanced-search",
-      "source": "./plugins/sd-advanced-search",
-      "description": "Advanced search on ScienceDirect with filters like author, journal, year, title, keywords. Use when the user wants filtered academic paper search.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "elsevier",
-        "research",
-        "sciencedirect",
-        "search"
-      ],
-      "category": "sd"
-    },
-    {
-      "name": "sd-download",
-      "source": "./plugins/sd-download",
-      "description": "Download PDF from ScienceDirect articles. Requires institutional or subscriber access.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "download",
-        "elsevier",
-        "research",
-        "sciencedirect"
-      ],
-      "category": "sd"
-    },
-    {
-      "name": "sd-export",
-      "source": "./plugins/sd-export",
-      "description": "Export citations from ScienceDirect in RIS, BibTeX, or plain text format. Supports pushing to Zotero.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "elsevier",
-        "export",
-        "research",
-        "sciencedirect"
-      ],
-      "category": "sd"
-    },
-    {
-      "name": "sd-journal-browse",
-      "source": "./plugins/sd-journal-browse",
-      "description": "Browse a journal on ScienceDirect — view info, impact factor, latest articles, and specific issues. Use when the user asks about a journal or wants to browse its contents.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "elsevier",
-        "journal",
-        "research",
-        "sciencedirect"
-      ],
-      "category": "sd"
-    },
-    {
-      "name": "sd-navigate-pages",
-      "source": "./plugins/sd-navigate-pages",
-      "description": "Navigate pages, change sort order, or adjust results per page on ScienceDirect search results.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "elsevier",
-        "navigation",
-        "research",
-        "sciencedirect"
-      ],
-      "category": "sd"
-    },
-    {
-      "name": "sd-paper-detail",
-      "source": "./plugins/sd-paper-detail",
-      "description": "Extract full metadata from a ScienceDirect article page (abstract, authors, keywords, DOI, references, PDF link). Use when the user wants details about a specific paper.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "elsevier",
-        "paper-detail",
-        "research",
-        "sciencedirect"
-      ],
-      "category": "sd"
-    },
-    {
-      "name": "sd-parse-results",
-      "source": "./plugins/sd-parse-results",
-      "description": "Re-parse the currently open ScienceDirect search results page. Internal skill used by other skills.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "elsevier",
-        "parsing",
-        "research",
-        "sciencedirect"
-      ],
-      "category": "sd"
-    },
-    {
-      "name": "sd-search",
-      "source": "./plugins/sd-search",
-      "description": "Search for academic papers on ScienceDirect. Use when the user wants to find papers by keyword on ScienceDirect/Elsevier.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "elsevier",
-        "research",
-        "sciencedirect",
-        "search"
-      ],
-      "category": "sd"
-    },
-    {
-      "name": "wos-dom",
-      "source": "./plugins/wos-dom",
-      "description": "Web of Science DOM structure reference for browser automation",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "clarivate",
-        "reference",
-        "research",
-        "web-of-science"
-      ],
-      "category": "wos"
-    },
-    {
-      "name": "wos-download",
-      "source": "./plugins/wos-download",
-      "description": "Download PDF full text for a WoS paper via publisher links.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "clarivate",
-        "download",
-        "research",
-        "web-of-science"
-      ],
-      "category": "wos"
-    },
-    {
-      "name": "wos-export",
-      "source": "./plugins/wos-export",
-      "description": "Export WoS records to Zotero, RIS, BibTeX, or Excel.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "clarivate",
-        "export",
-        "research",
-        "web-of-science"
-      ],
-      "category": "wos"
-    },
-    {
-      "name": "wos-navigate-pages",
-      "source": "./plugins/wos-navigate-pages",
-      "description": "Navigate to a specific page of WoS search results, or load more results from the last search.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "clarivate",
-        "navigation",
-        "research",
-        "web-of-science"
-      ],
-      "category": "wos"
-    },
-    {
-      "name": "wos-paper-detail",
-      "source": "./plugins/wos-paper-detail",
-      "description": "Get detailed information for a paper by WoS ID (e.g., WOS:000779183600001).",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "clarivate",
-        "paper-detail",
-        "research",
-        "web-of-science"
-      ],
-      "category": "wos"
-    },
-    {
-      "name": "wos-parse-results",
-      "source": "./plugins/wos-parse-results",
-      "description": "Parse search results from the current WoS results page or API response. Internal skill used by other skills.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "clarivate",
-        "parsing",
-        "research",
-        "web-of-science"
-      ],
-      "category": "wos"
-    },
-    {
-      "name": "wos-search",
-      "source": "./plugins/wos-search",
-      "description": "Search Web of Science by topic, author, title, DOI, or advanced query. Supports edition/database filtering and sort.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "clarivate",
-        "research",
-        "search",
-        "web-of-science"
-      ],
-      "category": "wos"
-    },
-    {
-      "name": "pm-advanced-search",
-      "source": "./plugins/pm-advanced-search",
-      "description": "Perform advanced PubMed search with field qualifiers - author, title, journal, MeSH, date range, article type.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "biomedical",
-        "mesh",
-        "pubmed",
-        "research",
-        "search"
-      ],
-      "category": "pm"
-    },
-    {
-      "name": "pm-export",
-      "source": "./plugins/pm-export",
-      "description": "Export PubMed paper(s) to Zotero or save as RIS file. Supports single paper by PMID or batch export from search results.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "export",
-        "pubmed",
-        "research",
-        "zotero"
-      ],
-      "category": "pm"
-    },
-    {
-      "name": "pm-fulltext",
-      "source": "./plugins/pm-fulltext",
-      "description": "Find full-text download links for a PubMed paper by PMID - DOI, PMC open access, Sci-Hub, and publisher links.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "full-text",
-        "pubmed",
-        "research"
-      ],
-      "category": "pm"
-    },
-    {
-      "name": "pm-navigate-pages",
-      "source": "./plugins/pm-navigate-pages",
-      "description": "Navigate PubMed search result pages or change sort order.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "navigation",
-        "pubmed",
-        "research"
-      ],
-      "category": "pm"
-    },
-    {
-      "name": "pm-paper-detail",
-      "source": "./plugins/pm-paper-detail",
-      "description": "Get full paper details for a PubMed article by PMID - title, authors, abstract, MeSH terms, keywords, DOI.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "paper-detail",
-        "pubmed",
-        "research"
-      ],
-      "category": "pm"
-    },
-    {
-      "name": "pm-search",
-      "source": "./plugins/pm-search",
-      "description": "Search PubMed for biomedical literature by keywords. Returns structured results with PMID, title, authors, journal, date, DOI.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "biomedical",
-        "literature",
-        "pmc",
-        "pubmed",
-        "research",
-        "search"
-      ],
-      "category": "pm"
-    },
-    {
       "name": "ieee-advanced-search",
       "source": "./plugins/ieee-advanced-search",
       "description": "Advanced search on IEEE Xplore with filters - author, title, publication, year, DOI.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -712,42 +256,6 @@
         "research",
         "search",
         "xplore"
-      ],
-      "category": "ieee"
-    },
-    {
-      "name": "ieee-download",
-      "source": "./plugins/ieee-download",
-      "description": "Download PDF from IEEE Xplore articles. Requires institutional or subscriber access.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "download",
-        "ieee",
-        "research",
-        "xplore"
-      ],
-      "category": "ieee"
-    },
-    {
-      "name": "ieee-export",
-      "source": "./plugins/ieee-export",
-      "description": "Export citations from IEEE Xplore in RIS, BibTeX, or plain text. Supports pushing to Zotero.",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "export",
-        "ieee",
-        "research",
-        "zotero"
       ],
       "category": "ieee"
     },
@@ -755,7 +263,7 @@
       "name": "ieee-journal-browse",
       "source": "./plugins/ieee-journal-browse",
       "description": "Browse a journal or conference on IEEE Xplore — view info, impact factor, latest articles, and issues.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -773,7 +281,7 @@
       "name": "ieee-navigate-pages",
       "source": "./plugins/ieee-navigate-pages",
       "description": "Navigate pages, change sort order, or adjust results per page on IEEE Xplore search results.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -790,7 +298,7 @@
       "name": "ieee-paper-detail",
       "source": "./plugins/ieee-paper-detail",
       "description": "Extract full metadata from an IEEE Xplore article page.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -807,7 +315,7 @@
       "name": "ieee-parse-results",
       "source": "./plugins/ieee-parse-results",
       "description": "Re-parse the currently open IEEE Xplore search results page. Internal skill.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -824,7 +332,7 @@
       "name": "ieee-search",
       "source": "./plugins/ieee-search",
       "description": "Search for academic papers on IEEE Xplore by keyword.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -842,7 +350,7 @@
       "name": "ieee-standards-search",
       "source": "./plugins/ieee-standards-search",
       "description": "Search IEEE SA for IEEE/ANSI standards and find IEC/ISO counterparts.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -856,28 +364,10 @@
       "category": "ieee"
     },
     {
-      "name": "zotero-csl",
-      "source": "./plugins/zotero-csl",
-      "description": "Generate Zotero-compatible CSL citation style files from natural language descriptions",
-      "version": "1.0.0",
-      "author": {
-        "name": "YuanyuanMa03"
-      },
-      "license": "MIT",
-      "keywords": [
-        "academic",
-        "citation",
-        "csl",
-        "research",
-        "zotero"
-      ],
-      "category": "zotero"
-    },
-    {
       "name": "nature-academic-search",
       "source": "./plugins/nature-academic-search",
       "description": "Multi-source literature search, citation verification, MeSH search strategy, citation file management (.nbib/.ris/.bib conversion), and reference management via MCP tools (PubMed, CrossRef, arXiv)",
-      "version": "1.0.0",
+      "version": "1.0.3",
       "author": {
         "name": "YuanyuanMa03"
       },
@@ -944,6 +434,25 @@
         "figure",
         "journal",
         "nature",
+        "research",
+        "writing"
+      ],
+      "category": "nature"
+    },
+    {
+      "name": "nature-paper-to-patent",
+      "source": "./plugins/nature-paper-to-patent",
+      "description": "Convert scientific papers, theses, technical reports, source code, figures, or research manuscripts into evidence-grounded Chinese invention patent drafts. Use when an AI agent must extract patentable technical contributions, map every claimed feature to source evidence, preserve core formulas as editable Office Math, generate claim-aligned flowcharts and methodology figures, compare a paper with an existing patent, audit support and consistency, or deliver separate Chinese DOCX files for claims, specification, abstract, and abstract figure.",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "journal",
+        "nature",
+        "patent",
         "research",
         "writing"
       ],
@@ -1025,6 +534,25 @@
       "category": "nature"
     },
     {
+      "name": "nature-reviewer",
+      "source": "./plugins/nature-reviewer",
+      "description": "Simulate a Nature-style reviewer assessment from the referee perspective rather than an author rebuttal. Use when the user wants a pre-submission review, reviewer report, peer-review style critique, novelty/significance/technical soundness assessment, reviewer-style manuscript evaluation.",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "journal",
+        "nature",
+        "peer-review",
+        "research",
+        "review"
+      ],
+      "category": "nature"
+    },
+    {
       "name": "nature-writing",
       "source": "./plugins/nature-writing",
       "description": "Draft, restructure, or plan Nature-style manuscript sections from author-provided claims, results, figures, notes, or Chinese drafts. Use when the user wants to write or rebuild an abstract, introduction, results narrative, discussion, conclusion, title, or full manuscript argument rather than only polish finished prose.",
@@ -1043,28 +571,99 @@
       "category": "nature"
     },
     {
-      "name": "nature-paper-to-patent",
-      "source": "./plugins/nature-paper-to-patent",
-      "description": "Convert scientific papers, theses, technical reports, source code, figures, or research manuscripts into evidence-grounded Chinese invention patent drafts. Use when an AI agent must extract patentable technical contributions, map every claimed feature to source evidence, preserve core formulas as editable Office Math, generate claim-aligned flowcharts and methodology figures, compare a paper with an existing patent, audit support and consistency, or deliver separate Chinese DOCX files for claims, specification, abstract, and abstract figure.",
-      "version": "1.0.0",
+      "name": "pm-advanced-search",
+      "source": "./plugins/pm-advanced-search",
+      "description": "Perform advanced PubMed search with field qualifiers - author, title, journal, MeSH, date range, article type.",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },
       "license": "MIT",
       "keywords": [
         "academic",
-        "journal",
-        "nature",
-        "patent",
+        "biomedical",
+        "mesh",
+        "pubmed",
         "research",
-        "writing"
+        "search"
       ],
-      "category": "nature"
+      "category": "pm"
     },
     {
-      "name": "nature-reviewer",
-      "source": "./plugins/nature-reviewer",
-      "description": "Simulate a Nature-style reviewer assessment from the referee perspective rather than an author rebuttal. Use when the user wants a pre-submission review, reviewer report, peer-review style critique, novelty/significance/technical soundness assessment, reviewer-style manuscript evaluation.",
+      "name": "pm-fulltext",
+      "source": "./plugins/pm-fulltext",
+      "description": "Find full-text download links for a PubMed paper by PMID - DOI, PMC open access, Sci-Hub, and publisher links.",
+      "version": "1.0.1",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "full-text",
+        "pubmed",
+        "research"
+      ],
+      "category": "pm"
+    },
+    {
+      "name": "pm-navigate-pages",
+      "source": "./plugins/pm-navigate-pages",
+      "description": "Navigate PubMed search result pages or change sort order.",
+      "version": "1.0.1",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "navigation",
+        "pubmed",
+        "research"
+      ],
+      "category": "pm"
+    },
+    {
+      "name": "pm-paper-detail",
+      "source": "./plugins/pm-paper-detail",
+      "description": "Get full paper details for a PubMed article by PMID - title, authors, abstract, MeSH terms, keywords, DOI.",
+      "version": "1.0.1",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "paper-detail",
+        "pubmed",
+        "research"
+      ],
+      "category": "pm"
+    },
+    {
+      "name": "pm-search",
+      "source": "./plugins/pm-search",
+      "description": "Search PubMed for biomedical literature by keywords. Returns structured results with PMID, title, authors, journal, date, DOI.",
+      "version": "1.0.1",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "biomedical",
+        "literature",
+        "pmc",
+        "pubmed",
+        "research",
+        "search"
+      ],
+      "category": "pm"
+    },
+    {
+      "name": "scansci-pdf",
+      "source": "./plugins/scansci-pdf",
+      "description": "Academic paper retrieval hub backed by the scansci-pdf MCP server: multi-route PDF download (open access, publisher API, institutional), batch queues, citation export, Zotero push, and diagnostics. Replaces the removed *-download/*-export/zotero-csl skills.",
       "version": "1.0.0",
       "author": {
         "name": "YuanyuanMa03"
@@ -1072,13 +671,214 @@
       "license": "MIT",
       "keywords": [
         "academic",
-        "journal",
-        "nature",
-        "peer-review",
-        "research",
-        "review"
+        "citation",
+        "download",
+        "literature",
+        "open access",
+        "pdf",
+        "zotero",
+        "论文下载",
+        "引文导出"
       ],
-      "category": "nature"
+      "category": "literature"
+    },
+    {
+      "name": "sd-advanced-search",
+      "source": "./plugins/sd-advanced-search",
+      "description": "Advanced search on ScienceDirect with filters like author, journal, year, title, keywords. Use when the user wants filtered academic paper search.",
+      "version": "1.0.1",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "elsevier",
+        "research",
+        "sciencedirect",
+        "search"
+      ],
+      "category": "sd"
+    },
+    {
+      "name": "sd-journal-browse",
+      "source": "./plugins/sd-journal-browse",
+      "description": "Browse a journal on ScienceDirect — view info, impact factor, latest articles, and specific issues. Use when the user asks about a journal or wants to browse its contents.",
+      "version": "1.0.1",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "elsevier",
+        "journal",
+        "research",
+        "sciencedirect"
+      ],
+      "category": "sd"
+    },
+    {
+      "name": "sd-navigate-pages",
+      "source": "./plugins/sd-navigate-pages",
+      "description": "Navigate pages, change sort order, or adjust results per page on ScienceDirect search results.",
+      "version": "1.0.1",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "elsevier",
+        "navigation",
+        "research",
+        "sciencedirect"
+      ],
+      "category": "sd"
+    },
+    {
+      "name": "sd-paper-detail",
+      "source": "./plugins/sd-paper-detail",
+      "description": "Extract full metadata from a ScienceDirect article page (abstract, authors, keywords, DOI, references, PDF link). Use when the user wants details about a specific paper.",
+      "version": "1.0.1",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "elsevier",
+        "paper-detail",
+        "research",
+        "sciencedirect"
+      ],
+      "category": "sd"
+    },
+    {
+      "name": "sd-parse-results",
+      "source": "./plugins/sd-parse-results",
+      "description": "Re-parse the currently open ScienceDirect search results page. Internal skill used by other skills.",
+      "version": "1.0.1",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "elsevier",
+        "parsing",
+        "research",
+        "sciencedirect"
+      ],
+      "category": "sd"
+    },
+    {
+      "name": "sd-search",
+      "source": "./plugins/sd-search",
+      "description": "Search for academic papers on ScienceDirect. Use when the user wants to find papers by keyword on ScienceDirect/Elsevier.",
+      "version": "1.0.1",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "elsevier",
+        "research",
+        "sciencedirect",
+        "search"
+      ],
+      "category": "sd"
+    },
+    {
+      "name": "wos-dom",
+      "source": "./plugins/wos-dom",
+      "description": "Web of Science DOM structure reference for browser automation",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "clarivate",
+        "reference",
+        "research",
+        "web-of-science"
+      ],
+      "category": "wos"
+    },
+    {
+      "name": "wos-navigate-pages",
+      "source": "./plugins/wos-navigate-pages",
+      "description": "Navigate to a specific page of WoS search results, or load more results from the last search.",
+      "version": "1.0.1",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "clarivate",
+        "navigation",
+        "research",
+        "web-of-science"
+      ],
+      "category": "wos"
+    },
+    {
+      "name": "wos-paper-detail",
+      "source": "./plugins/wos-paper-detail",
+      "description": "Get detailed information for a paper by WoS ID (e.g., WOS:000779183600001).",
+      "version": "1.0.1",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "clarivate",
+        "paper-detail",
+        "research",
+        "web-of-science"
+      ],
+      "category": "wos"
+    },
+    {
+      "name": "wos-parse-results",
+      "source": "./plugins/wos-parse-results",
+      "description": "Parse search results from the current WoS results page or API response. Internal skill used by other skills.",
+      "version": "1.0.0",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "clarivate",
+        "parsing",
+        "research",
+        "web-of-science"
+      ],
+      "category": "wos"
+    },
+    {
+      "name": "wos-search",
+      "source": "./plugins/wos-search",
+      "description": "Search Web of Science by topic, author, title, DOI, or advanced query. Supports edition/database filtering and sort.",
+      "version": "1.0.1",
+      "author": {
+        "name": "YuanyuanMa03"
+      },
+      "license": "MIT",
+      "keywords": [
+        "academic",
+        "clarivate",
+        "research",
+        "search",
+        "web-of-science"
+      ],
+      "category": "wos"
     }
   ]
 }

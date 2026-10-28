@@ -1,0 +1,17 @@
+{
+  "name": "scansci-pdf",
+  "version": "1.0.0",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "mcpServers": {
+    "scansci-pdf": {
+      "command": "scansci-pdf",
+      "args": [
+        "run"
+      ]
+    }
+  },
+  "description": "Academic paper retrieval hub backed by the scansci-pdf MCP server: multi-route PDF download (open access, publisher API, institutional), batch queues, citation export, Zotero push, and environment diagnostics."
+}
