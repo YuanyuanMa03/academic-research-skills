@@ -149,7 +149,7 @@ async () => {
 ### 4. Follow-up
 
 - **Full text**: use `pm-fulltext` with the PMID
-- **Export to Zotero**: use `pm-export` with the PMID
+- **Export to Zotero**: use the `scansci-pdf` skill (`scansci_pdf_citation` + `scansci_pdf_zotero_push`) with the PMID/DOI
 
 ## Notes
 

@@ -93,7 +93,7 @@ Papers citing [{original paper title}] (data-cid: {DATA_CID}):
 ## Follow-up
 
 - **See more citing papers**: use `gs-navigate-pages` (pagination works on cited-by pages too)
-- **Export citing papers**: use `gs-export` with the data-cid(s)
+- **Export citing papers**: collect the entries, then use the `scansci-pdf` skill (`scansci_pdf_citation` + `scansci_pdf_zotero_push`)
 - **Recursive citation tracking**: use `gs-cited-by` on any of the citing papers
 
 ## Notes

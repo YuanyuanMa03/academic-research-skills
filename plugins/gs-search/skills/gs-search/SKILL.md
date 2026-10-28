@@ -96,7 +96,7 @@ If `fullTextUrl` is available, highlight it (means open-access PDF/HTML).
 When the user wants to:
 - **See more results**: use `gs-navigate-pages` to go to next page
 - **See who cited a paper**: use `gs-cited-by` with the data-cid
-- **Export to Zotero**: use `gs-export` with the data-cid(s)
+- **Export to Zotero**: collect the entries, then use the `scansci-pdf` skill (`scansci_pdf_citation` + `scansci_pdf_zotero_push`)
 
 ## CAPTCHA Handling
 
