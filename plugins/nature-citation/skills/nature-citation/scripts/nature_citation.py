@@ -27,7 +27,7 @@ from xml.sax.saxutils import quoteattr
 
 CROSSREF_API = "https://api.crossref.org/works"
 USER_AGENT = "codex-nature-citation/1.0 (mailto:unknown@example.com)"
-EXPORT_FORMAT_CHOICES = ("enw", "ris", "zotero-rdf", "rdf")
+EXPORT_FORMAT_CHOICES = ("enw", "ris", "zotero-rdf", "rdf", "gb-t-7714")
 DEFAULT_EXPORT_FORMAT = "enw"
 ZOTERO_RDF_NS = {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -307,6 +307,8 @@ def export_filename(export_format: str, base: str = "references") -> str:
         return f"{base}.ris"
     if export_format == "zotero-rdf":
         return f"{base}.rdf"
+    if export_format == "gb-t-7714":
+        return f"{base}.txt"
     return f"{base}.enw"
 
 
@@ -330,6 +332,8 @@ def export_label(export_format: str) -> str:
         return "RIS"
     if export_format == "zotero-rdf":
         return "Zotero RDF"
+    if export_format == "gb-t-7714":
+        return "GB/T 7714"
     return "ENW"
 
 
@@ -988,6 +992,55 @@ def summarize_mapping(mapping: list[dict[str, Any]], references: list[Candidate]
     )
 
 
+
+def gbt7714_author(name: str) -> str:
+    """Convert 'Family, Given' or 'Given Family' to GB/T 7714 'FAMILY G' initials."""
+    name = name.strip()
+    if not name:
+        return ""
+    if "," in name:
+        family, given = (part.strip() for part in name.split(",", 1))
+    else:
+        parts = name.split()
+        if len(parts) > 1:
+            family, given = parts[-1], " ".join(parts[:-1])
+        else:
+            return name.upper()
+    initials = "".join(re.findall(r"[A-Za-z]", given))[:3].upper()
+    return f"{family.upper()} {initials}".strip()
+
+
+def build_gbt7714_record(item: Candidate, index: int) -> str:
+    """GB/T 7714-2015 numeric journal-article reference: [n] AUTHORS. Title[J]. Journal, year, vol(issue): pages."""
+    authors = [gbt7714_author(a) for a in item.authors if a]
+    shown = authors[:3]
+    author_str = ", ".join(shown)
+    if len(authors) > 3:
+        author_str += ", et al"
+    pieces: list[str] = []
+    if author_str:
+        pieces.append(f"{author_str}.")
+    pieces.append(f"{clean_text(item.title)}[J].")
+    journal_line = item.journal
+    if item.year:
+        journal_line += f", {item.year}"
+    if item.volume:
+        vol = item.volume
+        if item.issue:
+            vol += f"({item.issue})"
+        journal_line += f", {vol}"
+    if item.start_page:
+        pages = item.start_page if item.start_page == item.end_page else f"{item.start_page}-{item.end_page}" if item.end_page else item.start_page
+        journal_line += f": {pages}"
+    pieces.append(f"{journal_line}.")
+    return f"[{index}] " + " ".join(pieces)
+
+
+def write_gbt7714(candidates: list[Candidate], path: Path) -> None:
+    lines = [build_gbt7714_record(item, i + 1) for i, item in enumerate(candidates)]
+    path.write_text("\n".join(lines) + ("\n" if lines else ""), encoding="utf-8")
+
+
 def write_export_checkpoint(
     outdir: Path,
     base_path: Path,
@@ -999,6 +1052,8 @@ def write_export_checkpoint(
         write_enw(references, partial_output)
     elif export_format == "ris":
         write_ris(references, partial_output)
+    elif export_format == "gb-t-7714":
+        write_gbt7714(references, partial_output)
     else:
         write_zotero_rdf(references, partial_output)
     return partial_output
@@ -1968,7 +2023,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--scope", choices=["cns", "nature", "science", "cell", "flagship"], default="cns")
     parser.add_argument("--output-file", help="Reference output file path, typically ending in .enw, .ris, or .rdf.")
     parser.add_argument("--outdir", help="Optional directory for outputs. If omitted, uses the output file parent or current directory.")
-    parser.add_argument("--format", choices=EXPORT_FORMAT_CHOICES, help="Reference export format: enw, ris, or zotero-rdf. Inferred from --output-file when omitted.")
+    parser.add_argument("--format", choices=EXPORT_FORMAT_CHOICES, help="Reference export format: enw, ris, zotero-rdf, or gb-t-7714 (Chinese national standard). Inferred from --output-file when omitted.")
     parser.add_argument("--with-artifacts", action="store_true", help="Also generate JSON/TSV/report/HTML review artifacts.")
     parser.add_argument("--rows", type=int, default=30, help="Crossref rows per segment before journal-scope filtering.")
     parser.add_argument("--per-segment", type=int, default=3, help="Maximum candidates to keep per segment.")
@@ -2021,6 +2076,8 @@ def main(argv: list[str]) -> int:
         write_enw(references, output_path)
     elif args.format == "ris":
         write_ris(references, output_path)
+    elif args.format == "gb-t-7714":
+        write_gbt7714(references, output_path)
     else:
         write_zotero_rdf(references, output_path)
 

@@ -47,8 +47,8 @@
 | 平台 | 状态（日期） | 失败签名 | 判定 | 处理 |
 |---|---|---|---|---|
 | PubMed | ✅ 双路径通过（2026-08-21） | 脚本 429/5xx | NCBI 限流 | 脚本自动重试一次；带 `--mailto` 进 polite pool |
-| ScienceDirect | ✅ 通过（2026-06-23） | 页面要求登录 / 反爬拦截 | 会话失效 | 重新登录后重试；持续失败转 scansci-pdf 机构通道 |
-| CNKI | ✅ 通过（2026-06-23） | 验证码页 / 内容为空 | 触发反爬 | 减速重试；下载场景已移交 scansci-pdf |
+| ScienceDirect | ✅ 通过（2026-06-23，用户 Chrome）；❌ 自动化 webview 即被拦（2026-10-29） | 页面要求登录；标题 `Just a moment...` + `Are you a robot?`（Cloudflare 指纹识别自动化上下文） | 会话失效 / 反爬墙 | 重新登录；自动化 webview 命中墙时不要重试——交用户可见浏览器过一次验证，或换 chrome-devtools 驱动用户日常 Chrome；持续失败转 scansci-pdf 机构通道 |
+| CNKI | ✅ 通过（2026-06-23，用户 Chrome）；❌ 自动化 webview 加载即弹滑块（2026-10-29） | `请完成安全验证`+`向右滑动完成验证`（滑块）；`#tcaptcha_transform_dy` 可见（腾讯验证码） | 反爬墙 | 滑块：不要脚本硬拖，交用户可见浏览器滑一次或换 chrome-devtools；腾讯验证码按 cnki-search SKILL 判定；下载场景已移交 scansci-pdf |
 | WoS | ✅ 通过（2026-06-23，仅 2 篇） | 内部 API 报 `no_session` | SID 过期 | wos-search 已内置回退：DOM 导航 / 结果解析子流程（references/parse-results.md）Mode B |
 | Google Scholar | ❌ 超时（2026-06-23） | 长时间无响应 / CAPTCHA 页 | 反爬+配额 | 检索转 PubMed/CNKI 或 scansci-pdf `search`（13 源引擎）；修复前先复测 |
 | IEEE Xplore | ❌ 超时（2026-06-23） | 长时间无响应 | 站点慢/反爬 | 同上；IEEE 官方 API 需 key，是双路径扩展候选 |
@@ -87,6 +87,8 @@
   - PubMed 对材料/物理主题覆盖有限（光充电方向仅 6 条），印证双检索入口设计。
 - CHANGELOG 曾长期只记录一条已失效的 shared/ 重构——现已刷新，新条目及时记。
 - scansci-pdf MCP server 要求 Python ≥ 3.11；插件装好后工具列表没有 `scansci_pdf_*` 时先走 SKILL.md 的安装引导。
+
+- **2026-10-29 浏览器墙实测**：CNKI 与 ScienceDirect 在自动化/内嵌 webview（ZCode IAB，Electron UA）下加载即被反爬识别（CNKI 滑块、SD Cloudflare "Are you a robot?"）。结论：浏览器平台技能的正确宿主是 chrome-devtools 驱动的**用户日常 Chrome**（各插件 .mcp.json 已带反检测参数）；签名与处置已写入 cnki-search / sd-search SKILL 与本表。
 
 ## 待办
 

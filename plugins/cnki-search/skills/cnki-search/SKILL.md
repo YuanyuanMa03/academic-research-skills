@@ -125,6 +125,15 @@ Check `#tcaptcha_transform_dy` element's `getBoundingClientRect().top >= 0`.
 Tencent captcha SDK preloads DOM at `top: -1000000px` (off-screen, not active).
 Only return `error: 'captcha'` when `top >= 0` (actually visible to user).
 
+Two more wall types (verified 2026-10-29):
+
+| Signature | Verdict | Action |
+|---|---|---|
+| Page shows `请完成安全验证` + `向右滑动完成验证` | CNKI slider wall | Automated/embedded browser contexts trigger this on load. Do NOT script the drag; hand the visible browser to the user to slide once, or switch to the user's daily Chrome via chrome-devtools. |
+| Search returns nothing and page requires re-login | session expired | Re-enter via the user's authenticated browser. |
+
+Anti-detection prerequisite: this skill expects chrome-devtools driving the **user's daily Chrome** (the bundled `.mcp.json` already passes `--disable-blink-features=AutomationControlled`). Embedded/automation webviews (e.g. Electron-based in-app browsers) are fingerprinted immediately — see `docs/PLAYBOOK.md` failure-signature table.
+
 ## Verified selectors
 
 | Element | Selector | Notes |

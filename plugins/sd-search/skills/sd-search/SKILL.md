@@ -29,6 +29,10 @@ Before the first operation, check the current browser page URL to determine whic
 
 Use whatever origin the user's browser is currently on. If no ScienceDirect page is open, ask the user which URL to use.
 
+## Anti-bot wall signature (verified 2026-10-29)
+
+If the page title is `Just a moment...` with heading `Are you a robot?`, Elsevier's Cloudflare wall has fingerprinted the browser context. Automated/embedded webviews (Electron in-app browsers, headless) hit this immediately; the user's daily Chrome driven via chrome-devtools (bundled `.mcp.json` already passes `--disable-blink-features=AutomationControlled`) usually does not. Do NOT retry the same context: either hand the visible browser to the user to pass the challenge once, or switch to chrome-devtools on the user's Chrome. Full signature table: `docs/PLAYBOOK.md`.
+
 ## Steps
 
 ### Step 1: Navigate to search results
