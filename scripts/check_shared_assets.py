@@ -38,15 +38,10 @@ MCP_TEMPLATES = {
     "scansci-pdf": REPO_ROOT / "plugins/scansci-pdf/.mcp.json",
 }
 
-# Browser-automation skills that intentionally ship no .mcp.json:
-# - wos-dom: static DOM-structure reference document, no runtime tools.
-# - wos-parse-results: parses already-saved page snapshots offline.
-# - nature-* prompt skills: no browser, no MCP needs.
-# (Prompt-only and reference skills do not need MCP config.)
-MCP_EXEMPT = {
-    "wos-dom",
-    "wos-parse-results",
-}
+# Skills that intentionally ship no .mcp.json (documented in docs/PLAYBOOK.md).
+# Since v2.0.0 every shipped browser skill carries an MCP config; the former
+# exemptions (wos-dom, wos-parse-results) were merged into wos-search.
+MCP_EXEMPT: set[str] = set()
 
 
 def sha256(path: Path) -> str:

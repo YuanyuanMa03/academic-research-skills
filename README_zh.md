@@ -16,7 +16,7 @@ cnki-search、pm-search →  scansci-pdf（下载、引文、   →  nature-*（
 拿到条目（DOI、标题）       Zotero 推送）                  审稿、专利）
 ```
 
-47 个插件：46 个平台站内检索导航技能（知网、谷歌学术、ScienceDirect、Web of Science、PubMed、IEEE Xplore、Nature）+ `scansci-pdf` 文献获取中枢。论文下载、引文导出、Zotero 推送统一走 `scansci-pdf`；旧的 `*-download`、`*-export`、`zotero-csl` 技能已移除（迁移表见 `docs/REFERENCE.md`）。
+16 个插件——一个平台一个（`cnki-search`、`sd-search`、`wos-search`、`pm-search`）+ 11 个 `nature-*` 写作技能 + `scansci-pdf` 文献获取中枢。论文下载、引文导出、Zotero 推送统一走 `scansci-pdf`；所有移除都有 `docs/REFERENCE.md` 迁移表。
 
 ## ✅ 端到端实测 — 2026-10-29
 
@@ -46,25 +46,20 @@ https://github.com/YuanyuanMa03/academic-research-skills
 适用于 Claude Code、Copilot CLI、Codex、Gemini CLI、ChatGPT、通义千问、DeepSeek，或任何能读取 GitHub 仓库的 LLM agent。
 <img width="980" height="741" alt="image" src="https://github.com/user-attachments/assets/f1529dbd-c01c-4c69-9ff2-6634c5bef75a" />
 
-## 支持平台
+## 插件
 
-| 平台 | 前缀 | 技能 | 数量 |
-|------|------|------|------|
-| 知网 (CNKI) | `cnki-*` | 搜索、期刊浏览、论文详情、结果解析、翻页 | 8 |
-| 谷歌学术 (Google Scholar) | `gs-*` | 搜索、高级搜索、引用追踪、翻页 | 4 |
-| ScienceDirect | `sd-*` | 搜索、期刊浏览、论文详情、结果解析、翻页 | 6 |
-| Web of Science | `wos-*` | 搜索、DOM 参考、论文详情、结果解析、翻页 | 5 |
-| PubMed | `pm-*` | 搜索（API 优先）、全文、论文详情、翻页 | 5 |
-| IEEE Xplore | `ieee-*` | 搜索、期刊浏览、标准、论文详情、结果解析 | 7 |
-| Nature | `nature-*` | 学术搜索、写作、润色、图表、阅读、专利、审稿 | 11 |
-| ScanSci PDF | `scansci-pdf` | 论文下载、引文导出、Zotero 推送、批量队列、环境诊断 | 1 |
+| 平台 | 插件 | 内含能力 | 子流程 |
+|------|------|----------|--------|
+| 知网 (CNKI) | `cnki-search` | 检索、高级检索、论文详情、结果解析、翻页、期刊检索/目录/核心期刊导航 | 7 个 references |
+| ScienceDirect | `sd-search` | 检索、高级检索、详情、解析、翻页、期刊浏览 | 5 个 references |
+| Web of Science | `wos-search` | 检索（内部 API+回退）、详情、解析（含离线快照）、翻页、DOM 参考 | 4 个 references |
+| PubMed | `pm-search` | API 优先双路径检索；`--year-from/--sort/--page` 已覆盖高级检索与翻页 | 独立脚本 |
+| Nature 写作套件 | `nature-*` ×11 | 学术搜索、写作、润色、审稿、回复信、精读、图表、数据、PPT、专利、引文 | 纯提示词 |
+| 文献获取 | `scansci-pdf` | 多路由下载、批量、引文、Zotero 推送、机构通道、诊断 | MCP server |
 
-**共 47 个插件** — 7 个学术平台的站内检索导航 + [`scansci-pdf`](https://github.com/Rimagination/scansci-pdf)（MIT）文献获取中枢（下载 / 引文 / Zotero）。
+**16 个插件** — 一个平台一个插件 + scansci-pdf 文献获取中枢（[MIT](https://github.com/Rimagination/scansci-pdf)）。平台插件内，SKILL.md 顶部「场景路由」表把具体动作路由到 `references/` 子流程文档——装一个插件即得平台全流程，上下文成本比旧的按动作拆分更低。
 
-> 浏览器技能（CNKI、GS、SD、WoS、IEEE）需要 [Chrome DevTools MCP](https://github.com/nicekid1/chrome-devtools-mcp)（各插件 `.mcp.json` 已内置）。PubMed 搜索走 NCBI API 独立脚本。`scansci-pdf` 需要 Python >= 3.11 并 `pip install scansci-pdf`（首次使用有引导）。Nature 系列是纯提示技能，任何 LLM 可用。
->
-> 论文下载 / 引文导出 / Zotero 推送统一走 `scansci-pdf` —— 旧的 `*-download`、`*-export`、`zotero-csl` 技能已移除（决策记录见 `docs/PLAYBOOK.md`）。
-
+> 浏览器平台技能（CNKI/SD/WoS）需要 [Chrome DevTools MCP](https://github.com/nicekid1/chrome-devtools-mcp)（各插件 `.mcp.json` 已内置）。PubMed 搜索走 NCBI API 独立脚本。`scansci-pdf` 需要 Python >= 3.11 并 `pip install scansci-pdf`（首次使用有引导；建议装可选浏览器后端 `pip install "scansci-pdf[camoufox]"` 扩大 OA 覆盖）。Nature 系列纯提示词，任何 LLM 可用。
 
 ## 安装方式
 
@@ -75,25 +70,7 @@ https://github.com/YuanyuanMa03/academic-research-skills
 /plugin marketplace add YuanyuanMa03/academic-research-skills
 
 # 安装全部技能
-/plugin install cnki-advanced-search@academic-research-skills
-/plugin install cnki-journal-index@academic-research-skills
-/plugin install cnki-journal-search@academic-research-skills
-/plugin install cnki-journal-toc@academic-research-skills
-/plugin install cnki-navigate-pages@academic-research-skills
-/plugin install cnki-paper-detail@academic-research-skills
-/plugin install cnki-parse-results@academic-research-skills
 /plugin install cnki-search@academic-research-skills
-/plugin install gs-advanced-search@academic-research-skills
-/plugin install gs-cited-by@academic-research-skills
-/plugin install gs-navigate-pages@academic-research-skills
-/plugin install gs-search@academic-research-skills
-/plugin install ieee-advanced-search@academic-research-skills
-/plugin install ieee-journal-browse@academic-research-skills
-/plugin install ieee-navigate-pages@academic-research-skills
-/plugin install ieee-paper-detail@academic-research-skills
-/plugin install ieee-parse-results@academic-research-skills
-/plugin install ieee-search@academic-research-skills
-/plugin install ieee-standards-search@academic-research-skills
 /plugin install nature-academic-search@academic-research-skills
 /plugin install nature-citation@academic-research-skills
 /plugin install nature-data@academic-research-skills
@@ -105,22 +82,9 @@ https://github.com/YuanyuanMa03/academic-research-skills
 /plugin install nature-response@academic-research-skills
 /plugin install nature-reviewer@academic-research-skills
 /plugin install nature-writing@academic-research-skills
-/plugin install pm-advanced-search@academic-research-skills
-/plugin install pm-fulltext@academic-research-skills
-/plugin install pm-navigate-pages@academic-research-skills
-/plugin install pm-paper-detail@academic-research-skills
 /plugin install pm-search@academic-research-skills
 /plugin install scansci-pdf@academic-research-skills
-/plugin install sd-advanced-search@academic-research-skills
-/plugin install sd-journal-browse@academic-research-skills
-/plugin install sd-navigate-pages@academic-research-skills
-/plugin install sd-paper-detail@academic-research-skills
-/plugin install sd-parse-results@academic-research-skills
 /plugin install sd-search@academic-research-skills
-/plugin install wos-dom@academic-research-skills
-/plugin install wos-navigate-pages@academic-research-skills
-/plugin install wos-paper-detail@academic-research-skills
-/plugin install wos-parse-results@academic-research-skills
 /plugin install wos-search@academic-research-skills
 ```
 

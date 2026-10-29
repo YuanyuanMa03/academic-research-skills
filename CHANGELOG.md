@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2026-10-29
+
+**Breaking change: one plugin per platform.** 47 → 16 plugins. Users who installed removed plugins should uninstall them and install the merged replacements (migration tables in `docs/REFERENCE.md`).
+
+### Removed (15)
+- `gs-*` (4) and `ieee-*` (7): platforms timed out in the 2026-06 test and never recovered; cross-source retrieval via `scansci-pdf` covers them.
+- `pm-advanced-search`, `pm-navigate-pages`: covered by `pm-search` script flags (`--year-from/--year-to/--sort/--page`).
+- `pm-paper-detail`: covered by single-paper queries via `pm-search` / scansci-pdf search.
+- `pm-fulltext`: covered by `scansci-pdf` download (PMC/EuropePMC channels).
+
+### Merged (19 → 3, zero content loss)
+- CNKI 8 → `cnki-search` (7 reference sub-workflows)
+- ScienceDirect 6 → `sd-search` (5 reference sub-workflows)
+- Web of Science 5 → `wos-search` (4 reference sub-workflows, incl. the former `wos-dom` DOM reference)
+
+Merged SKILL.md files were converted verbatim (frontmatter stripped, ownership header added) into `references/<action>.md`; each platform SKILL.md now opens with a scenario-routing table. Install one plugin, get the platform's full workflow, lower context cost. Merged plugins bumped to 2.0.0.
+
+### Kept
+- `pm-search` (precision PubMed API entry), `nature-*` ×11 (scenario-level writing skills, kept separate), `scansci-pdf` (retrieval hub), `nature-academic-search` (arXiv/Scopus sources, CI live gate).
+
+### Changed
+- `check_shared_assets.py`: MCP exemption list emptied (former exemptions merged into `wos-search`).
+- README/README_zh, AGENTS.md, CLAUDE.md, architecture.md, REFERENCE.md, PLAYBOOK.md (v2.0.0 decision record) all updated.
+
 ## [1.2.1] - 2026-10-29
 
 Fixed hardening from the first end-to-end workflow test (evidence: `docs/test-evidence/2026-10-29-e2e-workflow/`):

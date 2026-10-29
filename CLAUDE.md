@@ -16,7 +16,7 @@ ruff check plugins/ scripts/ && ruff format --check plugins/ scripts/
 
 Key facts:
 
-- 47 plugins: 46 platform search/navigation skills (CNKI, GS, SD, WoS, PubMed, IEEE, Nature) + 1 `scansci-pdf` bridge plugin (paper download, citations, Zotero push via the scansci-pdf MCP server, MIT).
+- 16 plugins: 4 platform skills (`cnki-search`, `sd-search`, `wos-search`, `pm-search` — one per platform, sub-workflows in `references/`), 11 `nature-*` writing skills, 1 `scansci-pdf` retrieval bridge (paper download, citations, Zotero push via the scansci-pdf MCP server, MIT).
 - Literature retrieval (download/export/Zotero) belongs to `scansci-pdf`; the old `*-download`/`*-export`/`zotero-csl` skills were removed (decision record in [`docs/PLAYBOOK.md`](docs/PLAYBOOK.md)).
 - New plugins must be registered in BOTH marketplaces (`.claude-plugin/marketplace.json` and `.agents/plugins/marketplace.json`) and covered in `docs/REFERENCE.md`.
 - Maintenance handbook (failure signatures, platform status, iron rules): [`docs/PLAYBOOK.md`](docs/PLAYBOOK.md). Intent-routing manual: [`docs/REFERENCE.md`](docs/REFERENCE.md).

@@ -4,11 +4,12 @@
 
 ## 这个仓库是什么
 
-academic-research-skills 是一个面向 AI 助手的学术研究技能市场（plugin marketplace），当前 47 个插件覆盖三类能力：
+academic-research-skills 是一个面向 AI 助手的学术研究技能市场（plugin marketplace），当前 16 个插件覆盖三类能力（v2.0.0 起一个平台一个技能）：
 
-1. **平台站内检索与导航**（46 个）：CNKI、Google Scholar、ScienceDirect、Web of Science、PubMed、IEEE Xplore 的搜索、详情、翻页、期刊浏览，以及 Nature 写作辅助。
-2. **文献获取**（1 个）：`scansci-pdf` 桥接插件——接入开源 [scansci-pdf](https://github.com/Rimagination/scansci-pdf) MCP server，负责 PDF 下载（多路由竞速）、批量队列、引文导出、Zotero 推送、机构通道、环境诊断。它取代了已删除的 `*-download` / `*-export` / `zotero-csl` 技能（决策记录见 PLAYBOOK）。
-3. **典型工作流**：平台站内检索（如 `cnki-search`）拿条目 → `scansci-pdf` 完成下载 / 引文 / Zotero 推送 → `nature-*` 辅助写作。
+1. **平台站内检索与导航**（4 个）：`cnki-search`、`sd-search`、`wos-search`（各自内含检索/详情/解析/翻页/期刊等 references 子流程）、`pm-search`（API 优先独立脚本）。
+2. **写作辅助**（11 个）：`nature-*` 系列（写作、润色、审稿、回复信、精读、图表、数据、PPT、专利、引文、跨源检索）。
+3. **文献获取**（1 个）：`scansci-pdf` 桥接插件——接入开源 [scansci-pdf](https://github.com/Rimagination/scansci-pdf) MCP server，负责 PDF 下载（多路由竞速）、批量队列、引文导出、Zotero 推送、机构通道、环境诊断。它取代了已删除的 `*-download` / `*-export` / `zotero-csl` 技能（决策记录见 PLAYBOOK）。
+4. **典型工作流**：平台站内检索（如 `cnki-search`）拿条目 → `scansci-pdf` 完成下载 / 引文 / Zotero 推送 → `nature-*` 辅助写作。
 
 ## 目录结构
 
@@ -19,8 +20,8 @@ academic-research-skills/
 │   ├── .codex-plugin/plugin.json    # Codex manifest（必需）
 │   ├── .mcp.json                    # MCP 配置（浏览器技能 / scansci-pdf 必需）
 │   └── skills/<name>/SKILL.md       # 技能定义
-├── .claude-plugin/marketplace.json  # Claude 市场清单（47 条）
-├── .agents/plugins/marketplace.json # Codex 市场清单（47 条）
+├── .claude-plugin/marketplace.json  # Claude 市场清单（16 条）
+├── .agents/plugins/marketplace.json # Codex 市场清单（16 条）
 ├── scripts/                      # 校验工具（见下）
 └── docs/
     ├── PLAYBOOK.md               # 维护手册（铁律 / 失败签名 / 决策账本）

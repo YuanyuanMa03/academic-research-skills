@@ -16,7 +16,7 @@ cnki-search, pm-search →  scansci-pdf (download,        →   nature-* (review
 get entries (DOI, title)   citations, Zotero push)          polishing, review, patent)
 ```
 
-47 plugins: 46 platform search/navigation skills (CNKI, Google Scholar, ScienceDirect, Web of Science, PubMed, IEEE Xplore, Nature) + the `scansci-pdf` retrieval hub. Paper download, citation export, and Zotero push all route through `scansci-pdf`; the old `*-download` / `*-export` / `zotero-csl` skills were removed (migration table in `docs/REFERENCE.md`).
+16 plugins — one per platform (`cnki-search`, `sd-search`, `wos-search`, `pm-search`), 11 `nature-*` writing skills, and the `scansci-pdf` retrieval hub. Paper download, citation export, and Zotero push all route through `scansci-pdf`; every removal is documented in the `docs/REFERENCE.md` migration tables.
 
 ## ✅ End-to-End Verified — 2026-10-29
 
@@ -46,25 +46,20 @@ https://github.com/YuanyuanMa03/academic-research-skills
 Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek, or any LLM agent that can read GitHub repos.
 <img width="780" height="573" alt="image" src="https://github.com/user-attachments/assets/9e306fab-863e-436c-bb00-7af8ec212564" />
 
-## Platforms
+## Plugins
 
-| Platform | Prefix | Skills | Count |
-|----------|--------|--------|-------|
-| CNKI | `cnki-*` | search, journal browse, paper detail, parse, navigate | 8 |
-| Google Scholar | `gs-*` | search, advanced search, cited-by, navigate | 4 |
-| ScienceDirect | `sd-*` | search, journal browse, paper detail, parse, navigate | 6 |
-| Web of Science | `wos-*` | search, DOM reference, paper detail, parse, navigate | 5 |
-| PubMed | `pm-*` | search (API-first), fulltext, paper detail, navigate | 5 |
-| IEEE Xplore | `ieee-*` | search, journal browse, standards, paper detail, parse | 7 |
-| Nature | `nature-*` | academic search, writing, polishing, figures, reader, patent, reviewer | 11 |
-| ScanSci PDF | `scansci-pdf` | paper download, citation export, Zotero push, batch, diagnostics | 1 |
+| Platform | Plugin | What's inside | Sub-workflows |
+|----------|--------|---------------|---------------|
+| CNKI | `cnki-search` | everything CNKI: search, advanced search, paper detail, result parsing, paging, journal search/TOC/index | 7 references |
+| ScienceDirect | `sd-search` | search, advanced search, paper detail, parsing, paging, journal browse | 5 references |
+| Web of Science | `wos-search` | search (internal API + fallback), paper detail, parsing (incl. offline snapshots), paging, DOM reference | 4 references |
+| PubMed | `pm-search` | API-first dual-path search; `--year-from/--sort/--page` cover advanced search & paging | standalone script |
+| Nature writing suite | `nature-*` ×11 | academic search, writing, polishing, reviewer, response, reader, figures, data, PPT, patent, citation | prompt-based |
+| Literature retrieval | `scansci-pdf` | download (multi-route racing), batch, citations, Zotero push, institutional access, diagnostics | MCP server |
 
-**47 plugins total** — platform search & navigation on 7 academic platforms, plus the [`scansci-pdf`](https://github.com/Rimagination/scansci-pdf) retrieval hub (MIT) for downloads, citations, and Zotero.
+**16 plugins** — one plugin per platform, plus the scansci-pdf retrieval hub ([MIT](https://github.com/Rimagination/scansci-pdf)). Inside each platform plugin, the SKILL.md routes scenarios to sub-workflow documents under `references/` — install one plugin, get the platform's full workflow, lower context cost than the old per-action plugins.
 
-> Browser skills (CNKI, GS, SD, WoS, IEEE) require [Chrome DevTools MCP](https://github.com/nicekid1/chrome-devtools-mcp) (bundled in each plugin's `.mcp.json`). PubMed search runs standalone via the NCBI API script. `scansci-pdf` needs Python >= 3.11 and `pip install scansci-pdf` (guided on first use). Nature skills are pure prompt-based and work with any LLM.
->
-> Paper download / citation export / Zotero push all route through `scansci-pdf` — the old `*-download`, `*-export`, and `zotero-csl` skills were removed (see `docs/PLAYBOOK.md`).
-
+> Browser platform skills (CNKI/SD/WoS) require [Chrome DevTools MCP](https://github.com/nicekid1/chrome-devtools-mcp) (bundled in each plugin's `.mcp.json`). PubMed search runs standalone via the NCBI API script. `scansci-pdf` needs Python >= 3.11 and `pip install scansci-pdf` (guided on first use; optional browser backend `pip install "scansci-pdf[camoufox]"` broadens OA coverage). Nature skills are pure prompt-based and work with any LLM.
 
 ## Installation
 
@@ -75,25 +70,7 @@ Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek,
 /plugin marketplace add YuanyuanMa03/academic-research-skills
 
 # Install all skills
-/plugin install cnki-advanced-search@academic-research-skills
-/plugin install cnki-journal-index@academic-research-skills
-/plugin install cnki-journal-search@academic-research-skills
-/plugin install cnki-journal-toc@academic-research-skills
-/plugin install cnki-navigate-pages@academic-research-skills
-/plugin install cnki-paper-detail@academic-research-skills
-/plugin install cnki-parse-results@academic-research-skills
 /plugin install cnki-search@academic-research-skills
-/plugin install gs-advanced-search@academic-research-skills
-/plugin install gs-cited-by@academic-research-skills
-/plugin install gs-navigate-pages@academic-research-skills
-/plugin install gs-search@academic-research-skills
-/plugin install ieee-advanced-search@academic-research-skills
-/plugin install ieee-journal-browse@academic-research-skills
-/plugin install ieee-navigate-pages@academic-research-skills
-/plugin install ieee-paper-detail@academic-research-skills
-/plugin install ieee-parse-results@academic-research-skills
-/plugin install ieee-search@academic-research-skills
-/plugin install ieee-standards-search@academic-research-skills
 /plugin install nature-academic-search@academic-research-skills
 /plugin install nature-citation@academic-research-skills
 /plugin install nature-data@academic-research-skills
@@ -105,22 +82,9 @@ Works with Claude Code, Copilot CLI, Codex, Gemini CLI, ChatGPT, Qwen, DeepSeek,
 /plugin install nature-response@academic-research-skills
 /plugin install nature-reviewer@academic-research-skills
 /plugin install nature-writing@academic-research-skills
-/plugin install pm-advanced-search@academic-research-skills
-/plugin install pm-fulltext@academic-research-skills
-/plugin install pm-navigate-pages@academic-research-skills
-/plugin install pm-paper-detail@academic-research-skills
 /plugin install pm-search@academic-research-skills
 /plugin install scansci-pdf@academic-research-skills
-/plugin install sd-advanced-search@academic-research-skills
-/plugin install sd-journal-browse@academic-research-skills
-/plugin install sd-navigate-pages@academic-research-skills
-/plugin install sd-paper-detail@academic-research-skills
-/plugin install sd-parse-results@academic-research-skills
 /plugin install sd-search@academic-research-skills
-/plugin install wos-dom@academic-research-skills
-/plugin install wos-navigate-pages@academic-research-skills
-/plugin install wos-paper-detail@academic-research-skills
-/plugin install wos-parse-results@academic-research-skills
 /plugin install wos-search@academic-research-skills
 ```
 

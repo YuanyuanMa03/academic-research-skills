@@ -16,7 +16,19 @@
 5. **每个验证过的单元立即提交**，不要攒大提交。
 6. **引入外部依赖先定融合方式**：scansci-pdf（MIT）采用"MCP 配置 + 技能包装"而非复制其源码——升级靠 PyPI，本仓库零 vendoring 负担。新外部依赖照此评估。
 
-## 决策账本：删除 12 个插件，文献获取切换 scansci-pdf（2026-10-28）
+## 决策账本
+
+### v2.0.0：一个平台一个技能（2026-10-29）
+
+47 → 16 个插件。动机：端到端实测（见 `docs/test-evidence/2026-10-29-e2e-workflow/`）显示核心高频链路只占少数；步骤级技能（navigate-pages/parse-results 等）拆成独立安装单元没有用户单独安装；GS/IEEE 平台实测失效无人修。
+
+- **删除 15 个**：GS×4、IEEE×7（平台失效，被 scansci-pdf 跨源检索覆盖）；pm-advanced-search / pm-navigate-pages（pm-search 脚本参数已覆盖）、pm-paper-detail（pm-search 单篇查询可替代）、pm-fulltext（scansci-pdf 的 PMC 渠道覆盖）。
+- **合并 19 → 3**：CNKI 8 → `cnki-search`、SD 6 → `sd-search`、WoS 5 → `wos-search`。被合并技能的 SKILL.md 全文转为 `references/<action>.md` 子流程文档（仅剥 frontmatter 加归属头），主 SKILL.md 顶部加「场景路由」表。内容零丢失。
+- **保留 nature 11 个独立**：场景级（审稿/回复信/配图/专利）而非平台步骤拆分；合并会让只装一个场景的用户背上全部资产。
+- 浏览器技能豁免名单清空：wos-dom/wos-parse-results 并入 wos-search。
+- 判断依据：每个留下的插件必须有不可替代理由（精度入口/站内导航/写作场景/获取中枢），每条删除线有实测依据。
+
+### 1.2.0：删除 12 个插件，文献获取切换 scansci-pdf（2026-10-28）
 
 删除：`cnki-download`、`gs-fulltext`、`ieee-download`、`sd-download`、`wos-download`、`cnki-export`、`gs-export`、`ieee-export`、`pm-export`、`sd-export`、`wos-export`、`zotero-csl`。
 
@@ -37,7 +49,7 @@
 | PubMed | ✅ 双路径通过（2026-08-21） | 脚本 429/5xx | NCBI 限流 | 脚本自动重试一次；带 `--mailto` 进 polite pool |
 | ScienceDirect | ✅ 通过（2026-06-23） | 页面要求登录 / 反爬拦截 | 会话失效 | 重新登录后重试；持续失败转 scansci-pdf 机构通道 |
 | CNKI | ✅ 通过（2026-06-23） | 验证码页 / 内容为空 | 触发反爬 | 减速重试；下载场景已移交 scansci-pdf |
-| WoS | ✅ 通过（2026-06-23，仅 2 篇） | 内部 API 报 `no_session` | SID 过期 | wos-search 已内置回退：DOM 导航 / wos-parse-results Mode B |
+| WoS | ✅ 通过（2026-06-23，仅 2 篇） | 内部 API 报 `no_session` | SID 过期 | wos-search 已内置回退：DOM 导航 / 结果解析子流程（references/parse-results.md）Mode B |
 | Google Scholar | ❌ 超时（2026-06-23） | 长时间无响应 / CAPTCHA 页 | 反爬+配额 | 检索转 PubMed/CNKI 或 scansci-pdf `search`（13 源引擎）；修复前先复测 |
 | IEEE Xplore | ❌ 超时（2026-06-23） | 长时间无响应 | 站点慢/反爬 | 同上；IEEE 官方 API 需 key，是双路径扩展候选 |
 

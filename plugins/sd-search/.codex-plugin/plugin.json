@@ -1,6 +1,6 @@
 {
   "name": "sd-search",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Search for academic papers on ScienceDirect. Use when the user wants to find papers by keyword on ScienceDirect/Elsevier.",
   "author": {
     "name": "YuanyuanMa03"

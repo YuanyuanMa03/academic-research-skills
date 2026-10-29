@@ -128,13 +128,7 @@ Plugin names follow the pattern: `{platform}-{action}`
 | `ieee-` | IEEE Xplore |
 | `nature-` | Nature / Springer Nature |
 
-| Action suffix | Description |
-|--------------|-------------|
-| `-search` | Basic keyword search |
-| `-advanced-search` | Multi-field / Boolean search |
-| `-paper-detail` | Full paper metadata extraction |
-| `-parse-results` | Parse search results page |
-| `-navigate-pages` | Paginate through results |
+Since v2.0.0 the convention is **one plugin per platform**: a platform plugin (e.g. `cnki-search`) contains the full workflow — the SKILL.md holds a scenario-routing table plus the primary flow, and each additional action (advanced search, paper detail, result parsing, paging, journal browsing) lives in `references/<action>.md`. Do not split per-action skills into separate plugins.
 
 Download / citation export / Zotero push do NOT get per-platform skills — they all route through the `scansci-pdf` bridge plugin (see `docs/REFERENCE.md`).
 
