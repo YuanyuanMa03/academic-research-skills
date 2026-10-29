@@ -2,33 +2,37 @@
 
 [English](./README.md)
 
-Claude Code 插件市场，提供学术研究工作流相关技能。
+Claude Code / Codex 插件市场——从文献检索到成稿的完整学术研究工作流。
 
 <p align="center">
   <img src="docs/images/demo.png" alt="学术研究技能演示" width="800"/>
 </p>
 
-## 🎯 测试结果
+## 工作流
 
-> **最后验证：2026-06-23**（完整测试，证据存于 `docs/test-evidence/`）。
-> 2026-08-21 抽查：PubMed 检索仍可用（"soil carbon cycling" 2022–2026 共 5,688 条），浏览器路径与新增的独立 API 脚本 `plugins/pm-search/skills/pm-search/scripts/pubmed_api_search.py` 均通过。
+```
+① 平台站内检索            ② 文献获取                    ③ 写作辅助
+cnki-search、pm-search →  scansci-pdf（下载、引文、   →  nature-*（综述、开题、润色、
+拿到条目（DOI、标题）       Zotero 推送）                  审稿、专利）
+```
 
-我们通过搜索**农业大模型**、**智慧农业**和**农业土壤碳循环**相关论文，对技能进行了实际测试。
+47 个插件：46 个平台站内检索导航技能（知网、谷歌学术、ScienceDirect、Web of Science、PubMed、IEEE Xplore、Nature）+ `scansci-pdf` 文献获取中枢。论文下载、引文导出、Zotero 推送统一走 `scansci-pdf`；旧的 `*-download`、`*-export`、`zotero-csl` 技能已移除（迁移表见 `docs/REFERENCE.md`）。
 
-<p align="center">
-  <img src="docs/images/search-results.png" alt="搜索结果" width="800"/>
-</p>
+## ✅ 端到端实测 — 2026-10-29
 
-| 平台 | 状态 | 搜索结果数 | 提取论文数 |
-|------|------|------------|------------|
-| PubMed | ✅ 成功 | 22,891 | 60 |
-| ScienceDirect | ✅ 成功 | 107,119 | 56 |
-| CNKI (知网) | ✅ 成功 | 9,745 | 40 |
-| Web of Science | ✅ 成功 | 32,503 | 2 |
-| Google Scholar | ❌ 超时 | - | - |
-| IEEE Xplore | ❌ 超时 | - | - |
+我们在干净环境用真实课题——**「半导体材料在电池中的创新应用」**——把完整工作流跑了一遍：从文献检索到文献综述、开题报告、文章骨架：
 
-**总计: 提取 168 篇论文**（超过 100 篇目标），全部为 2022-2026 年近五年论文。
+| 环节 | 技能 | 实测结果 |
+|---|---|---|
+| 检索 | `pm-search`（PubMed API 独立脚本） | ✅ 真实命中且 PMID/DOI 可验：硅负极方向 155 条、光充电电池方向 6 条 |
+| 跨源发现 | `scansci-pdf search` | ✅ 13 源引擎真实返回；相关性偏宽——精确检索请用平台技能 |
+| 下载 | `scansci-pdf get --strategy legal_only` | ✅ 经 Unpaywall 渠道获取一篇付费刊论文：71 页 PDF、自动按`作者_年份_标题`重命名、如实报告实际来源。首次失败（`config_needed`：缺邮箱）按技能指引配置后重试即成功 |
+| 全文 | `scansci-pdf get --md` | ✅ 971 行含 OCR 的 Markdown，章节结构完整 |
+| 精读与写作 | `nature-reader`、`nature-writing` | ✅ 产出证据锚点式精读笔记、13 条真实文献的综述、完整开题报告、英文文章骨架——零虚构引用（无数据处显式标注占位符） |
+
+完整报告与原始证据：[`docs/test-evidence/2026-10-29-e2e-workflow/`](docs/test-evidence/2026-10-29-e2e-workflow/)。
+
+**已知边界（如实写明，不藏）**：未装可选浏览器后端（`pip install "scansci-pdf[camoufox]"`）时，下载仅覆盖"OA 仓库直链"型文章——出版商官网 OA 与机构登录需要它。浏览器平台技能（CNKI/GS/SD/WoS/IEEE）需要宿主内有 Chrome DevTools MCP。2026-06-23 的各平台状态快照（GS/IEEE 当时超时）与全部失败签名见 `docs/PLAYBOOK.md`。
 
 ## 快速开始（任意 Agent）
 

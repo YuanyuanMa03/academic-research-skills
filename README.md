@@ -2,33 +2,37 @@
 
 [中文介绍](./README_zh.md)
 
-Claude Code plugin marketplace for academic research workflows.
+Claude Code / Codex plugin marketplace for academic research workflows — from literature search all the way to manuscript.
 
 <p align="center">
   <img src="docs/images/demo.png" alt="Academic Research Skills Demo" width="800"/>
 </p>
 
-## 🎯 Test Results
+## The Workflow
 
-> **Last verified: 2026-06-23** (full run, evidence in `docs/test-evidence/`).
-> 2026-08-21 spot-check: PubMed search still working (5,688 results for "soil carbon cycling", 2022–2026), both via browser and via the new standalone API script `plugins/pm-search/skills/pm-search/scripts/pubmed_api_search.py`.
+```
+① platform search         ② literature retrieval           ③ writing assistance
+cnki-search, pm-search →  scansci-pdf (download,        →   nature-* (review, proposal,
+get entries (DOI, title)   citations, Zotero push)          polishing, review, patent)
+```
 
-We tested the skills by searching for papers on **agricultural large models**, **smart agriculture**, and **soil carbon cycling** across multiple platforms.
+47 plugins: 46 platform search/navigation skills (CNKI, Google Scholar, ScienceDirect, Web of Science, PubMed, IEEE Xplore, Nature) + the `scansci-pdf` retrieval hub. Paper download, citation export, and Zotero push all route through `scansci-pdf`; the old `*-download` / `*-export` / `zotero-csl` skills were removed (migration table in `docs/REFERENCE.md`).
 
-<p align="center">
-  <img src="docs/images/search-results.png" alt="Search Results" width="800"/>
-</p>
+## ✅ End-to-End Verified — 2026-10-29
 
-| Platform | Status | Results Found | Papers Extracted |
-|----------|--------|---------------|------------------|
-| PubMed | ✅ Success | 22,891 | 60 |
-| ScienceDirect | ✅ Success | 107,119 | 56 |
-| CNKI | ✅ Success | 9,745 | 40 |
-| Web of Science | ✅ Success | 32,503 | 2 |
-| Google Scholar | ❌ Timeout | - | - |
-| IEEE Xplore | ❌ Timeout | - | - |
+We ran a real research topic through the complete workflow on a clean machine — *"innovative applications of semiconductor materials in batteries"* — from literature search to literature review, research proposal, and manuscript skeleton:
 
-**Total: 168 papers extracted** (exceeding 100 target), all from 2022-2026.
+| Stage | Skill | Verified result |
+|---|---|---|
+| Search | `pm-search` (standalone PubMed API script) | ✅ Real hits with verifiable PMIDs/DOIs: 155 results (silicon anodes) and 6 (photorechargeable batteries) |
+| Cross-source discovery | `scansci-pdf search` | ✅ Live 13-source engine; broad relevance — use platform skills for precision searches |
+| Download | `scansci-pdf get --strategy legal_only` | ✅ Fetched a paywalled journal paper via the Unpaywall channel: 71-page PDF, auto-renamed `Author_Year_Title`, actual source reported. A first failure (`config_needed`: missing email) resolved exactly per the skill's guidance — configure email, retry, succeed |
+| Full text | `scansci-pdf get --md` | ✅ 971-line agent-ready Markdown with OCR, structure intact |
+| Reading & writing | `nature-reader`, `nature-writing` | ✅ Evidence-anchored reading notes, a 13-reference literature review, a full research proposal, and an English manuscript skeleton — zero fabricated citations (placeholders marked explicitly) |
+
+Full report and raw evidence: [`docs/test-evidence/2026-10-29-e2e-workflow/`](docs/test-evidence/2026-10-29-e2e-workflow/).
+
+**Known boundaries (documented, not hidden):** without the optional browser backend (`pip install "scansci-pdf[camoufox]"`) downloads cover repository-direct-link OA only — publisher-site OA and institutional login need it. Browser platform skills (CNKI/GS/SD/WoS/IEEE) require Chrome DevTools MCP in the host. The 2026-06-23 per-platform snapshot (GS/IEEE were timing out) and all failure signatures live in `docs/PLAYBOOK.md`.
 
 ## Quick Start (Any Agent)
 

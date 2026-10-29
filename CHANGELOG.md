@@ -12,6 +12,7 @@ Fixed hardening from the first end-to-end workflow test (evidence: `docs/test-ev
 - `scansci-pdf` SKILL.md: added the three-skill quick workflow (platform search → scansci-pdf retrieval → nature-* writing); search-source guidance (precise topics → platform skills like pm-search; scansci-pdf search is a broad discovery engine needing relevance filtering); strong recommendation to install the optional browser backend (`pip install "scansci-pdf[camoufox]"`) — without it only repository-direct-link OA papers are downloadable; two new troubleshooting rows (cache-hit returns old path ignoring `--output`; CLI has no citation command — agents should construct BibTeX from search metadata or enable the MCP server). Plugin version 1.0.0 → 1.0.1.
 - `docs/REFERENCE.md`: topic-based search-source selection (biomedical → pm-search; materials/physics → nature-academic-search / scansci-pdf) and three new symptom rows.
 - `docs/PLAYBOOK.md`: dated pitfalls from the live test (cache behavior, CLI citation gap, OA coverage without browser backend, search relevance, PubMed topic coverage).
+- README/README_zh rewritten around the verified three-step workflow: the stale 2026-06-23 platform table is replaced by the 2026-10-29 end-to-end test results (per-stage verification table, honest boundaries section), with the old platform snapshot moved to PLAYBOOK.
 
 ## [1.2.0] - 2026-10-28
 
