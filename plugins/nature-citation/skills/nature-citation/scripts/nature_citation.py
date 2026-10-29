@@ -626,7 +626,15 @@ def crossref_headers(mailto: str | None = None) -> dict[str, str]:
     return {"User-Agent": USER_AGENT if not mailto else f"codex-nature-citation/1.0 (mailto:{mailto})"}
 
 
-def fetch_crossref(query: str, rows: int, mailto: str | None = None, from_year: int | None = None, to_year: int | None = None, retries: int = 2) -> list[dict[str, Any]]:
+def fetch_crossref(
+    query: str,
+    rows: int,
+    mailto: str | None = None,
+    from_year: int | None = None,
+    to_year: int | None = None,
+    retries: int = 2,
+    container_title: str | None = None,
+) -> list[dict[str, Any]]:
     filters = ["type:journal-article"]
     if from_year is not None:
         filters.append(f"from-pub-date:{from_year}-01-01")
@@ -640,6 +648,12 @@ def fetch_crossref(query: str, rows: int, mailto: str | None = None, from_year: 
         "sort": "relevance",
         "order": "desc",
     }
+    # Restricting the journal at the API level is the difference between a
+    # working skill and one that always returns 0 candidates: a plain
+    # relevance search fills the top-N with specialty journals, so flagship
+    # articles never reach the client-side in_scope filter.
+    if container_title:
+        params["query.container-title"] = container_title
     if mailto:
         params["mailto"] = mailto
     url = f"{CROSSREF_API}?{urlencode(params)}"
@@ -887,34 +901,60 @@ def build_segments(args: argparse.Namespace) -> list[Segment]:
     return segments
 
 
+def scope_containers(scope: str) -> list[str]:
+    """Container-title search terms pushed down to CrossRef per scope.
+
+    Flagship titles are discovered by matching these terms inside
+    container-title, then narrowed precisely by in_scope() client-side.
+    """
+    nature = ["Nature", "npj", "Scientific Reports"]
+    science = ["Science"]
+    cell = ["Cell", "Trends in"]
+    if scope == "nature":
+        return nature
+    if scope == "science":
+        return science
+    if scope == "cell":
+        return cell
+    return nature + science + cell
+
+
 def search_segment(segment: Segment, args: argparse.Namespace) -> tuple[list[Candidate], list[dict[str, str]]]:
     errors: list[dict[str, str]] = []
     candidates: list[Candidate] = []
     queries = [segment.search_query, *fallback_queries_from_segment(segment.text)]
     seen_queries: set[str] = set()
-    for query in queries:
-        normalized_query = query.strip().lower()
-        if not normalized_query or normalized_query in seen_queries:
-            continue
-        seen_queries.add(normalized_query)
-        try:
-            items = retry_with_backoff(
-                lambda: fetch_crossref(
-                    query,
-                    rows=args.rows,
-                    mailto=args.mailto,
-                    from_year=args.from_year,
-                    to_year=args.to_year,
-                ),
-                max_retries=args.max_retries,
-            )
-        except Exception as exc:  # noqa: BLE001
-            errors.append({"segment_id": segment.id, "query": query, "error": str(exc)})
-            continue
-        for item in items:
-            candidate = candidate_from_crossref(item, source_query=query)
-            if candidate and in_scope(candidate.journal, args.scope):
-                candidates.append(candidate)
+    containers = scope_containers(getattr(args, "scope", "cns"))
+    for container in containers:
+        for query in queries:
+            normalized_query = query.strip().lower()
+            if not normalized_query or normalized_query in seen_queries:
+                continue
+            try:
+                items = retry_with_backoff(
+                    lambda q=query: fetch_crossref(
+                        q,
+                        rows=args.rows,
+                        mailto=args.mailto,
+                        from_year=args.from_year,
+                        to_year=args.to_year,
+                        container_title=container,
+                    ),
+                    max_retries=args.max_retries,
+                )
+            except Exception as exc:  # noqa: BLE001
+                errors.append({"segment_id": segment.id, "query": query, "error": str(exc)})
+                continue
+            seen_queries.add(normalized_query)
+            for item in items:
+                candidate = candidate_from_crossref(item, source_query=query)
+                if candidate and in_scope(candidate.journal, args.scope):
+                    title = candidate.title.lower()
+                    if title.startswith(("correction", "corrigendum", "retraction", "expression of concern")):
+                        continue
+                    candidates.append(candidate)
+            if dedupe(candidates):
+                break
         if dedupe(candidates):
             break
     return dedupe(candidates)[: args.per_segment], errors
@@ -2000,6 +2040,14 @@ def main(argv: list[str]) -> int:
     print(f"Reference output: {output_path}")
     print(f"Export format: {args.format} ({export_label(args.format)})")
     print(f"Unique references exported: {len(references)}")
+    if not references:
+        print(
+            "NOTE: 0 in-scope candidates found. Possible causes: (a) the claim has "
+            "no support in the selected journal scope — try a broader --scope; "
+            "(b) too-narrow claim wording; (c) network/Crossref issues (see errors "
+            "in the report). An empty export is a valid result, not a crash.",
+            file=sys.stderr,
+        )
     if skipped_segments:
         print(f"Segments skipped: {skipped_segments}")
     if errors and args.with_artifacts:

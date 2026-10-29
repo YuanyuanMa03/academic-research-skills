@@ -87,4 +87,4 @@ cnki-search 等    →   scansci-pdf 插件      →   nature-* 系列
 | 下载报 `config_needed` / 要邮箱 | 问用户真实邮箱（Unpaywall 必须），配置后重试 |
 | 下载的文件不在指定目录 | scansci-pdf 缓存命中返回旧文件；清缓存重下（见其 SKILL.md 排障表） |
 | 机构登录后仍无权限 | 读出版商错误页上的出口 IP，核对是否在校园网段（详见 scansci-pdf SKILL 两条事实） |
-| Zotero 推送失败 | 本地 Zotero 需在运行；重试用 `scansci_pdf_zotero_push` |
+| Zotero 推送失败 | `scansci_pdf_zotero_push` 走 Zotero Web API——需要 zotero.org 的 API key（非本地 Zotero 程序）；报 "API key not configured" 即此原因 |

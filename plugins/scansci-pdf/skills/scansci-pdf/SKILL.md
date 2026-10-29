@@ -54,7 +54,7 @@ scansci-pdf check
 | 验证 / 嗅探一批标识符 | `scansci_pdf_prepare_queue(action="verify")`；找 OA 副本用 `action="resolve_oa"` |
 | 跨源检索文献（含作者、被引过滤） | `scansci_pdf_search`（可选 `scansci_pdf_sciverse` 语义检索） |
 | 导出引文 | `scansci_pdf_citation`（bibtex / ris / endnote） |
-| 推送到 Zotero | `scansci_pdf_zotero_push`（本地 Zotero 需在运行） |
+| 推送到 Zotero | `scansci_pdf_zotero_push`（走 **Zotero Web API，需要 Zotero API key**——在 zotero.org 设置页创建；不是本地 Zotero 程序，也不是旧的 Connector 端口） |
 | 机构登录 / 渠道状态 | `scansci_pdf_login`、`scansci_pdf_channel_status`、`scansci_pdf_schools` |
 | 环境或下载排障 | `scansci_pdf_diagnostics(check=health|network|sources|setup)` |
 | 模糊引用（"Wang 2023 CRISPR 那篇"） | 先 `scansci_pdf_search` 拿候选让用户确认，不要硬猜 DOI |
