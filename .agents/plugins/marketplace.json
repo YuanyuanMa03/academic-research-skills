@@ -1,5 +1,6 @@
 {
   "name": "academic-research-skills",
+  "description": "Academic research skills marketplace for Codex — v1.2.0: download/export/Zotero moved to the scansci-pdf plugin (old *-download/*-export/zotero-csl removed)",
   "interface": {
     "displayName": "Academic Research Skills"
   },
