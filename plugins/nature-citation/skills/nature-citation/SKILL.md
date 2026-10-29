@@ -6,10 +6,10 @@ description: >-
   AAAS Science family, and Cell Press, filtering by publication time range, and exporting one
   reference-manager-ready output by default. Use this skill whenever the user asks to input text and
   automatically get references, add citations to a paragraph/manuscript, find Nature-series or CNS
-  support for statements, create text-to-reference correspondence, "分段引用", "自动给出引用",
+  support for statements, create text-to-reference correspondence, "分段引用", "自动给出引用", "GB/T 7714", "中文参考文献",
   "Nature系列引用", "CNS及子刊", "支撑文献", "补引用", "找引用", or export EndNote/RIS/ENW/Zotero RDF.
 argument-hint: "[manuscript passage or claims needing Nature-style citations]"
-version: 0.1.0
+version: 0.2.0
 ---
 
 # Nature Citation
@@ -17,7 +17,7 @@ version: 0.1.0
 Use this skill to turn manuscript text into a defensible citation export:
 
 - segmented text with citation candidates for each segment
-- a reference-manager import file in `.enw`, `.ris`, or Zotero `.rdf`
+- a reference-manager import file in `.enw`, `.ris`, or Zotero `.rdf`, or a `--format gb-t-7714` Chinese national-standard plain-text list (`[1] AUTHORS. Title[J]. Journal, year, vol(issue): pages.`)
 - conservative evidence notes explaining whether each candidate truly supports the segment
 
 ## Chinese-user operating mode

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.1] - 2026-10-29
+
+Third live-test round fixes ("optimize all the issues"):
+
+- `nature-citation` 0.2.0: new `--format gb-t-7714` export (Chinese national standard `[n] AUTHORS. Title[J]. Journal, year, vol(issue): pages.`, >3 authors → "et al") — fills the Chinese-citation gap flagged in round 2. Author initials conversion, article-number/issue/page handling, `.txt` output.
+- Browser platform skills finally live-tested (via an automated in-app browser): CNKI shows a slider wall and ScienceDirect a Cloudflare "Are you a robot?" page **on load** in automated webview contexts — both fingerprinted immediately. Signatures + handling added to `cnki-search`/`sd-search` SKILL.md and the PLAYBOOK failure table; documented prerequisite: these skills belong in the user's daily Chrome via chrome-devtools (anti-detection flags already bundled).
+
 ## [2.0.0] - 2026-10-29
 
 **Breaking change: one plugin per platform.** 47 → 16 plugins. Users who installed removed plugins should uninstall them and install the merged replacements (migration tables in `docs/REFERENCE.md`).
