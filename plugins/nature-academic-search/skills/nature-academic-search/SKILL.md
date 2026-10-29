@@ -103,8 +103,11 @@ Quick guide:
 |---------|---------|-------------|-----------|
 | Semantic Scholar | `SEMANTIC_SCHOLAR_API_KEY` | [api.semanticscholar.org](https://api.semanticscholar.org/) | 100 req/s with key (1/s without) |
 | NCBI E-utilities | `NCBI_API_KEY` | [ncbi.nlm.nih.gov/account](https://www.ncbi.nlm.nih.gov/account/) | 10 req/s with key (3/s without) |
+| OpenAlex (polite pool) | `OPENALEX_MAILTO` | — (any email) | Faster pool, avoids HTTP 429 |
 
 Set via `export` or `.env` file.
+
+> **No-MCP CLI note**: the standalone script `scripts/academic_search.py` (OpenAlex meta-search without the MCP server) hits HTTP 429 quickly without a polite-pool identity. Always pass `--mailto <email>` (or set `OPENALEX_MAILTO`) — verified 2026-10-29: same query failed bare and succeeded immediately with `--mailto`.
 
 ### Proxy (if behind firewall)
 
