@@ -202,7 +202,7 @@ Sorted by: {sort}.
 
 Offer next actions:
 - "Use `/wos-paper-detail {WoS ID}` for detailed information"
-- "Use `/wos-export` to export results"
+- "Export results: collect entries, then use the `scansci-pdf` skill (`scansci_pdf_citation` / `scansci_pdf_zotero_push`)"
 - To see more results, re-run with higher `count` or use `/wos-navigate-pages`
 
 ### Step 2B: URL-based Fallback (when SID is lost)

@@ -2,39 +2,27 @@
 
 ## System Design
 
-academic-research-skills is a plugin marketplace for AI-powered academic research tools. Each plugin provides skills that integrate with AI coding assistants (Claude Code, Copilot CLI, Codex, etc.) via the SKILL.md protocol.
+academic-research-skills is a plugin marketplace for AI-powered academic research tools. Each plugin provides skills that integrate with AI coding assistants (Claude Code, Codex, and others) via the SKILL.md protocol. 47 plugins: 46 platform search/navigation skills + 1 `scansci-pdf` retrieval bridge.
 
 ## Architecture Diagram
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                    AI Assistant Runtime                   │
-│              (Claude Code / Copilot / Codex)              │
-│                                                          │
-│  ┌────────────┐  ┌────────────┐  ┌────────────────────┐ │
-│  │ SKILL.md   │  │ JavaScript │  │ Chrome DevTools    │ │
-│  │ Protocol   │  │ Execution  │  │ MCP Server         │ │
-│  └─────┬──────┘  └─────┬──────┘  └─────────┬──────────┘ │
-└────────┼───────────────┼───────────────────┼────────────┘
-         │               │                   │
-    ┌────▼────┐    ┌─────▼──────┐    ┌──────▼──────────┐
-    │ SKILL   │    │ Browser    │    │ Zotero Desktop  │
-    │ FILES   │    │ Automation │    │ localhost:23119 │
-    └────┬────┘    └────────────┘    └─────────────────┘
-         │
-    ┌────▼────────────────────────────────────────────┐
-    │                  plugins/                        │
-    │                                                  │
-    │  ┌──────────┐ ┌──────────┐ ┌──────────────────┐ │
-    │  │ CNKI (10)│ │ GS  (6)  │ │ Nature (11)      │ │
-    │  └──────────┘ └──────────┘ └──────────────────┘ │
-    │  ┌──────────┐ ┌──────────┐ ┌──────────────────┐ │
-    │  │ SD  (8)  │ │ WoS (7)  │ │ IEEE (9)         │ │
-    │  └──────────┘ └──────────┘ └──────────────────┘ │
-    │  ┌──────────┐ ┌──────────┐                      │
-    │  │ PM  (6)  │ │ Zotero(1)│                      │
-    │  └──────────┘ └──────────┘                      │
-    └──────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                     AI Assistant Runtime                     │
+│           (Claude Code / Codex / other agents)               │
+│                                                              │
+│  ┌────────────┐  ┌──────────────┐  ┌──────────────────────┐ │
+│  │ SKILL.md   │  │ Chrome       │  │ scansci-pdf MCP      │ │
+│  │ Protocol   │  │ DevTools MCP │  │ server (PyPI, MIT)   │ │
+│  └─────┬──────┘  └─────┬────────┘  └──────────┬───────────┘ │
+└────────┼───────────────┼──────────────────────┼─────────────┘
+         │               │                      │
+    ┌────▼────┐    ┌─────▼──────┐    ┌──────────▼───────────┐
+    │ SKILL   │    │ Browser    │    │ OA / publisher API / │
+    │ FILES   │    │ automation │    │ institutional routes │
+    │(47 pips)│    │(platform   │    │ → PDF / citations /  │
+    │         │    │ DOM flows) │    │   Zotero push        │
+    └─────────┘    └────────────┘    └──────────────────────┘
 ```
 
 ## Plugin Lifecycle
@@ -55,33 +43,34 @@ Each skill follows this minimal structure:
 └── references/        # Supporting docs (optional)
 ```
 
-## Platform Integration Patterns
+## Capability Layers
 
-| Platform | Browser MCP | Zotero Export | Export Method |
-|----------|:-----------:|:-------------:|---------------|
-| CNKI | Yes (DOM scraping) | Yes | Self-contained script (localhost:23119) |
-| Google Scholar | Yes (DOM scraping) | Yes | Self-contained script (localhost:23119) |
-| ScienceDirect | Yes (DOM scraping) | Yes | Self-contained script (localhost:23119) |
-| Web of Science | Yes (DOM scraping) | Yes | Self-contained script (localhost:23119) |
-| PubMed | Yes | Yes | Self-contained script (localhost:23119) |
-| IEEE Xplore | Yes | Yes | Self-contained script (localhost:23119) |
-| Nature | No | No | Pure prompt-based |
+| Layer | What it does | How |
+|---|---|---|
+| Platform search/navigation (46 skills) | In-platform search, detail parsing, paging, journal browsing on CNKI/GS/SD/WoS/PubMed/IEEE; Nature writing assistance | Browser automation via Chrome DevTools MCP (PubMed search is API-first via a standalone NCBI script; pm-fulltext uses the PMC API) |
+| Literature retrieval (`scansci-pdf`) | PDF download (tiered racing: OA → publisher API → institutional), batch queues, citation export, Zotero push, diagnostics | Bundled `.mcp.json` starts the scansci-pdf MCP server (`scansci-pdf run`, Python >= 3.11, pip install) |
 
-## Zotero Integration
+## Integration Patterns
 
-Export skills (`*-export`) use Zotero's local Connector API at `http://127.0.0.1:23119/connector`. Each export script is self-contained with:
+| Platform | Search path | Notes |
+|----------|-------------|-------|
+| CNKI / GS / SD / WoS / IEEE | Browser automation (chrome-devtools MCP) | GS and IEEE were timing out as of the 2026-06-23 test run — see `docs/PLAYBOOK.md` status table |
+| WoS search | Platform-internal API via page fetch, DOM fallback on `no_session` | |
+| PubMed | API-first dual path: standalone E-utilities script (default) or browser page-context fetch; never DOM scraping | pm-search is the paradigm for new search skills |
+| PubMed fulltext | PMC API | |
+| Nature | Pure prompt-based; `nature-academic-search` bundles its own MCP server | |
+| Literature retrieval | scansci-pdf MCP server | Gray sources only with explicit user choice |
 
-- Deterministic session ID generation (content hash)
-- Idempotent save operations (201 = saved, 409 = already saved)
-- PDF attachment support
-- Collection selection
+## scansci-pdf Integration
 
-## Adding a New Platform
+The `plugins/scansci-pdf` bridge plugin wires the external [scansci-pdf](https://github.com/Rimagination/scansci-pdf) PyPI package (MIT) into this marketplace: `.mcp.json` starts its stdio MCP server, and the Chinese SKILL.md routes intents (`scansci_pdf_download`, `scansci_pdf_citation`, `scansci_pdf_zotero_push`, `scansci_pdf_diagnostics`, …) with install bootstrap and compliance boundaries. No upstream code is vendored — upgrades flow from PyPI.
 
-To add support for a new academic platform:
+## Adding a New Plugin
 
-1. Create `plugins/{platform}-{action}/` directories for each action
-2. Write SKILL.md files following the specification in CONTRIBUTING.md
-3. If Zotero integration is needed, create a self-contained `push_to_zotero.py` script
-4. Add eval fixtures for each skill
-5. Update marketplace.json
+1. Create `plugins/{platform}-{action}/` with `skills/{name}/SKILL.md`
+2. Add `.claude-plugin/plugin.json` and `.codex-plugin/plugin.json`
+3. Register in BOTH marketplaces (`.claude-plugin/marketplace.json`, `.agents/plugins/marketplace.json`)
+4. Add a routing entry in `docs/REFERENCE.md`
+5. If browser automation is needed, copy the canonical `.mcp.json` from `plugins/cnki-search/`
+6. Search skills follow the pm-search dual-path paradigm (standalone API script first, browser fallback, never DOM scraping when an API exists)
+7. Run all `scripts/` checks (CI enforces marketplace consistency, MCP template drift, and REFERENCE coverage)

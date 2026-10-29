@@ -1,0 +1,40 @@
+{
+  "name": "scansci-pdf",
+  "version": "1.0.0",
+  "description": "Academic paper retrieval hub backed by the scansci-pdf MCP server: multi-route PDF download (open access, publisher API, institutional), batch queues, citation export, Zotero push, and environment diagnostics.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "academic papers",
+    "literature search",
+    "citation",
+    "open access",
+    "zotero",
+    "MCP",
+    "文献下载",
+    "引文导出"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "scansci-pdf",
+    "shortDescription": "Download papers, export citations, push to Zotero via the scansci-pdf MCP server.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Shell",
+      "MCP"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Download this paper via scansci-pdf",
+      "Export citations and push them to Zotero",
+      "Run scansci-pdf diagnostics to check my setup"
+    ],
+    "longDescription": "Bridges the open-source scansci-pdf MCP server into this skill marketplace: single or batch paper retrieval with tiered routing (open access, publisher API, institutional channels), citation export in BibTeX/RIS/EndNote, Zotero push, and one-command environment diagnostics."
+  },
+  "mcpServers": "./.mcp.json"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "nature-reviewer",
+  "version": "1.0.0",
+  "description": "Simulate a Nature-style reviewer assessment: pre-submission review, reviewer report, novelty/significance/technical soundness critique from the referee perspective.",
+  "author": {
+    "name": "YuanyuanMa03"
+  },
+  "license": "MIT",
+  "keywords": [
+    "nature",
+    "peer-review",
+    "reviewer",
+    "审稿",
+    "评审"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "nature-reviewer",
+    "shortDescription": "Nature-style reviewer assessment from the referee perspective.",
+    "developerName": "YuanyuanMa03",
+    "category": "Research",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/YuanyuanMa03/academic-research-skills",
+    "defaultPrompt": [
+      "Review my manuscript like a Nature referee"
+    ],
+    "longDescription": "Produces a reviewer report covering novelty, significance, and technical soundness, written from the referee perspective rather than as an author rebuttal."
+  }
+}

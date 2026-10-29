@@ -191,8 +191,8 @@ Format the output as a structured summary:
 ```
 
 Offer next actions:
-- "Use `/wos-export {WoS ID}` to export this paper"
-- "Use `/wos-download {WoS ID}` to download PDF"
+- "Export this paper: use the `scansci-pdf` skill with the DOI (`scansci_pdf_citation` / `scansci_pdf_zotero_push`)"
+- "Download PDF: use the `scansci-pdf` skill (`scansci_pdf_download`) with the DOI"
 
 ## Key CSS Selectors (Full Record Page)
 

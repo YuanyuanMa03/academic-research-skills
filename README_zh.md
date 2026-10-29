@@ -46,18 +46,21 @@ https://github.com/YuanyuanMa03/academic-research-skills
 
 | 平台 | 前缀 | 技能 | 数量 |
 |------|------|------|------|
-| 知网 (CNKI) | `cnki-*` | 搜索、下载、导出、期刊浏览、论文详情 | 10 |
-| 谷歌学术 (Google Scholar) | `gs-*` | 搜索、高级搜索、引用追踪、全文获取、导出 | 6 |
-| ScienceDirect | `sd-*` | 搜索、下载、导出、期刊浏览、论文详情 | 8 |
-| Web of Science | `wos-*` | 搜索、下载、导出、论文详情 | 7 |
-| PubMed | `pm-*` | 搜索、高级搜索、导出、全文获取、论文详情 | 6 |
-| IEEE Xplore | `ieee-*` | 搜索、下载、导出、期刊浏览、标准 | 9 |
-| Zotero CSL | `zotero-*` | 引用样式生成 | 1 |
+| 知网 (CNKI) | `cnki-*` | 搜索、期刊浏览、论文详情、结果解析、翻页 | 8 |
+| 谷歌学术 (Google Scholar) | `gs-*` | 搜索、高级搜索、引用追踪、翻页 | 4 |
+| ScienceDirect | `sd-*` | 搜索、期刊浏览、论文详情、结果解析、翻页 | 6 |
+| Web of Science | `wos-*` | 搜索、DOM 参考、论文详情、结果解析、翻页 | 5 |
+| PubMed | `pm-*` | 搜索（API 优先）、全文、论文详情、翻页 | 5 |
+| IEEE Xplore | `ieee-*` | 搜索、期刊浏览、标准、论文详情、结果解析 | 7 |
 | Nature | `nature-*` | 学术搜索、写作、润色、图表、阅读、专利、审稿 | 11 |
+| ScanSci PDF | `scansci-pdf` | 论文下载、引文导出、Zotero 推送、批量队列、环境诊断 | 1 |
 
-**共 58 个技能** — 覆盖 8 个学术平台。
+**共 47 个插件** — 7 个学术平台的站内检索导航 + [`scansci-pdf`](https://github.com/Rimagination/scansci-pdf)（MIT）文献获取中枢（下载 / 引文 / Zotero）。
 
-> 浏览器技能（CNKI、GS、SD、WoS、PubMed、IEEE）需要 [Chrome DevTools MCP](https://github.com/nicekid1/chrome-devtools-mcp)。Nature 系列技能是纯提示技能，可在任何 LLM 上使用。
+> 浏览器技能（CNKI、GS、SD、WoS、IEEE）需要 [Chrome DevTools MCP](https://github.com/nicekid1/chrome-devtools-mcp)（各插件 `.mcp.json` 已内置）。PubMed 搜索走 NCBI API 独立脚本。`scansci-pdf` 需要 Python >= 3.11 并 `pip install scansci-pdf`（首次使用有引导）。Nature 系列是纯提示技能，任何 LLM 可用。
+>
+> 论文下载 / 引文导出 / Zotero 推送统一走 `scansci-pdf` —— 旧的 `*-download`、`*-export`、`zotero-csl` 技能已移除（决策记录见 `docs/PLAYBOOK.md`）。
+
 
 ## 安装方式
 
@@ -69,8 +72,6 @@ https://github.com/YuanyuanMa03/academic-research-skills
 
 # 安装全部技能
 /plugin install cnki-advanced-search@academic-research-skills
-/plugin install cnki-download@academic-research-skills
-/plugin install cnki-export@academic-research-skills
 /plugin install cnki-journal-index@academic-research-skills
 /plugin install cnki-journal-search@academic-research-skills
 /plugin install cnki-journal-toc@academic-research-skills
@@ -80,13 +81,9 @@ https://github.com/YuanyuanMa03/academic-research-skills
 /plugin install cnki-search@academic-research-skills
 /plugin install gs-advanced-search@academic-research-skills
 /plugin install gs-cited-by@academic-research-skills
-/plugin install gs-export@academic-research-skills
-/plugin install gs-fulltext@academic-research-skills
 /plugin install gs-navigate-pages@academic-research-skills
 /plugin install gs-search@academic-research-skills
 /plugin install ieee-advanced-search@academic-research-skills
-/plugin install ieee-download@academic-research-skills
-/plugin install ieee-export@academic-research-skills
 /plugin install ieee-journal-browse@academic-research-skills
 /plugin install ieee-navigate-pages@academic-research-skills
 /plugin install ieee-paper-detail@academic-research-skills
@@ -97,35 +94,30 @@ https://github.com/YuanyuanMa03/academic-research-skills
 /plugin install nature-citation@academic-research-skills
 /plugin install nature-data@academic-research-skills
 /plugin install nature-figure@academic-research-skills
+/plugin install nature-paper-to-patent@academic-research-skills
 /plugin install nature-paper2ppt@academic-research-skills
 /plugin install nature-polishing@academic-research-skills
 /plugin install nature-reader@academic-research-skills
 /plugin install nature-response@academic-research-skills
-/plugin install nature-writing@academic-research-skills
-/plugin install nature-paper-to-patent@academic-research-skills
 /plugin install nature-reviewer@academic-research-skills
+/plugin install nature-writing@academic-research-skills
 /plugin install pm-advanced-search@academic-research-skills
-/plugin install pm-export@academic-research-skills
 /plugin install pm-fulltext@academic-research-skills
 /plugin install pm-navigate-pages@academic-research-skills
 /plugin install pm-paper-detail@academic-research-skills
 /plugin install pm-search@academic-research-skills
+/plugin install scansci-pdf@academic-research-skills
 /plugin install sd-advanced-search@academic-research-skills
-/plugin install sd-download@academic-research-skills
-/plugin install sd-export@academic-research-skills
 /plugin install sd-journal-browse@academic-research-skills
 /plugin install sd-navigate-pages@academic-research-skills
 /plugin install sd-paper-detail@academic-research-skills
 /plugin install sd-parse-results@academic-research-skills
 /plugin install sd-search@academic-research-skills
 /plugin install wos-dom@academic-research-skills
-/plugin install wos-download@academic-research-skills
-/plugin install wos-export@academic-research-skills
 /plugin install wos-navigate-pages@academic-research-skills
 /plugin install wos-paper-detail@academic-research-skills
 /plugin install wos-parse-results@academic-research-skills
 /plugin install wos-search@academic-research-skills
-/plugin install zotero-csl@academic-research-skills
 ```
 
 ### Copilot CLI
@@ -266,19 +258,23 @@ cat academic-research-skills/plugins/cnki-search/skills/cnki-search/SKILL.md
 
 - "帮我在知网上搜索关于 neural rendering 的论文"
 - "在谷歌学术上找引用这篇论文的文献"
-- "下载这篇 ScienceDirect 的论文"
+- "用 scansci-pdf 下载这篇论文" / "导出引文并推送到 Zotero"
 - "帮我用 Nature 风格写一个 Introduction"
+
+完整意图路由手册见 [`docs/REFERENCE.md`](docs/REFERENCE.md)，维护手册见 [`docs/PLAYBOOK.md`](docs/PLAYBOOK.md)。
 
 ## 添加插件
 
 1. 创建 `plugins/your-skill-name/skills/your-skill-name/SKILL.md`
-2. 添加 `plugins/your-skill-name/.claude-plugin/plugin.json`
-3. 在 `.claude-plugin/marketplace.json` 中添加条目
-4. 提交 Pull Request
+2. 添加 `plugins/your-skill-name/.claude-plugin/plugin.json` 与 `.codex-plugin/plugin.json`
+3. 同时在 `.claude-plugin/marketplace.json` 与 `.agents/plugins/marketplace.json` 注册
+4. 在 `docs/REFERENCE.md` 补充路由条目
+5. 跑通 `scripts/` 下全部检查（CI 会重复强制），再提交 Pull Request
 
 ## 致谢
 
-Nature 系列技能（`nature-*`）基于 [@Yuan1z0825](https://github.com/Yuan1z0825) 的 [nature-skills](https://github.com/Yuan1z0825/nature-skills) 仓库。
+- 文献获取方案（`scansci-pdf` 插件）：[@Rimagination](https://github.com/Rimagination) 的 [scansci-pdf](https://github.com/Rimagination/scansci-pdf)（MIT）。
+- Nature 系列技能（`nature-*`）：[@Yuan1z0825](https://github.com/Yuan1z0825) 的 [nature-skills](https://github.com/Yuan1z0825/nature-skills) 仓库。
 
 CNKI、Google Scholar、Web of Science 技能基于 [@cookjohn](https://github.com/cookjohn) 的 [cnki-skills](https://github.com/cookjohn/cnki-skills)、[gs-skills](https://github.com/cookjohn/gs-skills)、[wos-skills](https://github.com/cookjohn/wos-skills) 仓库。
 

@@ -105,7 +105,7 @@ When the user wants to:
 - **Open a paper**: use `pm-paper-detail` with the PMID
 - **See more results**: use `pm-navigate-pages` to go to next page (or `--page N` in Path 1)
 - **Get full text**: use `pm-fulltext` with the PMID
-- **Export to Zotero**: use `pm-export` with the PMID(s)
+- **Export to Zotero**: use the `scansci-pdf` skill (`scansci_pdf_citation` + `scansci_pdf_zotero_push`) with the PMID(s)/DOI(s)
 
 ## Pagination
 

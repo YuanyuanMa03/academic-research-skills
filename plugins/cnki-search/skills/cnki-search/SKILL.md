@@ -129,6 +129,6 @@ Only return `error: 'captcha'` when `top >= 0` (actually visible to user).
 
 ## Batch export to Zotero
 
-When user wants to save results to Zotero, use batch export directly from the results page — **do NOT navigate to each detail page**. The `exportId` in results equals the detail page's `#export-id`. Call `cnki-export` skill with batch mode (Step 1B). See cnki-export SKILL.md for details.
+When user wants to save results to Zotero, hand the collected entries (title, authors, source, date) to the `scansci-pdf` skill — `scansci_pdf_citation` for citation export, `scansci_pdf_zotero_push` for the Zotero push. The old `cnki-export` skill was removed; `docs/REFERENCE.md` has the migration table.
 
 ## Tool calls: 2 (navigate + evaluate_script)
