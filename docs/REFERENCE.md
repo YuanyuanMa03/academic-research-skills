@@ -10,6 +10,11 @@ cnki-search 等   →   scansci-pdf 插件      →   nature-* 系列
 拿条目(题录/DOI)      下载 PDF / 引文 / Zotero     润色 / 审稿 / 配图 / 专利
 ```
 
+**检索源选择**（按课题主题）：
+- 生物医学主题 → `pm-search`（PubMed 精确 API）
+- 材料 / 物理 / 工程主题 → `nature-academic-search`（CrossRef/PubMed/arXiv 并发）或 `scansci-pdf` 跨源检索（宽泛发现，需相关性过滤；PubMed 对此类主题覆盖有限）
+- 中文文献 / 特定平台站内 → 对应 `cnki-*` / `sd-*` 等平台技能
+
 ## 想做什么 → 用哪个技能
 
 ### ① 平台站内检索与导航
@@ -91,6 +96,8 @@ cnki-search 等   →   scansci-pdf 插件      →   nature-* 系列
 | WoS 报 `no_session` | wos-search 自动回退 DOM 导航；仍失败重新进站拿 SID |
 | PubMed 429 | 脚本自动重试；加 `--mailto` 进 polite pool |
 | 工具列表没有 `scansci_pdf_*` | scansci-pdf SKILL.md 安装引导（Python ≥ 3.11 + pip install）；或 CLI 兜底 |
-| 下载被 Cloudflare/验证页拦 | `scansci_pdf_diagnostics(check="health")` 查浏览器后端，或改走机构通道 |
+| 下载日志 "browser not available" | 装 `pip install "scansci-pdf[camoufox]"`——不装则只覆盖 OA 仓库直链型文章 |
+| 下载报 `config_needed` / 要邮箱 | 问用户真实邮箱（Unpaywall 必须），配置后重试 |
+| 下载的文件不在指定目录 | scansci-pdf 缓存命中返回旧文件；清缓存重下（见其 SKILL.md 排障表） |
 | 机构登录后仍无权限 | 读出版商错误页上的出口 IP，核对是否在校园网段（详见 scansci-pdf SKILL 两条事实） |
 | Zotero 推送失败 | 本地 Zotero 需在运行；重试用 `scansci_pdf_zotero_push` |

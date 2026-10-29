@@ -664,7 +664,7 @@
       "name": "scansci-pdf",
       "source": "./plugins/scansci-pdf",
       "description": "Academic paper retrieval hub backed by the scansci-pdf MCP server: multi-route PDF download (open access, publisher API, institutional), batch queues, citation export, Zotero push, and diagnostics. Replaces the removed *-download/*-export/zotero-csl skills.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "YuanyuanMa03"
       },

@@ -67,6 +67,12 @@
 
 - **2026-06-23**：GS、IEEE 跨平台测试超时（快照在 test-evidence）；GS 还会随机出 CAPTCHA（gs-search SKILL 有处理流程）。
 - **2026-10-28**：`lint.yml` 的 `HARDcoded`/`HARDCODED` 笔误修复——此前硬编码路径检查失败永不生效；同日 33 个插件版本对齐（claude 侧 1.0.0 → codex 侧 1.0.1，取高者）。
+- **2026-10-29 端到端实测**（课题"半导体材料在电池中的创新应用"，证据：`docs/test-evidence/2026-10-29-e2e-workflow/测试报告.md`）：
+  - scansci-pdf `get` 缓存命中时忽略 `--output`，直接返回旧文件路径（`.doi_index.json` 索引）；换源/换目录先清缓存。
+  - CLI 无引文命令（`citation` 仅 MCP）；CLI 兜底时 agent 需自行从检索字段构造 BibTeX——已写进桥接 SKILL.md 排障表。
+  - 无浏览器后端（未装 `[camoufox]` extras）时，可下载范围收窄为"OA 仓库直链"型（实测 Wiley/RSC 官网 OA 页失败）；安装引导已补提示。
+  - `scansci_pdf_search` 长复合查询相关性偏宽（被匹配到主题外结果），精确检索走平台技能——已写进 SKILL.md 与 REFERENCE.md。
+  - PubMed 对材料/物理主题覆盖有限（光充电方向仅 6 条），印证双检索入口设计。
 - CHANGELOG 曾长期只记录一条已失效的 shared/ 重构——现已刷新，新条目及时记。
 - scansci-pdf MCP server 要求 Python ≥ 3.11；插件装好后工具列表没有 `scansci_pdf_*` 时先走 SKILL.md 的安装引导。
 
