@@ -2,7 +2,7 @@
 
 ## System Design
 
-academic-research-skills is a plugin marketplace for AI-powered academic research tools. Each plugin provides skills that integrate with AI coding assistants (Claude Code, Codex, and others) via the SKILL.md protocol. 47 plugins: 46 platform search/navigation skills + 1 `scansci-pdf` retrieval bridge.
+academic-research-skills is a plugin marketplace for AI-powered academic research tools. Each plugin provides skills that integrate with AI coding assistants (Claude Code, Codex, and others) via the SKILL.md protocol. 16 plugins: 4 platform skills (each covering a platform's full workflow via `references/` sub-documents), 11 `nature-*` writing skills, 1 `scansci-pdf` retrieval bridge.
 
 ## Architecture Diagram
 
@@ -20,7 +20,7 @@ academic-research-skills is a plugin marketplace for AI-powered academic researc
     ┌────▼────┐    ┌─────▼──────┐    ┌──────────▼───────────┐
     │ SKILL   │    │ Browser    │    │ OA / publisher API / │
     │ FILES   │    │ automation │    │ institutional routes │
-    │(47 pips)│    │(platform   │    │ → PDF / citations /  │
+    │(16 pips)│    │(platform   │    │ → PDF / citations /  │
     │         │    │ DOM flows) │    │   Zotero push        │
     └─────────┘    └────────────┘    └──────────────────────┘
 ```

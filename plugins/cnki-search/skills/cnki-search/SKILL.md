@@ -1,13 +1,27 @@
 ---
 name: cnki-search
-description: Search CNKI (中国知网) for papers by keyword. Use when the user wants to find academic papers on a topic.
+description: CNKI (中国知网) 全流程技能：关键词检索、高级检索（作者/期刊/日期/核心库过滤）、论文详情解析、结果页解析、翻页、期刊检索/目录/导航。Use when the user wants to search CNKI, browse CNKI journals, or open/parse CNKI paper pages.
 argument-hint: "[search keywords]"
-version: 0.1.0
+version: 2.0.0
 ---
 
-# CNKI Basic Search
+# CNKI Search — 全流程技能
 
-Search CNKI for papers using keyword(s). Returns result count and structured result list (titles, URLs, authors, journal, date) in a single call.
+一个技能覆盖 CNKI 站内全部动作。基础检索在本文件；其余场景按路由表进入对应子流程文档。
+
+## 场景路由
+
+| 用户想做什么 | 进入哪个流程 |
+|---|---|
+| 关键词检索（本文件主流程） | 下文 Steps |
+| 高级检索（作者/标题/期刊/日期/SCI-EI-CSSCI-北大核心过滤） | [references/advanced-search.md](references/advanced-search.md) |
+| 打开/解析某篇论文详情页 | [references/paper-detail.md](references/paper-detail.md) |
+| 解析当前结果页（独立于检索） | [references/parse-results.md](references/parse-results.md) |
+| 结果翻页 | [references/navigate-pages.md](references/navigate-pages.md) |
+| 检索特定期刊 | [references/journal-search.md](references/journal-search.md) |
+| 浏览期刊目录（某期文章列表） | [references/journal-toc.md](references/journal-toc.md) |
+| 期刊导航体系（核心期刊分类） | [references/journal-index.md](references/journal-index.md) |
+| 下载/导出/推送 Zotero | 条目交给 `scansci-pdf` 技能（见文末） |
 
 ## Arguments
 

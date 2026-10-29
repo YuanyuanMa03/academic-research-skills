@@ -1,13 +1,25 @@
 ---
 name: sd-search
-description: Search for academic papers on ScienceDirect. Use when the user wants to find papers by keyword on ScienceDirect/Elsevier.
+description: ScienceDirect 全流程技能：关键词检索、高级检索、论文详情解析、结果页解析、翻页、期刊浏览。Use when the user wants to search ScienceDirect, browse its journals, or open/parse ScienceDirect paper pages.
 argument-hint: "[search keywords]"
-version: 0.1.0
+version: 2.0.0
 ---
 
-# ScienceDirect Basic Search
+# ScienceDirect Search — 全流程技能
 
-Search for academic papers on ScienceDirect using Chrome DevTools MCP.
+一个技能覆盖 ScienceDirect 站内全部动作。基础检索在本文件；其余场景按路由表进入对应子流程文档。
+
+## 场景路由
+
+| 用户想做什么 | 进入哪个流程 |
+|---|---|
+| 关键词检索（本文件主流程） | 下文 Steps |
+| 高级检索（多字段过滤） | [references/advanced-search.md](references/advanced-search.md) |
+| 打开/解析某篇论文详情页 | [references/paper-detail.md](references/paper-detail.md) |
+| 解析当前结果页 | [references/parse-results.md](references/parse-results.md) |
+| 结果翻页 | [references/navigate-pages.md](references/navigate-pages.md) |
+| 浏览某期刊的卷期与文章 | [references/journal-browse.md](references/journal-browse.md) |
+| 下载/导出/推送 Zotero | 条目交给 `scansci-pdf` 技能 |
 
 ## Important: Determine the ScienceDirect base URL
 

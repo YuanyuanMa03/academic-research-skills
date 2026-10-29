@@ -1,15 +1,26 @@
 ---
 name: wos-search
-description: Search Web of Science by topic, author, title, DOI, or advanced query. Supports edition/database filtering and sort.
+description: Web of Science 全流程技能：主题/作者/标题/DOI/高级检索（内部 API，含 SID 回退）、论文详情解析、结果页解析（含离线快照模式）、翻页、DOM 结构参考。
 argument-hint: "[search keywords] [--edition SCI/SSCI/...] [--sort citations/date/relevance] [--db woscc|alldb|...]"
-version: 0.1.0
+version: 2.0.0
 user-invocable: true
 disable-model-invocation: false
 ---
 
-# WoS Search
+# WoS Search — 全流程技能
 
-Search Web of Science via internal API. Supports edition filtering, sorting, and multiple databases — all in a single `evaluate_script` call.
+一个技能覆盖 Web of Science 站内全部动作。检索在本文件；其余场景按路由表进入对应子流程文档。
+
+## 场景路由
+
+| 用户想做什么 | 进入哪个流程 |
+|---|---|
+| 检索（本文件主流程：内部 API + `no_session` 回退） | 下文 |
+| 打开/解析某篇论文详情页 | [references/paper-detail.md](references/paper-detail.md) |
+| 解析当前结果页（或已保存的页面快照，离线模式） | [references/parse-results.md](references/parse-results.md) |
+| 结果翻页 | [references/navigate-pages.md](references/navigate-pages.md) |
+| WoS 页面 DOM 结构参考（选择器速查） | [references/dom-reference.md](references/dom-reference.md) |
+| 下载/导出/推送 Zotero | 条目交给 `scansci-pdf` 技能 |
 
 ## Important: Browser Prerequisite
 

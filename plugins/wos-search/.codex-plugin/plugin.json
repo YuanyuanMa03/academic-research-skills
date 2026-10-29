@@ -1,6 +1,6 @@
 {
   "name": "wos-search",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Search Web of Science by topic, author, title, DOI, or advanced query. Supports edition/database filtering and sort.",
   "author": {
     "name": "YuanyuanMa03"
